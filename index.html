@@ -102,6 +102,8 @@
 
     <!--Angular import-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!--Leader Line import-->
+    <script src="https://cdn.jsdelivr.net/npm/leader-line@1.0.7/leader-line.min.js"></script>
     <script>
         var app = angular.module("main", []);
         app.controller("main", function ($scope) {
@@ -126,7 +128,6 @@
                         break;
                 }
             };
-
             // default selection 
             $scope.selectedPlan = "A";
             // https://stackoverflow.com/questions/13152927/how-to-use-radio-on-change-event
@@ -137,6 +138,7 @@
                 });
             });
             this.render($scope.selectedPlan);
+            console.log("reach");
         });
     </script>
 </head>
