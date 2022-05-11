@@ -175,7 +175,7 @@
     <div class="display" ng-switch="selectedPlan">
         <div id="A" ng-switch-when="A">
             <div class="term">
-                <div class="course" id="ECE 101">
+                <div class="course" id="ECE 101" onclick="listener()">
                     <h3 class="embed">ECE 101</h3>
                 </div>
                 <div class="course" id="ECE 201">
@@ -439,7 +439,34 @@
         </div>
     </div>
 </div>
-
-
+<script>
+        document.addEventListener("click", console.log, true)
+        console.log("setup");
+        var ece101 = document.getElementById("ECE 101");
+        console.log(ece101);
+        ece101.addEventListener("click", function(event) {
+            console.log("lest");
+        });
+        // var display = document.getElementById("display");
+        // display.addEventListener("click", function(event) {
+        //     console.log("rest");
+        // });
+        var flag = false;
+        var ece411 = document.getElementById("ECE 421");
+        var line = new LeaderLine(ece101, ece411, {path:"fluid", hide:true});
+        function listener() {
+            if (!flag) {
+                console.log("listen");
+                flag = true;
+                line.show();
+            }
+            else {
+                console.log("now");
+                flag = false;
+                line.hide();
+            }
+        }
+     
+    </script>
 </body>
 </html>
