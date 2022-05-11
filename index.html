@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<!--language for website, this helps the search engine-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- This makes website responsive on different devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>  
+        /*body style*/
+        body {
+            margin: 0;
+        }
+
+        /*Header style*/
+
+        header {
+            overflow: hidden;
+            padding: 30px 10px;
+            text-align: center;
+            background-color: #275d38;
+        }
+
+
+
+        /*header link style */
+
+        .header a {
+
+            padding: 15px;
+            text-decoration: none;
+            line-height: 25px;
+            border-radius: 4px;
+            color: #f2cd00;
+            font-size: 100%;
+            font-family: inherit;
+
+        }
+
+        /*title style*/
+        .header a.site-title {
+            font-size: 25px;
+        }
+
+        /*image style*/
+        .header img {
+            max-width: 200px;
+            margin-right: 0;
+            float: left;
+        }
+
+
+
+
+
+        /* at 500px align header left when the screen is 500px wide or less*/
+        @media screen and (max-width: 500px) {
+            .header a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }  
+        .planhead {
+            text-align: center
+        }
+    
+        .select {
+            text-align: center;
+        }
+    
+        .display {
+            width: 2000px;
+        }
+    
+        .course {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+            height: 50px;
+            width: 150px;
+        }
+    
+        .embed {
+            text-align: center;
+        }
+    
+        .term {
+            float: left;
+            margin-left: 60px;
+            position: relative;
+        }
+    </style>
+    <title>MEC E Plan</title>
+
+    <!--Added this-->
+    <!--A styles sheet & web icon-->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    
+
+    <!--Angular import-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        var app = angular.module("main", []);
+        app.controller("main", function ($scope) {
+            var that = this;
+            // render method for generating diagram based on plan
+            this.render = function (plan) {
+                switch (plan) {
+                    case "A":
+                        console.log("Rendering plan A");
+                        break;
+                    case "B":
+                        console.log("Rendering plan B");
+                        break;
+                    case "C":
+                        console.log("Rendering plan C");
+                        break;
+                    case "D":
+                        console.log("Rendering plan D");
+                        break;
+                    default:
+                        console.log("Should never reach");
+                        break;
+                }
+            };
+
+            // default selection 
+            $scope.selectedPlan = "A";
+            // https://stackoverflow.com/questions/13152927/how-to-use-radio-on-change-event
+            var radios = document.querySelectorAll("input[type=radio][name=planselector");
+            Array.prototype.forEach.call(radios, function (radio) {
+                radio.addEventListener("change", function () {
+                    that.render($scope.selectedPlan);
+                });
+            });
+            this.render($scope.selectedPlan);
+        });
+    </script>
+</head>
+<body>
+
+    <!--header-->
+    <header>
+        <div class="header">
+
+            <table>
+                <tr>
+                    <td style="width: 65%;"><a href="#"> <img src="./images/uofalogo.png" alt="UofA logo" style="width:200px; height:50px;"></a></td>
+                    <td><a href="#default" class="site-title">MEC E Program Plan Visualizer</a> </td>
+                </tr>
+            </table>
+        </div>
+
+    </header>
+
+
+<div id="main" ng-app="main" ng-controller="main">
+    <!--Selecting different plans-->
+    <h3 class="planhead">Plan</h3>
+    <form class="select">
+        <input type="radio" name="planselector" ng-model="selectedPlan" value="A">
+        <label for="A">A</label><br>
+        <input type="radio" name="planselector" ng-model="selectedPlan" value="B">
+        <label for="B">B</label><br>
+        <input type="radio" name="planselector" ng-model="selectedPlan" value="C">
+        <label for="C">C</label><br>
+        <input type="radio" name="planselector" ng-model="selectedPlan" value="D">
+        <label for="D">D</label><br>
+    </form>
+    <div class="display" ng-switch="selectedPlan">
+        <div id="A" ng-switch-when="A">
+            <div class="term">
+                <div class="course" id="ECE 101">
+                    <h3 class="embed">ECE 101</h3>
+                </div>
+                <div class="course" id="ECE 201">
+                    <h3 class="embed">ECE 201</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course" id="ECE 331">
+                    <h3 class="embed">ECE 331</h3>
+                </div>
+                <div class="course" id="ECE 321">
+                    <h3 class="embed">ECE 321</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course" id="ECE 401">
+                    <h3 class="embed">ECE 401</h3>
+                </div>
+                <div class="course" id="ECE 411">
+                    <h3 class="embed">ECE 411</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course" id="ECE 461">
+                    <h3 class="embed">ECE 461</h3>
+                </div>
+                <div class="course" id="ECE 421">
+                    <h3 class="embed">ECE 421</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course" id="ECE 431">
+                    <h3 class="embed">ECE 431</h3>
+                </div>
+                <div class="course" id="ECE 491">
+                    <h3 class="embed">ECE 491</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course" id="ECE 551">
+                    <h3 class="embed">ECE 551</h3>
+                </div>
+                <div class="course" id="ECE 501">
+                    <h3 class="embed">ECE 501</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course" id="ECE 521">
+                    <h3 class="embed">ECE 521</h3>
+                </div>
+                <div class="course" id="ECE 500">
+                    <h3 class="embed">ECE 500</h3>
+                </div>
+            </div>
+        </div>
+        <div id="B" ng-switch-when="B">
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 102</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 202</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 102</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 202</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 102</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 202</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 102</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 202</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 102</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 202</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 102</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 202</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 102</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 202</h3>
+                </div>
+            </div>
+        </div>
+        <div id="C" ng-switch-when="C">
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 103</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 203</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 103</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 203</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 103</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 203</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 103</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 203</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 103</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 203</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 103</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 203</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 103</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 203</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 103</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 203</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 103</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 203</h3>
+                </div>
+            </div>
+        </div>
+        <div id="D" ng-switch-when="D">
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 104</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 204</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 104</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 204</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 104</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 204</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 104</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 204</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 104</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 204</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 104</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 204</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 104</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 204</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 104</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 204</h3>
+                </div>
+            </div>
+            <div class="term">
+                <div class="course">
+                    <h3 class="embed">ECE 104</h3>
+                </div>
+                <div class="course">
+                    <h3 class="embed">ECE 204</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
