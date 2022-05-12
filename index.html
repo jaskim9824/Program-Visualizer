@@ -107,38 +107,167 @@
     <script>
         var app = angular.module("main", []);
         app.controller("main", function ($scope) {
-            var that = this;
-            // render method for generating diagram based on plan
+            // default selection 
+            $scope.selectedPlan = "A";
+
+            // these indicate the active lines for each plan so when returning from a plan
+            // after switching of from it, the lines return
+            this.planAList = [];
+            this.planBlist = [];
+            this.planClist = [];
+            this.planDlist = [];
+
+            this.previousPlan = $scope.selectedPlan;
+
+            // render method for switching leaderlines shown on screen
             this.render = function (plan) {
+                this.disable(this.previousPlan);
+                this.enable(plan);
+                this.previousPlan = plan;
+            };
+
+            // hiding leaderlines from previous plan
+            this.disable = function (plan) {
                 switch (plan) {
                     case "A":
-                        console.log("Rendering plan A");
+                        for (let i = 0; i < this.planAList.length; i++) {
+                            this.planAList.hide();
+                        }
                         break;
                     case "B":
-                        console.log("Rendering plan B");
+                        for (let i = 0; i < this.planBlist.length; i++) {
+                            this.planBlist.hide();
+                        }
                         break;
                     case "C":
-                        console.log("Rendering plan C");
+                        for (let i = 0; i < this.planClist.length; i++) {
+                            this.planClist.hide();
+                        }
                         break;
                     case "D":
-                        console.log("Rendering plan D");
+                        for (let i = 0; i < this.planDlist.length; i++) {
+                            this.planDlist.hide();
+                        }
                         break;
-                    default:
-                        console.log("Should never reach");
+                } 
+            };
+
+            // enabling target leaderlines from target plan
+            this.enable = function (plan) {
+                switch(plan) {
+                    case "A":
+                        for (let i = 0; i < this.planAList.length; i++) {
+                            this.planAList.show();
+                        }
+                        break;
+                    case "B":
+                        for (let i = 0; i < this.planAList.length; i++) {
+                            this.planBList.show();
+                        }
+                        break;
+                    case "C":
+                        for (let i = 0; i < this.planClist.length; i++) {
+                            this.planClist.show();
+                        }
+                        break;
+                    case "D":
+                        for (let i = 0; i < this.planClist.length; i++) {
+                            this.planClist.show();
+                        }
                         break;
                 }
             };
-            // default selection 
-            $scope.selectedPlan = "A";
+
+            // function to display a line
+            this.addLine = function(line) {
+                switch($scope.selectedPlan) {
+                    case "A":
+                        if (this.planAList.findIndex(line) == -1) {
+                            line.show();
+                            this.planAList.push(line);
+                        }
+                        break;
+                    case "B":
+                        if (this.planBList.findIndex(line) == -1) {
+                            line.show();
+                            this.planBList.push(line);
+                        }
+                        break;
+                    case "C":
+                        if (this.planCList.findIndex(line) == -1) {
+                            line.show();
+                            this.planCList.push(line);
+                        }
+                        break;
+                    case "D":
+                        if (this.planDList.findIndex(line) == -1) {
+                            line.show();
+                            this.planDList.push(line);
+                        }
+                        break;
+                }
+            };
+        
+            // TO DO: need to consider case where two divs are active and they share a common line
+            this.removeLine = function(line) {
+                switch($scope.selectedPlan) {
+                    case "A":
+                        if (this.planAList.findIndex(line) != -1) {
+                            line.hide();
+                            this.planAList.splice(this.planAList.indexOf(line), 1);
+                        }
+                        break;
+                    case "B":
+                        if (this.planBList.findIndex(line) != -1) {
+                            line.hide();
+                            this.planBList.splice(this.planBList.indexOf(line), 1);
+                        }
+                        break;
+                    case "C":
+                        if (this.planCList.findIndex(line) == -1) {
+                            line.show();
+                            this.planCList.splice(this.planCList.indexOf(line), 1);
+                        }
+                        break;
+                    case "D":
+                        if (this.planDList.findIndex(line) == -1) {
+                            line.show();
+                            this.planDList.splice(this.planDList.indexOf(line), 1);
+                        }
+                        break;
+                }
+            }
+            // basic framework, have element var for every div
+            // have a leader line element for every connection, soild for prereq, dashed for coreq, hidden by default
+            // TO DO: how to get divs in this script after they load into DOM?
+            var ece101flag = false;
+            // this is a temp variable represent a line that belongs to ece101
+            var line1 = [];
+            // add a listener for every possibe div
+            $scope.ece101Listener = function () {
+                if (!ece101flag) {
+                    // add all lines belonging to div that are not added already
+                    // call addLine()
+                    flag = true;
+                }
+                else {
+                    // remove all lines belonging to div that are not added already
+                    // call removeLine()
+                    flag = false;
+                }
+            }
+
             // https://stackoverflow.com/questions/13152927/how-to-use-radio-on-change-event
             var radios = document.querySelectorAll("input[type=radio][name=planselector");
+            var that = this;
             Array.prototype.forEach.call(radios, function (radio) {
                 radio.addEventListener("change", function () {
                     that.render($scope.selectedPlan);
                 });
             });
             this.render($scope.selectedPlan);
-            console.log("reach");
+            var ece101 = document.getElementById("ECE 101");
+            console.log(ece101);
         });
     </script>
 </head>
@@ -233,10 +362,10 @@
         </div>
         <div id="B" ng-switch-when="B">
             <div class="term">
-                <div class="course">
+                <div class="course" id="ECE 102">
                     <h3 class="embed">ECE 102</h3>
                 </div>
-                <div class="course">
+                <div class="course" id="ECE 202">
                     <h3 class="embed">ECE 202</h3>
                 </div>
             </div>
@@ -440,17 +569,9 @@
     </div>
 </div>
 <script>
-        document.addEventListener("click", console.log, true)
-        console.log("setup");
+        // how to make this not null in angular controller?
         var ece101 = document.getElementById("ECE 101");
         console.log(ece101);
-        ece101.addEventListener("click", function(event) {
-            console.log("lest");
-        });
-        // var display = document.getElementById("display");
-        // display.addEventListener("click", function(event) {
-        //     console.log("rest");
-        // });
         var flag = false;
         var ece411 = document.getElementById("ECE 421");
         var line = new LeaderLine(ece101, ece411, {path:"fluid", hide:true});
@@ -466,7 +587,11 @@
                 line.hide();
             }
         }
-     
+        var ece102 = document.getElementById("ECE 102");
+        var ece202 = document.getElementById("ECE 202");
+        var line2 = new LeaderLine(ece102, ece202);
+        var array = [];
+        array.push(line);
     </script>
 </body>
 </html>
