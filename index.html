@@ -107,6 +107,12 @@
     <script>
         var app = angular.module("main", []);
         app.controller("main", function ($scope) {
+            console.log(document.readyState);
+            var ece101 = document.getElementById("ECE 101");
+            console.log(ece101);
+            document.addEventListener("DOMContentLoaded", function() {
+                console.log("Loaded!");
+            });
             // default selection 
             $scope.selectedPlan = "A";
 
@@ -266,8 +272,6 @@
                 });
             });
             this.render($scope.selectedPlan);
-            var ece101 = document.getElementById("ECE 101");
-            console.log(ece101);
         });
     </script>
 </head>
@@ -570,28 +574,28 @@
 </div>
 <script>
         // how to make this not null in angular controller?
-        var ece101 = document.getElementById("ECE 101");
-        console.log(ece101);
-        var flag = false;
-        var ece411 = document.getElementById("ECE 421");
-        var line = new LeaderLine(ece101, ece411, {path:"fluid", hide:true});
-        function listener() {
-            if (!flag) {
-                console.log("listen");
-                flag = true;
-                line.show();
-            }
-            else {
-                console.log("now");
-                flag = false;
-                line.hide();
-            }
-        }
-        var ece102 = document.getElementById("ECE 102");
-        var ece202 = document.getElementById("ECE 202");
-        var line2 = new LeaderLine(ece102, ece202);
-        var array = [];
-        array.push(line);
-    </script>
+    //     var ece101 = document.getElementById("ECE 101");
+    //     console.log(ece101);
+    //     var flag = false;
+    //     var ece411 = document.getElementById("ECE 421");
+    //     var line = new LeaderLine(ece101, ece411, {path:"fluid", hide:true});
+    //     function listener() {
+    //         if (!flag) {
+    //             console.log("listen");
+    //             flag = true;
+    //             line.show();
+    //         }
+    //         else {
+    //             console.log("now");
+    //             flag = false;
+    //             line.hide();
+    //         }
+    //     }
+    //     var ece102 = document.getElementById("ECE 102");
+    //     var ece202 = document.getElementById("ECE 202");
+    //     var line2 = new LeaderLine(ece102, ece202);
+    //     var array = [];
+    //     array.push(line);
+ </script>
 </body>
 </html>
