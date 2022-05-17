@@ -108,11 +108,6 @@
         var app = angular.module("main", []);
         app.controller("main", function ($scope) {
             console.log(document.readyState);
-            var ece101 = document.getElementById("ECE 101");
-            console.log(ece101);
-            document.addEventListener("DOMContentLoaded", function() {
-                console.log("Loaded!");
-            });
             // default selection 
             $scope.selectedPlan = "A";
 
@@ -254,12 +249,14 @@
                 if (!ece101flag) {
                     // add all lines belonging to div that are not added already
                     // call addLine()
-                    flag = true;
+                    ece101flag = true;
+                    console.log(ece101flag);
                 }
                 else {
                     // remove all lines belonging to div that are not added already
                     // call removeLine()
-                    flag = false;
+                    ece101flag = false;
+                    console.log(ece101flag);
                 }
             }
 
@@ -308,7 +305,7 @@
     <div class="display" ng-switch="selectedPlan">
         <div id="A" ng-switch-when="A">
             <div class="term">
-                <div class="course" id="ECE 101" onclick="listener()">
+                <div class="course" id="ECE 101" ng-click="ece101Listener()">
                     <h3 class="embed">ECE 101</h3>
                 </div>
                 <div class="course" id="ECE 201">
@@ -573,29 +570,29 @@
     </div>
 </div>
 <script>
-        // how to make this not null in angular controller?
-    //     var ece101 = document.getElementById("ECE 101");
-    //     console.log(ece101);
-    //     var flag = false;
-    //     var ece411 = document.getElementById("ECE 421");
-    //     var line = new LeaderLine(ece101, ece411, {path:"fluid", hide:true});
-    //     function listener() {
-    //         if (!flag) {
-    //             console.log("listen");
-    //             flag = true;
-    //             line.show();
-    //         }
-    //         else {
-    //             console.log("now");
-    //             flag = false;
-    //             line.hide();
-    //         }
-    //     }
-    //     var ece102 = document.getElementById("ECE 102");
-    //     var ece202 = document.getElementById("ECE 202");
-    //     var line2 = new LeaderLine(ece102, ece202);
-    //     var array = [];
-    //     array.push(line);
+        // test code to demo functionatily, ideally want to move into Angular controller
+        var ece101 = document.getElementById("ECE 101");
+        console.log(ece101);
+        var flag = false;
+        var ece411 = document.getElementById("ECE 421");
+        var line = new LeaderLine(ece101, ece411, {path:"fluid", hide:true});
+        function listener() {
+            if (!flag) {
+                console.log("listen");
+                flag = true;
+                line.show();
+            }
+            else {
+                console.log("now");
+                flag = false;
+                line.hide();
+            }
+        }
+        var ece102 = document.getElementById("ECE 102");
+        var ece202 = document.getElementById("ECE 202");
+        var line2 = new LeaderLine(ece102, ece202);
+        var array = [];
+        array.push(line);
  </script>
 </body>
 </html>
