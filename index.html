@@ -145,9 +145,11 @@
                 <h3>Term 1</h3>
                 <!-- Div representing a course, following the format below-->
                 <div class="course" id="ECE 101" ng-click="ece101Listener()">
+                    <dialog id="ece101courseinfo">Enter ECE 101 course information here</dialog>
                     <h3 class="embed">ECE 101</h3>
                 </div>
                 <div class="course" id="ECE 201" ng-click="ece201Listener()">
+                    <dialog id="ece201courseinfo">Enter ECE 201 course information here</dialog>
                     <h3 class="embed">ECE 201</h3>
                 </div>
             </div>
@@ -428,10 +430,22 @@ evaluating as null -->
    and coreq are dashed lines*/
    var line1 = new LeaderLine(ece101, ece201, {hide:true});
 
+   // for every course, fetch dialog box containing course info
+   var ece101courseinfo = document.getElementById("ece101courseinfo");
+   var ece201courseinfo = document.getElementById("ece201courseinfo");
+
    // for every line, we need a getter function
    function getLine1() {
        return line1;
    }
+
+   // for every dialogbox, we need a getter function
+   function getEce101Dialog() {
+       return ece101courseinfo;
+   };
+   function getEce201Dialog() {
+       return ece201courseinfo;
+   };
 </script>
 
 <!-- Script section outlining the controller of the webpage -->
@@ -683,14 +697,14 @@ evaluating as null -->
             if (!ece101flag) {
                 // call getter function to get all lines belonging to course
                 // call addLine() for every single line
-                // TO DO: spawn dialog box with course information
+                getEce101Dialog().show();
                 that.addLine(getLine1());
                 ece101flag = true;
             }
             else {
                 // call getter function to get all lines belonging to course
                 // call removeLine() for every single line
-                // TO DO: despawn dialog box with course information
+                getEce101Dialog().close();
                 that.removeLine(getLine1())
                 ece101flag = false;
             }
@@ -700,14 +714,14 @@ evaluating as null -->
             if (!ece201flag) {
                 // call getter function to get all lines belonging to course
                 // call addLine() for every single line
-                // TO DO: spawn dialog box with course information
+                getEce201Dialog().show();
                 that.addLine(getLine1());
                 ece201flag = true;
             }
             else {
                 // call getter function to get all lines belonging to course
                 // call removeLine() for every single line
-                // TO DO: despawn dialog box with course information
+                getEce201Dialog().close();
                 that.removeLine(getLine1());
                 ece201flag = false;
             }
