@@ -1,3 +1,4 @@
+<!--This is a mock up of what the final product of the webpage might look like-->
 <!DOCTYPE html>
 <!--language for website, this helps the search engine-->
 <html lang="en">
@@ -104,173 +105,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <!--Leader Line import-->
     <script src="https://cdn.jsdelivr.net/npm/leader-line@1.0.7/leader-line.min.js"></script>
-    <script>
-        var app = angular.module("main", []);
-        app.controller("main", function ($scope) {
-            console.log(document.readyState);
-            // default selection 
-            $scope.selectedPlan = "A";
-
-            // these indicate the active lines for each plan so when returning from a plan
-            // after switching of from it, the lines return
-            this.planAList = [];
-            this.planBlist = [];
-            this.planClist = [];
-            this.planDlist = [];
-
-            this.previousPlan = $scope.selectedPlan;
-
-            // render method for switching leaderlines shown on screen
-            this.render = function (plan) {
-                this.disable(this.previousPlan);
-                this.enable(plan);
-                this.previousPlan = plan;
-            };
-
-            // hiding leaderlines from previous plan
-            this.disable = function (plan) {
-                switch (plan) {
-                    case "A":
-                        for (let i = 0; i < this.planAList.length; i++) {
-                            this.planAList.hide();
-                        }
-                        break;
-                    case "B":
-                        for (let i = 0; i < this.planBlist.length; i++) {
-                            this.planBlist.hide();
-                        }
-                        break;
-                    case "C":
-                        for (let i = 0; i < this.planClist.length; i++) {
-                            this.planClist.hide();
-                        }
-                        break;
-                    case "D":
-                        for (let i = 0; i < this.planDlist.length; i++) {
-                            this.planDlist.hide();
-                        }
-                        break;
-                } 
-            };
-
-            // enabling target leaderlines from target plan
-            this.enable = function (plan) {
-                switch(plan) {
-                    case "A":
-                        for (let i = 0; i < this.planAList.length; i++) {
-                            this.planAList.show();
-                        }
-                        break;
-                    case "B":
-                        for (let i = 0; i < this.planAList.length; i++) {
-                            this.planBList.show();
-                        }
-                        break;
-                    case "C":
-                        for (let i = 0; i < this.planClist.length; i++) {
-                            this.planClist.show();
-                        }
-                        break;
-                    case "D":
-                        for (let i = 0; i < this.planClist.length; i++) {
-                            this.planClist.show();
-                        }
-                        break;
-                }
-            };
-
-            // function to display a line
-            this.addLine = function(line) {
-                switch($scope.selectedPlan) {
-                    case "A":
-                        if (this.planAList.findIndex(line) == -1) {
-                            line.show();
-                            this.planAList.push(line);
-                        }
-                        break;
-                    case "B":
-                        if (this.planBList.findIndex(line) == -1) {
-                            line.show();
-                            this.planBList.push(line);
-                        }
-                        break;
-                    case "C":
-                        if (this.planCList.findIndex(line) == -1) {
-                            line.show();
-                            this.planCList.push(line);
-                        }
-                        break;
-                    case "D":
-                        if (this.planDList.findIndex(line) == -1) {
-                            line.show();
-                            this.planDList.push(line);
-                        }
-                        break;
-                }
-            };
-        
-            // TO DO: need to consider case where two divs are active and they share a common line
-            this.removeLine = function(line) {
-                switch($scope.selectedPlan) {
-                    case "A":
-                        if (this.planAList.findIndex(line) != -1) {
-                            line.hide();
-                            this.planAList.splice(this.planAList.indexOf(line), 1);
-                        }
-                        break;
-                    case "B":
-                        if (this.planBList.findIndex(line) != -1) {
-                            line.hide();
-                            this.planBList.splice(this.planBList.indexOf(line), 1);
-                        }
-                        break;
-                    case "C":
-                        if (this.planCList.findIndex(line) == -1) {
-                            line.show();
-                            this.planCList.splice(this.planCList.indexOf(line), 1);
-                        }
-                        break;
-                    case "D":
-                        if (this.planDList.findIndex(line) == -1) {
-                            line.show();
-                            this.planDList.splice(this.planDList.indexOf(line), 1);
-                        }
-                        break;
-                }
-            }
-            // basic framework, have element var for every div
-            // have a leader line element for every connection, soild for prereq, dashed for coreq, hidden by default
-            // TO DO: how to get divs in this script after they load into DOM?
-            var ece101flag = false;
-            // this is a temp variable represent a line that belongs to ece101
-            var line1 = [];
-            // add a listener for every possibe div
-            $scope.ece101Listener = function () {
-                if (!ece101flag) {
-                    // add all lines belonging to div that are not added already
-                    // call addLine()
-                    ece101flag = true;
-                    console.log(ece101flag);
-                }
-                else {
-                    // remove all lines belonging to div that are not added already
-                    // call removeLine()
-                    ece101flag = false;
-                    console.log(ece101flag);
-                }
-            }
-
-            // https://stackoverflow.com/questions/13152927/how-to-use-radio-on-change-event
-            var radios = document.querySelectorAll("input[type=radio][name=planselector");
-            var that = this;
-            Array.prototype.forEach.call(radios, function (radio) {
-                radio.addEventListener("change", function () {
-                    that.render($scope.selectedPlan);
-                });
-            });
-            this.render($scope.selectedPlan);
-        });
-    </script>
 </head>
 <body>
 
@@ -302,17 +136,23 @@
         <input type="radio" name="planselector" ng-model="selectedPlan" value="D">
         <label for="D">D</label><br>
     </form>
+    <!--Display div, main course confriguation display-->
     <div class="display" ng-switch="selectedPlan">
+        <!--Div representing a plan-->
         <div id="A" ng-switch-when="A">
+            <!--Div representing a term, follow the format below-->
             <div class="term">
+                <h3>Term 1</h3>
+                <!-- Div representing a course, following the format below-->
                 <div class="course" id="ECE 101" ng-click="ece101Listener()">
                     <h3 class="embed">ECE 101</h3>
                 </div>
-                <div class="course" id="ECE 201">
+                <div class="course" id="ECE 201" ng-click="ece201Listener()">
                     <h3 class="embed">ECE 201</h3>
                 </div>
             </div>
             <div class="term">
+                <h3>Term 2</h3>
                 <div class="course" id="ECE 331">
                     <h3 class="embed">ECE 331</h3>
                 </div>
@@ -321,6 +161,7 @@
                 </div>
             </div>
             <div class="term">
+                <h3>Term 3</h3>
                 <div class="course" id="ECE 401">
                     <h3 class="embed">ECE 401</h3>
                 </div>
@@ -329,6 +170,7 @@
                 </div>
             </div>
             <div class="term">
+                <h3>Term 4</h3>
                 <div class="course" id="ECE 461">
                     <h3 class="embed">ECE 461</h3>
                 </div>
@@ -337,6 +179,7 @@
                 </div>
             </div>
             <div class="term">
+                <h3>Term 5</h3>
                 <div class="course" id="ECE 431">
                     <h3 class="embed">ECE 431</h3>
                 </div>
@@ -345,6 +188,7 @@
                 </div>
             </div>
             <div class="term">
+                <h3>Term 6</h3>
                 <div class="course" id="ECE 551">
                     <h3 class="embed">ECE 551</h3>
                 </div>
@@ -353,6 +197,7 @@
                 </div>
             </div>
             <div class="term">
+                <h3>Term 7</h3>
                 <div class="course" id="ECE 521">
                     <h3 class="embed">ECE 521</h3>
                 </div>
@@ -363,7 +208,7 @@
         </div>
         <div id="B" ng-switch-when="B">
             <div class="term">
-                <div class="course" id="ECE 102">
+                <div class="course" id="ECE 102" ng-click="ece102Listener()">
                     <h3 class="embed">ECE 102</h3>
                 </div>
                 <div class="course" id="ECE 202">
@@ -371,8 +216,8 @@
                 </div>
             </div>
             <div class="term">
-                <div class="course">
-                    <h3 class="embed">ECE 102</h3>
+                <div class="course" id="ECE 111">
+                    <h3 class="embed">ECE 111</h3>
                 </div>
                 <div class="course">
                     <h3 class="embed">ECE 202</h3>
@@ -569,30 +414,316 @@
         </div>
     </div>
 </div>
+
+<!-- Script section used to generate the lines between courses.
+Note: This script section generating the lines MUST be after the DOM elements in order to prevent them
+evaluating as null -->
 <script>
-        // test code to demo functionatily, ideally want to move into Angular controller
-        var ece101 = document.getElementById("ECE 101");
-        console.log(ece101);
-        var flag = false;
-        var ece411 = document.getElementById("ECE 421");
-        var line = new LeaderLine(ece101, ece411, {path:"fluid", hide:true});
-        function listener() {
-            if (!flag) {
-                console.log("listen");
-                flag = true;
-                line.show();
+    // for every course, we generate a HTML reference to that element
+   var ece101 = document.getElementById("ECE 101");
+   var ece201 = document.getElementById("ECE 201");
+   
+   /*for every prereq or coreq relationship between courses, we draw a line. line is hidden by default.
+   the prereq/coreq for a course points towards that course (eg. prereq/coreq -> course). prereq are soild lines
+   and coreq are dashed lines*/
+   var line1 = new LeaderLine(ece101, ece201, {hide:true});
+
+   // for every line, we need a getter function
+   function getLine1() {
+       return line1;
+   }
+</script>
+
+<!-- Script section outlining the controller of the webpage -->
+<script>
+    var app = angular.module("main", []);
+
+    // Angular controller for webpage
+    app.controller("main", function ($scope) {
+        // default plan selection 
+        $scope.selectedPlan = "A";
+
+        // for referencing this within a function
+        var that = this;
+
+        /* these indicate the active lines for each plan so when returning from a plan
+        after switching of from it, the lines return */
+        this.planAList = [];
+        this.planBlist = [];
+        this.planClist = [];
+        this.planDlist = [];
+
+        /* this is an array of pairs, where each pair is an active line for that plan and the count
+        of courses keeping it active*/
+        this.planAcountList = [];
+        this.planBcountList = [];
+        this.planCcountList = [];
+        this.planDcountList = [];
+
+        // this is used to ensure the controller knows which plan the webpage is switching from
+        this.previousPlan = $scope.selectedPlan;
+
+        /*
+            Render method for switching leaderlines shown on screen when plan chosen changes
+            Parameters:
+                plan - plan which the webpage is switching to
+        */
+        this.render = function (plan) {
+            this.disable(this.previousPlan);
+            this.enable(plan);
+            this.previousPlan = plan;
+        };
+
+        /*
+            Method to disable the activelines of the previously selected plan when switching to a new one
+            Parameters:
+                plan - plan which the webpage is switching from
+        */
+        this.disable = function (plan) {
+            // Check for previous plan
+            switch (plan) {
+                case "A":
+                    for (let i = 0; i < this.planAList.length; i++) {
+                        this.planAList[i].hide();
+                    }
+                    break;
+                case "B":
+                    for (let i = 0; i < this.planBlist.length; i++) {
+                        this.planBlist[i].hide();
+                    }
+                    break;
+                case "C":
+                    for (let i = 0; i < this.planClist.length; i++) {
+                        this.planClist[i].hide();
+                    }
+                    break;
+                case "D":
+                    for (let i = 0; i < this.planDlist.length; i++) {
+                        this.planDlist[i].hide();
+                    }
+                    break;
+            } 
+        };
+
+        /*
+            Method to enable the active lines of the plan which the webpage is 
+            switching to
+            Parameters:
+                plan - plan in which the webpage is switching to
+        */
+        this.enable = function (plan) {
+            // Check for target plan
+            switch(plan) {
+                case "A":
+                    for (let i = 0; i < this.planAList.length; i++) {
+                        this.planAList[i].show();
+                    }
+                    break;
+                case "B":
+                    for (let i = 0; i < this.planBList.length; i++) {
+                        this.planBList[i].show();
+                    }
+                    break;
+                case "C":
+                    for (let i = 0; i < this.planClist.length; i++) {
+                        this.planClist[i].show();
+                    }
+                    break;
+                case "D":
+                    for (let i = 0; i < this.planDlist.length; i++) {
+                        this.planDlist[i].show();
+                    }
+                    break;
+            }
+        };
+        /*
+            Function to "add" a line to a plan's active list. If the line doesnt exist in the active list, 
+            add to active list, and add to list keeping track of count of courses keeping line "active" for 
+            that plan. If the line already exists in the active list, 
+            increment the number of courses "spawning" it by 1
+            Parameters:
+                line - line to be "added"
+        */
+        this.addLine = function(line) {
+            // Check for current selected plan
+            switch($scope.selectedPlan) {
+                case "A":
+                    // Check if in active list for plan
+                    var index = this.planAList.findIndex((element) => element == line);
+                    // If it does not exist
+                    if (index == -1) {
+                        line.show();
+                        this.planAList.push(line);
+                        this.planAcountList.push([line, 1]);
+                    }
+                    // If it does, increment count
+                    else {
+                        this.planAcountList[index][1]++;
+                    }
+                    break;
+                case "B":
+                    // Check if in active list for plan
+                    var index = this.planBList.findIndex((element) => element == line);
+                    // If it does not exist
+                    if (index == -1) {
+                        line.show();
+                        this.planBList.push(line);
+                        this.planBcountList.push([line, 1]);
+                    }
+                    // If it does, increment count
+                    else {
+                        this.planBcountList[index][1]++;
+                    }
+                    break;
+                case "C":
+                    // Check if in active list for plan
+                    var index = this.planCList.findIndex((element) => element == line);
+                    // If it does not exist
+                    if (index == -1) {
+                        line.show();
+                        this.planCList.push(line);
+                        this.planCcountList.push([line, 1]);
+                    }
+                    // If it does, increment count
+                    else {
+                        this.planCcountList[index][1]++;
+                    }
+                    break;
+                case "D":
+                    // Check if in active list for plan
+                    var index = this.planDList.findIndex((element) => element == line);
+                     // If it does not exist
+                    if (index == -1) {
+                        line.show();
+                        this.planDList.push(line);
+                        this.planDcountList.push([line, 1]);
+                    }
+                    // If it does, increment count
+                      else {
+                        this.planDcountList[index][1]++;
+                    }
+                    break;
+            }
+        };
+    
+        /*
+            Function to remove a "line" from the active list. Decrement the active count of line, and if
+            reaches 0, remove from active list.
+            Parameters:
+                line - line to be removed
+        */
+        this.removeLine = function(line) {
+            // check plan selected
+            switch($scope.selectedPlan) {
+                case "A":
+                    // check if line exists in active list
+                    var index = this.planAList.findIndex((element) => element == line);
+                    if (index != -1) {
+                        // decrement active count
+                        this.planAcountList[index][1]--;
+                        // if active count reaches 0
+                        if (this.planAcountList[index][1] <= 0) {
+                            line.hide();
+                            this.planAList.splice(index, 1);
+                            this.planAcountList.splice(index, 1);
+                        }
+                    }
+                    break;
+                case "B":
+                    // check if line exists in active list
+                    var index = this.planBList.findIndex((element) => element == line);
+                    if (index != -1) {
+                        // decrement active count
+                        this.planBcountList[index][1]--;
+                        // if active count reaches 0
+                        if (this.planBcountList[index][1] <= 0) {
+                            line.hide();
+                            this.planBList.splice(index, 1);
+                            this.planBcountList.splice(index, 1);
+                        }
+                    }
+                    break;
+                case "C":
+                    // check if line exists in active list
+                    var index = this.planCList.findIndex((element) => element == line);
+                    if (index != -1) {
+                        // decrement active count
+                        this.planCcountList[index][1]--;
+                        // if active count reaches 0
+                        if (this.planCcountList[index][1] <= 0) {
+                            line.hide();
+                            this.planCList.splice(index, 1);
+                            this.planCcountList.splice(index, 1);
+                        }
+                    }
+                    break;
+                case "D":
+                    // check if line exists in active list
+                    var index = this.planDList.findIndex((element) => element == line);
+                    if (index != -1) {
+                        // decrement active count
+                        this.planAcountList[index][1]--;
+                        // if active count reaches 0
+                        if (this.planDcountList[index][1] <= 0) {
+                            line.hide();
+                            this.planDList.splice(index, 1);
+                            this.planDcountList.splice(index, 1);
+                        }
+                    }
+                    break;
+            }
+        };
+
+        // add a clicked/not clicked flag for every single course
+        var ece101flag = false; 
+        var ece201flag = false;
+    
+        // add a listener for every possible course, following the below format
+        $scope.ece101Listener = function () {
+            if (!ece101flag) {
+                // call getter function to get all lines belonging to course
+                // call addLine() for every single line
+                // TO DO: spawn dialog box with course information
+                that.addLine(getLine1());
+                ece101flag = true;
             }
             else {
-                console.log("now");
-                flag = false;
-                line.hide();
+                // call getter function to get all lines belonging to course
+                // call removeLine() for every single line
+                // TO DO: despawn dialog box with course information
+                that.removeLine(getLine1())
+                ece101flag = false;
             }
-        }
-        var ece102 = document.getElementById("ECE 102");
-        var ece202 = document.getElementById("ECE 202");
-        var line2 = new LeaderLine(ece102, ece202);
-        var array = [];
-        array.push(line);
- </script>
+        };
+        
+        $scope.ece201Listener = function() {
+            if (!ece201flag) {
+                // call getter function to get all lines belonging to course
+                // call addLine() for every single line
+                // TO DO: spawn dialog box with course information
+                that.addLine(getLine1());
+                ece201flag = true;
+            }
+            else {
+                // call getter function to get all lines belonging to course
+                // call removeLine() for every single line
+                // TO DO: despawn dialog box with course information
+                that.removeLine(getLine1());
+                ece201flag = false;
+            }
+        };
+
+        // This makes it so the render function is called when the radio input is changed
+        // Source: https://stackoverflow.com/questions/13152927/how-to-use-radio-on-change-event
+        var radios = document.querySelectorAll("input[type=radio][name=planselector");
+        Array.prototype.forEach.call(radios, function (radio) {
+            radio.addEventListener("change", function () {
+                that.render($scope.selectedPlan);
+            });
+        });
+        this.render($scope.selectedPlan);
+        
+    });
+</script>
 </body>
 </html>
