@@ -7,7 +7,7 @@
 % file.
 
 % convert excel sheet to matlab table
-in_file = "RO_COURSES_BY_DEPT_OR_FACULTY_9951.xls";
+in_file = "RO_COURSES_BY_DEPT_OR_FACULTY_ALL_ENG.xls";
 course_table = readtable(in_file, "PreserveVariableNames", true);
 
 rows = height(course_table);
