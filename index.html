@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- This makes website responsive on different devices-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--TO DO: extract this into an external file later-->
     <style>  
         /*body style*/
         body {
@@ -164,7 +165,8 @@
             </div>
             <div class="term">
                 <h3>Term 3</h3>
-                <div class="course" id="ECE 401">
+                <div class="course" id="ECE 401" ng-click="ece401Listener()">
+                    <dialog id="ece401courseinfo">Enter ECE 401 course information here</dialog>
                     <h3 class="embed">ECE 401</h3>
                 </div>
                 <div class="course" id="ECE 411">
@@ -173,7 +175,8 @@
             </div>
             <div class="term">
                 <h3>Term 4</h3>
-                <div class="course" id="ECE 461">
+                <div class="course" id="ECE 461" ng-click="ece461Listener()">
+                    <dialog id="ece461courseinfo">Enter ECE 461 course information here</dialog>
                     <h3 class="embed">ECE 461</h3>
                 </div>
                 <div class="course" id="ECE 421">
@@ -424,19 +427,40 @@ evaluating as null -->
     // for every course, we generate a HTML reference to that element
    var ece101 = document.getElementById("ECE 101");
    var ece201 = document.getElementById("ECE 201");
+   var ece401 = document.getElementById("ECE 401");
+   var ece461 = document.getElementById("ECE 461");
    
    /*for every prereq or coreq relationship between courses, we draw a line. line is hidden by default.
    the prereq/coreq for a course points towards that course (eg. prereq/coreq -> course). prereq are soild lines
    and coreq are dashed lines*/
-   var line1 = new LeaderLine(ece101, ece201, {hide:true});
+   var line1 = new LeaderLine(ece101, ece201, {hide:true, dash:true});
+   var line2 = new LeaderLine(ece101, ece401, {hide:true});
+   var line3 = new LeaderLine(ece201, ece401, {hide:true});
+   var line4 = new LeaderLine(ece101, ece461, {hide:true});
+   var line5 = new LeaderLine(ece201, ece461, {hide:true});
+
 
    // for every course, fetch dialog box containing course info
    var ece101courseinfo = document.getElementById("ece101courseinfo");
    var ece201courseinfo = document.getElementById("ece201courseinfo");
+   var ece401courseinfo = document.getElementById("ece401courseinfo");
+   var ece461courseinfo = document.getElementById("ece461courseinfo");
 
    // for every line, we need a getter function
    function getLine1() {
        return line1;
+   };
+   function getLine2() {
+       return line2;
+   };
+   function getLine3() {
+       return line3;
+   };
+   function getLine4() {
+        return line4;
+   };
+   function getLine5() {
+       return line5;
    }
 
    // for every dialogbox, we need a getter function
@@ -445,6 +469,12 @@ evaluating as null -->
    };
    function getEce201Dialog() {
        return ece201courseinfo;
+   };
+   function getEce401Dialog() {
+       return ece401courseinfo;
+   }
+   function getEce461Dialog() {
+       return ece461courseinfo;
    };
 </script>
 
@@ -691,6 +721,8 @@ evaluating as null -->
         // add a clicked/not clicked flag for every single course
         var ece101flag = false; 
         var ece201flag = false;
+        var ece401flag = false;
+        var ece461flag = false;
     
         // add a listener for every possible course, following the below format
         $scope.ece101Listener = function () {
@@ -699,13 +731,17 @@ evaluating as null -->
                 // call addLine() for every single line
                 getEce101Dialog().show();
                 that.addLine(getLine1());
+                that.addLine(getLine2());
+                that.addLine(getLine4());
                 ece101flag = true;
             }
             else {
                 // call getter function to get all lines belonging to course
                 // call removeLine() for every single line
                 getEce101Dialog().close();
-                that.removeLine(getLine1())
+                that.removeLine(getLine1());
+                that.removeLine(getLine2());
+                that.removeLine(getLine4());
                 ece101flag = false;
             }
         };
@@ -716,6 +752,8 @@ evaluating as null -->
                 // call addLine() for every single line
                 getEce201Dialog().show();
                 that.addLine(getLine1());
+                that.addLine(getLine3());
+                that.addLine(getLine5());
                 ece201flag = true;
             }
             else {
@@ -723,7 +761,39 @@ evaluating as null -->
                 // call removeLine() for every single line
                 getEce201Dialog().close();
                 that.removeLine(getLine1());
+                that.removeLine(getLine3());
+                that.removeLine(getLine5());
                 ece201flag = false;
+            }
+        };
+        $scope.ece401Listener = function () {
+            if (!ece401flag) {
+                // call getter function to get all lines belonging to course
+                // call addLine() for every single line
+                getEce401Dialog().show();
+                that.addLine(getLine2());
+                that.addLine(getLine3());
+                ece401flag = true;
+            }
+            else {
+                getEce401Dialog().close();
+                that.removeLine(getLine2());
+                that.removeLine(getLine3());
+                ece401flag = false;
+            }
+        };
+        $scope.ece461Listener = function() {
+            if (!ece461flag) {
+                getEce461Dialog().show();
+                that.addLine(getLine4());
+                that.addLine(getLine5());
+                ece461flag = true;
+            }
+            else {
+                getEce461Dialog().close();
+                that.removeLine(getLine4());
+                that.removeLine(getLine5());
+                ece461flag = false;
             }
         };
 
