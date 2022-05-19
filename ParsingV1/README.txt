@@ -1,12 +1,12 @@
 Purpose: To parse an excel (.xls) file and to store the data in a
          python dictionary. This dictionary will have keys as
-         as the Course ID of that course. The values will be a
+         as the Name of that course (eg: MATH 100). The values will be a
          Course object definied in parsing.py, which contains 
          attributes stroing all data from the excel sheet.
 
 Running Instructions:
 - Ensure that "parsing.m", "parsing.py", and
-  "RO_COURSES_BY_DEPT_OR_FACULTY_9951.xls" are in the
+  "RO_COURSES_BY_DEPT_OR_FACULTY_ALL_ENG.xls" are in the
   current directory.
 - Open Matlab and run the script "parsing.m". This should
   create a file in the current directory called "parsed.json"
@@ -47,11 +47,13 @@ Course Object:
     duration
     alpha_hours
     course_description
+    prereqs (list of all prereqs)
 
-Example Usage: (Printing the Course ID of every course)
+Example Usage: (Printing the Course ID & prereqs of every course)
 from parsing import parse
 
 filename = "parsed.json"
 courses = parse(filename)
 for course in courses:
     print(courses[course].course_id)
+    print(courses[course].prereqs)
