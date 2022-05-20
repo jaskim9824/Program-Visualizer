@@ -59,18 +59,29 @@
                 <!-- Div representing a course-->
                 <div class="coursecontainer">
                     <div class="coursepop" ng-switch="ece101courseinfo">
-                        <div ng-switch-when="show">
-                            <p>Display course info here</p>
+                        <div ng-switch-when="show"><p>Lol.This is a long info segment.I doesnt know what llngg
+                            this whgiwghiwivwenvwinv
+                            qvwjvwviw
+                            qvnijuqviq
+                            \wvuhwuibh
+                            qvqijevi
+                            qvn2hbiwhb</p>
                         </div>
-                        <div ng-switch-when="hide"></div>
-                        <div ng-switch-default></div>
+                        <div ng-switch-when="hide"><p></p></div>
+                        <div ng-switch-default><p></p></div>
                     </div>
                     <div class="course" id="ECE 101" ng-click="ece101Listener()">
                         <h3 class="embed">ECE 101</h3>
                     </div>
                 </div>
                 <div class = "coursecontainer">
-                    <dialog id="ece201courseinfo">Enter ECE 201 course information here</dialog>
+                    <div class="coursepop" ng-switch="ece201courseinfo">
+                        <div ng-switch-when="show">
+                            <p>Display course info here</p>
+                        </div>
+                        <div ng-switch-when="hide"></div>
+                        <div ng-switch-default></div>
+                    </div>
                     <div class="course" id="ECE 201" ng-click="ece201Listener()">
                         <h3 class="embed">ECE 201</h3>
                     </div>
