@@ -1,4 +1,5 @@
 <!--This is a mock up of what the final product of the webpage might look like-->
+<!--TO DO: Implement dialog boxes containing course information-->
 <!DOCTYPE html>
 <!--language for website, this helps the search engine-->
 <html lang="en">
@@ -76,8 +77,6 @@
         }
     
         .course {
-            margin-top: 50px;
-            margin-bottom: 50px;
             border-style: solid;
             border-color: black;
             border-width: 2px;
@@ -93,6 +92,13 @@
             float: left;
             margin-left: 60px;
             position: relative;
+        }
+        .termheader {
+            margin-bottom: 30px;
+        }
+        .courseinfo {
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
     </style>
     <title>MEC E Plan</title>
@@ -143,15 +149,25 @@
         <div id="A" ng-switch-when="A">
             <!--Div representing a term, follow the format below-->
             <div class="term">
-                <h3>Term 1</h3>
-                <!-- Div representing a course, following the format below-->
-                <div class="course" id="ECE 101" ng-click="ece101Listener()">
-                    <dialog id="ece101courseinfo">Enter ECE 101 course information here</dialog>
-                    <h3 class="embed">ECE 101</h3>
+                <h3 class="termheader">Term 1</h3>
+                <!-- Div representing a course-->
+                <div class = "coursecontainer">
+                    <div ng-switch="ece101courseinfo">
+                        <div ng-switch-when="show">
+                            <p>Display course info here</p>
+                        </div>
+                        <div ng-switch-when="hide"></div>
+                        <div ng-switch-default></div>
+                    </div>
+                    <div class="course" id="ECE 101" ng-click="ece101Listener()">
+                        <h3 class="embed">ECE 101</h3>
+                    </div>
                 </div>
-                <div class="course" id="ECE 201" ng-click="ece201Listener()">
+                <div class = "coursecontainer">
                     <dialog id="ece201courseinfo">Enter ECE 201 course information here</dialog>
-                    <h3 class="embed">ECE 201</h3>
+                    <div class="course" id="ECE 201" ng-click="ece201Listener()">
+                        <h3 class="embed">ECE 201</h3>
+                    </div>
                 </div>
             </div>
             <div class="term">
@@ -439,13 +455,6 @@ evaluating as null -->
    var line4 = new LeaderLine(ece101, ece461, {hide:true});
    var line5 = new LeaderLine(ece201, ece461, {hide:true});
 
-
-   // for every course, fetch dialog box containing course info
-   var ece101courseinfo = document.getElementById("ece101courseinfo");
-   var ece201courseinfo = document.getElementById("ece201courseinfo");
-   var ece401courseinfo = document.getElementById("ece401courseinfo");
-   var ece461courseinfo = document.getElementById("ece461courseinfo");
-
    // for every line, we need a getter function
    function getLine1() {
        return line1;
@@ -463,19 +472,6 @@ evaluating as null -->
        return line5;
    }
 
-   // for every dialogbox, we need a getter function
-   function getEce101Dialog() {
-       return ece101courseinfo;
-   };
-   function getEce201Dialog() {
-       return ece201courseinfo;
-   };
-   function getEce401Dialog() {
-       return ece401courseinfo;
-   }
-   function getEce461Dialog() {
-       return ece461courseinfo;
-   };
 </script>
 
 <!-- Script section outlining the controller of the webpage -->
@@ -723,13 +719,17 @@ evaluating as null -->
         var ece201flag = false;
         var ece401flag = false;
         var ece461flag = false;
+
+        // for every course, intialize the variable controlling dialog box to "hide"
+        $scope.ece101courseinfo = "hide";
     
         // add a listener for every possible course, following the below format
         $scope.ece101Listener = function () {
             if (!ece101flag) {
                 // call getter function to get all lines belonging to course
                 // call addLine() for every single line
-                getEce101Dialog().show();
+                // set the respective course info to show
+                $scope.ece101courseinfo = "show";
                 that.addLine(getLine1());
                 that.addLine(getLine2());
                 that.addLine(getLine4());
@@ -738,7 +738,8 @@ evaluating as null -->
             else {
                 // call getter function to get all lines belonging to course
                 // call removeLine() for every single line
-                getEce101Dialog().close();
+                // set the respective course info to show
+                $scope.ece101courseinfo = "hide";
                 that.removeLine(getLine1());
                 that.removeLine(getLine2());
                 that.removeLine(getLine4());
@@ -750,7 +751,6 @@ evaluating as null -->
             if (!ece201flag) {
                 // call getter function to get all lines belonging to course
                 // call addLine() for every single line
-                getEce201Dialog().show();
                 that.addLine(getLine1());
                 that.addLine(getLine3());
                 that.addLine(getLine5());
@@ -759,7 +759,6 @@ evaluating as null -->
             else {
                 // call getter function to get all lines belonging to course
                 // call removeLine() for every single line
-                getEce201Dialog().close();
                 that.removeLine(getLine1());
                 that.removeLine(getLine3());
                 that.removeLine(getLine5());
@@ -770,13 +769,11 @@ evaluating as null -->
             if (!ece401flag) {
                 // call getter function to get all lines belonging to course
                 // call addLine() for every single line
-                getEce401Dialog().show();
                 that.addLine(getLine2());
                 that.addLine(getLine3());
                 ece401flag = true;
             }
             else {
-                getEce401Dialog().close();
                 that.removeLine(getLine2());
                 that.removeLine(getLine3());
                 ece401flag = false;
@@ -784,13 +781,11 @@ evaluating as null -->
         };
         $scope.ece461Listener = function() {
             if (!ece461flag) {
-                getEce461Dialog().show();
                 that.addLine(getLine4());
                 that.addLine(getLine5());
                 ece461flag = true;
             }
             else {
-                getEce461Dialog().close();
                 that.removeLine(getLine4());
                 that.removeLine(getLine5());
                 ece461flag = false;
