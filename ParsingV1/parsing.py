@@ -5,7 +5,7 @@ class Course:
     def __init__(self, faculty, department, course_id, subject, catalog,
         long_title, eff_date, status, calendar_print, prog_units,
         engineering_units, calc_fee_index, actual_fee_index, duration,
-        alpha_hours, course_description, prereqs = []):
+        alpha_hours, course_description, prereqs = [], coreqs = [], reqs = []):
         self.faculty = faculty
         self.department = department
         self.course_id = course_id
@@ -23,6 +23,8 @@ class Course:
         self.alpha_hours = alpha_hours
         self.course_description = course_description
         self.prereqs = prereqs
+        self.coreqs = coreqs
+        self.reqs = reqs
 
 
 def splitLine(filename, contents):
@@ -39,9 +41,51 @@ def splitLine(filename, contents):
         f.write(contents.replace("}", "}\n"))
 
 
+def countNums(str):
+    # Counts the number of number chars in a string.
+    # eg: "mlat9kg45" has 3 numbers.
+    #
+    # Arguments:
+    #   str (string): counts how many numbers in this string
+    #
+    # Returns: 
+    #   numcounter (int): how many numbers are in the string
+
+    nums = ["0","1","2","3","4","5","6","7","8","9"]
+    numcounter = 0
+    for char in str:
+        if char in nums:
+            numcounter += 1
+
+    return numcounter
+
+
+def pullDept(reqlist, indx):
+    # Pulls the department name from the the list item at index indx in reqlist.
+    #
+    # Arguments:
+    #   reqlist (list of strings): list of the prerequisites for a course
+    #   indx (int): index of the current item in reqlist from which the department name is pulled
+    #
+    # Returns: 
+    #   dept (string): The department name required for the current course.
+    #   Returns -1 on error.
+
+    nums = ["0","1","2","3","4","5","6","7","8","9"]
+    dept = ""
+    for n in range(0, len(reqlist[indx])):
+    # MATH 100 -> Move form left to right until you hit the
+    # first number, the department is from beginning to 2 indices before that
+        if reqlist[indx][n] in nums:
+            dept = reqlist[indx][0:n - 1]  # pull the department name
+            return dept
+
+    return -1
+
+
 def preprocess(reqlist):
     # Preprocesses a list (of strings) of the pre-requisites for one course.
-    # Removes all brackets and commas. If the list item is not a course
+    # Removes all brackets and commas, replaces slash with " or ". If the list item is not a course
     # (some text such as: "consent of the department required.") it is removed.
     # Any text after a semicolon is removed. Any item that is longer than 16 chars
     # is removed (definitely not a course name).
@@ -52,7 +96,6 @@ def preprocess(reqlist):
     # Returns: 
     #   newlist (list of strings): preprocessed list of pre-requisite courses
 
-    nums = ["0","1","2","3","4","5","6","7","8","9"]
     newlist = []
 
     i = 0
@@ -61,15 +104,34 @@ def preprocess(reqlist):
         reqlist[i] = reqlist[i].replace("(", "")
         reqlist[i] = reqlist[i].replace(")", "")
         reqlist[i] = reqlist[i].replace(",", "")
+
+        # A slash between courses indicates the same as "or"
+        # Replace all slashes with " or "
+        splitslash = reqlist[i].split("/")
+        if splitslash[0] != reqlist[i]:
+            # There was a slash present
+            j = i
+            k = 0
+            while k < len(splitslash):
+                # Replace all slashes with "or "
+                if k != 0:
+                    if (splitslash[k][0:2] != "or") and (splitslash[k][0:2] != "Or"):
+                        splitslash[k] = "or " + splitslash[k]
+                k += 1
+            # splitslash has corrected entries, replace reqlist[i] with concatenated
+            # entries from splitslash
+            del reqlist[i]
+            while splitslash != []:
+                reqlist.insert(j, splitslash[0])  # pull from start of splitslash and delete that entry
+                del splitslash[0]
+                j += 1
+
         i += 1
 
     j = 0
     while j < len(reqlist):
         # Must have at least 3 numbers to be the name of a course
-        numcounter = 0
-        for char in reqlist[j]:
-            if char in nums:
-                numcounter += 1
+        numcounter = countNums(reqlist[j])
         if numcounter < 3:
             j += 1
             continue
@@ -92,30 +154,6 @@ def preprocess(reqlist):
     return newlist
 
 
-def pullDept(reqlist, nums, indx):
-    # Pulls the department name from the the previous list item in reqlist.
-    # The current list item is at index number indx.
-    #
-    # Arguments:
-    #   reqlist (list of strings): list of the prerequisites for a course
-    #   nums (list of strings): list of numbers 0-9 (i.e. ["0","1","2",...])
-    #   indx (int): index of the current item in reqlist that requires a department name
-    #
-    # Returns: 
-    #   dept (string): The department name required for the current course.
-    #   Returns -1 on error.
-
-    dept = ""
-    for n in range(0, len(reqlist[indx - 1])):
-    # MATH 100 -> Move form left to right until you hit the
-    # first number, the department is from beginning to 2 indices before that
-        if reqlist[indx - 1][n] in nums:
-            dept = reqlist[indx - 1][0:n - 1]  # pull the department name
-            return dept
-
-    return -1
-
-
 def process(prestr):
     # Pulls the pre-requisites from a course description. Returns the 
     # pre-requisites as a list of strings, each element being the name of
@@ -133,6 +171,7 @@ def process(prestr):
     #   2) Several courses, each separated by the word "or". This denotes that only one
     #   these courses is required as a prerequisite. eg: "MEC E 250 or MATH 102 or CH E 441"
 
+    prestr = prestr.strip()
     # Add a comma after the end of each course name
     prestr = prestr.replace("0 ", "0, ")
     prestr = prestr.replace("1 ", "1, ")
@@ -156,23 +195,46 @@ def process(prestr):
 
     reqlist = preprocess(reqlist)  # Preprocess/format the text
 
-    nums = ["0","1","2","3","4","5","6","7","8","9"]
     i = 0
 
     while i < len(reqlist):
-        # Iterate through every element in reqlist. Chnages are made
+        # Iterate through every element in reqlist. Changes are made
         # directly on reqlist
 
-        # Count the number of numbers (should be 3 if it's a course)
-        numcounter = 0
-        for char in reqlist[i]:
-            if char in nums:
-                numcounter += 1
+        reqlist[i] = reqlist[i].strip()
 
-        if reqlist[i][0:6] == "One of" or reqlist[i][0:6] == "one of":
+        if "-" in reqlist[i]:
+            del reqlist[i]
+            continue
+
+        # Count the number of numbers (should be 3 if it's a course)
+        numcounter = countNums(reqlist[i])
+
+        if reqlist[i][0:5] == "both " or reqlist[i][0:5] == "Both ":
+            # Two courses are required, remove both and pull department name is required
+            reqlist[i] = reqlist[i].replace("both ","")
+            reqlist[i] = reqlist[i].replace("Both ","")
+
+            # Pull department name from previous course if required
+            numcounter = countNums(reqlist[i + 1])
+            if numcounter == 3 and len(reqlist[i + 1]) == 3:
+                # Only a course number is present, must pull the department name
+                dept = pullDept(reqlist, i)
+                assert dept != -1, "Error pulling department name from previous list item, check pullDept()"
+
+                reqlist[i + 1] = dept + " " + reqlist[i + 1]
+
+        if (reqlist[i][0:7] == "One of ") or (reqlist[i][0:7] == "one of ") or (reqlist[i][0:7] == "Either ") or (reqlist[i][0:7] == "either "):
+            # Same logic for "one of" as well as "either"
+            if ((reqlist[i][0:6] == "Either") or (reqlist[i][0:6] == "either")) and (reqlist[i + 1][0:11] == "or one of "):
+                # Remove the "or one of " and we can apply the same steps
+                reqlist[i + 1] = reqlist[i + 1].replace("or one of ", "")
+
             # Only one of the upcoming courses is required
-            reqlist[i] = reqlist[i].replace("One of ","")
-            reqlist[i] = reqlist[i].replace("one of ","")
+            reqlist[i] = reqlist[i].replace("One of ", "")
+            reqlist[i] = reqlist[i].replace("one of ", "")
+            reqlist[i] = reqlist[i].replace("Either ", "")
+            reqlist[i] = reqlist[i].replace("either ", "")
 
             j = i + 1
 
@@ -182,17 +244,14 @@ def process(prestr):
                     # previous and current elements, continue until we see the word "or"
 
                     # Count the number of numbers in the next element
-                    numcounter = 0
-                    for char in reqlist[j]:
-                        if char in nums:
-                            numcounter += 1
+                    numcounter = countNums(reqlist[j])
 
                     if numcounter == 3 and len(reqlist[j]) == 3:
-                        # Only the course numebr is present, we need to pull
+                        # Only the course number is present, we need to pull
                         # the department from the previous element
                         # eg: [MATH 100, 102] should become [MATH 100, MATH 102]
-                        dept = pullDept(reqlist, nums, j)
-                        assert(dept != -1, "Error pulling department name from previous list item, check pullDept()")
+                        dept = pullDept(reqlist, j - 1)
+                        assert dept != -1, "Error pulling department name from previous list item, check pullDept()"
 
                         reqlist[j] = dept + " " + reqlist[j]  # add the department name
                     reqlist[i] = reqlist[i] + " or " + reqlist[j]  # combine previous and current elements
@@ -206,19 +265,38 @@ def process(prestr):
                         # but don't add "or" (already present)
 
                         # Count the number of numbers in the next element
-                        numcounter = 0
-                        for char in reqlist[j]:
-                            if char in nums:
-                                numcounter += 1
+                        numcounter = countNums(reqlist[j])
 
                         if numcounter == 3 and len(reqlist[j]) == 6:
                             # only "or" and a number is present eg: "or 451" (3 numbers, 6 chars)
                             # we need to pull the department from the previous element
-                            dept = pullDept(reqlist, nums, j)
-                            assert(dept != -1, "Error pulling department name from previous list item, check pullDept()")
+                            dept = pullDept(reqlist, j - 1)
+                            assert dept != -1, "Error pulling department name from previous list item, check pullDept()"
 
-                            reqlist[j] = dept + " " + reqlist[j]  # don't add "or" since already present
-                        reqlist[i] = reqlist[i] + " " + reqlist[j]
+                            reqlist[j] = "or " + dept + reqlist[j][2:]  # move the position of "or"
+
+                        if reqlist[j][0:8] == "or both ":
+                            # FIXME: this is tough to deal with, either these courses or both of these courses
+                            # Right now, just combining everything into one list entry
+                            if len(reqlist[j]) == 11:
+                                # Only course number is present in current entry, need to pull department name from previous
+                                dept = pullDept(reqlist, j - 1)
+                                assert dept != -1, "Error pulling department name from previous list item, check pullDept()"
+
+                                reqlist[j] = "or both " + dept + reqlist[j][7:]  # move the position of "or both"
+
+                            numcounter = countNums(reqlist[j + 1])
+                            if numcounter == 3 and len(reqlist[j + 1]) == 3:
+                                # Only course number is present in the next entry, need to pull the department name from current
+                                dept = pullDept(reqlist, j)
+                                assert dept != -1, "Error pulling department name from previous list item, check pullDept()"
+
+                                # Re-arranging word placement
+                                reqlist[j + 1] = "and " + dept[8:] + " " + reqlist[j + 1]
+                                reqlist[j] = reqlist[j] + " " + reqlist[j + 1]  # combine current and next
+                                del reqlist[j + 1]
+
+                        reqlist[i] = reqlist[i] + " " + reqlist[j]  # combine current and previous
                         del reqlist[j]
                         if j >= len(reqlist):
                             break
@@ -228,8 +306,8 @@ def process(prestr):
             # The element is just "or" followed by a course number. eg: "or 451" 
             # The department is not present.
             # We need to pull the department from the previous element.
-            dept = pullDept(reqlist, nums, i)
-            assert(dept != -1, "Error pulling department name from previous list item, check pullDept()")
+            dept = pullDept(reqlist, i - 1)
+            assert dept != -1, "Error pulling department name from previous list item, check pullDept()"
 
             reqlist[i] = "or " + dept + reqlist[i][2:]  # move the position of "or"
             reqlist[i - 1] = reqlist[i - 1] + " " + reqlist[i]  # combine previous and current elements
@@ -244,8 +322,8 @@ def process(prestr):
         elif numcounter == 3 and len(reqlist[i]) == 3:
             # Only a course number is present. eg: "102"
             # All we do is pull the department from the previous element.
-            dept = pullDept(reqlist, nums, i)
-            assert(dept != -1, "Error pulling department name from previous list item, check pullDept()")
+            dept = pullDept(reqlist, i - 1)
+            assert dept != -1, "Error pulling department name from previous list item, check pullDept()"
 
             reqlist[i] = dept + " " + reqlist[i]  # just add the department name to current item
             i += 1
@@ -255,10 +333,10 @@ def process(prestr):
     return reqlist
 
 def pullPreReqs(description):
-    # Pulls the prerequisite from the course description.
+    # Pulls the prerequisites from the course description.
     #
     # Arguments:
-    #   description (string): The complete course description taken form Beartracks/Excel
+    #   description (string): The complete course description taken from Beartracks/Excel
     #
     # Returns:
     #   prereqs (list of strings): A list of the prerequisites. Elements
@@ -268,8 +346,12 @@ def pullPreReqs(description):
 
     # Split into cases, plural and not plural. Just adjusts the substring value (14 or 15)
     singlestart = description.find("Prerequisite: ")
+    if singlestart == -1:
+        singlestart = description.find("prerequisite: ")
 
     multstart = description.find("Prerequisites: ")
+    if multstart == -1:
+        multstart = description.find("prerequisites: ")
 
     if singlestart != -1:
         # Prerequisite(s) given from after the colon up to the very next period
@@ -289,6 +371,71 @@ def pullPreReqs(description):
     prereqs = process(prestr)
     
     return prereqs
+
+
+def pullCoReqs(description):
+    # Pulls the corequisites from the course description.
+    #
+    # Arguments:
+    #   description (string): The complete course description taken from Beartracks/Excel
+    #
+    # Returns:
+    #   coreqs (list of strings): A list of the corequisites. Elements
+    #   can be in two forms. 1) The name of a single course. eg: "MATH 100"
+    #   2) Several courses, each separated by the word "or". This denotes that only one
+    #   these courses is required as a corequisite. eg: "MEC E 250 or MATH 102 or CH E 441"
+
+    # Split into cases, plural and not plural. Just adjusts the substring value (14 or 15)
+    singlestart = description.find("Corequisite: ")
+    if singlestart == -1:
+        singlestart = description.find("corequisite: ")
+
+    multstart = description.find("Corequisites: ")
+    if multstart == -1:
+        multstart = description.find("corequisites: ")
+
+    if singlestart != -1:
+        # Corequisite(s) given from after the colon up to the very next period
+        singlestart += 13
+        singleend = description.find(".", singlestart)
+        prestr = description[singlestart:singleend]     
+    elif multstart != -1:
+        # Corequisite(s) given from after the colon up to the very next period
+        multstart += 14
+        multend = description.find(".", multstart)
+        prestr = description[multstart:multend]
+    else:
+        return []
+
+    # Process the string to split it into a list with each item being the name
+    # of a corequisite course
+    coreqs = process(prestr)
+    
+    return coreqs
+
+def pullReqs(course_obj_dict, course):
+    # Searches course_obj_dict for which courses require "course" as a pre/co-req,
+    # returns these as a list of course names (empty if none)
+    #
+    # Arguments:
+    #   course_obj_dict (dictionary): dict with course name for key and 
+    #   Course class as value. Course class described in parsing.py
+    #   course (string): the name of a course (eg: MATH 101)
+    #
+    # Returns:
+    #   reqs (list of strings): list of the names of the courses that require
+    #   "course" as either a pre or co-requisite
+
+    reqs = []
+
+    for search_course in course_obj_dict:
+        if search_course != course:  # a course can't be a prereq for itself
+            if (course in course_obj_dict[search_course].prereqs) or (course in course_obj_dict[search_course].coreqs):
+                # If course is a pre or co-req for search_course, add search_course to the list of reqs
+                reqs.append(search_course)
+
+    return reqs
+
 
 def parse(filename):
     # Parses a JSON file with name "filename" created with the
@@ -339,7 +486,7 @@ def parse(filename):
 
     for course in course_obj_dict:
         course_obj_dict[course].prereqs = pullPreReqs(course_obj_dict[course].course_description)
-        # pullCoReqs(course_obj_dict, course)
-        # findReqs(course_obj_dict, course)
+        course_obj_dict[course].coreqs = pullCoReqs(course_obj_dict[course].course_description)
+        course_obj_dict[course].reqs = pullReqs(course_obj_dict, course)
 
     return course_obj_dict

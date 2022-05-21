@@ -5,7 +5,7 @@ Purpose: To parse an excel (.xls) file and to store the data in a
          attributes stroing all data from the excel sheet.
 
 Running Instructions:
-- Ensure that "parsing.m", "parsing.py", and
+- Ensure that "parsing.m", "parseExcel.m", "parsing.py", and
   "RO_COURSES_BY_DEPT_OR_FACULTY_ALL_ENG.xls" are in the
   current directory.
 - Open Matlab and run the script "parsing.m". This should
@@ -48,6 +48,8 @@ Course Object:
     alpha_hours
     course_description
     prereqs (list of all prereqs)
+    coreqs (list of all coreqs)
+    reqs (list of all requisites)
 
 Example Usage: (Printing the Course ID & prereqs of every course)
 from parsing import parse
