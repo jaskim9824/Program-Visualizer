@@ -31,7 +31,7 @@
 <div id="main" ng-app="main" ng-controller="main">
 <h3 class="planhead">Plan</h3>
 <form class="select">
-</form>
+<input name="planselector" ng-model="selectedPlan" type="radio" value="PlanA"/><label for="PlanA">PlanA</label><br/><input name="planselector" ng-model="selectedPlan" type="radio" value="PlanB"/><label for="PlanB">PlanB</label><br/><input name="planselector" ng-model="selectedPlan" type="radio" value="PlanC"/><label for="PlanC">PlanC</label><br/><input name="planselector" ng-model="selectedPlan" type="radio" value="PlanD"/><label for="PlanD">PlanD</label><br/></form>
 <!--Display div, main course confriguation display-->
 <div class="display" ng-switch="selectedPlan">
 </div>

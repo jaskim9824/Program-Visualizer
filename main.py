@@ -1,5 +1,24 @@
 from bs4 import BeautifulSoup
 
+# Function that places the radio inputs into the form
+# Parameters:
+#   formTag - form HTML tag where inputs will be placed
+#   sequenceDict - dict of the different plan seq
+#   soup - soup object
+# TO DO: add some error handling to this function
+def placeRadioInputs(formTag, sequenceDict, soup):
+    for plan in sequenceDict:
+        radioInput = soup.new_tag("input", attrs={"type":"radio", 
+                                                  "name":"planselector", 
+                                                  "ng-model":"selectedPlan",
+                                                  "value": plan})
+        labelTag = soup.new_tag("label", attrs={"for":plan})
+        breakTag = soup.new_tag("br")
+        labelTag.append(plan)
+        formTag.append(radioInput)
+        formTag.append(labelTag)
+        formTag.append(breakTag)
+
 def main ():
     #opening the template html file and constructing html
     try:
@@ -16,7 +35,9 @@ def main ():
             # print("Form")
             # print(formTag)
 
-            # TODO:  insert different radio inputs here based on plan sequence in form tag
+            # test radio sequence
+            testPlanseq = {"PlanA":1, "PlanB":2, "PlanC":3, "PlanD":4}
+            placeRadioInputs(formTag, testPlanseq, soup)
 
             # locating display tag, this is where the course divs will be written
             displayTag = mainTag.find("div", class_="display")
