@@ -393,19 +393,12 @@ evaluating as null -->
         // for referencing this within a function
         var that = this;
 
-        /* these indicate the active lines for each plan so when returning from a plan
-        after switching of from it, the lines return */
-        this.planAList = [];
-        this.planBlist = [];
-        this.planClist = [];
-        this.planDlist = [];
-
         /* this is an array of pairs, where each pair is an active line for that plan and the count
         of courses keeping it active*/
-        this.planAcountList = [];
-        this.planBcountList = [];
-        this.planCcountList = [];
-        this.planDcountList = [];
+        this.planAList = [];
+        this.planBList = [];
+        this.planCList = [];
+        this.planDList = [];
 
         // this is used to ensure the controller knows which plan the webpage is switching from
         this.previousPlan = $scope.selectedPlan;
@@ -421,6 +414,15 @@ evaluating as null -->
             this.previousPlan = plan;
         };
 
+               // This makes it so the render function is called when the radio input is changed
+        // Source: https://stackoverflow.com/questions/13152927/how-to-use-radio-on-change-event
+        var radios = document.querySelectorAll("input[type=radio][name=planselector");
+        Array.prototype.forEach.call(radios, function (radio) {
+            radio.addEventListener("change", function () {
+                that.render($scope.selectedPlan);
+            });
+        });
+
         /*
             Method to disable the activelines of the previously selected plan when switching to a new one
             Parameters:
@@ -431,22 +433,22 @@ evaluating as null -->
             switch (plan) {
                 case "A":
                     for (let i = 0; i < this.planAList.length; i++) {
-                        this.planAList[i].hide();
+                        this.planAList[i][0].hide();
                     }
                     break;
                 case "B":
-                    for (let i = 0; i < this.planBlist.length; i++) {
-                        this.planBlist[i].hide();
+                    for (let i = 0; i < this.planBList.length; i++) {
+                        this.planBlist[i][0].hide();
                     }
                     break;
                 case "C":
-                    for (let i = 0; i < this.planClist.length; i++) {
-                        this.planClist[i].hide();
+                    for (let i = 0; i < this.planCList.length; i++) {
+                        this.planClist[i][0].hide();
                     }
                     break;
                 case "D":
-                    for (let i = 0; i < this.planDlist.length; i++) {
-                        this.planDlist[i].hide();
+                    for (let i = 0; i < this.planDList.length; i++) {
+                        this.planDlist[i][0].hide();
                     }
                     break;
             } 
@@ -463,22 +465,22 @@ evaluating as null -->
             switch(plan) {
                 case "A":
                     for (let i = 0; i < this.planAList.length; i++) {
-                        this.planAList[i].show();
+                        this.planAList[i][0].show();
                     }
                     break;
                 case "B":
                     for (let i = 0; i < this.planBList.length; i++) {
-                        this.planBList[i].show();
+                        this.planBList[i][0].show();
                     }
                     break;
                 case "C":
                     for (let i = 0; i < this.planClist.length; i++) {
-                        this.planClist[i].show();
+                        this.planClist[i][0].show();
                     }
                     break;
                 case "D":
                     for (let i = 0; i < this.planDlist.length; i++) {
-                        this.planDlist[i].show();
+                        this.planDlist[i][0].show();
                     }
                     break;
             }
@@ -496,58 +498,54 @@ evaluating as null -->
             switch($scope.selectedPlan) {
                 case "A":
                     // Check if in active list for plan
-                    var index = this.planAList.findIndex((element) => element == line);
+                    var index = this.planAList.findIndex((element) => element[0] == line);
                     // If it does not exist
                     if (index == -1) {
                         line.show();
-                        this.planAList.push(line);
-                        this.planAcountList.push([line, 1]);
+                        this.planAList.push([line, 1]);
                     }
                     // If it does, increment count
                     else {
-                        this.planAcountList[index][1]++;
+                        this.planAList[index][1]++;
                     }
                     break;
                 case "B":
                     // Check if in active list for plan
-                    var index = this.planBList.findIndex((element) => element == line);
+                    var index = this.planBList.findIndex((element) => element[0] == line);
                     // If it does not exist
                     if (index == -1) {
                         line.show();
-                        this.planBList.push(line);
-                        this.planBcountList.push([line, 1]);
+                        this.planBList.push([line, 1]);
                     }
                     // If it does, increment count
                     else {
-                        this.planBcountList[index][1]++;
+                        this.planBList[index][1]++;
                     }
                     break;
                 case "C":
                     // Check if in active list for plan
-                    var index = this.planCList.findIndex((element) => element == line);
+                    var index = this.planCList.findIndex((element) => element[0] == line);
                     // If it does not exist
                     if (index == -1) {
                         line.show();
-                        this.planCList.push(line);
-                        this.planCcountList.push([line, 1]);
+                        this.planCList.push([line, 1]);
                     }
                     // If it does, increment count
                     else {
-                        this.planCcountList[index][1]++;
+                        this.planCList[index][1]++;
                     }
                     break;
                 case "D":
                     // Check if in active list for plan
-                    var index = this.planDList.findIndex((element) => element == line);
+                    var index = this.planDList.findIndex((element) => element[0] == line);
                      // If it does not exist
                     if (index == -1) {
                         line.show();
-                        this.planDList.push(line);
-                        this.planDcountList.push([line, 1]);
+                        this.planDList.push([line, 1]);
                     }
                     // If it does, increment count
                       else {
-                        this.planDcountList[index][1]++;
+                        this.planDList[index][1]++;
                     }
                     break;
             }
@@ -564,57 +562,53 @@ evaluating as null -->
             switch($scope.selectedPlan) {
                 case "A":
                     // check if line exists in active list
-                    var index = this.planAList.findIndex((element) => element == line);
+                    var index = this.planAList.findIndex((element) => element[0] == line);
                     if (index != -1) {
                         // decrement active count
-                        this.planAcountList[index][1]--;
+                        this.planAList[index][1]--;
                         // if active count reaches 0
-                        if (this.planAcountList[index][1] <= 0) {
+                        if (this.planAList[index][1] <= 0) {
                             line.hide();
                             this.planAList.splice(index, 1);
-                            this.planAcountList.splice(index, 1);
                         }
                     }
                     break;
                 case "B":
                     // check if line exists in active list
-                    var index = this.planBList.findIndex((element) => element == line);
+                    var index = this.planBList.findIndex((element) => element[0] == line);
                     if (index != -1) {
                         // decrement active count
-                        this.planBcountList[index][1]--;
+                        this.planBList[index][1]--;
                         // if active count reaches 0
-                        if (this.planBcountList[index][1] <= 0) {
+                        if (this.planBList[index][1] <= 0) {
                             line.hide();
                             this.planBList.splice(index, 1);
-                            this.planBcountList.splice(index, 1);
                         }
                     }
                     break;
                 case "C":
                     // check if line exists in active list
-                    var index = this.planCList.findIndex((element) => element == line);
+                    var index = this.planCList.findIndex((element) => element[0] == line);
                     if (index != -1) {
                         // decrement active count
-                        this.planCcountList[index][1]--;
+                        this.planCList[index][1]--;
                         // if active count reaches 0
-                        if (this.planCcountList[index][1] <= 0) {
+                        if (this.planCList[index][1] <= 0) {
                             line.hide();
                             this.planCList.splice(index, 1);
-                            this.planCcountList.splice(index, 1);
                         }
                     }
                     break;
                 case "D":
                     // check if line exists in active list
-                    var index = this.planDList.findIndex((element) => element == line);
+                    var index = this.planDList.findIndex((element) => element[0] == line);
                     if (index != -1) {
                         // decrement active count
-                        this.planAcountList[index][1]--;
+                        this.planDList[index][1]--;
                         // if active count reaches 0
-                        if (this.planDcountList[index][1] <= 0) {
+                        if (this.planDList[index][1] <= 0) {
                             line.hide();
                             this.planDList.splice(index, 1);
-                            this.planDcountList.splice(index, 1);
                         }
                     }
                     break;
@@ -704,15 +698,7 @@ evaluating as null -->
             }
         };
 
-        // This makes it so the render function is called when the radio input is changed
-        // Source: https://stackoverflow.com/questions/13152927/how-to-use-radio-on-change-event
-        var radios = document.querySelectorAll("input[type=radio][name=planselector");
-        Array.prototype.forEach.call(radios, function (radio) {
-            radio.addEventListener("change", function () {
-                that.render($scope.selectedPlan);
-            });
-        });
-        this.render($scope.selectedPlan);
+ 
         
     });
 </script>
