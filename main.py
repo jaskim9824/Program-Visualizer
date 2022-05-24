@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from parsing import parse
 
 # Function that places the radio inputs into the form
 # Parameters:
@@ -43,7 +44,18 @@ def placeTermsDivs(planTag, planDict, soup, courseDict):
 
 def placeCourses(termTag, termList, soup, courseDict):
     for course in termList:
-        # TO DO: insert course divs here
+        courseDiv = soup.new_tag("div", class_="coursecontainer")
+        courseInfo = soup.new_tag("div", class_="courseinfo")
+        courseInfo.append(course.course_description)
+        courseDiv.append(courseInfo)
+        
+        courseHeader = soup.new_tag("div", class_="course")
+        courseTitle = soup.new_tag("h3", class_="embed")
+        courseTitle.append(course.name)
+        courseHeader.append(courseTitle)
+
+        termTag.append(courseHeader)
+        termTag.append(courseDiv)
 
 def main ():
     #opening the template html file and constructing html
@@ -62,6 +74,9 @@ def main ():
             # print("Form")
             # print(formTag)
 
+            # parsing the excel files with course info and sequencing
+            sequenceDict, courseDict = parse("parsed.json")
+
             # test radio sequence
             testPlanseq = {"PlanA":1, "PlanB":2, "PlanC":3, "PlanD":4}
             placeRadioInputs(formTag, testPlanseq, soup)
@@ -72,7 +87,7 @@ def main ():
             # print("Display")
             # print(displayTag)
 
-            #placePlanDivs()
+            placePlanDivs(displayTag, sequenceDict, soup, courseDict)
     #TO DO: improve expection handling here
     except:
         print("Exception raised")
