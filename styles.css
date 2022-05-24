@@ -80,6 +80,9 @@ header {
 .courseinfo {
     margin-top: 10px;
     margin-bottom: 10px;
+    word-wrap: break-word;
+    height: 100px;
+    width: 250px;
 }
 
 .coursecontainer {

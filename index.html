@@ -61,7 +61,7 @@
                 in the coursepop div changes. We also need to make sure the text in this div remains within
                 the block-->
                 <div class="coursecontainer">
-                    <div class="coursepop">
+                    <div class="courseinfo">
                         <p>{{ece101courseinfo}}</p>
                     </div>
                     <div class="course" id="ECE 101" ng-click="ece101Listener()">
@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <div class = "coursecontainer">
-                    <div class="coursepop">
+                    <div class="courseinfo">
                         <p>{{ece201courseinfo}}</p>
                     </div>
                     <div class="course" id="ECE 201" ng-click="ece201Listener()">
@@ -627,16 +627,16 @@ evaluating as null -->
         var ece401flag = false;
         var ece461flag = false;
 
-        // for every course, intialize the variable controlling dialog box to "hide"
-        $scope.ece101courseinfo = "hide";
-        $scope.ece201courseinfo = "hide";
+        // for every course, intialize the variable controlling dialog box to ""
+        $scope.ece101courseinfo = "";
+        $scope.ece201courseinfo = "";
     
         // add a listener for every possible course, following the below format
         $scope.ece101Listener = function () {
             if (!ece101flag) {
                 // call getter function to get all lines belonging to course
                 // call addLine() for every single line
-                // set the respective course info to show
+                // set the course info var to the course info
                 $scope.ece101courseinfo = "ECE 101 is an intro course that teaches you several things about ECE. It serves as a basic overview of general concepts.";
                 that.addLine(getLine1());
                 that.addLine(getLine2());
@@ -646,8 +646,8 @@ evaluating as null -->
             else {
                 // call getter function to get all lines belonging to course
                 // call removeLine() for every single line
-                // set the respective course info to show
-                $scope.ece101courseinfo = "hide";
+                // set the course info variable to ""
+                $scope.ece101courseinfo = "";
                 that.removeLine(getLine1());
                 that.removeLine(getLine2());
                 that.removeLine(getLine4());
@@ -659,6 +659,7 @@ evaluating as null -->
             if (!ece201flag) {
                 // call getter function to get all lines belonging to course
                 // call addLine() for every single line
+                // set the course info var to the course info
                 $scope.ece201courseinfo="ECE 201 is an intro course to ECE that should be taken after ECE 101. It presents more advanced concepts.";
                 that.addLine(getLine1());
                 that.addLine(getLine3());
@@ -668,7 +669,8 @@ evaluating as null -->
             else {
                 // call getter function to get all lines belonging to course
                 // call removeLine() for every single line
-                $scope.ece201courseinfo="hide";
+                // set the course info variable to ""
+                $scope.ece201courseinfo="";
                 that.removeLine(getLine1());
                 that.removeLine(getLine3());
                 that.removeLine(getLine5());
