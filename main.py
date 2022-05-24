@@ -91,8 +91,8 @@ def placePlanDivs(displayTag, sequenceDict, soup, courseDict):
 
 def placeTermsDivs(planTag, planDict, soup, courseDict):
     for term in planDict:
-        termDiv = soup.new_tag("div", class_="term")
-        termHeader = soup.new_tag("h3", class_="termheader")
+        termDiv = soup.new_tag("div", attrs={"class":"term"})
+        termHeader = soup.new_tag("h3", attrs={"class":"termheader"})
         termHeader.append(term)
         termDiv.append(termHeader)
         placeCourses(termDiv, planDict[term], soup, courseDict)
@@ -100,13 +100,13 @@ def placeTermsDivs(planTag, planDict, soup, courseDict):
 
 def placeCourses(termTag, termList, soup, courseDict):
     for course in termList:
-        courseDiv = soup.new_tag("div", class_="coursecontainer")
-        courseInfo = soup.new_tag("div", class_="courseinfo")
+        courseDiv = soup.new_tag("div",attrs={"class":"coursecontainer"})
+        courseInfo = soup.new_tag("div",attrs={"class":"courseinfo"})
         courseInfo.append(course.course_description)
         courseDiv.append(courseInfo)
         
-        courseHeader = soup.new_tag("div", class_="course")
-        courseTitle = soup.new_tag("h3", class_="embed")
+        courseHeader = soup.new_tag("div", attrs={"class":"course"})
+        courseTitle = soup.new_tag("h3", attrs={"class":"embed"})
         courseTitle.append(course.name)
         courseHeader.append(courseTitle)
 
