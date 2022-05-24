@@ -104,8 +104,8 @@ def placeCourses(termTag, termList, soup, courseDict):
         courseInfo = soup.new_tag("div", class_="courseinfo")
         courseDisc = soup.new_tag("p")
         courseDisc.append(course.course_description)
-        #courseDisc.append("\{\{"+course+"courseinfo\}\}")
-        courseDiv = soup.new_tag("div", attrs= {"class":"course", "id": course.name, "ng-click":"\{\{"+course.name+"Listener()\}\}" })
+        #courseDisc.append("\{\{"+course.name.strip().replace(" ","")+"courseinfo\}\}")
+        courseDiv = soup.new_tag("div", attrs= {"class":"course", "id": course.name, "ng-click":"\{\{"+course.name.strip().replace(" ", "")+"Listener()\}\}" })
         courseHeader = soup.new_tag("h3", class_="embed")
         courseHeader.append(course.name)
         courseInfo.append(courseDisc)
@@ -113,6 +113,7 @@ def placeCourses(termTag, termList, soup, courseDict):
         courseContDiv.append(courseInfo)
         courseContDiv.append(courseDiv)
         termTag.append(courseContDiv)
+        
 
 
 def main ():
