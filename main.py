@@ -100,8 +100,6 @@ def placeTermsDivs(planTag, planDict, soup, courseDict):
 
 def placeCourses(termTag, termList, soup, courseDict):
     for course in termList:
-        
-
         courseContDiv = soup.new_tag("div", class_="coursecontainer")
         courseInfo = soup.new_tag("div", class_="courseinfo")
         courseDisc = soup.new_tag("p")
