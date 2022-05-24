@@ -142,6 +142,8 @@ def main ():
             # locating display tag, this is where the course divs will be written
             displayTag = mainTag.find("div", class_="display")
 
+            #TO DO: adjust width and height of display and header tag based on sequence
+
             # print("Display")
             # print(displayTag)
 
