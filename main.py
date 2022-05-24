@@ -12,8 +12,8 @@ def placeRadioInputs(formTag, sequenceDict, soup):
         radioInput = soup.new_tag("input", attrs={"type":"radio", 
                                                   "name":"planselector", 
                                                   "ng-model":"selectedPlan",
-                                                  "value": plan})
-        labelTag = soup.new_tag("label", attrs={"for":plan})
+                                                  "value": plan.strip().replace(" ","")})
+        labelTag = soup.new_tag("label", attrs={"for":plan.strip().replace(" ", "")})
         breakTag = soup.new_tag("br")
         labelTag.append(plan)
         formTag.append(radioInput)
@@ -22,7 +22,7 @@ def placeRadioInputs(formTag, sequenceDict, soup):
 
 def intializeControllerJavaScript(firstPlan, controller):
     controller.write("var app = angular.module(\"main\", []);\n")
-    controller.write("app.controller(\"main\", function(scope) { \n")
+    controller.write("app.controller(\"main\", function($scope) { \n")
     controller.write("$scope.selectedPlan = \"" + firstPlan + "\";\n")
     controller.write("var that = this;\n")
     controller.write("this.previousPlan = $scope.selectedPlan;\n")
@@ -42,7 +42,7 @@ Array.prototype.forEach.call(radios, function (radio) {
 
 def generatePlanBasedControllerJavascript(sequenceDict, controller):
     for plan in sequenceDict:
-        controller.write("this." + plan + "List = [];\n")
+        controller.write("this." + plan.strip().replace(" ", "") + "List = [];\n")
 
     controller.write("""this.disable = function(plan) {
 switch (plan) { \n""")
@@ -54,7 +54,7 @@ switch (plan) { \n""")
     break; \n"""
 
     for plan in sequenceDict:
-        controller.write(formattedSwitchStatement.format(planName=plan, action="hide"))
+        controller.write(formattedSwitchStatement.format(planName=plan.strip().replace(" ",""), action="hide"))
     
     controller.write("""    default:
     console.log("shouldn't be here");
@@ -65,7 +65,7 @@ switch (plan) { \n""")
 switch (plan) { \n""")
 
     for plan in sequenceDict:
-        controller.write(formattedSwitchStatement.format(planName=plan, action="show"))
+        controller.write(formattedSwitchStatement.format(planName=plan.strip().replace(" ", ""), action="show"))
 
     controller.write("""    default:
     console.log("shouldn't be here");
@@ -84,8 +84,8 @@ def closeControllerJavaScript(controller):
 #   courseDict - dict of course info (this is what is parsed from Excel!)
 def placePlanDivs(displayTag, sequenceDict, soup, courseDict):
     for plan in sequenceDict:
-        switchInput = soup.new_tag("div", attrs={"id":plan,
-                                                 "ng-switch-when":plan})
+        switchInput = soup.new_tag("div", attrs={"id":plan.strip().replace(" ",""),
+                                                 "ng-switch-when":plan.strip().replace(" ","")})
         placeTermsDivs(switchInput, sequenceDict[plan], soup, courseDict)
         displayTag.append(switchInput)
 
@@ -133,13 +133,10 @@ def main ():
 
             # parsing the excel files with course info and sequencing
             sequenceDict, courseDict = parse("parsed.json")
-
-            # test radio sequence
-            testPlanseq = {"PlanA":1, "PlanB":2, "PlanC":3, "PlanD":4}
-            firstPlan = list(testPlanseq.keys())[0]
+            firstPlan = list(sequenceDict.keys())[0].strip().replace(" ","")
             intializeControllerJavaScript(firstPlan, controller)
-            generatePlanBasedControllerJavascript(testPlanseq, controller)
-            placeRadioInputs(formTag, testPlanseq, soup)
+            generatePlanBasedControllerJavascript(sequenceDict, controller)
+            placeRadioInputs(formTag, sequenceDict, soup)
             closeControllerJavaScript(controller)
 
             # locating display tag, this is where the course divs will be written

@@ -1,6 +1,6 @@
 var app = angular.module("main", []);
-app.controller("main", function(scope) { 
-$scope.selectedPlan = "PlanA";
+app.controller("main", function($scope) { 
+$scope.selectedPlan = "TraditionalProgram";
 var that = this;
 this.previousPlan = $scope.selectedPlan;
 this.render = function(plan) {
@@ -14,30 +14,12 @@ Array.prototype.forEach.call(radios, function (radio) {
         that.render($scope.selectedPlan);
     });
 });
-this.PlanAList = [];
-this.PlanBList = [];
-this.PlanCList = [];
-this.PlanDList = [];
+this.TraditionalProgramList = [];
 this.disable = function(plan) {
 switch (plan) { 
-  case "PlanA": 
-    for (let i = 0; i < this.PlanAList.length; i++) {
-        this.PlanAList[i][0].hide();
-    }
-    break; 
-  case "PlanB": 
-    for (let i = 0; i < this.PlanBList.length; i++) {
-        this.PlanBList[i][0].hide();
-    }
-    break; 
-  case "PlanC": 
-    for (let i = 0; i < this.PlanCList.length; i++) {
-        this.PlanCList[i][0].hide();
-    }
-    break; 
-  case "PlanD": 
-    for (let i = 0; i < this.PlanDList.length; i++) {
-        this.PlanDList[i][0].hide();
+  case "TraditionalProgram": 
+    for (let i = 0; i < this.TraditionalProgramList.length; i++) {
+        this.TraditionalProgramList[i][0].hide();
     }
     break; 
     default:
@@ -46,24 +28,9 @@ switch (plan) {
 };
 this.enable = function(plan) {
 switch (plan) { 
-  case "PlanA": 
-    for (let i = 0; i < this.PlanAList.length; i++) {
-        this.PlanAList[i][0].show();
-    }
-    break; 
-  case "PlanB": 
-    for (let i = 0; i < this.PlanBList.length; i++) {
-        this.PlanBList[i][0].show();
-    }
-    break; 
-  case "PlanC": 
-    for (let i = 0; i < this.PlanCList.length; i++) {
-        this.PlanCList[i][0].show();
-    }
-    break; 
-  case "PlanD": 
-    for (let i = 0; i < this.PlanDList.length; i++) {
-        this.PlanDList[i][0].show();
+  case "TraditionalProgram": 
+    for (let i = 0; i < this.TraditionalProgramList.length; i++) {
+        this.TraditionalProgramList[i][0].show();
     }
     break; 
     default:
