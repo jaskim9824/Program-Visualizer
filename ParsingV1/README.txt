@@ -1,7 +1,7 @@
 Purpose: To parse an excel (.xls) file and to store the data in a
-         python dictionary. This dictionary will have keys as
+         python dictionary. This dictionary will have keys
          as the Name of that course (eg: MATH 100). The values will be a
-         Course object definied in parsing.py, which contains 
+         Course object defined in parsing.py, which contains 
          attributes stroing all data from the excel sheet.
 
 Running Instructions:

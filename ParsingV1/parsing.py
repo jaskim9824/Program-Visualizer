@@ -1,11 +1,13 @@
 import json
+import xlrd
 
 class Course:
     # Stores all data about each course
-    def __init__(self, faculty, department, course_id, subject, catalog,
-        long_title, eff_date, status, calendar_print, prog_units,
-        engineering_units, calc_fee_index, actual_fee_index, duration,
-        alpha_hours, course_description, prereqs = [], coreqs = [], reqs = []):
+    def __init__(self, name = "", faculty = "", department = "", course_id = "", subject = "", catalog = "",
+        long_title = "", eff_date = "", status = "", calendar_print = "", prog_units = "",
+        engineering_units = "", calc_fee_index = "", actual_fee_index = "", duration = "",
+        alpha_hours = "", course_description = "", prereqs = [], coreqs = [], reqs = []):
+        self.name = name
         self.faculty = faculty
         self.department = department
         self.course_id = course_id
@@ -437,6 +439,51 @@ def pullReqs(course_obj_dict, course):
     return reqs
 
 
+def pullSeq(filename, course_obj_dict):
+    # Parses an Excel file with program sequencing information (when courses are taken)
+    # and returns a dictionary storing the program plan name as key (Traditional, Co-op plan 1, etc.)
+    # and a dict as value. This inner dict has the term name (Term 1, Term 2, etc.) as key
+    # and a list of Course objects as value.
+    #
+    # Arguments:
+    #   course_obj_dict (dictionary): dict with course name for key and 
+    #   Course class as value. Course class described in parsing.py
+    #   filename (string): Name of the Excel file to be parsed for sequencing
+    #   info. Format described in README. Can only be a .xls file (not .xlsx)
+    #
+    # Returns:
+    #   course_seq (dictionary): Key is plan name, value is another dict with 
+    #   term name as the key and a list of the Course objects taken in that term as value.
+
+    book = xlrd.open_workbook(filename)
+    numsheets = book.nsheets
+    course_seq = {}
+
+    for i in range(0, numsheets):
+        # Each sheet stores a plan (traditional, co-op plan 1, etc.)
+        plan_dict = {}
+        sheet = book.sheet_by_index(i)
+        for col in range(0, sheet.ncols):
+            # Each column represents a term
+            term_name = sheet.cell_value(0, col)  # first entry in col must be the term name
+            term_list = []  # stores Course objects in a list for that term
+            for row in range(1, sheet.nrows):
+                if sheet.cell_value(row, col) == "PROG":
+                    term_list.append("Program/Technical Elective")
+                    continue
+                if sheet.cell_value(row, col) == "COMP":
+                    term_list.append("Complementary Elective")
+                    continue
+                if sheet.cell_value(row, col) == "ITS":
+                    term_list.append("ITS Elective")
+                    continue
+                term_list.append(course_obj_dict[sheet.cell_value(row, col)])  # store each course in a list
+            plan_dict[term_name] = term_list  # store each list in a dict (key is term name)
+        course_seq[sheet.name] = plan_dict  # store each term dict in a plan dict (key is plan name (traditional, etc.))
+
+    return course_seq
+
+
 def parse(filename):
     # Parses a JSON file with name "filename" created with the
     # Matlab script "parsing.m" (all in current folder).
@@ -446,6 +493,11 @@ def parse(filename):
     #    filename (string): name of the .json file to be processed
     #
     # Returns:
+    #   course_seq (dict): Stores course data in proper sequence:
+    #       key: Plan Name (string): name of the sheet from "Sequencing.xls"
+    #       ("Traditional", "Co-op Plan 1", etc.)
+    #       value: dict with key as term name ("Term 1", "Term 2", etc.)
+    #       and value as a list of Course objects to be taken in that term
     #   course_obj_dict (dict): Stores all course data:
     #       key: Course Name (string): the Subject + " " + Catalog of a course
     #       value: Course object. Stores all data about a course
@@ -475,7 +527,7 @@ def parse(filename):
     # Value: Course object
     for course in course_list:
         course_name = course["Subject"] + " " + course["Catalog"]
-        course_obj_dict[course_name] = (Course(course["Faculty"], course["Department"],
+        course_obj_dict[course_name] = (Course(course_name, course["Faculty"], course["Department"],
         course["CourseID"], course["Subject"], course["Catalog"], course["LongTitle"],
         course["EffDate"], course["Status"], course["CalendarPrint"],
         course["ProgUnits"], course["EngineeringUnits"], course["Calc_FeeIndex"],
@@ -485,8 +537,14 @@ def parse(filename):
     f.close()
 
     for course in course_obj_dict:
+        # Pulling pre-reqs, co-reqs, and requisites for each course
         course_obj_dict[course].prereqs = pullPreReqs(course_obj_dict[course].course_description)
         course_obj_dict[course].coreqs = pullCoReqs(course_obj_dict[course].course_description)
         course_obj_dict[course].reqs = pullReqs(course_obj_dict, course)
 
-    return course_obj_dict
+    # course_seq stores the courses in their proper sequencing according to
+    # Sequencing.xls
+    course_seq = {}
+    course_seq = pullSeq("Sequencing.xls", course_obj_dict)
+
+    return course_seq, course_obj_dict
