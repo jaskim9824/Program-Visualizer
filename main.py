@@ -19,8 +19,35 @@ def placeRadioInputs(formTag, sequenceDict, soup):
         formTag.append(labelTag)
         formTag.append(breakTag)
 
+# Function that places the outer divs representing each plan
+# Parameters:
+#   displayTag - HTML div where plan sequences are placed
+#   sequenceDict - dict of the different plan seq
+#   soup - soup object
+#   courseDict - dict of course info (this is what is parsed from Excel!)
+def placePlanDivs(displayTag, sequenceDict, soup, courseDict):
+    for plan in sequenceDict:
+        switchInput = soup.new_tag("div", attrs={"id":plan,
+                                                 "ng-switch-when":plan})
+        placeTermsDivs(switchInput, sequenceDict[plan], soup, courseDict)
+        displayTag.append(switchInput)
+
+def placeTermsDivs(planTag, planDict, soup, courseDict):
+    for term in planDict:
+        termDiv = soup.new_tag("div", class_="term")
+        termHeader = soup.new_tag("h3", class_="termheader")
+        termHeader.append(term)
+        termDiv.append(termHeader)
+        placeCourses(termDiv, planDict[term], soup, courseDict)
+        planTag.append(termDiv)
+
+def placeCourses(termTag, termList, soup, courseDict):
+    for course in termList:
+        # TO DO: insert course divs here
+
 def main ():
     #opening the template html file and constructing html
+    #note: here we calling parsing to extract the course data!
     try:
         with open("template.html") as input:
             # deriving parsed html
@@ -45,7 +72,7 @@ def main ():
             # print("Display")
             # print(displayTag)
 
-            # TODO: insert course divs here
+            #placePlanDivs()
     #TO DO: improve expection handling here
     except:
         print("Exception raised")
