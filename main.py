@@ -19,6 +19,62 @@ def placeRadioInputs(formTag, sequenceDict, soup):
         formTag.append(labelTag)
         formTag.append(breakTag)
 
+def intializeControllerJavaScript(firstPlan, controller):
+    controller.write("var app = angular.module(\"main\", []);\n")
+    controller.write("app.controller(\"main\", function(scope) { \n")
+    controller.write("$scope.selectedPlan = \"" + firstPlan + "\";\n")
+    controller.write("var that = this;\n")
+    controller.write("this.previousPlan = $scope.selectedPlan;\n")
+
+    controller.write("""this.render = function(plan) {
+            this.disable(this.previousPlan);
+            this.enable(plan);
+            this.previousPlan = plan;
+};\n""")
+
+    controller.write("""var radios = document.querySelectorAll("input[type=radio][name=planselector");
+Array.prototype.forEach.call(radios, function (radio) {
+    radio.addEventListener("change", function () {
+        that.render($scope.selectedPlan);
+    });
+});\n""")
+
+def generatePlanBasedControllerJavascript(sequenceDict, controller):
+    for plan in sequenceDict:
+        controller.write("this." + plan + "List = [];\n")
+
+    controller.write("""this.disable = function(plan) {
+switch (plan) { \n""")
+
+    formattedSwitchStatement = """  case "{planName}": 
+    for (let i = 0; i < this.{planName}List.length; i++) {{
+        this.{planName}List[i][0].{action}();
+    }}
+    break; \n"""
+
+    for plan in sequenceDict:
+        controller.write(formattedSwitchStatement.format(planName=plan, action="hide"))
+    
+    controller.write("""    default:
+    console.log("shouldn't be here");
+    }
+};\n""")
+
+    controller.write("""this.enable = function(plan) {
+switch (plan) { \n""")
+
+    for plan in sequenceDict:
+        controller.write(formattedSwitchStatement.format(planName=plan, action="show"))
+
+    controller.write("""    default:
+    console.log("shouldn't be here");
+    }
+};\n""")
+
+def closeControllerJavaScript(controller):
+    controller.write("});")
+    controller.close()
+
 # Function that places the outer divs representing each plan
 # Parameters:
 #   displayTag - HTML div where plan sequences are placed
@@ -41,17 +97,18 @@ def placeTermsDivs(planTag, planDict, soup, courseDict):
         placeCourses(termDiv, planDict[term], soup, courseDict)
         planTag.append(termDiv)
 
-def placeCourses(termTag, termList, soup, courseDict):
-    for course in termList:
-        # TO DO: insert course divs here
+# def placeCourses(termTag, termList, soup, courseDict):
+#     for course in termList:
+#         # TO DO: insert course divs here
 
 def main ():
     #opening the template html file and constructing html
     #note: here we calling parsing to extract the course data!
-    try:
+    #try:
         with open("template.html") as input:
             # deriving parsed html
             soup = BeautifulSoup(input, 'html.parser')
+            controller = open("controller.js", "w")
             #locating main div, this is where all the html will be written
             mainTag = soup.body.find("div", id="main")
             # print("Main")
@@ -64,7 +121,11 @@ def main ():
 
             # test radio sequence
             testPlanseq = {"PlanA":1, "PlanB":2, "PlanC":3, "PlanD":4}
+            firstPlan = list(testPlanseq.keys())[0]
+            intializeControllerJavaScript(firstPlan, controller)
+            generatePlanBasedControllerJavascript(testPlanseq, controller)
             placeRadioInputs(formTag, testPlanseq, soup)
+            closeControllerJavaScript(controller)
 
             # locating display tag, this is where the course divs will be written
             displayTag = mainTag.find("div", class_="display")
@@ -74,15 +135,15 @@ def main ():
 
             #placePlanDivs()
     #TO DO: improve expection handling here
-    except:
-        print("Exception raised")
+    #except:
+        #print("Exception raised")
     #writing output to an output html
-    try:
+    #try:
         with open("template-output.html", "w") as output:
             output.write(str(soup))
     #TO DO: improve expection handling here
-    except:
-        print("Exception raised")
+    #except:
+        #print("Exception raised")
         
 if __name__ == "__main__":
     main()
