@@ -61,10 +61,16 @@
                 in the coursepop div changes. We also need to make sure the text in this div remains within
                 the block-->
                 <div class="coursecontainer">
+                    <!--<div class="tooltip">Hover over me
+        <span class="tooltiptext">Tooltip text</span>
+    </div>-->
+                    
                     <div class="courseinfo">
                         <p>{{ece101courseinfo}}</p>
                     </div>
-                    <div class="course" id="ECE 101" ng-click="ece101Listener()">
+
+                    <div class="course tooltip" id="ECE 101" ng-click="ece101Listener()">
+                        <p class="tooltiptext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae temporibus sapiente omnis in et itaque maiores atque, deserunt corporis dolorum iure, rnihil, exercitationem illum nesciunt iste at, quo molestiae ipsa odio ratione, temporibus corrupti sed! Perspiciatis, saepe quos consectetur ullam in blanditiis neque placeat!</p>
                         <h3 class="embed">ECE 101</h3>
                     </div>
                 </div>
@@ -631,7 +637,7 @@ evaluating as null -->
                 // call getter function to get all lines belonging to course
                 // call addLine() for every single line
                 // set the course info var to the course info
-                $scope.ece101courseinfo = "ECE 101 is an intro course that teaches you several things about ECE. It serves as a basic overview of general concepts.";
+                //$scope.ece101courseinfo = "ECE 101 is an intro course that teaches you several things about ECE. It serves as a basic overview of general concepts.";
                 that.addLine(getLine1());
                 that.addLine(getLine2());
                 that.addLine(getLine4());
