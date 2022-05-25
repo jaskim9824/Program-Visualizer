@@ -186,6 +186,7 @@ def process(prestr):
     prestr = prestr.replace("8 ", "8, ")
     prestr = prestr.replace("9 ", "9, ")
     prestr = prestr.replace(" and", ",")
+    prestr = prestr.replace("  ", " ")
 
     # Create a list, splitting at each course
     reqlist = prestr.split(", ")
@@ -468,17 +469,24 @@ def pullSeq(filename, course_obj_dict):
             term_name = sheet.cell_value(0, col)  # first entry in col must be the term name
             term_list = []  # stores Course objects in a list for that term
             for row in range(1, sheet.nrows):
-                # Create Course objs with only name attribute (all others empty strings)
-                if sheet.cell_value(row, col) == "PROG":
+                name = sheet.cell_value(row, col)
+                # Remove unnecessary white space
+                name = name.strip()
+                name = name.replace("  ", " ")
+                if name == "":
+                    # Cell in Excel is empty, skip over this cell
+                    continue
+                if name == "PROG":
+                    # Create Course obj with only name attribute (all others empty strings)
                     term_list.append(Course("Program/Technical Elective"))
                     continue
-                if sheet.cell_value(row, col) == "COMP":
+                if name == "COMP":
                     term_list.append(Course("Complementary Elective"))
                     continue
-                if sheet.cell_value(row, col) == "ITS":
+                if name == "ITS":
                     term_list.append(Course("ITS Elective"))
                     continue
-                term_list.append(course_obj_dict[sheet.cell_value(row, col)])  # store each course in a list
+                term_list.append(course_obj_dict[name])  # store each course in a list
             plan_dict[term_name] = term_list  # store each list in a dict (key is term name)
         course_seq[sheet.name] = plan_dict  # store each term dict in a plan dict (key is plan name (traditional, etc.))
 
@@ -528,6 +536,8 @@ def parse(filename):
     # Value: Course object
     for course in course_list:
         course_name = course["Subject"] + " " + course["Catalog"]
+        course_name = course_name.strip()
+        course_name = course_name.replace("  ", " ")
         course_obj_dict[course_name] = (Course(course_name, course["Faculty"], course["Department"],
         course["CourseID"], course["Subject"], course["Catalog"], course["LongTitle"],
         course["EffDate"], course["Status"], course["CalendarPrint"],
