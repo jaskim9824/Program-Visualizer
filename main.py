@@ -1,6 +1,13 @@
 from bs4 import BeautifulSoup
 from parsing import parse
 
+#Strips all non alphanumeric characters from a string
+#Source:
+#https://www.delftstack.com/howto/python/remove-non-alphanumeric-characters-python/
+# #use-the-isalnum-method-to-remove-all-non-alphanumeric-characters-in-python-string
+def cleanString(string):
+    return ''.join(ch for ch in string if ch.isalnum())
+
 # Function that places the radio inputs into the form
 # Parameters:
 #   formTag - form HTML tag where inputs will be placed
@@ -12,8 +19,8 @@ def placeRadioInputs(formTag, sequenceDict, soup):
         radioInput = soup.new_tag("input", attrs={"type":"radio", 
                                                   "name":"planselector", 
                                                   "ng-model":"selectedPlan",
-                                                  "value": plan.strip().replace(" ","")})
-        labelTag = soup.new_tag("label", attrs={"for":plan.strip().replace(" ", "")})
+                                                  "value": cleanString(plan)})
+        labelTag = soup.new_tag("label", attrs={"for":cleanString(plan)})
         breakTag = soup.new_tag("br")
         labelTag.append(plan)
         formTag.append(radioInput)
@@ -42,7 +49,7 @@ Array.prototype.forEach.call(radios, function (radio) {
 
 def generatePlanBasedControllerJavascript(sequenceDict, controller):
     for plan in sequenceDict:
-        controller.write("this." + plan.strip().replace(" ", "") + "List = [];\n")
+        controller.write("this." + cleanString(plan) + "List = [];\n")
 
     controller.write("""this.disable = function(plan) {
 switch (plan) { \n""")
@@ -54,7 +61,7 @@ switch (plan) { \n""")
     break; \n"""
 
     for plan in sequenceDict:
-        controller.write(formattedSwitchStatement.format(planName=plan.strip().replace(" ",""), action="hide"))
+        controller.write(formattedSwitchStatement.format(planName=cleanString(plan), action="hide"))
     
     controller.write("""    default:
     console.log("shouldn't be here");
@@ -65,7 +72,7 @@ switch (plan) { \n""")
 switch (plan) { \n""")
 
     for plan in sequenceDict:
-        controller.write(formattedSwitchStatement.format(planName=plan.strip().replace(" ", ""), action="show"))
+        controller.write(formattedSwitchStatement.format(planName=cleanString(plan), action="show"))
 
     controller.write("""    default:
     console.log("shouldn't be here");
@@ -84,8 +91,8 @@ def closeControllerJavaScript(controller):
 #   courseDict - dict of course info (this is what is parsed from Excel!)
 def placePlanDivs(displayTag, sequenceDict, soup, courseDict):
     for plan in sequenceDict:
-        switchInput = soup.new_tag("div", attrs={"id":plan.strip().replace(" ",""),
-                                                 "ng-switch-when":plan.strip().replace(" ","")})
+        switchInput = soup.new_tag("div", attrs={"id":cleanString(plan),
+                                                 "ng-switch-when":cleanString(plan)})
         placeTermsDivs(switchInput, sequenceDict[plan], soup, courseDict)
         displayTag.append(switchInput)
 
@@ -119,10 +126,12 @@ def placeCourses(termTag, termList, soup, courseDict):
         #Adding the hover over boxes
         courseContDiv = soup.new_tag("div", class_="coursecontainer")
         #courseDisc.append("\{\{"+course.name.strip().replace(" ","")+"courseinfo\}\}")
-        courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip", "id": course.name, "ng-click":"\{\{"+course.name.strip().replace(" ", "")+"Listener()\}\}" })
-        courseDisc = soup.new_tag("p", class_="tooltiptext")
+        courseDiv = soup.new_tag("div",attrs={"class":"course tooltip", 
+                                               "id": course.name, 
+                                               "ng-click":"\""+cleanString(course.name)+"Listener()\"" })
+        courseDisc = soup.new_tag("p", attrs={"class":"tooltiptext"})
         courseDisc.append(course.course_description)
-        courseHeader = soup.new_tag("h3", class_="embed")
+        courseHeader = soup.new_tag("h3", attrs={"class":"embed"})
         courseHeader.append(course.name)
         courseDiv.append(courseDisc)
         courseDiv.append(courseHeader)
@@ -152,7 +161,7 @@ def main ():
 
             # parsing the excel files with course info and sequencing
             sequenceDict, courseDict = parse("parsed.json")
-            firstPlan = list(sequenceDict.keys())[0].strip().replace(" ","")
+            firstPlan = cleanString(list(sequenceDict.keys())[0])
             intializeControllerJavaScript(firstPlan, controller)
             generatePlanBasedControllerJavascript(sequenceDict, controller)
             placeRadioInputs(formTag, sequenceDict, soup)
