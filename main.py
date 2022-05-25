@@ -122,19 +122,15 @@ def placeCourses(termTag, termList, soup, courseDict):
         # courseContDiv.append(courseDiv)
         # termTag.append(courseContDiv)
 
-
-        #Adding the hover over boxes
-        courseContDiv = soup.new_tag("div", class_="coursecontainer")
+        courseContDiv = soup.new_tag("div", attrs={"class":"coursecontainer"})
         #courseDisc.append("\{\{"+course.name.strip().replace(" ","")+"courseinfo\}\}")
-        courseDiv = soup.new_tag("div",attrs={"class":"course tooltip", 
-                                               "id": course.name, 
-                                               "ng-click":"\""+cleanString(course.name)+"Listener()\"" })
+        courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip", "id": course.name, "ng-click":"\{\{"+course.name.strip().replace(" ", "")+"Listener()\}\}" })
         courseDisc = soup.new_tag("p", attrs={"class":"tooltiptext"})
         courseDisc.append(course.course_description)
         courseHeader = soup.new_tag("h3", attrs={"class":"embed"})
         courseHeader.append(course.name)
-        courseDiv.append(courseDisc)
         courseDiv.append(courseHeader)
+        courseDiv.append(courseDisc)
         courseContDiv.append(courseDiv)
         termTag.append(courseContDiv)
 
