@@ -3,7 +3,7 @@
 Project aimed to generate a web based diagram that visualizes the different program sequences available in the MEC E program
 at the University of Alberta. Courses are displayed in boxes, with the calendar description of that course being displayed when
 the corresponding box of the course is hovered over like so:
-![image](https://user-images.githubusercontent.com/60327441/170542026-00d049ca-30c1-471c-8e63-e161814d85db.png)
+![hiver](https://user-images.githubusercontent.com/60327441/170583188-8721854f-dbcb-45a2-a369-fce030e13707.gif)
 
 The webpage also allows a user to display the prerequisites and corequisites of a course, as well as the courses that
 the course is a prerequisite or corequisite of, allowing them to interactively view the dependencies between different courses. 
@@ -11,7 +11,8 @@ the course is a prerequisite or corequisite of, allowing them to interactively v
 
 
 The webpage allows users to switch between the different program sequences as displayed below:
-![image](https://user-images.githubusercontent.com/60327441/170541806-09a6ecb7-e169-4a1c-9800-37551ec19867.png)
+![switchingplans](https://user-images.githubusercontent.com/60327441/170582880-7feb5c07-18c9-4624-836d-a3875d182f69.gif)
+
 
 The project, in its current state, consists of a MATLAB script parsing.m and a Python script main.py. The MATLAB script 
 takes in Excel files which contain course and sequencing information, and outputs parsing.json. The script main.py then
