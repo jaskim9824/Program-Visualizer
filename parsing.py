@@ -554,17 +554,23 @@ def parse(filename):
         # Pulling pre-reqs, co-reqs, and requisites for each course
         prereqslist = pullPreReqs(course_obj_dict[course].course_description)
         for i in range(0, len(prereqslist)):
+            # Stripping whitespace
             prereqslist[i] = prereqslist[i].replace(" ", "")
+            prereqslist[i] = prereqslist[i].replace("or", " or ")
         course_obj_dict[course].prereqs = prereqslist
 
         coreqslist = pullCoReqs(course_obj_dict[course].course_description)
         for i in range(0, len(coreqslist)):
+            #Stripping whitespace
             coreqslist[i] = coreqslist[i].replace(" ", "")
+            coreqslist[i] = coreqslist[i].replace("or", " or ")
         course_obj_dict[course].coreqs = coreqslist
 
         reqslist = pullReqs(course_obj_dict, course_obj_dict[course].course_description)
         for i in range(0, len(reqslist)):
+            # Stripping whitespace
             reqslist[i] = reqslist[i].replace(" ", "")
+            reqslist[i] = reqslist[i].replace("or", " or ")
         course_obj_dict[course].reqs = reqslist
 
     # course_seq stores the courses in their proper sequencing according to
