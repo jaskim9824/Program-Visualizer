@@ -1,4 +1,3 @@
-from distutils.command import clean
 from bs4 import BeautifulSoup
 from parsing import parse
 
@@ -172,17 +171,34 @@ def placeTermsDivs(planTag, planDict, soup, courseDict, indexJS, controller, pla
         courseList += courses
     placeLines(courseList, indexJS, lineManager, plan)
 
+def addPrereqLine(start, end, lineManager, indexJS):
+    return
+def addCoreqLine(start, end, lineManager, indexJS):
+    return
+
 def placeLines(courseList, indexJS, lineManager, plan):
     for course in courseList:
         for prereq in course.prereqs:
             # OR CASE
             if len(prereq.split()) > 1:
-                newPreReqString = prereq.replace("OR ", "")
-                print(newPreReqString)
+                newPreReqString = prereq.replace(" or ", " ")
+                for option in newPreReqString.split():
+                    if cleanString(option) in courseList:
+                        addPrereqLine(cleanString(option), cleanString(course.name), lineManager, plan)
             else:
-                x = 1
+                addPrereqLine(cleanString(prereq), cleanString(course.name), lineManager, indexJS)
+        for coreq in course.coreqs:
+             # OR CASE
+            if len(coreq.split()) > 1:
+                newCoReqString = coreq.replace(" or ", " ")
+                for option in newCoReqString.split():
+                    if cleanString(option) in courseList:
+                        addCoreqLine(cleanString(option), cleanString(course.name), lineManager, plan)
+            else:
+                addCoreqLine(cleanString(coreq), cleanString(course.name), lineManager, indexJS)
 
-# def placeClickListeners(courseList, controller, lineManager):
+def placeClickListeners(courseList, controller, lineManager):
+    return
 
 def placeCourses(termTag, termList, soup, indexJS, controller, plan):
     for course in termList:
