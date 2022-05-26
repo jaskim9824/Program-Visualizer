@@ -52,17 +52,14 @@ header {
 .select {
     text-align: center;
 }
-    
-.display {
-    width: 2000px;
-}
-    
+      
 .course {
     border-style: solid;
     border-color: black;
     border-width: 2px;
     height: 50px;
     width: 150px;
+    margin-bottom: 50px;
 }
     
 .embed {
@@ -77,18 +74,6 @@ header {
 
 .termheader {
     margin-bottom: 30px;
-}
-
-.courseinfo {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    word-wrap: break-word;
-    height: 100px;
-    width: 250px;
-}
-
-.coursecontainer {
-    margin-bottom: 50px;
 }
 
 /*This is for the Hover over course description*/

@@ -1,5 +1,28 @@
+from distutils.command import clean
 from bs4 import BeautifulSoup
 from parsing import parse
+
+class LineManager:
+    def __init__(self) -> None:
+        # List of pairs that represent the different lines generated
+        self.lineMap = []
+        # Dict that maps the lines to the courses that 'own' them
+        self.courseLineDict = {}
+
+        # Count of lines generated
+        self.lineCount = 0
+
+    def getLineMap(self):
+        return self.lineMap
+
+    def getCourseLineDict(self):
+        return self.courseLineDict
+
+    def getLineCount(self):
+        return self.lineCount
+
+    def setLineCount(self):
+        return self.setLineCount
 
 #Strips all non alphanumeric characters from a string
 #Source:
@@ -129,23 +152,39 @@ def closeControllerJavaScript(controller):
 #   sequenceDict - dict of the different plan seq
 #   soup - soup object
 #   courseDict - dict of course info (this is what is parsed from Excel!)
-def placePlanDivs(displayTag, sequenceDict, soup, courseDict):
+def placePlanDivs(displayTag, sequenceDict, soup, courseDict, indexJS, controller, lineManager):
     for plan in sequenceDict:
         switchInput = soup.new_tag("div", attrs={"id":cleanString(plan),
                                                  "ng-switch-when":cleanString(plan)})
-        placeTermsDivs(switchInput, sequenceDict[plan], soup, courseDict)
+        placeTermsDivs(switchInput, sequenceDict[plan], soup, courseDict, indexJS, controller, plan, lineManager)
         displayTag.append(switchInput)
 
-def placeTermsDivs(planTag, planDict, soup, courseDict):
+def placeTermsDivs(planTag, planDict, soup, courseDict, indexJS, controller, plan, lineManager):
     for term in planDict:
         termDiv = soup.new_tag("div", attrs={"class":"term"})
         termHeader = soup.new_tag("h3", attrs={"class":"termheader"})
         termHeader.append(term)
         termDiv.append(termHeader)
-        placeCourses(termDiv, planDict[term], soup, courseDict)
+        placeCourses(termDiv, planDict[term], soup, indexJS, controller, plan)
         planTag.append(termDiv)
+    courseList = []
+    for courses in planDict.values():
+        courseList += courses
+    placeLines(courseList, indexJS, lineManager, plan)
 
-def placeCourses(termTag, termList, soup, courseDict):
+def placeLines(courseList, indexJS, lineManager, plan):
+    for course in courseList:
+        for prereq in course.prereqs:
+            # OR CASE
+            if len(prereq.split()) > 1:
+                newPreReqString = prereq.replace("OR ", "")
+                print(newPreReqString)
+            else:
+                x = 1
+
+# def placeClickListeners(courseList, controller, lineManager):
+
+def placeCourses(termTag, termList, soup, indexJS, controller, plan):
     for course in termList:
         #####ORIGINALLY#########
         # courseContDiv = soup.new_tag("div", class_="coursecontainer")
@@ -164,7 +203,9 @@ def placeCourses(termTag, termList, soup, courseDict):
 
         courseContDiv = soup.new_tag("div", attrs={"class":"coursecontainer"})
         #courseDisc.append("\{\{"+course.name.strip().replace(" ","")+"courseinfo\}\}")
-        courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip", "id": course.name, "ng-click":"\{\{"+course.name.strip().replace(" ", "")+"Listener()\}\}" })
+        courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip", 
+                                               "id": cleanString(course.name), 
+                                               "ng-click":"\{\{"+cleanString(course.name)+"Listener()\}\}" })
         courseDisc = soup.new_tag("p", attrs={"class":"tooltiptext"})
         courseDisc.append(course.course_description)
         courseHeader = soup.new_tag("h3", attrs={"class":"embed"})
@@ -173,6 +214,18 @@ def placeCourses(termTag, termList, soup, courseDict):
         courseDiv.append(courseDisc)
         courseContDiv.append(courseDiv)
         termTag.append(courseContDiv)
+        controller.write("  var " + 
+                         cleanString(course.name) + 
+                         cleanString(plan) +
+                         "flag = false;\n")
+        indexJS.write("var " + 
+                      cleanString(course.name) + 
+                      cleanString(plan) +
+                      " = document.getElementbyId(\"" + 
+                      cleanString(course.name) + 
+                      cleanString(plan) + 
+                      "\");\n")
+
 
         
 
@@ -184,34 +237,39 @@ def main ():
         with open("template.html") as input:
             # deriving parsed html
             soup = BeautifulSoup(input, 'html.parser')
-            controller = open("controller.js", "w")
-            #locating main div, this is where all the html will be written
-            mainTag = soup.body.find("div", id="main")
-            # print("Main")
-            # print(mainTag)
 
-            # locating form tag
-            formTag = mainTag.find("form")
-            # print("Form")
-            # print(formTag)
+            # opening the JS files
+            controller = open("controller.js", "w")
+            indexJS = open("index.js", "w")
+
+            lineManager = LineManager()
 
             # parsing the excel files with course info and sequencing
             sequenceDict, courseDict = parse("parsed.json")
+
+            
+
+            # generating intital JS based on the number and names of plans
             firstPlan = cleanString(list(sequenceDict.keys())[0])
             intializeControllerJavaScript(firstPlan, controller)
             generatePlanBasedControllerJavascript(sequenceDict, controller)
-            placeRadioInputs(formTag, sequenceDict, soup)
-            closeControllerJavaScript(controller)
-
+      
+            #locating main div, this is where all the html will be written
+            mainTag = soup.body.find("div", id="main")
+            # locating form tag
+            formTag = mainTag.find("form")
             # locating display tag, this is where the course divs will be written
             displayTag = mainTag.find("div", class_="display")
 
             #TO DO: adjust width and height of display and header tag based on sequence
 
-            # print("Display")
-            # print(displayTag)
+            #placing the HTML and generating JS based on the courses (drawing lines)
+            placeRadioInputs(formTag, sequenceDict, soup)
+            placePlanDivs(displayTag, sequenceDict, soup, courseDict, indexJS, controller, lineManager)
+            closeControllerJavaScript(controller)
+            indexJS.close()
 
-            placePlanDivs(displayTag, sequenceDict, soup, courseDict)
+
     #TO DO: improve expection handling here
     #except:
         #print("Exception raised")
