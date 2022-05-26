@@ -478,13 +478,16 @@ def pullSeq(filename, course_obj_dict):
                     continue
                 if name == "PROG":
                     # Create Course obj with only name attribute (all others empty strings)
-                    term_list.append(Course("Program/Technical Elective"))
+                    term_list.append(Course(name = "Program/Technical Elective", course_description = 
+                    "A technical elective of the student's choice. Please consult the calendar for more information."))
                     continue
                 if name == "COMP":
-                    term_list.append(Course("Complementary Elective"))
+                    term_list.append(Course("Complementary Elective", course_description =
+                    "A complementary elective of the student's choice. Please consult the calendar for more information."))
                     continue
                 if name == "ITS":
-                    term_list.append(Course("ITS Elective"))
+                    term_list.append(Course("ITS Elective", course_description = 
+                    "An ITS elective of the student's choice. Please consult the calendar for more information."))
                     continue
                 term_list.append(course_obj_dict[name])  # store each course in a list
             plan_dict[term_name] = term_list  # store each list in a dict (key is term name)
@@ -549,9 +552,20 @@ def parse(filename):
 
     for course in course_obj_dict:
         # Pulling pre-reqs, co-reqs, and requisites for each course
-        course_obj_dict[course].prereqs = pullPreReqs(course_obj_dict[course].course_description)
-        course_obj_dict[course].coreqs = pullCoReqs(course_obj_dict[course].course_description)
-        course_obj_dict[course].reqs = pullReqs(course_obj_dict, course)
+        prereqslist = pullPreReqs(course_obj_dict[course].course_description)
+        for i in range(0, len(prereqslist)):
+            prereqslist[i] = prereqslist[i].replace(" ", "")
+        course_obj_dict[course].prereqs = prereqslist
+
+        coreqslist = pullCoReqs(course_obj_dict[course].course_description)
+        for i in range(0, len(coreqslist)):
+            coreqslist[i] = coreqslist[i].replace(" ", "")
+        course_obj_dict[course].coreqs = coreqslist
+
+        reqslist = pullReqs(course_obj_dict, course_obj_dict[course].course_description)
+        for i in range(0, len(reqslist)):
+            reqslist[i] = reqslist[i].replace(" ", "")
+        course_obj_dict[course].reqs = reqslist
 
     # course_seq stores the courses in their proper sequencing according to
     # Sequencing.xls
