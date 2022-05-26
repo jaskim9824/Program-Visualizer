@@ -114,3 +114,12 @@ header {
     visibility: visible;
     opacity: 1;
 }
+
+div[id="Complementary Elective"] {
+    height: 80px;
+}
+
+div[id="Program/Technical Elective"] {
+    font-size:90%;
+    height:80px;
+}
