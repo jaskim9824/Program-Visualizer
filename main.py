@@ -51,33 +51,73 @@ def generatePlanBasedControllerJavascript(sequenceDict, controller):
     for plan in sequenceDict:
         controller.write("this." + cleanString(plan) + "List = [];\n")
 
-    controller.write("""this.disable = function(plan) {
-switch (plan) { \n""")
-
-    formattedSwitchStatement = """  case "{planName}": 
+    formattedFunctionStatement1 = """this.{functionName} = function(plan) {{
+    switch (plan) {{ \n"""
+    
+    formattedSwitchStatement1 = """  case "{planName}": 
     for (let i = 0; i < this.{planName}List.length; i++) {{
         this.{planName}List[i][0].{action}();
     }}
     break; \n"""
 
+    switchEndString = """    default:
+    console.log("shouldn't be here");
+    }
+};\n"""
+
+    controller.write(formattedFunctionStatement1.format(functionName="disable"))
+
     for plan in sequenceDict:
-        controller.write(formattedSwitchStatement.format(planName=cleanString(plan), action="hide"))
+        controller.write(formattedSwitchStatement1.format(planName=cleanString(plan), action="hide"))
     
-    controller.write("""    default:
-    console.log("shouldn't be here");
-    }
-};\n""")
+    controller.write(switchEndString)
 
-    controller.write("""this.enable = function(plan) {
-switch (plan) { \n""")
+    controller.write(formattedFunctionStatement1.format(functionName="enable"))
 
     for plan in sequenceDict:
-        controller.write(formattedSwitchStatement.format(planName=cleanString(plan), action="show"))
+        controller.write(formattedSwitchStatement1.format(planName=cleanString(plan), action="show"))
 
-    controller.write("""    default:
-    console.log("shouldn't be here");
-    }
-};\n""")
+    controller.write(switchEndString)
+
+    formattedFunctionStatement2 = """this.{functionName} = function(line) {{
+switch($scope.selectedPlan) {{ \n"""
+
+    formattedAddLineSwitchStatement = """ case "{planName}":
+    var index = this.{planName}List.findIndex((element) => element[0] == line);
+    if (index != -1) {{
+        line.show();
+        this.{planName}List.push([line, 1])
+    }}
+    else {{
+        this.{planName}List[index][1]++;
+    }}
+    break;\n"""
+
+
+    controller.write(formattedFunctionStatement2.format(functionName="addLine"))
+
+    for plan in sequenceDict:
+        controller.write(formattedAddLineSwitchStatement.format(planName=cleanString(plan)))
+    
+    controller.write(switchEndString)
+
+    formmattedDeleteLineSwitchStatement = """ case "{planName}":
+    var index = this.{planName}List.findIndex((element) => element[0] == line);
+    if (index != -1) {{
+        this.{planName}List[index][1]--
+        if (this.{planName}List[index][1] <= 0) {{
+            line.hide();
+            this.{planName}List.splice(index, 1);
+        }}
+    }}
+    break;"""
+
+    controller.write(formattedFunctionStatement2.format(functionName="removeLine"))
+
+    for plan in sequenceDict:
+        controller.write(formmattedDeleteLineSwitchStatement.format(planName=cleanString(plan)))
+
+    controller.write(switchEndString)
 
 def closeControllerJavaScript(controller):
     controller.write("});")
