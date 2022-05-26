@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from numpy import number
 from parsing import parse
 
 class LineManager:
@@ -20,8 +21,8 @@ class LineManager:
     def getLineCount(self):
         return self.lineCount
 
-    def setLineCount(self):
-        return self.setLineCount
+    def setLineCount(self, count):
+        self.lineCount = count
 
 #Strips all non alphanumeric characters from a string
 #Source:
@@ -172,9 +173,34 @@ def placeTermsDivs(planTag, planDict, soup, courseDict, indexJS, controller, pla
     placeLines(courseList, indexJS, lineManager, plan)
 
 def addPrereqLine(start, end, lineManager, indexJS):
-    return
+    count = lineManager.getLineCount()
+    indexJS.write("var line" + 
+                     str(count) + 
+                     " = new LeaderLine(" +
+                     start +
+                     ", " +
+                     end + 
+                     ", { hide: true });\n")
+    addGetter(count, indexJS)
+    lineManager.setLineCount(count+1)
+
 def addCoreqLine(start, end, lineManager, indexJS):
-    return
+    count = lineManager.getLineCount()
+    indexJS.write("var line" + 
+                     str(count) + 
+                     " = new LeaderLine(" +
+                     start +
+                     ", " +
+                     end + 
+                     ", { hide: true, dashed:true });\n")
+    addGetter(count, indexJS)
+    lineManager.setLineCount(count+1)
+
+def addGetter(num, indexJS):
+    formattedFunction = """function getLine{number}() {{
+        return line{number}
+    }};\n"""
+    indexJS.write(formattedFunction.format(number=num))
 
 def placeLines(courseList, indexJS, lineManager, plan):
     for course in courseList:
@@ -184,18 +210,30 @@ def placeLines(courseList, indexJS, lineManager, plan):
                 newPreReqString = prereq.replace(" or ", " ")
                 for option in newPreReqString.split():
                     if cleanString(option) in courseList:
-                        addPrereqLine(cleanString(option), cleanString(course.name), lineManager, plan)
+                        addPrereqLine(cleanString(option)+cleanString(plan), 
+                                      cleanString(course.name)+cleanString(plan), 
+                                      lineManager, 
+                                      indexJS)
             else:
-                addPrereqLine(cleanString(prereq), cleanString(course.name), lineManager, indexJS)
+                addPrereqLine(cleanString(prereq)+cleanString(plan), 
+                              cleanString(course.name)+cleanString(plan), 
+                              lineManager, 
+                              indexJS)
         for coreq in course.coreqs:
              # OR CASE
             if len(coreq.split()) > 1:
                 newCoReqString = coreq.replace(" or ", " ")
                 for option in newCoReqString.split():
                     if cleanString(option) in courseList:
-                        addCoreqLine(cleanString(option), cleanString(course.name), lineManager, plan)
+                        addCoreqLine(cleanString(option)+cleanString(plan), 
+                                     cleanString(course.name)+cleanString(plan), 
+                                     lineManager, 
+                                     indexJS)
             else:
-                addCoreqLine(cleanString(coreq), cleanString(course.name), lineManager, indexJS)
+                addCoreqLine(cleanString(coreq)+cleanString(plan), 
+                             cleanString(course.name)+cleanString(plan), 
+                             lineManager, 
+                             indexJS)
 
 def placeClickListeners(courseList, controller, lineManager):
     return
