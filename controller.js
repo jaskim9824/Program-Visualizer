@@ -233,36 +233,36 @@ switch($scope.selectedPlan) {
   var CIVE270TraditionalPlanflag = false;
   var MATH209TraditionalPlanflag = false;
   var STAT235TraditionalPlanflag = false;
-  var CHE243ATraditionalPlanflag = false;
-  var MECE200ATraditionalPlanflag = false;
-  var MECE250ATraditionalPlanflag = false;
+  var CHE243TraditionalPlanflag = false;
+  var MECE200TraditionalPlanflag = false;
+  var MECE250TraditionalPlanflag = false;
   var ECE209TraditionalPlanflag = false;
   var MATE202TraditionalPlanflag = false;
   var MATH201TraditionalPlanflag = false;
-  var MECE230BTraditionalPlanflag = false;
-  var MECE260BTraditionalPlanflag = false;
-  var MECE265BTraditionalPlanflag = false;
-  var MATH300ATraditionalPlanflag = false;
-  var MECE300ATraditionalPlanflag = false;
-  var MECE301ATraditionalPlanflag = false;
-  var MECE331ATraditionalPlanflag = false;
-  var MECE371ATraditionalPlanflag = false;
-  var MECE380ATraditionalPlanflag = false;
-  var ENGM310BTraditionalPlanflag = false;
-  var MECE340BTraditionalPlanflag = false;
-  var MECE360BTraditionalPlanflag = false;
-  var MECE362BTraditionalPlanflag = false;
-  var MECE390BTraditionalPlanflag = false;
+  var MECE230TraditionalPlanflag = false;
+  var MECE260TraditionalPlanflag = false;
+  var MECE265TraditionalPlanflag = false;
+  var MATH300TraditionalPlanflag = false;
+  var MECE300TraditionalPlanflag = false;
+  var MECE301TraditionalPlanflag = false;
+  var MECE331TraditionalPlanflag = false;
+  var MECE371TraditionalPlanflag = false;
+  var MECE380TraditionalPlanflag = false;
+  var ENGM310TraditionalPlanflag = false;
+  var MECE340TraditionalPlanflag = false;
+  var MECE360TraditionalPlanflag = false;
+  var MECE362TraditionalPlanflag = false;
+  var MECE390TraditionalPlanflag = false;
   var ComplementaryElectiveTraditionalPlanflag = false;
-  var ENGG404ATraditionalPlanflag = false;
-  var MECE430ATraditionalPlanflag = false;
-  var MECE463ATraditionalPlanflag = false;
+  var ENGG404TraditionalPlanflag = false;
+  var MECE430TraditionalPlanflag = false;
+  var MECE463TraditionalPlanflag = false;
   var ProgramTechnicalElectiveTraditionalPlanflag = false;
   var ProgramTechnicalElectiveTraditionalPlanflag = false;
   var ProgramTechnicalElectiveTraditionalPlanflag = false;
-  var MECE403BTraditionalPlanflag = false;
-  var MECE451BTraditionalPlanflag = false;
-  var MECE460BTraditionalPlanflag = false;
+  var MECE403TraditionalPlanflag = false;
+  var MECE451TraditionalPlanflag = false;
+  var MECE460TraditionalPlanflag = false;
   var ProgramTechnicalElectiveTraditionalPlanflag = false;
   var ProgramTechnicalElectiveTraditionalPlanflag = false;
   var ITSElectiveTraditionalPlanflag = false;
@@ -430,28 +430,50 @@ $scope.STAT235TraditionalPlanListener = function () {
       STAT235TraditionalPlanflag=false
   }
 };
-$scope.CHE243ATraditionalPlanListener = function () {
- if (!CHE243ATraditionalPlanflag) {
+$scope.CHE243TraditionalPlanListener = function () {
+ if (!CHE243TraditionalPlanflag) {
       that.addLine(getLine11());
-      CHE243ATraditionalPlanflag=true
+      that.addLine(getLine30());
+      that.addLine(getLine32());
+      that.addLine(getLine36());
+      CHE243TraditionalPlanflag=true
   }
  else {
       that.removeLine(getLine11());
-      CHE243ATraditionalPlanflag=false
+      that.removeLine(getLine30());
+      that.removeLine(getLine32());
+      that.removeLine(getLine36());
+      CHE243TraditionalPlanflag=false
   }
 };
-$scope.MECE250ATraditionalPlanListener = function () {
- if (!MECE250ATraditionalPlanflag) {
+$scope.MECE200TraditionalPlanListener = function () {
+ if (!MECE200TraditionalPlanflag) {
+      that.addLine(getLine52());
+      MECE200TraditionalPlanflag=true
+  }
+ else {
+      that.removeLine(getLine52());
+      MECE200TraditionalPlanflag=false
+  }
+};
+$scope.MECE250TraditionalPlanListener = function () {
+ if (!MECE250TraditionalPlanflag) {
       that.addLine(getLine12());
       that.addLine(getLine13());
       that.addLine(getLine14());
-      MECE250ATraditionalPlanflag=true
+      that.addLine(getLine28());
+      that.addLine(getLine42());
+      that.addLine(getLine50());
+      MECE250TraditionalPlanflag=true
   }
  else {
       that.removeLine(getLine12());
       that.removeLine(getLine13());
       that.removeLine(getLine14());
-      MECE250ATraditionalPlanflag=false
+      that.removeLine(getLine28());
+      that.removeLine(getLine42());
+      that.removeLine(getLine50());
+      MECE250TraditionalPlanflag=false
   }
 };
 $scope.ECE209TraditionalPlanListener = function () {
@@ -488,128 +510,168 @@ $scope.MATH201TraditionalPlanListener = function () {
       MATH201TraditionalPlanflag=false
   }
 };
-$scope.MECE230BTraditionalPlanListener = function () {
- if (!MECE230BTraditionalPlanflag) {
+$scope.MECE230TraditionalPlanListener = function () {
+ if (!MECE230TraditionalPlanflag) {
       that.addLine(getLine16());
       that.addLine(getLine17());
-      MECE230BTraditionalPlanflag=true
+      that.addLine(getLine27());
+      that.addLine(getLine31());
+      MECE230TraditionalPlanflag=true
   }
  else {
       that.removeLine(getLine16());
       that.removeLine(getLine17());
-      MECE230BTraditionalPlanflag=false
+      that.removeLine(getLine27());
+      that.removeLine(getLine31());
+      MECE230TraditionalPlanflag=false
   }
 };
-$scope.MECE260BTraditionalPlanListener = function () {
- if (!MECE260BTraditionalPlanflag) {
+$scope.MECE260TraditionalPlanListener = function () {
+ if (!MECE260TraditionalPlanflag) {
       that.addLine(getLine18());
       that.addLine(getLine19());
       that.addLine(getLine20());
-      MECE260BTraditionalPlanflag=true
+      that.addLine(getLine37());
+      MECE260TraditionalPlanflag=true
   }
  else {
       that.removeLine(getLine18());
       that.removeLine(getLine19());
       that.removeLine(getLine20());
-      MECE260BTraditionalPlanflag=false
+      that.removeLine(getLine37());
+      MECE260TraditionalPlanflag=false
   }
 };
-$scope.MATH300ATraditionalPlanListener = function () {
- if (!MATH300ATraditionalPlanflag) {
+$scope.MECE265TraditionalPlanListener = function () {
+ if (!MECE265TraditionalPlanflag) {
+      that.addLine(getLine19());
+      that.addLine(getLine38());
+      MECE265TraditionalPlanflag=true
+  }
+ else {
+      that.removeLine(getLine19());
+      that.removeLine(getLine38());
+      MECE265TraditionalPlanflag=false
+  }
+};
+$scope.MATH300TraditionalPlanListener = function () {
+ if (!MATH300TraditionalPlanflag) {
       that.addLine(getLine21());
       that.addLine(getLine22());
-      MATH300ATraditionalPlanflag=true
+      that.addLine(getLine33());
+      that.addLine(getLine51());
+      MATH300TraditionalPlanflag=true
   }
  else {
       that.removeLine(getLine21());
       that.removeLine(getLine22());
-      MATH300ATraditionalPlanflag=false
+      that.removeLine(getLine33());
+      that.removeLine(getLine51());
+      MATH300TraditionalPlanflag=false
   }
 };
-$scope.MECE300ATraditionalPlanListener = function () {
- if (!MECE300ATraditionalPlanflag) {
+$scope.MECE300TraditionalPlanListener = function () {
+ if (!MECE300TraditionalPlanflag) {
       that.addLine(getLine23());
       that.addLine(getLine24());
       that.addLine(getLine25());
-      MECE300ATraditionalPlanflag=true
+      that.addLine(getLine26());
+      that.addLine(getLine46());
+      MECE300TraditionalPlanflag=true
   }
  else {
       that.removeLine(getLine23());
       that.removeLine(getLine24());
       that.removeLine(getLine25());
-      MECE300ATraditionalPlanflag=false
+      that.removeLine(getLine26());
+      that.removeLine(getLine46());
+      MECE300TraditionalPlanflag=false
   }
 };
-$scope.MECE301ATraditionalPlanListener = function () {
- if (!MECE301ATraditionalPlanflag) {
+$scope.MECE301TraditionalPlanListener = function () {
+ if (!MECE301TraditionalPlanflag) {
       that.addLine(getLine26());
-      MECE301ATraditionalPlanflag=true
+      that.addLine(getLine47());
+      MECE301TraditionalPlanflag=true
   }
  else {
       that.removeLine(getLine26());
-      MECE301ATraditionalPlanflag=false
+      that.removeLine(getLine47());
+      MECE301TraditionalPlanflag=false
   }
 };
-$scope.MECE331ATraditionalPlanListener = function () {
- if (!MECE331ATraditionalPlanflag) {
+$scope.MECE331TraditionalPlanListener = function () {
+ if (!MECE331TraditionalPlanflag) {
       that.addLine(getLine27());
       that.addLine(getLine28());
       that.addLine(getLine29());
       that.addLine(getLine30());
-      MECE331ATraditionalPlanflag=true
+      that.addLine(getLine34());
+      MECE331TraditionalPlanflag=true
   }
  else {
       that.removeLine(getLine27());
       that.removeLine(getLine28());
       that.removeLine(getLine29());
       that.removeLine(getLine30());
-      MECE331ATraditionalPlanflag=false
+      that.removeLine(getLine34());
+      MECE331TraditionalPlanflag=false
   }
 };
-$scope.MECE371ATraditionalPlanListener = function () {
- if (!MECE371ATraditionalPlanflag) {
+$scope.MECE371TraditionalPlanListener = function () {
+ if (!MECE371TraditionalPlanflag) {
       that.addLine(getLine31());
       that.addLine(getLine32());
       that.addLine(getLine33());
       that.addLine(getLine34());
-      MECE371ATraditionalPlanflag=true
+      MECE371TraditionalPlanflag=true
   }
  else {
       that.removeLine(getLine31());
       that.removeLine(getLine32());
       that.removeLine(getLine33());
       that.removeLine(getLine34());
-      MECE371ATraditionalPlanflag=false
+      MECE371TraditionalPlanflag=false
   }
 };
-$scope.MECE380ATraditionalPlanListener = function () {
- if (!MECE380ATraditionalPlanflag) {
+$scope.MECE380TraditionalPlanListener = function () {
+ if (!MECE380TraditionalPlanflag) {
       that.addLine(getLine35());
-      MECE380ATraditionalPlanflag=true
+      that.addLine(getLine56());
+      MECE380TraditionalPlanflag=true
   }
  else {
       that.removeLine(getLine35());
-      MECE380ATraditionalPlanflag=false
+      that.removeLine(getLine56());
+      MECE380TraditionalPlanflag=false
   }
 };
-$scope.MECE340BTraditionalPlanListener = function () {
- if (!MECE340BTraditionalPlanflag) {
+$scope.MECE340TraditionalPlanListener = function () {
+ if (!MECE340TraditionalPlanflag) {
       that.addLine(getLine36());
-      MECE340BTraditionalPlanflag=true
+      that.addLine(getLine45());
+      that.addLine(getLine48());
+      that.addLine(getLine53());
+      MECE340TraditionalPlanflag=true
   }
  else {
       that.removeLine(getLine36());
-      MECE340BTraditionalPlanflag=false
+      that.removeLine(getLine45());
+      that.removeLine(getLine48());
+      that.removeLine(getLine53());
+      MECE340TraditionalPlanflag=false
   }
 };
-$scope.MECE360BTraditionalPlanListener = function () {
- if (!MECE360BTraditionalPlanflag) {
+$scope.MECE360TraditionalPlanListener = function () {
+ if (!MECE360TraditionalPlanflag) {
       that.addLine(getLine37());
       that.addLine(getLine38());
       that.addLine(getLine39());
       that.addLine(getLine40());
       that.addLine(getLine41());
-      MECE360BTraditionalPlanflag=true
+      that.addLine(getLine49());
+      that.addLine(getLine54());
+      MECE360TraditionalPlanflag=true
   }
  else {
       that.removeLine(getLine37());
@@ -617,77 +679,83 @@ $scope.MECE360BTraditionalPlanListener = function () {
       that.removeLine(getLine39());
       that.removeLine(getLine40());
       that.removeLine(getLine41());
-      MECE360BTraditionalPlanflag=false
+      that.removeLine(getLine49());
+      that.removeLine(getLine54());
+      MECE360TraditionalPlanflag=false
   }
 };
-$scope.MECE362BTraditionalPlanListener = function () {
- if (!MECE362BTraditionalPlanflag) {
+$scope.MECE362TraditionalPlanListener = function () {
+ if (!MECE362TraditionalPlanflag) {
+      that.addLine(getLine41());
       that.addLine(getLine42());
-      MECE362BTraditionalPlanflag=true
+      that.addLine(getLine55());
+      MECE362TraditionalPlanflag=true
   }
  else {
+      that.removeLine(getLine41());
       that.removeLine(getLine42());
-      MECE362BTraditionalPlanflag=false
+      that.removeLine(getLine55());
+      MECE362TraditionalPlanflag=false
   }
 };
-$scope.MECE390BTraditionalPlanListener = function () {
- if (!MECE390BTraditionalPlanflag) {
+$scope.MECE390TraditionalPlanListener = function () {
+ if (!MECE390TraditionalPlanflag) {
       that.addLine(getLine43());
       that.addLine(getLine44());
-      MECE390BTraditionalPlanflag=true
+      MECE390TraditionalPlanflag=true
   }
  else {
       that.removeLine(getLine43());
       that.removeLine(getLine44());
-      MECE390BTraditionalPlanflag=false
+      MECE390TraditionalPlanflag=false
   }
 };
-$scope.MECE463ATraditionalPlanListener = function () {
- if (!MECE463ATraditionalPlanflag) {
+$scope.MECE463TraditionalPlanListener = function () {
+ if (!MECE463TraditionalPlanflag) {
       that.addLine(getLine45());
-      MECE463ATraditionalPlanflag=true
+      MECE463TraditionalPlanflag=true
   }
  else {
       that.removeLine(getLine45());
-      MECE463ATraditionalPlanflag=false
+      MECE463TraditionalPlanflag=false
   }
 };
-$scope.MECE403BTraditionalPlanListener = function () {
- if (!MECE403BTraditionalPlanflag) {
+$scope.MECE403TraditionalPlanListener = function () {
+ if (!MECE403TraditionalPlanflag) {
       that.addLine(getLine46());
       that.addLine(getLine47());
       that.addLine(getLine48());
       that.addLine(getLine49());
-      MECE403BTraditionalPlanflag=true
+      MECE403TraditionalPlanflag=true
   }
  else {
       that.removeLine(getLine46());
       that.removeLine(getLine47());
       that.removeLine(getLine48());
       that.removeLine(getLine49());
-      MECE403BTraditionalPlanflag=false
+      MECE403TraditionalPlanflag=false
   }
 };
-$scope.MECE451BTraditionalPlanListener = function () {
- if (!MECE451BTraditionalPlanflag) {
+$scope.MECE451TraditionalPlanListener = function () {
+ if (!MECE451TraditionalPlanflag) {
       that.addLine(getLine50());
       that.addLine(getLine51());
-      MECE451BTraditionalPlanflag=true
+      MECE451TraditionalPlanflag=true
   }
  else {
       that.removeLine(getLine50());
       that.removeLine(getLine51());
-      MECE451BTraditionalPlanflag=false
+      MECE451TraditionalPlanflag=false
   }
 };
-$scope.MECE460BTraditionalPlanListener = function () {
- if (!MECE460BTraditionalPlanflag) {
+$scope.MECE460TraditionalPlanListener = function () {
+ if (!MECE460TraditionalPlanflag) {
       that.addLine(getLine52());
       that.addLine(getLine53());
       that.addLine(getLine54());
       that.addLine(getLine55());
       that.addLine(getLine56());
-      MECE460BTraditionalPlanflag=true
+      MECE460TraditionalPlanflag=true
   }
  else {
       that.removeLine(getLine52());
@@ -695,7 +763,7 @@ $scope.MECE460BTraditionalPlanListener = function () {
       that.removeLine(getLine54());
       that.removeLine(getLine55());
       that.removeLine(getLine56());
-      MECE460BTraditionalPlanflag=false
+      MECE460TraditionalPlanflag=false
   }
 };
   var CHEM103AlternatePlanflag = false;
@@ -726,27 +794,27 @@ $scope.MECE460BTraditionalPlanListener = function () {
   var MATE202AlternatePlanflag = false;
   var MECE200AlternatePlanflag = false;
   var MECE250AlternatePlanflag = false;
-  var MATH300AAlternatePlanflag = false;
-  var MECE300AAlternatePlanflag = false;
-  var MECE301AAlternatePlanflag = false;
-  var MECE331AAlternatePlanflag = false;
-  var MECE371AAlternatePlanflag = false;
-  var MECE380AAlternatePlanflag = false;
-  var MECE340BAlternatePlanflag = false;
-  var MECE360BAlternatePlanflag = false;
-  var MECE362BAlternatePlanflag = false;
-  var MECE390BAlternatePlanflag = false;
+  var MATH300AlternatePlanflag = false;
+  var MECE300AlternatePlanflag = false;
+  var MECE301AlternatePlanflag = false;
+  var MECE331AlternatePlanflag = false;
+  var MECE371AlternatePlanflag = false;
+  var MECE380AlternatePlanflag = false;
+  var MECE340AlternatePlanflag = false;
+  var MECE360AlternatePlanflag = false;
+  var MECE362AlternatePlanflag = false;
+  var MECE390AlternatePlanflag = false;
   var ProgramTechnicalElectiveAlternatePlanflag = false;
-  var MECE430AAlternatePlanflag = false;
-  var MECE463AAlternatePlanflag = false;
+  var MECE430AlternatePlanflag = false;
+  var MECE463AlternatePlanflag = false;
   var ProgramTechnicalElectiveAlternatePlanflag = false;
   var ProgramTechnicalElectiveAlternatePlanflag = false;
   var ProgramTechnicalElectiveAlternatePlanflag = false;
   var CHE448AlternatePlanflag = false;
   var ENGG400AlternatePlanflag = false;
-  var MECE403BAlternatePlanflag = false;
-  var MECE451BAlternatePlanflag = false;
-  var MECE460BAlternatePlanflag = false;
+  var MECE403AlternatePlanflag = false;
+  var MECE451AlternatePlanflag = false;
+  var MECE460AlternatePlanflag = false;
 $scope.CHEM103AlternatePlanListener = function () {
  if (!CHEM103AlternatePlanflag) {
       that.addLine(getLine58());
@@ -1039,102 +1107,124 @@ $scope.MECE250AlternatePlanListener = function () {
       MECE250AlternatePlanflag=false
   }
 };
-$scope.MATH300AAlternatePlanListener = function () {
- if (!MATH300AAlternatePlanflag) {
+$scope.MATH300AlternatePlanListener = function () {
+ if (!MATH300AlternatePlanflag) {
       that.addLine(getLine78());
       that.addLine(getLine79());
-      MATH300AAlternatePlanflag=true
+      that.addLine(getLine90());
+      that.addLine(getLine110());
+      MATH300AlternatePlanflag=true
   }
  else {
       that.removeLine(getLine78());
       that.removeLine(getLine79());
-      MATH300AAlternatePlanflag=false
+      that.removeLine(getLine90());
+      that.removeLine(getLine110());
+      MATH300AlternatePlanflag=false
   }
 };
-$scope.MECE300AAlternatePlanListener = function () {
- if (!MECE300AAlternatePlanflag) {
+$scope.MECE300AlternatePlanListener = function () {
+ if (!MECE300AlternatePlanflag) {
       that.addLine(getLine80());
       that.addLine(getLine81());
       that.addLine(getLine82());
-      MECE300AAlternatePlanflag=true
+      that.addLine(getLine83());
+      that.addLine(getLine105());
+      MECE300AlternatePlanflag=true
   }
  else {
       that.removeLine(getLine80());
       that.removeLine(getLine81());
       that.removeLine(getLine82());
-      MECE300AAlternatePlanflag=false
+      that.removeLine(getLine83());
+      that.removeLine(getLine105());
+      MECE300AlternatePlanflag=false
   }
 };
-$scope.MECE301AAlternatePlanListener = function () {
- if (!MECE301AAlternatePlanflag) {
+$scope.MECE301AlternatePlanListener = function () {
+ if (!MECE301AlternatePlanflag) {
       that.addLine(getLine83());
-      MECE301AAlternatePlanflag=true
+      that.addLine(getLine106());
+      MECE301AlternatePlanflag=true
   }
  else {
       that.removeLine(getLine83());
-      MECE301AAlternatePlanflag=false
+      that.removeLine(getLine106());
+      MECE301AlternatePlanflag=false
   }
 };
-$scope.MECE331AAlternatePlanListener = function () {
- if (!MECE331AAlternatePlanflag) {
+$scope.MECE331AlternatePlanListener = function () {
+ if (!MECE331AlternatePlanflag) {
       that.addLine(getLine84());
       that.addLine(getLine85());
       that.addLine(getLine86());
       that.addLine(getLine87());
-      MECE331AAlternatePlanflag=true
+      that.addLine(getLine91());
+      MECE331AlternatePlanflag=true
   }
  else {
       that.removeLine(getLine84());
       that.removeLine(getLine85());
       that.removeLine(getLine86());
       that.removeLine(getLine87());
-      MECE331AAlternatePlanflag=false
+      that.removeLine(getLine91());
+      MECE331AlternatePlanflag=false
   }
 };
-$scope.MECE371AAlternatePlanListener = function () {
- if (!MECE371AAlternatePlanflag) {
+$scope.MECE371AlternatePlanListener = function () {
+ if (!MECE371AlternatePlanflag) {
       that.addLine(getLine88());
       that.addLine(getLine89());
       that.addLine(getLine90());
       that.addLine(getLine91());
-      MECE371AAlternatePlanflag=true
+      MECE371AlternatePlanflag=true
   }
  else {
       that.removeLine(getLine88());
       that.removeLine(getLine89());
       that.removeLine(getLine90());
       that.removeLine(getLine91());
-      MECE371AAlternatePlanflag=false
+      MECE371AlternatePlanflag=false
   }
 };
-$scope.MECE380AAlternatePlanListener = function () {
- if (!MECE380AAlternatePlanflag) {
+$scope.MECE380AlternatePlanListener = function () {
+ if (!MECE380AlternatePlanflag) {
       that.addLine(getLine92());
-      MECE380AAlternatePlanflag=true
+      that.addLine(getLine115());
+      MECE380AlternatePlanflag=true
   }
  else {
       that.removeLine(getLine92());
-      MECE380AAlternatePlanflag=false
+      that.removeLine(getLine115());
+      MECE380AlternatePlanflag=false
   }
 };
-$scope.MECE340BAlternatePlanListener = function () {
- if (!MECE340BAlternatePlanflag) {
+$scope.MECE340AlternatePlanListener = function () {
+ if (!MECE340AlternatePlanflag) {
       that.addLine(getLine93());
-      MECE340BAlternatePlanflag=true
+      that.addLine(getLine102());
+      that.addLine(getLine107());
+      that.addLine(getLine112());
+      MECE340AlternatePlanflag=true
   }
  else {
       that.removeLine(getLine93());
-      MECE340BAlternatePlanflag=false
+      that.removeLine(getLine102());
+      that.removeLine(getLine107());
+      that.removeLine(getLine112());
+      MECE340AlternatePlanflag=false
   }
 };
-$scope.MECE360BAlternatePlanListener = function () {
- if (!MECE360BAlternatePlanflag) {
+$scope.MECE360AlternatePlanListener = function () {
+ if (!MECE360AlternatePlanflag) {
       that.addLine(getLine94());
       that.addLine(getLine95());
       that.addLine(getLine96());
       that.addLine(getLine97());
       that.addLine(getLine98());
-      MECE360BAlternatePlanflag=true
+      that.addLine(getLine108());
+      that.addLine(getLine113());
+      MECE360AlternatePlanflag=true
   }
  else {
       that.removeLine(getLine94());
@@ -1142,39 +1232,45 @@ $scope.MECE360BAlternatePlanListener = function () {
       that.removeLine(getLine96());
       that.removeLine(getLine97());
       that.removeLine(getLine98());
-      MECE360BAlternatePlanflag=false
+      that.removeLine(getLine108());
+      that.removeLine(getLine113());
+      MECE360AlternatePlanflag=false
   }
 };
-$scope.MECE362BAlternatePlanListener = function () {
- if (!MECE362BAlternatePlanflag) {
+$scope.MECE362AlternatePlanListener = function () {
+ if (!MECE362AlternatePlanflag) {
+      that.addLine(getLine98());
       that.addLine(getLine99());
-      MECE362BAlternatePlanflag=true
+      that.addLine(getLine114());
+      MECE362AlternatePlanflag=true
   }
  else {
+      that.removeLine(getLine98());
       that.removeLine(getLine99());
-      MECE362BAlternatePlanflag=false
+      that.removeLine(getLine114());
+      MECE362AlternatePlanflag=false
   }
 };
-$scope.MECE390BAlternatePlanListener = function () {
- if (!MECE390BAlternatePlanflag) {
+$scope.MECE390AlternatePlanListener = function () {
+ if (!MECE390AlternatePlanflag) {
       that.addLine(getLine100());
       that.addLine(getLine101());
-      MECE390BAlternatePlanflag=true
+      MECE390AlternatePlanflag=true
   }
  else {
       that.removeLine(getLine100());
       that.removeLine(getLine101());
-      MECE390BAlternatePlanflag=false
+      MECE390AlternatePlanflag=false
   }
 };
-$scope.MECE463AAlternatePlanListener = function () {
- if (!MECE463AAlternatePlanflag) {
+$scope.MECE463AlternatePlanListener = function () {
+ if (!MECE463AlternatePlanflag) {
       that.addLine(getLine102());
-      MECE463AAlternatePlanflag=true
+      MECE463AlternatePlanflag=true
   }
  else {
       that.removeLine(getLine102());
-      MECE463AAlternatePlanflag=false
+      MECE463AlternatePlanflag=false
   }
 };
 $scope.CHE448AlternatePlanListener = function () {
@@ -1189,42 +1285,42 @@ $scope.CHE448AlternatePlanListener = function () {
       CHE448AlternatePlanflag=false
   }
 };
-$scope.MECE403BAlternatePlanListener = function () {
- if (!MECE403BAlternatePlanflag) {
+$scope.MECE403AlternatePlanListener = function () {
+ if (!MECE403AlternatePlanflag) {
       that.addLine(getLine105());
       that.addLine(getLine106());
       that.addLine(getLine107());
       that.addLine(getLine108());
-      MECE403BAlternatePlanflag=true
+      MECE403AlternatePlanflag=true
   }
  else {
       that.removeLine(getLine105());
       that.removeLine(getLine106());
       that.removeLine(getLine107());
       that.removeLine(getLine108());
-      MECE403BAlternatePlanflag=false
+      MECE403AlternatePlanflag=false
   }
 };
-$scope.MECE451BAlternatePlanListener = function () {
- if (!MECE451BAlternatePlanflag) {
+$scope.MECE451AlternatePlanListener = function () {
+ if (!MECE451AlternatePlanflag) {
       that.addLine(getLine109());
       that.addLine(getLine110());
-      MECE451BAlternatePlanflag=true
+      MECE451AlternatePlanflag=true
   }
  else {
       that.removeLine(getLine109());
       that.removeLine(getLine110());
-      MECE451BAlternatePlanflag=false
+      MECE451AlternatePlanflag=false
   }
 };
-$scope.MECE460BAlternatePlanListener = function () {
- if (!MECE460BAlternatePlanflag) {
+$scope.MECE460AlternatePlanListener = function () {
+ if (!MECE460AlternatePlanflag) {
       that.addLine(getLine111());
       that.addLine(getLine112());
       that.addLine(getLine113());
       that.addLine(getLine114());
       that.addLine(getLine115());
-      MECE460BAlternatePlanflag=true
+      MECE460AlternatePlanflag=true
   }
  else {
       that.removeLine(getLine111());
@@ -1232,7 +1328,7 @@ $scope.MECE460BAlternatePlanListener = function () {
       that.removeLine(getLine113());
       that.removeLine(getLine114());
       that.removeLine(getLine115());
-      MECE460BAlternatePlanflag=false
+      MECE460AlternatePlanflag=false
   }
 };
   var CHEM103CoopPlan1flag = false;
@@ -1262,19 +1358,19 @@ $scope.MECE460BAlternatePlanListener = function () {
   var MECE250CoopPlan1flag = false;
   var WKEXP901CoopPlan1flag = false;
   var WKEXP902CoopPlan1flag = false;
-  var MATH300ACoopPlan1flag = false;
-  var MECE300ACoopPlan1flag = false;
-  var MECE301ACoopPlan1flag = false;
-  var MECE331ACoopPlan1flag = false;
-  var MECE371ACoopPlan1flag = false;
-  var MECE380ACoopPlan1flag = false;
+  var MATH300CoopPlan1flag = false;
+  var MECE300CoopPlan1flag = false;
+  var MECE301CoopPlan1flag = false;
+  var MECE331CoopPlan1flag = false;
+  var MECE371CoopPlan1flag = false;
+  var MECE380CoopPlan1flag = false;
   var WKEXP903CoopPlan1flag = false;
   var WKEXP904CoopPlan1flag = false;
-  var ENGM310BCoopPlan1flag = false;
-  var MECE340BCoopPlan1flag = false;
-  var MECE360BCoopPlan1flag = false;
-  var MECE362BCoopPlan1flag = false;
-  var MECE390BCoopPlan1flag = false;
+  var ENGM310CoopPlan1flag = false;
+  var MECE340CoopPlan1flag = false;
+  var MECE360CoopPlan1flag = false;
+  var MECE362CoopPlan1flag = false;
+  var MECE390CoopPlan1flag = false;
   var ComplementaryElectiveCoopPlan1flag = false;
   var ENGG404CoopPlan1flag = false;
   var MECE430CoopPlan1flag = false;
@@ -1614,82 +1710,96 @@ $scope.WKEXP902CoopPlan1Listener = function () {
       WKEXP902CoopPlan1flag=false
   }
 };
-$scope.MATH300ACoopPlan1Listener = function () {
- if (!MATH300ACoopPlan1flag) {
+$scope.MATH300CoopPlan1Listener = function () {
+ if (!MATH300CoopPlan1flag) {
       that.addLine(getLine139());
       that.addLine(getLine140());
-      MATH300ACoopPlan1flag=true
+      that.addLine(getLine151());
+      that.addLine(getLine174());
+      MATH300CoopPlan1flag=true
   }
  else {
       that.removeLine(getLine139());
       that.removeLine(getLine140());
-      MATH300ACoopPlan1flag=false
+      that.removeLine(getLine151());
+      that.removeLine(getLine174());
+      MATH300CoopPlan1flag=false
   }
 };
-$scope.MECE300ACoopPlan1Listener = function () {
- if (!MECE300ACoopPlan1flag) {
+$scope.MECE300CoopPlan1Listener = function () {
+ if (!MECE300CoopPlan1flag) {
       that.addLine(getLine141());
       that.addLine(getLine142());
       that.addLine(getLine143());
-      MECE300ACoopPlan1flag=true
+      that.addLine(getLine144());
+      that.addLine(getLine169());
+      MECE300CoopPlan1flag=true
   }
  else {
       that.removeLine(getLine141());
       that.removeLine(getLine142());
       that.removeLine(getLine143());
-      MECE300ACoopPlan1flag=false
+      that.removeLine(getLine144());
+      that.removeLine(getLine169());
+      MECE300CoopPlan1flag=false
   }
 };
-$scope.MECE301ACoopPlan1Listener = function () {
- if (!MECE301ACoopPlan1flag) {
+$scope.MECE301CoopPlan1Listener = function () {
+ if (!MECE301CoopPlan1flag) {
       that.addLine(getLine144());
-      MECE301ACoopPlan1flag=true
+      that.addLine(getLine170());
+      MECE301CoopPlan1flag=true
   }
  else {
       that.removeLine(getLine144());
-      MECE301ACoopPlan1flag=false
+      that.removeLine(getLine170());
+      MECE301CoopPlan1flag=false
   }
 };
-$scope.MECE331ACoopPlan1Listener = function () {
- if (!MECE331ACoopPlan1flag) {
+$scope.MECE331CoopPlan1Listener = function () {
+ if (!MECE331CoopPlan1flag) {
       that.addLine(getLine145());
       that.addLine(getLine146());
       that.addLine(getLine147());
       that.addLine(getLine148());
-      MECE331ACoopPlan1flag=true
+      that.addLine(getLine152());
+      MECE331CoopPlan1flag=true
   }
  else {
       that.removeLine(getLine145());
       that.removeLine(getLine146());
       that.removeLine(getLine147());
       that.removeLine(getLine148());
-      MECE331ACoopPlan1flag=false
+      that.removeLine(getLine152());
+      MECE331CoopPlan1flag=false
   }
 };
-$scope.MECE371ACoopPlan1Listener = function () {
- if (!MECE371ACoopPlan1flag) {
+$scope.MECE371CoopPlan1Listener = function () {
+ if (!MECE371CoopPlan1flag) {
       that.addLine(getLine149());
       that.addLine(getLine150());
       that.addLine(getLine151());
       that.addLine(getLine152());
-      MECE371ACoopPlan1flag=true
+      MECE371CoopPlan1flag=true
   }
  else {
       that.removeLine(getLine149());
       that.removeLine(getLine150());
       that.removeLine(getLine151());
       that.removeLine(getLine152());
-      MECE371ACoopPlan1flag=false
+      MECE371CoopPlan1flag=false
   }
 };
-$scope.MECE380ACoopPlan1Listener = function () {
- if (!MECE380ACoopPlan1flag) {
+$scope.MECE380CoopPlan1Listener = function () {
+ if (!MECE380CoopPlan1flag) {
       that.addLine(getLine153());
-      MECE380ACoopPlan1flag=true
+      that.addLine(getLine179());
+      MECE380CoopPlan1flag=true
   }
  else {
       that.removeLine(getLine153());
-      MECE380ACoopPlan1flag=false
+      that.removeLine(getLine179());
+      MECE380CoopPlan1flag=false
   }
 };
 $scope.WKEXP903CoopPlan1Listener = function () {
@@ -1716,24 +1826,32 @@ $scope.WKEXP904CoopPlan1Listener = function () {
       WKEXP904CoopPlan1flag=false
   }
 };
-$scope.MECE340BCoopPlan1Listener = function () {
- if (!MECE340BCoopPlan1flag) {
+$scope.MECE340CoopPlan1Listener = function () {
+ if (!MECE340CoopPlan1flag) {
       that.addLine(getLine156());
-      MECE340BCoopPlan1flag=true
+      that.addLine(getLine165());
+      that.addLine(getLine171());
+      that.addLine(getLine176());
+      MECE340CoopPlan1flag=true
   }
  else {
       that.removeLine(getLine156());
-      MECE340BCoopPlan1flag=false
+      that.removeLine(getLine165());
+      that.removeLine(getLine171());
+      that.removeLine(getLine176());
+      MECE340CoopPlan1flag=false
   }
 };
-$scope.MECE360BCoopPlan1Listener = function () {
- if (!MECE360BCoopPlan1flag) {
+$scope.MECE360CoopPlan1Listener = function () {
+ if (!MECE360CoopPlan1flag) {
       that.addLine(getLine157());
       that.addLine(getLine158());
       that.addLine(getLine159());
       that.addLine(getLine160());
       that.addLine(getLine161());
-      MECE360BCoopPlan1flag=true
+      that.addLine(getLine172());
+      that.addLine(getLine177());
+      MECE360CoopPlan1flag=true
   }
  else {
       that.removeLine(getLine157());
@@ -1741,29 +1859,35 @@ $scope.MECE360BCoopPlan1Listener = function () {
       that.removeLine(getLine159());
       that.removeLine(getLine160());
       that.removeLine(getLine161());
-      MECE360BCoopPlan1flag=false
+      that.removeLine(getLine172());
+      that.removeLine(getLine177());
+      MECE360CoopPlan1flag=false
   }
 };
-$scope.MECE362BCoopPlan1Listener = function () {
- if (!MECE362BCoopPlan1flag) {
+$scope.MECE362CoopPlan1Listener = function () {
+ if (!MECE362CoopPlan1flag) {
+      that.addLine(getLine161());
       that.addLine(getLine162());
-      MECE362BCoopPlan1flag=true
+      that.addLine(getLine178());
+      MECE362CoopPlan1flag=true
   }
  else {
+      that.removeLine(getLine161());
       that.removeLine(getLine162());
-      MECE362BCoopPlan1flag=false
+      that.removeLine(getLine178());
+      MECE362CoopPlan1flag=false
   }
 };
-$scope.MECE390BCoopPlan1Listener = function () {
- if (!MECE390BCoopPlan1flag) {
+$scope.MECE390CoopPlan1Listener = function () {
+ if (!MECE390CoopPlan1flag) {
       that.addLine(getLine163());
       that.addLine(getLine164());
-      MECE390BCoopPlan1flag=true
+      MECE390CoopPlan1flag=true
   }
  else {
       that.removeLine(getLine163());
       that.removeLine(getLine164());
-      MECE390BCoopPlan1flag=false
+      MECE390CoopPlan1flag=false
   }
 };
 $scope.MECE463CoopPlan1Listener = function () {
@@ -1870,19 +1994,19 @@ $scope.MECE460CoopPlan1Listener = function () {
   var MECE230CoopPlan2flag = false;
   var MECE260CoopPlan2flag = false;
   var MECE265CoopPlan2flag = false;
-  var MATH300ACoopPlan2flag = false;
-  var MECE300ACoopPlan2flag = false;
-  var MECE301ACoopPlan2flag = false;
-  var MECE331ACoopPlan2flag = false;
-  var MECE371ACoopPlan2flag = false;
-  var MECE380ACoopPlan2flag = false;
+  var MATH300CoopPlan2flag = false;
+  var MECE300CoopPlan2flag = false;
+  var MECE301CoopPlan2flag = false;
+  var MECE331CoopPlan2flag = false;
+  var MECE371CoopPlan2flag = false;
+  var MECE380CoopPlan2flag = false;
   var WKEXP902CoopPlan2flag = false;
   var WKEXP903CoopPlan2flag = false;
-  var ENGM310BCoopPlan2flag = false;
-  var MECE340BCoopPlan2flag = false;
-  var MECE360BCoopPlan2flag = false;
-  var MECE362BCoopPlan2flag = false;
-  var MECE390BCoopPlan2flag = false;
+  var ENGM310CoopPlan2flag = false;
+  var MECE340CoopPlan2flag = false;
+  var MECE360CoopPlan2flag = false;
+  var MECE362CoopPlan2flag = false;
+  var MECE390CoopPlan2flag = false;
   var ComplementaryElectiveCoopPlan2flag = false;
   var WKEXP904CoopPlan2flag = false;
   var MECE403CoopPlan2flag = false;
@@ -2213,82 +2337,96 @@ $scope.MECE265CoopPlan2Listener = function () {
       MECE265CoopPlan2flag=false
   }
 };
-$scope.MATH300ACoopPlan2Listener = function () {
- if (!MATH300ACoopPlan2flag) {
+$scope.MATH300CoopPlan2Listener = function () {
+ if (!MATH300CoopPlan2flag) {
       that.addLine(getLine202());
       that.addLine(getLine203());
-      MATH300ACoopPlan2flag=true
+      that.addLine(getLine214());
+      that.addLine(getLine234());
+      MATH300CoopPlan2flag=true
   }
  else {
       that.removeLine(getLine202());
       that.removeLine(getLine203());
-      MATH300ACoopPlan2flag=false
+      that.removeLine(getLine214());
+      that.removeLine(getLine234());
+      MATH300CoopPlan2flag=false
   }
 };
-$scope.MECE300ACoopPlan2Listener = function () {
- if (!MECE300ACoopPlan2flag) {
+$scope.MECE300CoopPlan2Listener = function () {
+ if (!MECE300CoopPlan2flag) {
       that.addLine(getLine204());
       that.addLine(getLine205());
       that.addLine(getLine206());
-      MECE300ACoopPlan2flag=true
+      that.addLine(getLine207());
+      that.addLine(getLine229());
+      MECE300CoopPlan2flag=true
   }
  else {
       that.removeLine(getLine204());
       that.removeLine(getLine205());
       that.removeLine(getLine206());
-      MECE300ACoopPlan2flag=false
+      that.removeLine(getLine207());
+      that.removeLine(getLine229());
+      MECE300CoopPlan2flag=false
   }
 };
-$scope.MECE301ACoopPlan2Listener = function () {
- if (!MECE301ACoopPlan2flag) {
+$scope.MECE301CoopPlan2Listener = function () {
+ if (!MECE301CoopPlan2flag) {
       that.addLine(getLine207());
-      MECE301ACoopPlan2flag=true
+      that.addLine(getLine230());
+      MECE301CoopPlan2flag=true
   }
  else {
       that.removeLine(getLine207());
-      MECE301ACoopPlan2flag=false
+      that.removeLine(getLine230());
+      MECE301CoopPlan2flag=false
   }
 };
-$scope.MECE331ACoopPlan2Listener = function () {
- if (!MECE331ACoopPlan2flag) {
+$scope.MECE331CoopPlan2Listener = function () {
+ if (!MECE331CoopPlan2flag) {
       that.addLine(getLine208());
       that.addLine(getLine209());
       that.addLine(getLine210());
       that.addLine(getLine211());
-      MECE331ACoopPlan2flag=true
+      that.addLine(getLine215());
+      MECE331CoopPlan2flag=true
   }
  else {
       that.removeLine(getLine208());
       that.removeLine(getLine209());
       that.removeLine(getLine210());
       that.removeLine(getLine211());
-      MECE331ACoopPlan2flag=false
+      that.removeLine(getLine215());
+      MECE331CoopPlan2flag=false
   }
 };
-$scope.MECE371ACoopPlan2Listener = function () {
- if (!MECE371ACoopPlan2flag) {
+$scope.MECE371CoopPlan2Listener = function () {
+ if (!MECE371CoopPlan2flag) {
       that.addLine(getLine212());
       that.addLine(getLine213());
       that.addLine(getLine214());
       that.addLine(getLine215());
-      MECE371ACoopPlan2flag=true
+      MECE371CoopPlan2flag=true
   }
  else {
       that.removeLine(getLine212());
       that.removeLine(getLine213());
       that.removeLine(getLine214());
       that.removeLine(getLine215());
-      MECE371ACoopPlan2flag=false
+      MECE371CoopPlan2flag=false
   }
 };
-$scope.MECE380ACoopPlan2Listener = function () {
- if (!MECE380ACoopPlan2flag) {
+$scope.MECE380CoopPlan2Listener = function () {
+ if (!MECE380CoopPlan2flag) {
       that.addLine(getLine216());
-      MECE380ACoopPlan2flag=true
+      that.addLine(getLine239());
+      MECE380CoopPlan2flag=true
   }
  else {
       that.removeLine(getLine216());
-      MECE380ACoopPlan2flag=false
+      that.removeLine(getLine239());
+      MECE380CoopPlan2flag=false
   }
 };
 $scope.WKEXP902CoopPlan2Listener = function () {
@@ -2315,24 +2453,32 @@ $scope.WKEXP903CoopPlan2Listener = function () {
       WKEXP903CoopPlan2flag=false
   }
 };
-$scope.MECE340BCoopPlan2Listener = function () {
- if (!MECE340BCoopPlan2flag) {
+$scope.MECE340CoopPlan2Listener = function () {
+ if (!MECE340CoopPlan2flag) {
       that.addLine(getLine219());
-      MECE340BCoopPlan2flag=true
+      that.addLine(getLine231());
+      that.addLine(getLine236());
+      that.addLine(getLine243());
+      MECE340CoopPlan2flag=true
   }
  else {
       that.removeLine(getLine219());
-      MECE340BCoopPlan2flag=false
+      that.removeLine(getLine231());
+      that.removeLine(getLine236());
+      that.removeLine(getLine243());
+      MECE340CoopPlan2flag=false
   }
 };
-$scope.MECE360BCoopPlan2Listener = function () {
- if (!MECE360BCoopPlan2flag) {
+$scope.MECE360CoopPlan2Listener = function () {
+ if (!MECE360CoopPlan2flag) {
       that.addLine(getLine220());
       that.addLine(getLine221());
       that.addLine(getLine222());
       that.addLine(getLine223());
       that.addLine(getLine224());
-      MECE360BCoopPlan2flag=true
+      that.addLine(getLine232());
+      that.addLine(getLine237());
+      MECE360CoopPlan2flag=true
   }
  else {
       that.removeLine(getLine220());
@@ -2340,29 +2486,35 @@ $scope.MECE360BCoopPlan2Listener = function () {
       that.removeLine(getLine222());
       that.removeLine(getLine223());
       that.removeLine(getLine224());
-      MECE360BCoopPlan2flag=false
+      that.removeLine(getLine232());
+      that.removeLine(getLine237());
+      MECE360CoopPlan2flag=false
   }
 };
-$scope.MECE362BCoopPlan2Listener = function () {
- if (!MECE362BCoopPlan2flag) {
+$scope.MECE362CoopPlan2Listener = function () {
+ if (!MECE362CoopPlan2flag) {
+      that.addLine(getLine224());
       that.addLine(getLine225());
-      MECE362BCoopPlan2flag=true
+      that.addLine(getLine238());
+      MECE362CoopPlan2flag=true
   }
  else {
+      that.removeLine(getLine224());
       that.removeLine(getLine225());
-      MECE362BCoopPlan2flag=false
+      that.removeLine(getLine238());
+      MECE362CoopPlan2flag=false
   }
 };
-$scope.MECE390BCoopPlan2Listener = function () {
- if (!MECE390BCoopPlan2flag) {
+$scope.MECE390CoopPlan2Listener = function () {
+ if (!MECE390CoopPlan2flag) {
       that.addLine(getLine226());
       that.addLine(getLine227());
-      MECE390BCoopPlan2flag=true
+      MECE390CoopPlan2flag=true
   }
  else {
       that.removeLine(getLine226());
       that.removeLine(getLine227());
-      MECE390BCoopPlan2flag=false
+      MECE390CoopPlan2flag=false
   }
 };
 $scope.WKEXP904CoopPlan2Listener = function () {
@@ -3144,19 +3296,19 @@ $scope.MECE460CoopPlan3BiomedicalListener = function () {
   var MATE202CoopPlan4flag = false;
   var MECE200CoopPlan4flag = false;
   var MECE250CoopPlan4flag = false;
-  var MATH300ACoopPlan4flag = false;
-  var MECE300ACoopPlan4flag = false;
-  var MECE301ACoopPlan4flag = false;
-  var MECE331ACoopPlan4flag = false;
-  var MECE371ACoopPlan4flag = false;
-  var MECE380ACoopPlan4flag = false;
+  var MATH300CoopPlan4flag = false;
+  var MECE300CoopPlan4flag = false;
+  var MECE301CoopPlan4flag = false;
+  var MECE331CoopPlan4flag = false;
+  var MECE371CoopPlan4flag = false;
+  var MECE380CoopPlan4flag = false;
   var WKEXP901CoopPlan4flag = false;
   var WKEXP902CoopPlan4flag = false;
-  var ENGM310BCoopPlan4flag = false;
-  var MECE340BCoopPlan4flag = false;
-  var MECE360BCoopPlan4flag = false;
-  var MECE362BCoopPlan4flag = false;
-  var MECE390BCoopPlan4flag = false;
+  var ENGM310CoopPlan4flag = false;
+  var MECE340CoopPlan4flag = false;
+  var MECE360CoopPlan4flag = false;
+  var MECE362CoopPlan4flag = false;
+  var MECE390CoopPlan4flag = false;
   var ComplementaryElectiveCoopPlan4flag = false;
   var WKEXP903CoopPlan4flag = false;
   var WKEXP904CoopPlan4flag = false;
@@ -3476,82 +3628,96 @@ $scope.MECE250CoopPlan4Listener = function () {
       MECE250CoopPlan4flag=false
   }
 };
-$scope.MATH300ACoopPlan4Listener = function () {
- if (!MATH300ACoopPlan4flag) {
+$scope.MATH300CoopPlan4Listener = function () {
+ if (!MATH300CoopPlan4flag) {
       that.addLine(getLine336());
       that.addLine(getLine337());
-      MATH300ACoopPlan4flag=true
+      that.addLine(getLine348());
+      that.addLine(getLine373());
+      MATH300CoopPlan4flag=true
   }
  else {
       that.removeLine(getLine336());
       that.removeLine(getLine337());
-      MATH300ACoopPlan4flag=false
+      that.removeLine(getLine348());
+      that.removeLine(getLine373());
+      MATH300CoopPlan4flag=false
   }
 };
-$scope.MECE300ACoopPlan4Listener = function () {
- if (!MECE300ACoopPlan4flag) {
+$scope.MECE300CoopPlan4Listener = function () {
+ if (!MECE300CoopPlan4flag) {
       that.addLine(getLine338());
       that.addLine(getLine339());
       that.addLine(getLine340());
-      MECE300ACoopPlan4flag=true
+      that.addLine(getLine341());
+      that.addLine(getLine368());
+      MECE300CoopPlan4flag=true
   }
  else {
       that.removeLine(getLine338());
       that.removeLine(getLine339());
       that.removeLine(getLine340());
-      MECE300ACoopPlan4flag=false
+      that.removeLine(getLine341());
+      that.removeLine(getLine368());
+      MECE300CoopPlan4flag=false
   }
 };
-$scope.MECE301ACoopPlan4Listener = function () {
- if (!MECE301ACoopPlan4flag) {
+$scope.MECE301CoopPlan4Listener = function () {
+ if (!MECE301CoopPlan4flag) {
       that.addLine(getLine341());
-      MECE301ACoopPlan4flag=true
+      that.addLine(getLine369());
+      MECE301CoopPlan4flag=true
   }
  else {
       that.removeLine(getLine341());
-      MECE301ACoopPlan4flag=false
+      that.removeLine(getLine369());
+      MECE301CoopPlan4flag=false
   }
 };
-$scope.MECE331ACoopPlan4Listener = function () {
- if (!MECE331ACoopPlan4flag) {
+$scope.MECE331CoopPlan4Listener = function () {
+ if (!MECE331CoopPlan4flag) {
       that.addLine(getLine342());
       that.addLine(getLine343());
       that.addLine(getLine344());
       that.addLine(getLine345());
-      MECE331ACoopPlan4flag=true
+      that.addLine(getLine349());
+      MECE331CoopPlan4flag=true
   }
  else {
       that.removeLine(getLine342());
       that.removeLine(getLine343());
       that.removeLine(getLine344());
       that.removeLine(getLine345());
-      MECE331ACoopPlan4flag=false
+      that.removeLine(getLine349());
+      MECE331CoopPlan4flag=false
   }
 };
-$scope.MECE371ACoopPlan4Listener = function () {
- if (!MECE371ACoopPlan4flag) {
+$scope.MECE371CoopPlan4Listener = function () {
+ if (!MECE371CoopPlan4flag) {
       that.addLine(getLine346());
       that.addLine(getLine347());
       that.addLine(getLine348());
       that.addLine(getLine349());
-      MECE371ACoopPlan4flag=true
+      MECE371CoopPlan4flag=true
   }
  else {
       that.removeLine(getLine346());
       that.removeLine(getLine347());
       that.removeLine(getLine348());
       that.removeLine(getLine349());
-      MECE371ACoopPlan4flag=false
+      MECE371CoopPlan4flag=false
   }
 };
-$scope.MECE380ACoopPlan4Listener = function () {
- if (!MECE380ACoopPlan4flag) {
+$scope.MECE380CoopPlan4Listener = function () {
+ if (!MECE380CoopPlan4flag) {
       that.addLine(getLine350());
-      MECE380ACoopPlan4flag=true
+      that.addLine(getLine378());
+      MECE380CoopPlan4flag=true
   }
  else {
       that.removeLine(getLine350());
-      MECE380ACoopPlan4flag=false
+      that.removeLine(getLine378());
+      MECE380CoopPlan4flag=false
   }
 };
 $scope.WKEXP901CoopPlan4Listener = function () {
@@ -3578,24 +3744,32 @@ $scope.WKEXP902CoopPlan4Listener = function () {
       WKEXP902CoopPlan4flag=false
   }
 };
-$scope.MECE340BCoopPlan4Listener = function () {
- if (!MECE340BCoopPlan4flag) {
+$scope.MECE340CoopPlan4Listener = function () {
+ if (!MECE340CoopPlan4flag) {
       that.addLine(getLine353());
-      MECE340BCoopPlan4flag=true
+      that.addLine(getLine365());
+      that.addLine(getLine370());
+      that.addLine(getLine375());
+      MECE340CoopPlan4flag=true
   }
  else {
       that.removeLine(getLine353());
-      MECE340BCoopPlan4flag=false
+      that.removeLine(getLine365());
+      that.removeLine(getLine370());
+      that.removeLine(getLine375());
+      MECE340CoopPlan4flag=false
   }
 };
-$scope.MECE360BCoopPlan4Listener = function () {
- if (!MECE360BCoopPlan4flag) {
+$scope.MECE360CoopPlan4Listener = function () {
+ if (!MECE360CoopPlan4flag) {
       that.addLine(getLine354());
       that.addLine(getLine355());
       that.addLine(getLine356());
       that.addLine(getLine357());
       that.addLine(getLine358());
-      MECE360BCoopPlan4flag=true
+      that.addLine(getLine371());
+      that.addLine(getLine376());
+      MECE360CoopPlan4flag=true
   }
  else {
       that.removeLine(getLine354());
@@ -3603,29 +3777,35 @@ $scope.MECE360BCoopPlan4Listener = function () {
       that.removeLine(getLine356());
       that.removeLine(getLine357());
       that.removeLine(getLine358());
-      MECE360BCoopPlan4flag=false
+      that.removeLine(getLine371());
+      that.removeLine(getLine376());
+      MECE360CoopPlan4flag=false
   }
 };
-$scope.MECE362BCoopPlan4Listener = function () {
- if (!MECE362BCoopPlan4flag) {
+$scope.MECE362CoopPlan4Listener = function () {
+ if (!MECE362CoopPlan4flag) {
+      that.addLine(getLine358());
       that.addLine(getLine359());
-      MECE362BCoopPlan4flag=true
+      that.addLine(getLine377());
+      MECE362CoopPlan4flag=true
   }
  else {
+      that.removeLine(getLine358());
       that.removeLine(getLine359());
-      MECE362BCoopPlan4flag=false
+      that.removeLine(getLine377());
+      MECE362CoopPlan4flag=false
   }
 };
-$scope.MECE390BCoopPlan4Listener = function () {
- if (!MECE390BCoopPlan4flag) {
+$scope.MECE390CoopPlan4Listener = function () {
+ if (!MECE390CoopPlan4flag) {
       that.addLine(getLine360());
       that.addLine(getLine361());
-      MECE390BCoopPlan4flag=true
+      MECE390CoopPlan4flag=true
   }
  else {
       that.removeLine(getLine360());
       that.removeLine(getLine361());
-      MECE390BCoopPlan4flag=false
+      MECE390CoopPlan4flag=false
   }
 };
 $scope.WKEXP903CoopPlan4Listener = function () {

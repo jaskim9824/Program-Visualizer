@@ -172,6 +172,10 @@ def placeTermsDivs(planTag, planDict, soup, courseDict, indexJS, controller, pla
     courseList = []
     for courses in planDict.values():
         courseList += courses
+    # print(plan)
+    # for course in courseList:
+    #     print(course.name)
+    # print("\n")
     placeLines(courseList, indexJS, lineManager, plan)
     placeClickListeners(courseList, controller, lineManager, plan)
 
@@ -296,8 +300,16 @@ def placeCourses(termTag, termList, soup, indexJS, controller, plan):
                       cleanString(plan) + 
                       "\");\n")
 
-
-        
+#Debug function for cleanly printing contents of sequences
+def debug(sequenceDict):
+    for plan in sequenceDict:
+        print(plan)
+        for term in sequenceDict[plan]:
+            print(term)
+            for course in sequenceDict[plan][term]:
+                print(course.name)
+            print("\n")
+        print("\n")     
 
 
 def main ():
@@ -316,8 +328,7 @@ def main ():
 
             # parsing the excel files with course info and sequencing
             sequenceDict, courseDict = parse("parsed.json")
-
-            
+            #debug(sequenceDict)
 
             # generating intital JS based on the number and names of plans
             firstPlan = cleanString(list(sequenceDict.keys())[0])
