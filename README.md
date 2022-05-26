@@ -7,6 +7,8 @@ the corresponding box of the course is hovered over like so:
 
 The webpage also allows a user to display the prerequisites and corequisites of a course, as well as the courses that
 the course is a prerequisite or corequisite of, allowing them to interactively view the dependencies between different courses. 
+![reqandcoreq](https://user-images.githubusercontent.com/60327441/170582565-eaa28b0c-5f97-48b9-83f2-04a713e77367.gif)
+
 
 The webpage allows users to switch between the different program sequences as displayed below:
 ![image](https://user-images.githubusercontent.com/60327441/170541806-09a6ecb7-e169-4a1c-9800-37551ec19867.png)
