@@ -1,19 +1,21 @@
 from bs4 import BeautifulSoup
-from numpy import number
 from parsing import parse
 
 class LineManager:
     def __init__(self) -> None:
-        # List of pairs that represent the different lines generated
-        self.lineMap = []
         # Dict that maps the lines to the courses that 'own' them
         self.courseLineDict = {}
 
         # Count of lines generated
         self.lineCount = 0
-
-    def getLineMap(self):
-        return self.lineMap
+    
+    def addLinetoCourse(self, course, line):
+        self.courseLineDict[course].append(line)
+    
+    def intializeCourse(self, course):
+        if course not in self.courseLineDict:
+            self.courseLineDict[course] = []
+        return
 
     def getCourseLineDict(self):
         return self.courseLineDict
@@ -107,7 +109,7 @@ switch($scope.selectedPlan) {{ \n"""
 
     formattedAddLineSwitchStatement = """ case "{planName}":
     var index = this.{planName}List.findIndex((element) => element[0] == line);
-    if (index != -1) {{
+    if (index == -1) {{
         line.show();
         this.{planName}List.push([line, 1])
     }}
@@ -171,9 +173,12 @@ def placeTermsDivs(planTag, planDict, soup, courseDict, indexJS, controller, pla
     for courses in planDict.values():
         courseList += courses
     placeLines(courseList, indexJS, lineManager, plan)
+    placeClickListeners(courseList, controller, lineManager, plan)
 
 def addPrereqLine(start, end, lineManager, indexJS):
     count = lineManager.getLineCount()
+    lineManager.intializeCourse(start)
+    lineManager.intializeCourse(end)
     indexJS.write("var line" + 
                      str(count) + 
                      " = new LeaderLine(" +
@@ -182,10 +187,15 @@ def addPrereqLine(start, end, lineManager, indexJS):
                      end + 
                      ", { hide: true });\n")
     addGetter(count, indexJS)
+    lineManager.addLinetoCourse(start, count)
+    lineManager.addLinetoCourse(end, count)
     lineManager.setLineCount(count+1)
+    
 
 def addCoreqLine(start, end, lineManager, indexJS):
     count = lineManager.getLineCount()
+    lineManager.intializeCourse(start)
+    lineManager.intializeCourse(end)
     indexJS.write("var line" + 
                      str(count) + 
                      " = new LeaderLine(" +
@@ -194,6 +204,8 @@ def addCoreqLine(start, end, lineManager, indexJS):
                      end + 
                      ", { hide: true, dashed:true });\n")
     addGetter(count, indexJS)
+    lineManager.addLinetoCourse(start, count)
+    lineManager.addLinetoCourse(end, count)
     lineManager.setLineCount(count+1)
 
 def addGetter(num, indexJS):
@@ -235,8 +247,26 @@ def placeLines(courseList, indexJS, lineManager, plan):
                              lineManager, 
                              indexJS)
 
-def placeClickListeners(courseList, controller, lineManager):
-    return
+def placeClickListeners(courseList, controller, lineManager, plan):
+    formattedListener = "$scope.{courseName}Listener = function () {{\n"
+    formattedIf = " if (!{courseName}flag) {{\n"
+    formattedStatement = "      that.{action}Line(getLine{num}());\n"
+    for course in courseList:
+        if cleanString(course.name)+cleanString(plan) in lineManager.getCourseLineDict():
+            controller.write(formattedListener.format(courseName = cleanString(course.name)+cleanString(plan)))
+            controller.write(formattedIf.format(courseName = cleanString(course.name)+cleanString(plan)))
+            for line in lineManager.getCourseLineDict()[cleanString(course.name)+cleanString(plan)]:
+                controller.write(formattedStatement.format(action="add", num=line))
+            controller.write("      " +cleanString(course.name)+cleanString(plan)+"flag=true\n")
+            controller.write("  }\n else {\n")
+            for line in lineManager.getCourseLineDict()[cleanString(course.name)+cleanString(plan)]:
+                controller.write(formattedStatement.format(action="remove", num=line))
+            controller.write("      " +cleanString(course.name)+cleanString(plan)+"flag=false\n")
+            controller.write("  }\n};\n")
+
+
+
+
 
 def placeCourses(termTag, termList, soup, indexJS, controller, plan):
     for course in termList:
@@ -244,8 +274,8 @@ def placeCourses(termTag, termList, soup, indexJS, controller, plan):
         courseContDiv = soup.new_tag("div", attrs={"class":"coursecontainer"})
         #courseDisc.append("\{\{"+course.name.strip().replace(" ","")+"courseinfo\}\}")
         courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip", 
-                                               "id": cleanString(course.name), 
-                                               "ng-click":"\{\{"+cleanString(course.name)+"Listener()\}\}" })
+                                               "id": cleanString(course.name)+cleanString(plan), 
+                                               "ng-click":cleanString(course.name)+cleanString(plan)+"Listener()" })
         courseDisc = soup.new_tag("p", attrs={"class":"tooltiptext"})
         courseDisc.append(course.course_description)
         courseHeader = soup.new_tag("h3", attrs={"class":"embed"})
@@ -261,7 +291,7 @@ def placeCourses(termTag, termList, soup, indexJS, controller, plan):
         indexJS.write("var " + 
                       cleanString(course.name) + 
                       cleanString(plan) +
-                      " = document.getElementbyId(\"" + 
+                      " = document.getElementById(\"" + 
                       cleanString(course.name) + 
                       cleanString(plan) + 
                       "\");\n")
@@ -308,6 +338,7 @@ def main ():
             placePlanDivs(displayTag, sequenceDict, soup, courseDict, indexJS, controller, lineManager)
             closeControllerJavaScript(controller)
             indexJS.close()
+           
 
 
     #TO DO: improve expection handling here
