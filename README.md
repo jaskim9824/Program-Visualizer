@@ -27,4 +27,5 @@ This project has the following dependencies:
   - LeaderLine for drawing lines between courses with a prerequisite or corequisite relation.
   - AngularJS for the front end logic
   - BeautifulSoup for generation of the final HTML
+  - xlrd for parsing Excel files
 
