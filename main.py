@@ -81,7 +81,7 @@ def generatePlanBasedControllerJavascript(sequenceDict, controller):
     
     formattedSwitchStatement1 = """  case "{planName}": 
     for (let i = 0; i < this.{planName}List.length; i++) {{
-        this.{planName}List[i][0].{action}();
+        this.{planName}List[i][0].{action}(true);
     }}
     break; \n"""
 
@@ -110,7 +110,7 @@ switch($scope.selectedPlan) {{ \n"""
     formattedAddLineSwitchStatement = """ case "{planName}":
     var index = this.{planName}List.findIndex((element) => element[0] == line);
     if (index == -1) {{
-        line.show();
+        line.show(false);
         this.{planName}List.push([line, 1])
     }}
     else {{
@@ -131,7 +131,7 @@ switch($scope.selectedPlan) {{ \n"""
     if (index != -1) {{
         this.{planName}List[index][1]--
         if (this.{planName}List[index][1] <= 0) {{
-            line.hide();
+            line.hide(false);
             this.{planName}List.splice(index, 1);
         }}
     }}
@@ -167,7 +167,7 @@ def placeTermsDivs(planTag, planDict, soup, courseDict, indexJS, controller, pla
         termHeader = soup.new_tag("h3", attrs={"class":"termheader"})
         termHeader.append(term)
         termDiv.append(termHeader)
-        placeCourses(termDiv, planDict[term], soup, indexJS, controller, plan)
+        placeCourses(termDiv, planDict[term], soup, controller, plan)
         planTag.append(termDiv)
     courseList = []
     for courses in planDict.values():
@@ -185,11 +185,11 @@ def addPrereqLine(start, end, lineManager, indexJS):
     lineManager.intializeCourse(end)
     indexJS.write("var line" + 
                      str(count) + 
-                     " = new LeaderLine(" +
-                     start +
+                     " = new Line(" +
+                    "\"" + start +  "\"" + 
                      ", " +
-                     end + 
-                     ", { hide: true });\n")
+                    "\"" + end +  "\"" + 
+                     ", false);\n")
     addGetter(count, indexJS)
     lineManager.addLinetoCourse(start, count)
     lineManager.addLinetoCourse(end, count)
@@ -202,11 +202,11 @@ def addCoreqLine(start, end, lineManager, indexJS):
     lineManager.intializeCourse(end)
     indexJS.write("var line" + 
                      str(count) + 
-                     " = new LeaderLine(" +
-                     start +
+                    " = new Line(" +
+                    "\"" + start +  "\"" + 
                      ", " +
-                     end + 
-                     ", { hide: true, dashed:true });\n")
+                    "\"" + end +  "\"" + 
+                     ", true);\n")
     addGetter(count, indexJS)
     lineManager.addLinetoCourse(start, count)
     lineManager.addLinetoCourse(end, count)
@@ -269,10 +269,7 @@ def placeClickListeners(courseList, controller, lineManager, plan):
             controller.write("  }\n};\n")
 
 
-
-
-
-def placeCourses(termTag, termList, soup, indexJS, controller, plan):
+def placeCourses(termTag, termList, soup, controller, plan):
     for course in termList:
 
         courseContDiv = soup.new_tag("div", attrs={"class":"coursecontainer"})
@@ -301,13 +298,6 @@ def placeCourses(termTag, termList, soup, indexJS, controller, plan):
                          cleanString(course.name) + 
                          cleanString(plan) +
                          "flag = false;\n")
-        indexJS.write("var " + 
-                      cleanString(course.name) + 
-                      cleanString(plan) +
-                      " = document.getElementById(\"" + 
-                      cleanString(course.name) + 
-                      cleanString(plan) + 
-                      "\");\n")
 
 #Debug function for cleanly printing contents of sequences
 def debug(sequenceDict):

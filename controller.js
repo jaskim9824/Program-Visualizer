@@ -24,32 +24,32 @@ this.disable = function(plan) {
     switch (plan) { 
   case "TraditionalPlan": 
     for (let i = 0; i < this.TraditionalPlanList.length; i++) {
-        this.TraditionalPlanList[i][0].hide();
+        this.TraditionalPlanList[i][0].hide(true);
     }
     break; 
   case "AlternatePlan": 
     for (let i = 0; i < this.AlternatePlanList.length; i++) {
-        this.AlternatePlanList[i][0].hide();
+        this.AlternatePlanList[i][0].hide(true);
     }
     break; 
   case "CoopPlan1": 
     for (let i = 0; i < this.CoopPlan1List.length; i++) {
-        this.CoopPlan1List[i][0].hide();
+        this.CoopPlan1List[i][0].hide(true);
     }
     break; 
   case "CoopPlan2": 
     for (let i = 0; i < this.CoopPlan2List.length; i++) {
-        this.CoopPlan2List[i][0].hide();
+        this.CoopPlan2List[i][0].hide(true);
     }
     break; 
   case "CoopPlan3Biomedical": 
     for (let i = 0; i < this.CoopPlan3BiomedicalList.length; i++) {
-        this.CoopPlan3BiomedicalList[i][0].hide();
+        this.CoopPlan3BiomedicalList[i][0].hide(true);
     }
     break; 
   case "CoopPlan4": 
     for (let i = 0; i < this.CoopPlan4List.length; i++) {
-        this.CoopPlan4List[i][0].hide();
+        this.CoopPlan4List[i][0].hide(true);
     }
     break; 
     default:
@@ -60,32 +60,32 @@ this.enable = function(plan) {
     switch (plan) { 
   case "TraditionalPlan": 
     for (let i = 0; i < this.TraditionalPlanList.length; i++) {
-        this.TraditionalPlanList[i][0].show();
+        this.TraditionalPlanList[i][0].show(true);
     }
     break; 
   case "AlternatePlan": 
     for (let i = 0; i < this.AlternatePlanList.length; i++) {
-        this.AlternatePlanList[i][0].show();
+        this.AlternatePlanList[i][0].show(true);
     }
     break; 
   case "CoopPlan1": 
     for (let i = 0; i < this.CoopPlan1List.length; i++) {
-        this.CoopPlan1List[i][0].show();
+        this.CoopPlan1List[i][0].show(true);
     }
     break; 
   case "CoopPlan2": 
     for (let i = 0; i < this.CoopPlan2List.length; i++) {
-        this.CoopPlan2List[i][0].show();
+        this.CoopPlan2List[i][0].show(true);
     }
     break; 
   case "CoopPlan3Biomedical": 
     for (let i = 0; i < this.CoopPlan3BiomedicalList.length; i++) {
-        this.CoopPlan3BiomedicalList[i][0].show();
+        this.CoopPlan3BiomedicalList[i][0].show(true);
     }
     break; 
   case "CoopPlan4": 
     for (let i = 0; i < this.CoopPlan4List.length; i++) {
-        this.CoopPlan4List[i][0].show();
+        this.CoopPlan4List[i][0].show(true);
     }
     break; 
     default:
@@ -97,7 +97,7 @@ switch($scope.selectedPlan) {
  case "TraditionalPlan":
     var index = this.TraditionalPlanList.findIndex((element) => element[0] == line);
     if (index == -1) {
-        line.show();
+        line.show(false);
         this.TraditionalPlanList.push([line, 1])
     }
     else {
@@ -107,7 +107,7 @@ switch($scope.selectedPlan) {
  case "AlternatePlan":
     var index = this.AlternatePlanList.findIndex((element) => element[0] == line);
     if (index == -1) {
-        line.show();
+        line.show(false);
         this.AlternatePlanList.push([line, 1])
     }
     else {
@@ -117,7 +117,7 @@ switch($scope.selectedPlan) {
  case "CoopPlan1":
     var index = this.CoopPlan1List.findIndex((element) => element[0] == line);
     if (index == -1) {
-        line.show();
+        line.show(false);
         this.CoopPlan1List.push([line, 1])
     }
     else {
@@ -127,7 +127,7 @@ switch($scope.selectedPlan) {
  case "CoopPlan2":
     var index = this.CoopPlan2List.findIndex((element) => element[0] == line);
     if (index == -1) {
-        line.show();
+        line.show(false);
         this.CoopPlan2List.push([line, 1])
     }
     else {
@@ -137,7 +137,7 @@ switch($scope.selectedPlan) {
  case "CoopPlan3Biomedical":
     var index = this.CoopPlan3BiomedicalList.findIndex((element) => element[0] == line);
     if (index == -1) {
-        line.show();
+        line.show(false);
         this.CoopPlan3BiomedicalList.push([line, 1])
     }
     else {
@@ -147,7 +147,7 @@ switch($scope.selectedPlan) {
  case "CoopPlan4":
     var index = this.CoopPlan4List.findIndex((element) => element[0] == line);
     if (index == -1) {
-        line.show();
+        line.show(false);
         this.CoopPlan4List.push([line, 1])
     }
     else {
@@ -165,7 +165,7 @@ switch($scope.selectedPlan) {
     if (index != -1) {
         this.TraditionalPlanList[index][1]--
         if (this.TraditionalPlanList[index][1] <= 0) {
-            line.hide();
+            line.hide(false);
             this.TraditionalPlanList.splice(index, 1);
         }
     }
@@ -174,7 +174,7 @@ switch($scope.selectedPlan) {
     if (index != -1) {
         this.AlternatePlanList[index][1]--
         if (this.AlternatePlanList[index][1] <= 0) {
-            line.hide();
+            line.hide(false);
             this.AlternatePlanList.splice(index, 1);
         }
     }
@@ -183,7 +183,7 @@ switch($scope.selectedPlan) {
     if (index != -1) {
         this.CoopPlan1List[index][1]--
         if (this.CoopPlan1List[index][1] <= 0) {
-            line.hide();
+            line.hide(false);
             this.CoopPlan1List.splice(index, 1);
         }
     }
@@ -192,7 +192,7 @@ switch($scope.selectedPlan) {
     if (index != -1) {
         this.CoopPlan2List[index][1]--
         if (this.CoopPlan2List[index][1] <= 0) {
-            line.hide();
+            line.hide(false);
             this.CoopPlan2List.splice(index, 1);
         }
     }
@@ -201,7 +201,7 @@ switch($scope.selectedPlan) {
     if (index != -1) {
         this.CoopPlan3BiomedicalList[index][1]--
         if (this.CoopPlan3BiomedicalList[index][1] <= 0) {
-            line.hide();
+            line.hide(false);
             this.CoopPlan3BiomedicalList.splice(index, 1);
         }
     }
@@ -210,7 +210,7 @@ switch($scope.selectedPlan) {
     if (index != -1) {
         this.CoopPlan4List[index][1]--
         if (this.CoopPlan4List[index][1] <= 0) {
-            line.hide();
+            line.hide(false);
             this.CoopPlan4List.splice(index, 1);
         }
     }
