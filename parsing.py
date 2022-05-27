@@ -1,3 +1,18 @@
+# Author: Zachary Schmidt
+# Collaborators: Jason Kim, Moaz Abdelmonem
+# University of Alberta, Summer 2022, Curriculum Development Co-op Term
+
+# This file contains functions required to parse Excel files containing course information
+# at the U of A. The main functions are parse() and parseInPy(). parse() loads a .json file
+# created in the MATLAB file parsing.m to extract relevant course info. parseInPy() achieves
+# achieves the exact same result but does everything in Python (no MATLAB required).
+# Both functions return the exact same dictionaries. parse() is obsolete and is not used
+# in main.py
+
+# Dependencies: xlrd, json
+
+# Used in: main.py to generate the HTML page of the course plan visualizer
+
 import json
 import xlrd
 
@@ -34,21 +49,21 @@ def splitLine(filename, contents):
     # JSON processing.
     #
     # Arguments:
-    #   filename (string): name of the file to be processed
-    #   contents (string): contents of the file read using .read()
+    #   filename (string): name of the output file
+    #   contents (string): file object of the file to be processed 
     #
-    # Returns: none
+    # Returns: none. Writes to the output file
 
     with open(filename, "w+") as f:
         f.write(contents.replace("}", "}\n"))
 
 
 def countNums(str):
-    # Counts the number of number chars in a string.
+    # Counts the total number of number (0-9) chars in a string.
     # eg: "mlat9kg45" has 3 numbers.
     #
     # Arguments:
-    #   str (string): counts how many numbers in this string
+    #   str (string): the string to be analyzed
     #
     # Returns: 
     #   numcounter (int): how many numbers are in the string
@@ -63,7 +78,8 @@ def countNums(str):
 
 
 def pullDept(reqlist, indx):
-    # Pulls the department name from the the list item at index indx in reqlist.
+    # Pulls the department name from reqlist[indx]. The department name
+    # is an uppercase string, eg: MATH, PHYS, ENGL, etc.
     #
     # Arguments:
     #   reqlist (list of strings): list of the prerequisites for a course
@@ -76,7 +92,7 @@ def pullDept(reqlist, indx):
     nums = ["0","1","2","3","4","5","6","7","8","9"]
     dept = ""
     for n in range(0, len(reqlist[indx])):
-    # MATH 100 -> Move form left to right until you hit the
+    # MATH 100 -> Move from left to right until you hit the
     # first number, the department is from beginning to 2 indices before that
         if reqlist[indx][n] in nums:
             dept = reqlist[indx][0:n - 1]  # pull the department name
@@ -148,7 +164,7 @@ def preprocess(reqlist):
             # Remove all text after a semicolon
             newlist.append(reqlist[j][0:semicolindx])
         else:
-            # If no semicolon and passed the above cases, store it in newlist
+            # If no semicolon and passed the above cases, it is a valid course
             newlist.append(reqlist[j])
         
         j += 1
@@ -163,14 +179,14 @@ def process(prestr):
     #
     # Arguments:
     #   prestr (string): The part of a course description from the first character after
-    #   either "Prerequisites: " or "Prerequisite: " until the first period following
+    #   either "Prerequisites: " or "Prerequisite: " until the first period following.
     #   eg: Prerequisites: [One of CH E 441, MEC E 250, or MATH 100.] Everything between
     #   the square brackets should be passed.
     #
     # Returns: 
     #   reqlist (list of strings): A list of the prerequisites of a course. Elements
     #   can be in two forms. 1) The name of a single course. eg: "MATH 100"
-    #   2) Several courses, each separated by the word "or". This denotes that only one
+    #   2) Several courses, each separated by the word "or". This denotes that only one of
     #   these courses is required as a prerequisite. eg: "MEC E 250 or MATH 102 or CH E 441"
 
     prestr = prestr.strip()
@@ -190,7 +206,6 @@ def process(prestr):
 
     # Create a list, splitting at each course
     reqlist = prestr.split(", ")
-
 
     if reqlist is None:
         # If no prerequisites, return empty list
@@ -214,11 +229,11 @@ def process(prestr):
         numcounter = countNums(reqlist[i])
 
         if reqlist[i][0:5] == "both " or reqlist[i][0:5] == "Both ":
-            # Two courses are required, remove both and pull department name is required
+            # Two courses are required, remove both and pull the department name if required
             reqlist[i] = reqlist[i].replace("both ","")
             reqlist[i] = reqlist[i].replace("Both ","")
 
-            # Pull department name from previous course if required
+            # Pull department name from previous course if required (if no department name is present)
             numcounter = countNums(reqlist[i + 1])
             if numcounter == 3 and len(reqlist[i + 1]) == 3:
                 # Only a course number is present, must pull the department name
@@ -230,6 +245,7 @@ def process(prestr):
         if (reqlist[i][0:7] == "One of ") or (reqlist[i][0:7] == "one of ") or (reqlist[i][0:7] == "Either ") or (reqlist[i][0:7] == "either "):
             # Same logic for "one of" as well as "either"
             if ((reqlist[i][0:6] == "Either") or (reqlist[i][0:6] == "either")) and (reqlist[i + 1][0:11] == "or one of "):
+                # "or one of " is redundant
                 # Remove the "or one of " and we can apply the same steps
                 reqlist[i + 1] = reqlist[i + 1].replace("or one of ", "")
 
@@ -245,6 +261,7 @@ def process(prestr):
                 while ("or" not in reqlist[j]) and ("Or" not in reqlist[j]):
                     # There are still more courses that could be chosen, combine the
                     # previous and current elements, continue until we see the word "or"
+                    # or we reach the end of the reqlist
 
                     # Count the number of numbers in the next element
                     numcounter = countNums(reqlist[j])
@@ -294,7 +311,7 @@ def process(prestr):
                                 dept = pullDept(reqlist, j)
                                 assert dept != -1, "Error pulling department name from previous list item, check pullDept()"
 
-                                # Re-arranging word placement
+                                # Re-arranging words
                                 reqlist[j + 1] = "and " + dept[8:] + " " + reqlist[j + 1]
                                 reqlist[j] = reqlist[j] + " " + reqlist[j + 1]  # combine current and next
                                 del reqlist[j + 1]
@@ -319,6 +336,7 @@ def process(prestr):
         elif (reqlist[i][0:2] == "or" or reqlist[i][0:2] == "Or") and len(reqlist[i]) > 6:
             # The element is "or" followed by the course name with the department name present
             # eg: "or MATH 100"
+            # Just combine the current and previous elements
             reqlist[i - 1] = reqlist[i - 1] + " " + reqlist[i]  # combine current and previous elements
             del reqlist[i]  # delete current element
 
@@ -331,6 +349,9 @@ def process(prestr):
             reqlist[i] = dept + " " + reqlist[i]  # just add the department name to current item
             i += 1
         else:
+            # No processing is required. Usually, this means reqlist[i] is a pre/co-req
+            # with the department name present and is not one option among other courses.
+            # eg: reqlist = [MATH 102]  no processing is required
             i += 1
     
     return reqlist
@@ -344,7 +365,7 @@ def pullPreReqs(description):
     # Returns:
     #   prereqs (list of strings): A list of the prerequisites. Elements
     #   can be in two forms. 1) The name of a single course. eg: "MATH 100"
-    #   2) Several courses, each separated by the word "or". This denotes that only one
+    #   2) Several courses, each separated by the word " or ". This denotes that only one of
     #   these courses is required as a prerequisite. eg: "MEC E 250 or MATH 102 or CH E 441"
 
     # Split into cases, plural and not plural. Just adjusts the substring value (14 or 15)
@@ -385,7 +406,7 @@ def pullCoReqs(description):
     # Returns:
     #   coreqs (list of strings): A list of the corequisites. Elements
     #   can be in two forms. 1) The name of a single course. eg: "MATH 100"
-    #   2) Several courses, each separated by the word "or". This denotes that only one
+    #   2) Several courses, each separated by the word "or". This denotes that only one of
     #   these courses is required as a corequisite. eg: "MEC E 250 or MATH 102 or CH E 441"
 
     # Split into cases, plural and not plural. Just adjusts the substring value (14 or 15)
@@ -450,7 +471,7 @@ def pullSeq(filename, course_obj_dict):
     #   course_obj_dict (dictionary): dict with course name for key and 
     #   Course class as value. Course class described in parsing.py
     #   filename (string): Name of the Excel file to be parsed for sequencing
-    #   info. Format described in README. Can only be a .xls file (not .xlsx)
+    #   info. Format described in README. Can only be a .xls file (NOT .xlsx)
     #
     # Returns:
     #   course_seq (dictionary): Key is plan name, value is another dict with 
@@ -470,6 +491,7 @@ def pullSeq(filename, course_obj_dict):
             term_list = []  # stores Course objects in a list for that term
             for row in range(1, sheet.nrows):
                 name = sheet.cell_value(row, col)
+                name = name.upper()  # course name must be uppercase
                 # Remove unnecessary white space
                 name = name.strip()
                 name = name.replace("  ", " ")
@@ -477,7 +499,7 @@ def pullSeq(filename, course_obj_dict):
                     # Cell in Excel is empty, skip over this cell
                     continue
                 if name == "PROG":
-                    # Create Course obj with only name attribute (all others empty strings)
+                    # Create Course obj with only name and course_description attribute
                     term_list.append(Course(name = "Program/Technical Elective", course_description = 
                     "A technical elective of the student's choice. Please consult the calendar for more information."))
                     continue
@@ -497,7 +519,7 @@ def pullSeq(filename, course_obj_dict):
 
 
 def parse(filename):
-    # Parses a JSON file with name "filename" created with the
+    # Parses a JSON file with name *filename* created with the
     # Matlab script "parsing.m" (all in current folder).
     # The data are extracted and stored in a dict
     # 
@@ -582,11 +604,30 @@ def parse(filename):
 
 
 def parseInPy(filename):
+    # Parses a .xls (NOT .xlsx) file with the name *filename*
+    # and stores all relevant course information (including
+    # sequencing information from the Sequencing.xls file) in
+    # two separate dictionaries.
+    #
+    # Arguments:
+    #   filename (string): name of the .xls file with course information
+    # Returns:
+    #   course_seq (dict): Stores course data in proper sequence:
+    #       key: Plan Name (string): name of the sheet from "Sequencing.xls"
+    #       ("Traditional", "Co-op Plan 1", etc.)
+    #       value: dict with key as term name ("Term 1", "Term 2", etc.)
+    #       and value as a list of Course objects to be taken in that term
+    #   course_obj_dict (dict): Stores all course data:
+    #       key: Course Name (string): the Subject + " " + Catalog of a course
+    #       value: Course object. Stores all data about a course
+
     try:
         book = xlrd.open_workbook(filename)
-        sheet = book.sheet_by_index(0)
+        sheet = book.sheet_by_index(0)  # course info must be on the first sheet
         course_obj_dict = {}
         for row in range(1, sheet.nrows):
+            # Each row stores info about one course, first row is headers
+            # FIXME: Formatting is very strict
             faculty = sheet.cell_value(row, 0)
             department = sheet.cell_value(row, 1)
             course_id = sheet.cell_value(row, 2)
@@ -605,6 +646,7 @@ def parseInPy(filename):
             course_description = sheet.cell_value(row, 15)
 
             course_name = subject + " " + catalog
+            # Remove unnecessary whitespace
             course_name = course_name.strip()
             course_name = course_name.replace("  ", " ")
 
