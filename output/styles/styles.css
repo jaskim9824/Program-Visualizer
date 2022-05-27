@@ -11,7 +11,7 @@ header {
     padding: 30px 10px;
     text-align: center;
     background-color: #275d38;
-    width: 1865px;
+    width: 100%;
     
 }
         
@@ -76,6 +76,10 @@ header {
 
 .termheader {
     margin-bottom: 30px;
+}
+
+.display {
+    width:fit-content;
 }
 
 /*This is for the Hover over course description*/
