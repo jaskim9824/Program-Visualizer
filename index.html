@@ -18,6 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <!--Leader Line import-->
     <script src="https://cdn.jsdelivr.net/npm/leader-line@1.0.7/leader-line.min.js"></script>
+  
 </head>
 <body>
 
@@ -345,10 +346,10 @@
         </div>
     </div>
 </div>
-
 <!-- Script section used to generate the lines between courses.
 Note: This script section generating the lines MUST be after the DOM elements in order to prevent them
 evaluating as null -->
+<script src="line.js"></script>
 <script>
     // for every course, we generate a HTML reference to that element
    var ece101 = document.getElementById("ECE 101");
@@ -359,25 +360,12 @@ evaluating as null -->
    /*for every prereq or coreq relationship between courses, we draw a line. line is hidden by default.
    the prereq/coreq for a course points towards that course (eg. prereq/coreq -> course). prereq are soild lines
    and coreq are dashed lines*/
-   var line1 = new LeaderLine(ece101, ece201, {hide:true, dash:true});
+   var line1 = new Line("ECE 101", "ECE 201", false);
+   console.log(line1);
    var line2 = new LeaderLine(ece101, ece401, {hide:true});
    var line3 = new LeaderLine(ece201, ece401, {hide:true});
    var line4 = new LeaderLine(ece101, ece461, {hide:true});
-   var line5 = new LeaderLine(ece201, ece461, {hide:true});
-   var line6 = new LeaderLine(ece201, ece461, {hide:true});
-   var line7 = new LeaderLine(ece201, ece461, {hide:true});
-   var line8 = new LeaderLine(ece201, ece461, {hide:true});
-   var line9 = new LeaderLine(ece201, ece461, {hide:true});
-   var line10 = new LeaderLine(ece201, ece461, {hide:true});
-   var line11 = new LeaderLine(ece201, ece461, {hide:true});
-   var line12 = new LeaderLine(ece201, ece461, {hide:true});
-   var line13 = new LeaderLine(ece201, ece461, {hide:true});
-   var line14 = new LeaderLine(ece201, ece461, {hide:true});
-   var line15 = new LeaderLine(ece201, ece461, {hide:true});
-   var line16 = new LeaderLine(ece201, ece461, {hide:true});
-   var line17 = new LeaderLine(ece201, ece461, {hide:true});
-   var line18 = new LeaderLine(ece201, ece461, {hide:true});
-   var line19 = new LeaderLine(ece201, ece461, {hide:true});
+   var line6 = new Line("ECE 102", "ECE 202",true)
 
    // for every line, we need a getter function
    function getLine1() {
@@ -394,6 +382,9 @@ evaluating as null -->
    };
    function getLine5() {
        return line5;
+   };
+   function getLine6() {
+       return line6;
    }
 
 </script>
@@ -449,23 +440,29 @@ evaluating as null -->
             // Check for previous plan
             switch (plan) {
                 case "A":
+                    console.log(this.planAList);
                     for (let i = 0; i < this.planAList.length; i++) {
-                        this.planAList[i][0].hide();
+                        console.log(this.planAList[i][0]);
+                        this.planAList[i][0].hide(true);
                     }
                     break;
                 case "B":
+                    console.log(this.planBList);
                     for (let i = 0; i < this.planBList.length; i++) {
-                        this.planBlist[i][0].hide();
+                        console.log(this.planBList[i][0]);
+                        this.planBList[i][0].hide(true);
                     }
                     break;
                 case "C":
+                    console.log(this.planCList);
                     for (let i = 0; i < this.planCList.length; i++) {
-                        this.planClist[i][0].hide();
+                        this.planCList[i][0].hide(true);
                     }
                     break;
                 case "D":
+                    console.log(this.planDList);
                     for (let i = 0; i < this.planDList.length; i++) {
-                        this.planDlist[i][0].hide();
+                        this.planDList[i][0].hide(true);
                     }
                     break;
             } 
@@ -481,23 +478,26 @@ evaluating as null -->
             // Check for target plan
             switch(plan) {
                 case "A":
+                    console.log(this.planAList);
                     for (let i = 0; i < this.planAList.length; i++) {
-                        this.planAList[i][0].show();
+                        this.planAList[i][0].show(true);
                     }
                     break;
                 case "B":
+                    console.log(this.planBList);
                     for (let i = 0; i < this.planBList.length; i++) {
-                        this.planBList[i][0].show();
+                        this.planBList[i][0].show(true);
                     }
                     break;
                 case "C":
-                    for (let i = 0; i < this.planClist.length; i++) {
-                        this.planClist[i][0].show();
+                    for (let i = 0; i < this.planCList.length; i++) {
+                        this.planClist[i][0].show(true);
                     }
                     break;
                 case "D":
-                    for (let i = 0; i < this.planDlist.length; i++) {
-                        this.planDlist[i][0].show();
+                    console.log(this.planDList);
+                    for (let i = 0; i < this.planDList.length; i++) {
+                        this.planDlist[i][0].show(true);
                     }
                     break;
             }
@@ -518,7 +518,7 @@ evaluating as null -->
                     var index = this.planAList.findIndex((element) => element[0] == line);
                     // If it does not exist
                     if (index == -1) {
-                        line.show();
+                        line.show(false);
                         this.planAList.push([line, 1]);
                     }
                     // If it does, increment count
@@ -531,7 +531,7 @@ evaluating as null -->
                     var index = this.planBList.findIndex((element) => element[0] == line);
                     // If it does not exist
                     if (index == -1) {
-                        line.show();
+                        line.show(false);
                         this.planBList.push([line, 1]);
                     }
                     // If it does, increment count
@@ -544,7 +544,7 @@ evaluating as null -->
                     var index = this.planCList.findIndex((element) => element[0] == line);
                     // If it does not exist
                     if (index == -1) {
-                        line.show();
+                        line.show(false);
                         this.planCList.push([line, 1]);
                     }
                     // If it does, increment count
@@ -557,7 +557,7 @@ evaluating as null -->
                     var index = this.planDList.findIndex((element) => element[0] == line);
                      // If it does not exist
                     if (index == -1) {
-                        line.show();
+                        line.show(false);
                         this.planDList.push([line, 1]);
                     }
                     // If it does, increment count
@@ -585,7 +585,7 @@ evaluating as null -->
                         this.planAList[index][1]--;
                         // if active count reaches 0
                         if (this.planAList[index][1] <= 0) {
-                            line.hide();
+                            line.hide(false);
                             this.planAList.splice(index, 1);
                         }
                     }
@@ -598,7 +598,7 @@ evaluating as null -->
                         this.planBList[index][1]--;
                         // if active count reaches 0
                         if (this.planBList[index][1] <= 0) {
-                            line.hide();
+                            line.hide(false);
                             this.planBList.splice(index, 1);
                         }
                     }
@@ -611,7 +611,7 @@ evaluating as null -->
                         this.planCList[index][1]--;
                         // if active count reaches 0
                         if (this.planCList[index][1] <= 0) {
-                            line.hide();
+                            line.hide(false);
                             this.planCList.splice(index, 1);
                         }
                     }
@@ -624,7 +624,7 @@ evaluating as null -->
                         this.planDList[index][1]--;
                         // if active count reaches 0
                         if (this.planDList[index][1] <= 0) {
-                            line.hide();
+                            line.hide(false);
                             this.planDList.splice(index, 1);
                         }
                     }
@@ -637,6 +637,7 @@ evaluating as null -->
         var ece201flag = false;
         var ece401flag = false;
         var ece461flag = false;
+        var ece102flag = false;
 
         // for every course, intialize the variable controlling dialog box to ""
         $scope.ece101courseinfo = "";
@@ -650,8 +651,8 @@ evaluating as null -->
                 // set the course info var to the course info
                 //$scope.ece101courseinfo = "ECE 101 is an intro course that teaches you several things about ECE. It serves as a basic overview of general concepts.";
                 that.addLine(getLine1());
-                that.addLine(getLine2());
-                that.addLine(getLine4());
+                // that.addLine(getLine2());
+                // that.addLine(getLine4());
                 ece101flag = true;
             }
             else {
@@ -660,8 +661,8 @@ evaluating as null -->
                 // set the course info variable to ""
                 $scope.ece101courseinfo = "";
                 that.removeLine(getLine1());
-                that.removeLine(getLine2());
-                that.removeLine(getLine4());
+                // that.removeLine(getLine2());
+                // that.removeLine(getLine4());
                 ece101flag = false;
             }
         };
@@ -712,6 +713,17 @@ evaluating as null -->
                 that.removeLine(getLine4());
                 that.removeLine(getLine5());
                 ece461flag = false;
+            }
+        };
+
+        $scope.ece102Listener = function() {
+            if (!ece102flag){
+                that.addLine(getLine6());
+                ece102flag = true;
+            }
+            else {
+                that.removeLine(getLine6());
+                ece102flag = false;
             }
         };
 
