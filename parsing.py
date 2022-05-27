@@ -778,16 +778,14 @@ def checkReqs(course_seq):
                             continue
                         i += 1
 
-                    if len(coreqlist) > 1:
-                        # If multiple options for a course and they can all be taken
-                        # in this plan, keep them all
-                        coreq = coreqlist.join(" or ")
-
-                    if coreq not in term_names:
-                        # The coreq course in not taken in the same term,
-                        # it is really a prereq
-                        course.prereqs.append(coreq)
-                        del course.coreqs[course.coreqs.index(coreq)]
+                    assert (coreqlist == []) or (len(coreqlist) == 1), "Two possible corequisites for " + \
+                                                                       course.name + " , only keep one."
+                    if coreqlist != []:
+                        if coreqlist[0] not in term_names:
+                            # The coreq course in not taken in the same term,
+                            # it is really a prereq
+                            course.prereqs.append(coreqlist[0])
+                            del course.coreqs[course.coreqs.index(coreq)]
 
                 # Analagous situation but for prereqs (not coreqs)
                 for prereq in course.prereqs:
@@ -804,14 +802,12 @@ def checkReqs(course_seq):
                             continue
                         i += 1
 
-                    if len(prereqlist) > 1:
-                        # If multiple options for a course and they can all be taken
-                        # in this plan, keep them all
-                        prereq = prereqlist.join(" or ")
-
-                    if prereq in term_names:
-                        # The prereq course in not taken in the same term,
-                        # it is really a coreq
-                        course.coreqs.append(prereq)
-                        del course.prereqs[course.prereqs.index(prereq)]
+                    assert (prereqlist == []) or (len(prereqlist) == 1), "Two possible prerequisites for " + \
+                                                                       course.name + " , only keep one."
+                    if prereqlist != []:
+                        if prereqlist[0] in term_names:
+                            # The prereq course in not taken in the same term,
+                            # it is really a coreq
+                            course.coreqs.append(prereqlist[0])
+                            del course.prereqs[course.prereqs.index(prereq)]
     return course_seq
