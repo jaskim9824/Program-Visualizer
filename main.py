@@ -1,154 +1,82 @@
+# Authors: Jason Kim, Moaz Abdelmonem, Zachary Schmidt
+# Oversight: Dr. David Nobes
+# University of Alberta, Summer 2022, Curriculum Development Co-op Term
+
+# This file is the main script for the generation of the program 
+# visualizer. When run, it will use functions defined in the parsing module
+# to parse Excel files to generate progamatically an interactive program diagram in
+# the output directory
+
+# Dependencies: bs4, parsing
+
 from bs4 import BeautifulSoup
 from parsing import parseInPy
+import javascriptinit
+import cleaner
 
+# Class that defines an object used to manage line generation in the project
 class LineManager:
     def __init__(self) -> None:
         # Dict that maps the lines to the courses that 'own' them
+        # Key: Cleaned (removed of all alpha numeric characters) version of course name
+        # Value: List of int, represent the number id of lines "owned" by the course
         self.courseLineDict = {}
 
-        # Count of lines generated
+        # Count of lines generated in the webpage
         self.lineCount = 0
     
-    def addLinetoCourse(self, course, line):
+    # Adds a line to a course's "owned" list
+    # Parameters:
+    #   course: Cleaned name of course (str)
+    #   line: Id number of line (int)
+    def addLinetoCourse(self, course ="", line = int):
+        if course not in self.courseLineDict:
+            self.intializeCourse(course)
         self.courseLineDict[course].append(line)
     
-    def intializeCourse(self, course):
+    # Intializes a course's "owned" list in the course line dict. Does nothing
+    # if course already has an intialized list
+    # Parameters:
+    #   course: Cleaned name of course (str)
+    def intializeCourse(self, course = ""):
         if course not in self.courseLineDict:
             self.courseLineDict[course] = []
         return
 
-    def getCourseLineDict(self):
+    # Returns the dict mapping course to their "owned lines"
+    def getCourseLineDict(self) -> dict:
         return self.courseLineDict
 
-    def getLineCount(self):
+    # Returns the current line count
+    def getLineCount(self) -> int:
         return self.lineCount
 
-    def setLineCount(self, count):
+    # Sets the current line count
+    # Parameters:
+    #   count: New line count (int)
+    def setLineCount(self, count = int):
         self.lineCount = count
 
-#Strips all non alphanumeric characters from a string
-#Source:
-#https://www.delftstack.com/howto/python/remove-non-alphanumeric-characters-python/
-# #use-the-isalnum-method-to-remove-all-non-alphanumeric-characters-in-python-string
-def cleanString(string):
-    return ''.join(ch for ch in string if ch.isalnum())
 
-def cleanCourseList(courseList):
-    cleanedList = []
-    for course in courseList:
-        cleanedList.append(cleanString(course.name))
-    return cleanedList
 
 # Function that places the radio inputs into the form
 # Parameters:
 #   formTag - form HTML tag where inputs will be placed
 #   sequenceDict - dict of the different plan seq
 #   soup - soup object
-# TO DO: add some error handling to this function
 def placeRadioInputs(formTag, sequenceDict, soup):
     for plan in sequenceDict:
         radioInput = soup.new_tag("input", attrs={"type":"radio", 
                                                   "name":"planselector", 
                                                   "ng-model":"selectedPlan",
-                                                  "value": cleanString(plan)})
-        labelTag = soup.new_tag("label", attrs={"for":cleanString(plan)})
+                                                  "value": cleaner.cleanString(plan)})
+        labelTag = soup.new_tag("label", attrs={"for":cleaner.cleanString(plan)})
         breakTag = soup.new_tag("br")
         labelTag.append(plan)
         formTag.append(radioInput)
         formTag.append(labelTag)
         formTag.append(breakTag)
 
-def intializeControllerJavaScript(firstPlan, controller):
-    controller.write("var app = angular.module(\"main\", []);\n")
-    controller.write("app.controller(\"main\", function($scope) { \n")
-    controller.write("$scope.selectedPlan = \"" + firstPlan + "\";\n")
-    controller.write("var that = this;\n")
-    controller.write("this.previousPlan = $scope.selectedPlan;\n")
-
-    controller.write("""this.render = function(plan) {
-            this.disable(this.previousPlan);
-            this.enable(plan);
-            this.previousPlan = plan;
-};\n""")
-
-    controller.write("""var radios = document.querySelectorAll("input[type=radio][name=planselector");
-Array.prototype.forEach.call(radios, function (radio) {
-    radio.addEventListener("change", function () {
-        that.render($scope.selectedPlan);
-    });
-});\n""")
-
-def generatePlanBasedControllerJavascript(sequenceDict, controller):
-    for plan in sequenceDict:
-        controller.write("this." + cleanString(plan) + "List = [];\n")
-
-    formattedFunctionStatement1 = """this.{functionName} = function(plan) {{
-    switch (plan) {{ \n"""
-    
-    formattedSwitchStatement1 = """  case "{planName}": 
-    for (let i = 0; i < this.{planName}List.length; i++) {{
-        this.{planName}List[i][0].{action}(true);
-    }}
-    break; \n"""
-
-    switchEndString = """    default:
-    console.log("shouldn't be here");
-    }
-};\n"""
-
-    controller.write(formattedFunctionStatement1.format(functionName="disable"))
-
-    for plan in sequenceDict:
-        controller.write(formattedSwitchStatement1.format(planName=cleanString(plan), action="hide"))
-    
-    controller.write(switchEndString)
-
-    controller.write(formattedFunctionStatement1.format(functionName="enable"))
-
-    for plan in sequenceDict:
-        controller.write(formattedSwitchStatement1.format(planName=cleanString(plan), action="show"))
-
-    controller.write(switchEndString)
-
-    formattedFunctionStatement2 = """this.{functionName} = function(line) {{
-switch($scope.selectedPlan) {{ \n"""
-
-    formattedAddLineSwitchStatement = """ case "{planName}":
-    var index = this.{planName}List.findIndex((element) => element[0] == line);
-    if (index == -1) {{
-        line.show(false);
-        this.{planName}List.push([line, 1])
-    }}
-    else {{
-        this.{planName}List[index][1]++;
-    }}
-    break;\n"""
-
-
-    controller.write(formattedFunctionStatement2.format(functionName="addLine"))
-
-    for plan in sequenceDict:
-        controller.write(formattedAddLineSwitchStatement.format(planName=cleanString(plan)))
-    
-    controller.write(switchEndString)
-
-    formmattedDeleteLineSwitchStatement = """ case "{planName}":
-    var index = this.{planName}List.findIndex((element) => element[0] == line);
-    if (index != -1) {{
-        this.{planName}List[index][1]--
-        if (this.{planName}List[index][1] <= 0) {{
-            line.hide(false);
-            this.{planName}List.splice(index, 1);
-        }}
-    }}
-    break;"""
-
-    controller.write(formattedFunctionStatement2.format(functionName="removeLine"))
-
-    for plan in sequenceDict:
-        controller.write(formmattedDeleteLineSwitchStatement.format(planName=cleanString(plan)))
-
-    controller.write(switchEndString)
 
 def closeControllerJavaScript(controller):
     controller.write("});")
@@ -163,8 +91,8 @@ def closeControllerJavaScript(controller):
 def placePlanDivs(displayTag, sequenceDict, soup, courseDict, indexJS, controller, lineManager):
 
     for plan in sequenceDict:
-        switchInput = soup.new_tag("div", attrs={"id":cleanString(plan),
-                                                 "ng-switch-when":cleanString(plan)})
+        switchInput = soup.new_tag("div", attrs={"id":cleaner.cleanString(plan),
+                                                 "ng-switch-when":cleaner.cleanString(plan)})
         widthOfPlan = 210 * len(sequenceDict[plan].keys()) + 60
         switchInput['width'] = str(widthOfPlan) +"px"
         placeTermsDivs(switchInput, sequenceDict[plan], soup, courseDict, indexJS, controller, plan, lineManager)
@@ -234,15 +162,15 @@ def placeLines(courseList, indexJS, lineManager, plan):
             if len(prereq.split()) > 1:
                 newPreReqString = prereq.replace(" or ", " ")
                 for option in newPreReqString.split():
-                    if cleanString(option) in cleanCourseList(courseList):
-                        addPrereqLine(cleanString(option)+cleanString(plan), 
-                                      cleanString(course.name)+cleanString(plan), 
+                    if cleaner.cleanString(option) in cleaner.cleanCourseList(courseList):
+                        addPrereqLine(cleaner.cleanString(option)+cleaner.cleanString(plan), 
+                                      cleaner.cleanString(course.name)+cleaner.cleanString(plan), 
                                       lineManager, 
                                       indexJS)
             else:
-                if cleanString(prereq) in cleanCourseList(courseList):
-                    addPrereqLine(cleanString(prereq)+cleanString(plan), 
-                              cleanString(course.name)+cleanString(plan), 
+                if cleaner.cleanString(prereq) in cleaner.cleanCourseList(courseList):
+                    addPrereqLine(cleaner.cleanString(prereq)+cleaner.cleanString(plan), 
+                              cleaner.cleanString(course.name)+cleaner.cleanString(plan), 
                               lineManager, 
                               indexJS)
         for coreq in course.coreqs:
@@ -250,15 +178,15 @@ def placeLines(courseList, indexJS, lineManager, plan):
             if len(coreq.split()) > 1:
                 newCoReqString = coreq.replace(" or ", " ")
                 for option in newCoReqString.split():
-                    if cleanString(option) in cleanCourseList(courseList):
-                        addCoreqLine(cleanString(option)+cleanString(plan), 
-                                     cleanString(course.name)+cleanString(plan), 
+                    if cleaner.cleanString(option) in cleaner.cleanCourseList(courseList):
+                        addCoreqLine(cleaner.cleanString(option)+cleaner.cleanString(plan), 
+                                     cleaner.cleanString(course.name)+cleaner.cleanString(plan), 
                                      lineManager, 
                                      indexJS)
             else:
-                if cleanString(coreq) in cleanCourseList(courseList):
-                    addCoreqLine(cleanString(coreq)+cleanString(plan), 
-                             cleanString(course.name)+cleanString(plan), 
+                if cleaner.cleanString(coreq) in cleaner.cleanCourseList(courseList):
+                    addCoreqLine(cleaner.cleanString(coreq)+cleaner.cleanString(plan), 
+                             cleaner.cleanString(course.name)+cleaner.cleanString(plan), 
                              lineManager, 
                              indexJS)
 
@@ -267,16 +195,16 @@ def placeClickListeners(courseList, controller, lineManager, plan):
     formattedIf = " if (!{courseName}flag) {{\n"
     formattedStatement = "      that.{action}Line(getLine{num}());\n"
     for course in courseList:
-        if cleanString(course.name)+cleanString(plan) in lineManager.getCourseLineDict():
-            controller.write(formattedListener.format(courseName = cleanString(course.name)+cleanString(plan)))
-            controller.write(formattedIf.format(courseName = cleanString(course.name)+cleanString(plan)))
-            for line in lineManager.getCourseLineDict()[cleanString(course.name)+cleanString(plan)]:
+        if cleaner.cleanString(course.name)+cleaner.cleanString(plan) in lineManager.getCourseLineDict():
+            controller.write(formattedListener.format(courseName = cleaner.cleanString(course.name)+cleaner.cleanString(plan)))
+            controller.write(formattedIf.format(courseName = cleaner.cleanString(course.name)+cleaner.cleanString(plan)))
+            for line in lineManager.getCourseLineDict()[cleaner.cleanString(course.name)+cleaner.cleanString(plan)]:
                 controller.write(formattedStatement.format(action="add", num=line))
-            controller.write("      " +cleanString(course.name)+cleanString(plan)+"flag=true\n")
+            controller.write("      " +cleaner.cleanString(course.name)+cleaner.cleanString(plan)+"flag=true\n")
             controller.write("  }\n else {\n")
-            for line in lineManager.getCourseLineDict()[cleanString(course.name)+cleanString(plan)]:
+            for line in lineManager.getCourseLineDict()[cleaner.cleanString(course.name)+cleaner.cleanString(plan)]:
                 controller.write(formattedStatement.format(action="remove", num=line))
-            controller.write("      " +cleanString(course.name)+cleanString(plan)+"flag=false\n")
+            controller.write("      " +cleaner.cleanString(course.name)+cleaner.cleanString(plan)+"flag=false\n")
             controller.write("  }\n};\n")
 
 
@@ -287,16 +215,16 @@ def placeCourses(termTag, termList, soup, controller, plan):
         #courseDisc.append("\{\{"+course.name.strip().replace(" ","")+"courseinfo\}\}")
         if course.name == "Complementary Elective":
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip compelective", 
-                                               "id": cleanString(course.name)+cleanString(plan), 
-                                               "ng-click":cleanString(course.name)+cleanString(plan)+"Listener()" })
+                                               "id": cleaner.cleanString(course.name)+cleaner.cleanString(plan), 
+                                               "ng-click":cleaner.cleanString(course.name)+cleaner.cleanString(plan)+"Listener()" })
         elif course.name == "Program/Technical Elective":
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip progelective", 
-                                               "id": cleanString(course.name)+cleanString(plan), 
-                                               "ng-click":cleanString(course.name)+cleanString(plan)+"Listener()" })
+                                               "id": cleaner.cleanString(course.name)+cleaner.cleanString(plan), 
+                                               "ng-click":cleaner.cleanString(course.name)+cleaner.cleanString(plan)+"Listener()" })
         else:
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip", 
-                                                "id": cleanString(course.name)+cleanString(plan), 
-                                                "ng-click":cleanString(course.name)+cleanString(plan)+"Listener()" })
+                                                "id": cleaner.cleanString(course.name)+cleaner.cleanString(plan), 
+                                                "ng-click":cleaner.cleanString(course.name)+cleaner.cleanString(plan)+"Listener()" })
         courseDisc = soup.new_tag("p", attrs={"class":"tooltiptext"})
         courseDisc.append(course.course_description)
         courseHeader = soup.new_tag("h3", attrs={"class":"embed"})
@@ -306,8 +234,8 @@ def placeCourses(termTag, termList, soup, controller, plan):
         courseContDiv.append(courseDiv)
         termTag.append(courseContDiv)
         controller.write("  var " + 
-                         cleanString(course.name) + 
-                         cleanString(plan) +
+                         cleaner.cleanString(course.name) + 
+                         cleaner.cleanString(plan) +
                          "flag = false;\n")
 
 #Debug function for cleanly printing contents of sequences
@@ -340,9 +268,7 @@ def main():
             #debug(sequenceDict)
 
             # generating intital JS based on the number and names of plans
-            firstPlan = cleanString(list(sequenceDict.keys())[0])
-            intializeControllerJavaScript(firstPlan, controller)
-            generatePlanBasedControllerJavascript(sequenceDict, controller)
+            javascriptinit.intializeControllerJavaScript(controller, sequenceDict)
       
             #locating main div, this is where all the html will be written
             mainTag = soup.body.find("div", id="main")
