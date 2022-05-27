@@ -161,9 +161,12 @@ def closeControllerJavaScript(controller):
 #   soup - soup object
 #   courseDict - dict of course info (this is what is parsed from Excel!)
 def placePlanDivs(displayTag, sequenceDict, soup, courseDict, indexJS, controller, lineManager):
+
     for plan in sequenceDict:
         switchInput = soup.new_tag("div", attrs={"id":cleanString(plan),
                                                  "ng-switch-when":cleanString(plan)})
+        widthOfPlan = 210 * len(sequenceDict[plan].keys()) + 60
+        switchInput['width'] = str(widthOfPlan) +"px"
         placeTermsDivs(switchInput, sequenceDict[plan], soup, courseDict, indexJS, controller, plan, lineManager)
         displayTag.append(switchInput)
 

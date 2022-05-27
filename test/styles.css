@@ -11,7 +11,7 @@ header {
     padding: 30px 10px;
     text-align: center;
     background-color: #275d38;
-    width: 1850px;
+    width: 100%;
     
 }
         
@@ -83,6 +83,10 @@ header {
 .tooltip {
     position: relative;
     display: inline-block;            
+}
+
+.display {
+    width:fit-content
 }
         
 .tooltip .tooltiptext {
