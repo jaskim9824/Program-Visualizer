@@ -320,8 +320,8 @@ def main ():
             soup = BeautifulSoup(input, 'html.parser')
 
             # opening the JS files
-            controller = open("controller.js", "w")
-            indexJS = open("index.js", "w")
+            controller = open("./output/js/controller.js", "w")
+            indexJS = open("./output/js/index.js", "w")
 
             lineManager = LineManager()
 
@@ -356,7 +356,7 @@ def main ():
         #print("Exception raised")
     #writing output to an output html
     #try:
-        with open("template-output.html", "w") as output:
+        with open("./output/index.html", "w") as output:
             output.write(str(soup))
     #TO DO: improve expection handling here
     #except:

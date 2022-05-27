@@ -19,7 +19,6 @@ class Line {
         }
     }
     hide(switching) {
-        console.log(this.line);
         if (switching) {
             this.line.remove();
         }
