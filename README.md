@@ -28,4 +28,5 @@ This project has the following dependencies:
   - AngularJS for the front end logic
   - BeautifulSoup for generation of the final HTML
   - xlrd for parsing Excel files
+  - copy (deepcopy function) in parsing.py to make a deepcopy of course objects for each plan
 
