@@ -16,6 +16,7 @@
 
 # import json
 import xlrd
+from copy import deepcopy
 
 class Course:
     # Stores all data about each course
@@ -536,7 +537,8 @@ def pullSeq(filename, course_obj_dict):
                     sheet.cell_value(row, col) + " on sheet " + sheet.name + " on row " + row + " and column " + col +
                     " is not present in the Excel file with the course information.")
 
-                term_list.append(course_obj_dict[name])  # store each course in a list
+                # deepcopy since sequencing leads to prereqs and coreqs not being the same between different plans
+                term_list.append(deepcopy(course_obj_dict[name]))  # store each course in a list
             plan_dict[term_name] = term_list  # store each list in a dict (key is term name)
         course_seq[sheet.name] = plan_dict  # store each term dict in a plan dict (key is plan name (traditional, etc.))
 
@@ -767,6 +769,7 @@ def checkReqs(course_seq):
                     # in this plan. eg: Coreqs: MATH 100 or MATH 114, if only MATH 100 is 
                     # available in this plan, discard MATH 114 and keep MATH 100.
                     coreqlist = coreq.split(" or ")
+
                     i = 0
                     while i < len(coreqlist):
                         if coreqlist[i] not in all_names:
