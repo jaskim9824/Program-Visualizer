@@ -117,11 +117,11 @@ header {
     opacity: 1;
 }
 
-div[id="ComplementaryElective"] {
+.compelective {
     height: 80px;
 }
 
-div[id="ProgramTechnicalElective"] {
+.progelective {
     font-size:90%;
     height:80px;
 }

@@ -277,9 +277,18 @@ def placeCourses(termTag, termList, soup, indexJS, controller, plan):
 
         courseContDiv = soup.new_tag("div", attrs={"class":"coursecontainer"})
         #courseDisc.append("\{\{"+course.name.strip().replace(" ","")+"courseinfo\}\}")
-        courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip", 
+        if course.name == "Complementary Elective":
+            courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip compelective", 
                                                "id": cleanString(course.name)+cleanString(plan), 
                                                "ng-click":cleanString(course.name)+cleanString(plan)+"Listener()" })
+        elif course.name == "Program/Technical Elective":
+            courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip progelective", 
+                                               "id": cleanString(course.name)+cleanString(plan), 
+                                               "ng-click":cleanString(course.name)+cleanString(plan)+"Listener()" })
+        else:
+            courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip", 
+                                                "id": cleanString(course.name)+cleanString(plan), 
+                                                "ng-click":cleanString(course.name)+cleanString(plan)+"Listener()" })
         courseDisc = soup.new_tag("p", attrs={"class":"tooltiptext"})
         courseDisc.append(course.course_description)
         courseHeader = soup.new_tag("h3", attrs={"class":"embed"})
