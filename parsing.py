@@ -579,3 +579,70 @@ def parse(filename):
     course_seq = pullSeq("Sequencing.xls", course_obj_dict)
 
     return course_seq, course_obj_dict
+
+
+def parseInPy(filename):
+    try:
+        book = xlrd.open_workbook(filename)
+        sheet = book.sheet_by_index(0)
+        course_obj_dict = {}
+        for row in range(1, sheet.nrows):
+            faculty = sheet.cell_value(row, 0)
+            department = sheet.cell_value(row, 1)
+            course_id = sheet.cell_value(row, 2)
+            subject = sheet.cell_value(row , 3)
+            catalog = sheet.cell_value(row, 4)
+            long_title = sheet.cell_value(row, 5)
+            eff_date = sheet.cell_value(row, 6)
+            status = sheet.cell_value(row, 7)
+            calendar_print = sheet.cell_value(row, 8)
+            prog_units = sheet.cell_value(row, 9)
+            engg_units = sheet.cell_value(row, 10)
+            calc_fee_index = sheet.cell_value(row, 11)
+            actual_fee_index = sheet.cell_value(row, 12)
+            duration = sheet.cell_value(row, 13)
+            alpha_hours = sheet.cell_value(row, 14)
+            course_description = sheet.cell_value(row, 15)
+
+            course_name = subject + " " + catalog
+            course_name = course_name.strip()
+            course_name = course_name.replace("  ", " ")
+
+            course_obj_dict[course_name] = (Course(course_name, faculty,
+            department, course_id, subject, catalog, long_title,
+            eff_date, status, calendar_print, prog_units, engg_units,
+            calc_fee_index, actual_fee_index, duration, alpha_hours,
+            course_description))
+
+    except FileNotFoundError:
+        print("Excel file not found, ensure it is present and the name is correct.")
+
+    for course in course_obj_dict:
+        # Pulling pre-reqs, co-reqs, and requisites for each course
+        prereqslist = pullPreReqs(course_obj_dict[course].course_description)
+        for i in range(0, len(prereqslist)):
+            # Stripping whitespace
+            prereqslist[i] = prereqslist[i].replace(" ", "")
+            prereqslist[i] = prereqslist[i].replace("or", " or ")
+        course_obj_dict[course].prereqs = prereqslist
+
+        coreqslist = pullCoReqs(course_obj_dict[course].course_description)
+        for i in range(0, len(coreqslist)):
+            #Stripping whitespace
+            coreqslist[i] = coreqslist[i].replace(" ", "")
+            coreqslist[i] = coreqslist[i].replace("or", " or ")
+        course_obj_dict[course].coreqs = coreqslist
+
+        reqslist = pullReqs(course_obj_dict, course_obj_dict[course].course_description)
+        for i in range(0, len(reqslist)):
+            # Stripping whitespace
+            reqslist[i] = reqslist[i].replace(" ", "")
+            reqslist[i] = reqslist[i].replace("or", " or ")
+        course_obj_dict[course].reqs = reqslist
+
+    # course_seq stores the courses in their proper sequencing according to
+    # Sequencing.xls
+    course_seq = {}
+    course_seq = pullSeq("Sequencing.xls", course_obj_dict)
+
+    return course_seq, course_obj_dict

@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from parsing import parse
+from parsing import parseInPy
 
 class LineManager:
     def __init__(self) -> None:
@@ -336,7 +336,7 @@ def main ():
             lineManager = LineManager()
 
             # parsing the excel files with course info and sequencing
-            sequenceDict, courseDict = parse("parsed.json")
+            sequenceDict, courseDict = parseInPy("Courses.xls")
             #debug(sequenceDict)
 
             # generating intital JS based on the number and names of plans
