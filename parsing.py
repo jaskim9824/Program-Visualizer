@@ -377,6 +377,10 @@ def pullPreReqs(description):
     if multstart == -1:
         multstart = description.find("prerequisites: ")
 
+    missingcolstart = description.find("Prequisite ")
+    if missingcolstart == -1:
+        missingcolstart = description.find("prequisite ")
+
     if singlestart != -1:
         # Prerequisite(s) given from after the colon up to the very next period
         singlestart += 14
@@ -387,6 +391,11 @@ def pullPreReqs(description):
         multstart += 15
         multend = description.find(".", multstart)
         prestr = description[multstart:multend]
+    elif missingcolstart != -1:
+        # Prequisite(s) given from after space up to the very next period
+        missingcolstart += 13
+        missingcolend = description.find(".", missingcolstart)
+        prestr = description[missingcolstart:missingcolend]
     else:
         return []
 
@@ -418,6 +427,10 @@ def pullCoReqs(description):
     if multstart == -1:
         multstart = description.find("corequisites: ")
 
+    missingcolstart = description.find("Corequisite ")
+    if missingcolstart == -1:
+        missingcolstart = description.find("corequisite ")
+
     if singlestart != -1:
         # Corequisite(s) given from after the colon up to the very next period
         singlestart += 13
@@ -428,6 +441,11 @@ def pullCoReqs(description):
         multstart += 14
         multend = description.find(".", multstart)
         prestr = description[multstart:multend]
+    elif missingcolstart != -1:
+        # Corequisite(s) given from after space up to the very next period
+        missingcolstart += 13
+        missingcolend = description.find(".", missingcolstart)
+        prestr = description[missingcolstart:missingcolend]
     else:
         return []
 
