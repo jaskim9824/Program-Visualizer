@@ -443,7 +443,7 @@ def pullCoReqs(description):
         prestr = description[multstart:multend]
     elif missingcolstart != -1:
         # Corequisite(s) given from after space up to the very next period
-        missingcolstart += 13
+        missingcolstart += 12
         missingcolend = description.find(".", missingcolstart)
         prestr = description[missingcolstart:missingcolend]
     else:
