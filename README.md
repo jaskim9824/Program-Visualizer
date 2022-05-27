@@ -15,7 +15,7 @@ The webpage allows users to switch between the different program sequences as di
 
 
 The project, in its current state, consists of a Python script main.py. The Python script reads
-Excel files containing course and program information along with a template HTML file ('''template.html''') 
+Excel files containing course and program information along with a template HTML file (`template.html`) 
 and produces an resultant HTML (`index.hmtl`) in the `output` directory alongside the needed
 Javascript files (`index.js` and `controller.js`) in `output/js.` The output directory contains the
 files needed to be uploaded to the web server alongside with the webpage. 
