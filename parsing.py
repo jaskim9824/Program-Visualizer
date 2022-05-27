@@ -705,4 +705,43 @@ def parseInPy(filename):
     course_seq = {}
     course_seq = pullSeq("Sequencing.xls", course_obj_dict)
 
+    course_seq = checkReqs(course_seq)
+
     return course_seq, course_obj_dict
+
+
+def checkReqs(course_seq):
+    for plan in course_seq:
+        all_names = []
+        for term in course_seq[plan]:
+            for course in course_seq[plan][term]:
+                course_name = course.name
+                course_name = course_name.replace(" ", "")
+                course_name = course_name.replace("or", " or ")
+                all_names.append(course_name)
+
+        for term in course_seq[plan]:
+            term_names = []
+            for course in course_seq[plan][term]:
+                course_name = course.name
+                course_name = course_name.replace(" ", "")
+                course_name = course_name.replace("or", " or ")
+                term_names.append(course_name)
+
+            for course in course_seq[plan][term]:
+                for coreq in course.coreqs:
+                    coreqlist = coreq.split(" or ")
+                    i = 0
+                    while i < len(coreqlist):
+                        if coreqlist[i] not in all_names:
+                            del coreqlist[i]
+                            continue
+                        i += 1
+                    if len(coreqlist) > 1:
+                        coreq = coreqlist.join(" or ")
+
+                    if coreq not in term_names:
+                        course.prereqs.append(coreq)
+                        del course.coreqs[course.coreqs.index(coreq)]
+
+    return course_seq
