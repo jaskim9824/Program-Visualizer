@@ -36,7 +36,7 @@ def cleanString(string):
 def cleanCourseList(courseList):
     cleanedList = []
     for course in courseList:
-        cleanedList.append(course.name)
+        cleanedList.append(cleanString(course.name))
     return cleanedList
 
 # Function that places the radio inputs into the form
@@ -237,7 +237,8 @@ def placeLines(courseList, indexJS, lineManager, plan):
                                       lineManager, 
                                       indexJS)
             else:
-                addPrereqLine(cleanString(prereq)+cleanString(plan), 
+                if cleanString(prereq) in cleanCourseList(courseList):
+                    addPrereqLine(cleanString(prereq)+cleanString(plan), 
                               cleanString(course.name)+cleanString(plan), 
                               lineManager, 
                               indexJS)
@@ -252,7 +253,8 @@ def placeLines(courseList, indexJS, lineManager, plan):
                                      lineManager, 
                                      indexJS)
             else:
-                addCoreqLine(cleanString(coreq)+cleanString(plan), 
+                if cleanString(coreq) in cleanCourseList(courseList):
+                    addCoreqLine(cleanString(coreq)+cleanString(plan), 
                              cleanString(course.name)+cleanString(plan), 
                              lineManager, 
                              indexJS)
