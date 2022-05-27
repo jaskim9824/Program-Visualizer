@@ -14,10 +14,11 @@ The webpage allows users to switch between the different program sequences as di
 ![switchingplans](https://user-images.githubusercontent.com/60327441/170582880-7feb5c07-18c9-4624-836d-a3875d182f69.gif)
 
 
-The project, in its current state, consists of a MATLAB script parsing.m and a Python script main.py. The MATLAB script 
-takes in Excel files which contain course and sequencing information, and outputs parsing.json. The script main.py then
-reads this .json file along with a template HTML file (template.html) and produces an resultant HTML (template-output.hmtl)
-and JS files (index.js and controller.js). 
+The project, in its current state, consists of a Python script main.py. The Python script reads
+Excel files containing course and program information along with a template HTML file (`template.html`) 
+and produces an resultant HTML (`index.html`) in the `output` directory alongside the needed
+Javascript files (`index.js` and `controller.js`) in `output/js.` The output directory contains the
+files needed to be uploaded to the web server alongside with the webpage. 
 
 This project is initially designed for only MEC E programs at the University of Alberta, 
 but can be expanded and generalized for any program sequence.

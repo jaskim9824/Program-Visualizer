@@ -33,6 +33,12 @@ class LineManager:
 def cleanString(string):
     return ''.join(ch for ch in string if ch.isalnum())
 
+def cleanCourseList(courseList):
+    cleanedList = []
+    for course in courseList:
+        cleanedList.append(cleanString(course.name))
+    return cleanedList
+
 # Function that places the radio inputs into the form
 # Parameters:
 #   formTag - form HTML tag where inputs will be placed
@@ -225,13 +231,14 @@ def placeLines(courseList, indexJS, lineManager, plan):
             if len(prereq.split()) > 1:
                 newPreReqString = prereq.replace(" or ", " ")
                 for option in newPreReqString.split():
-                    if cleanString(option) in courseList:
+                    if cleanString(option) in cleanCourseList(courseList):
                         addPrereqLine(cleanString(option)+cleanString(plan), 
                                       cleanString(course.name)+cleanString(plan), 
                                       lineManager, 
                                       indexJS)
             else:
-                addPrereqLine(cleanString(prereq)+cleanString(plan), 
+                if cleanString(prereq) in cleanCourseList(courseList):
+                    addPrereqLine(cleanString(prereq)+cleanString(plan), 
                               cleanString(course.name)+cleanString(plan), 
                               lineManager, 
                               indexJS)
@@ -240,13 +247,14 @@ def placeLines(courseList, indexJS, lineManager, plan):
             if len(coreq.split()) > 1:
                 newCoReqString = coreq.replace(" or ", " ")
                 for option in newCoReqString.split():
-                    if cleanString(option) in courseList:
+                    if cleanString(option) in cleanCourseList(courseList):
                         addCoreqLine(cleanString(option)+cleanString(plan), 
                                      cleanString(course.name)+cleanString(plan), 
                                      lineManager, 
                                      indexJS)
             else:
-                addCoreqLine(cleanString(coreq)+cleanString(plan), 
+                if cleanString(coreq) in cleanCourseList(courseList):
+                    addCoreqLine(cleanString(coreq)+cleanString(plan), 
                              cleanString(course.name)+cleanString(plan), 
                              lineManager, 
                              indexJS)
@@ -308,20 +316,19 @@ def debug(sequenceDict):
             for course in sequenceDict[plan][term]:
                 print(course.name)
             print("\n")
-        print("\n")     
-
-
-def main ():
+        print("\n")
+    
+def main():
     #opening the template html file and constructing html
     #note: here we calling parsing to extract the course data!
-    #try:
+    #try:  
         with open("template.html") as input:
             # deriving parsed html
             soup = BeautifulSoup(input, 'html.parser')
 
             # opening the JS files
-            controller = open("controller.js", "w")
-            indexJS = open("index.js", "w")
+            controller = open("./output/js/controller.js", "w")
+            indexJS = open("./output/js/index.js", "w")
 
             lineManager = LineManager()
 
@@ -356,7 +363,7 @@ def main ():
         #print("Exception raised")
     #writing output to an output html
     #try:
-        with open("template-output.html", "w") as output:
+        with open("./output/index.html", "w") as output:
             output.write(str(soup))
     #TO DO: improve expection handling here
     #except:
