@@ -33,6 +33,12 @@ class LineManager:
 def cleanString(string):
     return ''.join(ch for ch in string if ch.isalnum())
 
+def cleanCourseList(courseList):
+    cleanedList = []
+    for course in courseList:
+        cleanedList.append(course.name)
+    return cleanedList
+
 # Function that places the radio inputs into the form
 # Parameters:
 #   formTag - form HTML tag where inputs will be placed
@@ -225,7 +231,7 @@ def placeLines(courseList, indexJS, lineManager, plan):
             if len(prereq.split()) > 1:
                 newPreReqString = prereq.replace(" or ", " ")
                 for option in newPreReqString.split():
-                    if cleanString(option) in courseList:
+                    if cleanString(option) in cleanCourseList(courseList):
                         addPrereqLine(cleanString(option)+cleanString(plan), 
                                       cleanString(course.name)+cleanString(plan), 
                                       lineManager, 
@@ -240,7 +246,7 @@ def placeLines(courseList, indexJS, lineManager, plan):
             if len(coreq.split()) > 1:
                 newCoReqString = coreq.replace(" or ", " ")
                 for option in newCoReqString.split():
-                    if cleanString(option) in courseList:
+                    if cleanString(option) in cleanCourseList(courseList):
                         addCoreqLine(cleanString(option)+cleanString(plan), 
                                      cleanString(course.name)+cleanString(plan), 
                                      lineManager, 
@@ -308,13 +314,12 @@ def debug(sequenceDict):
             for course in sequenceDict[plan][term]:
                 print(course.name)
             print("\n")
-        print("\n")     
-
-
-def main ():
+        print("\n")
+    
+def main():
     #opening the template html file and constructing html
     #note: here we calling parsing to extract the course data!
-    #try:
+    #try:  
         with open("template.html") as input:
             # deriving parsed html
             soup = BeautifulSoup(input, 'html.parser')
