@@ -729,8 +729,6 @@ def checkReqs(course_seq):
                 term_names.append(course_name)
 
             for course in course_seq[plan][term]:
-                if course.name == "MEC E 300":
-                    print("test")
                 for coreq in course.coreqs:
                     coreqlist = coreq.split(" or ")
                     i = 0
