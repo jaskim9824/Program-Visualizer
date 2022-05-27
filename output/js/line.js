@@ -9,12 +9,15 @@ class Line {
         if (switching) {
             this.line = new LeaderLine(document.getElementById(this.start),
                                        document.getElementById(this.end),
-                                       {dash:this.dashed, color: (this.dashed ? 'blue':'orange')});
+                                       {dash:this.dashed, 
+                                        color: (this.dashed ? 'blue':'orange')});
         }
         else {
             this.line = new LeaderLine(document.getElementById(this.start), 
             document.getElementById(this.end),
-            {hide:true, dash:this.dashed, color: (this.dashed ? 'blue':'orange')});
+            {hide:true, 
+             dash:this.dashed, 
+             color: (this.dashed ? 'blue':'orange')});
             this.line.show();
         }
     }
