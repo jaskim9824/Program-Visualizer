@@ -6,11 +6,11 @@
 # This file contains functions required to parse Excel files containing course information
 # at the U of A. The main functions are parse() and parseInPy(). parse() loads a .json file
 # created in the MATLAB file parsing.m to extract relevant course info. parseInPy() achieves
-# achieves the exact same result but does everything in Python (no MATLAB required).
+# the exact same result but does everything in Python (no MATLAB required).
 # Both functions return the exact same dictionaries. parse() is obsolete and is not used
 # in main.py
 
-# Dependencies: xlrd, json
+# Dependencies: xlrd, json, copy
 
 # Used in: main.py to generate the HTML page of the course plan visualizer
 
@@ -24,6 +24,7 @@ class Course:
         long_title = "", eff_date = "", status = "", calendar_print = "", prog_units = "",
         engineering_units = "", calc_fee_index = "", actual_fee_index = "", duration = "",
         alpha_hours = "", course_description = "", prereqs = [], coreqs = [], reqs = []):
+
         self.name = name
         self.faculty = faculty
         self.department = department
@@ -773,13 +774,11 @@ def checkReqs(course_seq):
                     i = 0
                     while i < len(coreqlist):
                         if coreqlist[i] not in all_names:
-                            # The coreq is not available in this plan, delete it
+                            # If the coreq is not available in this plan, delete it
                             del coreqlist[i]
                             continue
                         i += 1
 
-                    assert (coreqlist == []) or (len(coreqlist) == 1), "Two possible corequisites for " + \
-                                                                       course.name + " , only keep one."
                     if coreqlist != []:
                         if coreqlist[0] not in term_names:
                             # The coreq course in not taken in the same term,
@@ -796,14 +795,12 @@ def checkReqs(course_seq):
                     prereqlist = prereq.split(" or ")
                     i = 0
                     while i < len(prereqlist):
-                        # The prereq is not available in this plan, delete it
+                        # If the prereq is not available in this plan, delete it
                         if prereqlist[i] not in all_names:
                             del prereqlist[i]
                             continue
                         i += 1
 
-                    assert (prereqlist == []) or (len(prereqlist) == 1), "Two possible prerequisites for " + \
-                                                                       course.name + " , only keep one."
                     if prereqlist != []:
                         if prereqlist[0] in term_names:
                             # The prereq course in not taken in the same term,
