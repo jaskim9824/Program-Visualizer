@@ -14,7 +14,7 @@ The webpage allows users to switch between the different program sequences as di
 ![switchingplans](https://user-images.githubusercontent.com/60327441/170582880-7feb5c07-18c9-4624-836d-a3875d182f69.gif)
 
 
-The project, in its current state, consists of a Python script main.py. The Python script reads
+The project, in its current state, consists of a Python script `main.py`. The Python script reads
 Excel files containing course and program information along with a template HTML file (`template.html`) 
 and produces an resultant HTML (`index.html`) in the `output` directory alongside the needed
 Javascript files (`index.js` and `controller.js`) in `output/js.` The output directory contains the
