@@ -5,14 +5,13 @@ body {
     margin: 0;
     width: fit-content;
     height: 100%;
-    overflow: hidden;
-    overflow-y: scroll;
 }
 html {
     margin: 0;
     width: fit-content;
     height: 100%;
     overflow-x: scroll;
+    overflow-y: scroll;
 }
 
 /*Header style*/
