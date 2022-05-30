@@ -43,8 +43,6 @@ def placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManag
     for plan in sequenceDict:
         switchInput = soup.new_tag("div", attrs={"id":cleaner.cleanString(plan),
                                                  "ng-switch-when":cleaner.cleanString(plan)})
-        widthOfPlan = 210 * len(sequenceDict[plan].keys()) + 60
-        switchInput['width'] = str(widthOfPlan) +"px"
         placeTermsDivs(switchInput, sequenceDict[plan], soup, indexJS, controller, plan, lineManager)
         displayTag.append(switchInput)
 
