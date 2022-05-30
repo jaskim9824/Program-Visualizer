@@ -487,22 +487,42 @@ evaluating as null -->
                     for (let i = 0; i < this.planAList.length; i++) {
                         this.planAList[i][0].show(true);
                     }
+                    for (let i = 0; i < this.planAclicked.length; i++) {
+                        var element = document.getElementById(this.planAclicked[i]);
+                        element.classList.remove("course");
+                        element.classList.add("course-highlighted");
+                    }
                     break;
                 case "B":
                     console.log(this.planBList);
                     for (let i = 0; i < this.planBList.length; i++) {
                         this.planBList[i][0].show(true);
                     }
+                    for (let i = 0; i < this.planBclicked.length; i++) {
+                        var element = document.getElementById(this.planBclicked[i]);
+                        element.classList.remove("course");
+                        element.classList.add("course-highlighted");
+                    }
                     break;
                 case "C":
                     for (let i = 0; i < this.planCList.length; i++) {
                         this.planClist[i][0].show(true);
+                    }
+                    for (let i = 0; i < this.planCclicked.length; i++) {
+                        var element = document.getElementById(this.planCclicked[i]);
+                        element.classList.remove("course");
+                        element.classList.add("course-highlighted");
                     }
                     break;
                 case "D":
                     console.log(this.planDList);
                     for (let i = 0; i < this.planDList.length; i++) {
                         this.planDlist[i][0].show(true);
+                    }
+                    for (let i = 0; i < this.planDclicked.length; i++) {
+                        var element = document.getElementById(this.planDclicked[i]);
+                        element.classList.remove("course");
+                        element.classList.add("course-highlighted");
                     }
                     break;
             }
@@ -637,6 +657,72 @@ evaluating as null -->
             }
         };
 
+        this.addToClicked = function(element) {
+            switch ($scope.selectedPlan) {
+                case "A":
+                    var index = this.planAclicked.findIndex((item) => item == element);
+                    // If it does not exist
+                    if (index == -1) {
+                        console.log("Added!")
+                        this.planAclicked.push(element);
+                    }
+                    break;
+                case "B":
+                    var index = this.planBclicked.findIndex((item) => item == element);
+                    // If it does not exist
+                    if (index == -1) {
+                        this.planBclicked.push(element);
+                    }
+                    break;
+                case "C":
+                    var index = this.planCclicked.findIndex((item) => item == element);
+                    // If it does not exist
+                    if (index == -1) {
+                        this.planCclicked.push(element);
+                    }
+                    break;
+                case "D":
+                    var index = this.planDclicked.findIndex((item) => item == element);
+                    // If it does not exist
+                    if (index == -1) {
+                        this.planDclicked.push(element);
+                    }
+                    break;
+            }
+        };
+        this.removeFromClicked = function(element) {
+            switch ($scope.selectedPlan) {
+                case "A":
+                    var index = this.planAclicked.findIndex((item) => item == element);
+                    // If it does exist
+                    if (index != -1) {
+                        this.planAclicked.splice(index, 1);
+                    }
+                    break;
+                case "B":
+                    var index = this.planBclicked.findIndex((item) => item == element);
+                    // If it does exist
+                    if (index != -1) {
+                        this.planBclicked.splice(index, 1);
+                    }
+                    break;
+                case "C":
+                    var index = this.planCclicked.findIndex((item) => item == element);
+                    // If it does exist
+                    if (index != -1) {
+                        this.planCclicked.splice(index, 1);
+                    }
+                    break;
+                case "D":
+                    var index = this.planDclicked.findIndex((item) => item == element);
+                    // If it does exist
+                    if (index != -1) {
+                        this.planDclicked.splice(index, 1);
+                    }
+                    break;
+            }
+        };
+
         // add a clicked/not clicked flag for every single course
         var ece101flag = false; 
         var ece201flag = false;
@@ -661,6 +747,7 @@ evaluating as null -->
                 // that.addLine(getLine4());
                 element.classList.remove("course");
                 element.classList.add("course-highlighted");
+                that.addToClicked("ECE 101")
                 ece101flag = true;
             }
             else {
@@ -673,6 +760,7 @@ evaluating as null -->
                 // that.removeLine(getLine4());
                 element.classList.remove("course-highlighted");
                 element.classList.add("course");
+                that.removeFromClicked("ECE 101");
                 ece101flag = false;
             }
         };
