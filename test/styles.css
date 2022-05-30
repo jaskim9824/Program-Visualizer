@@ -164,9 +164,7 @@ header {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-   
     z-index: 1;
-
 }
 
 .dropdown-content a {
