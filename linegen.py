@@ -102,6 +102,7 @@ def placeClickListeners(courseList, controller, lineManager, plan):
     formattedIf = " if (!{courseName}flag) {{\n"
     formattedStatement = "      that.{action}Line(getLine{num}());\n"
     formattedHighlightStatement = "     {courseName}element.classList.{action}(\"{className}\");\n"
+    formattedListClickStatement = "     that.{action}Clicked(\"{courseName}\");\n"
 
     for course in courseList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan) 
@@ -120,6 +121,8 @@ def placeClickListeners(courseList, controller, lineManager, plan):
             controller.write(formattedHighlightStatement.format(courseName=courseID,
                                                                 action="add",
                                                                 className="course-highlighted"))
+            controller.write(formattedListClickStatement.format(action="addTo",
+                                                                courseName=courseID))
             controller.write("      " +courseID+"flag=true\n")
             controller.write("  }\n else {\n")
 
@@ -132,7 +135,9 @@ def placeClickListeners(courseList, controller, lineManager, plan):
             controller.write(formattedHighlightStatement.format(courseName=courseID,
                                                                 action="add",
                                                                 className="course"))
-            
+
+            controller.write(formattedListClickStatement.format(action="removeFrom",
+                                                                courseName=courseID))
             controller.write("      " +courseID+"flag=false\n")
             controller.write("  }\n};\n")
 

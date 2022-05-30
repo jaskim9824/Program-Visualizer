@@ -51,12 +51,15 @@ Array.prototype.forEach.call(radios, function (radio) {
 def generatePlanBasedBlocksController(controller, sequenceDict):
     for plan in sequenceDict:
         controller.write("this." + cleaner.cleanString(plan) + "List = [];\n")
+        controller.write("this." + cleaner.cleanString(plan) + "Clicked = [];\n")
         numterms = len(sequenceDict[plan].keys())
         controller.write("this." + cleaner.cleanString(plan) + "Terms = " + str(numterms) + ";\n")
     generateSwitchingSwitchStatementController(sequenceDict, controller, "hide", "disable")
     generateSwitchingSwitchStatementController(sequenceDict, controller, "show", "enable")
     generateAddLineSwitch(sequenceDict, controller)
     generateDeleteLineSwitch(sequenceDict, controller)
+    generateAddToClickSwitch(sequenceDict, controller)
+    generateDeleteFromClickSwitch(sequenceDict, controller)
 
 # Function that generates the switch statements and functions which handle
 # plan switching
@@ -138,4 +141,43 @@ switch($scope.selectedPlan) {{ \n"""
     for plan in sequenceDict:
         controller.write(formmattedDeleteLineSwitchStatement.format(planName=cleaner.cleanString(plan)))
 
+    controller.write(switchEndString)
+
+
+def generateAddToClickSwitch(sequenceDict, controller):
+    switchEndString = """    default:
+    console.log("shouldn't be here");
+    }
+};\n"""
+    formattedFunctionStatement = """this.{functionName} = function(element) {{
+switch($scope.selectedPlan) {{ \n"""
+    formattedAddToClickStatement = """ case "{planName}":
+    var index = this.{planName}Clicked.findIndex((item) => item == element);
+    if (index == -1) {{
+        this.{planName}Clicked.append(element);
+    }}
+    break;"""
+    controller.write(formattedFunctionStatement.format(functionName="addToClicked"))
+    for plan in sequenceDict:
+        controller.write(formattedAddToClickStatement.format(planName=cleaner.cleanString(plan)))
+    
+    controller.write(switchEndString)
+
+def generateDeleteFromClickSwitch(sequenceDict, controller):
+    switchEndString = """    default:
+    console.log("shouldn't be here");
+    }
+};\n"""
+    formattedFunctionStatement = """this.{functionName} = function(element) {{
+switch($scope.selectedPlan) {{ \n"""
+    formattedAddToClickStatement = """ case "{planName}":
+    var index = this.{planName}Clicked.findIndex((item) => item == element);
+    if (index != -1) {{
+        this.{planName}Clicked.splice(index, 1);
+    }}
+    break;"""
+    controller.write(formattedFunctionStatement.format(functionName="removeFromClicked"))
+    for plan in sequenceDict:
+        controller.write(formattedAddToClickStatement.format(planName=cleaner.cleanString(plan)))
+    
     controller.write(switchEndString)
