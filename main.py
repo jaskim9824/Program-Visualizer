@@ -95,10 +95,10 @@ def placePlanDivs(displayTag, sequenceDict, soup, courseDict, indexJS, controlle
                                                  "ng-switch-when":cleaner.cleanString(plan)})
         widthOfPlan = 210 * len(sequenceDict[plan].keys()) + 60
         switchInput['width'] = str(widthOfPlan) +"px"
-        placeTermsDivs(switchInput, sequenceDict[plan], soup, courseDict, indexJS, controller, plan, lineManager)
+        placeTermsDivs(switchInput, sequenceDict[plan], soup, indexJS, controller, plan, lineManager)
         displayTag.append(switchInput)
 
-def placeTermsDivs(planTag, planDict, soup, courseDict, indexJS, controller, plan, lineManager):
+def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManager):
     for term in planDict:
         termDiv = soup.new_tag("div", attrs={"class":"term"})
         termHeader = soup.new_tag("h3", attrs={"class":"termheader"})
@@ -109,10 +109,6 @@ def placeTermsDivs(planTag, planDict, soup, courseDict, indexJS, controller, pla
     courseList = []
     for courses in planDict.values():
         courseList += courses
-    # print(plan)
-    # for course in courseList:
-    #     print(course.name)
-    # print("\n")
     placeLines(courseList, indexJS, lineManager, plan)
     placeClickListeners(courseList, controller, lineManager, plan)
 
@@ -157,74 +153,73 @@ def addGetter(num, indexJS):
 
 def placeLines(courseList, indexJS, lineManager, plan):
     for course in courseList:
+        courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan)
         for prereq in course.prereqs:
             # OR CASE
             if len(prereq.split()) > 1:
                 newPreReqString = prereq.replace(" or ", " ")
                 for option in newPreReqString.split():
                     if cleaner.cleanString(option) in cleaner.cleanCourseList(courseList):
-                        addPrereqLine(cleaner.cleanString(option)+cleaner.cleanString(plan), 
-                                      cleaner.cleanString(course.name)+cleaner.cleanString(plan), 
-                                      lineManager, 
-                                      indexJS)
+                        optionID = cleaner.cleanString(option)+cleaner.cleanString(plan)
+                        addPrereqLine(optionID, courseID, lineManager, indexJS)
             else:
                 if cleaner.cleanString(prereq) in cleaner.cleanCourseList(courseList):
-                    addPrereqLine(cleaner.cleanString(prereq)+cleaner.cleanString(plan), 
-                              cleaner.cleanString(course.name)+cleaner.cleanString(plan), 
-                              lineManager, 
-                              indexJS)
+                    prereqID = cleaner.cleanString(prereq)+cleaner.cleanString(plan)
+                    addPrereqLine(prereqID, courseID, lineManager, indexJS)
         for coreq in course.coreqs:
              # OR CASE
             if len(coreq.split()) > 1:
                 newCoReqString = coreq.replace(" or ", " ")
                 for option in newCoReqString.split():
                     if cleaner.cleanString(option) in cleaner.cleanCourseList(courseList):
-                        addCoreqLine(cleaner.cleanString(option)+cleaner.cleanString(plan), 
-                                     cleaner.cleanString(course.name)+cleaner.cleanString(plan), 
-                                     lineManager, 
-                                     indexJS)
+                        optionID = cleaner.cleanString(option)+cleaner.cleanString(plan)
+                        addCoreqLine(optionID, courseID, lineManager, indexJS)
             else:
                 if cleaner.cleanString(coreq) in cleaner.cleanCourseList(courseList):
-                    addCoreqLine(cleaner.cleanString(coreq)+cleaner.cleanString(plan), 
-                             cleaner.cleanString(course.name)+cleaner.cleanString(plan), 
-                             lineManager, 
-                             indexJS)
+                    coreqID = cleaner.cleanString(coreq)+cleaner.cleanString(plan)
+                    addCoreqLine(coreqID, courseID, lineManager, indexJS)
 
 def placeClickListeners(courseList, controller, lineManager, plan):
     formattedListener = "$scope.{courseName}Listener = function () {{\n"
     formattedIf = " if (!{courseName}flag) {{\n"
     formattedStatement = "      that.{action}Line(getLine{num}());\n"
+ 
     for course in courseList:
-        if cleaner.cleanString(course.name)+cleaner.cleanString(plan) in lineManager.getCourseLineDict():
-            controller.write(formattedListener.format(courseName = cleaner.cleanString(course.name)+cleaner.cleanString(plan)))
-            controller.write(formattedIf.format(courseName = cleaner.cleanString(course.name)+cleaner.cleanString(plan)))
-            for line in lineManager.getCourseLineDict()[cleaner.cleanString(course.name)+cleaner.cleanString(plan)]:
+        courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan) 
+        if courseID in lineManager.getCourseLineDict():
+            controller.write(formattedListener.format(courseName=courseID))
+            controller.write(formattedIf.format(courseName=courseID))
+
+            for line in lineManager.getCourseLineDict()[courseID]:
                 controller.write(formattedStatement.format(action="add", num=line))
-            controller.write("      " +cleaner.cleanString(course.name)+cleaner.cleanString(plan)+"flag=true\n")
+        
+            controller.write("      " +courseID+"flag=true\n")
             controller.write("  }\n else {\n")
-            for line in lineManager.getCourseLineDict()[cleaner.cleanString(course.name)+cleaner.cleanString(plan)]:
+
+            for line in lineManager.getCourseLineDict()[courseID]:
                 controller.write(formattedStatement.format(action="remove", num=line))
-            controller.write("      " +cleaner.cleanString(course.name)+cleaner.cleanString(plan)+"flag=false\n")
+            
+            controller.write("      " +courseID+"flag=false\n")
             controller.write("  }\n};\n")
 
 
 def placeCourses(termTag, termList, soup, controller, plan):
     for course in termList:
-
+        courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan)
         courseContDiv = soup.new_tag("div", attrs={"class":"coursecontainer"})
         #courseDisc.append("\{\{"+course.name.strip().replace(" ","")+"courseinfo\}\}")
         if course.name == "Complementary Elective":
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip compelective", 
-                                               "id": cleaner.cleanString(course.name)+cleaner.cleanString(plan), 
-                                               "ng-click":cleaner.cleanString(course.name)+cleaner.cleanString(plan)+"Listener()" })
+                                               "id": courseID, 
+                                               "ng-click":courseID+"Listener()" })
         elif course.name == "Program/Technical Elective":
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip progelective", 
-                                               "id": cleaner.cleanString(course.name)+cleaner.cleanString(plan), 
-                                               "ng-click":cleaner.cleanString(course.name)+cleaner.cleanString(plan)+"Listener()" })
+                                               "id": courseID, 
+                                               "ng-click":courseID+"Listener()" })
         else:
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip", 
-                                                "id": cleaner.cleanString(course.name)+cleaner.cleanString(plan), 
-                                                "ng-click":cleaner.cleanString(course.name)+cleaner.cleanString(plan)+"Listener()" })
+                                                "id": courseID, 
+                                                "ng-click":courseID+"Listener()" })
         courseDisc = soup.new_tag("p", attrs={"class":"tooltiptext"})
         courseDisc.append(course.course_description)
         courseHeader = soup.new_tag("h3", attrs={"class":"embed"})
@@ -234,8 +229,7 @@ def placeCourses(termTag, termList, soup, controller, plan):
         courseContDiv.append(courseDiv)
         termTag.append(courseContDiv)
         controller.write("  var " + 
-                         cleaner.cleanString(course.name) + 
-                         cleaner.cleanString(plan) +
+                         courseID +
                          "flag = false;\n")
 
 #Debug function for cleanly printing contents of sequences
@@ -252,7 +246,7 @@ def debug(sequenceDict):
 def main():
     #opening the template html file and constructing html
     #note: here we calling parsing to extract the course data!
-    #try:  
+    try:  
         with open("template.html") as input:
             # deriving parsed html
             soup = BeautifulSoup(input, 'html.parser')
@@ -288,15 +282,20 @@ def main():
 
 
     #TO DO: improve expection handling here
-    #except:
-        #print("Exception raised")
+    except FileNotFoundError as err:
+       print("Exception raised: " + 
+       err.strerror + 
+       ". Either the template HTML file is not in the same directory as the script or" +
+       " the output directory is not organized correctly or does not exist")
     #writing output to an output html
-    #try:
+    try:
         with open("./output/index.html", "w") as output:
             output.write(str(soup))
     #TO DO: improve expection handling here
-    #except:
-        #print("Exception raised")
+    except FileNotFoundError as err:
+       print("Exception raised: " + 
+             err.strerror + 
+             ". The directory you are in does not have a directory named output.")
         
 if __name__ == "__main__":
     main()

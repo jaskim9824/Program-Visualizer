@@ -2,7 +2,7 @@ var line0 = new Line("MATH100TraditionalPlan", "ENGG130TraditionalPlan", true);
 function getLine0() {
         return line0
     };
-var line1 = new Line("MATH100TraditionalPlan", "PHYS130TraditionalPlan", false);
+var line1 = new Line("MATH100TraditionalPlan", "PHYS130TraditionalPlan", true);
 function getLine1() {
         return line1
     };
@@ -22,7 +22,7 @@ var line5 = new Line("ENGG130TraditionalPlan", "ENPH131TraditionalPlan", false);
 function getLine5() {
         return line5
     };
-var line6 = new Line("MATH101TraditionalPlan", "ENPH131TraditionalPlan", false);
+var line6 = new Line("MATH101TraditionalPlan", "ENPH131TraditionalPlan", true);
 function getLine6() {
         return line6
     };
@@ -94,11 +94,11 @@ var line23 = new Line("ENGG160TraditionalPlan", "MECE260TraditionalPlan", false)
 function getLine23() {
         return line23
     };
-var line24 = new Line("MECE265TraditionalPlan", "MECE260TraditionalPlan", true);
+var line24 = new Line("CIVE270TraditionalPlan", "MECE260TraditionalPlan", false);
 function getLine24() {
         return line24
     };
-var line25 = new Line("CIVE270TraditionalPlan", "MECE260TraditionalPlan", true);
+var line25 = new Line("MECE265TraditionalPlan", "MECE260TraditionalPlan", true);
 function getLine25() {
         return line25
     };
@@ -122,7 +122,7 @@ var line30 = new Line("STAT235TraditionalPlan", "MECE300TraditionalPlan", false)
 function getLine30() {
         return line30
     };
-var line31 = new Line("MECE331TraditionalPlan", "MECE300TraditionalPlan", false);
+var line31 = new Line("MECE331TraditionalPlan", "MECE300TraditionalPlan", true);
 function getLine31() {
         return line31
     };
@@ -294,7 +294,7 @@ var line73 = new Line("MATH100AlternatePlan", "ENGG130AlternatePlan", true);
 function getLine73() {
         return line73
     };
-var line74 = new Line("MATH100AlternatePlan", "PHYS130AlternatePlan", false);
+var line74 = new Line("MATH100AlternatePlan", "PHYS130AlternatePlan", true);
 function getLine74() {
         return line74
     };
@@ -314,7 +314,7 @@ var line78 = new Line("ENGG130AlternatePlan", "ENPH131AlternatePlan", false);
 function getLine78() {
         return line78
     };
-var line79 = new Line("MATH101AlternatePlan", "ENPH131AlternatePlan", false);
+var line79 = new Line("MATH101AlternatePlan", "ENPH131AlternatePlan", true);
 function getLine79() {
         return line79
     };
@@ -326,7 +326,7 @@ var line81 = new Line("MATH100AlternatePlan", "MATH102AlternatePlan", false);
 function getLine81() {
         return line81
     };
-var line82 = new Line("MATH209AlternatePlan", "MATH201AlternatePlan", false);
+var line82 = new Line("MATH209AlternatePlan", "MATH201AlternatePlan", true);
 function getLine82() {
         return line82
     };
@@ -414,7 +414,7 @@ var line103 = new Line("STAT235AlternatePlan", "MECE300AlternatePlan", false);
 function getLine103() {
         return line103
     };
-var line104 = new Line("MECE331AlternatePlan", "MECE300AlternatePlan", false);
+var line104 = new Line("MECE331AlternatePlan", "MECE300AlternatePlan", true);
 function getLine104() {
         return line104
     };
@@ -586,7 +586,7 @@ var line146 = new Line("MATH100CoopPlan1", "ENGG130CoopPlan1", true);
 function getLine146() {
         return line146
     };
-var line147 = new Line("MATH100CoopPlan1", "PHYS130CoopPlan1", false);
+var line147 = new Line("MATH100CoopPlan1", "PHYS130CoopPlan1", true);
 function getLine147() {
         return line147
     };
@@ -606,7 +606,7 @@ var line151 = new Line("ENGG130CoopPlan1", "ENPH131CoopPlan1", false);
 function getLine151() {
         return line151
     };
-var line152 = new Line("MATH101CoopPlan1", "ENPH131CoopPlan1", false);
+var line152 = new Line("MATH101CoopPlan1", "ENPH131CoopPlan1", true);
 function getLine152() {
         return line152
     };
@@ -714,7 +714,7 @@ var line178 = new Line("STAT235CoopPlan1", "MECE300CoopPlan1", false);
 function getLine178() {
         return line178
     };
-var line179 = new Line("MECE331CoopPlan1", "MECE300CoopPlan1", false);
+var line179 = new Line("MECE331CoopPlan1", "MECE300CoopPlan1", true);
 function getLine179() {
         return line179
     };
@@ -898,7 +898,7 @@ var line224 = new Line("MATH100CoopPlan2", "ENGG130CoopPlan2", true);
 function getLine224() {
         return line224
     };
-var line225 = new Line("MATH100CoopPlan2", "PHYS130CoopPlan2", false);
+var line225 = new Line("MATH100CoopPlan2", "PHYS130CoopPlan2", true);
 function getLine225() {
         return line225
     };
@@ -918,7 +918,7 @@ var line229 = new Line("ENGG130CoopPlan2", "ENPH131CoopPlan2", false);
 function getLine229() {
         return line229
     };
-var line230 = new Line("MATH101CoopPlan2", "ENPH131CoopPlan2", false);
+var line230 = new Line("MATH101CoopPlan2", "ENPH131CoopPlan2", true);
 function getLine230() {
         return line230
     };
@@ -994,11 +994,11 @@ var line248 = new Line("ENGG160CoopPlan2", "MECE260CoopPlan2", false);
 function getLine248() {
         return line248
     };
-var line249 = new Line("MECE265CoopPlan2", "MECE260CoopPlan2", true);
+var line249 = new Line("CIVE270CoopPlan2", "MECE260CoopPlan2", false);
 function getLine249() {
         return line249
     };
-var line250 = new Line("CIVE270CoopPlan2", "MECE260CoopPlan2", true);
+var line250 = new Line("MECE265CoopPlan2", "MECE260CoopPlan2", true);
 function getLine250() {
         return line250
     };
@@ -1022,7 +1022,7 @@ var line255 = new Line("STAT235CoopPlan2", "MECE300CoopPlan2", false);
 function getLine255() {
         return line255
     };
-var line256 = new Line("MECE331CoopPlan2", "MECE300CoopPlan2", false);
+var line256 = new Line("MECE331CoopPlan2", "MECE300CoopPlan2", true);
 function getLine256() {
         return line256
     };
@@ -1210,7 +1210,7 @@ var line302 = new Line("MATH100CoopPlan3Biomedical", "ENGG130CoopPlan3Biomedical
 function getLine302() {
         return line302
     };
-var line303 = new Line("MATH100CoopPlan3Biomedical", "PHYS130CoopPlan3Biomedical", false);
+var line303 = new Line("MATH100CoopPlan3Biomedical", "PHYS130CoopPlan3Biomedical", true);
 function getLine303() {
         return line303
     };
@@ -1230,7 +1230,7 @@ var line307 = new Line("ENGG130CoopPlan3Biomedical", "ENPH131CoopPlan3Biomedical
 function getLine307() {
         return line307
     };
-var line308 = new Line("MATH101CoopPlan3Biomedical", "ENPH131CoopPlan3Biomedical", false);
+var line308 = new Line("MATH101CoopPlan3Biomedical", "ENPH131CoopPlan3Biomedical", true);
 function getLine308() {
         return line308
     };
@@ -1302,11 +1302,11 @@ var line325 = new Line("ENGG160CoopPlan3Biomedical", "MECE260CoopPlan3Biomedical
 function getLine325() {
         return line325
     };
-var line326 = new Line("MECE265CoopPlan3Biomedical", "MECE260CoopPlan3Biomedical", true);
+var line326 = new Line("CIVE270CoopPlan3Biomedical", "MECE260CoopPlan3Biomedical", false);
 function getLine326() {
         return line326
     };
-var line327 = new Line("CIVE270CoopPlan3Biomedical", "MECE260CoopPlan3Biomedical", true);
+var line327 = new Line("MECE265CoopPlan3Biomedical", "MECE260CoopPlan3Biomedical", true);
 function getLine327() {
         return line327
     };
@@ -1370,7 +1370,7 @@ var line342 = new Line("STAT235CoopPlan3Biomedical", "MECE300CoopPlan3Biomedical
 function getLine342() {
         return line342
     };
-var line343 = new Line("MECE331CoopPlan3Biomedical", "MECE300CoopPlan3Biomedical", false);
+var line343 = new Line("MECE331CoopPlan3Biomedical", "MECE300CoopPlan3Biomedical", true);
 function getLine343() {
         return line343
     };
@@ -1542,7 +1542,7 @@ var line385 = new Line("MATH100CoopPlan4", "ENGG130CoopPlan4", true);
 function getLine385() {
         return line385
     };
-var line386 = new Line("MATH100CoopPlan4", "PHYS130CoopPlan4", false);
+var line386 = new Line("MATH100CoopPlan4", "PHYS130CoopPlan4", true);
 function getLine386() {
         return line386
     };
@@ -1562,7 +1562,7 @@ var line390 = new Line("ENGG130CoopPlan4", "ENPH131CoopPlan4", false);
 function getLine390() {
         return line390
     };
-var line391 = new Line("MATH101CoopPlan4", "ENPH131CoopPlan4", false);
+var line391 = new Line("MATH101CoopPlan4", "ENPH131CoopPlan4", true);
 function getLine391() {
         return line391
     };
@@ -1662,7 +1662,7 @@ var line415 = new Line("STAT235CoopPlan4", "MECE300CoopPlan4", false);
 function getLine415() {
         return line415
     };
-var line416 = new Line("MECE331CoopPlan4", "MECE300CoopPlan4", false);
+var line416 = new Line("MECE331CoopPlan4", "MECE300CoopPlan4", true);
 function getLine416() {
         return line416
     };
