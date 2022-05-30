@@ -154,7 +154,7 @@ switch($scope.selectedPlan) {{ \n"""
     formattedAddToClickStatement = """ case "{planName}":
     var index = this.{planName}Clicked.findIndex((item) => item == element);
     if (index == -1) {{
-        this.{planName}Clicked.append(element);
+        this.{planName}Clicked.push(element);
     }}
     break;"""
     controller.write(formattedFunctionStatement.format(functionName="addToClicked"))
