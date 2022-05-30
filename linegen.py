@@ -29,7 +29,8 @@ class LineManager:
     def addLinetoCourse(self, course ="", line = int):
         if course not in self.courseLineDict:
             self.intializeCourse(course)
-        self.courseLineDict[course].append(line)
+        if line not in self.courseLineDict[course]:
+            self.courseLineDict[course].append(line)
     
     # Intializes a course's "owned" list in the course line dict. Does nothing
     # if course already has an intialized list
@@ -54,11 +55,17 @@ class LineManager:
     def setLineCount(self, count = int):
         self.lineCount = count
 
+# Function that places the lines for a specfic plan sequnece onto the diagram
+# Parameters:
+#   courseList - list of course objects of course taken in that plan
+#   indexJS - file handle for index.js
+#   lineManager - line manager object for aiding in generation
+#   plan - name of plan 
 def placeLines(courseList, indexJS, lineManager, plan):
     for course in courseList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan)
         for prereq in course.prereqs:
-            # OR CASE
+            # OR CASE, cases where prereq can be one of a set of courses
             if len(prereq.split()) > 1:
                 newPreReqString = prereq.replace(" or ", " ")
                 for option in newPreReqString.split():
@@ -70,7 +77,7 @@ def placeLines(courseList, indexJS, lineManager, plan):
                     prereqID = cleaner.cleanString(prereq)+cleaner.cleanString(plan)
                     addPrereqLine(prereqID, courseID, lineManager, indexJS)
         for coreq in course.coreqs:
-             # OR CASE
+             # OR CASE, cases where coreq can be one of a set of courses
             if len(coreq.split()) > 1:
                 newCoReqString = coreq.replace(" or ", " ")
                 for option in newCoReqString.split():
@@ -82,13 +89,21 @@ def placeLines(courseList, indexJS, lineManager, plan):
                     coreqID = cleaner.cleanString(coreq)+cleaner.cleanString(plan)
                     addCoreqLine(coreqID, courseID, lineManager, indexJS)
 
+
+# Function that places click listeners for each course in the specified plan
+# Parameters:
+#   courseList - list of course objects of course taken in that plan
+#   controller - file handle for controller.js
+#   lineManager - line manager object for aiding in generation
+#   plan - name of plan 
 def placeClickListeners(courseList, controller, lineManager, plan):
     formattedListener = "$scope.{courseName}Listener = function () {{\n"
     formattedIf = " if (!{courseName}flag) {{\n"
     formattedStatement = "      that.{action}Line(getLine{num}());\n"
- 
+
     for course in courseList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan) 
+        # if course has lines that it owns, create a click listener
         if courseID in lineManager.getCourseLineDict():
             controller.write(formattedListener.format(courseName=courseID))
             controller.write(formattedIf.format(courseName=courseID))
@@ -105,10 +120,20 @@ def placeClickListeners(courseList, controller, lineManager, plan):
             controller.write("      " +courseID+"flag=false\n")
             controller.write("  }\n};\n")
 
+# Function that creates a prerequesite line object in index.js
+# Parameters:
+#   start - element ID of starting course
+#   end - element ID of ending course
+#   lineManager - line manager object for aiding in generation
+#   indexJS - file handle for index.js
 def addPrereqLine(start, end, lineManager, indexJS):
+    # get line count, this is the ID of the new line
     count = lineManager.getLineCount()
+
+    # ensure that both start and end have entries in courseLineDict
     lineManager.intializeCourse(start)
     lineManager.intializeCourse(end)
+
     indexJS.write("var line" + 
                      str(count) + 
                      " = new Line(" +
@@ -116,16 +141,32 @@ def addPrereqLine(start, end, lineManager, indexJS):
                      ", " +
                     "\"" + end +  "\"" + 
                      ", false);\n")
+    
+    # add a getter for the line
     addGetter(count, indexJS)
+
+    # add lines to "owned" list of start and end
     lineManager.addLinetoCourse(start, count)
     lineManager.addLinetoCourse(end, count)
+
+    # increment line count in line manager
     lineManager.setLineCount(count+1)
     
 
+# Function that creates a corequesite line object in index.js
+# Parameters:
+#   start - element ID of starting course
+#   end - element ID of ending course
+#   lineManager - line manager object for aiding in generation
+#   indexJS - file handle for index.js
 def addCoreqLine(start, end, lineManager, indexJS):
+    # get line count, this is the ID of the new line
     count = lineManager.getLineCount()
+
+    # ensure that both start and end have entries in courseLineDict
     lineManager.intializeCourse(start)
     lineManager.intializeCourse(end)
+
     indexJS.write("var line" + 
                      str(count) + 
                     " = new Line(" +
@@ -133,11 +174,22 @@ def addCoreqLine(start, end, lineManager, indexJS):
                      ", " +
                     "\"" + end +  "\"" + 
                      ", true);\n")
+
+    # add a getter for the line
     addGetter(count, indexJS)
+
+    # add lines to "owned" list of start and end
     lineManager.addLinetoCourse(start, count)
     lineManager.addLinetoCourse(end, count)
+
+    # increment line count in line manager
     lineManager.setLineCount(count+1)
 
+# Function that adds a getter function for a line
+# so that contoller.js can retrieve the line object
+# Parameters
+#   num - number ID of line in question
+#   indexJS - file handle for index.js
 def addGetter(num, indexJS):
     formattedFunction = """function getLine{number}() {{
         return line{number}
