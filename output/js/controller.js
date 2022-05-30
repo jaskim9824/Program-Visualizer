@@ -15,42 +15,66 @@ Array.prototype.forEach.call(radios, function (radio) {
     });
 });
 this.TraditionalPlanList = [];
+this.TraditionalPlanTerms = 8;
 this.AlternatePlanList = [];
+this.AlternatePlanTerms = 9;
 this.CoopPlan1List = [];
+this.CoopPlan1Terms = 13;
 this.CoopPlan2List = [];
+this.CoopPlan2Terms = 13;
 this.CoopPlan3BiomedicalList = [];
+this.CoopPlan3BiomedicalTerms = 13;
 this.CoopPlan4List = [];
+this.CoopPlan4Terms = 13;
 this.disable = function(plan) {
     switch (plan) { 
   case "TraditionalPlan": 
     for (let i = 0; i < this.TraditionalPlanList.length; i++) {
         this.TraditionalPlanList[i][0].hide(true);
     }
+    width = this.TraditionalPlanTerms*210;
+    widthstr = width.toString() + "px";
+    document.getElementById("header").style.width = widthstr;
     break; 
   case "AlternatePlan": 
     for (let i = 0; i < this.AlternatePlanList.length; i++) {
         this.AlternatePlanList[i][0].hide(true);
     }
+    width = this.AlternatePlanTerms*210;
+    widthstr = width.toString() + "px";
+    document.getElementById("header").style.width = widthstr;
     break; 
   case "CoopPlan1": 
     for (let i = 0; i < this.CoopPlan1List.length; i++) {
         this.CoopPlan1List[i][0].hide(true);
     }
+    width = this.CoopPlan1Terms*210;
+    widthstr = width.toString() + "px";
+    document.getElementById("header").style.width = widthstr;
     break; 
   case "CoopPlan2": 
     for (let i = 0; i < this.CoopPlan2List.length; i++) {
         this.CoopPlan2List[i][0].hide(true);
     }
+    width = this.CoopPlan2Terms*210;
+    widthstr = width.toString() + "px";
+    document.getElementById("header").style.width = widthstr;
     break; 
   case "CoopPlan3Biomedical": 
     for (let i = 0; i < this.CoopPlan3BiomedicalList.length; i++) {
         this.CoopPlan3BiomedicalList[i][0].hide(true);
     }
+    width = this.CoopPlan3BiomedicalTerms*210;
+    widthstr = width.toString() + "px";
+    document.getElementById("header").style.width = widthstr;
     break; 
   case "CoopPlan4": 
     for (let i = 0; i < this.CoopPlan4List.length; i++) {
         this.CoopPlan4List[i][0].hide(true);
     }
+    width = this.CoopPlan4Terms*210;
+    widthstr = width.toString() + "px";
+    document.getElementById("header").style.width = widthstr;
     break; 
     default:
     console.log("shouldn't be here");
@@ -62,31 +86,49 @@ this.enable = function(plan) {
     for (let i = 0; i < this.TraditionalPlanList.length; i++) {
         this.TraditionalPlanList[i][0].show(true);
     }
+    width = this.TraditionalPlanTerms*210;
+    widthstr = width.toString() + "px";
+    document.getElementById("header").style.width = widthstr;
     break; 
   case "AlternatePlan": 
     for (let i = 0; i < this.AlternatePlanList.length; i++) {
         this.AlternatePlanList[i][0].show(true);
     }
+    width = this.AlternatePlanTerms*210;
+    widthstr = width.toString() + "px";
+    document.getElementById("header").style.width = widthstr;
     break; 
   case "CoopPlan1": 
     for (let i = 0; i < this.CoopPlan1List.length; i++) {
         this.CoopPlan1List[i][0].show(true);
     }
+    width = this.CoopPlan1Terms*210;
+    widthstr = width.toString() + "px";
+    document.getElementById("header").style.width = widthstr;
     break; 
   case "CoopPlan2": 
     for (let i = 0; i < this.CoopPlan2List.length; i++) {
         this.CoopPlan2List[i][0].show(true);
     }
+    width = this.CoopPlan2Terms*210;
+    widthstr = width.toString() + "px";
+    document.getElementById("header").style.width = widthstr;
     break; 
   case "CoopPlan3Biomedical": 
     for (let i = 0; i < this.CoopPlan3BiomedicalList.length; i++) {
         this.CoopPlan3BiomedicalList[i][0].show(true);
     }
+    width = this.CoopPlan3BiomedicalTerms*210;
+    widthstr = width.toString() + "px";
+    document.getElementById("header").style.width = widthstr;
     break; 
   case "CoopPlan4": 
     for (let i = 0; i < this.CoopPlan4List.length; i++) {
         this.CoopPlan4List[i][0].show(true);
     }
+    width = this.CoopPlan4Terms*210;
+    widthstr = width.toString() + "px";
+    document.getElementById("header").style.width = widthstr;
     break; 
     default:
     console.log("shouldn't be here");

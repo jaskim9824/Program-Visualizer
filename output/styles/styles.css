@@ -6,7 +6,6 @@ body {
     /* highliting the html page */
     width: fit-content;
     min-height: 100%;
-    border: 5px dashed blue;
 }
 html {
     /* highliting the html page */
@@ -16,12 +15,10 @@ html {
 }
 /*Header style*/
 header {
-    overflow: hidden;
+    overflow-x: hidden;
     padding: 30px 10px;
     text-align: center;
     background-color: #275d38;
-    
-    width: 3200px;
 }
         
  /*header link style */

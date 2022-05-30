@@ -3,17 +3,17 @@
 # Oversight: Dr. David Nobes
 # University of Alberta, Summer 2022, Curriculum Development Co-op Term
 
-# This file contains all the functions neccessary to generate the JS of the 
-# webpage which is not releated to the generation of the lines
+# This file contains all the functions neccessary to generate the inital JS 
+# before the placement of the courses on the diagram
 
-# Dependencies: cleaner
-
+from distutils.command import clean
 import cleaner
+from linegen import placeLines
 
 # Function that generates the JS before the generation of the course diagram
 # Parameters:
-#   controller - file handle to controller.js file
-#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
+#   controller: file handle to controller JS file
+#   sequenceDict: dict of plan sequence
 def intializeControllerJavaScript(controller, sequenceDict):
     generateIntitalBlockController(controller, sequenceDict)
     generatePlanBasedBlocksController(controller, sequenceDict)
@@ -21,7 +21,7 @@ def intializeControllerJavaScript(controller, sequenceDict):
 
 # Function that generates the intital block of Javascript
 # Parameters:
-#   controller - file handle for controller.js file
+#   controller: file handle to controller JS file
 def generateIntitalBlockController(controller, sequenceDict):
     planList = list(sequenceDict.keys())
     controller.write("var app = angular.module(\"main\", []);\n")
@@ -46,23 +46,18 @@ Array.prototype.forEach.call(radios, function (radio) {
 # Function that generates the blocks of the controller JS that is dependent
 # on the number and names of plans provided
 # Parameters:
-#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
-#   controller - file handle for controller.js file
+#   sequenceDict: dict of plan sequence
+#   controller: file handle to controller JS file
 def generatePlanBasedBlocksController(controller, sequenceDict):
     for plan in sequenceDict:
         controller.write("this." + cleaner.cleanString(plan) + "List = [];\n")
+        numterms = len(sequenceDict[plan].keys())
+        controller.write("this." + cleaner.cleanString(plan) + "Terms = " + str(numterms) + ";\n")
     generateSwitchingSwitchStatementController(sequenceDict, controller, "hide", "disable")
     generateSwitchingSwitchStatementController(sequenceDict, controller, "show", "enable")
     generateAddLineSwitch(sequenceDict, controller)
     generateDeleteLineSwitch(sequenceDict, controller)
 
-# Function that generates the switch statements and functions which handle
-# plan switching
-# Parameters:
-#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
-#   controller - file handle for controller.js file
-#   action - name of action done within function
-#   function - name of function generated
 def generateSwitchingSwitchStatementController(sequenceDict, controller, action, function):
     formattedFunctionStatement = """this.{functionName} = function(plan) {{
     switch (plan) {{ \n"""
@@ -70,6 +65,9 @@ def generateSwitchingSwitchStatementController(sequenceDict, controller, action,
     for (let i = 0; i < this.{planName}List.length; i++) {{
         this.{planName}List[i][0].{actionName}(true);
     }}
+    width = this.{planName}Terms*210;
+    widthstr = width.toString() + "px";
+    document.getElementById("header").style.width = widthstr;
     break; \n"""
     switchEndString = """    default:
     console.log("shouldn't be here");
@@ -81,10 +79,6 @@ def generateSwitchingSwitchStatementController(sequenceDict, controller, action,
                                                          actionName=action))
     controller.write(switchEndString)
 
-# Function that generates the switch statement and function addLine
-# Parameters:
-#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
-#   controller - file handle for controller.js file
 def generateAddLineSwitch(sequenceDict, controller):
     switchEndString = """    default:
     console.log("shouldn't be here");
@@ -107,10 +101,7 @@ switch($scope.selectedPlan) {{ \n"""
         controller.write(formattedAddLineSwitchStatement.format(planName=cleaner.cleanString(plan)))
     controller.write(switchEndString)
 
-# Function that generates the switch statement and function removeLine
-# Parameters:
-#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
-#   controller - file handle for controller.js file
+
 def generateDeleteLineSwitch(sequenceDict, controller):
     switchEndString = """    default:
     console.log("shouldn't be here");
@@ -134,14 +125,3 @@ switch($scope.selectedPlan) {{ \n"""
         controller.write(formmattedDeleteLineSwitchStatement.format(planName=cleaner.cleanString(plan)))
 
     controller.write(switchEndString)
-    
-
-
-   
-
-
- 
-
-   
-
-   
