@@ -3,16 +3,25 @@
 /*body style*/
 body {
     margin: 0;
+    /* highliting the html page */
+    width: fit-content;
+    min-height: 100%;
+    border: 5px dashed blue;
 }
-
+html {
+    /* highliting the html page */
+    /* border: 5px dashed red; */
+    width: fit-content;
+    height: 100%;
+}
 /*Header style*/
 header {
     overflow: hidden;
     padding: 30px 10px;
     text-align: center;
     background-color: #275d38;
-    width: 100%;
     
+    width: 3200px;
 }
         
  /*header link style */
