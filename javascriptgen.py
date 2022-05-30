@@ -72,7 +72,7 @@ def generateSwitchingSwitchStatementController(sequenceDict, controller, action,
     for (let i = 0; i < this.{planName}List.length; i++) {{
         this.{planName}List[i][0].{actionName}(true);
     }}
-    width = this.{planName}Terms*210;
+    width = this.{planName}Terms*210 + 50;
     widthstr = width.toString() + "px";
     document.getElementById("header").style.width = widthstr;
     break; \n"""

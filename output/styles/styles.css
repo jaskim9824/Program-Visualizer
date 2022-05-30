@@ -3,19 +3,21 @@
 /*body style*/
 body {
     margin: 0;
-    /* highliting the html page */
-    width: fit-content;
-    min-height: 100%;
-}
-html {
-    /* highliting the html page */
-    /* border: 5px dashed red; */
     width: fit-content;
     height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
 }
+html {
+    margin: 0;
+    width: fit-content;
+    height: 100%;
+    overflow-x: scroll;
+}
+
 /*Header style*/
 header {
-    overflow-x: hidden;
+    overflow: hidden;
     padding: 30px 10px;
     text-align: center;
     background-color: #275d38;
@@ -54,11 +56,17 @@ header {
 }  
 
 .planhead {
-    text-align: center
+    margin: 0 0 0 0;
+    width: 500px;
+    position: relative;
+    left: 50vw;
 }
     
 .select {
-    text-align: center;
+    margin: 0 0 0 0;
+    width: 500px;
+    position: relative;
+    left: 47.5vw;
 }
       
 .course {
