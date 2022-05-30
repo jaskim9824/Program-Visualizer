@@ -116,15 +116,15 @@ header {
     position: relative;
     display: inline-block;            
 }
-        
-.tooltip .tooltiptextright {
+
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 500px;
     background-color: #555;
     color: #fff;
     text-align: center;           
     border-radius: 6px;
-    padding: 5px 10px;
+    padding: 5px 0;
     position: absolute;
     z-index: 1;
     bottom: 125%;
@@ -133,35 +133,8 @@ header {
     opacity: 0;
     transition: opacity 0.3s;
 }
-
-.tooltip .tooltiptextleft {
-    visibility: hidden;
-    width: 500px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;           
-    border-radius: 6px;
-    padding: 5px 10px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    right: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
         
-.tooltip .tooltiptextright::after {
-    content: "";         
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-}
-
-.tooltip .tooltiptextleft::after {
+.tooltip .tooltiptext::after {
     content: "";         
     top: 100%;
     left: 50%;
@@ -171,15 +144,11 @@ header {
     border-color: #555 transparent transparent transparent;
 }
         
-.tooltip:hover .tooltiptextright {
+.tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
 }
-
-.tooltip:hover .tooltiptextleft {
-    visibility: visible;
-    opacity: 1;
-}
+   
 
 .compelective {
     height: 80px;
