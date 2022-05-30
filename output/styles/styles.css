@@ -5,7 +5,6 @@ body {
     margin: 0;
     width: fit-content;
     height: fit-content;
-    overflow: hidden;
 }
 html {
     margin: 0;
@@ -17,9 +16,7 @@ html {
 
 /*Header style*/
 header {
-    overflow: hidden;
     padding: 30px 10px;
-    text-align: center;
     background-color: #275d38;
 }
         
@@ -116,15 +113,15 @@ header {
     position: relative;
     display: inline-block;            
 }
-
-.tooltip .tooltiptext {
+        
+.tooltip .tooltiptextright {
     visibility: hidden;
     width: 500px;
     background-color: #555;
     color: #fff;
     text-align: center;           
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 5px 10px;
     position: absolute;
     z-index: 1;
     bottom: 125%;
@@ -133,8 +130,35 @@ header {
     opacity: 0;
     transition: opacity 0.3s;
 }
+
+.tooltip .tooltiptextleft {
+    visibility: hidden;
+    width: 500px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;           
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    right: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
         
-.tooltip .tooltiptext::after {
+.tooltip .tooltiptextright::after {
+    content: "";         
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip .tooltiptextleft::after {
     content: "";         
     top: 100%;
     left: 50%;
@@ -144,11 +168,15 @@ header {
     border-color: #555 transparent transparent transparent;
 }
         
-.tooltip:hover .tooltiptext {
+.tooltip:hover .tooltiptextright {
     visibility: visible;
     opacity: 1;
 }
-   
+
+.tooltip:hover .tooltiptextleft {
+    visibility: visible;
+    opacity: 1;
+}
 
 .compelective {
     height: 80px;
