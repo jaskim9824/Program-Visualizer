@@ -18,7 +18,7 @@ The project, in its current state, consists of a Python script `main.py`. The Py
 Excel files containing course and program information along with a template HTML file (`template.html`) 
 and produces an resultant HTML (`index.html`) in the `output` directory alongside the needed
 Javascript files (`index.js` and `controller.js`) in `output/js.` The output directory contains the
-files needed to be uploaded to the web server alongside with the webpage. 
+files needed to be uploaded to the web server alongside with the webpage.
 
 This project is initially designed for only MEC E programs at the University of Alberta, 
 but can be expanded and generalized for any program sequence.
@@ -29,4 +29,5 @@ This project has the following dependencies:
   - BeautifulSoup for generation of the final HTML
   - xlrd for parsing Excel files
   - copy (deepcopy function) in parsing.py to make a deepcopy of course objects for each plan
+  - pyinstaller to convert the Python script into a portable executable
 
