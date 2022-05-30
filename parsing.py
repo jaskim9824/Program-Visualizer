@@ -10,7 +10,7 @@
 # Both functions return the exact same dictionaries. parse() is obsolete and is not used
 # in main.py
 
-# Dependencies: xlrd, json, copy
+# Dependencies: xlrd, copy
 
 # Used in: main.py to generate the HTML page of the course plan visualizer
 
@@ -20,6 +20,7 @@ from copy import deepcopy
 
 class Course:
     # Stores all data about each course
+    # No methods, simply data storage
     def __init__(self, name = "", faculty = "", department = "", course_id = "", subject = "", catalog = "",
         long_title = "", eff_date = "", status = "", calendar_print = "", prog_units = "",
         engineering_units = "", calc_fee_index = "", actual_fee_index = "", duration = "",
@@ -546,6 +547,94 @@ def pullSeq(filename, course_obj_dict):
     return course_seq
 
 
+def checkReqs(course_seq):
+    # Checks that all coreqs for a course are taken in the same term,
+    # if not, the coreq is changed to become a prereq. Similarly,
+    # if a coreq is actually taken before a course in a certain plan,
+    # that coreq is changed to a prereq for that course.
+    #
+    # Arguments:
+    #   course_seq (dict): Stores course data in proper sequence:
+    #       key: Plan Name (string): name of the sheet from "Sequencing.xls"
+    #       ("Traditional", "Co-op Plan 1", etc.)
+    #       value: dict with key as term name ("Term 1", "Term 2", etc.)
+    #
+    # Returns:
+    #   course_seq (dict): Stores course data in proper sequence:
+    #       key: Plan Name (string): name of the sheet from "Sequencing.xls"
+    #       ("Traditional", "Co-op Plan 1", etc.)
+    #       value: dict with key as term name ("Term 1", "Term 2", etc.)
+    #       and value as a list of Course objects to be taken in that term.
+    #       The coreq and prereq attributes may or may not have been modified.
+
+    for plan in course_seq:
+        # We have to check the sequencing for each plan as courses are taken
+        # at different times in different plans
+        all_names = []  # stores all of the names of the courses to be taken in this plan
+        for term in course_seq[plan]:
+            # Pulling all of the course names in this plan
+            for course in course_seq[plan][term]:
+                course_name = course.name
+                course_name = course_name.replace(" ", "")
+                course_name = course_name.replace("or", " or ")
+                all_names.append(course_name)
+
+        for term in course_seq[plan]:
+            term_names = []  # stores all of the names of the courses to be taken in this term
+            for course in course_seq[plan][term]:
+                # Pulling all of the course names in this term
+                course_name = course.name
+                course_name = course_name.replace(" ", "")
+                course_name = course_name.replace("or", " or ")
+                term_names.append(course_name)
+
+            for course in course_seq[plan][term]:
+                for coreq in course.coreqs:
+                    # For each coreq for a certain course, if there are multiple options
+                    # (MATH 100 or MATH 114 or...) then only keep those that are displayed
+                    # in this plan. eg: Coreqs: MATH 100 or MATH 114, if only MATH 100 is 
+                    # available in this plan, discard MATH 114 and keep MATH 100.
+                    coreqlist = coreq.split(" or ")
+
+                    i = 0
+                    while i < len(coreqlist):
+                        if coreqlist[i] not in all_names:
+                            # If the coreq is not available in this plan, delete it
+                            del coreqlist[i]
+                            continue
+                        i += 1
+
+                    if coreqlist != []:
+                        if coreqlist[0] not in term_names:
+                            # The coreq course in not taken in the same term,
+                            # it is really a prereq
+                            course.prereqs.append(coreqlist[0])
+                            del course.coreqs[course.coreqs.index(coreq)]
+
+                # Analagous situation but for prereqs (not coreqs)
+                for prereq in course.prereqs:
+                    # For each prereq for a certain course, if there are multiple options
+                    # (MATH 100 or MATH 114 or...) then only keep those that are displayed
+                    # in this plan. eg: Prereqs: MATH 100 or MATH 114, if only MATH 100 is 
+                    # available in this plan, discard MATH 114 and keep MATH 100.
+                    prereqlist = prereq.split(" or ")
+                    i = 0
+                    while i < len(prereqlist):
+                        # If the prereq is not available in this plan, delete it
+                        if prereqlist[i] not in all_names:
+                            del prereqlist[i]
+                            continue
+                        i += 1
+
+                    if prereqlist != []:
+                        if prereqlist[0] in term_names:
+                            # The prereq course in not taken in the same term,
+                            # it is really a coreq
+                            course.coreqs.append(prereqlist[0])
+                            del course.prereqs[course.prereqs.index(prereq)]
+    return course_seq
+
+
 def parse(filename):
     # Parses a JSON file with name *filename* created with the
     # Matlab script "parsing.m" (all in current folder).
@@ -627,6 +716,10 @@ def parse(filename):
     # Sequencing.xls
     course_seq = {}
     course_seq = pullSeq("Sequencing.xls", course_obj_dict)
+
+    # Make sure that co-reqs are only for courses in the same term
+    # Had to do this after pulling from Sequencing.xls
+    course_seq = checkReqs(course_seq)
 
     return course_seq, course_obj_dict
 
@@ -720,91 +813,3 @@ def parseInPy(filename):
     course_seq = checkReqs(course_seq)
 
     return course_seq, course_obj_dict
-
-
-def checkReqs(course_seq):
-    # Checks that all coreqs for a course are taken in the same term,
-    # if not, the coreq is changed to become a prereq. Similarly,
-    # if a coreq is actually taken before a course in a certain plan,
-    # that coreq is changed to a prereq for that course.
-    #
-    # Arguments:
-    #   course_seq (dict): Stores course data in proper sequence:
-    #       key: Plan Name (string): name of the sheet from "Sequencing.xls"
-    #       ("Traditional", "Co-op Plan 1", etc.)
-    #       value: dict with key as term name ("Term 1", "Term 2", etc.)
-    #
-    # Returns:
-    #   course_seq (dict): Stores course data in proper sequence:
-    #       key: Plan Name (string): name of the sheet from "Sequencing.xls"
-    #       ("Traditional", "Co-op Plan 1", etc.)
-    #       value: dict with key as term name ("Term 1", "Term 2", etc.)
-    #       and value as a list of Course objects to be taken in that term.
-    #       The coreq and prereq attributes may or may not have been modified.
-
-    for plan in course_seq:
-        # We have to check the sequencing for each plan as courses are taken
-        # at different times in different plans
-        all_names = []  # stores all of the names of the courses to be taken in this plan
-        for term in course_seq[plan]:
-            # Pulling all of the course names in this plan
-            for course in course_seq[plan][term]:
-                course_name = course.name
-                course_name = course_name.replace(" ", "")
-                course_name = course_name.replace("or", " or ")
-                all_names.append(course_name)
-
-        for term in course_seq[plan]:
-            term_names = []  # stores all of the names of the courses to be taken in this term
-            for course in course_seq[plan][term]:
-                # Pulling all of the course names in this term
-                course_name = course.name
-                course_name = course_name.replace(" ", "")
-                course_name = course_name.replace("or", " or ")
-                term_names.append(course_name)
-
-            for course in course_seq[plan][term]:
-                for coreq in course.coreqs:
-                    # For each coreq for a certain course, if there are multiple options
-                    # (MATH 100 or MATH 114 or...) then only keep those that are displayed
-                    # in this plan. eg: Coreqs: MATH 100 or MATH 114, if only MATH 100 is 
-                    # available in this plan, discard MATH 114 and keep MATH 100.
-                    coreqlist = coreq.split(" or ")
-
-                    i = 0
-                    while i < len(coreqlist):
-                        if coreqlist[i] not in all_names:
-                            # If the coreq is not available in this plan, delete it
-                            del coreqlist[i]
-                            continue
-                        i += 1
-
-                    if coreqlist != []:
-                        if coreqlist[0] not in term_names:
-                            # The coreq course in not taken in the same term,
-                            # it is really a prereq
-                            course.prereqs.append(coreqlist[0])
-                            del course.coreqs[course.coreqs.index(coreq)]
-
-                # Analagous situation but for prereqs (not coreqs)
-                for prereq in course.prereqs:
-                    # For each prereq for a certain course, if there are multiple options
-                    # (MATH 100 or MATH 114 or...) then only keep those that are displayed
-                    # in this plan. eg: Prereqs: MATH 100 or MATH 114, if only MATH 100 is 
-                    # available in this plan, discard MATH 114 and keep MATH 100.
-                    prereqlist = prereq.split(" or ")
-                    i = 0
-                    while i < len(prereqlist):
-                        # If the prereq is not available in this plan, delete it
-                        if prereqlist[i] not in all_names:
-                            del prereqlist[i]
-                            continue
-                        i += 1
-
-                    if prereqlist != []:
-                        if prereqlist[0] in term_names:
-                            # The prereq course in not taken in the same term,
-                            # it is really a coreq
-                            course.coreqs.append(prereqlist[0])
-                            del course.prereqs[course.prereqs.index(prereq)]
-    return course_seq
