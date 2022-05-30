@@ -33,4 +33,9 @@ class Line {
             }, 200);
         }
     }
+    position() {
+        if (this.line != null) {
+            this.line.position();
+        }
+    }
 }

@@ -76,6 +76,10 @@ header {
     width: 150px;
     margin-bottom: 50px;
 }
+
+.course:hover {
+    background-color: #f2cd00;
+}
     
 .embed {
     text-align: center;
