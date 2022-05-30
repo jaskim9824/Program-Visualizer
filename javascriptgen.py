@@ -3,12 +3,12 @@
 # Oversight: Dr. David Nobes
 # University of Alberta, Summer 2022, Curriculum Development Co-op Term
 
-# This file contains all the functions neccessary to generate the inital JS 
-# before the placement of the courses on the diagram
+# This file contains all the functions neccessary to generate the JS of the 
+# webpage which is not releated to the generation of the lines
 
-from distutils.command import clean
+# Dependencies: cleaner
+
 import cleaner
-from main import placeLines
 
 # Function that generates the JS before the generation of the course diagram
 # Parameters:
