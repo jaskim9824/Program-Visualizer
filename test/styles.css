@@ -63,6 +63,16 @@ header {
     width: 150px;
     margin-bottom: 50px;
 }
+
+.course-highlighted {
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    height: 50px;
+    width: 150px;
+    margin-bottom: 50px;
+    background-color: #f2cd00;
+}
     
 .embed {
     text-align: center;

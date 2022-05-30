@@ -408,6 +408,11 @@ evaluating as null -->
         this.planCList = [];
         this.planDList = [];
 
+        this.planAclicked = [];
+        this.planBclicked = [];
+        this.planCclicked = [];
+        this.planDclicked = [];
+
         // this is used to ensure the controller knows which plan the webpage is switching from
         this.previousPlan = $scope.selectedPlan;
 
@@ -645,6 +650,7 @@ evaluating as null -->
     
         // add a listener for every possible course, following the below format
         $scope.ece101Listener = function () {
+            var element = document.getElementById("ECE 101")
             if (!ece101flag) {
                 // call getter function to get all lines belonging to course
                 // call addLine() for every single line
@@ -653,6 +659,8 @@ evaluating as null -->
                 that.addLine(getLine1());
                 // that.addLine(getLine2());
                 // that.addLine(getLine4());
+                element.classList.remove("course");
+                element.classList.add("course-highlighted");
                 ece101flag = true;
             }
             else {
@@ -663,6 +671,8 @@ evaluating as null -->
                 that.removeLine(getLine1());
                 // that.removeLine(getLine2());
                 // that.removeLine(getLine4());
+                element.classList.remove("course-highlighted");
+                element.classList.add("course");
                 ece101flag = false;
             }
         };

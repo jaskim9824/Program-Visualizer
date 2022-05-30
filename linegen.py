@@ -98,24 +98,40 @@ def placeLines(courseList, indexJS, lineManager, plan):
 #   plan - name of plan 
 def placeClickListeners(courseList, controller, lineManager, plan):
     formattedListener = "$scope.{courseName}Listener = function () {{\n"
+    formattedElementGetter = "  var {courseName}element = document.getElementById(\"{courseName}\");\n"
     formattedIf = " if (!{courseName}flag) {{\n"
     formattedStatement = "      that.{action}Line(getLine{num}());\n"
+    formattedHighlightStatement = "     {courseName}element.classList.{action}(\"{className}\");\n"
 
     for course in courseList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan) 
         # if course has lines that it owns, create a click listener
         if courseID in lineManager.getCourseLineDict():
             controller.write(formattedListener.format(courseName=courseID))
+            controller.write(formattedElementGetter.format(courseName=courseID))
             controller.write(formattedIf.format(courseName=courseID))
 
             for line in lineManager.getCourseLineDict()[courseID]:
                 controller.write(formattedStatement.format(action="add", num=line))
-        
+            
+            controller.write(formattedHighlightStatement.format(courseName=courseID,
+                                                                action="remove",
+                                                                className="course"))
+            controller.write(formattedHighlightStatement.format(courseName=courseID,
+                                                                action="add",
+                                                                className="course-highlighted"))
             controller.write("      " +courseID+"flag=true\n")
             controller.write("  }\n else {\n")
 
             for line in lineManager.getCourseLineDict()[courseID]:
                 controller.write(formattedStatement.format(action="remove", num=line))
+
+            controller.write(formattedHighlightStatement.format(courseName=courseID,
+                                                                action="remove",
+                                                                className="course-highlighted"))
+            controller.write(formattedHighlightStatement.format(courseName=courseID,
+                                                                action="add",
+                                                                className="course"))
             
             controller.write("      " +courseID+"flag=false\n")
             controller.write("  }\n};\n")
