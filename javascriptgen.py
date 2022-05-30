@@ -12,8 +12,8 @@ import cleaner
 
 # Function that generates the JS before the generation of the course diagram
 # Parameters:
-#   controller: file handle to controller JS file
-#   sequenceDict: dict of plan sequence
+#   controller - file handle to controller.js file
+#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 def intializeControllerJavaScript(controller, sequenceDict):
     generateIntitalBlockController(controller, sequenceDict)
     generatePlanBasedBlocksController(controller, sequenceDict)
@@ -21,7 +21,7 @@ def intializeControllerJavaScript(controller, sequenceDict):
 
 # Function that generates the intital block of Javascript
 # Parameters:
-#   controller: file handle to controller JS file
+#   controller - file handle for controller.js file
 def generateIntitalBlockController(controller, sequenceDict):
     planList = list(sequenceDict.keys())
     controller.write("var app = angular.module(\"main\", []);\n")
@@ -46,8 +46,8 @@ Array.prototype.forEach.call(radios, function (radio) {
 # Function that generates the blocks of the controller JS that is dependent
 # on the number and names of plans provided
 # Parameters:
-#   sequenceDict: dict of plan sequence
-#   controller: file handle to controller JS file
+#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
+#   controller - file handle for controller.js file
 def generatePlanBasedBlocksController(controller, sequenceDict):
     for plan in sequenceDict:
         controller.write("this." + cleaner.cleanString(plan) + "List = [];\n")
@@ -56,6 +56,13 @@ def generatePlanBasedBlocksController(controller, sequenceDict):
     generateAddLineSwitch(sequenceDict, controller)
     generateDeleteLineSwitch(sequenceDict, controller)
 
+# Function that generates the switch statements and functions which handle
+# plan switching
+# Parameters:
+#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
+#   controller - file handle for controller.js file
+#   action - name of action done within function
+#   function - name of function generated
 def generateSwitchingSwitchStatementController(sequenceDict, controller, action, function):
     formattedFunctionStatement = """this.{functionName} = function(plan) {{
     switch (plan) {{ \n"""
@@ -74,6 +81,10 @@ def generateSwitchingSwitchStatementController(sequenceDict, controller, action,
                                                          actionName=action))
     controller.write(switchEndString)
 
+# Function that generates the switch statement and function addLine
+# Parameters:
+#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
+#   controller - file handle for controller.js file
 def generateAddLineSwitch(sequenceDict, controller):
     switchEndString = """    default:
     console.log("shouldn't be here");
@@ -96,7 +107,10 @@ switch($scope.selectedPlan) {{ \n"""
         controller.write(formattedAddLineSwitchStatement.format(planName=cleaner.cleanString(plan)))
     controller.write(switchEndString)
 
-
+# Function that generates the switch statement and function removeLine
+# Parameters:
+#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
+#   controller - file handle for controller.js file
 def generateDeleteLineSwitch(sequenceDict, controller):
     switchEndString = """    default:
     console.log("shouldn't be here");
