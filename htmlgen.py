@@ -56,13 +56,15 @@ def placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManag
 #   plan - name of plan whose terms are being placed
 #   lineManager - line manager object, used to handle line placement and generation
 def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManager):
+    termcounter = 0
     for term in planDict:
         termDiv = soup.new_tag("div", attrs={"class":"term"})
         termHeader = soup.new_tag("h3", attrs={"class":"termheader"})
         termHeader.append(term)
         termDiv.append(termHeader)
-        placeCourses(termDiv, planDict[term], soup, controller, plan)
+        placeCourses(termDiv, planDict[term], soup, controller, plan, termcounter)
         planTag.append(termDiv)
+        termcounter += 1
     courseList = []
     for courses in planDict.values():
         courseList += courses
@@ -76,7 +78,7 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
 #   soup - soup object, used to create HTML tags
 #   controller - file handle for controller.js, used to write to controller.js
 #   plan - name of plan whose terms are being placed
-def placeCourses(termTag, termList, soup, controller, plan):
+def placeCourses(termTag, termList, soup, controller, plan, termcounter):
     for course in termList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan)
         courseContDiv = soup.new_tag("div", attrs={"class":"coursecontainer"})
@@ -92,7 +94,10 @@ def placeCourses(termTag, termList, soup, controller, plan):
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip", 
                                                 "id": courseID, 
                                                 "ng-click":courseID+"Listener()" })
-        courseDisc = soup.new_tag("p", attrs={"class":"tooltiptext"})
+        if termcounter < 6:
+            courseDisc = soup.new_tag("p", attrs={"class":"tooltiptextright"})
+        else:
+            courseDisc = soup.new_tag("p", attrs={"class":"tooltiptextleft"})
         courseDisc.append(course.course_description)
         courseHeader = soup.new_tag("h3", attrs={"class":"embed"})
         courseHeader.append(course.name)
