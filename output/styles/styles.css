@@ -4,12 +4,13 @@
 body {
     margin: 0;
     width: fit-content;
-    height: 100%;
+    height: fit-content;
+    overflow: hidden;
 }
 html {
     margin: 0;
     width: fit-content;
-    height: 100%;
+    height: fit-content;
     overflow-x: scroll;
     overflow-y: scroll;
 }
@@ -76,6 +77,8 @@ header {
     width: 150px;
     margin-bottom: 50px;
 }
+<<<<<<< HEAD
+=======
 
 .course:hover {
     background-color: #f2cd00;
@@ -90,6 +93,7 @@ header {
     margin-bottom: 50px;
     background-color: #f2cd00;
 }
+>>>>>>> e71486c9445384fe8b69b052564619cb202c916c
     
 .embed {
     text-align: center;
@@ -116,7 +120,7 @@ header {
     display: inline-block;            
 }
         
-.tooltip .tooltiptext {
+.tooltip .tooltiptextright {
     visibility: hidden;
     width: 500px;
     background-color: #555;
@@ -132,8 +136,35 @@ header {
     opacity: 0;
     transition: opacity 0.3s;
 }
+
+.tooltip .tooltiptextleft {
+    visibility: hidden;
+    width: 500px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;           
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    right: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
         
-.tooltip .tooltiptext::after {
+.tooltip .tooltiptextright::after {
+    content: "";         
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip .tooltiptextleft::after {
     content: "";         
     top: 100%;
     left: 50%;
@@ -143,7 +174,12 @@ header {
     border-color: #555 transparent transparent transparent;
 }
         
-.tooltip:hover .tooltiptext {
+.tooltip:hover .tooltiptextright {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip:hover .tooltiptextleft {
     visibility: visible;
     opacity: 1;
 }
