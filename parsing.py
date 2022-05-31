@@ -755,20 +755,21 @@ def pullCategories(course_obj_dict, filename):
         book = xlrd.open_workbook(filename)
         sheet = book.sheet_by_index(0)
         for col in range(0, sheet.ncols):
+            cat_name = str(sheet.cell_value(0, col))
             if "." in str(sheet.cell_value(1, col)):
                 dotindex = str(sheet.cell_value(1, col)).find(".")
                 cell_val = str(sheet.cell_value(1, col))[:dotindex]
             else:
                 cell_val = str(sheet.cell_value(1, col))
-            if sheet.cell_value(0, col) == "COMP":
+            if cat_name.upper().strip() == "COMP":
                 course_obj_dict["Complementary Elective"] = Course(name = "Complementary Elective", 
                     course_description="A complementary elective of the student's choice. Please consult the calendar for more information.",
                     category = "Complementary Elective", color = cell_val)
-            if sheet.cell_value(0, col) == "PROG":
+            if cat_name.upper().strip() == "PROG":
                 course_obj_dict["Program/Technical Elective"] = Course(name = "Program/Technical Elective", 
                     course_description="A program/technical elective of the student's choice. Please consult the calendar for more information.",
                     category = "Program/Technical Elective", color = cell_val)
-            if sheet.cell_value(0, col) == "ITS":
+            if cat_name.upper().strip() == "ITS":
                 course_obj_dict["ITS Elective"] = Course(name = "ITS Elective", 
                     course_description="An ITS elective of the student's choice. Please consult the calendar for more information.",
                     category = "ITS Elective", color = cell_val)
@@ -780,7 +781,7 @@ def pullCategories(course_obj_dict, filename):
                 name.strip()
                 name.replace("  ", " ")
                 if name in course_obj_dict:
-                    course_obj_dict[name].category = sheet.cell_value(0, col)
+                    course_obj_dict[name].category = cat_name
                     course_obj_dict[name].color = cell_val
     except FileNotFoundError:
         print("CourseCategories.xls is not in the current folder")
