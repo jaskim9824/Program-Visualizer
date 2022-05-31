@@ -68,6 +68,7 @@ def main():
 
             #placing the HTML and generating JS based on the courses (drawing lines)
             htmlgen.placeRadioInputs(formTag, sequenceDict, soup)
+            htmlgen.placeLegend(displayTag, sequenceDict, soup)
             htmlgen.placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager)
 
             #closing JS files

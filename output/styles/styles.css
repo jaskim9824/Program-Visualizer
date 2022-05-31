@@ -108,7 +108,38 @@ header {
     margin-bottom: 50px;
     background-color: #f2cd00!important;
 }
-    
+
+.MATH:hover {
+    background-color: #ff5050;
+}
+
+.MATH-highlighted {
+    background-color: #ff5050;
+}
+
+.BASICSCIENCES:hover {
+    background-color: #99ff99;
+}
+
+.BASICSCIENCES-highlighted {
+    background-color: #99ff99;
+}
+
+.ENGINEERINGSCIENCES:hover {
+    background-color: #66ccff;
+}
+
+.ENGINEERINGSCIENCES-highlighted {
+    background-color: #66ccff;
+}
+
+.ENGINEERINGDESIGN:hover {
+    background-color: #ff9900;
+}
+
+.ENGINEERINGDESIGN-highlighted {
+    background-color: #ff9900;
+}
 .embed {
     text-align: center;
 }

@@ -1,5 +1,4 @@
-# Author: Jason Kim
-# Collaborators: Zachary Schmidt, Moaz Abdelmonem
+# Authors: Jason Kim, Zachary Schmidt, Moaz Abdelmonem
 # Oversight: Dr. David Nobes
 # University of Alberta, Summer 2022, Curriculum Development Co-op Term
 
@@ -31,16 +30,15 @@ def placeRadioInputs(formTag, sequenceDict, soup):
         formTag.append(labelTag)
         formTag.append(breakTag)
 
-# Function that places the outer divs representing each plan
+
+# Places the legend for the categories of courses (math, basic sciences, design, etc.)
+# Pulls the categories and colors from sequenceDict, which has these values as two of
+# its attributes
 # Parameters:
 #   displayTag - HTML tag representing outer display div where the different plan sequences are placed
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   soup - soup object, used to create HTML tags
-#   indexJS - file handle for index.js, used to write to index.js
-#   controller - file handle for controller.js, used to write to controller.js
-#   lineManager - line manager object, used to handle line placement and generation
-def placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager):
-
+def placeLegend(displayTag, sequenceDict, soup):
     categoryDict = {}
     for plan in sequenceDict:
         for term in sequenceDict[plan]:
@@ -50,12 +48,23 @@ def placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManag
 
     categories = soup.new_tag("div", attrs={"id":"categories"})
     for category in categoryDict:
-            coursecat = soup.new_tag("p", attrs={"id": category,
+        coursecat = soup.new_tag("p", attrs={"id": category,
                                         "style":"background-color:#" + categoryDict[category]})
-            coursecat.append(category)
-            categories.append(coursecat)
+        coursecat.append(category)
+        categories.append(coursecat)
 
     displayTag.append(categories)
+
+
+# Function that places the outer divs representing each plan
+# Parameters:
+#   displayTag - HTML tag representing outer display div where the different plan sequences are placed
+#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
+#   soup - soup object, used to create HTML tags
+#   indexJS - file handle for index.js, used to write to index.js
+#   controller - file handle for controller.js, used to write to controller.js
+#   lineManager - line manager object, used to handle line placement and generation
+def placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager):
 
     for plan in sequenceDict:
         switchInput = soup.new_tag("div", attrs={"id":cleaner.cleanString(plan),
