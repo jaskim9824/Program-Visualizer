@@ -84,7 +84,7 @@ header {
 }
 
 .course:hover {
-    background-color: #f2cd00;
+    background-color: #f2cd00!important;
 }
 
 .mathCourse:hover{
@@ -106,7 +106,7 @@ header {
     height: 50px;
     width: 150px;
     margin-bottom: 50px;
-    background-color: #f2cd00;
+    background-color: #f2cd00!important;
 }
     
 .embed {

@@ -100,38 +100,75 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter):
     for course in termList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan)
         courseContDiv = soup.new_tag("div", attrs={"class":"coursecontainer"})
+
+        if (course.name == "Complementary Elective") or (course.name == "Program/Technical Elective") or (course.name == "ITS Elective"):
+            # Formatting tooltip for elective: title is present but credits, availability, etc. are blank
+            courseTitle = soup.new_tag("b", attrs={"class":"descriptiontitle"})
+            courseTitle.append(course.name)
+
+            courseLine = soup.new_tag("hr", attrs={"class":"descriptionline"})
+
+            courseCredits = soup.new_tag("p", attrs={"class":"descriptioncredits"})
+
+            courseFeeIndex = soup.new_tag("i", attrs={"class":"descriptionfeeindex"})
+
+            courseTermAvail = soup.new_tag("p", attrs={"class":"descriptionavailability"})
+
+            courseAlphaHours = soup.new_tag("p", attrs={"class":"descriptionalphahours"})
+
         if course.name == "Complementary Elective":
+            # Class allows formatting so words fit in course box
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip compelective", 
                                                "id": courseID, 
                                                "ng-click":courseID+"Listener()",
                                                "style":"background-color:#" + course.color})
+
         elif course.name == "Program/Technical Elective":
+            # Class allows formatting so words fit in course box
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip progelective", 
                                                "id": courseID, 
                                                "ng-click":courseID+"Listener()",
                                                "style":"background-color:#" + course.color})
-        else:
+
+        elif course.name == "ITS Elective":
+            # Class allows formatting so words fit in course box
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip", 
                                                 "id": courseID, 
                                                 "ng-click":courseID+"Listener()",
                                                 "style":"background-color:#" + course.color})
+
+        else:
+            # This is a regular course. All information should be available
+            courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip", 
+                                                "id": courseID, 
+                                                "ng-click":courseID+"Listener()",
+                                                "style":"background-color:#" + course.color})
+            courseTitle = soup.new_tag("b", attrs={"class":"descriptiontitle"})
+            courseTitle.append(course.name + " - " + course.long_title)
+
+            courseLine = soup.new_tag("hr", attrs={"class":"descriptionline"})
+
+            courseCredits = soup.new_tag("p", attrs={"class":"descriptioncredits"})
+            courseCredits.append(html.unescape("&#9733 ") + course.engineering_units + " ")
+
+            courseFeeIndex = soup.new_tag("i", attrs={"class":"descriptionfeeindex"})
+            courseFeeIndex.append("(" + "fi " + course.calc_fee_index + ")" + " ")
+
+            courseTermAvail = soup.new_tag("p", attrs={"class":"descriptionavailability"})
+            courseTermAvail.append("(" + course.duration + ", ")
+
+            courseAlphaHours = soup.new_tag("p", attrs={"class":"descriptionalphahours"})
+            courseAlphaHours.append(course.alpha_hours + ")" + " ")
+
+        # Prevent tooltip from being off screen
         if termcounter < 6:
             courseDisc = soup.new_tag("div", attrs={"class":"tooltiptextright"})
         else:
             courseDisc = soup.new_tag("div", attrs={"class":"tooltiptextleft"})
-        courseTitle = soup.new_tag("b", attrs={"class":"descriptiontitle"})
-        courseTitle.append(course.name + " - " + course.long_title)
-        courseLine = soup.new_tag("hr", attrs={"class":"descriptionline"})
-        courseCredits = soup.new_tag("p", attrs={"class":"descriptioncredits"})
-        courseCredits.append(html.unescape("&#9733 ") + course.engineering_units + " ")
-        courseFeeIndex = soup.new_tag("i", attrs={"class":"descriptionfeeindex"})
-        courseFeeIndex.append("(" + "fi " + course.calc_fee_index + ")" + " ")
-        courseTermAvail = soup.new_tag("p", attrs={"class":"descriptionavailability"})
-        courseTermAvail.append("(" + course.duration + ", ")
-        courseAlphaHours = soup.new_tag("p", attrs={"class":"descriptionalphahours"})
-        courseAlphaHours.append(course.alpha_hours + ")" + " ")
+
         courseDescription = soup.new_tag("p", attrs={"class":"fulldescription"})
         courseDescription.append(course.course_description)
+
         courseDisc.append(courseTitle)
         courseDisc.append(courseLine)
         courseDisc.append(courseCredits)
@@ -139,6 +176,7 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter):
         courseDisc.append(courseTermAvail)
         courseDisc.append(courseAlphaHours)
         courseDisc.append(courseDescription)
+
         courseHeader = soup.new_tag("h3", attrs={"class":"embed"})
         courseHeader.append(course.name)
         courseDiv.append(courseHeader)
