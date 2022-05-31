@@ -767,7 +767,7 @@ def pullCategories(course_obj_dict, filename):
                 name.replace("  ", " ")
                 if name in course_obj_dict:
                     course_obj_dict[name].category = sheet.cell_value(0, col)
-                    course_obj_dict[name].color = sheet.cell_value(1, col)
+                    course_obj_dict[name].color = sheet.cell_value(1, col).lower()
     except FileNotFoundError:
         print("CourseCategories.xls is not in the current folder")
 

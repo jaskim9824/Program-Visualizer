@@ -88,19 +88,17 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter):
         if course.name == "Complementary Elective":
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip compelective", 
                                                "id": courseID, 
-                                               "ng-click":courseID+"Listener()" })
+                                               "ng-click":courseID+"Listener()",
+                                               "style":"background-color:#" + course.color})
         elif course.name == "Program/Technical Elective":
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip progelective", 
                                                "id": courseID, 
-                                               "ng-click":courseID+"Listener()" })
-        elif course.name in mathCourses:
-            courseDiv = soup.new_tag("div",attrs= {"class":"mathCourse tooltip", 
-                                               "id": courseID, 
-                                               "ng-click":courseID+"Listener()" })
-        else:
+                                               "ng-click":courseID+"Listener()",
+                                               "style":"background-color:#" + course.color})
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip", 
                                                 "id": courseID, 
-                                                "ng-click":courseID+"Listener()" })
+                                                "ng-click":courseID+"Listener()",
+                                                "style":"background-color:#" + course.color})
         if termcounter < 6:
             courseDisc = soup.new_tag("div", attrs={"class":"tooltiptextright"})
         else:
