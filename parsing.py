@@ -14,7 +14,6 @@
 
 # Used in: main.py to generate the HTML page of the course plan visualizer
 
-# import json
 import xlrd
 from copy import deepcopy
 
@@ -24,7 +23,7 @@ class Course:
     def __init__(self, name = "", faculty = "", department = "", course_id = "", subject = "", catalog = "",
         long_title = "", eff_date = "", status = "", calendar_print = "", prog_units = "",
         engineering_units = "", calc_fee_index = "", actual_fee_index = "", duration = "",
-        alpha_hours = "", course_description = "", prereqs = [], coreqs = [], reqs = []):
+        alpha_hours = "", course_description = "", category = "", color = "", prereqs = [], coreqs = [], reqs = []):
 
         self.name = str(name)
         self.faculty = str(faculty)
@@ -43,9 +42,74 @@ class Course:
         self.duration = str(duration)
         self.alpha_hours = str(alpha_hours)
         self.course_description = str(course_description)
+        self.category = str(category)
+        self.color = str(color)
         self.prereqs = prereqs
         self.coreqs = coreqs
         self.reqs = reqs
+
+
+def parse(filename):
+    # Parses a .xls (NOT .xlsx) file with the name *filename*
+    # and stores all relevant course information (including
+    # sequencing information from the Sequencing.xls file) in
+    # two separate dictionaries.
+    #
+    # Arguments:
+    #   filename (string): name of the .xls file with course information
+    # Returns:
+    #   course_seq (dict): Stores course data in proper sequence:
+    #       key: Plan Name (string): name of the sheet from "Sequencing.xls"
+    #       ("Traditional", "Co-op Plan 1", etc.)
+    #       value: dict with key as term name ("Term 1", "Term 2", etc.)
+    #       and value as a list of Course objects to be taken in that term
+    #   course_obj_dict (dict): Stores all course data:
+    #       key: Course Name (string): the Subject + " " + Catalog of a course
+    #       value: Course object. Stores all data about a course
+
+    try:
+        book = xlrd.open_workbook(filename)
+        sheet = book.sheet_by_index(0)  # course info must be on the first sheet
+        course_obj_dict = {}
+        for row in range(1, sheet.nrows):
+            # Each row stores info about one course, first row is headers
+            # FIXME: Formatting is very strict
+            faculty = sheet.cell_value(row, 0)
+            department = sheet.cell_value(row, 1)
+            course_id = sheet.cell_value(row, 2)
+            subject = sheet.cell_value(row , 3)
+            catalog = sheet.cell_value(row, 4)
+            long_title = sheet.cell_value(row, 5)
+            eff_date = sheet.cell_value(row, 6)
+            status = sheet.cell_value(row, 7)
+            calendar_print = sheet.cell_value(row, 8)
+            prog_units = sheet.cell_value(row, 9)
+            engg_units = sheet.cell_value(row, 10)
+            calc_fee_index = sheet.cell_value(row, 11)
+            actual_fee_index = sheet.cell_value(row, 12)
+            duration = sheet.cell_value(row, 13)
+            alpha_hours = sheet.cell_value(row, 14)
+            course_description = sheet.cell_value(row, 15)
+
+            course_name = subject + " " + catalog
+            # Remove unnecessary whitespace
+            course_name = course_name.strip()
+            course_name = course_name.replace("  ", " ")
+
+            course_obj_dict[course_name] = (Course(course_name, faculty,
+            department, course_id, subject, catalog, long_title,
+            eff_date, status, calendar_print, prog_units, engg_units,
+            calc_fee_index, actual_fee_index, duration, alpha_hours,
+            course_description))
+
+        course_obj_dict = pullCategories(course_obj_dict, "CourseCategories.xls")
+
+        course_seq, course_obj_dict = pullDependencies(course_obj_dict)
+
+        return course_seq, course_obj_dict
+
+    except FileNotFoundError:
+        print("Excel file not found, ensure it is present and the name is correct.")
 
 
 def splitLine(filename, contents):
@@ -635,59 +699,24 @@ def checkReqs(course_seq):
     return course_seq
 
 
-def parse(filename):
-    # Parses a JSON file with name *filename* created with the
-    # Matlab script "parsing.m" (all in current folder).
-    # The data are extracted and stored in a dict
-    # 
-    # Arguments:
-    #    filename (string): name of the .json file to be processed
+def pullDependencies(course_obj_dict):
+    # Pulls all course dependencies (prerequisites, corequisites, and
+    # requisites) for each course in course_obj_dict and stores these
+    # dependencies as attributes in course_obj_dict. Sequencing information
+    # is also pulled (which courses are taken in which term).
     #
+    # Arguments:
+    #   course_obj_dict (dict): Stores all course data:
+    #       key: Course Name (string): the Subject + " " + Catalog of a course
+    #       value: Course object. Stores all data about a course
     # Returns:
     #   course_seq (dict): Stores course data in proper sequence:
     #       key: Plan Name (string): name of the sheet from "Sequencing.xls"
     #       ("Traditional", "Co-op Plan 1", etc.)
     #       value: dict with key as term name ("Term 1", "Term 2", etc.)
     #       and value as a list of Course objects to be taken in that term
-    #   course_obj_dict (dict): Stores all course data:
-    #       key: Course Name (string): the Subject + " " + Catalog of a course
-    #       value: Course object. Stores all data about a course
-    
-    try:
-        with open(filename, "r") as f:
-            contents = f.read()
-            if "\n" in contents:
-                # File is not in proper format, display error & quit
-                print("Please format the JSON file properly")
-                print("Re-run the MATLAB script \"parsing.m\" to do so")
-                quit()
-    except FileNotFoundError:
-        print("parsed.json file not found")
-        print("Please run the MATLAB script \"parsing.m\".")
-        quit()
-            
-    splitLine(filename, contents)
-
-    course_list = []  # Stores courses as an array of dicts
-    with open(filename, "r") as f:
-        for json_obj in f:
-            course_list.append(json.loads(json_obj))
-
-    course_obj_dict = {}
-    # Key: Course Name (Subject + " " + Catalog eg: MEC E 340)
-    # Value: Course object
-    for course in course_list:
-        course_name = course["Subject"] + " " + course["Catalog"]
-        course_name = course_name.strip()
-        course_name = course_name.replace("  ", " ")
-        course_obj_dict[course_name] = (Course(course_name, course["Faculty"], course["Department"],
-        course["CourseID"], course["Subject"], course["Catalog"], course["LongTitle"],
-        course["EffDate"], course["Status"], course["CalendarPrint"],
-        course["ProgUnits"], course["EngineeringUnits"], course["Calc_FeeIndex"],
-        course["ActualFeeIndex"], course["Duration"], course["AlphaHours"],
-        course["CourseDescription"]))
-
-    f.close()
+    #   course_obj_dict (dict): the prereqs, coreqs, and reqs attributes should
+    #       be filled in
 
     for course in course_obj_dict:
         # Pulling pre-reqs, co-reqs, and requisites for each course
@@ -724,92 +753,22 @@ def parse(filename):
     return course_seq, course_obj_dict
 
 
-def parseInPy(filename):
-    # Parses a .xls (NOT .xlsx) file with the name *filename*
-    # and stores all relevant course information (including
-    # sequencing information from the Sequencing.xls file) in
-    # two separate dictionaries.
-    #
-    # Arguments:
-    #   filename (string): name of the .xls file with course information
-    # Returns:
-    #   course_seq (dict): Stores course data in proper sequence:
-    #       key: Plan Name (string): name of the sheet from "Sequencing.xls"
-    #       ("Traditional", "Co-op Plan 1", etc.)
-    #       value: dict with key as term name ("Term 1", "Term 2", etc.)
-    #       and value as a list of Course objects to be taken in that term
-    #   course_obj_dict (dict): Stores all course data:
-    #       key: Course Name (string): the Subject + " " + Catalog of a course
-    #       value: Course object. Stores all data about a course
-
+def pullCategories(course_obj_dict, filename):
     try:
         book = xlrd.open_workbook(filename)
-        sheet = book.sheet_by_index(0)  # course info must be on the first sheet
-        course_obj_dict = {}
-        for row in range(1, sheet.nrows):
-            # Each row stores info about one course, first row is headers
-            # FIXME: Formatting is very strict
-            faculty = sheet.cell_value(row, 0)
-            department = sheet.cell_value(row, 1)
-            course_id = sheet.cell_value(row, 2)
-            subject = sheet.cell_value(row , 3)
-            catalog = sheet.cell_value(row, 4)
-            long_title = sheet.cell_value(row, 5)
-            eff_date = sheet.cell_value(row, 6)
-            status = sheet.cell_value(row, 7)
-            calendar_print = sheet.cell_value(row, 8)
-            prog_units = sheet.cell_value(row, 9)
-            engg_units = sheet.cell_value(row, 10)
-            calc_fee_index = sheet.cell_value(row, 11)
-            actual_fee_index = sheet.cell_value(row, 12)
-            duration = sheet.cell_value(row, 13)
-            alpha_hours = sheet.cell_value(row, 14)
-            course_description = sheet.cell_value(row, 15)
-
-            course_name = subject + " " + catalog
-            # Remove unnecessary whitespace
-            course_name = course_name.strip()
-            course_name = course_name.replace("  ", " ")
-
-            course_obj_dict[course_name] = (Course(course_name, faculty,
-            department, course_id, subject, catalog, long_title,
-            eff_date, status, calendar_print, prog_units, engg_units,
-            calc_fee_index, actual_fee_index, duration, alpha_hours,
-            course_description))
-
+        sheet = book.sheet_by_index(0)
+        for col in range(0, sheet.ncols):
+            for row in range(2, sheet.nrows):
+                name = sheet.cell_value(row, col)
+                if name == "":
+                    continue
+                name.upper()
+                name.strip()
+                name.replace("  ", " ")
+                if name in course_obj_dict:
+                    course_obj_dict[name].category = sheet.cell_value(0, col)
+                    course_obj_dict[name].color = sheet.cell_value(1, col)
     except FileNotFoundError:
-        print("Excel file not found, ensure it is present and the name is correct.")
+        print("CourseCategories.xls is not in the current folder")
 
-    for course in course_obj_dict:
-        # Pulling pre-reqs, co-reqs, and requisites for each course
-        prereqslist = pullPreReqs(course_obj_dict[course].course_description)
-        for i in range(0, len(prereqslist)):
-            # Stripping whitespace
-            prereqslist[i] = prereqslist[i].replace(" ", "")
-            prereqslist[i] = prereqslist[i].replace("or", " or ")
-        course_obj_dict[course].prereqs = prereqslist
-
-        coreqslist = pullCoReqs(course_obj_dict[course].course_description)
-        for i in range(0, len(coreqslist)):
-            #Stripping whitespace
-            coreqslist[i] = coreqslist[i].replace(" ", "")
-            coreqslist[i] = coreqslist[i].replace("or", " or ")
-        course_obj_dict[course].coreqs = coreqslist
-
-        reqslist = pullReqs(course_obj_dict, course_obj_dict[course].course_description)
-        for i in range(0, len(reqslist)):
-            # Stripping whitespace
-            reqslist[i] = reqslist[i].replace(" ", "")
-            reqslist[i] = reqslist[i].replace("or", " or ")
-        course_obj_dict[course].reqs = reqslist
-
-    # course_seq stores the courses in their proper sequencing according to
-    # Sequencing.xls
-    course_seq = {}
-    course_seq = pullSeq("Sequencing.xls", course_obj_dict)
-
-    # Make sure that co-reqs are only for courses in the same term
-    # Had to do this after pulling from Sequencing.xls
-    course_seq = checkReqs(course_seq)
-
-    return course_seq, course_obj_dict
+    return course_obj_dict
