@@ -117,25 +117,28 @@ def placeClickListeners(courseList, controller, lineManager, plan):
 
             for line in lineManager.getCourseLineDict()[courseID]:
                 controller.write(formattedStatement.format(action="add", num=line))
-            
-            controller.write(formattedHighlightStatement.format(courseName=courseID,
-                                                                action="remove",
-                                                                className=courseContClass))
-            controller.write(formattedHighlightStatement.format(courseName=courseID,
-                                                                action="add",
-                                                                className=courseContClass+"-highlighted"))
-            controller.write(formattedAddClickedStatement.format(courseName=courseID, 
-                                                                 category=courseContClass))
+
+            if (courseContClass != ""):
+                controller.write(formattedHighlightStatement.format(courseName=courseID,
+                                                                    action="remove",
+                                                                    className=courseContClass))
+                controller.write(formattedHighlightStatement.format(courseName=courseID,
+                                                                    action="add",
+                                                                    className=courseContClass+"-highlighted"))
+                controller.write(formattedAddClickedStatement.format(courseName=courseID, 
+                                                                    category=courseContClass))
+        
             controller.write("      " +courseID+"flag=true\n")
             controller.write("  }\n else {\n")
 
             for line in lineManager.getCourseLineDict()[courseID]:
                 controller.write(formattedStatement.format(action="remove", num=line))
 
-            controller.write(formattedHighlightStatement.format(courseName=courseID,
+            if (courseContClass != ""):
+                controller.write(formattedHighlightStatement.format(courseName=courseID,
                                                                 action="remove",
                                                                 className=courseContClass+"-highlighted"))
-            controller.write(formattedHighlightStatement.format(courseName=courseID,
+                controller.write(formattedHighlightStatement.format(courseName=courseID,
                                                                 action="add",
                                                                 className=courseContClass))
 
