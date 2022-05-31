@@ -96,9 +96,9 @@ this.enable = function(plan) {
     widthstr = width.toString() + "px";
     document.getElementById("header").style.width = widthstr;
     for (let i = 0; i < this.TraditionalPlanClicked.length; i++) {
-        var element = document.getElementById(this.TraditionalPlanClicked[i]);
-        element.classList.remove("course");
-        element.classList.add("course-highlighted");
+        var element = document.getElementById(this.TraditionalPlanClicked[i][0]);
+        element.classList.remove(this.TraditionalPlanClicked[i][1]);
+        element.classList.add(this.TraditionalPlanClicked[i][1]+"-highlighted");
     }
     break; 
   case "AlternatePlan": 
@@ -109,9 +109,9 @@ this.enable = function(plan) {
     widthstr = width.toString() + "px";
     document.getElementById("header").style.width = widthstr;
     for (let i = 0; i < this.AlternatePlanClicked.length; i++) {
-        var element = document.getElementById(this.AlternatePlanClicked[i]);
-        element.classList.remove("course");
-        element.classList.add("course-highlighted");
+        var element = document.getElementById(this.AlternatePlanClicked[i][0]);
+        element.classList.remove(this.AlternatePlanClicked[i][1]);
+        element.classList.add(this.AlternatePlanClicked[i][1]+"-highlighted");
     }
     break; 
   case "CoopPlan1": 
@@ -122,9 +122,9 @@ this.enable = function(plan) {
     widthstr = width.toString() + "px";
     document.getElementById("header").style.width = widthstr;
     for (let i = 0; i < this.CoopPlan1Clicked.length; i++) {
-        var element = document.getElementById(this.CoopPlan1Clicked[i]);
-        element.classList.remove("course");
-        element.classList.add("course-highlighted");
+        var element = document.getElementById(this.CoopPlan1Clicked[i][0]);
+        element.classList.remove(this.CoopPlan1Clicked[i][1]);
+        element.classList.add(this.CoopPlan1Clicked[i][1]+"-highlighted");
     }
     break; 
   case "CoopPlan2": 
@@ -135,9 +135,9 @@ this.enable = function(plan) {
     widthstr = width.toString() + "px";
     document.getElementById("header").style.width = widthstr;
     for (let i = 0; i < this.CoopPlan2Clicked.length; i++) {
-        var element = document.getElementById(this.CoopPlan2Clicked[i]);
-        element.classList.remove("course");
-        element.classList.add("course-highlighted");
+        var element = document.getElementById(this.CoopPlan2Clicked[i][0]);
+        element.classList.remove(this.CoopPlan2Clicked[i][1]);
+        element.classList.add(this.CoopPlan2Clicked[i][1]+"-highlighted");
     }
     break; 
   case "CoopPlan3Biomedical": 
@@ -148,9 +148,9 @@ this.enable = function(plan) {
     widthstr = width.toString() + "px";
     document.getElementById("header").style.width = widthstr;
     for (let i = 0; i < this.CoopPlan3BiomedicalClicked.length; i++) {
-        var element = document.getElementById(this.CoopPlan3BiomedicalClicked[i]);
-        element.classList.remove("course");
-        element.classList.add("course-highlighted");
+        var element = document.getElementById(this.CoopPlan3BiomedicalClicked[i][0]);
+        element.classList.remove(this.CoopPlan3BiomedicalClicked[i][1]);
+        element.classList.add(this.CoopPlan3BiomedicalClicked[i][1]+"-highlighted");
     }
     break; 
   case "CoopPlan4": 
@@ -161,9 +161,9 @@ this.enable = function(plan) {
     widthstr = width.toString() + "px";
     document.getElementById("header").style.width = widthstr;
     for (let i = 0; i < this.CoopPlan4Clicked.length; i++) {
-        var element = document.getElementById(this.CoopPlan4Clicked[i]);
-        element.classList.remove("course");
-        element.classList.add("course-highlighted");
+        var element = document.getElementById(this.CoopPlan4Clicked[i][0]);
+        element.classList.remove(this.CoopPlan4Clicked[i][1]);
+        element.classList.add(this.CoopPlan4Clicked[i][1]+"-highlighted");
     }
     break; 
     default:
@@ -299,32 +299,32 @@ switch($scope.selectedPlan) {
 this.addToClicked = function(element) {
 switch($scope.selectedPlan) { 
  case "TraditionalPlan":
-    var index = this.TraditionalPlanClicked.findIndex((item) => item == element);
+    var index = this.TraditionalPlanClicked.findIndex((item) => item[0] == element[0]);
     if (index == -1) {
         this.TraditionalPlanClicked.push(element);
     }
     break; case "AlternatePlan":
-    var index = this.AlternatePlanClicked.findIndex((item) => item == element);
+    var index = this.AlternatePlanClicked.findIndex((item) => item[0] == element[0]);
     if (index == -1) {
         this.AlternatePlanClicked.push(element);
     }
     break; case "CoopPlan1":
-    var index = this.CoopPlan1Clicked.findIndex((item) => item == element);
+    var index = this.CoopPlan1Clicked.findIndex((item) => item[0] == element[0]);
     if (index == -1) {
         this.CoopPlan1Clicked.push(element);
     }
     break; case "CoopPlan2":
-    var index = this.CoopPlan2Clicked.findIndex((item) => item == element);
+    var index = this.CoopPlan2Clicked.findIndex((item) => item[0] == element[0]);
     if (index == -1) {
         this.CoopPlan2Clicked.push(element);
     }
     break; case "CoopPlan3Biomedical":
-    var index = this.CoopPlan3BiomedicalClicked.findIndex((item) => item == element);
+    var index = this.CoopPlan3BiomedicalClicked.findIndex((item) => item[0] == element[0]);
     if (index == -1) {
         this.CoopPlan3BiomedicalClicked.push(element);
     }
     break; case "CoopPlan4":
-    var index = this.CoopPlan4Clicked.findIndex((item) => item == element);
+    var index = this.CoopPlan4Clicked.findIndex((item) => item[0] == element[0]);
     if (index == -1) {
         this.CoopPlan4Clicked.push(element);
     }
@@ -335,32 +335,32 @@ switch($scope.selectedPlan) {
 this.removeFromClicked = function(element) {
 switch($scope.selectedPlan) { 
  case "TraditionalPlan":
-    var index = this.TraditionalPlanClicked.findIndex((item) => item == element);
+    var index = this.TraditionalPlanClicked.findIndex((item) => item[0] == element);
     if (index != -1) {
         this.TraditionalPlanClicked.splice(index, 1);
     }
     break; case "AlternatePlan":
-    var index = this.AlternatePlanClicked.findIndex((item) => item == element);
+    var index = this.AlternatePlanClicked.findIndex((item) => item[0] == element);
     if (index != -1) {
         this.AlternatePlanClicked.splice(index, 1);
     }
     break; case "CoopPlan1":
-    var index = this.CoopPlan1Clicked.findIndex((item) => item == element);
+    var index = this.CoopPlan1Clicked.findIndex((item) => item[0] == element);
     if (index != -1) {
         this.CoopPlan1Clicked.splice(index, 1);
     }
     break; case "CoopPlan2":
-    var index = this.CoopPlan2Clicked.findIndex((item) => item == element);
+    var index = this.CoopPlan2Clicked.findIndex((item) => item[0] == element);
     if (index != -1) {
         this.CoopPlan2Clicked.splice(index, 1);
     }
     break; case "CoopPlan3Biomedical":
-    var index = this.CoopPlan3BiomedicalClicked.findIndex((item) => item == element);
+    var index = this.CoopPlan3BiomedicalClicked.findIndex((item) => item[0] == element);
     if (index != -1) {
         this.CoopPlan3BiomedicalClicked.splice(index, 1);
     }
     break; case "CoopPlan4":
-    var index = this.CoopPlan4Clicked.findIndex((item) => item == element);
+    var index = this.CoopPlan4Clicked.findIndex((item) => item[0] == element);
     if (index != -1) {
         this.CoopPlan4Clicked.splice(index, 1);
     }
