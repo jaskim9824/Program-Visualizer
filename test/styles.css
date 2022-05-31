@@ -64,17 +64,11 @@ header {
     margin-bottom: 50px;
 }
 
-.course:hover {
+.cateA:hover {
     background-color: #f2cd00;
 }
 
-.course-highlighted {
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
-    height: 50px;
-    width: 150px;
-    margin-bottom: 50px;
+.cateA-highlighted {
     background-color: #f2cd00;
 }
     

@@ -84,7 +84,7 @@
                         <p>{{ece101courseinfo}}</p>
                     </div>
 
-                    <div class="course tooltip" id="ECE 101" ng-click="ece101Listener()">
+                    <div class="course tooltip cateA" id="ECE 101" ng-click="ece101Listener()">
                         <p class="tooltiptext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae temporibus sapiente omnis in et itaque maiores atque, deserunt corporis dolorum iure, rnihil, exercitationem illum nesciunt iste at, quo molestiae ipsa odio ratione, temporibus corrupti sed! Perspiciatis, saepe quos consectetur ullam in blanditiis neque placeat!</p>
                         <h3 class="embed">ECE 101</h3>
                     </div>
@@ -505,9 +505,9 @@ evaluating as null -->
                         this.planAList[i][0].show(true);
                     }
                     for (let i = 0; i < this.planAclicked.length; i++) {
-                        var element = document.getElementById(this.planAclicked[i]);
-                        element.classList.remove("course");
-                        element.classList.add("course-highlighted");
+                        var element = document.getElementById(this.planAclicked[i][0]);
+                        element.classList.remove(this.planAclicked[i][1]);
+                        element.classList.add(this.planAclicked[i][1]+"-highlighted");
                     }
                     break;
                 case "B":
@@ -516,9 +516,9 @@ evaluating as null -->
                         this.planBList[i][0].show(true);
                     }
                     for (let i = 0; i < this.planBclicked.length; i++) {
-                        var element = document.getElementById(this.planBclicked[i]);
-                        element.classList.remove("course");
-                        element.classList.add("course-highlighted");
+                        var element = document.getElementById(this.planBclicked[i][0]);
+                        element.classList.remove(this.planBclicked[i][1]);
+                        element.classList.add(this.planBclicked[i][1]+"-highlighted");
                     }
                     break;
                 case "C":
@@ -526,9 +526,9 @@ evaluating as null -->
                         this.planClist[i][0].show(true);
                     }
                     for (let i = 0; i < this.planCclicked.length; i++) {
-                        var element = document.getElementById(this.planCclicked[i]);
-                        element.classList.remove("course");
-                        element.classList.add("course-highlighted");
+                        var element = document.getElementById(this.planCclicked[i][0]);
+                        element.classList.remove(this.planCclicked[i][1]);
+                        element.classList.add(this.planCclicked[i][0]+"-highlighted");
                     }
                     break;
                 case "D":
@@ -537,9 +537,9 @@ evaluating as null -->
                         this.planDlist[i][0].show(true);
                     }
                     for (let i = 0; i < this.planDclicked.length; i++) {
-                        var element = document.getElementById(this.planDclicked[i]);
-                        element.classList.remove("course");
-                        element.classList.add("course-highlighted");
+                        var element = document.getElementById(this.planDclicked[i][0]);
+                        element.classList.remove(this.planCclicked[i][1])
+                        element.classList.add(this.planCclicked[i][0]+"-highlighted");
                     }
                     break;
             }
@@ -677,28 +677,28 @@ evaluating as null -->
         this.addToClicked = function(element) {
             switch ($scope.selectedPlan) {
                 case "A":
-                    var index = this.planAclicked.findIndex((item) => item == element);
+                    var index = this.planAclicked.findIndex((item) => item[0] == element[0]);
                     // If it does not exist
                     if (index == -1) {
                         this.planAclicked.push(element);
                     }
                     break;
                 case "B":
-                    var index = this.planBclicked.findIndex((item) => item == element);
+                    var index = this.planBclicked.findIndex((item) => item[0] == element[0]);
                     // If it does not exist
                     if (index == -1) {
                         this.planBclicked.push(element);
                     }
                     break;
                 case "C":
-                    var index = this.planCclicked.findIndex((item) => item == element);
+                    var index = this.planCclicked.findIndex((item) => item[0] == element[0]);
                     // If it does not exist
                     if (index == -1) {
                         this.planCclicked.push(element);
                     }
                     break;
                 case "D":
-                    var index = this.planDclicked.findIndex((item) => item == element);
+                    var index = this.planDclicked.findIndex((item) => item[0] == element[0]);
                     // If it does not exist
                     if (index == -1) {
                         this.planDclicked.push(element);
@@ -709,28 +709,28 @@ evaluating as null -->
         this.removeFromClicked = function(element) {
             switch ($scope.selectedPlan) {
                 case "A":
-                    var index = this.planAclicked.findIndex((item) => item == element);
+                    var index = this.planAclicked.findIndex((item) => item[0] == element);
                     // If it does exist
                     if (index != -1) {
                         this.planAclicked.splice(index, 1);
                     }
                     break;
                 case "B":
-                    var index = this.planBclicked.findIndex((item) => item == element);
+                    var index = this.planBclicked.findIndex((item) => item[0] == element);
                     // If it does exist
                     if (index != -1) {
                         this.planBclicked.splice(index, 1);
                     }
                     break;
                 case "C":
-                    var index = this.planCclicked.findIndex((item) => item == element);
+                    var index = this.planCclicked.findIndex((item) => item[0] == element);
                     // If it does exist
                     if (index != -1) {
                         this.planCclicked.splice(index, 1);
                     }
                     break;
                 case "D":
-                    var index = this.planDclicked.findIndex((item) => item == element);
+                    var index = this.planDclicked.findIndex((item) => item[0] == element);
                     // If it does exist
                     if (index != -1) {
                         this.planDclicked.splice(index, 1);
@@ -761,9 +761,9 @@ evaluating as null -->
                 that.addLine(getLine1());
                 // that.addLine(getLine2());
                 // that.addLine(getLine4());
-                element.classList.remove("course");
-                element.classList.add("course-highlighted");
-                that.addToClicked("ECE 101")
+                element.classList.remove("cateA");
+                element.classList.add("cateA-highlighted");
+                that.addToClicked(["ECE 101", "cateA"])
                 ece101flag = true;
             }
             else {
@@ -774,8 +774,8 @@ evaluating as null -->
                 that.removeLine(getLine1());
                 // that.removeLine(getLine2());
                 // that.removeLine(getLine4());
-                element.classList.remove("course-highlighted");
-                element.classList.add("course");
+                element.classList.remove("cateA-highlighted");
+                element.classList.add("cateA");
                 that.removeFromClicked("ECE 101");
                 ece101flag = false;
             }
