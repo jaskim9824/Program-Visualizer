@@ -95,6 +95,11 @@ this.enable = function(plan) {
     width = this.TraditionalPlanTerms*210 + 50;
     widthstr = width.toString() + "px";
     document.getElementById("header").style.width = widthstr;
+    for (let i = 0; i < this.TraditionalPlanClicked.length; i++) {
+        var element = document.getElementById(this.TraditionalPlanClicked[i]);
+        element.classList.remove("course");
+        element.classList.add("course-highlighted");
+    }
     break; 
   case "AlternatePlan": 
     for (let i = 0; i < this.AlternatePlanList.length; i++) {
@@ -103,6 +108,11 @@ this.enable = function(plan) {
     width = this.AlternatePlanTerms*210 + 50;
     widthstr = width.toString() + "px";
     document.getElementById("header").style.width = widthstr;
+    for (let i = 0; i < this.AlternatePlanClicked.length; i++) {
+        var element = document.getElementById(this.AlternatePlanClicked[i]);
+        element.classList.remove("course");
+        element.classList.add("course-highlighted");
+    }
     break; 
   case "CoopPlan1": 
     for (let i = 0; i < this.CoopPlan1List.length; i++) {
@@ -111,6 +121,11 @@ this.enable = function(plan) {
     width = this.CoopPlan1Terms*210 + 50;
     widthstr = width.toString() + "px";
     document.getElementById("header").style.width = widthstr;
+    for (let i = 0; i < this.CoopPlan1Clicked.length; i++) {
+        var element = document.getElementById(this.CoopPlan1Clicked[i]);
+        element.classList.remove("course");
+        element.classList.add("course-highlighted");
+    }
     break; 
   case "CoopPlan2": 
     for (let i = 0; i < this.CoopPlan2List.length; i++) {
@@ -119,6 +134,11 @@ this.enable = function(plan) {
     width = this.CoopPlan2Terms*210 + 50;
     widthstr = width.toString() + "px";
     document.getElementById("header").style.width = widthstr;
+    for (let i = 0; i < this.CoopPlan2Clicked.length; i++) {
+        var element = document.getElementById(this.CoopPlan2Clicked[i]);
+        element.classList.remove("course");
+        element.classList.add("course-highlighted");
+    }
     break; 
   case "CoopPlan3Biomedical": 
     for (let i = 0; i < this.CoopPlan3BiomedicalList.length; i++) {
@@ -127,6 +147,11 @@ this.enable = function(plan) {
     width = this.CoopPlan3BiomedicalTerms*210 + 50;
     widthstr = width.toString() + "px";
     document.getElementById("header").style.width = widthstr;
+    for (let i = 0; i < this.CoopPlan3BiomedicalClicked.length; i++) {
+        var element = document.getElementById(this.CoopPlan3BiomedicalClicked[i]);
+        element.classList.remove("course");
+        element.classList.add("course-highlighted");
+    }
     break; 
   case "CoopPlan4": 
     for (let i = 0; i < this.CoopPlan4List.length; i++) {
@@ -135,6 +160,11 @@ this.enable = function(plan) {
     width = this.CoopPlan4Terms*210 + 50;
     widthstr = width.toString() + "px";
     document.getElementById("header").style.width = widthstr;
+    for (let i = 0; i < this.CoopPlan4Clicked.length; i++) {
+        var element = document.getElementById(this.CoopPlan4Clicked[i]);
+        element.classList.remove("course");
+        element.classList.add("course-highlighted");
+    }
     break; 
     default:
     console.log("shouldn't be here");
@@ -271,32 +301,32 @@ switch($scope.selectedPlan) {
  case "TraditionalPlan":
     var index = this.TraditionalPlanClicked.findIndex((item) => item == element);
     if (index == -1) {
-        this.TraditionalPlanClicked.append(element);
+        this.TraditionalPlanClicked.push(element);
     }
     break; case "AlternatePlan":
     var index = this.AlternatePlanClicked.findIndex((item) => item == element);
     if (index == -1) {
-        this.AlternatePlanClicked.append(element);
+        this.AlternatePlanClicked.push(element);
     }
     break; case "CoopPlan1":
     var index = this.CoopPlan1Clicked.findIndex((item) => item == element);
     if (index == -1) {
-        this.CoopPlan1Clicked.append(element);
+        this.CoopPlan1Clicked.push(element);
     }
     break; case "CoopPlan2":
     var index = this.CoopPlan2Clicked.findIndex((item) => item == element);
     if (index == -1) {
-        this.CoopPlan2Clicked.append(element);
+        this.CoopPlan2Clicked.push(element);
     }
     break; case "CoopPlan3Biomedical":
     var index = this.CoopPlan3BiomedicalClicked.findIndex((item) => item == element);
     if (index == -1) {
-        this.CoopPlan3BiomedicalClicked.append(element);
+        this.CoopPlan3BiomedicalClicked.push(element);
     }
     break; case "CoopPlan4":
     var index = this.CoopPlan4Clicked.findIndex((item) => item == element);
     if (index == -1) {
-        this.CoopPlan4Clicked.append(element);
+        this.CoopPlan4Clicked.push(element);
     }
     break;    default:
     console.log("shouldn't be here");

@@ -54,8 +54,8 @@ def generatePlanBasedBlocksController(controller, sequenceDict):
         controller.write("this." + cleaner.cleanString(plan) + "Clicked = [];\n")
         numterms = len(sequenceDict[plan].keys())
         controller.write("this." + cleaner.cleanString(plan) + "Terms = " + str(numterms) + ";\n")
-    generateSwitchingSwitchStatementController(sequenceDict, controller, "hide", "disable")
-    generateSwitchingSwitchStatementController(sequenceDict, controller, "show", "enable")
+    generateDisableSwitchStatement(sequenceDict, controller)
+    generateEnableSwitchStatement(sequenceDict, controller)
     generateAddLineSwitch(sequenceDict, controller)
     generateDeleteLineSwitch(sequenceDict, controller)
     generateAddToClickSwitch(sequenceDict, controller)
@@ -66,9 +66,7 @@ def generatePlanBasedBlocksController(controller, sequenceDict):
 # Parameters:
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   controller - file handle for controller.js file
-#   action - name of action done within function
-#   function - name of function generated
-def generateSwitchingSwitchStatementController(sequenceDict, controller, action, function):
+def generateDisableSwitchStatement(sequenceDict, controller):
     formattedFunctionStatement = """this.{functionName} = function(plan) {{
     switch (plan) {{ \n"""
     formattedSwitchStatement = """  case "{planName}": 
@@ -83,10 +81,42 @@ def generateSwitchingSwitchStatementController(sequenceDict, controller, action,
     console.log("shouldn't be here");
     }
 };\n"""
-    controller.write(formattedFunctionStatement.format(functionName=function))
+    controller.write(formattedFunctionStatement.format(functionName="disable"))
     for plan in sequenceDict:
         controller.write(formattedSwitchStatement.format(planName=cleaner.cleanString(plan), 
-                                                         actionName=action))
+                                                         actionName="hide"))
+    controller.write(switchEndString)
+
+
+# Function that generates the switch statements and functions which handle
+# plan switching
+# Parameters:
+#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
+#   controller - file handle for controller.js file
+def generateEnableSwitchStatement(sequenceDict, controller):
+    formattedFunctionStatement = """this.{functionName} = function(plan) {{
+    switch (plan) {{ \n"""
+    formattedSwitchStatement = """  case "{planName}": 
+    for (let i = 0; i < this.{planName}List.length; i++) {{
+        this.{planName}List[i][0].{actionName}(true);
+    }}
+    width = this.{planName}Terms*210 + 50;
+    widthstr = width.toString() + "px";
+    document.getElementById("header").style.width = widthstr;
+    for (let i = 0; i < this.{planName}Clicked.length; i++) {{
+        var element = document.getElementById(this.{planName}Clicked[i]);
+        element.classList.remove("course");
+        element.classList.add("course-highlighted");
+    }}
+    break; \n"""
+    switchEndString = """    default:
+    console.log("shouldn't be here");
+    }
+};\n"""
+    controller.write(formattedFunctionStatement.format(functionName="enable"))
+    for plan in sequenceDict:
+        controller.write(formattedSwitchStatement.format(planName=cleaner.cleanString(plan), 
+                                                         actionName="show"))
     controller.write(switchEndString)
 
 # Function that generates the switch statement and function addLine
