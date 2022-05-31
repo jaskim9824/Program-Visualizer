@@ -198,6 +198,35 @@ header {
     opacity: 1;
 }
 
+.descriptiontitle {
+    font: Roboto;
+    font-size: 140%;
+}
+
+.descriptionline {
+    margin-bottom: 2px;
+}
+
+.descriptioncredits {
+    display: inline;
+}
+
+.descriptionfeeindex {
+    display: inline;
+}
+
+.descriptionavailability {
+    display: inline;
+}
+
+.descriptionalphahours {
+    display: inline;
+}
+
+.fulldescription {
+    display: inline;
+}
+
 .compelective {
     height: 80px;
 }

@@ -62,7 +62,7 @@ def generatePlanBasedBlocksController(controller, sequenceDict):
     generateDeleteFromClickSwitch(sequenceDict, controller)
 
 # Function that generates the switch statements and functions which handle
-# plan switching
+# disabling the lines of a plan when switched off
 # Parameters:
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   controller - file handle for controller.js file
@@ -89,7 +89,7 @@ def generateDisableSwitchStatement(sequenceDict, controller):
 
 
 # Function that generates the switch statements and functions which handle
-# plan switching
+# enabling the lines of plan when switched on
 # Parameters:
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   controller - file handle for controller.js file
