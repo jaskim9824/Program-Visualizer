@@ -41,6 +41,22 @@ def placeRadioInputs(formTag, sequenceDict, soup):
 #   lineManager - line manager object, used to handle line placement and generation
 def placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager):
 
+    categoryDict = {}
+    for plan in sequenceDict:
+        for term in sequenceDict[plan]:
+            for course in sequenceDict[plan][term]:
+                if course.category not in categoryDict.values():
+                    categoryDict[course.category] = course.color
+
+    categories = soup.new_tag("div", attrs={"id":"categories"})
+    for category in categoryDict:
+            coursecat = soup.new_tag("p", attrs={"id": category,
+                                        "style":"background-color:#" + categoryDict[category]})
+            coursecat.append(category)
+            categories.append(coursecat)
+
+    displayTag.append(categories)
+
     for plan in sequenceDict:
         switchInput = soup.new_tag("div", attrs={"id":cleaner.cleanString(plan),
                                                  "ng-switch-when":cleaner.cleanString(plan)})
@@ -79,7 +95,6 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
 #   soup - soup object, used to create HTML tags
 #   controller - file handle for controller.js, used to write to controller.js
 #   plan - name of plan whose terms are being placed
-mathCourses = ['MATH 100', 'MATH 101', 'MATH 102', 'MATH 209', 'MATH 201', 'MATH 300', 'MECE 390']
 #   termcounter - which term is currently being placed (int)
 def placeCourses(termTag, termList, soup, controller, plan, termcounter):
     for course in termList:

@@ -235,3 +235,9 @@ header {
     font-size:90%;
     height:80px;
 }
+
+#categories {
+    width: fit-content;
+    position: relative;
+    left: 47.5%;
+}

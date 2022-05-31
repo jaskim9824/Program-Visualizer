@@ -587,16 +587,13 @@ def pullSeq(filename, course_obj_dict):
 
                 if name == "PROG":
                     # Create Course obj with only name and course_description attribute
-                    term_list.append(Course(name = "Program/Technical Elective", course_description = 
-                    "A technical elective of the student's choice. Please consult the calendar for more information."))
+                    term_list.append(deepcopy(course_obj_dict["Program/Technical Elective"]))
                     continue
                 if name == "COMP":
-                    term_list.append(Course("Complementary Elective", course_description =
-                    "A complementary elective of the student's choice. Please consult the calendar for more information."))
+                    term_list.append(deepcopy(course_obj_dict["Complementary Elective"]))
                     continue
                 if name == "ITS":
-                    term_list.append(Course("ITS Elective", course_description = 
-                    "An ITS elective of the student's choice. Please consult the calendar for more information."))
+                    term_list.append(deepcopy(course_obj_dict["ITS Elective"]))
                     continue
 
                 assert name in course_obj_dict, ("The course in the Sequencing.xls file called " + 
@@ -758,6 +755,23 @@ def pullCategories(course_obj_dict, filename):
         book = xlrd.open_workbook(filename)
         sheet = book.sheet_by_index(0)
         for col in range(0, sheet.ncols):
+            if "." in str(sheet.cell_value(1, col)):
+                dotindex = str(sheet.cell_value(1, col)).find(".")
+                cell_val = str(sheet.cell_value(1, col))[:dotindex]
+            else:
+                cell_val = str(sheet.cell_value(1, col))
+            if sheet.cell_value(0, col) == "COMP":
+                course_obj_dict["Complementary Elective"] = Course(name = "Complementary Elective", 
+                    course_description="A complementary elective of the student's choice. Please consult the calendar for more information.",
+                    category = "Complementary Elective", color = cell_val)
+            if sheet.cell_value(0, col) == "PROG":
+                course_obj_dict["Program/Technical Elective"] = Course(name = "Program/Technical Elective", 
+                    course_description="A program/technical elective of the student's choice. Please consult the calendar for more information.",
+                    category = "Program/Technical Elective", color = cell_val)
+            if sheet.cell_value(0, col) == "ITS":
+                course_obj_dict["ITS Elective"] = Course(name = "ITS Elective", 
+                    course_description="An ITS elective of the student's choice. Please consult the calendar for more information.",
+                    category = "ITS Elective", color = cell_val)
             for row in range(2, sheet.nrows):
                 name = sheet.cell_value(row, col)
                 if name == "":
@@ -767,7 +781,7 @@ def pullCategories(course_obj_dict, filename):
                 name.replace("  ", " ")
                 if name in course_obj_dict:
                     course_obj_dict[name].category = sheet.cell_value(0, col)
-                    course_obj_dict[name].color = sheet.cell_value(1, col).lower()
+                    course_obj_dict[name].color = cell_val
     except FileNotFoundError:
         print("CourseCategories.xls is not in the current folder")
 
