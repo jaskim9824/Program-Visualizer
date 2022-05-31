@@ -1,0 +1,117 @@
+Purpose: To parse an excel (.xls) file and to store the data in a
+         python dictionary. This dictionary will have keys
+         as the Name of that course (eg: MATH 100). The values will be a
+         Course object defined in parsing.py, which contains 
+         attributes storing all data from the excel sheet.
+
+Running Instructions:
+- Ensure that "parsing.py", "Courses.xls", "Sequencing.xls",
+  and "CourseCategories.xls" are present in the current folder.
+- Import the function "parse(filename)" from the file
+  "parsing.py".
+  Do this by the following: "from parsing import parse".
+  This allows you to use the function parse(filename) in your
+  python program.
+
+Course Object:
+- The value of the return dict is an object of the "Course" Class
+- Attributes:
+    faculty
+    department
+    course_id
+    subject
+    catalog
+    long_title
+    eff_date
+    status
+    calendar_print
+    prog_units
+    engineering_units
+    calc_fee_index
+    actual_fee_index
+    duration
+    alpha_hours
+    course_description
+    prereqs (list of all prereqs)
+    coreqs (list of all coreqs)
+    reqs (list of all requisites)
+
+Excel Formatting:
+Courses.xls:
+- Ensure this file is a .xls file and NOT a .xlsx file. A .xlsx file can be saved as a .xls file
+  in the "Save As" menu of Excel.
+- The first row of the Excel file must have 16 headers/columns. The columns from left to right
+  should be "Faculty", "Department", "Course ID", "Subject", "Catalog", "Long Title", "Eff Date",
+  "Status", "Calendar Print", "Prog Units", "Engineering Units", "Calc. Fee Index", "Actual Fee Index",
+  "Duration", "Alpha Hours", and finally "Course Description".
+- Fill the Excel sheet with the appropriate course information. Note that only the Subject, Catalog, and
+  Course Description are required for each course. This information should come from the University and 
+  the Course Description should be directly from Beartracks.
+- If a field is unknown for a course, just leave it blank. Only the Subject, Catalog, and Course Description
+  are required.
+- Try to remove any whitespace and keep the format consistent with what is already present. The program
+  can handle some formatting irregularities but not everything is covered. Thus, try to maintain the present
+  format as much as possible, especially with how Prerequisites are described.
+
+Sequencing.xls:
+- Ensure this file is a .xls file and NOT a .xlsx file. A .xlsx file can be saved as a .xls file
+  in the "Save As" menu of Excel.
+- Each sheet of the Excel file represents one academic plan (eg: Traditional Plan, Co-op Plan 1, etc.).
+  Thus, name the sheets approriately. The sheet name will appear on the webpage as a plan name.
+- The first row of each sheet is reserved as the term name and will appear on the webpage as such.
+  Thus, enter the term names in the first row of each sheet (eg: "Term 1", "Term 2", "Co-op Term 1", etc.)
+- Under each term (each column), enter the courses to be taken in that term. The course name should correspond
+  to the Subject + Catalog (one space between them) in the Courses.xls file. eg: EN PH 131
+- For Program/Technical Electives: enter "PROG"
+- For Complementary Electives: enter "COMP"
+- For ITS electives: enter "ITS"
+- Again, try to maintain the format already present. The program can handle some irregularities but not all.
+
+CourseCategories.xls:
+- Ensure this file is a .xls file and NOT a .xlsx file. A .xlsx file can be saved as a .xls file
+  in the "Save As" menu of Excel.
+- The cells along the first row of the Excel file will act as the category names. Therefore, in the first
+  row of each column, enter the category name (Math, Basic Science, Design, etc.)
+- For elective courses enter the category names as follow: for complementary elective courses, enter "COMP".
+  For program/technical electives, enter "PROG". For ITS electives, enter "ITS".
+- The second row of each column is reserved as the color coding for that category. This cell corresponds
+  to the color of the course box for each course in that category. The color must be entered as a 6 character,
+  rgb, hexadecimal value. eg: "ff0000" corresponds to pure red.
+- In each cell starting from the third row and proceeding down, enter the course names under that category.
+  eg: If the category is "Math" then entries may be "MATH 100", "MATH 102", etc.
+- Do not enter any course names under COMP, PROG, or ITS. These columns were simply to pick a color for
+  their boxes.
+
+Example Usage: (Printing the Plan Name, Term Name, Course Name, Prereqs, Coreqs,
+and Reqs of every course present in Courses.xls)
+from parsing import parseInPy
+
+filename = "Courses.xls"
+course_seq, course_obj_dict = parseInPy(filename)
+i = 0
+
+for plan in course_seq:
+    print(plan)
+    for term in course_seq[plan]:
+        print(term)
+        for course in course_seq[plan][term]:
+            if course == "Complementary Elective":
+                print("Complementary Elective")
+                print("")
+                continue
+            if course == "Program/Technical Elective":
+                print("Program/Technical Elective")
+                print("")
+                continue
+            if course == "ITS Elective":
+                print("ITS Elective")
+                print("")
+                continue
+            print(course.name)
+            print("Prereqs:")
+            print(course.prereqs)
+            print("Coreqs:")
+            print(course.coreqs)
+            print("Reqsuisites:")
+            print(course.reqs)
+            print("")
