@@ -106,6 +106,7 @@ def placeClickListeners(courseList, controller, lineManager, plan):
 
     for course in courseList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan) 
+        courseContClass = course.category.replace(" ", "")
         # if course has lines that it owns, create a click listener
         if courseID in lineManager.getCourseLineDict():
             controller.write(formattedListener.format(courseName=courseID))
@@ -117,10 +118,10 @@ def placeClickListeners(courseList, controller, lineManager, plan):
             
             controller.write(formattedHighlightStatement.format(courseName=courseID,
                                                                 action="remove",
-                                                                className="course"))
+                                                                className=courseContClass))
             controller.write(formattedHighlightStatement.format(courseName=courseID,
                                                                 action="add",
-                                                                className="course-highlighted"))
+                                                                className=courseContClass+"-highlighted"))
             controller.write(formattedListClickStatement.format(action="addTo",
                                                                 courseName=courseID))
             controller.write("      " +courseID+"flag=true\n")
@@ -131,10 +132,10 @@ def placeClickListeners(courseList, controller, lineManager, plan):
 
             controller.write(formattedHighlightStatement.format(courseName=courseID,
                                                                 action="remove",
-                                                                className="course-highlighted"))
+                                                                className=courseContClass+"-highlighted"))
             controller.write(formattedHighlightStatement.format(courseName=courseID,
                                                                 action="add",
-                                                                className="course"))
+                                                                className=courseContClass))
 
             controller.write(formattedListClickStatement.format(action="removeFrom",
                                                                 courseName=courseID))

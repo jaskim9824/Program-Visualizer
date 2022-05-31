@@ -99,6 +99,7 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
 def placeCourses(termTag, termList, soup, controller, plan, termcounter):
     for course in termList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan)
+        courseContClass = course.category.replace(" ", "")
         courseContDiv = soup.new_tag("div", attrs={"class":"coursecontainer"})
 
         if (course.name == "Complementary Elective") or (course.name == "Program/Technical Elective") or (course.name == "ITS Elective"):
@@ -139,7 +140,7 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter):
 
         else:
             # This is a regular course. All information should be available
-            courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip", 
+            courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip " + courseContClass, 
                                                 "id": courseID, 
                                                 "ng-click":courseID+"Listener()",
                                                 "style":"background-color:#" + course.color})

@@ -108,7 +108,38 @@ header {
     margin-bottom: 50px;
     background-color: #f2cd00!important;
 }
-    
+
+.MATH:hover {
+    background-color: red;
+}
+
+.MATH-highlighted {
+    background-color: red;
+}
+
+.BASICSCIENCES:hover {
+    background-color: lime;
+}
+
+.BASICSCIENCES-highlighted {
+    background-color: lime;
+}
+
+.ENGINEERINGSCIENCES:hover {
+    background-color: lightskyblue;
+}
+
+.ENGINEERINGSCIENCES-highlighted {
+    background-color: lightskyblue;
+}
+
+.ENGINEERINGDESIGN:hover {
+    background-color: orange;
+}
+
+.ENGINEERINGDESIGN-highlighted {
+    background-color: orange;
+}
 .embed {
     text-align: center;
 }
