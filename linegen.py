@@ -8,6 +8,7 @@
 
 # Dependencies: cleaner
 
+from unicodedata import category
 import cleaner
 
 
@@ -102,7 +103,8 @@ def placeClickListeners(courseList, controller, lineManager, plan):
     formattedIf = " if (!{courseName}flag) {{\n"
     formattedStatement = "      that.{action}Line(getLine{num}());\n"
     formattedHighlightStatement = "     {courseName}element.classList.{action}(\"{className}\");\n"
-    formattedListClickStatement = "     that.{action}Clicked(\"{courseName}\");\n"
+    formattedRemoveClickedStatement = "     that.removeFromClicked(\"{courseName}\");\n"
+    formattedAddClickedStatement = "     that.addToClicked([\"{courseName}\", \"{category}\"]);\n"
 
     for course in courseList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan) 
@@ -122,8 +124,8 @@ def placeClickListeners(courseList, controller, lineManager, plan):
             controller.write(formattedHighlightStatement.format(courseName=courseID,
                                                                 action="add",
                                                                 className=courseContClass+"-highlighted"))
-            controller.write(formattedListClickStatement.format(action="addTo",
-                                                                courseName=courseID))
+            controller.write(formattedAddClickedStatement.format(courseName=courseID, 
+                                                                 category=courseContClass))
             controller.write("      " +courseID+"flag=true\n")
             controller.write("  }\n else {\n")
 
@@ -137,8 +139,7 @@ def placeClickListeners(courseList, controller, lineManager, plan):
                                                                 action="add",
                                                                 className=courseContClass))
 
-            controller.write(formattedListClickStatement.format(action="removeFrom",
-                                                                courseName=courseID))
+            controller.write(formattedRemoveClickedStatement.format(courseName=courseID))
             controller.write("      " +courseID+"flag=false\n")
             controller.write("  }\n};\n")
 

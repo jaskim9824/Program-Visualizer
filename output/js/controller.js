@@ -423,7 +423,7 @@ $scope.CHEM103TraditionalPlanListener = function () {
       that.addLine(getLine2());
      CHEM103TraditionalPlanelement.classList.remove("BASICSCIENCES");
      CHEM103TraditionalPlanelement.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("CHEM103TraditionalPlan");
+     that.addToClicked(["CHEM103TraditionalPlan", "BASICSCIENCES"]);
       CHEM103TraditionalPlanflag=true
   }
  else {
@@ -443,7 +443,7 @@ $scope.ENGG130TraditionalPlanListener = function () {
       that.addLine(getLine16());
      ENGG130TraditionalPlanelement.classList.remove("BASICSCIENCES");
      ENGG130TraditionalPlanelement.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("ENGG130TraditionalPlan");
+     that.addToClicked(["ENGG130TraditionalPlan", "BASICSCIENCES"]);
       ENGG130TraditionalPlanflag=true
   }
  else {
@@ -463,7 +463,7 @@ $scope.ENGL199TraditionalPlanListener = function () {
       that.addLine(getLine3());
      ENGL199TraditionalPlanelement.classList.remove("");
      ENGL199TraditionalPlanelement.classList.add("-highlighted");
-     that.addToClicked("ENGL199TraditionalPlan");
+     that.addToClicked(["ENGL199TraditionalPlan", ""]);
       ENGL199TraditionalPlanflag=true
   }
  else {
@@ -485,7 +485,7 @@ $scope.MATH100TraditionalPlanListener = function () {
       that.addLine(getLine13());
      MATH100TraditionalPlanelement.classList.remove("MATH");
      MATH100TraditionalPlanelement.classList.add("MATH-highlighted");
-     that.addToClicked("MATH100TraditionalPlan");
+     that.addToClicked(["MATH100TraditionalPlan", "MATH"]);
       MATH100TraditionalPlanflag=true
   }
  else {
@@ -507,7 +507,7 @@ $scope.PHYS130TraditionalPlanListener = function () {
       that.addLine(getLine1());
      PHYS130TraditionalPlanelement.classList.remove("BASICSCIENCES");
      PHYS130TraditionalPlanelement.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("PHYS130TraditionalPlan");
+     that.addToClicked(["PHYS130TraditionalPlan", "BASICSCIENCES"]);
       PHYS130TraditionalPlanflag=true
   }
  else {
@@ -525,7 +525,7 @@ $scope.CHEM105TraditionalPlanListener = function () {
       that.addLine(getLine19());
      CHEM105TraditionalPlanelement.classList.remove("BASICSCIENCES");
      CHEM105TraditionalPlanelement.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("CHEM105TraditionalPlan");
+     that.addToClicked(["CHEM105TraditionalPlan", "BASICSCIENCES"]);
       CHEM105TraditionalPlanflag=true
   }
  else {
@@ -544,7 +544,7 @@ $scope.ENGG160TraditionalPlanListener = function () {
       that.addLine(getLine23());
      ENGG160TraditionalPlanelement.classList.remove("ENGINEERINGDESIGN");
      ENGG160TraditionalPlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("ENGG160TraditionalPlan");
+     that.addToClicked(["ENGG160TraditionalPlan", "ENGINEERINGDESIGN"]);
       ENGG160TraditionalPlanflag=true
   }
  else {
@@ -566,7 +566,7 @@ $scope.ENPH131TraditionalPlanListener = function () {
       that.addLine(getLine22());
      ENPH131TraditionalPlanelement.classList.remove("BASICSCIENCES");
      ENPH131TraditionalPlanelement.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("ENPH131TraditionalPlan");
+     that.addToClicked(["ENPH131TraditionalPlan", "BASICSCIENCES"]);
       ENPH131TraditionalPlanflag=true
   }
  else {
@@ -594,7 +594,7 @@ $scope.MATH101TraditionalPlanListener = function () {
       that.addLine(getLine21());
      MATH101TraditionalPlanelement.classList.remove("MATH");
      MATH101TraditionalPlanelement.classList.add("MATH-highlighted");
-     that.addToClicked("MATH101TraditionalPlan");
+     that.addToClicked(["MATH101TraditionalPlan", "MATH"]);
       MATH101TraditionalPlanflag=true
   }
  else {
@@ -620,7 +620,7 @@ $scope.MATH102TraditionalPlanListener = function () {
       that.addLine(getLine49());
      MATH102TraditionalPlanelement.classList.remove("MATH");
      MATH102TraditionalPlanelement.classList.add("MATH-highlighted");
-     that.addToClicked("MATH102TraditionalPlan");
+     that.addToClicked(["MATH102TraditionalPlan", "MATH"]);
       MATH102TraditionalPlanflag=true
   }
  else {
@@ -644,7 +644,7 @@ $scope.CIVE270TraditionalPlanListener = function () {
       that.addLine(getLine46());
      CIVE270TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES");
      CIVE270TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("CIVE270TraditionalPlan");
+     that.addToClicked(["CIVE270TraditionalPlan", "ENGINEERINGSCIENCES"]);
       CIVE270TraditionalPlanflag=true
   }
  else {
@@ -671,7 +671,7 @@ $scope.MATH209TraditionalPlanListener = function () {
       that.addLine(getLine56());
      MATH209TraditionalPlanelement.classList.remove("MATH");
      MATH209TraditionalPlanelement.classList.add("MATH-highlighted");
-     that.addToClicked("MATH209TraditionalPlan");
+     that.addToClicked(["MATH209TraditionalPlan", "MATH"]);
       MATH209TraditionalPlanflag=true
   }
  else {
@@ -695,7 +695,7 @@ $scope.STAT235TraditionalPlanListener = function () {
       that.addLine(getLine30());
      STAT235TraditionalPlanelement.classList.remove("MATH");
      STAT235TraditionalPlanelement.classList.add("MATH-highlighted");
-     that.addToClicked("STAT235TraditionalPlan");
+     that.addToClicked(["STAT235TraditionalPlan", "MATH"]);
       STAT235TraditionalPlanflag=true
   }
  else {
@@ -717,7 +717,7 @@ $scope.CHE243TraditionalPlanListener = function () {
       that.addLine(getLine42());
      CHE243TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES");
      CHE243TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("CHE243TraditionalPlan");
+     that.addToClicked(["CHE243TraditionalPlan", "ENGINEERINGSCIENCES"]);
       CHE243TraditionalPlanflag=true
   }
  else {
@@ -737,7 +737,7 @@ $scope.MECE200TraditionalPlanListener = function () {
       that.addLine(getLine65());
      MECE200TraditionalPlanelement.classList.remove("");
      MECE200TraditionalPlanelement.classList.add("-highlighted");
-     that.addToClicked("MECE200TraditionalPlan");
+     that.addToClicked(["MECE200TraditionalPlan", ""]);
       MECE200TraditionalPlanflag=true
   }
  else {
@@ -759,7 +759,7 @@ $scope.MECE250TraditionalPlanListener = function () {
       that.addLine(getLine63());
      MECE250TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE250TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE250TraditionalPlan");
+     that.addToClicked(["MECE250TraditionalPlan", "ENGINEERINGSCIENCES"]);
       MECE250TraditionalPlanflag=true
   }
  else {
@@ -781,7 +781,7 @@ $scope.ECE209TraditionalPlanListener = function () {
       that.addLine(getLine29());
      ECE209TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES");
      ECE209TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("ECE209TraditionalPlan");
+     that.addToClicked(["ECE209TraditionalPlan", "ENGINEERINGSCIENCES"]);
       ECE209TraditionalPlanflag=true
   }
  else {
@@ -799,7 +799,7 @@ $scope.MATE202TraditionalPlanListener = function () {
       that.addLine(getLine45());
      MATE202TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES");
      MATE202TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MATE202TraditionalPlan");
+     that.addToClicked(["MATE202TraditionalPlan", "ENGINEERINGSCIENCES"]);
       MATE202TraditionalPlanflag=true
   }
  else {
@@ -820,7 +820,7 @@ $scope.MATH201TraditionalPlanListener = function () {
       that.addLine(getLine55());
      MATH201TraditionalPlanelement.classList.remove("MATH");
      MATH201TraditionalPlanelement.classList.add("MATH-highlighted");
-     that.addToClicked("MATH201TraditionalPlan");
+     that.addToClicked(["MATH201TraditionalPlan", "MATH"]);
       MATH201TraditionalPlanflag=true
   }
  else {
@@ -843,7 +843,7 @@ $scope.MECE230TraditionalPlanListener = function () {
       that.addLine(getLine37());
      MECE230TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE230TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE230TraditionalPlan");
+     that.addToClicked(["MECE230TraditionalPlan", "ENGINEERINGSCIENCES"]);
       MECE230TraditionalPlanflag=true
   }
  else {
@@ -866,7 +866,7 @@ $scope.MECE260TraditionalPlanListener = function () {
       that.addLine(getLine43());
      MECE260TraditionalPlanelement.classList.remove("ENGINEERINGDESIGN");
      MECE260TraditionalPlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE260TraditionalPlan");
+     that.addToClicked(["MECE260TraditionalPlan", "ENGINEERINGDESIGN"]);
       MECE260TraditionalPlanflag=true
   }
  else {
@@ -887,7 +887,7 @@ $scope.MECE265TraditionalPlanListener = function () {
       that.addLine(getLine44());
      MECE265TraditionalPlanelement.classList.remove("ENGINEERINGDESIGN");
      MECE265TraditionalPlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE265TraditionalPlan");
+     that.addToClicked(["MECE265TraditionalPlan", "ENGINEERINGDESIGN"]);
       MECE265TraditionalPlanflag=true
   }
  else {
@@ -908,7 +908,7 @@ $scope.MATH300TraditionalPlanListener = function () {
       that.addLine(getLine64());
      MATH300TraditionalPlanelement.classList.remove("MATH");
      MATH300TraditionalPlanelement.classList.add("MATH-highlighted");
-     that.addToClicked("MATH300TraditionalPlan");
+     that.addToClicked(["MATH300TraditionalPlan", "MATH"]);
       MATH300TraditionalPlanflag=true
   }
  else {
@@ -933,7 +933,7 @@ $scope.MECE300TraditionalPlanListener = function () {
       that.addLine(getLine59());
      MECE300TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE300TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE300TraditionalPlan");
+     that.addToClicked(["MECE300TraditionalPlan", "ENGINEERINGSCIENCES"]);
       MECE300TraditionalPlanflag=true
   }
  else {
@@ -956,7 +956,7 @@ $scope.MECE301TraditionalPlanListener = function () {
       that.addLine(getLine60());
      MECE301TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE301TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE301TraditionalPlan");
+     that.addToClicked(["MECE301TraditionalPlan", "ENGINEERINGSCIENCES"]);
       MECE301TraditionalPlanflag=true
   }
  else {
@@ -983,7 +983,7 @@ $scope.MECE331TraditionalPlanListener = function () {
       that.addLine(getLine66());
      MECE331TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE331TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE331TraditionalPlan");
+     that.addToClicked(["MECE331TraditionalPlan", "ENGINEERINGSCIENCES"]);
       MECE331TraditionalPlanflag=true
   }
  else {
@@ -1015,7 +1015,7 @@ $scope.MECE371TraditionalPlanListener = function () {
       that.addLine(getLine70());
      MECE371TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE371TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE371TraditionalPlan");
+     that.addToClicked(["MECE371TraditionalPlan", "ENGINEERINGSCIENCES"]);
       MECE371TraditionalPlanflag=true
   }
  else {
@@ -1039,7 +1039,7 @@ $scope.MECE380TraditionalPlanListener = function () {
       that.addLine(getLine71());
      MECE380TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE380TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE380TraditionalPlan");
+     that.addToClicked(["MECE380TraditionalPlan", "ENGINEERINGSCIENCES"]);
       MECE380TraditionalPlanflag=true
   }
  else {
@@ -1057,7 +1057,7 @@ $scope.ENGM310TraditionalPlanListener = function () {
       that.addLine(getLine72());
      ENGM310TraditionalPlanelement.classList.remove("");
      ENGM310TraditionalPlanelement.classList.add("-highlighted");
-     that.addToClicked("ENGM310TraditionalPlan");
+     that.addToClicked(["ENGM310TraditionalPlan", ""]);
       ENGM310TraditionalPlanflag=true
   }
  else {
@@ -1077,7 +1077,7 @@ $scope.MECE340TraditionalPlanListener = function () {
       that.addLine(getLine67());
      MECE340TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE340TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE340TraditionalPlan");
+     that.addToClicked(["MECE340TraditionalPlan", "ENGINEERINGSCIENCES"]);
       MECE340TraditionalPlanflag=true
   }
  else {
@@ -1103,7 +1103,7 @@ $scope.MECE360TraditionalPlanListener = function () {
       that.addLine(getLine68());
      MECE360TraditionalPlanelement.classList.remove("ENGINEERINGDESIGN");
      MECE360TraditionalPlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE360TraditionalPlan");
+     that.addToClicked(["MECE360TraditionalPlan", "ENGINEERINGDESIGN"]);
       MECE360TraditionalPlanflag=true
   }
  else {
@@ -1128,7 +1128,7 @@ $scope.MECE362TraditionalPlanListener = function () {
       that.addLine(getLine69());
      MECE362TraditionalPlanelement.classList.remove("ENGINEERINGDESIGN");
      MECE362TraditionalPlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE362TraditionalPlan");
+     that.addToClicked(["MECE362TraditionalPlan", "ENGINEERINGDESIGN"]);
       MECE362TraditionalPlanflag=true
   }
  else {
@@ -1148,7 +1148,7 @@ $scope.MECE390TraditionalPlanListener = function () {
       that.addLine(getLine50());
      MECE390TraditionalPlanelement.classList.remove("");
      MECE390TraditionalPlanelement.classList.add("-highlighted");
-     that.addToClicked("MECE390TraditionalPlan");
+     that.addToClicked(["MECE390TraditionalPlan", ""]);
       MECE390TraditionalPlanflag=true
   }
  else {
@@ -1166,7 +1166,7 @@ $scope.MECE430TraditionalPlanListener = function () {
       that.addLine(getLine51());
      MECE430TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE430TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE430TraditionalPlan");
+     that.addToClicked(["MECE430TraditionalPlan", "ENGINEERINGSCIENCES"]);
       MECE430TraditionalPlanflag=true
   }
  else {
@@ -1185,7 +1185,7 @@ $scope.MECE463TraditionalPlanListener = function () {
       that.addLine(getLine54());
      MECE463TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE463TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE463TraditionalPlan");
+     that.addToClicked(["MECE463TraditionalPlan", "ENGINEERINGSCIENCES"]);
       MECE463TraditionalPlanflag=true
   }
  else {
@@ -1207,7 +1207,7 @@ $scope.CHE448TraditionalPlanListener = function () {
       that.addLine(getLine58());
      CHE448TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES");
      CHE448TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("CHE448TraditionalPlan");
+     that.addToClicked(["CHE448TraditionalPlan", "ENGINEERINGSCIENCES"]);
       CHE448TraditionalPlanflag=true
   }
  else {
@@ -1230,7 +1230,7 @@ $scope.MECE403TraditionalPlanListener = function () {
       that.addLine(getLine62());
      MECE403TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE403TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE403TraditionalPlan");
+     that.addToClicked(["MECE403TraditionalPlan", "ENGINEERINGSCIENCES"]);
       MECE403TraditionalPlanflag=true
   }
  else {
@@ -1251,7 +1251,7 @@ $scope.MECE451TraditionalPlanListener = function () {
       that.addLine(getLine64());
      MECE451TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE451TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE451TraditionalPlan");
+     that.addToClicked(["MECE451TraditionalPlan", "ENGINEERINGSCIENCES"]);
       MECE451TraditionalPlanflag=true
   }
  else {
@@ -1276,7 +1276,7 @@ $scope.MECE460TraditionalPlanListener = function () {
       that.addLine(getLine72());
      MECE460TraditionalPlanelement.classList.remove("ENGINEERINGDESIGN");
      MECE460TraditionalPlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE460TraditionalPlan");
+     that.addToClicked(["MECE460TraditionalPlan", "ENGINEERINGDESIGN"]);
       MECE460TraditionalPlanflag=true
   }
  else {
@@ -1349,7 +1349,7 @@ $scope.CHEM103AlternatePlanListener = function () {
       that.addLine(getLine75());
      CHEM103AlternatePlanelement.classList.remove("BASICSCIENCES");
      CHEM103AlternatePlanelement.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("CHEM103AlternatePlan");
+     that.addToClicked(["CHEM103AlternatePlan", "BASICSCIENCES"]);
       CHEM103AlternatePlanflag=true
   }
  else {
@@ -1369,7 +1369,7 @@ $scope.ENGG130AlternatePlanListener = function () {
       that.addLine(getLine96());
      ENGG130AlternatePlanelement.classList.remove("BASICSCIENCES");
      ENGG130AlternatePlanelement.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("ENGG130AlternatePlan");
+     that.addToClicked(["ENGG130AlternatePlan", "BASICSCIENCES"]);
       ENGG130AlternatePlanflag=true
   }
  else {
@@ -1389,7 +1389,7 @@ $scope.ENGL199AlternatePlanListener = function () {
       that.addLine(getLine76());
      ENGL199AlternatePlanelement.classList.remove("");
      ENGL199AlternatePlanelement.classList.add("-highlighted");
-     that.addToClicked("ENGL199AlternatePlan");
+     that.addToClicked(["ENGL199AlternatePlan", ""]);
       ENGL199AlternatePlanflag=true
   }
  else {
@@ -1411,7 +1411,7 @@ $scope.MATH100AlternatePlanListener = function () {
       that.addLine(getLine92());
      MATH100AlternatePlanelement.classList.remove("MATH");
      MATH100AlternatePlanelement.classList.add("MATH-highlighted");
-     that.addToClicked("MATH100AlternatePlan");
+     that.addToClicked(["MATH100AlternatePlan", "MATH"]);
       MATH100AlternatePlanflag=true
   }
  else {
@@ -1433,7 +1433,7 @@ $scope.PHYS130AlternatePlanListener = function () {
       that.addLine(getLine74());
      PHYS130AlternatePlanelement.classList.remove("BASICSCIENCES");
      PHYS130AlternatePlanelement.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("PHYS130AlternatePlan");
+     that.addToClicked(["PHYS130AlternatePlan", "BASICSCIENCES"]);
       PHYS130AlternatePlanflag=true
   }
  else {
@@ -1451,7 +1451,7 @@ $scope.CHEM105AlternatePlanListener = function () {
       that.addLine(getLine95());
      CHEM105AlternatePlanelement.classList.remove("BASICSCIENCES");
      CHEM105AlternatePlanelement.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("CHEM105AlternatePlan");
+     that.addToClicked(["CHEM105AlternatePlan", "BASICSCIENCES"]);
       CHEM105AlternatePlanflag=true
   }
  else {
@@ -1470,7 +1470,7 @@ $scope.ENGG160AlternatePlanListener = function () {
       that.addLine(getLine89());
      ENGG160AlternatePlanelement.classList.remove("ENGINEERINGDESIGN");
      ENGG160AlternatePlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("ENGG160AlternatePlan");
+     that.addToClicked(["ENGG160AlternatePlan", "ENGINEERINGDESIGN"]);
       ENGG160AlternatePlanflag=true
   }
  else {
@@ -1492,7 +1492,7 @@ $scope.ENPH131AlternatePlanListener = function () {
       that.addLine(getLine97());
      ENPH131AlternatePlanelement.classList.remove("BASICSCIENCES");
      ENPH131AlternatePlanelement.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("ENPH131AlternatePlan");
+     that.addToClicked(["ENPH131AlternatePlan", "BASICSCIENCES"]);
       ENPH131AlternatePlanflag=true
   }
  else {
@@ -1520,7 +1520,7 @@ $scope.MATH101AlternatePlanListener = function () {
       that.addLine(getLine98());
      MATH101AlternatePlanelement.classList.remove("MATH");
      MATH101AlternatePlanelement.classList.add("MATH-highlighted");
-     that.addToClicked("MATH101AlternatePlan");
+     that.addToClicked(["MATH101AlternatePlan", "MATH"]);
       MATH101AlternatePlanflag=true
   }
  else {
@@ -1546,7 +1546,7 @@ $scope.MATH102AlternatePlanListener = function () {
       that.addLine(getLine122());
      MATH102AlternatePlanelement.classList.remove("MATH");
      MATH102AlternatePlanelement.classList.add("MATH-highlighted");
-     that.addToClicked("MATH102AlternatePlan");
+     that.addToClicked(["MATH102AlternatePlan", "MATH"]);
       MATH102AlternatePlanflag=true
   }
  else {
@@ -1565,7 +1565,7 @@ $scope.ENGM310AlternatePlanListener = function () {
       that.addLine(getLine145());
      ENGM310AlternatePlanelement.classList.remove("");
      ENGM310AlternatePlanelement.classList.add("-highlighted");
-     that.addToClicked("ENGM310AlternatePlan");
+     that.addToClicked(["ENGM310AlternatePlan", ""]);
       ENGM310AlternatePlanflag=true
   }
  else {
@@ -1585,7 +1585,7 @@ $scope.MATH201AlternatePlanListener = function () {
       that.addLine(getLine128());
      MATH201AlternatePlanelement.classList.remove("MATH");
      MATH201AlternatePlanelement.classList.add("MATH-highlighted");
-     that.addToClicked("MATH201AlternatePlan");
+     that.addToClicked(["MATH201AlternatePlan", "MATH"]);
       MATH201AlternatePlanflag=true
   }
  else {
@@ -1610,7 +1610,7 @@ $scope.MATH209AlternatePlanListener = function () {
       that.addLine(getLine129());
      MATH209AlternatePlanelement.classList.remove("MATH");
      MATH209AlternatePlanelement.classList.add("MATH-highlighted");
-     that.addToClicked("MATH209AlternatePlan");
+     that.addToClicked(["MATH209AlternatePlan", "MATH"]);
       MATH209AlternatePlanflag=true
   }
  else {
@@ -1637,7 +1637,7 @@ $scope.CIVE270AlternatePlanListener = function () {
       that.addLine(getLine119());
      CIVE270AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
      CIVE270AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("CIVE270AlternatePlan");
+     that.addToClicked(["CIVE270AlternatePlan", "ENGINEERINGSCIENCES"]);
       CIVE270AlternatePlanflag=true
   }
  else {
@@ -1662,7 +1662,7 @@ $scope.MECE230AlternatePlanListener = function () {
       that.addLine(getLine110());
      MECE230AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE230AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE230AlternatePlan");
+     that.addToClicked(["MECE230AlternatePlan", "ENGINEERINGSCIENCES"]);
       MECE230AlternatePlanflag=true
   }
  else {
@@ -1685,7 +1685,7 @@ $scope.MECE260AlternatePlanListener = function () {
       that.addLine(getLine116());
      MECE260AlternatePlanelement.classList.remove("ENGINEERINGDESIGN");
      MECE260AlternatePlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE260AlternatePlan");
+     that.addToClicked(["MECE260AlternatePlan", "ENGINEERINGDESIGN"]);
       MECE260AlternatePlanflag=true
   }
  else {
@@ -1706,7 +1706,7 @@ $scope.MECE265AlternatePlanListener = function () {
       that.addLine(getLine117());
      MECE265AlternatePlanelement.classList.remove("ENGINEERINGDESIGN");
      MECE265AlternatePlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE265AlternatePlan");
+     that.addToClicked(["MECE265AlternatePlan", "ENGINEERINGDESIGN"]);
       MECE265AlternatePlanflag=true
   }
  else {
@@ -1726,7 +1726,7 @@ $scope.STAT235AlternatePlanListener = function () {
       that.addLine(getLine103());
      STAT235AlternatePlanelement.classList.remove("MATH");
      STAT235AlternatePlanelement.classList.add("MATH-highlighted");
-     that.addToClicked("STAT235AlternatePlan");
+     that.addToClicked(["STAT235AlternatePlan", "MATH"]);
       STAT235AlternatePlanflag=true
   }
  else {
@@ -1748,7 +1748,7 @@ $scope.CHE243AlternatePlanListener = function () {
       that.addLine(getLine115());
      CHE243AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
      CHE243AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("CHE243AlternatePlan");
+     that.addToClicked(["CHE243AlternatePlan", "ENGINEERINGSCIENCES"]);
       CHE243AlternatePlanflag=true
   }
  else {
@@ -1768,7 +1768,7 @@ $scope.ECE209AlternatePlanListener = function () {
       that.addLine(getLine102());
      ECE209AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
      ECE209AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("ECE209AlternatePlan");
+     that.addToClicked(["ECE209AlternatePlan", "ENGINEERINGSCIENCES"]);
       ECE209AlternatePlanflag=true
   }
  else {
@@ -1786,7 +1786,7 @@ $scope.MATE202AlternatePlanListener = function () {
       that.addLine(getLine118());
      MATE202AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
      MATE202AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MATE202AlternatePlan");
+     that.addToClicked(["MATE202AlternatePlan", "ENGINEERINGSCIENCES"]);
       MATE202AlternatePlanflag=true
   }
  else {
@@ -1804,7 +1804,7 @@ $scope.MECE200AlternatePlanListener = function () {
       that.addLine(getLine138());
      MECE200AlternatePlanelement.classList.remove("");
      MECE200AlternatePlanelement.classList.add("-highlighted");
-     that.addToClicked("MECE200AlternatePlan");
+     that.addToClicked(["MECE200AlternatePlan", ""]);
       MECE200AlternatePlanflag=true
   }
  else {
@@ -1826,7 +1826,7 @@ $scope.MECE250AlternatePlanListener = function () {
       that.addLine(getLine136());
      MECE250AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE250AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE250AlternatePlan");
+     that.addToClicked(["MECE250AlternatePlan", "ENGINEERINGSCIENCES"]);
       MECE250AlternatePlanflag=true
   }
  else {
@@ -1851,7 +1851,7 @@ $scope.MATH300AlternatePlanListener = function () {
       that.addLine(getLine137());
      MATH300AlternatePlanelement.classList.remove("MATH");
      MATH300AlternatePlanelement.classList.add("MATH-highlighted");
-     that.addToClicked("MATH300AlternatePlan");
+     that.addToClicked(["MATH300AlternatePlan", "MATH"]);
       MATH300AlternatePlanflag=true
   }
  else {
@@ -1876,7 +1876,7 @@ $scope.MECE300AlternatePlanListener = function () {
       that.addLine(getLine132());
      MECE300AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE300AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE300AlternatePlan");
+     that.addToClicked(["MECE300AlternatePlan", "ENGINEERINGSCIENCES"]);
       MECE300AlternatePlanflag=true
   }
  else {
@@ -1899,7 +1899,7 @@ $scope.MECE301AlternatePlanListener = function () {
       that.addLine(getLine133());
      MECE301AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE301AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE301AlternatePlan");
+     that.addToClicked(["MECE301AlternatePlan", "ENGINEERINGSCIENCES"]);
       MECE301AlternatePlanflag=true
   }
  else {
@@ -1926,7 +1926,7 @@ $scope.MECE331AlternatePlanListener = function () {
       that.addLine(getLine139());
      MECE331AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE331AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE331AlternatePlan");
+     that.addToClicked(["MECE331AlternatePlan", "ENGINEERINGSCIENCES"]);
       MECE331AlternatePlanflag=true
   }
  else {
@@ -1958,7 +1958,7 @@ $scope.MECE371AlternatePlanListener = function () {
       that.addLine(getLine143());
      MECE371AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE371AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE371AlternatePlan");
+     that.addToClicked(["MECE371AlternatePlan", "ENGINEERINGSCIENCES"]);
       MECE371AlternatePlanflag=true
   }
  else {
@@ -1982,7 +1982,7 @@ $scope.MECE380AlternatePlanListener = function () {
       that.addLine(getLine144());
      MECE380AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE380AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE380AlternatePlan");
+     that.addToClicked(["MECE380AlternatePlan", "ENGINEERINGSCIENCES"]);
       MECE380AlternatePlanflag=true
   }
  else {
@@ -2003,7 +2003,7 @@ $scope.MECE340AlternatePlanListener = function () {
       that.addLine(getLine140());
      MECE340AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE340AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE340AlternatePlan");
+     that.addToClicked(["MECE340AlternatePlan", "ENGINEERINGSCIENCES"]);
       MECE340AlternatePlanflag=true
   }
  else {
@@ -2029,7 +2029,7 @@ $scope.MECE360AlternatePlanListener = function () {
       that.addLine(getLine141());
      MECE360AlternatePlanelement.classList.remove("ENGINEERINGDESIGN");
      MECE360AlternatePlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE360AlternatePlan");
+     that.addToClicked(["MECE360AlternatePlan", "ENGINEERINGDESIGN"]);
       MECE360AlternatePlanflag=true
   }
  else {
@@ -2054,7 +2054,7 @@ $scope.MECE362AlternatePlanListener = function () {
       that.addLine(getLine142());
      MECE362AlternatePlanelement.classList.remove("ENGINEERINGDESIGN");
      MECE362AlternatePlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE362AlternatePlan");
+     that.addToClicked(["MECE362AlternatePlan", "ENGINEERINGDESIGN"]);
       MECE362AlternatePlanflag=true
   }
  else {
@@ -2074,7 +2074,7 @@ $scope.MECE390AlternatePlanListener = function () {
       that.addLine(getLine123());
      MECE390AlternatePlanelement.classList.remove("");
      MECE390AlternatePlanelement.classList.add("-highlighted");
-     that.addToClicked("MECE390AlternatePlan");
+     that.addToClicked(["MECE390AlternatePlan", ""]);
       MECE390AlternatePlanflag=true
   }
  else {
@@ -2092,7 +2092,7 @@ $scope.MECE430AlternatePlanListener = function () {
       that.addLine(getLine124());
      MECE430AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE430AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE430AlternatePlan");
+     that.addToClicked(["MECE430AlternatePlan", "ENGINEERINGSCIENCES"]);
       MECE430AlternatePlanflag=true
   }
  else {
@@ -2111,7 +2111,7 @@ $scope.MECE463AlternatePlanListener = function () {
       that.addLine(getLine127());
      MECE463AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE463AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE463AlternatePlan");
+     that.addToClicked(["MECE463AlternatePlan", "ENGINEERINGSCIENCES"]);
       MECE463AlternatePlanflag=true
   }
  else {
@@ -2133,7 +2133,7 @@ $scope.CHE448AlternatePlanListener = function () {
       that.addLine(getLine131());
      CHE448AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
      CHE448AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("CHE448AlternatePlan");
+     that.addToClicked(["CHE448AlternatePlan", "ENGINEERINGSCIENCES"]);
       CHE448AlternatePlanflag=true
   }
  else {
@@ -2156,7 +2156,7 @@ $scope.MECE403AlternatePlanListener = function () {
       that.addLine(getLine135());
      MECE403AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE403AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE403AlternatePlan");
+     that.addToClicked(["MECE403AlternatePlan", "ENGINEERINGSCIENCES"]);
       MECE403AlternatePlanflag=true
   }
  else {
@@ -2177,7 +2177,7 @@ $scope.MECE451AlternatePlanListener = function () {
       that.addLine(getLine137());
      MECE451AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
      MECE451AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE451AlternatePlan");
+     that.addToClicked(["MECE451AlternatePlan", "ENGINEERINGSCIENCES"]);
       MECE451AlternatePlanflag=true
   }
  else {
@@ -2202,7 +2202,7 @@ $scope.MECE460AlternatePlanListener = function () {
       that.addLine(getLine145());
      MECE460AlternatePlanelement.classList.remove("ENGINEERINGDESIGN");
      MECE460AlternatePlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE460AlternatePlan");
+     that.addToClicked(["MECE460AlternatePlan", "ENGINEERINGDESIGN"]);
       MECE460AlternatePlanflag=true
   }
  else {
@@ -2281,7 +2281,7 @@ $scope.CHEM103CoopPlan1Listener = function () {
       that.addLine(getLine148());
      CHEM103CoopPlan1element.classList.remove("BASICSCIENCES");
      CHEM103CoopPlan1element.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("CHEM103CoopPlan1");
+     that.addToClicked(["CHEM103CoopPlan1", "BASICSCIENCES"]);
       CHEM103CoopPlan1flag=true
   }
  else {
@@ -2301,7 +2301,7 @@ $scope.ENGG130CoopPlan1Listener = function () {
       that.addLine(getLine169());
      ENGG130CoopPlan1element.classList.remove("BASICSCIENCES");
      ENGG130CoopPlan1element.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("ENGG130CoopPlan1");
+     that.addToClicked(["ENGG130CoopPlan1", "BASICSCIENCES"]);
       ENGG130CoopPlan1flag=true
   }
  else {
@@ -2321,7 +2321,7 @@ $scope.ENGL199CoopPlan1Listener = function () {
       that.addLine(getLine149());
      ENGL199CoopPlan1element.classList.remove("");
      ENGL199CoopPlan1element.classList.add("-highlighted");
-     that.addToClicked("ENGL199CoopPlan1");
+     that.addToClicked(["ENGL199CoopPlan1", ""]);
       ENGL199CoopPlan1flag=true
   }
  else {
@@ -2343,7 +2343,7 @@ $scope.MATH100CoopPlan1Listener = function () {
       that.addLine(getLine164());
      MATH100CoopPlan1element.classList.remove("MATH");
      MATH100CoopPlan1element.classList.add("MATH-highlighted");
-     that.addToClicked("MATH100CoopPlan1");
+     that.addToClicked(["MATH100CoopPlan1", "MATH"]);
       MATH100CoopPlan1flag=true
   }
  else {
@@ -2365,7 +2365,7 @@ $scope.PHYS130CoopPlan1Listener = function () {
       that.addLine(getLine147());
      PHYS130CoopPlan1element.classList.remove("BASICSCIENCES");
      PHYS130CoopPlan1element.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("PHYS130CoopPlan1");
+     that.addToClicked(["PHYS130CoopPlan1", "BASICSCIENCES"]);
       PHYS130CoopPlan1flag=true
   }
  else {
@@ -2383,7 +2383,7 @@ $scope.CHEM105CoopPlan1Listener = function () {
       that.addLine(getLine167());
      CHEM105CoopPlan1element.classList.remove("BASICSCIENCES");
      CHEM105CoopPlan1element.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("CHEM105CoopPlan1");
+     that.addToClicked(["CHEM105CoopPlan1", "BASICSCIENCES"]);
       CHEM105CoopPlan1flag=true
   }
  else {
@@ -2402,7 +2402,7 @@ $scope.ENGG160CoopPlan1Listener = function () {
       that.addLine(getLine161());
      ENGG160CoopPlan1element.classList.remove("ENGINEERINGDESIGN");
      ENGG160CoopPlan1element.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("ENGG160CoopPlan1");
+     that.addToClicked(["ENGG160CoopPlan1", "ENGINEERINGDESIGN"]);
       ENGG160CoopPlan1flag=true
   }
  else {
@@ -2424,7 +2424,7 @@ $scope.ENPH131CoopPlan1Listener = function () {
       that.addLine(getLine170());
      ENPH131CoopPlan1element.classList.remove("BASICSCIENCES");
      ENPH131CoopPlan1element.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("ENPH131CoopPlan1");
+     that.addToClicked(["ENPH131CoopPlan1", "BASICSCIENCES"]);
       ENPH131CoopPlan1flag=true
   }
  else {
@@ -2452,7 +2452,7 @@ $scope.MATH101CoopPlan1Listener = function () {
       that.addLine(getLine171());
      MATH101CoopPlan1element.classList.remove("MATH");
      MATH101CoopPlan1element.classList.add("MATH-highlighted");
-     that.addToClicked("MATH101CoopPlan1");
+     that.addToClicked(["MATH101CoopPlan1", "MATH"]);
       MATH101CoopPlan1flag=true
   }
  else {
@@ -2478,7 +2478,7 @@ $scope.MATH102CoopPlan1Listener = function () {
       that.addLine(getLine199());
      MATH102CoopPlan1element.classList.remove("MATH");
      MATH102CoopPlan1element.classList.add("MATH-highlighted");
-     that.addToClicked("MATH102CoopPlan1");
+     that.addToClicked(["MATH102CoopPlan1", "MATH"]);
       MATH102CoopPlan1flag=true
   }
  else {
@@ -2502,7 +2502,7 @@ $scope.CIVE270CoopPlan1Listener = function () {
       that.addLine(getLine196());
      CIVE270CoopPlan1element.classList.remove("ENGINEERINGSCIENCES");
      CIVE270CoopPlan1element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("CIVE270CoopPlan1");
+     that.addToClicked(["CIVE270CoopPlan1", "ENGINEERINGSCIENCES"]);
       CIVE270CoopPlan1flag=true
   }
  else {
@@ -2524,7 +2524,7 @@ $scope.ENGG299CoopPlan1Listener = function () {
       that.addLine(getLine172());
      ENGG299CoopPlan1element.classList.remove("");
      ENGG299CoopPlan1element.classList.add("-highlighted");
-     that.addToClicked("ENGG299CoopPlan1");
+     that.addToClicked(["ENGG299CoopPlan1", ""]);
       ENGG299CoopPlan1flag=true
   }
  else {
@@ -2546,7 +2546,7 @@ $scope.MATH209CoopPlan1Listener = function () {
       that.addLine(getLine207());
      MATH209CoopPlan1element.classList.remove("MATH");
      MATH209CoopPlan1element.classList.add("MATH-highlighted");
-     that.addToClicked("MATH209CoopPlan1");
+     that.addToClicked(["MATH209CoopPlan1", "MATH"]);
       MATH209CoopPlan1flag=true
   }
  else {
@@ -2571,7 +2571,7 @@ $scope.MECE230CoopPlan1Listener = function () {
       that.addLine(getLine185());
      MECE230CoopPlan1element.classList.remove("ENGINEERINGSCIENCES");
      MECE230CoopPlan1element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE230CoopPlan1");
+     that.addToClicked(["MECE230CoopPlan1", "ENGINEERINGSCIENCES"]);
       MECE230CoopPlan1flag=true
   }
  else {
@@ -2594,7 +2594,7 @@ $scope.MECE260CoopPlan1Listener = function () {
       that.addLine(getLine193());
      MECE260CoopPlan1element.classList.remove("ENGINEERINGDESIGN");
      MECE260CoopPlan1element.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE260CoopPlan1");
+     that.addToClicked(["MECE260CoopPlan1", "ENGINEERINGDESIGN"]);
       MECE260CoopPlan1flag=true
   }
  else {
@@ -2615,7 +2615,7 @@ $scope.MECE265CoopPlan1Listener = function () {
       that.addLine(getLine194());
      MECE265CoopPlan1element.classList.remove("ENGINEERINGDESIGN");
      MECE265CoopPlan1element.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE265CoopPlan1");
+     that.addToClicked(["MECE265CoopPlan1", "ENGINEERINGDESIGN"]);
       MECE265CoopPlan1flag=true
   }
  else {
@@ -2635,7 +2635,7 @@ $scope.STAT235CoopPlan1Listener = function () {
       that.addLine(getLine178());
      STAT235CoopPlan1element.classList.remove("MATH");
      STAT235CoopPlan1element.classList.add("MATH-highlighted");
-     that.addToClicked("STAT235CoopPlan1");
+     that.addToClicked(["STAT235CoopPlan1", "MATH"]);
       STAT235CoopPlan1flag=true
   }
  else {
@@ -2657,7 +2657,7 @@ $scope.CHE243CoopPlan1Listener = function () {
       that.addLine(getLine192());
      CHE243CoopPlan1element.classList.remove("ENGINEERINGSCIENCES");
      CHE243CoopPlan1element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("CHE243CoopPlan1");
+     that.addToClicked(["CHE243CoopPlan1", "ENGINEERINGSCIENCES"]);
       CHE243CoopPlan1flag=true
   }
  else {
@@ -2677,7 +2677,7 @@ $scope.ECE209CoopPlan1Listener = function () {
       that.addLine(getLine177());
      ECE209CoopPlan1element.classList.remove("ENGINEERINGSCIENCES");
      ECE209CoopPlan1element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("ECE209CoopPlan1");
+     that.addToClicked(["ECE209CoopPlan1", "ENGINEERINGSCIENCES"]);
       ECE209CoopPlan1flag=true
   }
  else {
@@ -2695,7 +2695,7 @@ $scope.MATE202CoopPlan1Listener = function () {
       that.addLine(getLine195());
      MATE202CoopPlan1element.classList.remove("ENGINEERINGSCIENCES");
      MATE202CoopPlan1element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MATE202CoopPlan1");
+     that.addToClicked(["MATE202CoopPlan1", "ENGINEERINGSCIENCES"]);
       MATE202CoopPlan1flag=true
   }
  else {
@@ -2716,7 +2716,7 @@ $scope.MATH201CoopPlan1Listener = function () {
       that.addLine(getLine206());
      MATH201CoopPlan1element.classList.remove("MATH");
      MATH201CoopPlan1element.classList.add("MATH-highlighted");
-     that.addToClicked("MATH201CoopPlan1");
+     that.addToClicked(["MATH201CoopPlan1", "MATH"]);
       MATH201CoopPlan1flag=true
   }
  else {
@@ -2736,7 +2736,7 @@ $scope.MECE200CoopPlan1Listener = function () {
       that.addLine(getLine216());
      MECE200CoopPlan1element.classList.remove("");
      MECE200CoopPlan1element.classList.add("-highlighted");
-     that.addToClicked("MECE200CoopPlan1");
+     that.addToClicked(["MECE200CoopPlan1", ""]);
       MECE200CoopPlan1flag=true
   }
  else {
@@ -2758,7 +2758,7 @@ $scope.MECE250CoopPlan1Listener = function () {
       that.addLine(getLine214());
      MECE250CoopPlan1element.classList.remove("ENGINEERINGSCIENCES");
      MECE250CoopPlan1element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE250CoopPlan1");
+     that.addToClicked(["MECE250CoopPlan1", "ENGINEERINGSCIENCES"]);
       MECE250CoopPlan1flag=true
   }
  else {
@@ -2781,7 +2781,7 @@ $scope.WKEXP901CoopPlan1Listener = function () {
       that.addLine(getLine173());
      WKEXP901CoopPlan1element.classList.remove("");
      WKEXP901CoopPlan1element.classList.add("-highlighted");
-     that.addToClicked("WKEXP901CoopPlan1");
+     that.addToClicked(["WKEXP901CoopPlan1", ""]);
       WKEXP901CoopPlan1flag=true
   }
  else {
@@ -2800,7 +2800,7 @@ $scope.WKEXP902CoopPlan1Listener = function () {
       that.addLine(getLine190());
      WKEXP902CoopPlan1element.classList.remove("");
      WKEXP902CoopPlan1element.classList.add("-highlighted");
-     that.addToClicked("WKEXP902CoopPlan1");
+     that.addToClicked(["WKEXP902CoopPlan1", ""]);
       WKEXP902CoopPlan1flag=true
   }
  else {
@@ -2821,7 +2821,7 @@ $scope.MATH300CoopPlan1Listener = function () {
       that.addLine(getLine215());
      MATH300CoopPlan1element.classList.remove("MATH");
      MATH300CoopPlan1element.classList.add("MATH-highlighted");
-     that.addToClicked("MATH300CoopPlan1");
+     that.addToClicked(["MATH300CoopPlan1", "MATH"]);
       MATH300CoopPlan1flag=true
   }
  else {
@@ -2846,7 +2846,7 @@ $scope.MECE300CoopPlan1Listener = function () {
       that.addLine(getLine210());
      MECE300CoopPlan1element.classList.remove("ENGINEERINGSCIENCES");
      MECE300CoopPlan1element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE300CoopPlan1");
+     that.addToClicked(["MECE300CoopPlan1", "ENGINEERINGSCIENCES"]);
       MECE300CoopPlan1flag=true
   }
  else {
@@ -2869,7 +2869,7 @@ $scope.MECE301CoopPlan1Listener = function () {
       that.addLine(getLine211());
      MECE301CoopPlan1element.classList.remove("ENGINEERINGSCIENCES");
      MECE301CoopPlan1element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE301CoopPlan1");
+     that.addToClicked(["MECE301CoopPlan1", "ENGINEERINGSCIENCES"]);
       MECE301CoopPlan1flag=true
   }
  else {
@@ -2896,7 +2896,7 @@ $scope.MECE331CoopPlan1Listener = function () {
       that.addLine(getLine217());
      MECE331CoopPlan1element.classList.remove("ENGINEERINGSCIENCES");
      MECE331CoopPlan1element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE331CoopPlan1");
+     that.addToClicked(["MECE331CoopPlan1", "ENGINEERINGSCIENCES"]);
       MECE331CoopPlan1flag=true
   }
  else {
@@ -2928,7 +2928,7 @@ $scope.MECE371CoopPlan1Listener = function () {
       that.addLine(getLine221());
      MECE371CoopPlan1element.classList.remove("ENGINEERINGSCIENCES");
      MECE371CoopPlan1element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE371CoopPlan1");
+     that.addToClicked(["MECE371CoopPlan1", "ENGINEERINGSCIENCES"]);
       MECE371CoopPlan1flag=true
   }
  else {
@@ -2952,7 +2952,7 @@ $scope.MECE380CoopPlan1Listener = function () {
       that.addLine(getLine222());
      MECE380CoopPlan1element.classList.remove("ENGINEERINGSCIENCES");
      MECE380CoopPlan1element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE380CoopPlan1");
+     that.addToClicked(["MECE380CoopPlan1", "ENGINEERINGSCIENCES"]);
       MECE380CoopPlan1flag=true
   }
  else {
@@ -2971,7 +2971,7 @@ $scope.WKEXP903CoopPlan1Listener = function () {
       that.addLine(getLine191());
      WKEXP903CoopPlan1element.classList.remove("");
      WKEXP903CoopPlan1element.classList.add("-highlighted");
-     that.addToClicked("WKEXP903CoopPlan1");
+     that.addToClicked(["WKEXP903CoopPlan1", ""]);
       WKEXP903CoopPlan1flag=true
   }
  else {
@@ -2990,7 +2990,7 @@ $scope.WKEXP904CoopPlan1Listener = function () {
       that.addLine(getLine205());
      WKEXP904CoopPlan1element.classList.remove("");
      WKEXP904CoopPlan1element.classList.add("-highlighted");
-     that.addToClicked("WKEXP904CoopPlan1");
+     that.addToClicked(["WKEXP904CoopPlan1", ""]);
       WKEXP904CoopPlan1flag=true
   }
  else {
@@ -3008,7 +3008,7 @@ $scope.ENGM310CoopPlan1Listener = function () {
       that.addLine(getLine223());
      ENGM310CoopPlan1element.classList.remove("");
      ENGM310CoopPlan1element.classList.add("-highlighted");
-     that.addToClicked("ENGM310CoopPlan1");
+     that.addToClicked(["ENGM310CoopPlan1", ""]);
       ENGM310CoopPlan1flag=true
   }
  else {
@@ -3028,7 +3028,7 @@ $scope.MECE340CoopPlan1Listener = function () {
       that.addLine(getLine218());
      MECE340CoopPlan1element.classList.remove("ENGINEERINGSCIENCES");
      MECE340CoopPlan1element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE340CoopPlan1");
+     that.addToClicked(["MECE340CoopPlan1", "ENGINEERINGSCIENCES"]);
       MECE340CoopPlan1flag=true
   }
  else {
@@ -3054,7 +3054,7 @@ $scope.MECE360CoopPlan1Listener = function () {
       that.addLine(getLine219());
      MECE360CoopPlan1element.classList.remove("ENGINEERINGDESIGN");
      MECE360CoopPlan1element.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE360CoopPlan1");
+     that.addToClicked(["MECE360CoopPlan1", "ENGINEERINGDESIGN"]);
       MECE360CoopPlan1flag=true
   }
  else {
@@ -3079,7 +3079,7 @@ $scope.MECE362CoopPlan1Listener = function () {
       that.addLine(getLine220());
      MECE362CoopPlan1element.classList.remove("ENGINEERINGDESIGN");
      MECE362CoopPlan1element.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE362CoopPlan1");
+     that.addToClicked(["MECE362CoopPlan1", "ENGINEERINGDESIGN"]);
       MECE362CoopPlan1flag=true
   }
  else {
@@ -3099,7 +3099,7 @@ $scope.MECE390CoopPlan1Listener = function () {
       that.addLine(getLine200());
      MECE390CoopPlan1element.classList.remove("");
      MECE390CoopPlan1element.classList.add("-highlighted");
-     that.addToClicked("MECE390CoopPlan1");
+     that.addToClicked(["MECE390CoopPlan1", ""]);
       MECE390CoopPlan1flag=true
   }
  else {
@@ -3117,7 +3117,7 @@ $scope.MECE430CoopPlan1Listener = function () {
       that.addLine(getLine201());
      MECE430CoopPlan1element.classList.remove("ENGINEERINGSCIENCES");
      MECE430CoopPlan1element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE430CoopPlan1");
+     that.addToClicked(["MECE430CoopPlan1", "ENGINEERINGSCIENCES"]);
       MECE430CoopPlan1flag=true
   }
  else {
@@ -3136,7 +3136,7 @@ $scope.MECE463CoopPlan1Listener = function () {
       that.addLine(getLine204());
      MECE463CoopPlan1element.classList.remove("ENGINEERINGSCIENCES");
      MECE463CoopPlan1element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE463CoopPlan1");
+     that.addToClicked(["MECE463CoopPlan1", "ENGINEERINGSCIENCES"]);
       MECE463CoopPlan1flag=true
   }
  else {
@@ -3155,7 +3155,7 @@ $scope.WKEXP905CoopPlan1Listener = function () {
       that.addLine(getLine205());
      WKEXP905CoopPlan1element.classList.remove("");
      WKEXP905CoopPlan1element.classList.add("-highlighted");
-     that.addToClicked("WKEXP905CoopPlan1");
+     that.addToClicked(["WKEXP905CoopPlan1", ""]);
       WKEXP905CoopPlan1flag=true
   }
  else {
@@ -3175,7 +3175,7 @@ $scope.CHE448CoopPlan1Listener = function () {
       that.addLine(getLine209());
      CHE448CoopPlan1element.classList.remove("ENGINEERINGSCIENCES");
      CHE448CoopPlan1element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("CHE448CoopPlan1");
+     that.addToClicked(["CHE448CoopPlan1", "ENGINEERINGSCIENCES"]);
       CHE448CoopPlan1flag=true
   }
  else {
@@ -3198,7 +3198,7 @@ $scope.MECE403CoopPlan1Listener = function () {
       that.addLine(getLine213());
      MECE403CoopPlan1element.classList.remove("ENGINEERINGSCIENCES");
      MECE403CoopPlan1element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE403CoopPlan1");
+     that.addToClicked(["MECE403CoopPlan1", "ENGINEERINGSCIENCES"]);
       MECE403CoopPlan1flag=true
   }
  else {
@@ -3219,7 +3219,7 @@ $scope.MECE451CoopPlan1Listener = function () {
       that.addLine(getLine215());
      MECE451CoopPlan1element.classList.remove("ENGINEERINGSCIENCES");
      MECE451CoopPlan1element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE451CoopPlan1");
+     that.addToClicked(["MECE451CoopPlan1", "ENGINEERINGSCIENCES"]);
       MECE451CoopPlan1flag=true
   }
  else {
@@ -3244,7 +3244,7 @@ $scope.MECE460CoopPlan1Listener = function () {
       that.addLine(getLine223());
      MECE460CoopPlan1element.classList.remove("ENGINEERINGDESIGN");
      MECE460CoopPlan1element.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE460CoopPlan1");
+     that.addToClicked(["MECE460CoopPlan1", "ENGINEERINGDESIGN"]);
       MECE460CoopPlan1flag=true
   }
  else {
@@ -3323,7 +3323,7 @@ $scope.CHEM103CoopPlan2Listener = function () {
       that.addLine(getLine226());
      CHEM103CoopPlan2element.classList.remove("BASICSCIENCES");
      CHEM103CoopPlan2element.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("CHEM103CoopPlan2");
+     that.addToClicked(["CHEM103CoopPlan2", "BASICSCIENCES"]);
       CHEM103CoopPlan2flag=true
   }
  else {
@@ -3343,7 +3343,7 @@ $scope.ENGG130CoopPlan2Listener = function () {
       that.addLine(getLine238());
      ENGG130CoopPlan2element.classList.remove("BASICSCIENCES");
      ENGG130CoopPlan2element.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("ENGG130CoopPlan2");
+     that.addToClicked(["ENGG130CoopPlan2", "BASICSCIENCES"]);
       ENGG130CoopPlan2flag=true
   }
  else {
@@ -3363,7 +3363,7 @@ $scope.ENGL199CoopPlan2Listener = function () {
       that.addLine(getLine227());
      ENGL199CoopPlan2element.classList.remove("");
      ENGL199CoopPlan2element.classList.add("-highlighted");
-     that.addToClicked("ENGL199CoopPlan2");
+     that.addToClicked(["ENGL199CoopPlan2", ""]);
       ENGL199CoopPlan2flag=true
   }
  else {
@@ -3385,7 +3385,7 @@ $scope.MATH100CoopPlan2Listener = function () {
       that.addLine(getLine241());
      MATH100CoopPlan2element.classList.remove("MATH");
      MATH100CoopPlan2element.classList.add("MATH-highlighted");
-     that.addToClicked("MATH100CoopPlan2");
+     that.addToClicked(["MATH100CoopPlan2", "MATH"]);
       MATH100CoopPlan2flag=true
   }
  else {
@@ -3407,7 +3407,7 @@ $scope.PHYS130CoopPlan2Listener = function () {
       that.addLine(getLine225());
      PHYS130CoopPlan2element.classList.remove("BASICSCIENCES");
      PHYS130CoopPlan2element.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("PHYS130CoopPlan2");
+     that.addToClicked(["PHYS130CoopPlan2", "BASICSCIENCES"]);
       PHYS130CoopPlan2flag=true
   }
  else {
@@ -3425,7 +3425,7 @@ $scope.CHEM105CoopPlan2Listener = function () {
       that.addLine(getLine244());
      CHEM105CoopPlan2element.classList.remove("BASICSCIENCES");
      CHEM105CoopPlan2element.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("CHEM105CoopPlan2");
+     that.addToClicked(["CHEM105CoopPlan2", "BASICSCIENCES"]);
       CHEM105CoopPlan2flag=true
   }
  else {
@@ -3444,7 +3444,7 @@ $scope.ENGG160CoopPlan2Listener = function () {
       that.addLine(getLine248());
      ENGG160CoopPlan2element.classList.remove("ENGINEERINGDESIGN");
      ENGG160CoopPlan2element.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("ENGG160CoopPlan2");
+     that.addToClicked(["ENGG160CoopPlan2", "ENGINEERINGDESIGN"]);
       ENGG160CoopPlan2flag=true
   }
  else {
@@ -3466,7 +3466,7 @@ $scope.ENPH131CoopPlan2Listener = function () {
       that.addLine(getLine247());
      ENPH131CoopPlan2element.classList.remove("BASICSCIENCES");
      ENPH131CoopPlan2element.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("ENPH131CoopPlan2");
+     that.addToClicked(["ENPH131CoopPlan2", "BASICSCIENCES"]);
       ENPH131CoopPlan2flag=true
   }
  else {
@@ -3494,7 +3494,7 @@ $scope.MATH101CoopPlan2Listener = function () {
       that.addLine(getLine246());
      MATH101CoopPlan2element.classList.remove("MATH");
      MATH101CoopPlan2element.classList.add("MATH-highlighted");
-     that.addToClicked("MATH101CoopPlan2");
+     that.addToClicked(["MATH101CoopPlan2", "MATH"]);
       MATH101CoopPlan2flag=true
   }
  else {
@@ -3520,7 +3520,7 @@ $scope.MATH102CoopPlan2Listener = function () {
       that.addLine(getLine276());
      MATH102CoopPlan2element.classList.remove("MATH");
      MATH102CoopPlan2element.classList.add("MATH-highlighted");
-     that.addToClicked("MATH102CoopPlan2");
+     that.addToClicked(["MATH102CoopPlan2", "MATH"]);
       MATH102CoopPlan2flag=true
   }
  else {
@@ -3542,7 +3542,7 @@ $scope.CHE243CoopPlan2Listener = function () {
       that.addLine(getLine269());
      CHE243CoopPlan2element.classList.remove("ENGINEERINGSCIENCES");
      CHE243CoopPlan2element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("CHE243CoopPlan2");
+     that.addToClicked(["CHE243CoopPlan2", "ENGINEERINGSCIENCES"]);
       CHE243CoopPlan2flag=true
   }
  else {
@@ -3567,7 +3567,7 @@ $scope.CIVE270CoopPlan2Listener = function () {
       that.addLine(getLine273());
      CIVE270CoopPlan2element.classList.remove("ENGINEERINGSCIENCES");
      CIVE270CoopPlan2element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("CIVE270CoopPlan2");
+     that.addToClicked(["CIVE270CoopPlan2", "ENGINEERINGSCIENCES"]);
       CIVE270CoopPlan2flag=true
   }
  else {
@@ -3589,7 +3589,7 @@ $scope.ENGG299CoopPlan2Listener = function () {
       that.addLine(getLine243());
      ENGG299CoopPlan2element.classList.remove("");
      ENGG299CoopPlan2element.classList.add("-highlighted");
-     that.addToClicked("ENGG299CoopPlan2");
+     that.addToClicked(["ENGG299CoopPlan2", ""]);
       ENGG299CoopPlan2flag=true
   }
  else {
@@ -3611,7 +3611,7 @@ $scope.MATH209CoopPlan2Listener = function () {
       that.addLine(getLine295());
      MATH209CoopPlan2element.classList.remove("MATH");
      MATH209CoopPlan2element.classList.add("MATH-highlighted");
-     that.addToClicked("MATH209CoopPlan2");
+     that.addToClicked(["MATH209CoopPlan2", "MATH"]);
       MATH209CoopPlan2flag=true
   }
  else {
@@ -3633,7 +3633,7 @@ $scope.MECE200CoopPlan2Listener = function () {
       that.addLine(getLine285());
      MECE200CoopPlan2element.classList.remove("");
      MECE200CoopPlan2element.classList.add("-highlighted");
-     that.addToClicked("MECE200CoopPlan2");
+     that.addToClicked(["MECE200CoopPlan2", ""]);
       MECE200CoopPlan2flag=true
   }
  else {
@@ -3655,7 +3655,7 @@ $scope.MECE250CoopPlan2Listener = function () {
       that.addLine(getLine283());
      MECE250CoopPlan2element.classList.remove("ENGINEERINGSCIENCES");
      MECE250CoopPlan2element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE250CoopPlan2");
+     that.addToClicked(["MECE250CoopPlan2", "ENGINEERINGSCIENCES"]);
       MECE250CoopPlan2flag=true
   }
  else {
@@ -3679,7 +3679,7 @@ $scope.STAT235CoopPlan2Listener = function () {
       that.addLine(getLine255());
      STAT235CoopPlan2element.classList.remove("MATH");
      STAT235CoopPlan2element.classList.add("MATH-highlighted");
-     that.addToClicked("STAT235CoopPlan2");
+     that.addToClicked(["STAT235CoopPlan2", "MATH"]);
       STAT235CoopPlan2flag=true
   }
  else {
@@ -3699,7 +3699,7 @@ $scope.WKEXP901CoopPlan2Listener = function () {
       that.addLine(getLine267());
      WKEXP901CoopPlan2element.classList.remove("");
      WKEXP901CoopPlan2element.classList.add("-highlighted");
-     that.addToClicked("WKEXP901CoopPlan2");
+     that.addToClicked(["WKEXP901CoopPlan2", ""]);
       WKEXP901CoopPlan2flag=true
   }
  else {
@@ -3717,7 +3717,7 @@ $scope.ECE209CoopPlan2Listener = function () {
       that.addLine(getLine254());
      ECE209CoopPlan2element.classList.remove("ENGINEERINGSCIENCES");
      ECE209CoopPlan2element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("ECE209CoopPlan2");
+     that.addToClicked(["ECE209CoopPlan2", "ENGINEERINGSCIENCES"]);
       ECE209CoopPlan2flag=true
   }
  else {
@@ -3735,7 +3735,7 @@ $scope.MATE202CoopPlan2Listener = function () {
       that.addLine(getLine272());
      MATE202CoopPlan2element.classList.remove("ENGINEERINGSCIENCES");
      MATE202CoopPlan2element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MATE202CoopPlan2");
+     that.addToClicked(["MATE202CoopPlan2", "ENGINEERINGSCIENCES"]);
       MATE202CoopPlan2flag=true
   }
  else {
@@ -3756,7 +3756,7 @@ $scope.MATH201CoopPlan2Listener = function () {
       that.addLine(getLine294());
      MATH201CoopPlan2element.classList.remove("MATH");
      MATH201CoopPlan2element.classList.add("MATH-highlighted");
-     that.addToClicked("MATH201CoopPlan2");
+     that.addToClicked(["MATH201CoopPlan2", "MATH"]);
       MATH201CoopPlan2flag=true
   }
  else {
@@ -3779,7 +3779,7 @@ $scope.MECE230CoopPlan2Listener = function () {
       that.addLine(getLine262());
      MECE230CoopPlan2element.classList.remove("ENGINEERINGSCIENCES");
      MECE230CoopPlan2element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE230CoopPlan2");
+     that.addToClicked(["MECE230CoopPlan2", "ENGINEERINGSCIENCES"]);
       MECE230CoopPlan2flag=true
   }
  else {
@@ -3802,7 +3802,7 @@ $scope.MECE260CoopPlan2Listener = function () {
       that.addLine(getLine270());
      MECE260CoopPlan2element.classList.remove("ENGINEERINGDESIGN");
      MECE260CoopPlan2element.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE260CoopPlan2");
+     that.addToClicked(["MECE260CoopPlan2", "ENGINEERINGDESIGN"]);
       MECE260CoopPlan2flag=true
   }
  else {
@@ -3823,7 +3823,7 @@ $scope.MECE265CoopPlan2Listener = function () {
       that.addLine(getLine271());
      MECE265CoopPlan2element.classList.remove("ENGINEERINGDESIGN");
      MECE265CoopPlan2element.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE265CoopPlan2");
+     that.addToClicked(["MECE265CoopPlan2", "ENGINEERINGDESIGN"]);
       MECE265CoopPlan2flag=true
   }
  else {
@@ -3844,7 +3844,7 @@ $scope.MATH300CoopPlan2Listener = function () {
       that.addLine(getLine284());
      MATH300CoopPlan2element.classList.remove("MATH");
      MATH300CoopPlan2element.classList.add("MATH-highlighted");
-     that.addToClicked("MATH300CoopPlan2");
+     that.addToClicked(["MATH300CoopPlan2", "MATH"]);
       MATH300CoopPlan2flag=true
   }
  else {
@@ -3869,7 +3869,7 @@ $scope.MECE300CoopPlan2Listener = function () {
       that.addLine(getLine279());
      MECE300CoopPlan2element.classList.remove("ENGINEERINGSCIENCES");
      MECE300CoopPlan2element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE300CoopPlan2");
+     that.addToClicked(["MECE300CoopPlan2", "ENGINEERINGSCIENCES"]);
       MECE300CoopPlan2flag=true
   }
  else {
@@ -3892,7 +3892,7 @@ $scope.MECE301CoopPlan2Listener = function () {
       that.addLine(getLine280());
      MECE301CoopPlan2element.classList.remove("ENGINEERINGSCIENCES");
      MECE301CoopPlan2element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE301CoopPlan2");
+     that.addToClicked(["MECE301CoopPlan2", "ENGINEERINGSCIENCES"]);
       MECE301CoopPlan2flag=true
   }
  else {
@@ -3919,7 +3919,7 @@ $scope.MECE331CoopPlan2Listener = function () {
       that.addLine(getLine299());
      MECE331CoopPlan2element.classList.remove("ENGINEERINGSCIENCES");
      MECE331CoopPlan2element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE331CoopPlan2");
+     that.addToClicked(["MECE331CoopPlan2", "ENGINEERINGSCIENCES"]);
       MECE331CoopPlan2flag=true
   }
  else {
@@ -3951,7 +3951,7 @@ $scope.MECE371CoopPlan2Listener = function () {
       that.addLine(getLine301());
      MECE371CoopPlan2element.classList.remove("ENGINEERINGSCIENCES");
      MECE371CoopPlan2element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE371CoopPlan2");
+     that.addToClicked(["MECE371CoopPlan2", "ENGINEERINGSCIENCES"]);
       MECE371CoopPlan2flag=true
   }
  else {
@@ -3975,7 +3975,7 @@ $scope.MECE380CoopPlan2Listener = function () {
       that.addLine(getLine291());
      MECE380CoopPlan2element.classList.remove("ENGINEERINGSCIENCES");
      MECE380CoopPlan2element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE380CoopPlan2");
+     that.addToClicked(["MECE380CoopPlan2", "ENGINEERINGSCIENCES"]);
       MECE380CoopPlan2flag=true
   }
  else {
@@ -3994,7 +3994,7 @@ $scope.WKEXP902CoopPlan2Listener = function () {
       that.addLine(getLine268());
      WKEXP902CoopPlan2element.classList.remove("");
      WKEXP902CoopPlan2element.classList.add("-highlighted");
-     that.addToClicked("WKEXP902CoopPlan2");
+     that.addToClicked(["WKEXP902CoopPlan2", ""]);
       WKEXP902CoopPlan2flag=true
   }
  else {
@@ -4013,7 +4013,7 @@ $scope.WKEXP903CoopPlan2Listener = function () {
       that.addLine(getLine278());
      WKEXP903CoopPlan2element.classList.remove("");
      WKEXP903CoopPlan2element.classList.add("-highlighted");
-     that.addToClicked("WKEXP903CoopPlan2");
+     that.addToClicked(["WKEXP903CoopPlan2", ""]);
       WKEXP903CoopPlan2flag=true
   }
  else {
@@ -4031,7 +4031,7 @@ $scope.ENGM310CoopPlan2Listener = function () {
       that.addLine(getLine292());
      ENGM310CoopPlan2element.classList.remove("");
      ENGM310CoopPlan2element.classList.add("-highlighted");
-     that.addToClicked("ENGM310CoopPlan2");
+     that.addToClicked(["ENGM310CoopPlan2", ""]);
       ENGM310CoopPlan2flag=true
   }
  else {
@@ -4051,7 +4051,7 @@ $scope.MECE340CoopPlan2Listener = function () {
       that.addLine(getLine300());
      MECE340CoopPlan2element.classList.remove("ENGINEERINGSCIENCES");
      MECE340CoopPlan2element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE340CoopPlan2");
+     that.addToClicked(["MECE340CoopPlan2", "ENGINEERINGSCIENCES"]);
       MECE340CoopPlan2flag=true
   }
  else {
@@ -4077,7 +4077,7 @@ $scope.MECE360CoopPlan2Listener = function () {
       that.addLine(getLine288());
      MECE360CoopPlan2element.classList.remove("ENGINEERINGDESIGN");
      MECE360CoopPlan2element.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE360CoopPlan2");
+     that.addToClicked(["MECE360CoopPlan2", "ENGINEERINGDESIGN"]);
       MECE360CoopPlan2flag=true
   }
  else {
@@ -4102,7 +4102,7 @@ $scope.MECE362CoopPlan2Listener = function () {
       that.addLine(getLine289());
      MECE362CoopPlan2element.classList.remove("ENGINEERINGDESIGN");
      MECE362CoopPlan2element.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE362CoopPlan2");
+     that.addToClicked(["MECE362CoopPlan2", "ENGINEERINGDESIGN"]);
       MECE362CoopPlan2flag=true
   }
  else {
@@ -4122,7 +4122,7 @@ $scope.MECE390CoopPlan2Listener = function () {
       that.addLine(getLine277());
      MECE390CoopPlan2element.classList.remove("");
      MECE390CoopPlan2element.classList.add("-highlighted");
-     that.addToClicked("MECE390CoopPlan2");
+     that.addToClicked(["MECE390CoopPlan2", ""]);
       MECE390CoopPlan2flag=true
   }
  else {
@@ -4141,7 +4141,7 @@ $scope.WKEXP904CoopPlan2Listener = function () {
       that.addLine(getLine293());
      WKEXP904CoopPlan2element.classList.remove("");
      WKEXP904CoopPlan2element.classList.add("-highlighted");
-     that.addToClicked("WKEXP904CoopPlan2");
+     that.addToClicked(["WKEXP904CoopPlan2", ""]);
       WKEXP904CoopPlan2flag=true
   }
  else {
@@ -4162,7 +4162,7 @@ $scope.MECE403CoopPlan2Listener = function () {
       that.addLine(getLine282());
      MECE403CoopPlan2element.classList.remove("ENGINEERINGSCIENCES");
      MECE403CoopPlan2element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE403CoopPlan2");
+     that.addToClicked(["MECE403CoopPlan2", "ENGINEERINGSCIENCES"]);
       MECE403CoopPlan2flag=true
   }
  else {
@@ -4183,7 +4183,7 @@ $scope.MECE451CoopPlan2Listener = function () {
       that.addLine(getLine284());
      MECE451CoopPlan2element.classList.remove("ENGINEERINGSCIENCES");
      MECE451CoopPlan2element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE451CoopPlan2");
+     that.addToClicked(["MECE451CoopPlan2", "ENGINEERINGSCIENCES"]);
       MECE451CoopPlan2flag=true
   }
  else {
@@ -4208,7 +4208,7 @@ $scope.MECE460CoopPlan2Listener = function () {
       that.addLine(getLine292());
      MECE460CoopPlan2element.classList.remove("ENGINEERINGDESIGN");
      MECE460CoopPlan2element.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE460CoopPlan2");
+     that.addToClicked(["MECE460CoopPlan2", "ENGINEERINGDESIGN"]);
       MECE460CoopPlan2flag=true
   }
  else {
@@ -4232,7 +4232,7 @@ $scope.WKEXP905CoopPlan2Listener = function () {
       that.addLine(getLine293());
      WKEXP905CoopPlan2element.classList.remove("");
      WKEXP905CoopPlan2element.classList.add("-highlighted");
-     that.addToClicked("WKEXP905CoopPlan2");
+     that.addToClicked(["WKEXP905CoopPlan2", ""]);
       WKEXP905CoopPlan2flag=true
   }
  else {
@@ -4252,7 +4252,7 @@ $scope.CHE448CoopPlan2Listener = function () {
       that.addLine(getLine297());
      CHE448CoopPlan2element.classList.remove("ENGINEERINGSCIENCES");
      CHE448CoopPlan2element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("CHE448CoopPlan2");
+     that.addToClicked(["CHE448CoopPlan2", "ENGINEERINGSCIENCES"]);
       CHE448CoopPlan2flag=true
   }
  else {
@@ -4272,7 +4272,7 @@ $scope.MECE430CoopPlan2Listener = function () {
       that.addLine(getLine298());
      MECE430CoopPlan2element.classList.remove("ENGINEERINGSCIENCES");
      MECE430CoopPlan2element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE430CoopPlan2");
+     that.addToClicked(["MECE430CoopPlan2", "ENGINEERINGSCIENCES"]);
       MECE430CoopPlan2flag=true
   }
  else {
@@ -4291,7 +4291,7 @@ $scope.MECE463CoopPlan2Listener = function () {
       that.addLine(getLine301());
      MECE463CoopPlan2element.classList.remove("ENGINEERINGSCIENCES");
      MECE463CoopPlan2element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE463CoopPlan2");
+     that.addToClicked(["MECE463CoopPlan2", "ENGINEERINGSCIENCES"]);
       MECE463CoopPlan2flag=true
   }
  else {
@@ -4369,7 +4369,7 @@ $scope.CHEM103CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine304());
      CHEM103CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES");
      CHEM103CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("CHEM103CoopPlan3Biomedical");
+     that.addToClicked(["CHEM103CoopPlan3Biomedical", "BASICSCIENCES"]);
       CHEM103CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4389,7 +4389,7 @@ $scope.ENGG130CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine318());
      ENGG130CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES");
      ENGG130CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("ENGG130CoopPlan3Biomedical");
+     that.addToClicked(["ENGG130CoopPlan3Biomedical", "BASICSCIENCES"]);
       ENGG130CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4409,7 +4409,7 @@ $scope.ENGL199CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine305());
      ENGL199CoopPlan3Biomedicalelement.classList.remove("");
      ENGL199CoopPlan3Biomedicalelement.classList.add("-highlighted");
-     that.addToClicked("ENGL199CoopPlan3Biomedical");
+     that.addToClicked(["ENGL199CoopPlan3Biomedical", ""]);
       ENGL199CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4431,7 +4431,7 @@ $scope.MATH100CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine315());
      MATH100CoopPlan3Biomedicalelement.classList.remove("MATH");
      MATH100CoopPlan3Biomedicalelement.classList.add("MATH-highlighted");
-     that.addToClicked("MATH100CoopPlan3Biomedical");
+     that.addToClicked(["MATH100CoopPlan3Biomedical", "MATH"]);
       MATH100CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4453,7 +4453,7 @@ $scope.PHYS130CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine303());
      PHYS130CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES");
      PHYS130CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("PHYS130CoopPlan3Biomedical");
+     that.addToClicked(["PHYS130CoopPlan3Biomedical", "BASICSCIENCES"]);
       PHYS130CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4471,7 +4471,7 @@ $scope.CHEM105CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine321());
      CHEM105CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES");
      CHEM105CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("CHEM105CoopPlan3Biomedical");
+     that.addToClicked(["CHEM105CoopPlan3Biomedical", "BASICSCIENCES"]);
       CHEM105CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4490,7 +4490,7 @@ $scope.ENGG160CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine325());
      ENGG160CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN");
      ENGG160CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("ENGG160CoopPlan3Biomedical");
+     that.addToClicked(["ENGG160CoopPlan3Biomedical", "ENGINEERINGDESIGN"]);
       ENGG160CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4512,7 +4512,7 @@ $scope.ENPH131CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine324());
      ENPH131CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES");
      ENPH131CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("ENPH131CoopPlan3Biomedical");
+     that.addToClicked(["ENPH131CoopPlan3Biomedical", "BASICSCIENCES"]);
       ENPH131CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4540,7 +4540,7 @@ $scope.MATH101CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine323());
      MATH101CoopPlan3Biomedicalelement.classList.remove("MATH");
      MATH101CoopPlan3Biomedicalelement.classList.add("MATH-highlighted");
-     that.addToClicked("MATH101CoopPlan3Biomedical");
+     that.addToClicked(["MATH101CoopPlan3Biomedical", "MATH"]);
       MATH101CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4566,7 +4566,7 @@ $scope.MATH102CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine335());
      MATH102CoopPlan3Biomedicalelement.classList.remove("MATH");
      MATH102CoopPlan3Biomedicalelement.classList.add("MATH-highlighted");
-     that.addToClicked("MATH102CoopPlan3Biomedical");
+     that.addToClicked(["MATH102CoopPlan3Biomedical", "MATH"]);
       MATH102CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4590,7 +4590,7 @@ $scope.CIVE270CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine353());
      CIVE270CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      CIVE270CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("CIVE270CoopPlan3Biomedical");
+     that.addToClicked(["CIVE270CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       CIVE270CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4617,7 +4617,7 @@ $scope.MATH209CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine365());
      MATH209CoopPlan3Biomedicalelement.classList.remove("MATH");
      MATH209CoopPlan3Biomedicalelement.classList.add("MATH-highlighted");
-     that.addToClicked("MATH209CoopPlan3Biomedical");
+     that.addToClicked(["MATH209CoopPlan3Biomedical", "MATH"]);
       MATH209CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4641,7 +4641,7 @@ $scope.STAT235CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine342());
      STAT235CoopPlan3Biomedicalelement.classList.remove("MATH");
      STAT235CoopPlan3Biomedicalelement.classList.add("MATH-highlighted");
-     that.addToClicked("STAT235CoopPlan3Biomedical");
+     that.addToClicked(["STAT235CoopPlan3Biomedical", "MATH"]);
       STAT235CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4663,7 +4663,7 @@ $scope.CHE243CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine350());
      CHE243CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      CHE243CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("CHE243CoopPlan3Biomedical");
+     that.addToClicked(["CHE243CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       CHE243CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4683,7 +4683,7 @@ $scope.MECE200CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine377());
      MECE200CoopPlan3Biomedicalelement.classList.remove("");
      MECE200CoopPlan3Biomedicalelement.classList.add("-highlighted");
-     that.addToClicked("MECE200CoopPlan3Biomedical");
+     that.addToClicked(["MECE200CoopPlan3Biomedical", ""]);
       MECE200CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4705,7 +4705,7 @@ $scope.MECE250CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine375());
      MECE250CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MECE250CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE250CoopPlan3Biomedical");
+     that.addToClicked(["MECE250CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       MECE250CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4727,7 +4727,7 @@ $scope.ECE209CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine341());
      ECE209CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      ECE209CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("ECE209CoopPlan3Biomedical");
+     that.addToClicked(["ECE209CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       ECE209CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4745,7 +4745,7 @@ $scope.MATE202CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine331());
      MATE202CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MATE202CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MATE202CoopPlan3Biomedical");
+     that.addToClicked(["MATE202CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       MATE202CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4766,7 +4766,7 @@ $scope.MATH201CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine364());
      MATH201CoopPlan3Biomedicalelement.classList.remove("MATH");
      MATH201CoopPlan3Biomedicalelement.classList.add("MATH-highlighted");
-     that.addToClicked("MATH201CoopPlan3Biomedical");
+     that.addToClicked(["MATH201CoopPlan3Biomedical", "MATH"]);
       MATH201CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4789,7 +4789,7 @@ $scope.MECE230CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine349());
      MECE230CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MECE230CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE230CoopPlan3Biomedical");
+     that.addToClicked(["MECE230CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       MECE230CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4812,7 +4812,7 @@ $scope.MECE260CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine329());
      MECE260CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN");
      MECE260CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE260CoopPlan3Biomedical");
+     that.addToClicked(["MECE260CoopPlan3Biomedical", "ENGINEERINGDESIGN"]);
       MECE260CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4833,7 +4833,7 @@ $scope.MECE265CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine330());
      MECE265CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN");
      MECE265CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE265CoopPlan3Biomedical");
+     that.addToClicked(["MECE265CoopPlan3Biomedical", "ENGINEERINGDESIGN"]);
       MECE265CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4851,7 +4851,7 @@ $scope.WKEXP902CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine337());
      WKEXP902CoopPlan3Biomedicalelement.classList.remove("");
      WKEXP902CoopPlan3Biomedicalelement.classList.add("-highlighted");
-     that.addToClicked("WKEXP902CoopPlan3Biomedical");
+     that.addToClicked(["WKEXP902CoopPlan3Biomedical", ""]);
       WKEXP902CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4869,7 +4869,7 @@ $scope.BME320CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine368());
      BME320CoopPlan3Biomedicalelement.classList.remove("");
      BME320CoopPlan3Biomedicalelement.classList.add("-highlighted");
-     that.addToClicked("BME320CoopPlan3Biomedical");
+     that.addToClicked(["BME320CoopPlan3Biomedical", ""]);
       BME320CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4887,7 +4887,7 @@ $scope.ENGM310CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine384());
      ENGM310CoopPlan3Biomedicalelement.classList.remove("");
      ENGM310CoopPlan3Biomedicalelement.classList.add("-highlighted");
-     that.addToClicked("ENGM310CoopPlan3Biomedical");
+     that.addToClicked(["ENGM310CoopPlan3Biomedical", ""]);
       ENGM310CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4907,7 +4907,7 @@ $scope.MECE340CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine379());
      MECE340CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MECE340CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE340CoopPlan3Biomedical");
+     that.addToClicked(["MECE340CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       MECE340CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4934,7 +4934,7 @@ $scope.MECE360CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine380());
      MECE360CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN");
      MECE360CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE360CoopPlan3Biomedical");
+     that.addToClicked(["MECE360CoopPlan3Biomedical", "ENGINEERINGDESIGN"]);
       MECE360CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4960,7 +4960,7 @@ $scope.MECE362CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine381());
      MECE362CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN");
      MECE362CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE362CoopPlan3Biomedical");
+     that.addToClicked(["MECE362CoopPlan3Biomedical", "ENGINEERINGDESIGN"]);
       MECE362CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4981,7 +4981,7 @@ $scope.MECE390CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine357());
      MECE390CoopPlan3Biomedicalelement.classList.remove("");
      MECE390CoopPlan3Biomedicalelement.classList.add("-highlighted");
-     that.addToClicked("MECE390CoopPlan3Biomedical");
+     that.addToClicked(["MECE390CoopPlan3Biomedical", ""]);
       MECE390CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5001,7 +5001,7 @@ $scope.WKEXP903CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine358());
      WKEXP903CoopPlan3Biomedicalelement.classList.remove("");
      WKEXP903CoopPlan3Biomedicalelement.classList.add("-highlighted");
-     that.addToClicked("WKEXP903CoopPlan3Biomedical");
+     that.addToClicked(["WKEXP903CoopPlan3Biomedical", ""]);
       WKEXP903CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5023,7 +5023,7 @@ $scope.MATH300CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine376());
      MATH300CoopPlan3Biomedicalelement.classList.remove("MATH");
      MATH300CoopPlan3Biomedicalelement.classList.add("MATH-highlighted");
-     that.addToClicked("MATH300CoopPlan3Biomedical");
+     that.addToClicked(["MATH300CoopPlan3Biomedical", "MATH"]);
       MATH300CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5049,7 +5049,7 @@ $scope.MECE300CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine371());
      MECE300CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MECE300CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE300CoopPlan3Biomedical");
+     that.addToClicked(["MECE300CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       MECE300CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5072,7 +5072,7 @@ $scope.MECE301CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine372());
      MECE301CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MECE301CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE301CoopPlan3Biomedical");
+     that.addToClicked(["MECE301CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       MECE301CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5100,7 +5100,7 @@ $scope.MECE331CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine378());
      MECE331CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MECE331CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE331CoopPlan3Biomedical");
+     that.addToClicked(["MECE331CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       MECE331CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5133,7 +5133,7 @@ $scope.MECE371CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine382());
      MECE371CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MECE371CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE371CoopPlan3Biomedical");
+     that.addToClicked(["MECE371CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       MECE371CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5157,7 +5157,7 @@ $scope.MECE380CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine383());
      MECE380CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MECE380CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE380CoopPlan3Biomedical");
+     that.addToClicked(["MECE380CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       MECE380CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5176,7 +5176,7 @@ $scope.BME321CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine369());
      BME321CoopPlan3Biomedicalelement.classList.remove("");
      BME321CoopPlan3Biomedicalelement.classList.add("-highlighted");
-     that.addToClicked("BME321CoopPlan3Biomedical");
+     that.addToClicked(["BME321CoopPlan3Biomedical", ""]);
       BME321CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5196,7 +5196,7 @@ $scope.MECE563CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine357());
      MECE563CoopPlan3Biomedicalelement.classList.remove("");
      MECE563CoopPlan3Biomedicalelement.classList.add("-highlighted");
-     that.addToClicked("MECE563CoopPlan3Biomedical");
+     that.addToClicked(["MECE563CoopPlan3Biomedical", ""]);
       MECE563CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5216,7 +5216,7 @@ $scope.WKEXP904CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine359());
      WKEXP904CoopPlan3Biomedicalelement.classList.remove("");
      WKEXP904CoopPlan3Biomedicalelement.classList.add("-highlighted");
-     that.addToClicked("WKEXP904CoopPlan3Biomedical");
+     that.addToClicked(["WKEXP904CoopPlan3Biomedical", ""]);
       WKEXP904CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5234,7 +5234,7 @@ $scope.WKEXP905CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine359());
      WKEXP905CoopPlan3Biomedicalelement.classList.remove("");
      WKEXP905CoopPlan3Biomedicalelement.classList.add("-highlighted");
-     that.addToClicked("WKEXP905CoopPlan3Biomedical");
+     that.addToClicked(["WKEXP905CoopPlan3Biomedical", ""]);
       WKEXP905CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5251,7 +5251,7 @@ $scope.MECE430CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine360());
      MECE430CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MECE430CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE430CoopPlan3Biomedical");
+     that.addToClicked(["MECE430CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       MECE430CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5270,7 +5270,7 @@ $scope.MECE463CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine363());
      MECE463CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MECE463CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE463CoopPlan3Biomedical");
+     that.addToClicked(["MECE463CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       MECE463CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5292,7 +5292,7 @@ $scope.CHE448CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine367());
      CHE448CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      CHE448CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("CHE448CoopPlan3Biomedical");
+     that.addToClicked(["CHE448CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       CHE448CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5314,7 +5314,7 @@ $scope.MECE485CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine370());
      MECE485CoopPlan3Biomedicalelement.classList.remove("");
      MECE485CoopPlan3Biomedicalelement.classList.add("-highlighted");
-     that.addToClicked("MECE485CoopPlan3Biomedical");
+     that.addToClicked(["MECE485CoopPlan3Biomedical", ""]);
       MECE485CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5336,7 +5336,7 @@ $scope.MECE403CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine374());
      MECE403CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MECE403CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE403CoopPlan3Biomedical");
+     that.addToClicked(["MECE403CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       MECE403CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5357,7 +5357,7 @@ $scope.MECE451CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine376());
      MECE451CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MECE451CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE451CoopPlan3Biomedical");
+     that.addToClicked(["MECE451CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       MECE451CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5382,7 +5382,7 @@ $scope.MECE460CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine384());
      MECE460CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN");
      MECE460CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE460CoopPlan3Biomedical");
+     that.addToClicked(["MECE460CoopPlan3Biomedical", "ENGINEERINGDESIGN"]);
       MECE460CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5461,7 +5461,7 @@ $scope.CHEM103CoopPlan4Listener = function () {
       that.addLine(getLine387());
      CHEM103CoopPlan4element.classList.remove("BASICSCIENCES");
      CHEM103CoopPlan4element.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("CHEM103CoopPlan4");
+     that.addToClicked(["CHEM103CoopPlan4", "BASICSCIENCES"]);
       CHEM103CoopPlan4flag=true
   }
  else {
@@ -5481,7 +5481,7 @@ $scope.ENGG130CoopPlan4Listener = function () {
       that.addLine(getLine408());
      ENGG130CoopPlan4element.classList.remove("BASICSCIENCES");
      ENGG130CoopPlan4element.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("ENGG130CoopPlan4");
+     that.addToClicked(["ENGG130CoopPlan4", "BASICSCIENCES"]);
       ENGG130CoopPlan4flag=true
   }
  else {
@@ -5501,7 +5501,7 @@ $scope.ENGL199CoopPlan4Listener = function () {
       that.addLine(getLine388());
      ENGL199CoopPlan4element.classList.remove("");
      ENGL199CoopPlan4element.classList.add("-highlighted");
-     that.addToClicked("ENGL199CoopPlan4");
+     that.addToClicked(["ENGL199CoopPlan4", ""]);
       ENGL199CoopPlan4flag=true
   }
  else {
@@ -5523,7 +5523,7 @@ $scope.MATH100CoopPlan4Listener = function () {
       that.addLine(getLine398());
      MATH100CoopPlan4element.classList.remove("MATH");
      MATH100CoopPlan4element.classList.add("MATH-highlighted");
-     that.addToClicked("MATH100CoopPlan4");
+     that.addToClicked(["MATH100CoopPlan4", "MATH"]);
       MATH100CoopPlan4flag=true
   }
  else {
@@ -5545,7 +5545,7 @@ $scope.PHYS130CoopPlan4Listener = function () {
       that.addLine(getLine386());
      PHYS130CoopPlan4element.classList.remove("BASICSCIENCES");
      PHYS130CoopPlan4element.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("PHYS130CoopPlan4");
+     that.addToClicked(["PHYS130CoopPlan4", "BASICSCIENCES"]);
       PHYS130CoopPlan4flag=true
   }
  else {
@@ -5563,7 +5563,7 @@ $scope.CHEM105CoopPlan4Listener = function () {
       that.addLine(getLine407());
      CHEM105CoopPlan4element.classList.remove("BASICSCIENCES");
      CHEM105CoopPlan4element.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("CHEM105CoopPlan4");
+     that.addToClicked(["CHEM105CoopPlan4", "BASICSCIENCES"]);
       CHEM105CoopPlan4flag=true
   }
  else {
@@ -5582,7 +5582,7 @@ $scope.ENGG160CoopPlan4Listener = function () {
       that.addLine(getLine402());
      ENGG160CoopPlan4element.classList.remove("ENGINEERINGDESIGN");
      ENGG160CoopPlan4element.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("ENGG160CoopPlan4");
+     that.addToClicked(["ENGG160CoopPlan4", "ENGINEERINGDESIGN"]);
       ENGG160CoopPlan4flag=true
   }
  else {
@@ -5604,7 +5604,7 @@ $scope.ENPH131CoopPlan4Listener = function () {
       that.addLine(getLine409());
      ENPH131CoopPlan4element.classList.remove("BASICSCIENCES");
      ENPH131CoopPlan4element.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked("ENPH131CoopPlan4");
+     that.addToClicked(["ENPH131CoopPlan4", "BASICSCIENCES"]);
       ENPH131CoopPlan4flag=true
   }
  else {
@@ -5632,7 +5632,7 @@ $scope.MATH101CoopPlan4Listener = function () {
       that.addLine(getLine410());
      MATH101CoopPlan4element.classList.remove("MATH");
      MATH101CoopPlan4element.classList.add("MATH-highlighted");
-     that.addToClicked("MATH101CoopPlan4");
+     that.addToClicked(["MATH101CoopPlan4", "MATH"]);
       MATH101CoopPlan4flag=true
   }
  else {
@@ -5658,7 +5658,7 @@ $scope.MATH102CoopPlan4Listener = function () {
       that.addLine(getLine436());
      MATH102CoopPlan4element.classList.remove("MATH");
      MATH102CoopPlan4element.classList.add("MATH-highlighted");
-     that.addToClicked("MATH102CoopPlan4");
+     that.addToClicked(["MATH102CoopPlan4", "MATH"]);
       MATH102CoopPlan4flag=true
   }
  else {
@@ -5682,7 +5682,7 @@ $scope.CIVE270CoopPlan4Listener = function () {
       that.addLine(getLine433());
      CIVE270CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      CIVE270CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("CIVE270CoopPlan4");
+     that.addToClicked(["CIVE270CoopPlan4", "ENGINEERINGSCIENCES"]);
       CIVE270CoopPlan4flag=true
   }
  else {
@@ -5704,7 +5704,7 @@ $scope.ENGG299CoopPlan4Listener = function () {
       that.addLine(getLine427());
      ENGG299CoopPlan4element.classList.remove("");
      ENGG299CoopPlan4element.classList.add("-highlighted");
-     that.addToClicked("ENGG299CoopPlan4");
+     that.addToClicked(["ENGG299CoopPlan4", ""]);
       ENGG299CoopPlan4flag=true
   }
  else {
@@ -5726,7 +5726,7 @@ $scope.MATH209CoopPlan4Listener = function () {
       that.addLine(getLine446());
      MATH209CoopPlan4element.classList.remove("MATH");
      MATH209CoopPlan4element.classList.add("MATH-highlighted");
-     that.addToClicked("MATH209CoopPlan4");
+     that.addToClicked(["MATH209CoopPlan4", "MATH"]);
       MATH209CoopPlan4flag=true
   }
  else {
@@ -5750,7 +5750,7 @@ $scope.STAT235CoopPlan4Listener = function () {
       that.addLine(getLine415());
      STAT235CoopPlan4element.classList.remove("MATH");
      STAT235CoopPlan4element.classList.add("MATH-highlighted");
-     that.addToClicked("STAT235CoopPlan4");
+     that.addToClicked(["STAT235CoopPlan4", "MATH"]);
       STAT235CoopPlan4flag=true
   }
  else {
@@ -5772,7 +5772,7 @@ $scope.MECE230CoopPlan4Listener = function () {
       that.addLine(getLine422());
      MECE230CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE230CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE230CoopPlan4");
+     that.addToClicked(["MECE230CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE230CoopPlan4flag=true
   }
  else {
@@ -5795,7 +5795,7 @@ $scope.MECE260CoopPlan4Listener = function () {
       that.addLine(getLine430());
      MECE260CoopPlan4element.classList.remove("ENGINEERINGDESIGN");
      MECE260CoopPlan4element.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE260CoopPlan4");
+     that.addToClicked(["MECE260CoopPlan4", "ENGINEERINGDESIGN"]);
       MECE260CoopPlan4flag=true
   }
  else {
@@ -5816,7 +5816,7 @@ $scope.MECE265CoopPlan4Listener = function () {
       that.addLine(getLine431());
      MECE265CoopPlan4element.classList.remove("ENGINEERINGDESIGN");
      MECE265CoopPlan4element.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE265CoopPlan4");
+     that.addToClicked(["MECE265CoopPlan4", "ENGINEERINGDESIGN"]);
       MECE265CoopPlan4flag=true
   }
  else {
@@ -5834,7 +5834,7 @@ $scope.ECE209CoopPlan4Listener = function () {
       that.addLine(getLine414());
      ECE209CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      ECE209CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("ECE209CoopPlan4");
+     that.addToClicked(["ECE209CoopPlan4", "ENGINEERINGSCIENCES"]);
       ECE209CoopPlan4flag=true
   }
  else {
@@ -5854,7 +5854,7 @@ $scope.MATH201CoopPlan4Listener = function () {
       that.addLine(getLine445());
      MATH201CoopPlan4element.classList.remove("MATH");
      MATH201CoopPlan4element.classList.add("MATH-highlighted");
-     that.addToClicked("MATH201CoopPlan4");
+     that.addToClicked(["MATH201CoopPlan4", "MATH"]);
       MATH201CoopPlan4flag=true
   }
  else {
@@ -5877,7 +5877,7 @@ $scope.CHE243CoopPlan4Listener = function () {
       that.addLine(getLine429());
      CHE243CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      CHE243CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("CHE243CoopPlan4");
+     that.addToClicked(["CHE243CoopPlan4", "ENGINEERINGSCIENCES"]);
       CHE243CoopPlan4flag=true
   }
  else {
@@ -5898,7 +5898,7 @@ $scope.MATE202CoopPlan4Listener = function () {
       that.addLine(getLine432());
      MATE202CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MATE202CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MATE202CoopPlan4");
+     that.addToClicked(["MATE202CoopPlan4", "ENGINEERINGSCIENCES"]);
       MATE202CoopPlan4flag=true
   }
  else {
@@ -5916,7 +5916,7 @@ $scope.MECE200CoopPlan4Listener = function () {
       that.addLine(getLine455());
      MECE200CoopPlan4element.classList.remove("");
      MECE200CoopPlan4element.classList.add("-highlighted");
-     that.addToClicked("MECE200CoopPlan4");
+     that.addToClicked(["MECE200CoopPlan4", ""]);
       MECE200CoopPlan4flag=true
   }
  else {
@@ -5938,7 +5938,7 @@ $scope.MECE250CoopPlan4Listener = function () {
       that.addLine(getLine453());
      MECE250CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE250CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE250CoopPlan4");
+     that.addToClicked(["MECE250CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE250CoopPlan4flag=true
   }
  else {
@@ -5963,7 +5963,7 @@ $scope.MATH300CoopPlan4Listener = function () {
       that.addLine(getLine454());
      MATH300CoopPlan4element.classList.remove("MATH");
      MATH300CoopPlan4element.classList.add("MATH-highlighted");
-     that.addToClicked("MATH300CoopPlan4");
+     that.addToClicked(["MATH300CoopPlan4", "MATH"]);
       MATH300CoopPlan4flag=true
   }
  else {
@@ -5988,7 +5988,7 @@ $scope.MECE300CoopPlan4Listener = function () {
       that.addLine(getLine449());
      MECE300CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE300CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE300CoopPlan4");
+     that.addToClicked(["MECE300CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE300CoopPlan4flag=true
   }
  else {
@@ -6011,7 +6011,7 @@ $scope.MECE301CoopPlan4Listener = function () {
       that.addLine(getLine450());
      MECE301CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE301CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE301CoopPlan4");
+     that.addToClicked(["MECE301CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE301CoopPlan4flag=true
   }
  else {
@@ -6038,7 +6038,7 @@ $scope.MECE331CoopPlan4Listener = function () {
       that.addLine(getLine456());
      MECE331CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE331CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE331CoopPlan4");
+     that.addToClicked(["MECE331CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE331CoopPlan4flag=true
   }
  else {
@@ -6070,7 +6070,7 @@ $scope.MECE371CoopPlan4Listener = function () {
       that.addLine(getLine460());
      MECE371CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE371CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE371CoopPlan4");
+     that.addToClicked(["MECE371CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE371CoopPlan4flag=true
   }
  else {
@@ -6094,7 +6094,7 @@ $scope.MECE380CoopPlan4Listener = function () {
       that.addLine(getLine461());
      MECE380CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE380CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE380CoopPlan4");
+     that.addToClicked(["MECE380CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE380CoopPlan4flag=true
   }
  else {
@@ -6113,7 +6113,7 @@ $scope.WKEXP901CoopPlan4Listener = function () {
       that.addLine(getLine428());
      WKEXP901CoopPlan4element.classList.remove("");
      WKEXP901CoopPlan4element.classList.add("-highlighted");
-     that.addToClicked("WKEXP901CoopPlan4");
+     that.addToClicked(["WKEXP901CoopPlan4", ""]);
       WKEXP901CoopPlan4flag=true
   }
  else {
@@ -6132,7 +6132,7 @@ $scope.WKEXP902CoopPlan4Listener = function () {
       that.addLine(getLine438());
      WKEXP902CoopPlan4element.classList.remove("");
      WKEXP902CoopPlan4element.classList.add("-highlighted");
-     that.addToClicked("WKEXP902CoopPlan4");
+     that.addToClicked(["WKEXP902CoopPlan4", ""]);
       WKEXP902CoopPlan4flag=true
   }
  else {
@@ -6150,7 +6150,7 @@ $scope.ENGM310CoopPlan4Listener = function () {
       that.addLine(getLine462());
      ENGM310CoopPlan4element.classList.remove("");
      ENGM310CoopPlan4element.classList.add("-highlighted");
-     that.addToClicked("ENGM310CoopPlan4");
+     that.addToClicked(["ENGM310CoopPlan4", ""]);
       ENGM310CoopPlan4flag=true
   }
  else {
@@ -6170,7 +6170,7 @@ $scope.MECE340CoopPlan4Listener = function () {
       that.addLine(getLine457());
      MECE340CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE340CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE340CoopPlan4");
+     that.addToClicked(["MECE340CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE340CoopPlan4flag=true
   }
  else {
@@ -6196,7 +6196,7 @@ $scope.MECE360CoopPlan4Listener = function () {
       that.addLine(getLine458());
      MECE360CoopPlan4element.classList.remove("ENGINEERINGDESIGN");
      MECE360CoopPlan4element.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE360CoopPlan4");
+     that.addToClicked(["MECE360CoopPlan4", "ENGINEERINGDESIGN"]);
       MECE360CoopPlan4flag=true
   }
  else {
@@ -6221,7 +6221,7 @@ $scope.MECE362CoopPlan4Listener = function () {
       that.addLine(getLine459());
      MECE362CoopPlan4element.classList.remove("ENGINEERINGDESIGN");
      MECE362CoopPlan4element.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE362CoopPlan4");
+     that.addToClicked(["MECE362CoopPlan4", "ENGINEERINGDESIGN"]);
       MECE362CoopPlan4flag=true
   }
  else {
@@ -6241,7 +6241,7 @@ $scope.MECE390CoopPlan4Listener = function () {
       that.addLine(getLine437());
      MECE390CoopPlan4element.classList.remove("");
      MECE390CoopPlan4element.classList.add("-highlighted");
-     that.addToClicked("MECE390CoopPlan4");
+     that.addToClicked(["MECE390CoopPlan4", ""]);
       MECE390CoopPlan4flag=true
   }
  else {
@@ -6260,7 +6260,7 @@ $scope.WKEXP903CoopPlan4Listener = function () {
       that.addLine(getLine439());
      WKEXP903CoopPlan4element.classList.remove("");
      WKEXP903CoopPlan4element.classList.add("-highlighted");
-     that.addToClicked("WKEXP903CoopPlan4");
+     that.addToClicked(["WKEXP903CoopPlan4", ""]);
       WKEXP903CoopPlan4flag=true
   }
  else {
@@ -6279,7 +6279,7 @@ $scope.WKEXP904CoopPlan4Listener = function () {
       that.addLine(getLine440());
      WKEXP904CoopPlan4element.classList.remove("");
      WKEXP904CoopPlan4element.classList.add("-highlighted");
-     that.addToClicked("WKEXP904CoopPlan4");
+     that.addToClicked(["WKEXP904CoopPlan4", ""]);
       WKEXP904CoopPlan4flag=true
   }
  else {
@@ -6297,7 +6297,7 @@ $scope.WKEXP905CoopPlan4Listener = function () {
       that.addLine(getLine440());
      WKEXP905CoopPlan4element.classList.remove("");
      WKEXP905CoopPlan4element.classList.add("-highlighted");
-     that.addToClicked("WKEXP905CoopPlan4");
+     that.addToClicked(["WKEXP905CoopPlan4", ""]);
       WKEXP905CoopPlan4flag=true
   }
  else {
@@ -6314,7 +6314,7 @@ $scope.MECE430CoopPlan4Listener = function () {
       that.addLine(getLine441());
      MECE430CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE430CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE430CoopPlan4");
+     that.addToClicked(["MECE430CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE430CoopPlan4flag=true
   }
  else {
@@ -6333,7 +6333,7 @@ $scope.MECE463CoopPlan4Listener = function () {
       that.addLine(getLine444());
      MECE463CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE463CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE463CoopPlan4");
+     that.addToClicked(["MECE463CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE463CoopPlan4flag=true
   }
  else {
@@ -6355,7 +6355,7 @@ $scope.CHE448CoopPlan4Listener = function () {
       that.addLine(getLine448());
      CHE448CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      CHE448CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("CHE448CoopPlan4");
+     that.addToClicked(["CHE448CoopPlan4", "ENGINEERINGSCIENCES"]);
       CHE448CoopPlan4flag=true
   }
  else {
@@ -6378,7 +6378,7 @@ $scope.MECE403CoopPlan4Listener = function () {
       that.addLine(getLine452());
      MECE403CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE403CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE403CoopPlan4");
+     that.addToClicked(["MECE403CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE403CoopPlan4flag=true
   }
  else {
@@ -6399,7 +6399,7 @@ $scope.MECE451CoopPlan4Listener = function () {
       that.addLine(getLine454());
      MECE451CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE451CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked("MECE451CoopPlan4");
+     that.addToClicked(["MECE451CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE451CoopPlan4flag=true
   }
  else {
@@ -6424,7 +6424,7 @@ $scope.MECE460CoopPlan4Listener = function () {
       that.addLine(getLine462());
      MECE460CoopPlan4element.classList.remove("ENGINEERINGDESIGN");
      MECE460CoopPlan4element.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked("MECE460CoopPlan4");
+     that.addToClicked(["MECE460CoopPlan4", "ENGINEERINGDESIGN"]);
       MECE460CoopPlan4flag=true
   }
  else {
