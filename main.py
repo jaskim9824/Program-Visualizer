@@ -11,7 +11,7 @@
 
 from encodings import utf_8
 from bs4 import BeautifulSoup
-from parsing import parseInPy
+from parsing import parse
 import javascriptgen
 import htmlgen
 import linegen
@@ -52,7 +52,7 @@ def main():
             lineManager = linegen.LineManager()
 
             # parsing the excel files with course info and sequencing
-            sequenceDict, courseDict = parseInPy("Courses.xls")
+            sequenceDict, courseDict = parse("Courses.xls")
 
             # generating intital JS based on the number and names of plans
             javascriptgen.intializeControllerJavaScript(controller, sequenceDict)
