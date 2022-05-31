@@ -104,9 +104,9 @@ def generateEnableSwitchStatement(sequenceDict, controller):
     widthstr = width.toString() + "px";
     document.getElementById("header").style.width = widthstr;
     for (let i = 0; i < this.{planName}Clicked.length; i++) {{
-        var element = document.getElementById(this.{planName}Clicked[i]);
-        element.classList.remove("course");
-        element.classList.add("course-highlighted");
+        var element = document.getElementById(this.{planName}Clicked[i][0]);
+        element.classList.remove(this.{planName}Clicked[i][1]);
+        element.classList.add(this.{planName}Clicked[i][1]+"-highlighted");
     }}
     break; \n"""
     switchEndString = """    default:
@@ -182,7 +182,7 @@ def generateAddToClickSwitch(sequenceDict, controller):
     formattedFunctionStatement = """this.{functionName} = function(element) {{
 switch($scope.selectedPlan) {{ \n"""
     formattedAddToClickStatement = """ case "{planName}":
-    var index = this.{planName}Clicked.findIndex((item) => item == element);
+    var index = this.{planName}Clicked.findIndex((item) => item[0] == element[0]);
     if (index == -1) {{
         this.{planName}Clicked.push(element);
     }}
@@ -201,7 +201,7 @@ def generateDeleteFromClickSwitch(sequenceDict, controller):
     formattedFunctionStatement = """this.{functionName} = function(element) {{
 switch($scope.selectedPlan) {{ \n"""
     formattedAddToClickStatement = """ case "{planName}":
-    var index = this.{planName}Clicked.findIndex((item) => item == element);
+    var index = this.{planName}Clicked.findIndex((item) => item[0] == element);
     if (index != -1) {{
         this.{planName}Clicked.splice(index, 1);
     }}
