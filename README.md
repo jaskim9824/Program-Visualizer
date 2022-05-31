@@ -3,11 +3,13 @@
 Project aimed to generate a web based diagram that visualizes the different program sequences available in the MEC E program
 at the University of Alberta. Courses are displayed in boxes, with the calendar description of that course being displayed when
 the corresponding box of the course is hovered over like so:
-![hiver](https://user-images.githubusercontent.com/60327441/170583188-8721854f-dbcb-45a2-a369-fce030e13707.gif)
+![highlightinghover1](https://user-images.githubusercontent.com/60327441/171228873-b33ece66-b9d1-4f6f-ace0-6fd219b1c60b.gif)
+
 
 The webpage also allows a user to display the prerequisites and corequisites of a course, as well as the courses that
 the course is a prerequisite or corequisite of, allowing them to interactively view the dependencies between different courses. 
-![reqandcoreq](https://user-images.githubusercontent.com/60327441/170582565-eaa28b0c-5f97-48b9-83f2-04a713e77367.gif)
+![clickingspawn1](https://user-images.githubusercontent.com/60327441/171228912-524ab92f-c215-4be7-9dd6-ccdc4a63aad5.gif)
+
 
 
 The webpage allows users to switch between the different program sequences as displayed below:
