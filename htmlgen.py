@@ -6,10 +6,11 @@
 # This file contains all the functions needed to generate the required
 # HTML elements to produce the MEC E Program Visualizer webpage
 
-# Dependencies: cleaner, linegen
+# Dependencies: cleaner, linegen, html
 
 import cleaner
 import linegen
+import html
 
 # Function that places the radio inputs into the form which controls
 # which plan is currently selected on the webpage
@@ -78,6 +79,7 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
 #   soup - soup object, used to create HTML tags
 #   controller - file handle for controller.js, used to write to controller.js
 #   plan - name of plan whose terms are being placed
+#   termcounter - which term is currently being placed (int)
 def placeCourses(termTag, termList, soup, controller, plan, termcounter):
     for course in termList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan)
@@ -95,10 +97,29 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter):
                                                 "id": courseID, 
                                                 "ng-click":courseID+"Listener()" })
         if termcounter < 6:
-            courseDisc = soup.new_tag("p", attrs={"class":"tooltiptextright"})
+            courseDisc = soup.new_tag("div", attrs={"class":"tooltiptextright"})
         else:
-            courseDisc = soup.new_tag("p", attrs={"class":"tooltiptextleft"})
-        courseDisc.append(course.course_description)
+            courseDisc = soup.new_tag("div", attrs={"class":"tooltiptextleft"})
+        courseTitle = soup.new_tag("b", attrs={"class":"descriptiontitle"})
+        courseTitle.append(course.name + " - " + course.long_title)
+        courseLine = soup.new_tag("hr", attrs={"class":"descriptionline"})
+        courseCredits = soup.new_tag("p", attrs={"class":"descriptioncredits"})
+        courseCredits.append(html.unescape("&#9733 ") + course.engineering_units + " ")
+        courseFeeIndex = soup.new_tag("i", attrs={"class":"descriptionfeeindex"})
+        courseFeeIndex.append("(" + "fi " + course.calc_fee_index + ")" + " ")
+        courseTermAvail = soup.new_tag("p", attrs={"class":"descriptionavailability"})
+        courseTermAvail.append("(" + course.duration + ", ")
+        courseAlphaHours = soup.new_tag("p", attrs={"class":"descriptionalphahours"})
+        courseAlphaHours.append(course.alpha_hours + ")" + " ")
+        courseDescription = soup.new_tag("p", attrs={"class":"fulldescription"})
+        courseDescription.append(course.course_description)
+        courseDisc.append(courseTitle)
+        courseDisc.append(courseLine)
+        courseDisc.append(courseCredits)
+        courseDisc.append(courseFeeIndex)
+        courseDisc.append(courseTermAvail)
+        courseDisc.append(courseAlphaHours)
+        courseDisc.append(courseDescription)
         courseHeader = soup.new_tag("h3", attrs={"class":"embed"})
         courseHeader.append(course.name)
         courseDiv.append(courseHeader)

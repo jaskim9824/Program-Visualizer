@@ -26,23 +26,23 @@ class Course:
         engineering_units = "", calc_fee_index = "", actual_fee_index = "", duration = "",
         alpha_hours = "", course_description = "", prereqs = [], coreqs = [], reqs = []):
 
-        self.name = name
-        self.faculty = faculty
-        self.department = department
-        self.course_id = course_id
-        self.subject = subject
-        self.catalog = catalog
-        self.long_title = long_title
-        self.eff_date = eff_date
-        self.status = status
-        self.calendar_print = calendar_print
-        self.prog_units = prog_units
-        self.engineering_units = engineering_units
-        self.calc_fee_index = calc_fee_index
-        self.actual_fee_index = actual_fee_index
-        self.duration = duration
-        self.alpha_hours = alpha_hours
-        self.course_description = course_description
+        self.name = str(name)
+        self.faculty = str(faculty)
+        self.department = str(department)
+        self.course_id = str(course_id)
+        self.subject = str(subject)
+        self.catalog = str(catalog)
+        self.long_title = str(long_title)
+        self.eff_date = str(eff_date)
+        self.status = str(status)
+        self.calendar_print = str(calendar_print)
+        self.prog_units = str(prog_units)
+        self.engineering_units = str(engineering_units)
+        self.calc_fee_index = str(calc_fee_index)
+        self.actual_fee_index = str(actual_fee_index)
+        self.duration = str(duration)
+        self.alpha_hours = str(alpha_hours)
+        self.course_description = str(course_description)
         self.prereqs = prereqs
         self.coreqs = coreqs
         self.reqs = reqs
