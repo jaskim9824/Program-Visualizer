@@ -109,7 +109,7 @@
             </div>
             <div class="term">
                 <h3>Term 3</h3>
-                <div class="course" id="ECE 401" ng-click="ece401Listener()">
+                <div class="course cateA" id="ECE 401" ng-click="ece401Listener()">
                     <dialog id="ece401courseinfo">Enter ECE 401 course information here</dialog>
                     <h3 class="embed">ECE 401</h3>
                 </div>
@@ -804,16 +804,23 @@ evaluating as null -->
             }
         };
         $scope.ece401Listener = function () {
+            var element = document.getElementById("ECE 401")
             if (!ece401flag) {
                 // call getter function to get all lines belonging to course
                 // call addLine() for every single line
                 that.addLine(getLine2());
                 that.addLine(getLine3());
+                element.classList.remove("cateA");
+                element.classList.add("cateA-highlighted");
+                that.addToClicked(["ECE 401", "cateA"])
                 ece401flag = true;
             }
             else {
                 that.removeLine(getLine2());
                 that.removeLine(getLine3());
+                element.classList.remove("cateA-highlighted");
+                element.classList.add("cateA");
+                that.removeFromClicked("ECE 401");
                 ece401flag = false;
             }
         };

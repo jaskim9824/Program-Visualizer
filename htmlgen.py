@@ -78,6 +78,7 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
 #   soup - soup object, used to create HTML tags
 #   controller - file handle for controller.js, used to write to controller.js
 #   plan - name of plan whose terms are being placed
+mathCourses = ['MATH 100', 'MATH 101', 'MATH 102', 'MATH 209', 'MATH 201', 'MATH 300', 'MECE 390']
 def placeCourses(termTag, termList, soup, controller, plan, termcounter):
     for course in termList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan)
@@ -88,6 +89,10 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter):
                                                "ng-click":courseID+"Listener()" })
         elif course.name == "Program/Technical Elective":
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip progelective", 
+                                               "id": courseID, 
+                                               "ng-click":courseID+"Listener()" })
+        elif course.name in mathCourses:
+            courseDiv = soup.new_tag("div",attrs= {"class":"mathCourse tooltip", 
                                                "id": courseID, 
                                                "ng-click":courseID+"Listener()" })
         else:
