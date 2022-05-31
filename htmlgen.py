@@ -109,7 +109,7 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter):
     for course in termList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan)
         courseContDiv = soup.new_tag("div", attrs={"class":"coursecontainer"})
-
+        courseContClass = course.category.replace(" ", "")
         if (course.name == "Complementary Elective") or (course.name == "Program/Technical Elective") or (course.name == "ITS Elective"):
             # Formatting tooltip for elective: title is present but credits, availability, etc. are blank
             courseTitle = soup.new_tag("b", attrs={"class":"descriptiontitle"})
@@ -148,7 +148,7 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter):
 
         else:
             # This is a regular course. All information should be available
-            courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip", 
+            courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip " +courseContClass, 
                                                 "id": courseID, 
                                                 "ng-click":courseID+"Listener()",
                                                 "style":"background-color:#" + course.color})
