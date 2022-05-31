@@ -95,6 +95,7 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter):
                                                "id": courseID, 
                                                "ng-click":courseID+"Listener()",
                                                "style":"background-color:#" + course.color})
+        else:
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip", 
                                                 "id": courseID, 
                                                 "ng-click":courseID+"Listener()",
