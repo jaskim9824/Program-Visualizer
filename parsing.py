@@ -569,7 +569,12 @@ def pullSeq(filename, course_obj_dict):
         # Each sheet stores a plan (traditional, co-op plan 1, etc.)
         plan_dict = {}
         sheet = book.sheet_by_index(i)
-        for col in range(0, sheet.ncols):
+        if i == 0:
+            dept_name = sheet.cell_value(0, 0)
+            col = 1
+        else:
+            col = 0
+        while col < sheet.ncols:
             # Each column represents a term
             term_name = sheet.cell_value(0, col)  # first entry in col must be the term name
             term_list = []  # stores Course objects in a list for that term
@@ -601,13 +606,14 @@ def pullSeq(filename, course_obj_dict):
                 # deepcopy since sequencing leads to prereqs and coreqs not being the same between different plans
                 term_list.append(deepcopy(course_obj_dict[name]))  # store each course in a list
             plan_dict[term_name] = term_list  # store each list in a dict (key is term name)
+            col += 1
         course_seq[sheet.name] = plan_dict  # store each term dict in a plan dict (key is plan name (traditional, etc.))
 
     # Make sure that co-reqs are only for courses in the same term
     # Had to do this after pulling from Sequencing.xls
     course_seq = checkReqs(course_seq)
 
-    return course_seq
+    return course_seq, dept_name
 
 
 def checkReqs(course_seq):

@@ -11,6 +11,9 @@ import cleaner
 import linegen
 import html
 
+def switchTitle(titleTag, deptName):
+    titleTag.append(deptName + " Program Plan Visualizer")
+
 # Function that places the radio inputs into the form which controls
 # which plan is currently selected on the webpage
 # Parameters:

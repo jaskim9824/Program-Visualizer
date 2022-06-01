@@ -58,10 +58,12 @@ def main():
             # pulling the category and color info from excel
             courseDict, categoryDict = pullCategories("CourseCategories.xls", courseDict)
             # sequencing courses
-            sequenceDict = pullSeq("Sequencing.xls", courseDict)
+            sequenceDict, deptName = pullSeq("Sequencing.xls", courseDict)
 
             # generating intital JS based on the number and names of plans
             javascriptgen.intializeControllerJavaScript(controller, sequenceDict)
+
+            titleTag = soup.body.find("a", class_="site-title")
       
             #locating main div, this is where all the html will be written
             mainTag = soup.body.find("div", id="main")
@@ -75,6 +77,7 @@ def main():
             #TO DO: adjust width and height of display and header tag based on sequence
 
             #placing the HTML and generating JS based on the courses (drawing lines)
+            htmlgen.switchTitle(titleTag, deptName)
             htmlgen.placeRadioInputs(formTag, sequenceDict, soup)
             htmlgen.placeLegend(legendTag, sequenceDict, soup)
             htmlgen.placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager)
