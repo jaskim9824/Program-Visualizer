@@ -151,6 +151,7 @@ header {
 }
 
 /*This is for the Hover over course description*/
+/* The original box colors are commented out for now */
 
 .tooltip {
     position: relative;
@@ -160,8 +161,10 @@ header {
 .tooltip .tooltiptextright {
     visibility: hidden;
     width: 500px;
-    background-color: #555;
-    color: #fff;
+    /* background-color: #555; */
+    background-color: white;
+    /* color: #fff; */
+    color: black;
     text-align: center;           
     border-radius: 6px;
     padding: 5px 10px;
@@ -177,8 +180,10 @@ header {
 .tooltip .tooltiptextleft {
     visibility: hidden;
     width: 500px;
-    background-color: #555;
-    color: #fff;
+    /* background-color: #555; */
+    background-color: white;
+    /* color: #fff; */
+    color: black;
     text-align: center;           
     border-radius: 6px;
     padding: 5px 10px;
@@ -198,7 +203,8 @@ header {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: #555 transparent transparent transparent;
+    /* border-color: #555 transparent transparent transparent; */
+    border-color: white transparent transparent transparent;
 }
 
 .tooltip .tooltiptextleft::after {
@@ -208,7 +214,8 @@ header {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: #555 transparent transparent transparent;
+    /* border-color: #555 transparent transparent transparent; */
+    border-color: black transparent transparent transparent;
 }
         
 .tooltip:hover .tooltiptextright {
