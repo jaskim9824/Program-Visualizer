@@ -20,7 +20,7 @@ header {
     background-color: #275d38;
 }
         
- /*header link style */
+ /*Header link style */
 .header a {
     padding: 15px;
     text-decoration: none;
@@ -31,12 +31,12 @@ header {
     font-family: inherit;
 }
 
-/*title style*/
+/*Title style*/
 .header a.site-title {
     font-size: 25px;
 }
 
-/*image style*/
+/*Image style*/
 .header img {
     max-width: 200px;
     margin-right: 0;
@@ -52,20 +52,45 @@ header {
     }
 }  
 
+/* Plan header styling*/
 .planhead {
     margin: 0 0 0 0;
     width: 500px;
     position: relative;
     left: 50vw;
 }
-    
+
+/* Plan diagram styling */
+.display {
+    width:fit-content;
+}
+
+/* Form styling */
 .select {
     margin: 0 0 0 0;
     width: 500px;
     position: relative;
     left: 47.5vw;
 }
+
+/* Term column styling */
+.term {
+    float: left;
+    margin-left: 60px;
+    position: relative;
+}
+
+/* Term header styling */
+.termheader {
+    margin-bottom: 30px;
+}
+
+/* Text within a course box styling*/
+.embed {
+    text-align: center;
+}
       
+/* Course box styling */
 .course {
     border-style: solid;
     border-color: black;
@@ -74,23 +99,13 @@ header {
     width: 150px;
     margin-bottom: 50px;
 }
-.mathCourse{
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
-    height: 50px;
-    width: 150px;
-    margin-bottom: 50px;
-}
 
+/* Default course hover */
 .course:hover {
-    background-color: #f2cd00!important;
+    background-color: #f2cd00;
 }
 
-.mathCourse:hover{
-    background-color: blue;
-}
-
+/* Default course selected */
 .course-highlighted {
     border-style: solid;
     border-color: black;
@@ -98,11 +113,11 @@ header {
     height: 50px;
     width: 150px;
     margin-bottom: 50px;
-    background-color: #f2cd00!important;
+    background-color: #f2cd00;
 }
 
 .MATH:hover {
-    background-color: #ff5050;
+    background-color: #ff5050!important;
 }
 
 .MATH-highlighted {
@@ -110,7 +125,7 @@ header {
 }
 
 .BASICSCIENCES:hover {
-    background-color: #99ff99;
+    background-color: #99ff99!important;
 }
 
 .BASICSCIENCES-highlighted {
@@ -118,7 +133,7 @@ header {
 }
 
 .ENGINEERINGSCIENCES:hover {
-    background-color: #66ccff;
+    background-color: #66ccff!important;
 }
 
 .ENGINEERINGSCIENCES-highlighted {
@@ -126,30 +141,14 @@ header {
 }
 
 .ENGINEERINGDESIGN:hover {
-    background-color: #ff9900;
+    background-color: #ff9900!important;
 }
 
 .ENGINEERINGDESIGN-highlighted {
     background-color: #ff9900;
 }
-.embed {
-    text-align: center;
-}
+
     
-.term {
-    float: left;
-    margin-left: 60px;
-    position: relative;
-}
-
-.termheader {
-    margin-bottom: 30px;
-}
-
-.display {
-    width:fit-content;
-}
-
 /*This is for the Hover over course description*/
 /* The original box colors are commented out for now */
 
