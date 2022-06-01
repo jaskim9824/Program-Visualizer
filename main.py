@@ -12,6 +12,8 @@
 from encodings import utf_8
 from bs4 import BeautifulSoup
 from parsing import parse
+from parsing import pullCategories
+from parsing import pullSeq
 import javascriptgen
 import htmlgen
 import linegen
@@ -51,8 +53,12 @@ def main():
             # creating line manager
             lineManager = linegen.LineManager()
 
-            # parsing the excel files with course info and sequencing
-            sequenceDict, courseDict = parse("Courses.xls")
+            # parsing the excel files with course info, pulls dependencies (prereqs, coreqs, reqs) too
+            courseDict = parse("Courses.xls")
+            # pulling the category and color info from excel
+            courseDict, categoryDict = pullCategories("CourseCategories.xls", courseDict)
+            # sequencing courses
+            sequenceDict = pullSeq("Sequencing.xls", courseDict)
 
             # generating intital JS based on the number and names of plans
             javascriptgen.intializeControllerJavaScript(controller, sequenceDict)

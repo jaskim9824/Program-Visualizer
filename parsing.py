@@ -102,11 +102,9 @@ def parse(filename):
             calc_fee_index, actual_fee_index, duration, alpha_hours,
             course_description))
 
-        course_obj_dict = pullCategories(course_obj_dict, "CourseCategories.xls")
+        course_obj_dict = pullDependencies(course_obj_dict)
 
-        course_seq, course_obj_dict = pullDependencies(course_obj_dict)
-
-        return course_seq, course_obj_dict
+        return course_obj_dict
 
     except FileNotFoundError:
         print("Excel file not found, ensure it is present and the name is correct.")
@@ -605,6 +603,10 @@ def pullSeq(filename, course_obj_dict):
             plan_dict[term_name] = term_list  # store each list in a dict (key is term name)
         course_seq[sheet.name] = plan_dict  # store each term dict in a plan dict (key is plan name (traditional, etc.))
 
+    # Make sure that co-reqs are only for courses in the same term
+    # Had to do this after pulling from Sequencing.xls
+    course_seq = checkReqs(course_seq)
+
     return course_seq
 
 
@@ -738,20 +740,12 @@ def pullDependencies(course_obj_dict):
             reqslist[i] = reqslist[i].replace("or", " or ")
         course_obj_dict[course].reqs = reqslist
 
-    # course_seq stores the courses in their proper sequencing according to
-    # Sequencing.xls
-    course_seq = {}
-    course_seq = pullSeq("Sequencing.xls", course_obj_dict)
-
-    # Make sure that co-reqs are only for courses in the same term
-    # Had to do this after pulling from Sequencing.xls
-    course_seq = checkReqs(course_seq)
-
-    return course_seq, course_obj_dict
+    return course_obj_dict
 
 
-def pullCategories(course_obj_dict, filename):
+def pullCategories(filename, course_obj_dict):
     try:
+        category_dict = {}
         book = xlrd.open_workbook(filename)
         sheet = book.sheet_by_index(0)
         for col in range(0, sheet.ncols):
@@ -761,6 +755,7 @@ def pullCategories(course_obj_dict, filename):
                 cell_val = str(sheet.cell_value(1, col))[:dotindex]
             else:
                 cell_val = str(sheet.cell_value(1, col))
+            category_dict[cat_name] = cell_val
             if cat_name.upper().strip() == "COMP":
                 course_obj_dict["Complementary Elective"] = Course(name = "Complementary Elective", 
                     course_description="A complementary elective of the student's choice. Please consult the calendar for more information.",
@@ -786,4 +781,4 @@ def pullCategories(course_obj_dict, filename):
     except FileNotFoundError:
         print("CourseCategories.xls is not in the current folder")
 
-    return course_obj_dict
+    return course_obj_dict, category_dict
