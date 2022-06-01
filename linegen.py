@@ -109,57 +109,53 @@ def placeClickListeners(courseList, controller, lineManager, plan):
     for course in courseList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan) 
         courseContClass = course.category.replace(" ", "")
-        # if course has lines that it owns, create a click listener
-        if courseID in lineManager.getCourseLineDict():
-            controller.write(formattedListener.format(courseName=courseID))
-            controller.write(formattedElementGetter.format(courseName=courseID))
-            controller.write(formattedIf.format(courseName=courseID))
 
+        controller.write(formattedListener.format(courseName=courseID))
+        controller.write(formattedElementGetter.format(courseName=courseID))
+        controller.write(formattedIf.format(courseName=courseID))
+
+        # if course owns lines, add addLine statements
+        if courseID in lineManager.getCourseLineDict():
             for line in lineManager.getCourseLineDict()[courseID]:
                 controller.write(formattedStatement.format(action="add", num=line))
 
-            if (courseContClass != ""):
-                controller.write(formattedHighlightStatement.format(courseName=courseID,
+        # for course with no category, use default colour
+        if (courseContClass == ""):
+                courseContClass = "course"
+
+            
+        controller.write(formattedHighlightStatement.format(courseName=courseID,
                                                                     action="remove",
                                                                     className=courseContClass))
-                controller.write(formattedHighlightStatement.format(courseName=courseID,
+        controller.write(formattedHighlightStatement.format(courseName=courseID,
                                                                     action="add",
                                                                    className=courseContClass+"-highlighted"))
-            # for course with no category, use default colour
-            else:
-                controller.write(formattedHighlightStatement.format(courseName=courseID,
-                                                                    action="remove",
-                                                                    className="course"))
-                controller.write(formattedHighlightStatement.format(courseName=courseID,
-                                                                    action="add",
-                                                                    className="course-highlighted"))
-            controller.write(formattedAddClickedStatement.format(courseName=courseID, 
+        controller.write(formattedAddClickedStatement.format(courseName=courseID, 
                                                                     category=courseContClass))
             
-        
-            controller.write("      " +courseID+"flag=true\n")
-            controller.write("  }\n else {\n")
+     
+        controller.write("      " +courseID+"flag=true\n")
+        controller.write("  }\n else {\n")
 
+        # if course owns lines, add removeLine statements
+        if courseID in lineManager.getCourseLineDict():
             for line in lineManager.getCourseLineDict()[courseID]:
                 controller.write(formattedStatement.format(action="remove", num=line))
 
-            if (courseContClass != ""):
-                controller.write(formattedHighlightStatement.format(courseName=courseID,
+        # for course with no category, use default colour
+        if (courseContClass == ""):
+            courseContClass = "course"
+
+        controller.write(formattedHighlightStatement.format(courseName=courseID,
                                                                 action="remove",
                                                                 className=courseContClass+"-highlighted"))
-                controller.write(formattedHighlightStatement.format(courseName=courseID,
+        controller.write(formattedHighlightStatement.format(courseName=courseID,
                                                                 action="add",
                                                                 className=courseContClass))
-            else:
-                controller.write(formattedHighlightStatement.format(courseName=courseID,
-                                                                action="remove",
-                                                                className="course-highlighted"))
-                controller.write(formattedHighlightStatement.format(courseName=courseID,
-                                                                action="add",
-                                                                className="course"))
-            controller.write(formattedRemoveClickedStatement.format(courseName=courseID))
-            controller.write("      " +courseID+"flag=false\n")
-            controller.write("  }\n};\n")
+    
+        controller.write(formattedRemoveClickedStatement.format(courseName=courseID))
+        controller.write("      " +courseID+"flag=false\n")
+        controller.write("  }\n};\n")
 
 # Function that creates a prerequesite line object in index.js
 # Parameters:

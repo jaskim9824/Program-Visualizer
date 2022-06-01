@@ -434,6 +434,21 @@ $scope.CHEM103TraditionalPlanListener = function () {
       CHEM103TraditionalPlanflag=false
   }
 };
+$scope.ENGG100TraditionalPlanListener = function () {
+  var ENGG100TraditionalPlanelement = document.getElementById("ENGG100TraditionalPlan");
+ if (!ENGG100TraditionalPlanflag) {
+     ENGG100TraditionalPlanelement.classList.remove("course");
+     ENGG100TraditionalPlanelement.classList.add("course-highlighted");
+     that.addToClicked(["ENGG100TraditionalPlan", "course"]);
+      ENGG100TraditionalPlanflag=true
+  }
+ else {
+     ENGG100TraditionalPlanelement.classList.remove("course-highlighted");
+     ENGG100TraditionalPlanelement.classList.add("course");
+     that.removeFromClicked("ENGG100TraditionalPlan");
+      ENGG100TraditionalPlanflag=false
+  }
+};
 $scope.ENGG130TraditionalPlanListener = function () {
   var ENGG130TraditionalPlanelement = document.getElementById("ENGG130TraditionalPlan");
  if (!ENGG130TraditionalPlanflag) {
@@ -463,7 +478,7 @@ $scope.ENGL199TraditionalPlanListener = function () {
       that.addLine(getLine3());
      ENGL199TraditionalPlanelement.classList.remove("course");
      ENGL199TraditionalPlanelement.classList.add("course-highlighted");
-     that.addToClicked(["ENGL199TraditionalPlan", ""]);
+     that.addToClicked(["ENGL199TraditionalPlan", "course"]);
       ENGL199TraditionalPlanflag=true
   }
  else {
@@ -535,6 +550,21 @@ $scope.CHEM105TraditionalPlanListener = function () {
      CHEM105TraditionalPlanelement.classList.add("BASICSCIENCES");
      that.removeFromClicked("CHEM105TraditionalPlan");
       CHEM105TraditionalPlanflag=false
+  }
+};
+$scope.ENCMP100TraditionalPlanListener = function () {
+  var ENCMP100TraditionalPlanelement = document.getElementById("ENCMP100TraditionalPlan");
+ if (!ENCMP100TraditionalPlanflag) {
+     ENCMP100TraditionalPlanelement.classList.remove("BASICSCIENCES");
+     ENCMP100TraditionalPlanelement.classList.add("BASICSCIENCES-highlighted");
+     that.addToClicked(["ENCMP100TraditionalPlan", "BASICSCIENCES"]);
+      ENCMP100TraditionalPlanflag=true
+  }
+ else {
+     ENCMP100TraditionalPlanelement.classList.remove("BASICSCIENCES-highlighted");
+     ENCMP100TraditionalPlanelement.classList.add("BASICSCIENCES");
+     that.removeFromClicked("ENCMP100TraditionalPlan");
+      ENCMP100TraditionalPlanflag=false
   }
 };
 $scope.ENGG160TraditionalPlanListener = function () {
@@ -737,7 +767,7 @@ $scope.MECE200TraditionalPlanListener = function () {
       that.addLine(getLine65());
      MECE200TraditionalPlanelement.classList.remove("course");
      MECE200TraditionalPlanelement.classList.add("course-highlighted");
-     that.addToClicked(["MECE200TraditionalPlan", ""]);
+     that.addToClicked(["MECE200TraditionalPlan", "course"]);
       MECE200TraditionalPlanflag=true
   }
  else {
@@ -1057,7 +1087,7 @@ $scope.ENGM310TraditionalPlanListener = function () {
       that.addLine(getLine72());
      ENGM310TraditionalPlanelement.classList.remove("course");
      ENGM310TraditionalPlanelement.classList.add("course-highlighted");
-     that.addToClicked(["ENGM310TraditionalPlan", ""]);
+     that.addToClicked(["ENGM310TraditionalPlan", "course"]);
       ENGM310TraditionalPlanflag=true
   }
  else {
@@ -1148,7 +1178,7 @@ $scope.MECE390TraditionalPlanListener = function () {
       that.addLine(getLine50());
      MECE390TraditionalPlanelement.classList.remove("course");
      MECE390TraditionalPlanelement.classList.add("course-highlighted");
-     that.addToClicked(["MECE390TraditionalPlan", ""]);
+     that.addToClicked(["MECE390TraditionalPlan", "course"]);
       MECE390TraditionalPlanflag=true
   }
  else {
@@ -1158,6 +1188,36 @@ $scope.MECE390TraditionalPlanListener = function () {
      MECE390TraditionalPlanelement.classList.add("course");
      that.removeFromClicked("MECE390TraditionalPlan");
       MECE390TraditionalPlanflag=false
+  }
+};
+$scope.ComplementaryElectiveTraditionalPlanListener = function () {
+  var ComplementaryElectiveTraditionalPlanelement = document.getElementById("ComplementaryElectiveTraditionalPlan");
+ if (!ComplementaryElectiveTraditionalPlanflag) {
+     ComplementaryElectiveTraditionalPlanelement.classList.remove("ComplementaryElective");
+     ComplementaryElectiveTraditionalPlanelement.classList.add("ComplementaryElective-highlighted");
+     that.addToClicked(["ComplementaryElectiveTraditionalPlan", "ComplementaryElective"]);
+      ComplementaryElectiveTraditionalPlanflag=true
+  }
+ else {
+     ComplementaryElectiveTraditionalPlanelement.classList.remove("ComplementaryElective-highlighted");
+     ComplementaryElectiveTraditionalPlanelement.classList.add("ComplementaryElective");
+     that.removeFromClicked("ComplementaryElectiveTraditionalPlan");
+      ComplementaryElectiveTraditionalPlanflag=false
+  }
+};
+$scope.ENGG404TraditionalPlanListener = function () {
+  var ENGG404TraditionalPlanelement = document.getElementById("ENGG404TraditionalPlan");
+ if (!ENGG404TraditionalPlanflag) {
+     ENGG404TraditionalPlanelement.classList.remove("course");
+     ENGG404TraditionalPlanelement.classList.add("course-highlighted");
+     that.addToClicked(["ENGG404TraditionalPlan", "course"]);
+      ENGG404TraditionalPlanflag=true
+  }
+ else {
+     ENGG404TraditionalPlanelement.classList.remove("course-highlighted");
+     ENGG404TraditionalPlanelement.classList.add("course");
+     that.removeFromClicked("ENGG404TraditionalPlan");
+      ENGG404TraditionalPlanflag=false
   }
 };
 $scope.MECE430TraditionalPlanListener = function () {
@@ -1198,6 +1258,51 @@ $scope.MECE463TraditionalPlanListener = function () {
       MECE463TraditionalPlanflag=false
   }
 };
+$scope.ProgramTechnicalElectiveTraditionalPlanListener = function () {
+  var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
+ if (!ProgramTechnicalElectiveTraditionalPlanflag) {
+     ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveTraditionalPlanelement.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveTraditionalPlanflag=true
+  }
+ else {
+     ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveTraditionalPlanelement.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan");
+      ProgramTechnicalElectiveTraditionalPlanflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlanListener = function () {
+  var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
+ if (!ProgramTechnicalElectiveTraditionalPlanflag) {
+     ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveTraditionalPlanelement.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveTraditionalPlanflag=true
+  }
+ else {
+     ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveTraditionalPlanelement.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan");
+      ProgramTechnicalElectiveTraditionalPlanflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlanListener = function () {
+  var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
+ if (!ProgramTechnicalElectiveTraditionalPlanflag) {
+     ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveTraditionalPlanelement.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveTraditionalPlanflag=true
+  }
+ else {
+     ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveTraditionalPlanelement.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan");
+      ProgramTechnicalElectiveTraditionalPlanflag=false
+  }
+};
 $scope.CHE448TraditionalPlanListener = function () {
   var CHE448TraditionalPlanelement = document.getElementById("CHE448TraditionalPlan");
  if (!CHE448TraditionalPlanflag) {
@@ -1219,6 +1324,21 @@ $scope.CHE448TraditionalPlanListener = function () {
      CHE448TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("CHE448TraditionalPlan");
       CHE448TraditionalPlanflag=false
+  }
+};
+$scope.ENGG400TraditionalPlanListener = function () {
+  var ENGG400TraditionalPlanelement = document.getElementById("ENGG400TraditionalPlan");
+ if (!ENGG400TraditionalPlanflag) {
+     ENGG400TraditionalPlanelement.classList.remove("course");
+     ENGG400TraditionalPlanelement.classList.add("course-highlighted");
+     that.addToClicked(["ENGG400TraditionalPlan", "course"]);
+      ENGG400TraditionalPlanflag=true
+  }
+ else {
+     ENGG400TraditionalPlanelement.classList.remove("course-highlighted");
+     ENGG400TraditionalPlanelement.classList.add("course");
+     that.removeFromClicked("ENGG400TraditionalPlan");
+      ENGG400TraditionalPlanflag=false
   }
 };
 $scope.MECE403TraditionalPlanListener = function () {
@@ -1294,6 +1414,36 @@ $scope.MECE460TraditionalPlanListener = function () {
       MECE460TraditionalPlanflag=false
   }
 };
+$scope.ProgramTechnicalElectiveTraditionalPlanListener = function () {
+  var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
+ if (!ProgramTechnicalElectiveTraditionalPlanflag) {
+     ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveTraditionalPlanelement.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveTraditionalPlanflag=true
+  }
+ else {
+     ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveTraditionalPlanelement.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan");
+      ProgramTechnicalElectiveTraditionalPlanflag=false
+  }
+};
+$scope.ITSElectiveTraditionalPlanListener = function () {
+  var ITSElectiveTraditionalPlanelement = document.getElementById("ITSElectiveTraditionalPlan");
+ if (!ITSElectiveTraditionalPlanflag) {
+     ITSElectiveTraditionalPlanelement.classList.remove("ITSElective");
+     ITSElectiveTraditionalPlanelement.classList.add("ITSElective-highlighted");
+     that.addToClicked(["ITSElectiveTraditionalPlan", "ITSElective"]);
+      ITSElectiveTraditionalPlanflag=true
+  }
+ else {
+     ITSElectiveTraditionalPlanelement.classList.remove("ITSElective-highlighted");
+     ITSElectiveTraditionalPlanelement.classList.add("ITSElective");
+     that.removeFromClicked("ITSElectiveTraditionalPlan");
+      ITSElectiveTraditionalPlanflag=false
+  }
+};
   var CHEM103AlternatePlanflag = false;
   var ENGG100AlternatePlanflag = false;
   var ENGG130AlternatePlanflag = false;
@@ -1360,6 +1510,21 @@ $scope.CHEM103AlternatePlanListener = function () {
       CHEM103AlternatePlanflag=false
   }
 };
+$scope.ENGG100AlternatePlanListener = function () {
+  var ENGG100AlternatePlanelement = document.getElementById("ENGG100AlternatePlan");
+ if (!ENGG100AlternatePlanflag) {
+     ENGG100AlternatePlanelement.classList.remove("course");
+     ENGG100AlternatePlanelement.classList.add("course-highlighted");
+     that.addToClicked(["ENGG100AlternatePlan", "course"]);
+      ENGG100AlternatePlanflag=true
+  }
+ else {
+     ENGG100AlternatePlanelement.classList.remove("course-highlighted");
+     ENGG100AlternatePlanelement.classList.add("course");
+     that.removeFromClicked("ENGG100AlternatePlan");
+      ENGG100AlternatePlanflag=false
+  }
+};
 $scope.ENGG130AlternatePlanListener = function () {
   var ENGG130AlternatePlanelement = document.getElementById("ENGG130AlternatePlan");
  if (!ENGG130AlternatePlanflag) {
@@ -1389,7 +1554,7 @@ $scope.ENGL199AlternatePlanListener = function () {
       that.addLine(getLine76());
      ENGL199AlternatePlanelement.classList.remove("course");
      ENGL199AlternatePlanelement.classList.add("course-highlighted");
-     that.addToClicked(["ENGL199AlternatePlan", ""]);
+     that.addToClicked(["ENGL199AlternatePlan", "course"]);
       ENGL199AlternatePlanflag=true
   }
  else {
@@ -1461,6 +1626,21 @@ $scope.CHEM105AlternatePlanListener = function () {
      CHEM105AlternatePlanelement.classList.add("BASICSCIENCES");
      that.removeFromClicked("CHEM105AlternatePlan");
       CHEM105AlternatePlanflag=false
+  }
+};
+$scope.ENCMP100AlternatePlanListener = function () {
+  var ENCMP100AlternatePlanelement = document.getElementById("ENCMP100AlternatePlan");
+ if (!ENCMP100AlternatePlanflag) {
+     ENCMP100AlternatePlanelement.classList.remove("BASICSCIENCES");
+     ENCMP100AlternatePlanelement.classList.add("BASICSCIENCES-highlighted");
+     that.addToClicked(["ENCMP100AlternatePlan", "BASICSCIENCES"]);
+      ENCMP100AlternatePlanflag=true
+  }
+ else {
+     ENCMP100AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
+     ENCMP100AlternatePlanelement.classList.add("BASICSCIENCES");
+     that.removeFromClicked("ENCMP100AlternatePlan");
+      ENCMP100AlternatePlanflag=false
   }
 };
 $scope.ENGG160AlternatePlanListener = function () {
@@ -1565,7 +1745,7 @@ $scope.ENGM310AlternatePlanListener = function () {
       that.addLine(getLine145());
      ENGM310AlternatePlanelement.classList.remove("course");
      ENGM310AlternatePlanelement.classList.add("course-highlighted");
-     that.addToClicked(["ENGM310AlternatePlan", ""]);
+     that.addToClicked(["ENGM310AlternatePlan", "course"]);
       ENGM310AlternatePlanflag=true
   }
  else {
@@ -1574,6 +1754,21 @@ $scope.ENGM310AlternatePlanListener = function () {
      ENGM310AlternatePlanelement.classList.add("course");
      that.removeFromClicked("ENGM310AlternatePlan");
       ENGM310AlternatePlanflag=false
+  }
+};
+$scope.ENGG404AlternatePlanListener = function () {
+  var ENGG404AlternatePlanelement = document.getElementById("ENGG404AlternatePlan");
+ if (!ENGG404AlternatePlanflag) {
+     ENGG404AlternatePlanelement.classList.remove("course");
+     ENGG404AlternatePlanelement.classList.add("course-highlighted");
+     that.addToClicked(["ENGG404AlternatePlan", "course"]);
+      ENGG404AlternatePlanflag=true
+  }
+ else {
+     ENGG404AlternatePlanelement.classList.remove("course-highlighted");
+     ENGG404AlternatePlanelement.classList.add("course");
+     that.removeFromClicked("ENGG404AlternatePlan");
+      ENGG404AlternatePlanflag=false
   }
 };
 $scope.MATH201AlternatePlanListener = function () {
@@ -1624,6 +1819,36 @@ $scope.MATH209AlternatePlanListener = function () {
      MATH209AlternatePlanelement.classList.add("MATH");
      that.removeFromClicked("MATH209AlternatePlan");
       MATH209AlternatePlanflag=false
+  }
+};
+$scope.ComplementaryElectiveAlternatePlanListener = function () {
+  var ComplementaryElectiveAlternatePlanelement = document.getElementById("ComplementaryElectiveAlternatePlan");
+ if (!ComplementaryElectiveAlternatePlanflag) {
+     ComplementaryElectiveAlternatePlanelement.classList.remove("ComplementaryElective");
+     ComplementaryElectiveAlternatePlanelement.classList.add("ComplementaryElective-highlighted");
+     that.addToClicked(["ComplementaryElectiveAlternatePlan", "ComplementaryElective"]);
+      ComplementaryElectiveAlternatePlanflag=true
+  }
+ else {
+     ComplementaryElectiveAlternatePlanelement.classList.remove("ComplementaryElective-highlighted");
+     ComplementaryElectiveAlternatePlanelement.classList.add("ComplementaryElective");
+     that.removeFromClicked("ComplementaryElectiveAlternatePlan");
+      ComplementaryElectiveAlternatePlanflag=false
+  }
+};
+$scope.ITSElectiveAlternatePlanListener = function () {
+  var ITSElectiveAlternatePlanelement = document.getElementById("ITSElectiveAlternatePlan");
+ if (!ITSElectiveAlternatePlanflag) {
+     ITSElectiveAlternatePlanelement.classList.remove("ITSElective");
+     ITSElectiveAlternatePlanelement.classList.add("ITSElective-highlighted");
+     that.addToClicked(["ITSElectiveAlternatePlan", "ITSElective"]);
+      ITSElectiveAlternatePlanflag=true
+  }
+ else {
+     ITSElectiveAlternatePlanelement.classList.remove("ITSElective-highlighted");
+     ITSElectiveAlternatePlanelement.classList.add("ITSElective");
+     that.removeFromClicked("ITSElectiveAlternatePlan");
+      ITSElectiveAlternatePlanflag=false
   }
 };
 $scope.CIVE270AlternatePlanListener = function () {
@@ -1804,7 +2029,7 @@ $scope.MECE200AlternatePlanListener = function () {
       that.addLine(getLine138());
      MECE200AlternatePlanelement.classList.remove("course");
      MECE200AlternatePlanelement.classList.add("course-highlighted");
-     that.addToClicked(["MECE200AlternatePlan", ""]);
+     that.addToClicked(["MECE200AlternatePlan", "course"]);
       MECE200AlternatePlanflag=true
   }
  else {
@@ -2074,7 +2299,7 @@ $scope.MECE390AlternatePlanListener = function () {
       that.addLine(getLine123());
      MECE390AlternatePlanelement.classList.remove("course");
      MECE390AlternatePlanelement.classList.add("course-highlighted");
-     that.addToClicked(["MECE390AlternatePlan", ""]);
+     that.addToClicked(["MECE390AlternatePlan", "course"]);
       MECE390AlternatePlanflag=true
   }
  else {
@@ -2084,6 +2309,21 @@ $scope.MECE390AlternatePlanListener = function () {
      MECE390AlternatePlanelement.classList.add("course");
      that.removeFromClicked("MECE390AlternatePlan");
       MECE390AlternatePlanflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveAlternatePlanListener = function () {
+  var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
+ if (!ProgramTechnicalElectiveAlternatePlanflag) {
+     ProgramTechnicalElectiveAlternatePlanelement.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveAlternatePlanelement.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveAlternatePlan", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveAlternatePlanflag=true
+  }
+ else {
+     ProgramTechnicalElectiveAlternatePlanelement.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveAlternatePlanelement.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan");
+      ProgramTechnicalElectiveAlternatePlanflag=false
   }
 };
 $scope.MECE430AlternatePlanListener = function () {
@@ -2124,6 +2364,51 @@ $scope.MECE463AlternatePlanListener = function () {
       MECE463AlternatePlanflag=false
   }
 };
+$scope.ProgramTechnicalElectiveAlternatePlanListener = function () {
+  var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
+ if (!ProgramTechnicalElectiveAlternatePlanflag) {
+     ProgramTechnicalElectiveAlternatePlanelement.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveAlternatePlanelement.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveAlternatePlan", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveAlternatePlanflag=true
+  }
+ else {
+     ProgramTechnicalElectiveAlternatePlanelement.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveAlternatePlanelement.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan");
+      ProgramTechnicalElectiveAlternatePlanflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveAlternatePlanListener = function () {
+  var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
+ if (!ProgramTechnicalElectiveAlternatePlanflag) {
+     ProgramTechnicalElectiveAlternatePlanelement.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveAlternatePlanelement.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveAlternatePlan", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveAlternatePlanflag=true
+  }
+ else {
+     ProgramTechnicalElectiveAlternatePlanelement.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveAlternatePlanelement.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan");
+      ProgramTechnicalElectiveAlternatePlanflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveAlternatePlanListener = function () {
+  var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
+ if (!ProgramTechnicalElectiveAlternatePlanflag) {
+     ProgramTechnicalElectiveAlternatePlanelement.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveAlternatePlanelement.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveAlternatePlan", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveAlternatePlanflag=true
+  }
+ else {
+     ProgramTechnicalElectiveAlternatePlanelement.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveAlternatePlanelement.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan");
+      ProgramTechnicalElectiveAlternatePlanflag=false
+  }
+};
 $scope.CHE448AlternatePlanListener = function () {
   var CHE448AlternatePlanelement = document.getElementById("CHE448AlternatePlan");
  if (!CHE448AlternatePlanflag) {
@@ -2145,6 +2430,21 @@ $scope.CHE448AlternatePlanListener = function () {
      CHE448AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("CHE448AlternatePlan");
       CHE448AlternatePlanflag=false
+  }
+};
+$scope.ENGG400AlternatePlanListener = function () {
+  var ENGG400AlternatePlanelement = document.getElementById("ENGG400AlternatePlan");
+ if (!ENGG400AlternatePlanflag) {
+     ENGG400AlternatePlanelement.classList.remove("course");
+     ENGG400AlternatePlanelement.classList.add("course-highlighted");
+     that.addToClicked(["ENGG400AlternatePlan", "course"]);
+      ENGG400AlternatePlanflag=true
+  }
+ else {
+     ENGG400AlternatePlanelement.classList.remove("course-highlighted");
+     ENGG400AlternatePlanelement.classList.add("course");
+     that.removeFromClicked("ENGG400AlternatePlan");
+      ENGG400AlternatePlanflag=false
   }
 };
 $scope.MECE403AlternatePlanListener = function () {
@@ -2292,6 +2592,21 @@ $scope.CHEM103CoopPlan1Listener = function () {
       CHEM103CoopPlan1flag=false
   }
 };
+$scope.ENGG100CoopPlan1Listener = function () {
+  var ENGG100CoopPlan1element = document.getElementById("ENGG100CoopPlan1");
+ if (!ENGG100CoopPlan1flag) {
+     ENGG100CoopPlan1element.classList.remove("course");
+     ENGG100CoopPlan1element.classList.add("course-highlighted");
+     that.addToClicked(["ENGG100CoopPlan1", "course"]);
+      ENGG100CoopPlan1flag=true
+  }
+ else {
+     ENGG100CoopPlan1element.classList.remove("course-highlighted");
+     ENGG100CoopPlan1element.classList.add("course");
+     that.removeFromClicked("ENGG100CoopPlan1");
+      ENGG100CoopPlan1flag=false
+  }
+};
 $scope.ENGG130CoopPlan1Listener = function () {
   var ENGG130CoopPlan1element = document.getElementById("ENGG130CoopPlan1");
  if (!ENGG130CoopPlan1flag) {
@@ -2321,7 +2636,7 @@ $scope.ENGL199CoopPlan1Listener = function () {
       that.addLine(getLine149());
      ENGL199CoopPlan1element.classList.remove("course");
      ENGL199CoopPlan1element.classList.add("course-highlighted");
-     that.addToClicked(["ENGL199CoopPlan1", ""]);
+     that.addToClicked(["ENGL199CoopPlan1", "course"]);
       ENGL199CoopPlan1flag=true
   }
  else {
@@ -2393,6 +2708,21 @@ $scope.CHEM105CoopPlan1Listener = function () {
      CHEM105CoopPlan1element.classList.add("BASICSCIENCES");
      that.removeFromClicked("CHEM105CoopPlan1");
       CHEM105CoopPlan1flag=false
+  }
+};
+$scope.ENCMP100CoopPlan1Listener = function () {
+  var ENCMP100CoopPlan1element = document.getElementById("ENCMP100CoopPlan1");
+ if (!ENCMP100CoopPlan1flag) {
+     ENCMP100CoopPlan1element.classList.remove("BASICSCIENCES");
+     ENCMP100CoopPlan1element.classList.add("BASICSCIENCES-highlighted");
+     that.addToClicked(["ENCMP100CoopPlan1", "BASICSCIENCES"]);
+      ENCMP100CoopPlan1flag=true
+  }
+ else {
+     ENCMP100CoopPlan1element.classList.remove("BASICSCIENCES-highlighted");
+     ENCMP100CoopPlan1element.classList.add("BASICSCIENCES");
+     that.removeFromClicked("ENCMP100CoopPlan1");
+      ENCMP100CoopPlan1flag=false
   }
 };
 $scope.ENGG160CoopPlan1Listener = function () {
@@ -2524,7 +2854,7 @@ $scope.ENGG299CoopPlan1Listener = function () {
       that.addLine(getLine172());
      ENGG299CoopPlan1element.classList.remove("course");
      ENGG299CoopPlan1element.classList.add("course-highlighted");
-     that.addToClicked(["ENGG299CoopPlan1", ""]);
+     that.addToClicked(["ENGG299CoopPlan1", "course"]);
       ENGG299CoopPlan1flag=true
   }
  else {
@@ -2736,7 +3066,7 @@ $scope.MECE200CoopPlan1Listener = function () {
       that.addLine(getLine216());
      MECE200CoopPlan1element.classList.remove("course");
      MECE200CoopPlan1element.classList.add("course-highlighted");
-     that.addToClicked(["MECE200CoopPlan1", ""]);
+     that.addToClicked(["MECE200CoopPlan1", "course"]);
       MECE200CoopPlan1flag=true
   }
  else {
@@ -2781,7 +3111,7 @@ $scope.WKEXP901CoopPlan1Listener = function () {
       that.addLine(getLine173());
      WKEXP901CoopPlan1element.classList.remove("course");
      WKEXP901CoopPlan1element.classList.add("course-highlighted");
-     that.addToClicked(["WKEXP901CoopPlan1", ""]);
+     that.addToClicked(["WKEXP901CoopPlan1", "course"]);
       WKEXP901CoopPlan1flag=true
   }
  else {
@@ -2800,7 +3130,7 @@ $scope.WKEXP902CoopPlan1Listener = function () {
       that.addLine(getLine190());
      WKEXP902CoopPlan1element.classList.remove("course");
      WKEXP902CoopPlan1element.classList.add("course-highlighted");
-     that.addToClicked(["WKEXP902CoopPlan1", ""]);
+     that.addToClicked(["WKEXP902CoopPlan1", "course"]);
       WKEXP902CoopPlan1flag=true
   }
  else {
@@ -2971,7 +3301,7 @@ $scope.WKEXP903CoopPlan1Listener = function () {
       that.addLine(getLine191());
      WKEXP903CoopPlan1element.classList.remove("course");
      WKEXP903CoopPlan1element.classList.add("course-highlighted");
-     that.addToClicked(["WKEXP903CoopPlan1", ""]);
+     that.addToClicked(["WKEXP903CoopPlan1", "course"]);
       WKEXP903CoopPlan1flag=true
   }
  else {
@@ -2990,7 +3320,7 @@ $scope.WKEXP904CoopPlan1Listener = function () {
       that.addLine(getLine205());
      WKEXP904CoopPlan1element.classList.remove("course");
      WKEXP904CoopPlan1element.classList.add("course-highlighted");
-     that.addToClicked(["WKEXP904CoopPlan1", ""]);
+     that.addToClicked(["WKEXP904CoopPlan1", "course"]);
       WKEXP904CoopPlan1flag=true
   }
  else {
@@ -3008,7 +3338,7 @@ $scope.ENGM310CoopPlan1Listener = function () {
       that.addLine(getLine223());
      ENGM310CoopPlan1element.classList.remove("course");
      ENGM310CoopPlan1element.classList.add("course-highlighted");
-     that.addToClicked(["ENGM310CoopPlan1", ""]);
+     that.addToClicked(["ENGM310CoopPlan1", "course"]);
       ENGM310CoopPlan1flag=true
   }
  else {
@@ -3099,7 +3429,7 @@ $scope.MECE390CoopPlan1Listener = function () {
       that.addLine(getLine200());
      MECE390CoopPlan1element.classList.remove("course");
      MECE390CoopPlan1element.classList.add("course-highlighted");
-     that.addToClicked(["MECE390CoopPlan1", ""]);
+     that.addToClicked(["MECE390CoopPlan1", "course"]);
       MECE390CoopPlan1flag=true
   }
  else {
@@ -3109,6 +3439,36 @@ $scope.MECE390CoopPlan1Listener = function () {
      MECE390CoopPlan1element.classList.add("course");
      that.removeFromClicked("MECE390CoopPlan1");
       MECE390CoopPlan1flag=false
+  }
+};
+$scope.ComplementaryElectiveCoopPlan1Listener = function () {
+  var ComplementaryElectiveCoopPlan1element = document.getElementById("ComplementaryElectiveCoopPlan1");
+ if (!ComplementaryElectiveCoopPlan1flag) {
+     ComplementaryElectiveCoopPlan1element.classList.remove("ComplementaryElective");
+     ComplementaryElectiveCoopPlan1element.classList.add("ComplementaryElective-highlighted");
+     that.addToClicked(["ComplementaryElectiveCoopPlan1", "ComplementaryElective"]);
+      ComplementaryElectiveCoopPlan1flag=true
+  }
+ else {
+     ComplementaryElectiveCoopPlan1element.classList.remove("ComplementaryElective-highlighted");
+     ComplementaryElectiveCoopPlan1element.classList.add("ComplementaryElective");
+     that.removeFromClicked("ComplementaryElectiveCoopPlan1");
+      ComplementaryElectiveCoopPlan1flag=false
+  }
+};
+$scope.ENGG404CoopPlan1Listener = function () {
+  var ENGG404CoopPlan1element = document.getElementById("ENGG404CoopPlan1");
+ if (!ENGG404CoopPlan1flag) {
+     ENGG404CoopPlan1element.classList.remove("course");
+     ENGG404CoopPlan1element.classList.add("course-highlighted");
+     that.addToClicked(["ENGG404CoopPlan1", "course"]);
+      ENGG404CoopPlan1flag=true
+  }
+ else {
+     ENGG404CoopPlan1element.classList.remove("course-highlighted");
+     ENGG404CoopPlan1element.classList.add("course");
+     that.removeFromClicked("ENGG404CoopPlan1");
+      ENGG404CoopPlan1flag=false
   }
 };
 $scope.MECE430CoopPlan1Listener = function () {
@@ -3149,13 +3509,58 @@ $scope.MECE463CoopPlan1Listener = function () {
       MECE463CoopPlan1flag=false
   }
 };
+$scope.ProgramTechnicalElectiveCoopPlan1Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
+ if (!ProgramTechnicalElectiveCoopPlan1flag) {
+     ProgramTechnicalElectiveCoopPlan1element.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveCoopPlan1element.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan1", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveCoopPlan1flag=true
+  }
+ else {
+     ProgramTechnicalElectiveCoopPlan1element.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveCoopPlan1element.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan1");
+      ProgramTechnicalElectiveCoopPlan1flag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan1Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
+ if (!ProgramTechnicalElectiveCoopPlan1flag) {
+     ProgramTechnicalElectiveCoopPlan1element.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveCoopPlan1element.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan1", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveCoopPlan1flag=true
+  }
+ else {
+     ProgramTechnicalElectiveCoopPlan1element.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveCoopPlan1element.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan1");
+      ProgramTechnicalElectiveCoopPlan1flag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan1Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
+ if (!ProgramTechnicalElectiveCoopPlan1flag) {
+     ProgramTechnicalElectiveCoopPlan1element.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveCoopPlan1element.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan1", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveCoopPlan1flag=true
+  }
+ else {
+     ProgramTechnicalElectiveCoopPlan1element.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveCoopPlan1element.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan1");
+      ProgramTechnicalElectiveCoopPlan1flag=false
+  }
+};
 $scope.WKEXP905CoopPlan1Listener = function () {
   var WKEXP905CoopPlan1element = document.getElementById("WKEXP905CoopPlan1");
  if (!WKEXP905CoopPlan1flag) {
       that.addLine(getLine205());
      WKEXP905CoopPlan1element.classList.remove("course");
      WKEXP905CoopPlan1element.classList.add("course-highlighted");
-     that.addToClicked(["WKEXP905CoopPlan1", ""]);
+     that.addToClicked(["WKEXP905CoopPlan1", "course"]);
       WKEXP905CoopPlan1flag=true
   }
  else {
@@ -3187,6 +3592,21 @@ $scope.CHE448CoopPlan1Listener = function () {
      CHE448CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("CHE448CoopPlan1");
       CHE448CoopPlan1flag=false
+  }
+};
+$scope.ENGG400CoopPlan1Listener = function () {
+  var ENGG400CoopPlan1element = document.getElementById("ENGG400CoopPlan1");
+ if (!ENGG400CoopPlan1flag) {
+     ENGG400CoopPlan1element.classList.remove("course");
+     ENGG400CoopPlan1element.classList.add("course-highlighted");
+     that.addToClicked(["ENGG400CoopPlan1", "course"]);
+      ENGG400CoopPlan1flag=true
+  }
+ else {
+     ENGG400CoopPlan1element.classList.remove("course-highlighted");
+     ENGG400CoopPlan1element.classList.add("course");
+     that.removeFromClicked("ENGG400CoopPlan1");
+      ENGG400CoopPlan1flag=false
   }
 };
 $scope.MECE403CoopPlan1Listener = function () {
@@ -3262,6 +3682,36 @@ $scope.MECE460CoopPlan1Listener = function () {
       MECE460CoopPlan1flag=false
   }
 };
+$scope.ProgramTechnicalElectiveCoopPlan1Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
+ if (!ProgramTechnicalElectiveCoopPlan1flag) {
+     ProgramTechnicalElectiveCoopPlan1element.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveCoopPlan1element.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan1", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveCoopPlan1flag=true
+  }
+ else {
+     ProgramTechnicalElectiveCoopPlan1element.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveCoopPlan1element.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan1");
+      ProgramTechnicalElectiveCoopPlan1flag=false
+  }
+};
+$scope.ITSElectiveCoopPlan1Listener = function () {
+  var ITSElectiveCoopPlan1element = document.getElementById("ITSElectiveCoopPlan1");
+ if (!ITSElectiveCoopPlan1flag) {
+     ITSElectiveCoopPlan1element.classList.remove("ITSElective");
+     ITSElectiveCoopPlan1element.classList.add("ITSElective-highlighted");
+     that.addToClicked(["ITSElectiveCoopPlan1", "ITSElective"]);
+      ITSElectiveCoopPlan1flag=true
+  }
+ else {
+     ITSElectiveCoopPlan1element.classList.remove("ITSElective-highlighted");
+     ITSElectiveCoopPlan1element.classList.add("ITSElective");
+     that.removeFromClicked("ITSElectiveCoopPlan1");
+      ITSElectiveCoopPlan1flag=false
+  }
+};
   var CHEM103CoopPlan2flag = false;
   var ENGG100CoopPlan2flag = false;
   var ENGG130CoopPlan2flag = false;
@@ -3334,6 +3784,21 @@ $scope.CHEM103CoopPlan2Listener = function () {
       CHEM103CoopPlan2flag=false
   }
 };
+$scope.ENGG100CoopPlan2Listener = function () {
+  var ENGG100CoopPlan2element = document.getElementById("ENGG100CoopPlan2");
+ if (!ENGG100CoopPlan2flag) {
+     ENGG100CoopPlan2element.classList.remove("course");
+     ENGG100CoopPlan2element.classList.add("course-highlighted");
+     that.addToClicked(["ENGG100CoopPlan2", "course"]);
+      ENGG100CoopPlan2flag=true
+  }
+ else {
+     ENGG100CoopPlan2element.classList.remove("course-highlighted");
+     ENGG100CoopPlan2element.classList.add("course");
+     that.removeFromClicked("ENGG100CoopPlan2");
+      ENGG100CoopPlan2flag=false
+  }
+};
 $scope.ENGG130CoopPlan2Listener = function () {
   var ENGG130CoopPlan2element = document.getElementById("ENGG130CoopPlan2");
  if (!ENGG130CoopPlan2flag) {
@@ -3363,7 +3828,7 @@ $scope.ENGL199CoopPlan2Listener = function () {
       that.addLine(getLine227());
      ENGL199CoopPlan2element.classList.remove("course");
      ENGL199CoopPlan2element.classList.add("course-highlighted");
-     that.addToClicked(["ENGL199CoopPlan2", ""]);
+     that.addToClicked(["ENGL199CoopPlan2", "course"]);
       ENGL199CoopPlan2flag=true
   }
  else {
@@ -3435,6 +3900,21 @@ $scope.CHEM105CoopPlan2Listener = function () {
      CHEM105CoopPlan2element.classList.add("BASICSCIENCES");
      that.removeFromClicked("CHEM105CoopPlan2");
       CHEM105CoopPlan2flag=false
+  }
+};
+$scope.ENCMP100CoopPlan2Listener = function () {
+  var ENCMP100CoopPlan2element = document.getElementById("ENCMP100CoopPlan2");
+ if (!ENCMP100CoopPlan2flag) {
+     ENCMP100CoopPlan2element.classList.remove("BASICSCIENCES");
+     ENCMP100CoopPlan2element.classList.add("BASICSCIENCES-highlighted");
+     that.addToClicked(["ENCMP100CoopPlan2", "BASICSCIENCES"]);
+      ENCMP100CoopPlan2flag=true
+  }
+ else {
+     ENCMP100CoopPlan2element.classList.remove("BASICSCIENCES-highlighted");
+     ENCMP100CoopPlan2element.classList.add("BASICSCIENCES");
+     that.removeFromClicked("ENCMP100CoopPlan2");
+      ENCMP100CoopPlan2flag=false
   }
 };
 $scope.ENGG160CoopPlan2Listener = function () {
@@ -3589,7 +4069,7 @@ $scope.ENGG299CoopPlan2Listener = function () {
       that.addLine(getLine243());
      ENGG299CoopPlan2element.classList.remove("course");
      ENGG299CoopPlan2element.classList.add("course-highlighted");
-     that.addToClicked(["ENGG299CoopPlan2", ""]);
+     that.addToClicked(["ENGG299CoopPlan2", "course"]);
       ENGG299CoopPlan2flag=true
   }
  else {
@@ -3633,7 +4113,7 @@ $scope.MECE200CoopPlan2Listener = function () {
       that.addLine(getLine285());
      MECE200CoopPlan2element.classList.remove("course");
      MECE200CoopPlan2element.classList.add("course-highlighted");
-     that.addToClicked(["MECE200CoopPlan2", ""]);
+     that.addToClicked(["MECE200CoopPlan2", "course"]);
       MECE200CoopPlan2flag=true
   }
  else {
@@ -3699,7 +4179,7 @@ $scope.WKEXP901CoopPlan2Listener = function () {
       that.addLine(getLine267());
      WKEXP901CoopPlan2element.classList.remove("course");
      WKEXP901CoopPlan2element.classList.add("course-highlighted");
-     that.addToClicked(["WKEXP901CoopPlan2", ""]);
+     that.addToClicked(["WKEXP901CoopPlan2", "course"]);
       WKEXP901CoopPlan2flag=true
   }
  else {
@@ -3994,7 +4474,7 @@ $scope.WKEXP902CoopPlan2Listener = function () {
       that.addLine(getLine268());
      WKEXP902CoopPlan2element.classList.remove("course");
      WKEXP902CoopPlan2element.classList.add("course-highlighted");
-     that.addToClicked(["WKEXP902CoopPlan2", ""]);
+     that.addToClicked(["WKEXP902CoopPlan2", "course"]);
       WKEXP902CoopPlan2flag=true
   }
  else {
@@ -4013,7 +4493,7 @@ $scope.WKEXP903CoopPlan2Listener = function () {
       that.addLine(getLine278());
      WKEXP903CoopPlan2element.classList.remove("course");
      WKEXP903CoopPlan2element.classList.add("course-highlighted");
-     that.addToClicked(["WKEXP903CoopPlan2", ""]);
+     that.addToClicked(["WKEXP903CoopPlan2", "course"]);
       WKEXP903CoopPlan2flag=true
   }
  else {
@@ -4031,7 +4511,7 @@ $scope.ENGM310CoopPlan2Listener = function () {
       that.addLine(getLine292());
      ENGM310CoopPlan2element.classList.remove("course");
      ENGM310CoopPlan2element.classList.add("course-highlighted");
-     that.addToClicked(["ENGM310CoopPlan2", ""]);
+     that.addToClicked(["ENGM310CoopPlan2", "course"]);
       ENGM310CoopPlan2flag=true
   }
  else {
@@ -4122,7 +4602,7 @@ $scope.MECE390CoopPlan2Listener = function () {
       that.addLine(getLine277());
      MECE390CoopPlan2element.classList.remove("course");
      MECE390CoopPlan2element.classList.add("course-highlighted");
-     that.addToClicked(["MECE390CoopPlan2", ""]);
+     that.addToClicked(["MECE390CoopPlan2", "course"]);
       MECE390CoopPlan2flag=true
   }
  else {
@@ -4134,6 +4614,21 @@ $scope.MECE390CoopPlan2Listener = function () {
       MECE390CoopPlan2flag=false
   }
 };
+$scope.ComplementaryElectiveCoopPlan2Listener = function () {
+  var ComplementaryElectiveCoopPlan2element = document.getElementById("ComplementaryElectiveCoopPlan2");
+ if (!ComplementaryElectiveCoopPlan2flag) {
+     ComplementaryElectiveCoopPlan2element.classList.remove("ComplementaryElective");
+     ComplementaryElectiveCoopPlan2element.classList.add("ComplementaryElective-highlighted");
+     that.addToClicked(["ComplementaryElectiveCoopPlan2", "ComplementaryElective"]);
+      ComplementaryElectiveCoopPlan2flag=true
+  }
+ else {
+     ComplementaryElectiveCoopPlan2element.classList.remove("ComplementaryElective-highlighted");
+     ComplementaryElectiveCoopPlan2element.classList.add("ComplementaryElective");
+     that.removeFromClicked("ComplementaryElectiveCoopPlan2");
+      ComplementaryElectiveCoopPlan2flag=false
+  }
+};
 $scope.WKEXP904CoopPlan2Listener = function () {
   var WKEXP904CoopPlan2element = document.getElementById("WKEXP904CoopPlan2");
  if (!WKEXP904CoopPlan2flag) {
@@ -4141,7 +4636,7 @@ $scope.WKEXP904CoopPlan2Listener = function () {
       that.addLine(getLine293());
      WKEXP904CoopPlan2element.classList.remove("course");
      WKEXP904CoopPlan2element.classList.add("course-highlighted");
-     that.addToClicked(["WKEXP904CoopPlan2", ""]);
+     that.addToClicked(["WKEXP904CoopPlan2", "course"]);
       WKEXP904CoopPlan2flag=true
   }
  else {
@@ -4226,13 +4721,58 @@ $scope.MECE460CoopPlan2Listener = function () {
       MECE460CoopPlan2flag=false
   }
 };
+$scope.ProgramTechnicalElectiveCoopPlan2Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
+ if (!ProgramTechnicalElectiveCoopPlan2flag) {
+     ProgramTechnicalElectiveCoopPlan2element.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveCoopPlan2element.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan2", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveCoopPlan2flag=true
+  }
+ else {
+     ProgramTechnicalElectiveCoopPlan2element.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveCoopPlan2element.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan2");
+      ProgramTechnicalElectiveCoopPlan2flag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan2Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
+ if (!ProgramTechnicalElectiveCoopPlan2flag) {
+     ProgramTechnicalElectiveCoopPlan2element.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveCoopPlan2element.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan2", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveCoopPlan2flag=true
+  }
+ else {
+     ProgramTechnicalElectiveCoopPlan2element.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveCoopPlan2element.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan2");
+      ProgramTechnicalElectiveCoopPlan2flag=false
+  }
+};
+$scope.ITSElectiveCoopPlan2Listener = function () {
+  var ITSElectiveCoopPlan2element = document.getElementById("ITSElectiveCoopPlan2");
+ if (!ITSElectiveCoopPlan2flag) {
+     ITSElectiveCoopPlan2element.classList.remove("ITSElective");
+     ITSElectiveCoopPlan2element.classList.add("ITSElective-highlighted");
+     that.addToClicked(["ITSElectiveCoopPlan2", "ITSElective"]);
+      ITSElectiveCoopPlan2flag=true
+  }
+ else {
+     ITSElectiveCoopPlan2element.classList.remove("ITSElective-highlighted");
+     ITSElectiveCoopPlan2element.classList.add("ITSElective");
+     that.removeFromClicked("ITSElectiveCoopPlan2");
+      ITSElectiveCoopPlan2flag=false
+  }
+};
 $scope.WKEXP905CoopPlan2Listener = function () {
   var WKEXP905CoopPlan2element = document.getElementById("WKEXP905CoopPlan2");
  if (!WKEXP905CoopPlan2flag) {
       that.addLine(getLine293());
      WKEXP905CoopPlan2element.classList.remove("course");
      WKEXP905CoopPlan2element.classList.add("course-highlighted");
-     that.addToClicked(["WKEXP905CoopPlan2", ""]);
+     that.addToClicked(["WKEXP905CoopPlan2", "course"]);
       WKEXP905CoopPlan2flag=true
   }
  else {
@@ -4264,6 +4804,36 @@ $scope.CHE448CoopPlan2Listener = function () {
      CHE448CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("CHE448CoopPlan2");
       CHE448CoopPlan2flag=false
+  }
+};
+$scope.ENGG400CoopPlan2Listener = function () {
+  var ENGG400CoopPlan2element = document.getElementById("ENGG400CoopPlan2");
+ if (!ENGG400CoopPlan2flag) {
+     ENGG400CoopPlan2element.classList.remove("course");
+     ENGG400CoopPlan2element.classList.add("course-highlighted");
+     that.addToClicked(["ENGG400CoopPlan2", "course"]);
+      ENGG400CoopPlan2flag=true
+  }
+ else {
+     ENGG400CoopPlan2element.classList.remove("course-highlighted");
+     ENGG400CoopPlan2element.classList.add("course");
+     that.removeFromClicked("ENGG400CoopPlan2");
+      ENGG400CoopPlan2flag=false
+  }
+};
+$scope.ENGG404CoopPlan2Listener = function () {
+  var ENGG404CoopPlan2element = document.getElementById("ENGG404CoopPlan2");
+ if (!ENGG404CoopPlan2flag) {
+     ENGG404CoopPlan2element.classList.remove("course");
+     ENGG404CoopPlan2element.classList.add("course-highlighted");
+     that.addToClicked(["ENGG404CoopPlan2", "course"]);
+      ENGG404CoopPlan2flag=true
+  }
+ else {
+     ENGG404CoopPlan2element.classList.remove("course-highlighted");
+     ENGG404CoopPlan2element.classList.add("course");
+     that.removeFromClicked("ENGG404CoopPlan2");
+      ENGG404CoopPlan2flag=false
   }
 };
 $scope.MECE430CoopPlan2Listener = function () {
@@ -4302,6 +4872,36 @@ $scope.MECE463CoopPlan2Listener = function () {
      MECE463CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE463CoopPlan2");
       MECE463CoopPlan2flag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan2Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
+ if (!ProgramTechnicalElectiveCoopPlan2flag) {
+     ProgramTechnicalElectiveCoopPlan2element.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveCoopPlan2element.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan2", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveCoopPlan2flag=true
+  }
+ else {
+     ProgramTechnicalElectiveCoopPlan2element.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveCoopPlan2element.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan2");
+      ProgramTechnicalElectiveCoopPlan2flag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan2Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
+ if (!ProgramTechnicalElectiveCoopPlan2flag) {
+     ProgramTechnicalElectiveCoopPlan2element.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveCoopPlan2element.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan2", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveCoopPlan2flag=true
+  }
+ else {
+     ProgramTechnicalElectiveCoopPlan2element.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveCoopPlan2element.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan2");
+      ProgramTechnicalElectiveCoopPlan2flag=false
   }
 };
   var CHEM103CoopPlan3Biomedicalflag = false;
@@ -4380,6 +4980,21 @@ $scope.CHEM103CoopPlan3BiomedicalListener = function () {
       CHEM103CoopPlan3Biomedicalflag=false
   }
 };
+$scope.ENGG100CoopPlan3BiomedicalListener = function () {
+  var ENGG100CoopPlan3Biomedicalelement = document.getElementById("ENGG100CoopPlan3Biomedical");
+ if (!ENGG100CoopPlan3Biomedicalflag) {
+     ENGG100CoopPlan3Biomedicalelement.classList.remove("course");
+     ENGG100CoopPlan3Biomedicalelement.classList.add("course-highlighted");
+     that.addToClicked(["ENGG100CoopPlan3Biomedical", "course"]);
+      ENGG100CoopPlan3Biomedicalflag=true
+  }
+ else {
+     ENGG100CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
+     ENGG100CoopPlan3Biomedicalelement.classList.add("course");
+     that.removeFromClicked("ENGG100CoopPlan3Biomedical");
+      ENGG100CoopPlan3Biomedicalflag=false
+  }
+};
 $scope.ENGG130CoopPlan3BiomedicalListener = function () {
   var ENGG130CoopPlan3Biomedicalelement = document.getElementById("ENGG130CoopPlan3Biomedical");
  if (!ENGG130CoopPlan3Biomedicalflag) {
@@ -4409,7 +5024,7 @@ $scope.ENGL199CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine305());
      ENGL199CoopPlan3Biomedicalelement.classList.remove("course");
      ENGL199CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["ENGL199CoopPlan3Biomedical", ""]);
+     that.addToClicked(["ENGL199CoopPlan3Biomedical", "course"]);
       ENGL199CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4481,6 +5096,21 @@ $scope.CHEM105CoopPlan3BiomedicalListener = function () {
      CHEM105CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
      that.removeFromClicked("CHEM105CoopPlan3Biomedical");
       CHEM105CoopPlan3Biomedicalflag=false
+  }
+};
+$scope.ENCMP100CoopPlan3BiomedicalListener = function () {
+  var ENCMP100CoopPlan3Biomedicalelement = document.getElementById("ENCMP100CoopPlan3Biomedical");
+ if (!ENCMP100CoopPlan3Biomedicalflag) {
+     ENCMP100CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES");
+     ENCMP100CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES-highlighted");
+     that.addToClicked(["ENCMP100CoopPlan3Biomedical", "BASICSCIENCES"]);
+      ENCMP100CoopPlan3Biomedicalflag=true
+  }
+ else {
+     ENCMP100CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
+     ENCMP100CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
+     that.removeFromClicked("ENCMP100CoopPlan3Biomedical");
+      ENCMP100CoopPlan3Biomedicalflag=false
   }
 };
 $scope.ENGG160CoopPlan3BiomedicalListener = function () {
@@ -4606,6 +5236,21 @@ $scope.CIVE270CoopPlan3BiomedicalListener = function () {
       CIVE270CoopPlan3Biomedicalflag=false
   }
 };
+$scope.ENGG299CoopPlan3BiomedicalListener = function () {
+  var ENGG299CoopPlan3Biomedicalelement = document.getElementById("ENGG299CoopPlan3Biomedical");
+ if (!ENGG299CoopPlan3Biomedicalflag) {
+     ENGG299CoopPlan3Biomedicalelement.classList.remove("course");
+     ENGG299CoopPlan3Biomedicalelement.classList.add("course-highlighted");
+     that.addToClicked(["ENGG299CoopPlan3Biomedical", "course"]);
+      ENGG299CoopPlan3Biomedicalflag=true
+  }
+ else {
+     ENGG299CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
+     ENGG299CoopPlan3Biomedicalelement.classList.add("course");
+     that.removeFromClicked("ENGG299CoopPlan3Biomedical");
+      ENGG299CoopPlan3Biomedicalflag=false
+  }
+};
 $scope.MATH209CoopPlan3BiomedicalListener = function () {
   var MATH209CoopPlan3Biomedicalelement = document.getElementById("MATH209CoopPlan3Biomedical");
  if (!MATH209CoopPlan3Biomedicalflag) {
@@ -4683,7 +5328,7 @@ $scope.MECE200CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine377());
      MECE200CoopPlan3Biomedicalelement.classList.remove("course");
      MECE200CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["MECE200CoopPlan3Biomedical", ""]);
+     that.addToClicked(["MECE200CoopPlan3Biomedical", "course"]);
       MECE200CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4851,7 +5496,7 @@ $scope.WKEXP902CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine337());
      WKEXP902CoopPlan3Biomedicalelement.classList.remove("course");
      WKEXP902CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["WKEXP902CoopPlan3Biomedical", ""]);
+     that.addToClicked(["WKEXP902CoopPlan3Biomedical", "course"]);
       WKEXP902CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4869,7 +5514,7 @@ $scope.BME320CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine368());
      BME320CoopPlan3Biomedicalelement.classList.remove("course");
      BME320CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["BME320CoopPlan3Biomedical", ""]);
+     that.addToClicked(["BME320CoopPlan3Biomedical", "course"]);
       BME320CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4887,7 +5532,7 @@ $scope.ENGM310CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine384());
      ENGM310CoopPlan3Biomedicalelement.classList.remove("course");
      ENGM310CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["ENGM310CoopPlan3Biomedical", ""]);
+     that.addToClicked(["ENGM310CoopPlan3Biomedical", "course"]);
       ENGM310CoopPlan3Biomedicalflag=true
   }
  else {
@@ -4981,7 +5626,7 @@ $scope.MECE390CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine357());
      MECE390CoopPlan3Biomedicalelement.classList.remove("course");
      MECE390CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["MECE390CoopPlan3Biomedical", ""]);
+     that.addToClicked(["MECE390CoopPlan3Biomedical", "course"]);
       MECE390CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5001,7 +5646,7 @@ $scope.WKEXP903CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine358());
      WKEXP903CoopPlan3Biomedicalelement.classList.remove("course");
      WKEXP903CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["WKEXP903CoopPlan3Biomedical", ""]);
+     that.addToClicked(["WKEXP903CoopPlan3Biomedical", "course"]);
       WKEXP903CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5176,7 +5821,7 @@ $scope.BME321CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine369());
      BME321CoopPlan3Biomedicalelement.classList.remove("course");
      BME321CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["BME321CoopPlan3Biomedical", ""]);
+     that.addToClicked(["BME321CoopPlan3Biomedical", "course"]);
       BME321CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5188,6 +5833,21 @@ $scope.BME321CoopPlan3BiomedicalListener = function () {
       BME321CoopPlan3Biomedicalflag=false
   }
 };
+$scope.ENGG404CoopPlan3BiomedicalListener = function () {
+  var ENGG404CoopPlan3Biomedicalelement = document.getElementById("ENGG404CoopPlan3Biomedical");
+ if (!ENGG404CoopPlan3Biomedicalflag) {
+     ENGG404CoopPlan3Biomedicalelement.classList.remove("course");
+     ENGG404CoopPlan3Biomedicalelement.classList.add("course-highlighted");
+     that.addToClicked(["ENGG404CoopPlan3Biomedical", "course"]);
+      ENGG404CoopPlan3Biomedicalflag=true
+  }
+ else {
+     ENGG404CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
+     ENGG404CoopPlan3Biomedicalelement.classList.add("course");
+     that.removeFromClicked("ENGG404CoopPlan3Biomedical");
+      ENGG404CoopPlan3Biomedicalflag=false
+  }
+};
 $scope.MECE563CoopPlan3BiomedicalListener = function () {
   var MECE563CoopPlan3Biomedicalelement = document.getElementById("MECE563CoopPlan3Biomedical");
  if (!MECE563CoopPlan3Biomedicalflag) {
@@ -5196,7 +5856,7 @@ $scope.MECE563CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine357());
      MECE563CoopPlan3Biomedicalelement.classList.remove("course");
      MECE563CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["MECE563CoopPlan3Biomedical", ""]);
+     that.addToClicked(["MECE563CoopPlan3Biomedical", "course"]);
       MECE563CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5209,6 +5869,51 @@ $scope.MECE563CoopPlan3BiomedicalListener = function () {
       MECE563CoopPlan3Biomedicalflag=false
   }
 };
+$scope.STAT337CoopPlan3BiomedicalListener = function () {
+  var STAT337CoopPlan3Biomedicalelement = document.getElementById("STAT337CoopPlan3Biomedical");
+ if (!STAT337CoopPlan3Biomedicalflag) {
+     STAT337CoopPlan3Biomedicalelement.classList.remove("course");
+     STAT337CoopPlan3Biomedicalelement.classList.add("course-highlighted");
+     that.addToClicked(["STAT337CoopPlan3Biomedical", "course"]);
+      STAT337CoopPlan3Biomedicalflag=true
+  }
+ else {
+     STAT337CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
+     STAT337CoopPlan3Biomedicalelement.classList.add("course");
+     that.removeFromClicked("STAT337CoopPlan3Biomedical");
+      STAT337CoopPlan3Biomedicalflag=false
+  }
+};
+$scope.ComplementaryElectiveCoopPlan3BiomedicalListener = function () {
+  var ComplementaryElectiveCoopPlan3Biomedicalelement = document.getElementById("ComplementaryElectiveCoopPlan3Biomedical");
+ if (!ComplementaryElectiveCoopPlan3Biomedicalflag) {
+     ComplementaryElectiveCoopPlan3Biomedicalelement.classList.remove("ComplementaryElective");
+     ComplementaryElectiveCoopPlan3Biomedicalelement.classList.add("ComplementaryElective-highlighted");
+     that.addToClicked(["ComplementaryElectiveCoopPlan3Biomedical", "ComplementaryElective"]);
+      ComplementaryElectiveCoopPlan3Biomedicalflag=true
+  }
+ else {
+     ComplementaryElectiveCoopPlan3Biomedicalelement.classList.remove("ComplementaryElective-highlighted");
+     ComplementaryElectiveCoopPlan3Biomedicalelement.classList.add("ComplementaryElective");
+     that.removeFromClicked("ComplementaryElectiveCoopPlan3Biomedical");
+      ComplementaryElectiveCoopPlan3Biomedicalflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan3BiomedicalListener = function () {
+  var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
+ if (!ProgramTechnicalElectiveCoopPlan3Biomedicalflag) {
+     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan3Biomedical", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveCoopPlan3Biomedicalflag=true
+  }
+ else {
+     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan3Biomedical");
+      ProgramTechnicalElectiveCoopPlan3Biomedicalflag=false
+  }
+};
 $scope.WKEXP904CoopPlan3BiomedicalListener = function () {
   var WKEXP904CoopPlan3Biomedicalelement = document.getElementById("WKEXP904CoopPlan3Biomedical");
  if (!WKEXP904CoopPlan3Biomedicalflag) {
@@ -5216,7 +5921,7 @@ $scope.WKEXP904CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine359());
      WKEXP904CoopPlan3Biomedicalelement.classList.remove("course");
      WKEXP904CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["WKEXP904CoopPlan3Biomedical", ""]);
+     that.addToClicked(["WKEXP904CoopPlan3Biomedical", "course"]);
       WKEXP904CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5234,7 +5939,7 @@ $scope.WKEXP905CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine359());
      WKEXP905CoopPlan3Biomedicalelement.classList.remove("course");
      WKEXP905CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["WKEXP905CoopPlan3Biomedical", ""]);
+     that.addToClicked(["WKEXP905CoopPlan3Biomedical", "course"]);
       WKEXP905CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5283,6 +5988,51 @@ $scope.MECE463CoopPlan3BiomedicalListener = function () {
       MECE463CoopPlan3Biomedicalflag=false
   }
 };
+$scope.ProgramTechnicalElectiveCoopPlan3BiomedicalListener = function () {
+  var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
+ if (!ProgramTechnicalElectiveCoopPlan3Biomedicalflag) {
+     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan3Biomedical", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveCoopPlan3Biomedicalflag=true
+  }
+ else {
+     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan3Biomedical");
+      ProgramTechnicalElectiveCoopPlan3Biomedicalflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan3BiomedicalListener = function () {
+  var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
+ if (!ProgramTechnicalElectiveCoopPlan3Biomedicalflag) {
+     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan3Biomedical", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveCoopPlan3Biomedicalflag=true
+  }
+ else {
+     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan3Biomedical");
+      ProgramTechnicalElectiveCoopPlan3Biomedicalflag=false
+  }
+};
+$scope.ITSElectiveCoopPlan3BiomedicalListener = function () {
+  var ITSElectiveCoopPlan3Biomedicalelement = document.getElementById("ITSElectiveCoopPlan3Biomedical");
+ if (!ITSElectiveCoopPlan3Biomedicalflag) {
+     ITSElectiveCoopPlan3Biomedicalelement.classList.remove("ITSElective");
+     ITSElectiveCoopPlan3Biomedicalelement.classList.add("ITSElective-highlighted");
+     that.addToClicked(["ITSElectiveCoopPlan3Biomedical", "ITSElective"]);
+      ITSElectiveCoopPlan3Biomedicalflag=true
+  }
+ else {
+     ITSElectiveCoopPlan3Biomedicalelement.classList.remove("ITSElective-highlighted");
+     ITSElectiveCoopPlan3Biomedicalelement.classList.add("ITSElective");
+     that.removeFromClicked("ITSElectiveCoopPlan3Biomedical");
+      ITSElectiveCoopPlan3Biomedicalflag=false
+  }
+};
 $scope.CHE448CoopPlan3BiomedicalListener = function () {
   var CHE448CoopPlan3Biomedicalelement = document.getElementById("CHE448CoopPlan3Biomedical");
  if (!CHE448CoopPlan3Biomedicalflag) {
@@ -5306,6 +6056,21 @@ $scope.CHE448CoopPlan3BiomedicalListener = function () {
       CHE448CoopPlan3Biomedicalflag=false
   }
 };
+$scope.ENGG400CoopPlan3BiomedicalListener = function () {
+  var ENGG400CoopPlan3Biomedicalelement = document.getElementById("ENGG400CoopPlan3Biomedical");
+ if (!ENGG400CoopPlan3Biomedicalflag) {
+     ENGG400CoopPlan3Biomedicalelement.classList.remove("course");
+     ENGG400CoopPlan3Biomedicalelement.classList.add("course-highlighted");
+     that.addToClicked(["ENGG400CoopPlan3Biomedical", "course"]);
+      ENGG400CoopPlan3Biomedicalflag=true
+  }
+ else {
+     ENGG400CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
+     ENGG400CoopPlan3Biomedicalelement.classList.add("course");
+     that.removeFromClicked("ENGG400CoopPlan3Biomedical");
+      ENGG400CoopPlan3Biomedicalflag=false
+  }
+};
 $scope.MECE485CoopPlan3BiomedicalListener = function () {
   var MECE485CoopPlan3Biomedicalelement = document.getElementById("MECE485CoopPlan3Biomedical");
  if (!MECE485CoopPlan3Biomedicalflag) {
@@ -5314,7 +6079,7 @@ $scope.MECE485CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine370());
      MECE485CoopPlan3Biomedicalelement.classList.remove("course");
      MECE485CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["MECE485CoopPlan3Biomedical", ""]);
+     that.addToClicked(["MECE485CoopPlan3Biomedical", "course"]);
       MECE485CoopPlan3Biomedicalflag=true
   }
  else {
@@ -5400,6 +6165,21 @@ $scope.MECE460CoopPlan3BiomedicalListener = function () {
       MECE460CoopPlan3Biomedicalflag=false
   }
 };
+$scope.PHIL386CoopPlan3BiomedicalListener = function () {
+  var PHIL386CoopPlan3Biomedicalelement = document.getElementById("PHIL386CoopPlan3Biomedical");
+ if (!PHIL386CoopPlan3Biomedicalflag) {
+     PHIL386CoopPlan3Biomedicalelement.classList.remove("course");
+     PHIL386CoopPlan3Biomedicalelement.classList.add("course-highlighted");
+     that.addToClicked(["PHIL386CoopPlan3Biomedical", "course"]);
+      PHIL386CoopPlan3Biomedicalflag=true
+  }
+ else {
+     PHIL386CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
+     PHIL386CoopPlan3Biomedicalelement.classList.add("course");
+     that.removeFromClicked("PHIL386CoopPlan3Biomedical");
+      PHIL386CoopPlan3Biomedicalflag=false
+  }
+};
   var CHEM103CoopPlan4flag = false;
   var ENGG100CoopPlan4flag = false;
   var ENGG130CoopPlan4flag = false;
@@ -5472,6 +6252,21 @@ $scope.CHEM103CoopPlan4Listener = function () {
       CHEM103CoopPlan4flag=false
   }
 };
+$scope.ENGG100CoopPlan4Listener = function () {
+  var ENGG100CoopPlan4element = document.getElementById("ENGG100CoopPlan4");
+ if (!ENGG100CoopPlan4flag) {
+     ENGG100CoopPlan4element.classList.remove("course");
+     ENGG100CoopPlan4element.classList.add("course-highlighted");
+     that.addToClicked(["ENGG100CoopPlan4", "course"]);
+      ENGG100CoopPlan4flag=true
+  }
+ else {
+     ENGG100CoopPlan4element.classList.remove("course-highlighted");
+     ENGG100CoopPlan4element.classList.add("course");
+     that.removeFromClicked("ENGG100CoopPlan4");
+      ENGG100CoopPlan4flag=false
+  }
+};
 $scope.ENGG130CoopPlan4Listener = function () {
   var ENGG130CoopPlan4element = document.getElementById("ENGG130CoopPlan4");
  if (!ENGG130CoopPlan4flag) {
@@ -5501,7 +6296,7 @@ $scope.ENGL199CoopPlan4Listener = function () {
       that.addLine(getLine388());
      ENGL199CoopPlan4element.classList.remove("course");
      ENGL199CoopPlan4element.classList.add("course-highlighted");
-     that.addToClicked(["ENGL199CoopPlan4", ""]);
+     that.addToClicked(["ENGL199CoopPlan4", "course"]);
       ENGL199CoopPlan4flag=true
   }
  else {
@@ -5573,6 +6368,21 @@ $scope.CHEM105CoopPlan4Listener = function () {
      CHEM105CoopPlan4element.classList.add("BASICSCIENCES");
      that.removeFromClicked("CHEM105CoopPlan4");
       CHEM105CoopPlan4flag=false
+  }
+};
+$scope.ENCMP100CoopPlan4Listener = function () {
+  var ENCMP100CoopPlan4element = document.getElementById("ENCMP100CoopPlan4");
+ if (!ENCMP100CoopPlan4flag) {
+     ENCMP100CoopPlan4element.classList.remove("BASICSCIENCES");
+     ENCMP100CoopPlan4element.classList.add("BASICSCIENCES-highlighted");
+     that.addToClicked(["ENCMP100CoopPlan4", "BASICSCIENCES"]);
+      ENCMP100CoopPlan4flag=true
+  }
+ else {
+     ENCMP100CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
+     ENCMP100CoopPlan4element.classList.add("BASICSCIENCES");
+     that.removeFromClicked("ENCMP100CoopPlan4");
+      ENCMP100CoopPlan4flag=false
   }
 };
 $scope.ENGG160CoopPlan4Listener = function () {
@@ -5704,7 +6514,7 @@ $scope.ENGG299CoopPlan4Listener = function () {
       that.addLine(getLine427());
      ENGG299CoopPlan4element.classList.remove("course");
      ENGG299CoopPlan4element.classList.add("course-highlighted");
-     that.addToClicked(["ENGG299CoopPlan4", ""]);
+     that.addToClicked(["ENGG299CoopPlan4", "course"]);
       ENGG299CoopPlan4flag=true
   }
  else {
@@ -5916,7 +6726,7 @@ $scope.MECE200CoopPlan4Listener = function () {
       that.addLine(getLine455());
      MECE200CoopPlan4element.classList.remove("course");
      MECE200CoopPlan4element.classList.add("course-highlighted");
-     that.addToClicked(["MECE200CoopPlan4", ""]);
+     that.addToClicked(["MECE200CoopPlan4", "course"]);
       MECE200CoopPlan4flag=true
   }
  else {
@@ -6113,7 +6923,7 @@ $scope.WKEXP901CoopPlan4Listener = function () {
       that.addLine(getLine428());
      WKEXP901CoopPlan4element.classList.remove("course");
      WKEXP901CoopPlan4element.classList.add("course-highlighted");
-     that.addToClicked(["WKEXP901CoopPlan4", ""]);
+     that.addToClicked(["WKEXP901CoopPlan4", "course"]);
       WKEXP901CoopPlan4flag=true
   }
  else {
@@ -6132,7 +6942,7 @@ $scope.WKEXP902CoopPlan4Listener = function () {
       that.addLine(getLine438());
      WKEXP902CoopPlan4element.classList.remove("course");
      WKEXP902CoopPlan4element.classList.add("course-highlighted");
-     that.addToClicked(["WKEXP902CoopPlan4", ""]);
+     that.addToClicked(["WKEXP902CoopPlan4", "course"]);
       WKEXP902CoopPlan4flag=true
   }
  else {
@@ -6150,7 +6960,7 @@ $scope.ENGM310CoopPlan4Listener = function () {
       that.addLine(getLine462());
      ENGM310CoopPlan4element.classList.remove("course");
      ENGM310CoopPlan4element.classList.add("course-highlighted");
-     that.addToClicked(["ENGM310CoopPlan4", ""]);
+     that.addToClicked(["ENGM310CoopPlan4", "course"]);
       ENGM310CoopPlan4flag=true
   }
  else {
@@ -6241,7 +7051,7 @@ $scope.MECE390CoopPlan4Listener = function () {
       that.addLine(getLine437());
      MECE390CoopPlan4element.classList.remove("course");
      MECE390CoopPlan4element.classList.add("course-highlighted");
-     that.addToClicked(["MECE390CoopPlan4", ""]);
+     that.addToClicked(["MECE390CoopPlan4", "course"]);
       MECE390CoopPlan4flag=true
   }
  else {
@@ -6253,6 +7063,21 @@ $scope.MECE390CoopPlan4Listener = function () {
       MECE390CoopPlan4flag=false
   }
 };
+$scope.ComplementaryElectiveCoopPlan4Listener = function () {
+  var ComplementaryElectiveCoopPlan4element = document.getElementById("ComplementaryElectiveCoopPlan4");
+ if (!ComplementaryElectiveCoopPlan4flag) {
+     ComplementaryElectiveCoopPlan4element.classList.remove("ComplementaryElective");
+     ComplementaryElectiveCoopPlan4element.classList.add("ComplementaryElective-highlighted");
+     that.addToClicked(["ComplementaryElectiveCoopPlan4", "ComplementaryElective"]);
+      ComplementaryElectiveCoopPlan4flag=true
+  }
+ else {
+     ComplementaryElectiveCoopPlan4element.classList.remove("ComplementaryElective-highlighted");
+     ComplementaryElectiveCoopPlan4element.classList.add("ComplementaryElective");
+     that.removeFromClicked("ComplementaryElectiveCoopPlan4");
+      ComplementaryElectiveCoopPlan4flag=false
+  }
+};
 $scope.WKEXP903CoopPlan4Listener = function () {
   var WKEXP903CoopPlan4element = document.getElementById("WKEXP903CoopPlan4");
  if (!WKEXP903CoopPlan4flag) {
@@ -6260,7 +7085,7 @@ $scope.WKEXP903CoopPlan4Listener = function () {
       that.addLine(getLine439());
      WKEXP903CoopPlan4element.classList.remove("course");
      WKEXP903CoopPlan4element.classList.add("course-highlighted");
-     that.addToClicked(["WKEXP903CoopPlan4", ""]);
+     that.addToClicked(["WKEXP903CoopPlan4", "course"]);
       WKEXP903CoopPlan4flag=true
   }
  else {
@@ -6279,7 +7104,7 @@ $scope.WKEXP904CoopPlan4Listener = function () {
       that.addLine(getLine440());
      WKEXP904CoopPlan4element.classList.remove("course");
      WKEXP904CoopPlan4element.classList.add("course-highlighted");
-     that.addToClicked(["WKEXP904CoopPlan4", ""]);
+     that.addToClicked(["WKEXP904CoopPlan4", "course"]);
       WKEXP904CoopPlan4flag=true
   }
  else {
@@ -6297,7 +7122,7 @@ $scope.WKEXP905CoopPlan4Listener = function () {
       that.addLine(getLine440());
      WKEXP905CoopPlan4element.classList.remove("course");
      WKEXP905CoopPlan4element.classList.add("course-highlighted");
-     that.addToClicked(["WKEXP905CoopPlan4", ""]);
+     that.addToClicked(["WKEXP905CoopPlan4", "course"]);
       WKEXP905CoopPlan4flag=true
   }
  else {
@@ -6306,6 +7131,21 @@ $scope.WKEXP905CoopPlan4Listener = function () {
      WKEXP905CoopPlan4element.classList.add("course");
      that.removeFromClicked("WKEXP905CoopPlan4");
       WKEXP905CoopPlan4flag=false
+  }
+};
+$scope.ENGG404CoopPlan4Listener = function () {
+  var ENGG404CoopPlan4element = document.getElementById("ENGG404CoopPlan4");
+ if (!ENGG404CoopPlan4flag) {
+     ENGG404CoopPlan4element.classList.remove("course");
+     ENGG404CoopPlan4element.classList.add("course-highlighted");
+     that.addToClicked(["ENGG404CoopPlan4", "course"]);
+      ENGG404CoopPlan4flag=true
+  }
+ else {
+     ENGG404CoopPlan4element.classList.remove("course-highlighted");
+     ENGG404CoopPlan4element.classList.add("course");
+     that.removeFromClicked("ENGG404CoopPlan4");
+      ENGG404CoopPlan4flag=false
   }
 };
 $scope.MECE430CoopPlan4Listener = function () {
@@ -6346,6 +7186,51 @@ $scope.MECE463CoopPlan4Listener = function () {
       MECE463CoopPlan4flag=false
   }
 };
+$scope.ProgramTechnicalElectiveCoopPlan4Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
+ if (!ProgramTechnicalElectiveCoopPlan4flag) {
+     ProgramTechnicalElectiveCoopPlan4element.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveCoopPlan4element.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan4", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveCoopPlan4flag=true
+  }
+ else {
+     ProgramTechnicalElectiveCoopPlan4element.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveCoopPlan4element.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan4");
+      ProgramTechnicalElectiveCoopPlan4flag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan4Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
+ if (!ProgramTechnicalElectiveCoopPlan4flag) {
+     ProgramTechnicalElectiveCoopPlan4element.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveCoopPlan4element.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan4", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveCoopPlan4flag=true
+  }
+ else {
+     ProgramTechnicalElectiveCoopPlan4element.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveCoopPlan4element.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan4");
+      ProgramTechnicalElectiveCoopPlan4flag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan4Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
+ if (!ProgramTechnicalElectiveCoopPlan4flag) {
+     ProgramTechnicalElectiveCoopPlan4element.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveCoopPlan4element.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan4", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveCoopPlan4flag=true
+  }
+ else {
+     ProgramTechnicalElectiveCoopPlan4element.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveCoopPlan4element.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan4");
+      ProgramTechnicalElectiveCoopPlan4flag=false
+  }
+};
 $scope.CHE448CoopPlan4Listener = function () {
   var CHE448CoopPlan4element = document.getElementById("CHE448CoopPlan4");
  if (!CHE448CoopPlan4flag) {
@@ -6367,6 +7252,21 @@ $scope.CHE448CoopPlan4Listener = function () {
      CHE448CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("CHE448CoopPlan4");
       CHE448CoopPlan4flag=false
+  }
+};
+$scope.ENGG400CoopPlan4Listener = function () {
+  var ENGG400CoopPlan4element = document.getElementById("ENGG400CoopPlan4");
+ if (!ENGG400CoopPlan4flag) {
+     ENGG400CoopPlan4element.classList.remove("course");
+     ENGG400CoopPlan4element.classList.add("course-highlighted");
+     that.addToClicked(["ENGG400CoopPlan4", "course"]);
+      ENGG400CoopPlan4flag=true
+  }
+ else {
+     ENGG400CoopPlan4element.classList.remove("course-highlighted");
+     ENGG400CoopPlan4element.classList.add("course");
+     that.removeFromClicked("ENGG400CoopPlan4");
+      ENGG400CoopPlan4flag=false
   }
 };
 $scope.MECE403CoopPlan4Listener = function () {
@@ -6440,6 +7340,36 @@ $scope.MECE460CoopPlan4Listener = function () {
      MECE460CoopPlan4element.classList.add("ENGINEERINGDESIGN");
      that.removeFromClicked("MECE460CoopPlan4");
       MECE460CoopPlan4flag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan4Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
+ if (!ProgramTechnicalElectiveCoopPlan4flag) {
+     ProgramTechnicalElectiveCoopPlan4element.classList.remove("Program/TechnicalElective");
+     ProgramTechnicalElectiveCoopPlan4element.classList.add("Program/TechnicalElective-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan4", "Program/TechnicalElective"]);
+      ProgramTechnicalElectiveCoopPlan4flag=true
+  }
+ else {
+     ProgramTechnicalElectiveCoopPlan4element.classList.remove("Program/TechnicalElective-highlighted");
+     ProgramTechnicalElectiveCoopPlan4element.classList.add("Program/TechnicalElective");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan4");
+      ProgramTechnicalElectiveCoopPlan4flag=false
+  }
+};
+$scope.ITSElectiveCoopPlan4Listener = function () {
+  var ITSElectiveCoopPlan4element = document.getElementById("ITSElectiveCoopPlan4");
+ if (!ITSElectiveCoopPlan4flag) {
+     ITSElectiveCoopPlan4element.classList.remove("ITSElective");
+     ITSElectiveCoopPlan4element.classList.add("ITSElective-highlighted");
+     that.addToClicked(["ITSElectiveCoopPlan4", "ITSElective"]);
+      ITSElectiveCoopPlan4flag=true
+  }
+ else {
+     ITSElectiveCoopPlan4element.classList.remove("ITSElective-highlighted");
+     ITSElectiveCoopPlan4element.classList.add("ITSElective");
+     that.removeFromClicked("ITSElectiveCoopPlan4");
+      ITSElectiveCoopPlan4flag=false
   }
 };
 });

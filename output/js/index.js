@@ -10,7 +10,7 @@ var line2 = new Line("CHEM103TraditionalPlan", "CHEM105TraditionalPlan", false);
 function getLine2() {
         return line2
     };
-var line3 = new Line("ENGL199TraditionalPlan", "ENGG160TraditionalPlan", false);
+var line3 = new Line("ENGL199TraditionalPlan", "ENGG160TraditionalPlan", true);
 function getLine3() {
         return line3
     };
@@ -302,7 +302,7 @@ var line75 = new Line("CHEM103AlternatePlan", "CHEM105AlternatePlan", false);
 function getLine75() {
         return line75
     };
-var line76 = new Line("ENGL199AlternatePlan", "ENGG160AlternatePlan", false);
+var line76 = new Line("ENGL199AlternatePlan", "ENGG160AlternatePlan", true);
 function getLine76() {
         return line76
     };
@@ -594,7 +594,7 @@ var line148 = new Line("CHEM103CoopPlan1", "CHEM105CoopPlan1", false);
 function getLine148() {
         return line148
     };
-var line149 = new Line("ENGL199CoopPlan1", "ENGG160CoopPlan1", false);
+var line149 = new Line("ENGL199CoopPlan1", "ENGG160CoopPlan1", true);
 function getLine149() {
         return line149
     };
@@ -906,7 +906,7 @@ var line226 = new Line("CHEM103CoopPlan2", "CHEM105CoopPlan2", false);
 function getLine226() {
         return line226
     };
-var line227 = new Line("ENGL199CoopPlan2", "ENGG160CoopPlan2", false);
+var line227 = new Line("ENGL199CoopPlan2", "ENGG160CoopPlan2", true);
 function getLine227() {
         return line227
     };
@@ -1218,7 +1218,7 @@ var line304 = new Line("CHEM103CoopPlan3Biomedical", "CHEM105CoopPlan3Biomedical
 function getLine304() {
         return line304
     };
-var line305 = new Line("ENGL199CoopPlan3Biomedical", "ENGG160CoopPlan3Biomedical", false);
+var line305 = new Line("ENGL199CoopPlan3Biomedical", "ENGG160CoopPlan3Biomedical", true);
 function getLine305() {
         return line305
     };
@@ -1550,7 +1550,7 @@ var line387 = new Line("CHEM103CoopPlan4", "CHEM105CoopPlan4", false);
 function getLine387() {
         return line387
     };
-var line388 = new Line("ENGL199CoopPlan4", "ENGG160CoopPlan4", false);
+var line388 = new Line("ENGL199CoopPlan4", "ENGG160CoopPlan4", true);
 function getLine388() {
         return line388
     };
