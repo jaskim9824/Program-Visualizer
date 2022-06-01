@@ -10,6 +10,7 @@
 # Dependencies: bs4, parsing, javascriptgen, htmlgen, linegen
 
 from encodings import utf_8
+from turtle import back
 from bs4 import BeautifulSoup
 from parsing import parse
 from parsing import pullCategories
@@ -17,12 +18,30 @@ from parsing import pullSeq
 import javascriptgen
 import htmlgen
 import linegen
+import cleaner
 
 # Function that properly concludes and closes the controller JS
 #   controller - file handle for controller JS
 def closeControllerJavaScript(controller):
     controller.write("});")
     controller.close()
+
+def writeCategoryCSS(categoryDict, categoryCSS):
+    for category in categoryDict:
+        backgroundColour = categoryDict[category]
+        categoryFormattedString = """.{categoryName}:hover {{
+            background-color: #{backColour}!important;
+        }}
+        .{categoryName}-highlighted {{
+            background-color: #{backColour};
+        }}
+        .{categoryName}-highlighted:hover {{
+            background-color: #{backColour}!important;
+            border-color:#{borderColour};
+        }}\n"""
+        categoryCSS.write(categoryFormattedString.format(categoryName=cleaner.cleanString(category),
+                                                         backColour=backgroundColour,
+                                                         borderColour="9ecaed"))
 
 # Debug function for cleanly printing contents of plan sequences
 # Parameters:
@@ -50,6 +69,9 @@ def main():
             controller = open("./output/js/controller.js", "w")
             indexJS = open("./output/js/index.js", "w")
 
+            #opening the CSS file
+            categoryCSS = open("./output/styles/category.css", "w")
+
             # creating line manager
             lineManager = linegen.LineManager()
 
@@ -62,6 +84,7 @@ def main():
 
             # generating intital JS based on the number and names of plans
             javascriptgen.intializeControllerJavaScript(controller, sequenceDict)
+            writeCategoryCSS(categoryDict, categoryCSS)
 
             titleTag = soup.body.find("a", class_="site-title")
       
@@ -85,6 +108,7 @@ def main():
             #closing JS files
             closeControllerJavaScript(controller)
             indexJS.close()
+            categoryCSS.close()
            
 
 
