@@ -6,6 +6,7 @@ body {
     width: fit-content;
     height: fit-content;
 }
+
 html {
     margin: 0;
     width: fit-content;
@@ -84,6 +85,7 @@ h3.planhead {
     margin-top: 27px;
 }
 
+/* Form text styling */
 label {
     display: inline-block;
     font-size: 115%;
@@ -324,6 +326,7 @@ label {
     display: inline;
 }
 
+/* legend for categories */
 .legend {
     width: 200px;
     margin: 0 0 0 0;
