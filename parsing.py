@@ -658,6 +658,9 @@ def checkReqs(course_seq):
                 term_names.append(course_name)
 
             for course in course_seq[plan][term]:
+                # FIXME: fix for ENGG 160 coreq calendar description
+                if course.name == "ENGG 160":
+                    continue
                 for coreq in course.coreqs:
                     # For each coreq for a certain course, if there are multiple options
                     # (MATH 100 or MATH 114 or...) then only keep those that are displayed
