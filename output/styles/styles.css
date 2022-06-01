@@ -53,11 +53,18 @@ header {
 }  
 
 /* Plan header styling*/
-.planhead {
-    margin: 0 0 0 0;
-    width: 500px;
-    position: relative;
-    left: 50vw;
+h3.planhead {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    width: 125px;
+    height: 33px;
+    position: absolute;
+    display: inline-block;
+    left: 33vw;
+    font-size: 175%;
+    text-align: center;
 }
 
 /* Plan diagram styling */
@@ -67,10 +74,17 @@ header {
 
 /* Form styling */
 .select {
-    margin: 0 0 0 0;
-    width: 500px;
-    position: relative;
-    left: 47.5vw;
+    width: 400px;
+    position: absolute;
+    display: inline-block;
+    left: 33vw;
+    margin-top: 27px;
+}
+
+label {
+    display: inline-block;
+    font-size: 115%;
+    padding-top: 10px;
 }
 
 /* Term column styling */
@@ -279,10 +293,11 @@ header {
     display: inline;
 }
 
-
-
-#categories {
-    width: fit-content;
+.legend {
+    width: 200px;
+    margin: 0 0 0 0;
     position: relative;
-    left: 47.5%;
+    display: inline-block;
+    left: 66vw;
+    text-align: center;
 }

@@ -35,10 +35,10 @@ def placeRadioInputs(formTag, sequenceDict, soup):
 # Pulls the categories and colors from sequenceDict, which has these values as two of
 # its attributes
 # Parameters:
-#   displayTag - HTML tag representing outer display div where the different plan sequences are placed
+#   legendTag - HTML tag representing div which holds the category color legend
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   soup - soup object, used to create HTML tags
-def placeLegend(displayTag, sequenceDict, soup):
+def placeLegend(legendTag, sequenceDict, soup):
     categoryDict = {}
     for plan in sequenceDict:
         for term in sequenceDict[plan]:
@@ -46,14 +46,11 @@ def placeLegend(displayTag, sequenceDict, soup):
                 if course.category not in categoryDict.values():
                     categoryDict[course.category] = course.color
 
-    categories = soup.new_tag("div", attrs={"id":"categories"})
     for category in categoryDict:
         coursecat = soup.new_tag("p", attrs={"id": category,
                                         "style":"background-color:#" + categoryDict[category]})
         coursecat.append(category)
-        categories.append(coursecat)
-
-    displayTag.append(categories)
+        legendTag.append(coursecat)
 
 
 # Function that places the outer divs representing each plan

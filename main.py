@@ -67,6 +67,8 @@ def main():
             mainTag = soup.body.find("div", id="main")
             # locating form tag
             formTag = mainTag.find("form")
+            # locating legend tag
+            legendTag = mainTag.find("div", class_="legend")
             # locating display tag, this is where the course divs will be written
             displayTag = mainTag.find("div", class_="display")
 
@@ -74,7 +76,7 @@ def main():
 
             #placing the HTML and generating JS based on the courses (drawing lines)
             htmlgen.placeRadioInputs(formTag, sequenceDict, soup)
-            htmlgen.placeLegend(displayTag, sequenceDict, soup)
+            htmlgen.placeLegend(legendTag, sequenceDict, soup)
             htmlgen.placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager)
 
             #closing JS files
