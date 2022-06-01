@@ -129,22 +129,19 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter):
             # Class allows formatting so words fit in course box
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip compelective", 
                                                "id": courseID, 
-                                               "ng-click":courseID+"Listener()",
-                                               "style":"background-color:#" + course.color})
+                                               "ng-click":courseID+"Listener()"})
 
         elif course.name == "Program/Technical Elective":
             # Class allows formatting so words fit in course box
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip progelective", 
                                                "id": courseID, 
-                                               "ng-click":courseID+"Listener()",
-                                               "style":"background-color:#" + course.color})
+                                               "ng-click":courseID+"Listener()"})
 
         elif course.name == "ITS Elective":
             # Class allows formatting so words fit in course box
-            courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip", 
+            courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip its", 
                                                 "id": courseID, 
-                                                "ng-click":courseID+"Listener()",
-                                                "style":"background-color:#" + course.color})
+                                                "ng-click":courseID+"Listener()"})
 
         else:
             # This is a regular course. All information should be available

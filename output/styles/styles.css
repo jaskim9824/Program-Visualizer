@@ -100,6 +100,17 @@ header {
     margin-bottom: 50px;
 }
 
+/* Complementray elective box*/
+.compelective {
+    height: 80px;
+}
+
+/* Program elective box */
+.progelective {
+    font-size:90%;
+    height:80px;
+}
+
 /* Default course hover */
 .course:hover {
     background-color: #f2cd00;
@@ -114,6 +125,18 @@ header {
     width: 150px;
     margin-bottom: 50px;
     background-color: #f2cd00;
+}
+
+.compelective:hover {
+    background-color: #ffff66;
+}
+
+.progelective:hover {
+    background-color: #cc33ff;
+}
+
+.its:hover {
+    background-color: #996633;
 }
 
 .MATH:hover {
@@ -256,14 +279,7 @@ header {
     display: inline;
 }
 
-.compelective {
-    height: 80px;
-}
 
-.progelective {
-    font-size:90%;
-    height:80px;
-}
 
 #categories {
     width: fit-content;
