@@ -56,6 +56,24 @@ def placeLegend(legendTag, sequenceDict, soup):
         legendTag.append(coursecat)
 
 
+def placeLineLegend(lineLegendTag, soup, lineManager, indexJS):
+    prereqstart = soup.new_tag("h3", attrs={"id": "prereqstart"})
+    prereqstart.append("Prereq")
+    prereqend = soup.new_tag("h3", attrs={"id": "prereqend"})
+    prereqend.append("Course")
+    lineLegendTag.append(prereqstart)
+    lineLegendTag.append(prereqend)
+    linegen.addPrereqLine("prereqstart", "prereqend", lineManager, indexJS)
+
+    coreqstart = soup.new_tag("h3", attrs={"id": "coreqstart"})
+    coreqstart.append("Coreq")
+    coreqend = soup.new_tag("h3", attrs={"id": "coreqend"})
+    coreqend.append("Course")
+    lineLegendTag.append(coreqstart)
+    lineLegendTag.append(coreqend)
+    linegen.addCoreqLine("coreqstart", "coreqend", lineManager, indexJS)
+
+
 # Function that places the outer divs representing each plan
 # Parameters:
 #   displayTag - HTML tag representing outer display div where the different plan sequences are placed

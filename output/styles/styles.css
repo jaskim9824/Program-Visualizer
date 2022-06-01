@@ -66,7 +66,7 @@ h3.planhead {
     height: 33px;
     position: absolute;
     display: inline-block;
-    left: 33vw;
+    left: 10vw;
     font-size: 175%;
     text-align: center;
 }
@@ -78,10 +78,10 @@ h3.planhead {
 
 /* Form styling */
 .select {
-    width: 400px;
+    width: 300px;
     position: absolute;
     display: inline-block;
-    left: 33vw;
+    left: 10vw;
     margin-top: 27px;
 }
 
@@ -329,9 +329,38 @@ label {
 /* legend for categories */
 .legend {
     width: 200px;
-    margin: 0 0 0 0;
+    margin: 0;
+    position: absolute;
+    display: inline-block;
+    left: 45vw;
+    text-align: center;
+}
+
+.linelegend {
     position: relative;
     display: inline-block;
-    left: 66vw;
+    left: 70vw;
+    height: 250px;
+}
+
+.linelegend > h3 {
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    height: 50px;
+    width: 150px;
+    margin-bottom: 50px;
     text-align: center;
+}
+
+#coreqstart {
+    position: relative;
+    left: 200px;
+    bottom: 208px;
+}
+
+#coreqend {
+    position: relative;
+    left: 200px;
+    bottom: 208px;
 }
