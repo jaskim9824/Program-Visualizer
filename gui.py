@@ -10,7 +10,6 @@
 # Dependencies: bs4, parsing, javascriptgen, htmlgen, linegen
 
 from encodings import utf_8
-from logging import root
 from turtle import back
 from bs4 import BeautifulSoup
 from parsing import parse
@@ -21,6 +20,7 @@ import htmlgen
 import linegen
 import cleaner
 from tkinter import *
+
 # Function that properly concludes and closes the controller JS
 #   controller - file handle for controller JS
 def closeControllerJavaScript(controller):
@@ -32,17 +32,17 @@ def writeCategoryCSS(categoryDict, categoryCSS):
         backgroundColour = categoryDict[category]
         categoryFormattedString = """.{categoryName}:hover {{
             background-color: #{backColour}!important;
+            border-color: #{backColour}!important;
         }}
         .{categoryName}-highlighted {{
             background-color: #{backColour};
         }}
         .{categoryName}-highlighted:hover {{
             background-color: #{backColour}!important;
-            border-color:#{borderColour};
+            border-color: #{backColour}!important;
         }}\n"""
         categoryCSS.write(categoryFormattedString.format(categoryName=cleaner.cleanString(category),
-                                                         backColour=backgroundColour,
-                                                         borderColour="9ecaed"))
+                                                         backColour=backgroundColour))
 
 # Debug function for cleanly printing contents of plan sequences
 # Parameters:
@@ -56,8 +56,6 @@ def debug(sequenceDict):
                 print(course.name)
             print("\n")
         print("\n")
-
-
 root = Tk()
 courses_excel = Entry(root, width=50)
 courses_excel.pack()
@@ -71,6 +69,7 @@ seq_excel = Entry(root, width=50)
 seq_excel.pack()
 seq_excel.insert(2, "enter seq excel")
 
+# Main function   
 def main():
     # opening the template html file and constructing html
     # note: here we calling parsing to extract the course data!
@@ -108,8 +107,6 @@ def main():
             formTag = mainTag.find("form")
             # locating legend tag
             legendTag = mainTag.find("div", class_="legend")
-            # locating linelegend tag
-            lineLegendTag = mainTag.find("div", class_="linelegend")
             # locating display tag, this is where the course divs will be written
             displayTag = mainTag.find("div", class_="display")
 
@@ -118,8 +115,7 @@ def main():
             #placing the HTML and generating JS based on the courses (drawing lines)
             htmlgen.switchTitle(titleTag, deptName)
             htmlgen.placeRadioInputs(formTag, sequenceDict, soup)
-            htmlgen.placeLegend(legendTag, sequenceDict, soup)
-            htmlgen.placeLineLegend(lineLegendTag, soup, lineManager, indexJS)
+            htmlgen.placeLegend(legendTag, sequenceDict, soup)  # places legend for color-coding
             htmlgen.placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager)
 
             #closing JS files
@@ -146,9 +142,6 @@ def main():
              err.strerror + 
              ". The directory you are in does not have a directory named output.")
         
-# if __name__ == "__main__":
-#     main()
-
 button_main = Button(root, text="Run main", command=main)
 button_main.pack()
 

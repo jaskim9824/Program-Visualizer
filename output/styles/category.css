@@ -43,26 +43,26 @@
             border-color: #ff9900!important;
         }
 .ENGINEERINGPROFESSION:hover {
-            background-color: #f7b7c7!important;
-            border-color: #f7b7c7!important;
+            background-color: #ff78c0!important;
+            border-color: #ff78c0!important;
         }
         .ENGINEERINGPROFESSION-highlighted {
-            background-color: #f7b7c7;
+            background-color: #ff78c0;
         }
         .ENGINEERINGPROFESSION-highlighted:hover {
-            background-color: #f7b7c7!important;
-            border-color: #f7b7c7!important;
+            background-color: #ff78c0!important;
+            border-color: #ff78c0!important;
         }
 .COMP:hover {
-            background-color: #ffff66!important;
-            border-color: #ffff66!important;
+            background-color: #ffff73!important;
+            border-color: #ffff73!important;
         }
         .COMP-highlighted {
-            background-color: #ffff66;
+            background-color: #ffff73;
         }
         .COMP-highlighted:hover {
-            background-color: #ffff66!important;
-            border-color: #ffff66!important;
+            background-color: #ffff73!important;
+            border-color: #ffff73!important;
         }
 .PROG:hover {
             background-color: #cc33ff!important;
