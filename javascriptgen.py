@@ -73,9 +73,6 @@ def generateDisableSwitchStatement(sequenceDict, controller):
     for (let i = 0; i < this.{planName}List.length; i++) {{
         this.{planName}List[i][0].{actionName}(true);
     }}
-    width = this.{planName}Terms*210 + 50;
-    widthstr = width.toString() + "px";
-    document.getElementById("header").style.width = widthstr;
     break; \n"""
     switchEndString = """    default:
     console.log("shouldn't be here");
@@ -103,6 +100,7 @@ def generateEnableSwitchStatement(sequenceDict, controller):
     width = this.{planName}Terms*210 + 50;
     widthstr = width.toString() + "px";
     document.getElementById("header").style.width = widthstr;
+    document.getElementById("footer").style.width = widthstr;
     for (let i = 0; i < this.{planName}Clicked.length; i++) {{
         var element = document.getElementById(this.{planName}Clicked[i][0]);
         element.classList.remove(this.{planName}Clicked[i][1]);

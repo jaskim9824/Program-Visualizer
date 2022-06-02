@@ -38,49 +38,31 @@ this.disable = function(plan) {
     for (let i = 0; i < this.TraditionalPlanList.length; i++) {
         this.TraditionalPlanList[i][0].hide(true);
     }
-    width = this.TraditionalPlanTerms*210 + 50;
-    widthstr = width.toString() + "px";
-    document.getElementById("header").style.width = widthstr;
     break; 
   case "AlternatePlan": 
     for (let i = 0; i < this.AlternatePlanList.length; i++) {
         this.AlternatePlanList[i][0].hide(true);
     }
-    width = this.AlternatePlanTerms*210 + 50;
-    widthstr = width.toString() + "px";
-    document.getElementById("header").style.width = widthstr;
     break; 
   case "CoopPlan1": 
     for (let i = 0; i < this.CoopPlan1List.length; i++) {
         this.CoopPlan1List[i][0].hide(true);
     }
-    width = this.CoopPlan1Terms*210 + 50;
-    widthstr = width.toString() + "px";
-    document.getElementById("header").style.width = widthstr;
     break; 
   case "CoopPlan2": 
     for (let i = 0; i < this.CoopPlan2List.length; i++) {
         this.CoopPlan2List[i][0].hide(true);
     }
-    width = this.CoopPlan2Terms*210 + 50;
-    widthstr = width.toString() + "px";
-    document.getElementById("header").style.width = widthstr;
     break; 
   case "CoopPlan3Biomedical": 
     for (let i = 0; i < this.CoopPlan3BiomedicalList.length; i++) {
         this.CoopPlan3BiomedicalList[i][0].hide(true);
     }
-    width = this.CoopPlan3BiomedicalTerms*210 + 50;
-    widthstr = width.toString() + "px";
-    document.getElementById("header").style.width = widthstr;
     break; 
   case "CoopPlan4": 
     for (let i = 0; i < this.CoopPlan4List.length; i++) {
         this.CoopPlan4List[i][0].hide(true);
     }
-    width = this.CoopPlan4Terms*210 + 50;
-    widthstr = width.toString() + "px";
-    document.getElementById("header").style.width = widthstr;
     break; 
     default:
     console.log("shouldn't be here");
@@ -95,6 +77,7 @@ this.enable = function(plan) {
     width = this.TraditionalPlanTerms*210 + 50;
     widthstr = width.toString() + "px";
     document.getElementById("header").style.width = widthstr;
+    document.getElementById("footer").style.width = widthstr;
     for (let i = 0; i < this.TraditionalPlanClicked.length; i++) {
         var element = document.getElementById(this.TraditionalPlanClicked[i][0]);
         element.classList.remove(this.TraditionalPlanClicked[i][1]);
@@ -108,6 +91,7 @@ this.enable = function(plan) {
     width = this.AlternatePlanTerms*210 + 50;
     widthstr = width.toString() + "px";
     document.getElementById("header").style.width = widthstr;
+    document.getElementById("footer").style.width = widthstr;
     for (let i = 0; i < this.AlternatePlanClicked.length; i++) {
         var element = document.getElementById(this.AlternatePlanClicked[i][0]);
         element.classList.remove(this.AlternatePlanClicked[i][1]);
@@ -121,6 +105,7 @@ this.enable = function(plan) {
     width = this.CoopPlan1Terms*210 + 50;
     widthstr = width.toString() + "px";
     document.getElementById("header").style.width = widthstr;
+    document.getElementById("footer").style.width = widthstr;
     for (let i = 0; i < this.CoopPlan1Clicked.length; i++) {
         var element = document.getElementById(this.CoopPlan1Clicked[i][0]);
         element.classList.remove(this.CoopPlan1Clicked[i][1]);
@@ -134,6 +119,7 @@ this.enable = function(plan) {
     width = this.CoopPlan2Terms*210 + 50;
     widthstr = width.toString() + "px";
     document.getElementById("header").style.width = widthstr;
+    document.getElementById("footer").style.width = widthstr;
     for (let i = 0; i < this.CoopPlan2Clicked.length; i++) {
         var element = document.getElementById(this.CoopPlan2Clicked[i][0]);
         element.classList.remove(this.CoopPlan2Clicked[i][1]);
@@ -147,6 +133,7 @@ this.enable = function(plan) {
     width = this.CoopPlan3BiomedicalTerms*210 + 50;
     widthstr = width.toString() + "px";
     document.getElementById("header").style.width = widthstr;
+    document.getElementById("footer").style.width = widthstr;
     for (let i = 0; i < this.CoopPlan3BiomedicalClicked.length; i++) {
         var element = document.getElementById(this.CoopPlan3BiomedicalClicked[i][0]);
         element.classList.remove(this.CoopPlan3BiomedicalClicked[i][1]);
@@ -160,6 +147,7 @@ this.enable = function(plan) {
     width = this.CoopPlan4Terms*210 + 50;
     widthstr = width.toString() + "px";
     document.getElementById("header").style.width = widthstr;
+    document.getElementById("footer").style.width = widthstr;
     for (let i = 0; i < this.CoopPlan4Clicked.length; i++) {
         var element = document.getElementById(this.CoopPlan4Clicked[i][0]);
         element.classList.remove(this.CoopPlan4Clicked[i][1]);

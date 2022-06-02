@@ -73,7 +73,8 @@ def placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManag
 
     for plan in sequenceDict:
         switchInput = soup.new_tag("div", attrs={"id":cleaner.cleanString(plan),
-                                                 "ng-switch-when":cleaner.cleanString(plan)})
+                                                 "ng-switch-when":cleaner.cleanString(plan),
+                                                 "style":"height:fit-content; display:flex; flex-direction:row; flex-wrap:column;"})
         placeTermsDivs(switchInput, sequenceDict[plan], soup, indexJS, controller, plan, lineManager)
         displayTag.append(switchInput)
 

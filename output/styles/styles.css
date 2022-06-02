@@ -60,6 +60,35 @@ header {
     }
 }  
 
+.footer {
+    padding: 8px 8px;
+    background-color: #275d38;
+    margin-top: 10px;
+    margin-bottom: 0;
+    height: 64px;
+    position: relative;
+    bottom: 0;
+}
+
+.footer img {
+    width: 183px;
+    height: 50px;
+    margin-right: 0;
+    position: relative;
+    left: 44vw;
+}
+
+#copyright {
+    position: relative;
+    left: 50vw;
+    color: #FFFFFF;
+    font-family: 'Roboto',sans-serif;
+}
+
+#main {
+    height: fit-content;
+}
+
 /* Plan header styling*/
 h3.planhead {
     margin-top: 0px;
@@ -78,6 +107,7 @@ h3.planhead {
 /* Plan diagram styling */
 .display {
     width:fit-content;
+    height: fit-content;
 }
 
 /* Form styling */
@@ -98,7 +128,6 @@ label {
 
 /* Term column styling */
 .term {
-    float: left;
     margin-left: 60px;
     position: relative;
 }
