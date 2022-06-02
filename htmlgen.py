@@ -11,6 +11,11 @@ import cleaner
 import linegen
 import html
 
+# Changes the header title to include deptName, which is pulled
+# from Sequncing Excel file
+# Parameters:
+#   titleTag - "site-title" HTML tag at the top of the page
+#   deptName - department name pulled from Sequencing Excel file
 def switchTitle(titleTag, deptName):
     titleTag.append(deptName + " Program Plan Visualizer")
 

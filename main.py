@@ -102,7 +102,7 @@ def main():
             #placing the HTML and generating JS based on the courses (drawing lines)
             htmlgen.switchTitle(titleTag, deptName)
             htmlgen.placeRadioInputs(formTag, sequenceDict, soup)
-            htmlgen.placeLegend(legendTag, sequenceDict, soup)
+            htmlgen.placeLegend(legendTag, sequenceDict, soup)  # places legend for color-coding
             htmlgen.placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager)
 
             #closing JS files
