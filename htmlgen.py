@@ -171,7 +171,7 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter):
             courseAlphaHours.append(course.alpha_hours + ")" + " ")
 
         # Prevent tooltip from being off screen
-        if termcounter < 6:
+        if termcounter < 4:
             courseDisc = soup.new_tag("div", attrs={"class":"tooltiptextright"})
         else:
             courseDisc = soup.new_tag("div", attrs={"class":"tooltiptextleft"})
