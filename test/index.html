@@ -18,15 +18,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <!--Leader Line import-->
     <script src="https://cdn.jsdelivr.net/npm/leader-line@1.0.7/leader-line.min.js"></script>
-    <script>  function dothis() {
-        console.log("loaded");
-        var courseradio = document.querySelectorAll("input[type=radio][type=courseselector]");
-        Array.prototype.forEach.call(courseradio, function (radio) {
-                radio.addEventListener("change", function () {
-                    console.log("changed");
-                });
-        })
-       }</script>
 </head>
 <body>
 
@@ -109,16 +100,19 @@
             <div class="term">
                 <h3>Term 2</h3>
                 <div class="dropdown" ng-switch="courseSelected">
-                    <div class="course" id="ECE 331" ng-switch-when="ECE 331">
+                    <div class="course" id="ECE 331" ng-switch-when="ECE 331" ng-click="ece331Listener()">
                         <h3 class="embed">ECE 331</h3>
                     </div>
-                    <div class="course" id="MEC E 331" ng-switch-when="MEC E 331">
+                    <div class="course" id="MEC E 331" ng-switch-when="MEC E 331" ng-click="mece331Listner()">
                         <h3 class="embed">MEC E 331</h3>
                     </div>
-                    <div class="dropdown-content" onload="dothis()">
-                        <input type="radio" name="courseselector" ng-model="courseSelected" value="ECE 331">
+                    <div class="dropdown-content">
+                        <input type="radio" name="courseselector" ng-model="courseSelected" 
+                        value="ECE 331" 
+                        ng-change="changeListener1()">
                         <label for="ECE 331">ECE 331</label><br>
-                        <input type="radio" name="courseselector" ng-model="courseSelected" value="MEC E 331">
+                        <input type="radio" name="courseselector" ng-model="courseSelected" value="MEC E 331" 
+                        ng-change="changeListener2()">
                         <label for="MEC E 331">MEC E 331</label><br>
                     </div>
                 </div>
@@ -402,7 +396,9 @@ evaluating as null -->
    var line2 = new LeaderLine(ece101, ece401, {hide:true});
    var line3 = new LeaderLine(ece201, ece401, {hide:true});
    var line4 = new LeaderLine(ece101, ece461, {hide:true});
-   var line6 = new Line("ECE 102", "ECE 202",true)
+   var line6 = new Line("ECE 102", "ECE 202",true);
+   var line7 = new Line("ECE 101", "ECE 331", false);
+   var line8 = new Line("ECE 101", "MEC E 331", )
 
    // for every line, we need a getter function
    function getLine1() {
@@ -422,6 +418,12 @@ evaluating as null -->
    };
    function getLine6() {
        return line6;
+   }
+   function getLine7() {
+       return line7;
+   }
+   function getLine8() {
+       return line8;
    }
 </script>
 
@@ -453,6 +455,8 @@ evaluating as null -->
         // this is used to ensure the controller knows which plan the webpage is switching from
         this.previousPlan = $scope.selectedPlan;
         this.courseSelected = $scope.courseSelected;
+        var switchFlag = 0;
+        this.temp = [];
 
         /*
             Render method for switching leaderlines shown on screen when plan chosen changes
@@ -465,16 +469,42 @@ evaluating as null -->
             this.previousPlan = plan;
         };
 
-        console.log(document.getElementsByClassName("display"));
-               // This makes it so the render function is called when the radio input is changed
+        // This makes it so the render function is called when the radio input is changed
         // Source: https://stackoverflow.com/questions/13152927/how-to-use-radio-on-change-event
         var radios = document.querySelectorAll("input[type=radio][name=planselector");
-        console.log(radios);
         Array.prototype.forEach.call(radios, function (radio) {
             radio.addEventListener("change", function () {
                 that.render($scope.selectedPlan);
             });
         });
+
+        $scope.changeListener1 = function () {
+            console.log($scope.courseSelected);
+            $scope.courseSelected = "ECE 331";
+            this.courseSelected = $scope.courseSelected;
+            switchFlag = 0;
+            for (let i = 0; i < this.temp.length; i++) {
+                this.planAList.push(this.temp[i]);
+                this.temp[i][0].show();
+            }
+            this.temp = [];
+            var index = this.planAList.findIndex((element) => element[0] == getLine7());
+            if (index != 0) {
+                this.temp.push(this.planAList[index]);
+                this.planAList[index][0].hide();
+                this.planAList.splice(index, 1);
+            }
+        }
+
+        $scope.changeListener2 = function () {
+            console.log($scope.courseSelected);
+            $scope.courseSelected = "MEC E 331";
+            this.courseSelected = $scope.courseSelected;
+            switchFlag = 1;
+        }
+
+        
+
         
  
 
@@ -534,6 +564,7 @@ evaluating as null -->
                         element.classList.remove(this.planAclicked[i][1]);
                         element.classList.add(this.planAclicked[i][1]+"-highlighted");
                     }
+                    this.planAswitch();
                     break;
                 case "B":
                     console.log(this.planBList);
@@ -764,6 +795,10 @@ evaluating as null -->
             }
         };
 
+        this.planAswitch = function () {
+            $scope.courseSelected = this.courseSelected;
+        }
+
         // add a clicked/not clicked flag for every single course
         var ece101flag = false; 
         var ece201flag = false;
@@ -786,6 +821,12 @@ evaluating as null -->
                 that.addLine(getLine1());
                 // that.addLine(getLine2());
                 // that.addLine(getLine4());
+                if (switchFlag == 0) {
+                    that.addLine(getLine7());
+                }
+                else if (switchFlag == 1) {
+                    that.addLine(getLine8());
+                }
                 element.classList.remove("cateA");
                 element.classList.add("cateA-highlighted");
                 that.addToClicked(["ECE 101", "cateA"])
@@ -799,6 +840,12 @@ evaluating as null -->
                 that.removeLine(getLine1());
                 // that.removeLine(getLine2());
                 // that.removeLine(getLine4());
+                if (switchFlag == 0) {
+                    that.removeLine(getLine7())
+                }
+                else if (switchFlag == 1) {
+                    that.removeLine(getLine8())
+                }
                 element.classList.remove("cateA-highlighted");
                 element.classList.add("cateA");
                 that.removeFromClicked("ECE 101");
