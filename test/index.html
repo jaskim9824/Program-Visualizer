@@ -100,9 +100,21 @@
             </div>
             <div class="term">
                 <h3>Term 2</h3>
-                <div class="course" id="ECE 331">
-                    <h3 class="embed">ECE 331</h3>
+                <div class="dropdown" ng-switch="courseSelected">
+                    <div class="course" id="ECE 331" ng-switch-when="ECE 331">
+                        <h3 class="embed">ECE 331</h3>
+                    </div>
+                    <div class="course" id="MEC E 331" ng-switch-when="MEC E 331">
+                        <h3 class="embed">MEC E 331</h3>
+                    </div>
+                    <div class="dropdown-content">
+                        <input type="radio" name="courseselector" ng-model="courseSelected" value="ECE 331">
+                        <label for="ECE 331">ECE 331</label><br>
+                        <input type="radio" name="courseselector" ng-model="courseSelected" value="MEC E 331">
+                        <label for="MEC E 331">MEC E 331</label><br>
+                    </div>
                 </div>
+              
                 <div class="course" id="ECE 321">
                     <h3 class="embed">ECE 321</h3>
                 </div>
@@ -414,6 +426,7 @@ evaluating as null -->
     app.controller("main", function ($scope) {
         // default plan selection 
         $scope.selectedPlan = "A";
+        $scope.courseSelected = "ECE 331";
 
         // for referencing this within a function
         var that = this;
@@ -447,6 +460,7 @@ evaluating as null -->
                // This makes it so the render function is called when the radio input is changed
         // Source: https://stackoverflow.com/questions/13152927/how-to-use-radio-on-change-event
         var radios = document.querySelectorAll("input[type=radio][name=planselector");
+        console.log(radios);
         Array.prototype.forEach.call(radios, function (radio) {
             radio.addEventListener("change", function () {
                 that.render($scope.selectedPlan);
