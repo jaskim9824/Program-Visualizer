@@ -137,7 +137,7 @@ label {
 /* Default course hover */
 .course:hover {
     background-color: #f2cd00;
-    border-color:#9ecaed;
+    border-color:#f2cd00;
 }
 
 /* Default course selected */
@@ -154,72 +154,7 @@ label {
 /* Default highlighted hover */
 .course-highlighted:hover {
     background-color: #f2cd00;
-    border-color:#9ecaed;
-}
-
-.compelective:hover {
-    background-color: #ffff66;
-}
-
-.progelective:hover {
-    background-color: #cc33ff;
-}
-
-.its:hover {
-    background-color: #996633;
-}
-
-.MATH:hover {
-    background-color: #ff5050!important;
-}
-
-.MATH-highlighted {
-    background-color: #ff5050;
-}
-
-.MATH-highlighted:hover {
-    background-color: #ff5050!important;
-    border-color:#9ecaed;
-}
-
-
-.BASICSCIENCES:hover {
-    background-color: #99ff99!important;
-}
-
-.BASICSCIENCES-highlighted {
-    background-color: #99ff99;
-}
-
-.BASICSCIENCES-highlighted:hover {
-    background-color: #99ff99!important;
-    border-color:#9ecaed;
-}
-
-.ENGINEERINGSCIENCES:hover {
-    background-color: #66ccff!important;
-}
-
-.ENGINEERINGSCIENCES-highlighted {
-    background-color: #66ccff;
-}
-
-.ENGINEERINGSCIENCES-highlighted:hover {
-    background-color: #66ccff!important;
-    border-color:#9ecaed;
-}
-
-.ENGINEERINGDESIGN:hover {
-    background-color: #ff9900!important;
-}
-
-.ENGINEERINGDESIGN-highlighted {
-    background-color: #ff9900;
-}
-
-.ENGINEERINGSDESIGN-highlighted:hover {
-    background-color: #ff9900!important;
-    border-color:#9ecaed;
+    border-color:#f2cd00;
 }
 
     

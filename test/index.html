@@ -18,7 +18,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <!--Leader Line import-->
     <script src="https://cdn.jsdelivr.net/npm/leader-line@1.0.7/leader-line.min.js"></script>
-  
+    <script>  function dothis() {
+        console.log("loaded");
+        var courseradio = document.querySelectorAll("input[type=radio][type=courseselector]");
+        Array.prototype.forEach.call(courseradio, function (radio) {
+                radio.addEventListener("change", function () {
+                    console.log("changed");
+                });
+        })
+       }</script>
 </head>
 <body>
 
@@ -107,7 +115,7 @@
                     <div class="course" id="MEC E 331" ng-switch-when="MEC E 331">
                         <h3 class="embed">MEC E 331</h3>
                     </div>
-                    <div class="dropdown-content">
+                    <div class="dropdown-content" onload="dothis()">
                         <input type="radio" name="courseselector" ng-model="courseSelected" value="ECE 331">
                         <label for="ECE 331">ECE 331</label><br>
                         <input type="radio" name="courseselector" ng-model="courseSelected" value="MEC E 331">
@@ -415,7 +423,6 @@ evaluating as null -->
    function getLine6() {
        return line6;
    }
-
 </script>
 
 <!-- Script section outlining the controller of the webpage -->
@@ -445,6 +452,7 @@ evaluating as null -->
 
         // this is used to ensure the controller knows which plan the webpage is switching from
         this.previousPlan = $scope.selectedPlan;
+        this.courseSelected = $scope.courseSelected;
 
         /*
             Render method for switching leaderlines shown on screen when plan chosen changes
@@ -457,6 +465,7 @@ evaluating as null -->
             this.previousPlan = plan;
         };
 
+        console.log(document.getElementsByClassName("display"));
                // This makes it so the render function is called when the radio input is changed
         // Source: https://stackoverflow.com/questions/13152927/how-to-use-radio-on-change-event
         var radios = document.querySelectorAll("input[type=radio][name=planselector");
@@ -466,6 +475,8 @@ evaluating as null -->
                 that.render($scope.selectedPlan);
             });
         });
+        
+ 
 
         /*
             Method to disable the activelines of the previously selected plan when switching to a new one

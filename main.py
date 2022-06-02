@@ -31,17 +31,17 @@ def writeCategoryCSS(categoryDict, categoryCSS):
         backgroundColour = categoryDict[category]
         categoryFormattedString = """.{categoryName}:hover {{
             background-color: #{backColour}!important;
+            border-color: #{backColour}!important;
         }}
         .{categoryName}-highlighted {{
             background-color: #{backColour};
         }}
         .{categoryName}-highlighted:hover {{
             background-color: #{backColour}!important;
-            border-color:#{borderColour};
+            border-color: #{backColour}!important;
         }}\n"""
         categoryCSS.write(categoryFormattedString.format(categoryName=cleaner.cleanString(category),
-                                                         backColour=backgroundColour,
-                                                         borderColour="9ecaed"))
+                                                         backColour=backgroundColour))
 
 # Debug function for cleanly printing contents of plan sequences
 # Parameters:
