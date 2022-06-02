@@ -42,6 +42,17 @@
             background-color: #ff9900!important;
             border-color: #ff9900!important;
         }
+.ENGINEERINGPROFESSION:hover {
+            background-color: #f7b7c7!important;
+            border-color: #f7b7c7!important;
+        }
+        .ENGINEERINGPROFESSION-highlighted {
+            background-color: #f7b7c7;
+        }
+        .ENGINEERINGPROFESSION-highlighted:hover {
+            background-color: #f7b7c7!important;
+            border-color: #f7b7c7!important;
+        }
 .COMP:hover {
             background-color: #ffff66!important;
             border-color: #ffff66!important;

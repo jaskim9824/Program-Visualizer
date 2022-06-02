@@ -153,12 +153,12 @@ label {
 }
 
 /* Complementray elective box*/
-.compelective {
+.COMP {
     height: 80px;
 }
 
 /* Program elective box */
-.progelective {
+.PROG {
     font-size:90%;
     height:80px;
 }

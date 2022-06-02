@@ -425,14 +425,14 @@ $scope.CHEM103TraditionalPlanListener = function () {
 $scope.ENGG100TraditionalPlanListener = function () {
   var ENGG100TraditionalPlanelement = document.getElementById("ENGG100TraditionalPlan");
  if (!ENGG100TraditionalPlanflag) {
-     ENGG100TraditionalPlanelement.classList.remove("course");
-     ENGG100TraditionalPlanelement.classList.add("course-highlighted");
-     that.addToClicked(["ENGG100TraditionalPlan", "course"]);
+     ENGG100TraditionalPlanelement.classList.remove("ENGINEERINGPROFESSION");
+     ENGG100TraditionalPlanelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG100TraditionalPlan", "ENGINEERINGPROFESSION"]);
       ENGG100TraditionalPlanflag=true
   }
  else {
-     ENGG100TraditionalPlanelement.classList.remove("course-highlighted");
-     ENGG100TraditionalPlanelement.classList.add("course");
+     ENGG100TraditionalPlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG100TraditionalPlanelement.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG100TraditionalPlan");
       ENGG100TraditionalPlanflag=false
   }
@@ -1073,15 +1073,15 @@ $scope.ENGM310TraditionalPlanListener = function () {
   var ENGM310TraditionalPlanelement = document.getElementById("ENGM310TraditionalPlan");
  if (!ENGM310TraditionalPlanflag) {
       that.addLine(getLine72());
-     ENGM310TraditionalPlanelement.classList.remove("course");
-     ENGM310TraditionalPlanelement.classList.add("course-highlighted");
-     that.addToClicked(["ENGM310TraditionalPlan", "course"]);
+     ENGM310TraditionalPlanelement.classList.remove("ENGINEERINGPROFESSION");
+     ENGM310TraditionalPlanelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGM310TraditionalPlan", "ENGINEERINGPROFESSION"]);
       ENGM310TraditionalPlanflag=true
   }
  else {
       that.removeLine(getLine72());
-     ENGM310TraditionalPlanelement.classList.remove("course-highlighted");
-     ENGM310TraditionalPlanelement.classList.add("course");
+     ENGM310TraditionalPlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGM310TraditionalPlanelement.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGM310TraditionalPlan");
       ENGM310TraditionalPlanflag=false
   }
@@ -1164,16 +1164,16 @@ $scope.MECE390TraditionalPlanListener = function () {
  if (!MECE390TraditionalPlanflag) {
       that.addLine(getLine49());
       that.addLine(getLine50());
-     MECE390TraditionalPlanelement.classList.remove("course");
-     MECE390TraditionalPlanelement.classList.add("course-highlighted");
-     that.addToClicked(["MECE390TraditionalPlan", "course"]);
+     MECE390TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES");
+     MECE390TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE390TraditionalPlan", "ENGINEERINGSCIENCES"]);
       MECE390TraditionalPlanflag=true
   }
  else {
       that.removeLine(getLine49());
       that.removeLine(getLine50());
-     MECE390TraditionalPlanelement.classList.remove("course-highlighted");
-     MECE390TraditionalPlanelement.classList.add("course");
+     MECE390TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE390TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE390TraditionalPlan");
       MECE390TraditionalPlanflag=false
   }
@@ -1196,14 +1196,14 @@ $scope.ComplementaryElectiveTraditionalPlanListener = function () {
 $scope.ENGG404TraditionalPlanListener = function () {
   var ENGG404TraditionalPlanelement = document.getElementById("ENGG404TraditionalPlan");
  if (!ENGG404TraditionalPlanflag) {
-     ENGG404TraditionalPlanelement.classList.remove("course");
-     ENGG404TraditionalPlanelement.classList.add("course-highlighted");
-     that.addToClicked(["ENGG404TraditionalPlan", "course"]);
+     ENGG404TraditionalPlanelement.classList.remove("ENGINEERINGPROFESSION");
+     ENGG404TraditionalPlanelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG404TraditionalPlan", "ENGINEERINGPROFESSION"]);
       ENGG404TraditionalPlanflag=true
   }
  else {
-     ENGG404TraditionalPlanelement.classList.remove("course-highlighted");
-     ENGG404TraditionalPlanelement.classList.add("course");
+     ENGG404TraditionalPlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG404TraditionalPlanelement.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG404TraditionalPlan");
       ENGG404TraditionalPlanflag=false
   }
@@ -1317,14 +1317,14 @@ $scope.CHE448TraditionalPlanListener = function () {
 $scope.ENGG400TraditionalPlanListener = function () {
   var ENGG400TraditionalPlanelement = document.getElementById("ENGG400TraditionalPlan");
  if (!ENGG400TraditionalPlanflag) {
-     ENGG400TraditionalPlanelement.classList.remove("course");
-     ENGG400TraditionalPlanelement.classList.add("course-highlighted");
-     that.addToClicked(["ENGG400TraditionalPlan", "course"]);
+     ENGG400TraditionalPlanelement.classList.remove("ENGINEERINGPROFESSION");
+     ENGG400TraditionalPlanelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG400TraditionalPlan", "ENGINEERINGPROFESSION"]);
       ENGG400TraditionalPlanflag=true
   }
  else {
-     ENGG400TraditionalPlanelement.classList.remove("course-highlighted");
-     ENGG400TraditionalPlanelement.classList.add("course");
+     ENGG400TraditionalPlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG400TraditionalPlanelement.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG400TraditionalPlan");
       ENGG400TraditionalPlanflag=false
   }
@@ -1501,14 +1501,14 @@ $scope.CHEM103AlternatePlanListener = function () {
 $scope.ENGG100AlternatePlanListener = function () {
   var ENGG100AlternatePlanelement = document.getElementById("ENGG100AlternatePlan");
  if (!ENGG100AlternatePlanflag) {
-     ENGG100AlternatePlanelement.classList.remove("course");
-     ENGG100AlternatePlanelement.classList.add("course-highlighted");
-     that.addToClicked(["ENGG100AlternatePlan", "course"]);
+     ENGG100AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION");
+     ENGG100AlternatePlanelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG100AlternatePlan", "ENGINEERINGPROFESSION"]);
       ENGG100AlternatePlanflag=true
   }
  else {
-     ENGG100AlternatePlanelement.classList.remove("course-highlighted");
-     ENGG100AlternatePlanelement.classList.add("course");
+     ENGG100AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG100AlternatePlanelement.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG100AlternatePlan");
       ENGG100AlternatePlanflag=false
   }
@@ -1731,15 +1731,15 @@ $scope.ENGM310AlternatePlanListener = function () {
   var ENGM310AlternatePlanelement = document.getElementById("ENGM310AlternatePlan");
  if (!ENGM310AlternatePlanflag) {
       that.addLine(getLine145());
-     ENGM310AlternatePlanelement.classList.remove("course");
-     ENGM310AlternatePlanelement.classList.add("course-highlighted");
-     that.addToClicked(["ENGM310AlternatePlan", "course"]);
+     ENGM310AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION");
+     ENGM310AlternatePlanelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGM310AlternatePlan", "ENGINEERINGPROFESSION"]);
       ENGM310AlternatePlanflag=true
   }
  else {
       that.removeLine(getLine145());
-     ENGM310AlternatePlanelement.classList.remove("course-highlighted");
-     ENGM310AlternatePlanelement.classList.add("course");
+     ENGM310AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGM310AlternatePlanelement.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGM310AlternatePlan");
       ENGM310AlternatePlanflag=false
   }
@@ -1747,14 +1747,14 @@ $scope.ENGM310AlternatePlanListener = function () {
 $scope.ENGG404AlternatePlanListener = function () {
   var ENGG404AlternatePlanelement = document.getElementById("ENGG404AlternatePlan");
  if (!ENGG404AlternatePlanflag) {
-     ENGG404AlternatePlanelement.classList.remove("course");
-     ENGG404AlternatePlanelement.classList.add("course-highlighted");
-     that.addToClicked(["ENGG404AlternatePlan", "course"]);
+     ENGG404AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION");
+     ENGG404AlternatePlanelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG404AlternatePlan", "ENGINEERINGPROFESSION"]);
       ENGG404AlternatePlanflag=true
   }
  else {
-     ENGG404AlternatePlanelement.classList.remove("course-highlighted");
-     ENGG404AlternatePlanelement.classList.add("course");
+     ENGG404AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG404AlternatePlanelement.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG404AlternatePlan");
       ENGG404AlternatePlanflag=false
   }
@@ -2285,16 +2285,16 @@ $scope.MECE390AlternatePlanListener = function () {
  if (!MECE390AlternatePlanflag) {
       that.addLine(getLine122());
       that.addLine(getLine123());
-     MECE390AlternatePlanelement.classList.remove("course");
-     MECE390AlternatePlanelement.classList.add("course-highlighted");
-     that.addToClicked(["MECE390AlternatePlan", "course"]);
+     MECE390AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
+     MECE390AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE390AlternatePlan", "ENGINEERINGSCIENCES"]);
       MECE390AlternatePlanflag=true
   }
  else {
       that.removeLine(getLine122());
       that.removeLine(getLine123());
-     MECE390AlternatePlanelement.classList.remove("course-highlighted");
-     MECE390AlternatePlanelement.classList.add("course");
+     MECE390AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE390AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE390AlternatePlan");
       MECE390AlternatePlanflag=false
   }
@@ -2423,14 +2423,14 @@ $scope.CHE448AlternatePlanListener = function () {
 $scope.ENGG400AlternatePlanListener = function () {
   var ENGG400AlternatePlanelement = document.getElementById("ENGG400AlternatePlan");
  if (!ENGG400AlternatePlanflag) {
-     ENGG400AlternatePlanelement.classList.remove("course");
-     ENGG400AlternatePlanelement.classList.add("course-highlighted");
-     that.addToClicked(["ENGG400AlternatePlan", "course"]);
+     ENGG400AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION");
+     ENGG400AlternatePlanelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG400AlternatePlan", "ENGINEERINGPROFESSION"]);
       ENGG400AlternatePlanflag=true
   }
  else {
-     ENGG400AlternatePlanelement.classList.remove("course-highlighted");
-     ENGG400AlternatePlanelement.classList.add("course");
+     ENGG400AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG400AlternatePlanelement.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG400AlternatePlan");
       ENGG400AlternatePlanflag=false
   }
@@ -2583,14 +2583,14 @@ $scope.CHEM103CoopPlan1Listener = function () {
 $scope.ENGG100CoopPlan1Listener = function () {
   var ENGG100CoopPlan1element = document.getElementById("ENGG100CoopPlan1");
  if (!ENGG100CoopPlan1flag) {
-     ENGG100CoopPlan1element.classList.remove("course");
-     ENGG100CoopPlan1element.classList.add("course-highlighted");
-     that.addToClicked(["ENGG100CoopPlan1", "course"]);
+     ENGG100CoopPlan1element.classList.remove("ENGINEERINGPROFESSION");
+     ENGG100CoopPlan1element.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG100CoopPlan1", "ENGINEERINGPROFESSION"]);
       ENGG100CoopPlan1flag=true
   }
  else {
-     ENGG100CoopPlan1element.classList.remove("course-highlighted");
-     ENGG100CoopPlan1element.classList.add("course");
+     ENGG100CoopPlan1element.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG100CoopPlan1element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG100CoopPlan1");
       ENGG100CoopPlan1flag=false
   }
@@ -2840,15 +2840,15 @@ $scope.ENGG299CoopPlan1Listener = function () {
   var ENGG299CoopPlan1element = document.getElementById("ENGG299CoopPlan1");
  if (!ENGG299CoopPlan1flag) {
       that.addLine(getLine172());
-     ENGG299CoopPlan1element.classList.remove("course");
-     ENGG299CoopPlan1element.classList.add("course-highlighted");
-     that.addToClicked(["ENGG299CoopPlan1", "course"]);
+     ENGG299CoopPlan1element.classList.remove("ENGINEERINGPROFESSION");
+     ENGG299CoopPlan1element.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG299CoopPlan1", "ENGINEERINGPROFESSION"]);
       ENGG299CoopPlan1flag=true
   }
  else {
       that.removeLine(getLine172());
-     ENGG299CoopPlan1element.classList.remove("course-highlighted");
-     ENGG299CoopPlan1element.classList.add("course");
+     ENGG299CoopPlan1element.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG299CoopPlan1element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG299CoopPlan1");
       ENGG299CoopPlan1flag=false
   }
@@ -3324,15 +3324,15 @@ $scope.ENGM310CoopPlan1Listener = function () {
   var ENGM310CoopPlan1element = document.getElementById("ENGM310CoopPlan1");
  if (!ENGM310CoopPlan1flag) {
       that.addLine(getLine223());
-     ENGM310CoopPlan1element.classList.remove("course");
-     ENGM310CoopPlan1element.classList.add("course-highlighted");
-     that.addToClicked(["ENGM310CoopPlan1", "course"]);
+     ENGM310CoopPlan1element.classList.remove("ENGINEERINGPROFESSION");
+     ENGM310CoopPlan1element.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGM310CoopPlan1", "ENGINEERINGPROFESSION"]);
       ENGM310CoopPlan1flag=true
   }
  else {
       that.removeLine(getLine223());
-     ENGM310CoopPlan1element.classList.remove("course-highlighted");
-     ENGM310CoopPlan1element.classList.add("course");
+     ENGM310CoopPlan1element.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGM310CoopPlan1element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGM310CoopPlan1");
       ENGM310CoopPlan1flag=false
   }
@@ -3415,16 +3415,16 @@ $scope.MECE390CoopPlan1Listener = function () {
  if (!MECE390CoopPlan1flag) {
       that.addLine(getLine199());
       that.addLine(getLine200());
-     MECE390CoopPlan1element.classList.remove("course");
-     MECE390CoopPlan1element.classList.add("course-highlighted");
-     that.addToClicked(["MECE390CoopPlan1", "course"]);
+     MECE390CoopPlan1element.classList.remove("ENGINEERINGSCIENCES");
+     MECE390CoopPlan1element.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE390CoopPlan1", "ENGINEERINGSCIENCES"]);
       MECE390CoopPlan1flag=true
   }
  else {
       that.removeLine(getLine199());
       that.removeLine(getLine200());
-     MECE390CoopPlan1element.classList.remove("course-highlighted");
-     MECE390CoopPlan1element.classList.add("course");
+     MECE390CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE390CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE390CoopPlan1");
       MECE390CoopPlan1flag=false
   }
@@ -3447,14 +3447,14 @@ $scope.ComplementaryElectiveCoopPlan1Listener = function () {
 $scope.ENGG404CoopPlan1Listener = function () {
   var ENGG404CoopPlan1element = document.getElementById("ENGG404CoopPlan1");
  if (!ENGG404CoopPlan1flag) {
-     ENGG404CoopPlan1element.classList.remove("course");
-     ENGG404CoopPlan1element.classList.add("course-highlighted");
-     that.addToClicked(["ENGG404CoopPlan1", "course"]);
+     ENGG404CoopPlan1element.classList.remove("ENGINEERINGPROFESSION");
+     ENGG404CoopPlan1element.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG404CoopPlan1", "ENGINEERINGPROFESSION"]);
       ENGG404CoopPlan1flag=true
   }
  else {
-     ENGG404CoopPlan1element.classList.remove("course-highlighted");
-     ENGG404CoopPlan1element.classList.add("course");
+     ENGG404CoopPlan1element.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG404CoopPlan1element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG404CoopPlan1");
       ENGG404CoopPlan1flag=false
   }
@@ -3585,14 +3585,14 @@ $scope.CHE448CoopPlan1Listener = function () {
 $scope.ENGG400CoopPlan1Listener = function () {
   var ENGG400CoopPlan1element = document.getElementById("ENGG400CoopPlan1");
  if (!ENGG400CoopPlan1flag) {
-     ENGG400CoopPlan1element.classList.remove("course");
-     ENGG400CoopPlan1element.classList.add("course-highlighted");
-     that.addToClicked(["ENGG400CoopPlan1", "course"]);
+     ENGG400CoopPlan1element.classList.remove("ENGINEERINGPROFESSION");
+     ENGG400CoopPlan1element.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG400CoopPlan1", "ENGINEERINGPROFESSION"]);
       ENGG400CoopPlan1flag=true
   }
  else {
-     ENGG400CoopPlan1element.classList.remove("course-highlighted");
-     ENGG400CoopPlan1element.classList.add("course");
+     ENGG400CoopPlan1element.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG400CoopPlan1element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG400CoopPlan1");
       ENGG400CoopPlan1flag=false
   }
@@ -3775,14 +3775,14 @@ $scope.CHEM103CoopPlan2Listener = function () {
 $scope.ENGG100CoopPlan2Listener = function () {
   var ENGG100CoopPlan2element = document.getElementById("ENGG100CoopPlan2");
  if (!ENGG100CoopPlan2flag) {
-     ENGG100CoopPlan2element.classList.remove("course");
-     ENGG100CoopPlan2element.classList.add("course-highlighted");
-     that.addToClicked(["ENGG100CoopPlan2", "course"]);
+     ENGG100CoopPlan2element.classList.remove("ENGINEERINGPROFESSION");
+     ENGG100CoopPlan2element.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG100CoopPlan2", "ENGINEERINGPROFESSION"]);
       ENGG100CoopPlan2flag=true
   }
  else {
-     ENGG100CoopPlan2element.classList.remove("course-highlighted");
-     ENGG100CoopPlan2element.classList.add("course");
+     ENGG100CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG100CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG100CoopPlan2");
       ENGG100CoopPlan2flag=false
   }
@@ -4055,15 +4055,15 @@ $scope.ENGG299CoopPlan2Listener = function () {
   var ENGG299CoopPlan2element = document.getElementById("ENGG299CoopPlan2");
  if (!ENGG299CoopPlan2flag) {
       that.addLine(getLine243());
-     ENGG299CoopPlan2element.classList.remove("course");
-     ENGG299CoopPlan2element.classList.add("course-highlighted");
-     that.addToClicked(["ENGG299CoopPlan2", "course"]);
+     ENGG299CoopPlan2element.classList.remove("ENGINEERINGPROFESSION");
+     ENGG299CoopPlan2element.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG299CoopPlan2", "ENGINEERINGPROFESSION"]);
       ENGG299CoopPlan2flag=true
   }
  else {
       that.removeLine(getLine243());
-     ENGG299CoopPlan2element.classList.remove("course-highlighted");
-     ENGG299CoopPlan2element.classList.add("course");
+     ENGG299CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG299CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG299CoopPlan2");
       ENGG299CoopPlan2flag=false
   }
@@ -4497,15 +4497,15 @@ $scope.ENGM310CoopPlan2Listener = function () {
   var ENGM310CoopPlan2element = document.getElementById("ENGM310CoopPlan2");
  if (!ENGM310CoopPlan2flag) {
       that.addLine(getLine292());
-     ENGM310CoopPlan2element.classList.remove("course");
-     ENGM310CoopPlan2element.classList.add("course-highlighted");
-     that.addToClicked(["ENGM310CoopPlan2", "course"]);
+     ENGM310CoopPlan2element.classList.remove("ENGINEERINGPROFESSION");
+     ENGM310CoopPlan2element.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGM310CoopPlan2", "ENGINEERINGPROFESSION"]);
       ENGM310CoopPlan2flag=true
   }
  else {
       that.removeLine(getLine292());
-     ENGM310CoopPlan2element.classList.remove("course-highlighted");
-     ENGM310CoopPlan2element.classList.add("course");
+     ENGM310CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGM310CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGM310CoopPlan2");
       ENGM310CoopPlan2flag=false
   }
@@ -4588,16 +4588,16 @@ $scope.MECE390CoopPlan2Listener = function () {
  if (!MECE390CoopPlan2flag) {
       that.addLine(getLine276());
       that.addLine(getLine277());
-     MECE390CoopPlan2element.classList.remove("course");
-     MECE390CoopPlan2element.classList.add("course-highlighted");
-     that.addToClicked(["MECE390CoopPlan2", "course"]);
+     MECE390CoopPlan2element.classList.remove("ENGINEERINGSCIENCES");
+     MECE390CoopPlan2element.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE390CoopPlan2", "ENGINEERINGSCIENCES"]);
       MECE390CoopPlan2flag=true
   }
  else {
       that.removeLine(getLine276());
       that.removeLine(getLine277());
-     MECE390CoopPlan2element.classList.remove("course-highlighted");
-     MECE390CoopPlan2element.classList.add("course");
+     MECE390CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE390CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE390CoopPlan2");
       MECE390CoopPlan2flag=false
   }
@@ -4797,14 +4797,14 @@ $scope.CHE448CoopPlan2Listener = function () {
 $scope.ENGG400CoopPlan2Listener = function () {
   var ENGG400CoopPlan2element = document.getElementById("ENGG400CoopPlan2");
  if (!ENGG400CoopPlan2flag) {
-     ENGG400CoopPlan2element.classList.remove("course");
-     ENGG400CoopPlan2element.classList.add("course-highlighted");
-     that.addToClicked(["ENGG400CoopPlan2", "course"]);
+     ENGG400CoopPlan2element.classList.remove("ENGINEERINGPROFESSION");
+     ENGG400CoopPlan2element.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG400CoopPlan2", "ENGINEERINGPROFESSION"]);
       ENGG400CoopPlan2flag=true
   }
  else {
-     ENGG400CoopPlan2element.classList.remove("course-highlighted");
-     ENGG400CoopPlan2element.classList.add("course");
+     ENGG400CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG400CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG400CoopPlan2");
       ENGG400CoopPlan2flag=false
   }
@@ -4812,14 +4812,14 @@ $scope.ENGG400CoopPlan2Listener = function () {
 $scope.ENGG404CoopPlan2Listener = function () {
   var ENGG404CoopPlan2element = document.getElementById("ENGG404CoopPlan2");
  if (!ENGG404CoopPlan2flag) {
-     ENGG404CoopPlan2element.classList.remove("course");
-     ENGG404CoopPlan2element.classList.add("course-highlighted");
-     that.addToClicked(["ENGG404CoopPlan2", "course"]);
+     ENGG404CoopPlan2element.classList.remove("ENGINEERINGPROFESSION");
+     ENGG404CoopPlan2element.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG404CoopPlan2", "ENGINEERINGPROFESSION"]);
       ENGG404CoopPlan2flag=true
   }
  else {
-     ENGG404CoopPlan2element.classList.remove("course-highlighted");
-     ENGG404CoopPlan2element.classList.add("course");
+     ENGG404CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG404CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG404CoopPlan2");
       ENGG404CoopPlan2flag=false
   }
@@ -4971,14 +4971,14 @@ $scope.CHEM103CoopPlan3BiomedicalListener = function () {
 $scope.ENGG100CoopPlan3BiomedicalListener = function () {
   var ENGG100CoopPlan3Biomedicalelement = document.getElementById("ENGG100CoopPlan3Biomedical");
  if (!ENGG100CoopPlan3Biomedicalflag) {
-     ENGG100CoopPlan3Biomedicalelement.classList.remove("course");
-     ENGG100CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["ENGG100CoopPlan3Biomedical", "course"]);
+     ENGG100CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION");
+     ENGG100CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG100CoopPlan3Biomedical", "ENGINEERINGPROFESSION"]);
       ENGG100CoopPlan3Biomedicalflag=true
   }
  else {
-     ENGG100CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
-     ENGG100CoopPlan3Biomedicalelement.classList.add("course");
+     ENGG100CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG100CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG100CoopPlan3Biomedical");
       ENGG100CoopPlan3Biomedicalflag=false
   }
@@ -5227,14 +5227,14 @@ $scope.CIVE270CoopPlan3BiomedicalListener = function () {
 $scope.ENGG299CoopPlan3BiomedicalListener = function () {
   var ENGG299CoopPlan3Biomedicalelement = document.getElementById("ENGG299CoopPlan3Biomedical");
  if (!ENGG299CoopPlan3Biomedicalflag) {
-     ENGG299CoopPlan3Biomedicalelement.classList.remove("course");
-     ENGG299CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["ENGG299CoopPlan3Biomedical", "course"]);
+     ENGG299CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION");
+     ENGG299CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG299CoopPlan3Biomedical", "ENGINEERINGPROFESSION"]);
       ENGG299CoopPlan3Biomedicalflag=true
   }
  else {
-     ENGG299CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
-     ENGG299CoopPlan3Biomedicalelement.classList.add("course");
+     ENGG299CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG299CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG299CoopPlan3Biomedical");
       ENGG299CoopPlan3Biomedicalflag=false
   }
@@ -5500,16 +5500,16 @@ $scope.BME320CoopPlan3BiomedicalListener = function () {
  if (!BME320CoopPlan3Biomedicalflag) {
       that.addLine(getLine354());
       that.addLine(getLine368());
-     BME320CoopPlan3Biomedicalelement.classList.remove("course");
-     BME320CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["BME320CoopPlan3Biomedical", "course"]);
+     BME320CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES");
+     BME320CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES-highlighted");
+     that.addToClicked(["BME320CoopPlan3Biomedical", "BASICSCIENCES"]);
       BME320CoopPlan3Biomedicalflag=true
   }
  else {
       that.removeLine(getLine354());
       that.removeLine(getLine368());
-     BME320CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
-     BME320CoopPlan3Biomedicalelement.classList.add("course");
+     BME320CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
+     BME320CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
      that.removeFromClicked("BME320CoopPlan3Biomedical");
       BME320CoopPlan3Biomedicalflag=false
   }
@@ -5518,15 +5518,15 @@ $scope.ENGM310CoopPlan3BiomedicalListener = function () {
   var ENGM310CoopPlan3Biomedicalelement = document.getElementById("ENGM310CoopPlan3Biomedical");
  if (!ENGM310CoopPlan3Biomedicalflag) {
       that.addLine(getLine384());
-     ENGM310CoopPlan3Biomedicalelement.classList.remove("course");
-     ENGM310CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["ENGM310CoopPlan3Biomedical", "course"]);
+     ENGM310CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION");
+     ENGM310CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGM310CoopPlan3Biomedical", "ENGINEERINGPROFESSION"]);
       ENGM310CoopPlan3Biomedicalflag=true
   }
  else {
       that.removeLine(getLine384());
-     ENGM310CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
-     ENGM310CoopPlan3Biomedicalelement.classList.add("course");
+     ENGM310CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGM310CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGM310CoopPlan3Biomedical");
       ENGM310CoopPlan3Biomedicalflag=false
   }
@@ -5612,17 +5612,17 @@ $scope.MECE390CoopPlan3BiomedicalListener = function () {
       that.addLine(getLine335());
       that.addLine(getLine336());
       that.addLine(getLine357());
-     MECE390CoopPlan3Biomedicalelement.classList.remove("course");
-     MECE390CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["MECE390CoopPlan3Biomedical", "course"]);
+     MECE390CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
+     MECE390CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE390CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       MECE390CoopPlan3Biomedicalflag=true
   }
  else {
       that.removeLine(getLine335());
       that.removeLine(getLine336());
       that.removeLine(getLine357());
-     MECE390CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
-     MECE390CoopPlan3Biomedicalelement.classList.add("course");
+     MECE390CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE390CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE390CoopPlan3Biomedical");
       MECE390CoopPlan3Biomedicalflag=false
   }
@@ -5807,16 +5807,16 @@ $scope.BME321CoopPlan3BiomedicalListener = function () {
  if (!BME321CoopPlan3Biomedicalflag) {
       that.addLine(getLine354());
       that.addLine(getLine369());
-     BME321CoopPlan3Biomedicalelement.classList.remove("course");
-     BME321CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["BME321CoopPlan3Biomedical", "course"]);
+     BME321CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES");
+     BME321CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES-highlighted");
+     that.addToClicked(["BME321CoopPlan3Biomedical", "BASICSCIENCES"]);
       BME321CoopPlan3Biomedicalflag=true
   }
  else {
       that.removeLine(getLine354());
       that.removeLine(getLine369());
-     BME321CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
-     BME321CoopPlan3Biomedicalelement.classList.add("course");
+     BME321CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
+     BME321CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
      that.removeFromClicked("BME321CoopPlan3Biomedical");
       BME321CoopPlan3Biomedicalflag=false
   }
@@ -5824,14 +5824,14 @@ $scope.BME321CoopPlan3BiomedicalListener = function () {
 $scope.ENGG404CoopPlan3BiomedicalListener = function () {
   var ENGG404CoopPlan3Biomedicalelement = document.getElementById("ENGG404CoopPlan3Biomedical");
  if (!ENGG404CoopPlan3Biomedicalflag) {
-     ENGG404CoopPlan3Biomedicalelement.classList.remove("course");
-     ENGG404CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["ENGG404CoopPlan3Biomedical", "course"]);
+     ENGG404CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION");
+     ENGG404CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG404CoopPlan3Biomedical", "ENGINEERINGPROFESSION"]);
       ENGG404CoopPlan3Biomedicalflag=true
   }
  else {
-     ENGG404CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
-     ENGG404CoopPlan3Biomedicalelement.classList.add("course");
+     ENGG404CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG404CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG404CoopPlan3Biomedical");
       ENGG404CoopPlan3Biomedicalflag=false
   }
@@ -6047,14 +6047,14 @@ $scope.CHE448CoopPlan3BiomedicalListener = function () {
 $scope.ENGG400CoopPlan3BiomedicalListener = function () {
   var ENGG400CoopPlan3Biomedicalelement = document.getElementById("ENGG400CoopPlan3Biomedical");
  if (!ENGG400CoopPlan3Biomedicalflag) {
-     ENGG400CoopPlan3Biomedicalelement.classList.remove("course");
-     ENGG400CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["ENGG400CoopPlan3Biomedical", "course"]);
+     ENGG400CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION");
+     ENGG400CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG400CoopPlan3Biomedical", "ENGINEERINGPROFESSION"]);
       ENGG400CoopPlan3Biomedicalflag=true
   }
  else {
-     ENGG400CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
-     ENGG400CoopPlan3Biomedicalelement.classList.add("course");
+     ENGG400CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG400CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG400CoopPlan3Biomedical");
       ENGG400CoopPlan3Biomedicalflag=false
   }
@@ -6243,14 +6243,14 @@ $scope.CHEM103CoopPlan4Listener = function () {
 $scope.ENGG100CoopPlan4Listener = function () {
   var ENGG100CoopPlan4element = document.getElementById("ENGG100CoopPlan4");
  if (!ENGG100CoopPlan4flag) {
-     ENGG100CoopPlan4element.classList.remove("course");
-     ENGG100CoopPlan4element.classList.add("course-highlighted");
-     that.addToClicked(["ENGG100CoopPlan4", "course"]);
+     ENGG100CoopPlan4element.classList.remove("ENGINEERINGPROFESSION");
+     ENGG100CoopPlan4element.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG100CoopPlan4", "ENGINEERINGPROFESSION"]);
       ENGG100CoopPlan4flag=true
   }
  else {
-     ENGG100CoopPlan4element.classList.remove("course-highlighted");
-     ENGG100CoopPlan4element.classList.add("course");
+     ENGG100CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG100CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG100CoopPlan4");
       ENGG100CoopPlan4flag=false
   }
@@ -6500,15 +6500,15 @@ $scope.ENGG299CoopPlan4Listener = function () {
   var ENGG299CoopPlan4element = document.getElementById("ENGG299CoopPlan4");
  if (!ENGG299CoopPlan4flag) {
       that.addLine(getLine427());
-     ENGG299CoopPlan4element.classList.remove("course");
-     ENGG299CoopPlan4element.classList.add("course-highlighted");
-     that.addToClicked(["ENGG299CoopPlan4", "course"]);
+     ENGG299CoopPlan4element.classList.remove("ENGINEERINGPROFESSION");
+     ENGG299CoopPlan4element.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG299CoopPlan4", "ENGINEERINGPROFESSION"]);
       ENGG299CoopPlan4flag=true
   }
  else {
       that.removeLine(getLine427());
-     ENGG299CoopPlan4element.classList.remove("course-highlighted");
-     ENGG299CoopPlan4element.classList.add("course");
+     ENGG299CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG299CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG299CoopPlan4");
       ENGG299CoopPlan4flag=false
   }
@@ -6946,15 +6946,15 @@ $scope.ENGM310CoopPlan4Listener = function () {
   var ENGM310CoopPlan4element = document.getElementById("ENGM310CoopPlan4");
  if (!ENGM310CoopPlan4flag) {
       that.addLine(getLine462());
-     ENGM310CoopPlan4element.classList.remove("course");
-     ENGM310CoopPlan4element.classList.add("course-highlighted");
-     that.addToClicked(["ENGM310CoopPlan4", "course"]);
+     ENGM310CoopPlan4element.classList.remove("ENGINEERINGPROFESSION");
+     ENGM310CoopPlan4element.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGM310CoopPlan4", "ENGINEERINGPROFESSION"]);
       ENGM310CoopPlan4flag=true
   }
  else {
       that.removeLine(getLine462());
-     ENGM310CoopPlan4element.classList.remove("course-highlighted");
-     ENGM310CoopPlan4element.classList.add("course");
+     ENGM310CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGM310CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGM310CoopPlan4");
       ENGM310CoopPlan4flag=false
   }
@@ -7037,16 +7037,16 @@ $scope.MECE390CoopPlan4Listener = function () {
  if (!MECE390CoopPlan4flag) {
       that.addLine(getLine436());
       that.addLine(getLine437());
-     MECE390CoopPlan4element.classList.remove("course");
-     MECE390CoopPlan4element.classList.add("course-highlighted");
-     that.addToClicked(["MECE390CoopPlan4", "course"]);
+     MECE390CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
+     MECE390CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE390CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE390CoopPlan4flag=true
   }
  else {
       that.removeLine(getLine436());
       that.removeLine(getLine437());
-     MECE390CoopPlan4element.classList.remove("course-highlighted");
-     MECE390CoopPlan4element.classList.add("course");
+     MECE390CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE390CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE390CoopPlan4");
       MECE390CoopPlan4flag=false
   }
@@ -7124,14 +7124,14 @@ $scope.WKEXP905CoopPlan4Listener = function () {
 $scope.ENGG404CoopPlan4Listener = function () {
   var ENGG404CoopPlan4element = document.getElementById("ENGG404CoopPlan4");
  if (!ENGG404CoopPlan4flag) {
-     ENGG404CoopPlan4element.classList.remove("course");
-     ENGG404CoopPlan4element.classList.add("course-highlighted");
-     that.addToClicked(["ENGG404CoopPlan4", "course"]);
+     ENGG404CoopPlan4element.classList.remove("ENGINEERINGPROFESSION");
+     ENGG404CoopPlan4element.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG404CoopPlan4", "ENGINEERINGPROFESSION"]);
       ENGG404CoopPlan4flag=true
   }
  else {
-     ENGG404CoopPlan4element.classList.remove("course-highlighted");
-     ENGG404CoopPlan4element.classList.add("course");
+     ENGG404CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG404CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG404CoopPlan4");
       ENGG404CoopPlan4flag=false
   }
@@ -7245,14 +7245,14 @@ $scope.CHE448CoopPlan4Listener = function () {
 $scope.ENGG400CoopPlan4Listener = function () {
   var ENGG400CoopPlan4element = document.getElementById("ENGG400CoopPlan4");
  if (!ENGG400CoopPlan4flag) {
-     ENGG400CoopPlan4element.classList.remove("course");
-     ENGG400CoopPlan4element.classList.add("course-highlighted");
-     that.addToClicked(["ENGG400CoopPlan4", "course"]);
+     ENGG400CoopPlan4element.classList.remove("ENGINEERINGPROFESSION");
+     ENGG400CoopPlan4element.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG400CoopPlan4", "ENGINEERINGPROFESSION"]);
       ENGG400CoopPlan4flag=true
   }
  else {
-     ENGG400CoopPlan4element.classList.remove("course-highlighted");
-     ENGG400CoopPlan4element.classList.add("course");
+     ENGG400CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG400CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG400CoopPlan4");
       ENGG400CoopPlan4flag=false
   }
