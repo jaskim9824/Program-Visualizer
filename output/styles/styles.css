@@ -97,9 +97,9 @@ h3.planhead {
     margin-left: 0px;
     width: 125px;
     height: 33px;
-    position: absolute;
-    display: inline-block;
+    position: relative;
     left: 45vw;
+    top: 30px;
     font-size: 175%;
     text-align: center;
 }
@@ -108,6 +108,8 @@ h3.planhead {
 .display {
     width:fit-content;
     height: fit-content;
+    position: relative;
+    bottom: 30px;
 }
 
 /* Form styling */
@@ -134,7 +136,9 @@ label {
 
 /* Term header styling */
 .termheader {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 125%;
 }
 
 /* Text within a course box styling*/
@@ -324,6 +328,7 @@ label {
     position: relative;
     display: inline-block;
     left: 75vw;
+    bottom: 25px;
     text-align: center;
 }
 
@@ -333,6 +338,6 @@ label {
     width: 300px;
     position: relative;
     right: 50px;
-    bottom: 35px;
+    bottom: 85px;
     margin: 0;
 }
