@@ -94,8 +94,6 @@ def main():
             formTag = mainTag.find("form")
             # locating legend tag
             legendTag = mainTag.find("div", class_="legend")
-            # locating linelegend tag
-            lineLegendTag = mainTag.find("div", class_="linelegend")
             # locating display tag, this is where the course divs will be written
             displayTag = mainTag.find("div", class_="display")
 
@@ -105,7 +103,6 @@ def main():
             htmlgen.switchTitle(titleTag, deptName)
             htmlgen.placeRadioInputs(formTag, sequenceDict, soup)
             htmlgen.placeLegend(legendTag, sequenceDict, soup)
-            htmlgen.placeLineLegend(lineLegendTag, soup, lineManager, indexJS)
             htmlgen.placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager)
 
             #closing JS files

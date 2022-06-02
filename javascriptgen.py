@@ -108,8 +108,6 @@ def generateEnableSwitchStatement(sequenceDict, controller):
         element.classList.remove(this.{planName}Clicked[i][1]);
         element.classList.add(this.{planName}Clicked[i][1]+"-highlighted");
     }}
-    this.addLine(getLine0())
-    this.addLine(getLine1())
     break; \n"""
     switchEndString = """    default:
     console.log("shouldn't be here");
@@ -147,8 +145,6 @@ switch($scope.selectedPlan) {{ \n"""
         controller.write(formattedAddLineSwitchStatement.format(planName=cleaner.cleanString(plan)))
     controller.write(switchEndString)
 
-    controller.write("this.addLine(getLine0())\n")
-    controller.write("this.addLine(getLine1())\n")
 
 # Function that generates the switch statement and function removeLine
 # Parameters:
