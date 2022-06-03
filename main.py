@@ -78,7 +78,7 @@ def main():
             # parsing the excel files with course info, pulls dependencies (prereqs, coreqs, reqs) too
             courseDict = parse("Courses.xls")
             # pulling the category and color info from excel
-            courseDict, categoryDict = pullCategories("CourseCategories.xls", courseDict)
+            courseDict, categoryDict, categoryList = pullCategories("CourseCategories.xls", courseDict)
             # sequencing courses
             sequenceDict, deptName = pullSeq("Sequencing.xls", courseDict)
 
@@ -102,7 +102,7 @@ def main():
             #placing the HTML and generating JS based on the courses (drawing lines)
             htmlgen.switchTitle(titleTag, deptName)
             htmlgen.placeRadioInputs(formTag, sequenceDict, soup)
-            htmlgen.placeLegend(legendTag, sequenceDict, soup)  # places legend for color-coding
+            htmlgen.placeLegend(legendTag, categoryList, soup)  # places legend for color-coding
             htmlgen.placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager)
 
             #closing JS files

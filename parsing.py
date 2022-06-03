@@ -40,7 +40,7 @@ class Course:
         self.calc_fee_index = str(calc_fee_index)
         self.actual_fee_index = str(actual_fee_index)
         self.duration = str(duration)
-        self.alpha_hours = str(alpha_hours)
+        self.alpha_hours = str(alpha_hours).lower()
         self.course_description = str(course_description)
         self.category = str(category)
         self.color = str(color)
@@ -108,20 +108,6 @@ def parse(filename):
 
     except FileNotFoundError:
         print("Excel file not found, ensure it is present and the name is correct.")
-
-
-def splitLine(filename, contents):
-    # Creates a new line right after all "}" chars. Useful for 
-    # JSON processing.
-    #
-    # Arguments:
-    #   filename (string): name of the output file
-    #   contents (string): file object of the file to be processed 
-    #
-    # Returns: none. Writes to the output file
-
-    with open(filename, "w+") as f:
-        f.write(contents.replace("}", "}\n"))
 
 
 def countNums(str):
@@ -579,7 +565,7 @@ def pullSeq(filename, course_obj_dict):
             term_name = sheet.cell_value(0, col)  # first entry in col must be the term name
             term_list = []  # stores Course objects in a list for that term
             for row in range(1, sheet.nrows):
-                name = sheet.cell_value(row, col)
+                name = str(sheet.cell_value(row, col))
                 name = name.upper()  # course name must be uppercase
                 # Remove unnecessary white space
                 name = name.strip()
@@ -599,8 +585,22 @@ def pullSeq(filename, course_obj_dict):
                     term_list.append(deepcopy(course_obj_dict["ITS Elective"]))
                     continue
 
+                if "OR" in name:
+                    namelist = name.split("OR")
+                    for orname in namelist:
+                        orname = orname.strip()
+                        assert orname in course_obj_dict, ("The course in the Sequencing.xls file called " + 
+                            name + " on sheet " + sheet.name + " on row " + str(row) + " and column " + str(col) +
+                            " is not present in the Excel file with the course information.")
+                        orcourse = deepcopy(course_obj_dict[orname])
+                        orcourse.calendar_print = "or"
+                        term_list.append(orcourse)
+                    plan_dict[term_name] = term_list
+                    row += 1
+                    continue
+
                 assert name in course_obj_dict, ("The course in the Sequencing.xls file called " + 
-                    sheet.cell_value(row, col) + " on sheet " + sheet.name + " on row " + row + " and column " + col +
+                    name + " on sheet " + sheet.name + " on row " + str(row) + " and column " + str(col) +
                     " is not present in the Excel file with the course information.")
 
                 # deepcopy since sequencing leads to prereqs and coreqs not being the same between different plans
@@ -677,11 +677,15 @@ def checkReqs(course_seq):
                         i += 1
 
                     if coreqlist != []:
-                        if coreqlist[0] not in term_names:
-                            # The coreq course in not taken in the same term,
-                            # it is really a prereq
-                            course.prereqs.append(coreqlist[0])
-                            del course.coreqs[course.coreqs.index(coreq)]
+                        coreq_count = 0
+                        while coreq_count < len(coreqlist):
+                            if coreqlist[coreq_count] not in term_names:
+                                # The coreq course in not taken in the same term,
+                                # it is really a prereq
+                                course.prereqs.append(coreqlist[coreq_count])
+                                if coreq in course.coreqs:
+                                    del course.coreqs[course.coreqs.index(coreq)]
+                            coreq_count += 1
 
                 # Analagous situation but for prereqs (not coreqs)
                 for prereq in course.prereqs:
@@ -699,11 +703,15 @@ def checkReqs(course_seq):
                         i += 1
 
                     if prereqlist != []:
-                        if prereqlist[0] in term_names:
-                            # The prereq course in not taken in the same term,
-                            # it is really a coreq
-                            course.coreqs.append(prereqlist[0])
-                            del course.prereqs[course.prereqs.index(prereq)]
+                        prereq_count = 0
+                        while prereq_count < len(prereqlist):
+                            if prereqlist[prereq_count] in term_names:
+                                # The prereq course is taken in the same term,
+                                # it is really a coreq
+                                course.coreqs.append(prereqlist[prereq_count])
+                                if prereq in course.prereqs:
+                                    del course.prereqs[course.prereqs.index(prereq)]
+                            prereq_count += 1
     return course_seq
 
 
@@ -772,6 +780,7 @@ def pullCategories(filename, course_obj_dict):
 
     try:
         category_dict = {}
+        category_list = []
         book = xlrd.open_workbook(filename)
         sheet = book.sheet_by_index(0)
 
@@ -787,6 +796,8 @@ def pullCategories(filename, course_obj_dict):
                 color = str(sheet.cell_value(1, col))
 
             category_dict[cat_name] = color  # store the category and color in a dict
+            cat_list_item = [cat_name, color]  # store the category and color in list (order preserved)
+            category_list.append(cat_list_item)
 
             # Create a new course object if an elective because elective info is not in course_obj_dict
             if cat_name.upper().strip() == "COMP":
@@ -816,4 +827,4 @@ def pullCategories(filename, course_obj_dict):
     except FileNotFoundError:
         print("CourseCategories.xls is not in the current folder")
 
-    return course_obj_dict, category_dict
+    return course_obj_dict, category_dict, category_list

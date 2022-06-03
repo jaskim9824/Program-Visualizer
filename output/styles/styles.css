@@ -91,15 +91,12 @@ header {
 
 /* Plan header styling*/
 h3.planhead {
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
+    margin: 0;
     width: 125px;
     height: 33px;
     position: relative;
     left: 45vw;
-    top: 30px;
+    top: 50px;
     font-size: 175%;
     text-align: center;
 }
@@ -118,7 +115,7 @@ h3.planhead {
     position: absolute;
     display: inline-block;
     left: 45vw;
-    margin-top: 27px;
+    margin-top: 50px;
 }
 
 /* Form text styling */
@@ -132,11 +129,14 @@ label {
 .term {
     margin-left: 60px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Term header styling */
 .termheader {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-align: center;
     font-size: 125%;
 }
@@ -144,16 +144,37 @@ label {
 /* Text within a course box styling*/
 .embed {
     text-align: center;
+    position: relative;
+    bottom: 3px;
 }
       
 /* Course box styling */
-.course {
+.course, .orcourse {
     border-style: solid;
     border-color: black;
     border-width: 2px;
     height: 50px;
     width: 150px;
-    margin-bottom: 50px;
+}
+
+.orcourse {
+    margin: 8px;
+}
+
+.ortext {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    left: 40%;
+}
+
+p.ortext {
+    width: 25px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 10px;
 }
 
 /* Complementray elective box*/
@@ -168,7 +189,7 @@ label {
 }
 
 /* Default course hover */
-.course:hover {
+.course:hover, .orcourse:hover {
     background-color: #f2cd00;
     border-color:#f2cd00;
 }
@@ -184,8 +205,18 @@ label {
     background-color: #f2cd00;
 }
 
+.orcourse-highlighted {
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    height: 50px;
+    width: 150px;
+    margin-bottom: 8px;
+    background-color: #f2cd00;
+}
+
 /* Default highlighted hover */
-.course-highlighted:hover {
+.course-highlighted:hover, .orcourse-highlighted:hover {
     background-color: #f2cd00;
     border-color:#f2cd00;
 }
@@ -202,7 +233,7 @@ label {
 .tooltip .tooltiptextright {
     /* Most properties taken from Calendar */
     visibility: hidden;
-    width: 47.4vw;
+    width: 48vw;
     padding: 0px 10px;
     background-color: #EEEEEE;
     border: 1px solid #444444;
@@ -338,6 +369,12 @@ label {
     width: 300px;
     position: relative;
     right: 50px;
-    bottom: 85px;
+    bottom: 100px;
     margin: 0;
+}
+
+.coursecontainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
 }

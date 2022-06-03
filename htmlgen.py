@@ -46,18 +46,11 @@ def placeRadioInputs(formTag, sequenceDict, soup):
 #   legendTag - HTML tag representing div which holds the category color legend
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   soup - soup object, used to create HTML tags
-def placeLegend(legendTag, sequenceDict, soup):
-    categoryDict = {}
-    for plan in sequenceDict:
-        for term in sequenceDict[plan]:
-            for course in sequenceDict[plan][term]:
-                if course.category not in categoryDict.values():
-                    categoryDict[course.category] = course.color
-
-    for category in categoryDict:
-        coursecat = soup.new_tag("p", attrs={"id": category,
-                                        "style":"background-color:#" + categoryDict[category]})
-        coursecat.append(category)
+def placeLegend(legendTag, categoryList, soup):
+    for i in range(0, len(categoryList)):
+        coursecat = soup.new_tag("p", attrs={"id": categoryList[i][0],
+                                        "style":"background-color:#" + categoryList[i][1]})
+        coursecat.append(categoryList[i][0])
         legendTag.append(coursecat)
 
 
@@ -112,10 +105,12 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
 #   plan - name of plan whose terms are being placed
 #   termcounter - which term is currently being placed (int)
 def placeCourses(termTag, termList, soup, controller, plan, termcounter):
+    orCounter = 0
     for course in termList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan)
         courseContDiv = soup.new_tag("div", attrs={"class":"coursecontainer"})
         courseContClass = course.category.replace(" ", "")
+
         if (course.name == "Complementary Elective") or (course.name == "Program/Technical Elective") or (course.name == "ITS Elective"):
             # Formatting tooltip for elective: title is present but credits, availability, etc. are blank
             courseTitle = soup.new_tag("b", attrs={"class":"descriptiontitle"})
@@ -154,6 +149,12 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter):
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip " +courseContClass, 
                                                 "id": courseID, 
                                                 "ng-click":courseID+"Listener()"})
+            if course.calendar_print.lower().strip() == "or":
+                courseDiv = soup.new_tag("div", attrs={"class":"orcourse tooltip " + courseContClass,
+                                                "id": courseID,
+                                                "ng-click":courseID+"Listener()"})
+
+
             courseTitle = soup.new_tag("b", attrs={"class":"descriptiontitle"})
             courseTitle.append(course.name + " - " + course.long_title)
 
@@ -180,6 +181,7 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter):
         courseDescription = soup.new_tag("p", attrs={"class":"fulldescription"})
         courseDescription.append(course.course_description)
 
+
         courseDisc.append(courseTitle)
         courseDisc.append(courseLine)
         courseDisc.append(courseCredits)
@@ -192,6 +194,22 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter):
         courseHeader.append(course.name)
         courseDiv.append(courseHeader)
         courseDiv.append(courseDisc)
+
+        if course.calendar_print == "or":
+            if orCounter == 0:
+                firstCourseDiv = courseDiv 
+                orCounter += 1
+                controller.write("  var " + 
+                         courseID +
+                         "flag = false;\n")
+                continue
+            else:
+                courseContDiv.append(firstCourseDiv)
+                courseOr = soup.new_tag("p", attrs={"class":"ortext"})
+                courseOr.append("OR")
+                courseContDiv.append(courseOr)
+                orCounter = 0
+
         courseContDiv.append(courseDiv)
         termTag.append(courseContDiv)
         controller.write("  var " + 
