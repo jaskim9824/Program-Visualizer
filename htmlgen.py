@@ -82,12 +82,23 @@ def placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManag
 #   lineManager - line manager object, used to handle line placement and generation
 def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManager):
     termcounter = 0
+    itscounter = 0
+    progcounter = 0
+    compcounter = 0
     for term in planDict:
         termDiv = soup.new_tag("div", attrs={"class":"term"})
         termHeader = soup.new_tag("h3", attrs={"class":"termheader"})
         termHeader.append(term)
         termDiv.append(termHeader)
-        placeCourses(termDiv, planDict[term], soup, controller, plan, termcounter)
+        compcounter, progcounter, itscounter = placeCourses(termDiv, 
+                                                            planDict[term], 
+                                                            soup, 
+                                                            controller, 
+                                                            plan, 
+                                                            termcounter,
+                                                            compcounter,
+                                                            progcounter,
+                                                            itscounter)
         planTag.append(termDiv)
         termcounter += 1
     courseList = []
@@ -104,7 +115,7 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
 #   controller - file handle for controller.js, used to write to controller.js
 #   plan - name of plan whose terms are being placed
 #   termcounter - which term is currently being placed (int)
-def placeCourses(termTag, termList, soup, controller, plan, termcounter):
+def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcounter, progcounter, itscounter):
     orCounter = 0
     for course in termList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan)
@@ -128,21 +139,27 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter):
 
         if course.name == "Complementary Elective":
             # Class allows formatting so words fit in course box
+            courseID = courseID+str(compcounter)
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip COMP", 
-                                               "id": courseID, 
+                                               "id": courseID,
                                                "ng-click":courseID+"Listener()"})
+            compcounter += 1
 
         elif course.name == "Program/Technical Elective":
             # Class allows formatting so words fit in course box
+            courseID = courseID+str(progcounter)
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip PROG", 
                                                "id": courseID, 
                                                "ng-click":courseID+"Listener()"})
+            progcounter += 1
 
         elif course.name == "ITS Elective":
+            courseID = courseID+str(itscounter)
             # Class allows formatting so words fit in course box
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip ITS", 
                                                 "id": courseID, 
-                                                "ng-click":courseID+"Listener()"})
+                                                "ng-click":courseID+str(itscounter)+"Listener()"})
+            itscounter += 1
 
         else:
             # This is a regular course. All information should be available
@@ -215,3 +232,4 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter):
         controller.write("  var " + 
                          courseID +
                          "flag = false;\n")
+    return compcounter, progcounter, itscounter

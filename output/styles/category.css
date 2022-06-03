@@ -86,3 +86,14 @@
             background-color: #996633!important;
             border-color: #996633!important;
         }
+.Other:hover {
+            background-color: #68fcc8!important;
+            border-color: #68fcc8!important;
+        }
+        .Other-highlighted {
+            background-color: #68fcc8;
+        }
+        .Other-highlighted:hover {
+            background-color: #68fcc8!important;
+            border-color: #68fcc8!important;
+        }
