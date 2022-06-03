@@ -99,20 +99,20 @@
             </div>
             <div class="term">
                 <h3>Term 2</h3>
-                <div class="dropdown" ng-switch="courseSelected">
+                <div class="dropdown" ng-switch="alt1ASelected">
                     <div class="course" id="ECE 331" ng-switch-when="ECE 331" ng-click="ece331Listener()">
                         <h3 class="embed">ECE 331</h3>
                     </div>
-                    <div class="course" id="MEC E 331" ng-switch-when="MEC E 331" ng-click="mece331Listner()">
+                    <div class="course" id="MEC E 331" ng-switch-when="MEC E 331" ng-click="mece331Listener()">
                         <h3 class="embed">MEC E 331</h3>
                     </div>
                     <div class="dropdown-content">
-                        <input type="radio" name="courseselector" ng-model="courseSelected" 
+                        <input type="radio" name="courseselector" ng-model="alt1ASelected" 
                         value="ECE 331" 
-                        ng-change="changeListener1()">
+                        ng-change="alt1Aece331Listener()">
                         <label for="ECE 331">ECE 331</label><br>
-                        <input type="radio" name="courseselector" ng-model="courseSelected" value="MEC E 331" 
-                        ng-change="changeListener2()">
+                        <input type="radio" name="courseselector" ng-model="alt1ASelected" value="MEC E 331" 
+                        ng-change="alt1Amece331Listener()">
                         <label for="MEC E 331">MEC E 331</label><br>
                     </div>
                 </div>
@@ -435,7 +435,6 @@ evaluating as null -->
     app.controller("main", function ($scope) {
         // default plan selection 
         $scope.selectedPlan = "A";
-        $scope.courseSelected = "ECE 331";
 
         // for referencing this within a function
         var that = this;
@@ -454,9 +453,78 @@ evaluating as null -->
 
         // this is used to ensure the controller knows which plan the webpage is switching from
         this.previousPlan = $scope.selectedPlan;
-        this.courseSelected = $scope.courseSelected;
-        var switchFlag = 0;
-        this.temp = [];
+
+        $scope.alt1ASelected = "ECE 331";
+        this.alt1ASelected = $scope.alt1ASelected;
+
+        this.alt1Aece331temp = [];
+        this.alt1Amece331temp = [];
+
+        var alt1AFlag = $scope.alt1ASelected;
+
+        this.decrementActiveCount = function (line, alt, dest) {
+            switch(alt) {
+                case "alt1A":
+                    switch(dest) {
+                        case "ECE 331":
+                            var index = this.alt1Aece331temp.findIndex((element) => element[0] == line);
+                            if (index != -1) {
+                                this.alt1Aece331temp[index][1]--;
+                            }
+                            break;
+                        case "MEC E 331":
+                        var index = this.alt1Amece331temp.findIndex((element) => element[0] == line);
+                            if (index != -1) {
+                                this.alt1Amece331temp[index][1]--;
+                            }
+                            break;
+                        default:
+                            console.log("should never reach");
+                            break;
+                    }
+                    break;
+                default:
+                    console.log("should never reach");
+                    break;
+            }
+        };
+
+        this.incrementActiveCount = function (line, alt, dest) {
+            console.log(alt);
+            switch(alt) {
+                case "alt1A":
+                    switch(dest) {
+                        case "ECE 331":
+                            console.log("here");
+                            var index = this.alt1Aece331temp.findIndex((element) => element[0] == line);
+                            if (index == -1) {
+                                this.alt1Aece331temp.push([line, 1]);
+                            }
+                            else {
+                                this.alt1Aece331temp[index][1]++;
+                            }
+                            break;
+                        case "MEC E 331":
+                        var index = this.alt1Amece331temp.findIndex((element) => element[0] == line);
+                            if (index == -1) {
+                                this.alt1Amece331temp.push([line, 1]);
+                            }
+                            else {
+                                this.alt1Amece331temp[index][1]++;
+                            }
+                            break;
+                        default:
+                            console.log("should never reach");
+                            break;
+                    }
+                    break;
+                default:
+                    console.log("should never reach");
+                    break;
+            }
+        };
+
+
 
         /*
             Render method for switching leaderlines shown on screen when plan chosen changes
@@ -478,35 +546,55 @@ evaluating as null -->
             });
         });
 
-        $scope.changeListener1 = function () {
-            console.log($scope.courseSelected);
-            $scope.courseSelected = "ECE 331";
-            this.courseSelected = $scope.courseSelected;
-            switchFlag = 0;
-            for (let i = 0; i < this.temp.length; i++) {
-                this.planAList.push(this.temp[i]);
-                this.temp[i][0].show();
+        $scope.alt1Aece331Listener = function () {
+            $scope.alt1ASelected = "ECE 331";
+            switch(that.alt1ASelected) {
+                case "MEC E 331": 
+                    for (let i = 0; i < that.alt1Aece331temp.length; i++) {
+                        if (that.alt1Aece331temp[i][1] > 0) {
+                            that.alt1Aece331temp[i][0].show(true);
+                            that.planAList.push(that.alt1Aece331temp[i]);
+                        }
+                    }
+                    that.alt1Aece331temp = [];
+                    var index = that.planAList.findIndex(element => element[0] == getLine8());
+                    if (index != -1) {
+                        that.planAList[index][0].hide(true);
+                        that.alt1Amece331temp.push(that.planAList[index]);
+                        that.alt1Amece331temp.splice(index, 1);
+                    }
+                    break;
+                default:
+                    console.log("should never reach");
             }
-            this.temp = [];
-            var index = this.planAList.findIndex((element) => element[0] == getLine7());
-            if (index != 0) {
-                this.temp.push(this.planAList[index]);
-                this.planAList[index][0].hide();
-                this.planAList.splice(index, 1);
-            }
+            that.alt1ASelected = "ECE 331";
+            alt1AFlag = "ECE 331";
         }
 
-        $scope.changeListener2 = function () {
-            console.log($scope.courseSelected);
-            $scope.courseSelected = "MEC E 331";
-            this.courseSelected = $scope.courseSelected;
-            switchFlag = 1;
+        $scope.alt1Amece331Listener = function () {
+            $scope.alt1ASelected = "MEC E 331";
+            alt1AFlag = "MEC E 331";
+            switch(that.alt1ASelected) {
+                case "ECE 331": 
+                    for (let i = 0; i < that.alt1Amece331temp.length; i++) {
+                        if (that.alt1Amece331temp[i][1] > 0) {
+                            that.alt1Amece331temp[i][0].show(true);
+                            that.planAList.push(that.alt1Amece331temp[i]);
+                        }
+                    }
+                    that.alt1Amece331temp = [];
+                    var index = that.planAList.findIndex(element => element[0] == getLine7());
+                    if (index != -1) {
+                        that.planAList[index][0].hide(true);
+                        that.alt1Aece331temp.push(that.planAList[index]);
+                        that.alt1Aece331temp.splice(index, 1);
+                    }
+                    break;
+                default:
+                    console.log("should never reach");
+            }
+            that.alt1ASelected = "MEC E 331";
         }
-
-        
-
-        
- 
 
         /*
             Method to disable the activelines of the previously selected plan when switching to a new one
@@ -805,10 +893,8 @@ evaluating as null -->
         var ece401flag = false;
         var ece461flag = false;
         var ece102flag = false;
-
-        // for every course, intialize the variable controlling dialog box to ""
-        $scope.ece101courseinfo = "";
-        $scope.ece201courseinfo = "";
+        var ece331flag = false;
+        var mece331flag = false;
     
         // add a listener for every possible course, following the below format
         $scope.ece101Listener = function () {
@@ -821,10 +907,13 @@ evaluating as null -->
                 that.addLine(getLine1());
                 // that.addLine(getLine2());
                 // that.addLine(getLine4());
-                if (switchFlag == 0) {
+                if (alt1AFlag == "ECE 331") {
+                    console.log("enters here");
                     that.addLine(getLine7());
+                    that.incrementActiveCount(getLine8(), "alt1A", "MEC E 331");
                 }
-                else if (switchFlag == 1) {
+                else if (alt1AFlag == "MEC E 331") {
+                    that.incrementActiveCount(getLine7(), "alt1A", "ECE 331");
                     that.addLine(getLine8());
                 }
                 element.classList.remove("cateA");
@@ -840,10 +929,12 @@ evaluating as null -->
                 that.removeLine(getLine1());
                 // that.removeLine(getLine2());
                 // that.removeLine(getLine4());
-                if (switchFlag == 0) {
+                if (alt1AFlag == "ECE 331") {
                     that.removeLine(getLine7())
+                    that.decrementActiveCount(getLine8(), "alt1A", "MEC E 331");
                 }
-                else if (switchFlag == 1) {
+                else if (alt1AFlag == "MEC E 331") {
+                    that.decrementActiveCount(getLine7(), "alt1A", "ECE 331");
                     that.removeLine(getLine8())
                 }
                 element.classList.remove("cateA-highlighted");
@@ -920,8 +1011,28 @@ evaluating as null -->
             }
         };
 
- 
-        
+        $scope.ece331Listener = function () {
+            if (!ece331flag) {
+                that.addLine(getLine7());
+                ece331flag = true;
+            }
+            else {
+                that.removeLine(getLine7());
+                ece331flag = false;
+            }
+        }
+
+        $scope.mece331Listener = function () {
+            if (!mece331flag) {
+                that.addLine(getLine8());
+                mece331flag = true;
+            }
+            else {
+                that.removeLine(getLine8());
+                mece331flag = false;
+            }
+        }
+
     });
 </script>
 </body>
