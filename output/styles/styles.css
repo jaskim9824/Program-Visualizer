@@ -143,6 +143,16 @@ label {
     margin-bottom: 50px;
 }
 
+.orcoursecontainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    outline-color: #573578;
+    outline-width: 2px;
+    outline-style: solid;
+    outline-offset: 4px;
+}
+
 /* Text within a course box styling*/
 .embed {
     text-align: center;
@@ -151,7 +161,7 @@ label {
 }
       
 /* Course box styling */
-.course, .orcourse {
+.course, .orcoursetop, .orcoursebottom {
     border-style: solid;
     border-color: black;
     border-width: 2px;
@@ -160,8 +170,14 @@ label {
 }
 
 /* two option with "or" between them, smaller margin */
-.orcourse {
-    margin: 8px;
+.orcoursetop {
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+.orcoursebottom {
+    margin-top: 14px;
+    margin-bottom: 0;
 }
 
 /* format of the word "OR" container */
@@ -194,7 +210,7 @@ p.ortext {
 }
 
 /* Default course hover */
-.course:hover, .orcourse:hover {
+.course:hover, .orcoursetop:hover, .orcoursebottom:hover {
     background-color: #f2cd00;
     border-color:#f2cd00;
 }
@@ -211,7 +227,7 @@ p.ortext {
 }
 
 /* Makes sure margin of orcourse is unchanged */
-.orcourse-highlighted {
+.orcoursetop-highlighted, .orcourse-bottom-highlighted {
     border-style: solid;
     border-color: black;
     border-width: 2px;
@@ -222,7 +238,7 @@ p.ortext {
 }
 
 /* Default highlighted hover */
-.course-highlighted:hover, .orcourse-highlighted:hover {
+.course-highlighted:hover, .orcoursetop-highlighted:hover, .orcourse-bottom-highlighted:hover {
     background-color: #f2cd00;
     border-color:#f2cd00;
 }

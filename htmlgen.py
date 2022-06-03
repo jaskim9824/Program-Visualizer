@@ -120,6 +120,8 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
     for course in termList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan)
         courseContDiv = soup.new_tag("div", attrs={"class":"coursecontainer"})
+        if course.calendar_print == "or":
+            courseContDiv = soup.new_tag("div", attrs={"class":"orcoursecontainer"})
         courseContClass = course.category.replace(" ", "")
 
         if (course.name == "Complementary Elective") or (course.name == "Program/Technical Elective") or (course.name == "ITS Elective"):
@@ -167,7 +169,12 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
                                                 "id": courseID, 
                                                 "ng-click":courseID+"Listener()"})
             if course.calendar_print.lower().strip() == "or":
-                courseDiv = soup.new_tag("div", attrs={"class":"orcourse tooltip " + courseContClass,
+                if orCounter == 0:
+                    courseDiv = soup.new_tag("div", attrs={"class":"orcoursetop tooltip " + courseContClass,
+                                                "id": courseID,
+                                                "ng-click":courseID+"Listener()"})
+                else:
+                    courseDiv = soup.new_tag("div", attrs={"class":"orcoursebottom tooltip " + courseContClass,
                                                 "id": courseID,
                                                 "ng-click":courseID+"Listener()"})
 
