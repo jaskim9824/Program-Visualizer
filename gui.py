@@ -10,8 +10,10 @@
 # Dependencies: bs4, parsing, javascriptgen, htmlgen, linegen
 
 from encodings import utf_8
+import tkinter
 from turtle import back
 from bs4 import BeautifulSoup
+from numpy import pad
 from parsing import parse
 from parsing import pullCategories
 from parsing import pullSeq
@@ -20,6 +22,8 @@ import htmlgen
 import linegen
 import cleaner
 from tkinter import *
+from tkinter import messagebox
+from tkinter import ttk
 
 # Function that properly concludes and closes the controller JS
 #   controller - file handle for controller JS
@@ -56,18 +60,34 @@ def debug(sequenceDict):
                 print(course.name)
             print("\n")
         print("\n")
+
+#window
 root = Tk()
-courses_excel = Entry(root, width=50)
-courses_excel.pack()
-courses_excel.insert(0, "Enter course excel sheet")
+root.title('Web generator')
+root.geometry('700x200')
+root.resizable(0,0)
 
-course_cat_excel = Entry(root, width=50)
-course_cat_excel.pack()
-course_cat_excel.insert(1, "enter course cat. excel")
+paddings = {'padx': 20, 'pady': 5}
+entry_font = {'font': ('Helvetica', 11)}
 
-seq_excel = Entry(root, width=50)
-seq_excel.pack()
-seq_excel.insert(2, "enter seq excel")
+root.columnconfigure(0, weight=1)
+root.columnconfigure(1, weight=3)
+
+#course excel UI
+courses_excel = ttk.Entry(root, width=30, **entry_font)
+courses_excel.grid(row=0, column=2, **paddings)
+excelLabel = Label(root,text="Enter the Courses excel file (filename.xls):").grid(row=0, column=1, **paddings)
+
+#course category excel UI
+course_cat_excel = ttk.Entry(root, width=30, **entry_font)
+course_cat_excel.grid(row=1, column=2, **paddings)
+courseCat = Label(root, text="Enter Course Categories excel file (filename.xls):").grid(row=1, column=1,**paddings )
+
+#sequence excel UI
+seq_excel = ttk.Entry(root, width=30, **entry_font)
+seq_excel.grid(row=2, column=2, **paddings)
+seqLabel = Label(root, text="Enter course sequencing file (filename.xls):").grid(row=2, column=1, **paddings)
+
 
 # Main function   
 def main():
@@ -91,7 +111,7 @@ def main():
             # parsing the excel files with course info, pulls dependencies (prereqs, coreqs, reqs) too
             courseDict = parse(courses_excel.get())
             # pulling the category and color info from excel
-            courseDict, categoryDict = pullCategories(course_cat_excel.get(), courseDict)
+            courseDict, categoryDict, categoryList = pullCategories(course_cat_excel.get(), courseDict)
             # sequencing courses
             sequenceDict, deptName = pullSeq(seq_excel.get(), courseDict)
 
@@ -115,7 +135,7 @@ def main():
             #placing the HTML and generating JS based on the courses (drawing lines)
             htmlgen.switchTitle(titleTag, deptName)
             htmlgen.placeRadioInputs(formTag, sequenceDict, soup)
-            htmlgen.placeLegend(legendTag, sequenceDict, soup)  # places legend for color-coding
+            htmlgen.placeLegend(legendTag, categoryList, soup)  # places legend for color-coding
             htmlgen.placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager)
 
             #closing JS files
@@ -131,6 +151,11 @@ def main():
        err.strerror + 
        ". Either the template HTML file is not in the same directory as the script or" +
        " the output directory is not organized correctly or does not exist")
+       #gui error box
+       messagebox.showerror('Python Error', "Exception raised: " + 
+       err.strerror + 
+       ". Either the template HTML file is not in the same directory as the script or" +
+       " the output directory is not organized correctly or does not exist")
 
     # writing output to an output html
     try:
@@ -141,8 +166,13 @@ def main():
        print("Exception raised: " + 
              err.strerror + 
              ". The directory you are in does not have a directory named output.")
-        
-button_main = Button(root, text="Run main", command=main)
-button_main.pack()
 
-root.mainloop()
+
+        
+button_main = ttk.Button(root, text="Generate website", command=main)
+button_main.grid(row=3, column=2, **paddings)
+
+
+
+if __name__ == "__main__":
+    root.mainloop()

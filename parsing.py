@@ -16,6 +16,7 @@
 
 import xlrd
 from copy import deepcopy
+from tkinter import messagebox
 
 class Course:
     # Stores all data about each course
@@ -108,6 +109,8 @@ def parse(filename):
 
     except FileNotFoundError:
         print("Excel file not found, ensure it is present and the name is correct.")
+        #gui error box
+        messagebox.showerror('python Error', 'Error: Excel file not found, ensure it is present and the name is correct.')
 
 
 def countNums(str):
@@ -840,5 +843,7 @@ def pullCategories(filename, course_obj_dict):
                     course_obj_dict[name].color = color
     except FileNotFoundError:
         print("CourseCategories.xls is not in the current folder")
+        #for gui error box
+        messagebox.showerror('Python Error', "CourseCategories.xls is not in the current folder")
 
     return course_obj_dict, category_dict, category_list
