@@ -60,7 +60,8 @@ def debug(sequenceDict):
                 print(course.name)
             print("\n")
         print("\n")
-        
+
+#######GUI#########    
 #window
 root = Tk()
 root.title('Web generator')
