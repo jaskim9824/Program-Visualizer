@@ -108,9 +108,10 @@ def parse(filename):
         return course_obj_dict
 
     except FileNotFoundError:
-        print("Excel file not found, ensure it is present and the name is correct.")
-        #gui error box
-        messagebox.showerror('python Error', 'Error: Excel file not found, ensure it is present and the name is correct.')
+        print("Excel course information file not found, ensure it is present and the name is correct.")
+    except xlrd.biffh.XLRDError:
+        print("Error reading data from Course information Excel sheet. Ensure it is \
+            formatted exactly as specified")
 
 
 def countNums(str):
@@ -550,71 +551,78 @@ def pullSeq(filename, course_obj_dict):
     #   course_seq (dictionary): Key is plan name, value is another dict with 
     #   term name as the key and a list of the Course objects taken in that term as value.
 
-    book = xlrd.open_workbook(filename)
-    numsheets = book.nsheets
-    course_seq = {}
+    try:
+        book = xlrd.open_workbook(filename)
+        numsheets = book.nsheets
+        course_seq = {}
 
-    for i in range(0, numsheets):
-        # Each sheet stores a plan (traditional, co-op plan 1, etc.)
-        plan_dict = {}
-        sheet = book.sheet_by_index(i)
-        if i == 0:
-            dept_name = sheet.cell_value(0, 0)
-            col = 1
-        else:
-            col = 0
-        while col < sheet.ncols:
-            # Each column represents a term
-            term_name = sheet.cell_value(0, col)  # first entry in col must be the term name
-            term_list = []  # stores Course objects in a list for that term
-            for row in range(1, sheet.nrows):
-                name = str(sheet.cell_value(row, col))
-                name = name.upper()  # course name must be uppercase
-                # Remove unnecessary white space
-                name = name.strip()
-                name = name.replace("  ", " ")
-                if name == "":
-                    # Cell in Excel is empty, skip over this cell
-                    continue
+        for i in range(0, numsheets):
+            # Each sheet stores a plan (traditional, co-op plan 1, etc.)
+            plan_dict = {}
+            sheet = book.sheet_by_index(i)
+            if i == 0:
+                dept_name = sheet.cell_value(0, 0)
+                col = 1
+            else:
+                col = 0
+            while col < sheet.ncols:
+                # Each column represents a term
+                term_name = sheet.cell_value(0, col)  # first entry in col must be the term name
+                term_list = []  # stores Course objects in a list for that term
+                for row in range(1, sheet.nrows):
+                    name = str(sheet.cell_value(row, col))
+                    name = name.upper()  # course name must be uppercase
+                    # Remove unnecessary white space
+                    name = name.strip()
+                    name = name.replace("  ", " ")
+                    if name == "":
+                        # Cell in Excel is empty, skip over this cell
+                        continue
 
-                if name == "PROG":
-                    # Create Course obj with only name and course_description attribute
-                    term_list.append(deepcopy(course_obj_dict["Program/Technical Elective"]))
-                    continue
-                if name == "COMP":
-                    term_list.append(deepcopy(course_obj_dict["Complementary Elective"]))
-                    continue
-                if name == "ITS":
-                    term_list.append(deepcopy(course_obj_dict["ITS Elective"]))
-                    continue
+                    if name == "PROG":
+                        # Create Course obj with only name and course_description attribute
+                        term_list.append(deepcopy(course_obj_dict["Program/Technical Elective"]))
+                        continue
+                    if name == "COMP":
+                        term_list.append(deepcopy(course_obj_dict["Complementary Elective"]))
+                        continue
+                    if name == "ITS":
+                        term_list.append(deepcopy(course_obj_dict["ITS Elective"]))
+                        continue
 
-                if "OR" in name:
-                    namelist = name.split("OR")
-                    for orname in namelist:
-                        orname = orname.strip()
-                        assert orname in course_obj_dict, ("The course in the Sequencing.xls file called " + 
-                            name + " on sheet " + sheet.name + " on row " + str(row) + " and column " + str(col) +
-                            " is not present in the Excel file with the course information.")
-                        orcourse = deepcopy(course_obj_dict[orname])
-                        orcourse.calendar_print = "or"
-                        term_list.append(orcourse)
-                    plan_dict[term_name] = term_list
-                    row += 1
-                    continue
+                    if "OR" in name:
+                        namelist = name.split("OR")
+                        for orname in namelist:
+                            orname = orname.strip()
+                            assert orname in course_obj_dict, ("The course in the Sequencing.xls file called " + 
+                                name + " on sheet " + sheet.name + " on row " + str(row) + " and column " + str(col) +
+                                " is not present in the Excel file with the course information.")
+                            orcourse = deepcopy(course_obj_dict[orname])
+                            orcourse.calendar_print = "or"
+                            term_list.append(orcourse)
+                        plan_dict[term_name] = term_list
+                        row += 1
+                        continue
 
-                assert name in course_obj_dict, ("The course in the Sequencing.xls file called " + 
-                    name + " on sheet " + sheet.name + " on row " + str(row) + " and column " + str(col) +
-                    " is not present in the Excel file with the course information.")
+                    assert name in course_obj_dict, ("The course in the Sequencing.xls file called " + 
+                        name + " on sheet " + sheet.name + " on row " + str(row) + " and column " + str(col) +
+                        " is not present in the Excel file with the course information.")
 
-                # deepcopy since sequencing leads to prereqs and coreqs not being the same between different plans
-                term_list.append(deepcopy(course_obj_dict[name]))  # store each course in a list
-            plan_dict[term_name] = term_list  # store each list in a dict (key is term name)
-            col += 1
-        course_seq[sheet.name] = plan_dict  # store each term dict in a plan dict (key is plan name (traditional, etc.))
+                    # deepcopy since sequencing leads to prereqs and coreqs not being the same between different plans
+                    term_list.append(deepcopy(course_obj_dict[name]))  # store each course in a list
+                plan_dict[term_name] = term_list  # store each list in a dict (key is term name)
+                col += 1
+            course_seq[sheet.name] = plan_dict  # store each term dict in a plan dict (key is plan name (traditional, etc.))
 
-    # Make sure that co-reqs are only for courses in the same term
-    # Had to do this after pulling from Sequencing.xls
-    course_seq = checkReqs(course_seq)
+        # Make sure that co-reqs are only for courses in the same term
+        # Had to do this after pulling from Sequencing.xls
+        course_seq = checkReqs(course_seq)
+
+    except FileNotFoundError:
+        print("Excel sequencing file not found, ensure it is present and the name is correct.")
+    except xlrd.biffh.XLRDError:
+        print("Error reading data from sequencing Excel sheet. Ensure it is \
+            formatted exactly as specified")
 
     return course_seq, dept_name
 
@@ -842,8 +850,9 @@ def pullCategories(filename, course_obj_dict):
                     course_obj_dict[name].category = cat_name
                     course_obj_dict[name].color = color
     except FileNotFoundError:
-        print("CourseCategories.xls is not in the current folder")
-        #for gui error box
-        messagebox.showerror('Python Error', "CourseCategories.xls is not in the current folder")
+        print("Excel course categories file not found, ensure it is present and the name is correct.")
+    except xlrd.biffh.XLRDError:
+        print("Error reading data from course categories Excel sheet. Ensure it is \
+            formatted exactly as specified")
 
     return course_obj_dict, category_dict, category_list

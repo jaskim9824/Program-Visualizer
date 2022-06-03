@@ -413,7 +413,8 @@ footer {
 /* copyright logo and text */
 #copyright {
     position: relative;
-    left: 50vw;
+    left: 60vw;
     color: #FFFFFF;
     font-family: 'Roboto',sans-serif;
+    font-size: 75%;
 }
