@@ -1206,19 +1206,19 @@ $scope.MECE390TraditionalPlanListener = function () {
       MECE390TraditionalPlanflag=false
   }
 };
-$scope.ComplementaryElectiveTraditionalPlanListener = function () {
-  var ComplementaryElectiveTraditionalPlanelement = document.getElementById("ComplementaryElectiveTraditionalPlan");
- if (!ComplementaryElectiveTraditionalPlanflag) {
-     ComplementaryElectiveTraditionalPlanelement.classList.remove("ComplementaryElective");
-     ComplementaryElectiveTraditionalPlanelement.classList.add("ComplementaryElective-highlighted");
-     that.addToClicked(["ComplementaryElectiveTraditionalPlan", "ComplementaryElective"]);
-      ComplementaryElectiveTraditionalPlanflag=true
+$scope.ComplementaryElectiveTraditionalPlan0Listener = function () {
+  var ComplementaryElectiveTraditionalPlan0element = document.getElementById("ComplementaryElectiveTraditionalPlan0");
+ if (!ComplementaryElectiveTraditionalPlan0flag) {
+     ComplementaryElectiveTraditionalPlan0element.classList.remove("COMP");
+     ComplementaryElectiveTraditionalPlan0element.classList.add("COMP-highlighted");
+     that.addToClicked(["ComplementaryElectiveTraditionalPlan0", "COMP"]);
+      ComplementaryElectiveTraditionalPlan0flag=true
   }
  else {
-     ComplementaryElectiveTraditionalPlanelement.classList.remove("ComplementaryElective-highlighted");
-     ComplementaryElectiveTraditionalPlanelement.classList.add("ComplementaryElective");
-     that.removeFromClicked("ComplementaryElectiveTraditionalPlan");
-      ComplementaryElectiveTraditionalPlanflag=false
+     ComplementaryElectiveTraditionalPlan0element.classList.remove("COMP-highlighted");
+     ComplementaryElectiveTraditionalPlan0element.classList.add("COMP");
+     that.removeFromClicked("ComplementaryElectiveTraditionalPlan0");
+      ComplementaryElectiveTraditionalPlan0flag=false
   }
 };
 $scope.ENGG404TraditionalPlanListener = function () {
@@ -1295,49 +1295,49 @@ $scope.MECE463TraditionalPlanListener = function () {
       MECE463TraditionalPlanflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlanListener = function () {
-  var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
- if (!ProgramTechnicalElectiveTraditionalPlanflag) {
-     ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveTraditionalPlanelement.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveTraditionalPlanflag=true
+$scope.ProgramTechnicalElectiveTraditionalPlan0Listener = function () {
+  var ProgramTechnicalElectiveTraditionalPlan0element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan0");
+ if (!ProgramTechnicalElectiveTraditionalPlan0flag) {
+     ProgramTechnicalElectiveTraditionalPlan0element.classList.remove("PROG");
+     ProgramTechnicalElectiveTraditionalPlan0element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan0", "PROG"]);
+      ProgramTechnicalElectiveTraditionalPlan0flag=true
   }
  else {
-     ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveTraditionalPlanelement.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan");
-      ProgramTechnicalElectiveTraditionalPlanflag=false
+     ProgramTechnicalElectiveTraditionalPlan0element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveTraditionalPlan0element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan0");
+      ProgramTechnicalElectiveTraditionalPlan0flag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlanListener = function () {
-  var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
- if (!ProgramTechnicalElectiveTraditionalPlanflag) {
-     ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveTraditionalPlanelement.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveTraditionalPlanflag=true
+$scope.ProgramTechnicalElectiveTraditionalPlan1Listener = function () {
+  var ProgramTechnicalElectiveTraditionalPlan1element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan1");
+ if (!ProgramTechnicalElectiveTraditionalPlan1flag) {
+     ProgramTechnicalElectiveTraditionalPlan1element.classList.remove("PROG");
+     ProgramTechnicalElectiveTraditionalPlan1element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan1", "PROG"]);
+      ProgramTechnicalElectiveTraditionalPlan1flag=true
   }
  else {
-     ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveTraditionalPlanelement.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan");
-      ProgramTechnicalElectiveTraditionalPlanflag=false
+     ProgramTechnicalElectiveTraditionalPlan1element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveTraditionalPlan1element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan1");
+      ProgramTechnicalElectiveTraditionalPlan1flag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlanListener = function () {
-  var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
- if (!ProgramTechnicalElectiveTraditionalPlanflag) {
-     ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveTraditionalPlanelement.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveTraditionalPlanflag=true
+$scope.ProgramTechnicalElectiveTraditionalPlan2Listener = function () {
+  var ProgramTechnicalElectiveTraditionalPlan2element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2");
+ if (!ProgramTechnicalElectiveTraditionalPlan2flag) {
+     ProgramTechnicalElectiveTraditionalPlan2element.classList.remove("PROG");
+     ProgramTechnicalElectiveTraditionalPlan2element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2", "PROG"]);
+      ProgramTechnicalElectiveTraditionalPlan2flag=true
   }
  else {
-     ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveTraditionalPlanelement.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan");
-      ProgramTechnicalElectiveTraditionalPlanflag=false
+     ProgramTechnicalElectiveTraditionalPlan2element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveTraditionalPlan2element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2");
+      ProgramTechnicalElectiveTraditionalPlan2flag=false
   }
 };
 $scope.CHE448TraditionalPlanListener = function () {
@@ -1470,34 +1470,34 @@ $scope.MECE460TraditionalPlanListener = function () {
       MECE460TraditionalPlanflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlanListener = function () {
-  var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
- if (!ProgramTechnicalElectiveTraditionalPlanflag) {
-     ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveTraditionalPlanelement.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveTraditionalPlanflag=true
+$scope.ProgramTechnicalElectiveTraditionalPlan3Listener = function () {
+  var ProgramTechnicalElectiveTraditionalPlan3element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan3");
+ if (!ProgramTechnicalElectiveTraditionalPlan3flag) {
+     ProgramTechnicalElectiveTraditionalPlan3element.classList.remove("PROG");
+     ProgramTechnicalElectiveTraditionalPlan3element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan3", "PROG"]);
+      ProgramTechnicalElectiveTraditionalPlan3flag=true
   }
  else {
-     ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveTraditionalPlanelement.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan");
-      ProgramTechnicalElectiveTraditionalPlanflag=false
+     ProgramTechnicalElectiveTraditionalPlan3element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveTraditionalPlan3element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan3");
+      ProgramTechnicalElectiveTraditionalPlan3flag=false
   }
 };
-$scope.ITSElectiveTraditionalPlanListener = function () {
-  var ITSElectiveTraditionalPlanelement = document.getElementById("ITSElectiveTraditionalPlan");
- if (!ITSElectiveTraditionalPlanflag) {
-     ITSElectiveTraditionalPlanelement.classList.remove("ITSElective");
-     ITSElectiveTraditionalPlanelement.classList.add("ITSElective-highlighted");
-     that.addToClicked(["ITSElectiveTraditionalPlan", "ITSElective"]);
-      ITSElectiveTraditionalPlanflag=true
+$scope.ITSElectiveTraditionalPlan0Listener = function () {
+  var ITSElectiveTraditionalPlan0element = document.getElementById("ITSElectiveTraditionalPlan0");
+ if (!ITSElectiveTraditionalPlan0flag) {
+     ITSElectiveTraditionalPlan0element.classList.remove("ITS");
+     ITSElectiveTraditionalPlan0element.classList.add("ITS-highlighted");
+     that.addToClicked(["ITSElectiveTraditionalPlan0", "ITS"]);
+      ITSElectiveTraditionalPlan0flag=true
   }
  else {
-     ITSElectiveTraditionalPlanelement.classList.remove("ITSElective-highlighted");
-     ITSElectiveTraditionalPlanelement.classList.add("ITSElective");
-     that.removeFromClicked("ITSElectiveTraditionalPlan");
-      ITSElectiveTraditionalPlanflag=false
+     ITSElectiveTraditionalPlan0element.classList.remove("ITS-highlighted");
+     ITSElectiveTraditionalPlan0element.classList.add("ITS");
+     that.removeFromClicked("ITSElectiveTraditionalPlan0");
+      ITSElectiveTraditionalPlan0flag=false
   }
 };
   var CHEM103AlternatePlanflag = false;
@@ -1897,34 +1897,34 @@ $scope.MATH209AlternatePlanListener = function () {
       MATH209AlternatePlanflag=false
   }
 };
-$scope.ComplementaryElectiveAlternatePlanListener = function () {
-  var ComplementaryElectiveAlternatePlanelement = document.getElementById("ComplementaryElectiveAlternatePlan");
- if (!ComplementaryElectiveAlternatePlanflag) {
-     ComplementaryElectiveAlternatePlanelement.classList.remove("ComplementaryElective");
-     ComplementaryElectiveAlternatePlanelement.classList.add("ComplementaryElective-highlighted");
-     that.addToClicked(["ComplementaryElectiveAlternatePlan", "ComplementaryElective"]);
-      ComplementaryElectiveAlternatePlanflag=true
+$scope.ComplementaryElectiveAlternatePlan0Listener = function () {
+  var ComplementaryElectiveAlternatePlan0element = document.getElementById("ComplementaryElectiveAlternatePlan0");
+ if (!ComplementaryElectiveAlternatePlan0flag) {
+     ComplementaryElectiveAlternatePlan0element.classList.remove("COMP");
+     ComplementaryElectiveAlternatePlan0element.classList.add("COMP-highlighted");
+     that.addToClicked(["ComplementaryElectiveAlternatePlan0", "COMP"]);
+      ComplementaryElectiveAlternatePlan0flag=true
   }
  else {
-     ComplementaryElectiveAlternatePlanelement.classList.remove("ComplementaryElective-highlighted");
-     ComplementaryElectiveAlternatePlanelement.classList.add("ComplementaryElective");
-     that.removeFromClicked("ComplementaryElectiveAlternatePlan");
-      ComplementaryElectiveAlternatePlanflag=false
+     ComplementaryElectiveAlternatePlan0element.classList.remove("COMP-highlighted");
+     ComplementaryElectiveAlternatePlan0element.classList.add("COMP");
+     that.removeFromClicked("ComplementaryElectiveAlternatePlan0");
+      ComplementaryElectiveAlternatePlan0flag=false
   }
 };
-$scope.ITSElectiveAlternatePlanListener = function () {
-  var ITSElectiveAlternatePlanelement = document.getElementById("ITSElectiveAlternatePlan");
- if (!ITSElectiveAlternatePlanflag) {
-     ITSElectiveAlternatePlanelement.classList.remove("ITSElective");
-     ITSElectiveAlternatePlanelement.classList.add("ITSElective-highlighted");
-     that.addToClicked(["ITSElectiveAlternatePlan", "ITSElective"]);
-      ITSElectiveAlternatePlanflag=true
+$scope.ITSElectiveAlternatePlan0Listener = function () {
+  var ITSElectiveAlternatePlan0element = document.getElementById("ITSElectiveAlternatePlan0");
+ if (!ITSElectiveAlternatePlan0flag) {
+     ITSElectiveAlternatePlan0element.classList.remove("ITS");
+     ITSElectiveAlternatePlan0element.classList.add("ITS-highlighted");
+     that.addToClicked(["ITSElectiveAlternatePlan0", "ITS"]);
+      ITSElectiveAlternatePlan0flag=true
   }
  else {
-     ITSElectiveAlternatePlanelement.classList.remove("ITSElective-highlighted");
-     ITSElectiveAlternatePlanelement.classList.add("ITSElective");
-     that.removeFromClicked("ITSElectiveAlternatePlan");
-      ITSElectiveAlternatePlanflag=false
+     ITSElectiveAlternatePlan0element.classList.remove("ITS-highlighted");
+     ITSElectiveAlternatePlan0element.classList.add("ITS");
+     that.removeFromClicked("ITSElectiveAlternatePlan0");
+      ITSElectiveAlternatePlan0flag=false
   }
 };
 $scope.CIVE270AlternatePlanListener = function () {
@@ -2395,19 +2395,19 @@ $scope.MECE390AlternatePlanListener = function () {
       MECE390AlternatePlanflag=false
   }
 };
-$scope.ProgramTechnicalElectiveAlternatePlanListener = function () {
-  var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
- if (!ProgramTechnicalElectiveAlternatePlanflag) {
-     ProgramTechnicalElectiveAlternatePlanelement.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveAlternatePlanelement.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveAlternatePlan", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveAlternatePlanflag=true
+$scope.ProgramTechnicalElectiveAlternatePlan0Listener = function () {
+  var ProgramTechnicalElectiveAlternatePlan0element = document.getElementById("ProgramTechnicalElectiveAlternatePlan0");
+ if (!ProgramTechnicalElectiveAlternatePlan0flag) {
+     ProgramTechnicalElectiveAlternatePlan0element.classList.remove("PROG");
+     ProgramTechnicalElectiveAlternatePlan0element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveAlternatePlan0", "PROG"]);
+      ProgramTechnicalElectiveAlternatePlan0flag=true
   }
  else {
-     ProgramTechnicalElectiveAlternatePlanelement.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveAlternatePlanelement.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan");
-      ProgramTechnicalElectiveAlternatePlanflag=false
+     ProgramTechnicalElectiveAlternatePlan0element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveAlternatePlan0element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan0");
+      ProgramTechnicalElectiveAlternatePlan0flag=false
   }
 };
 $scope.MECE430AlternatePlanListener = function () {
@@ -2469,49 +2469,49 @@ $scope.MECE463AlternatePlanListener = function () {
       MECE463AlternatePlanflag=false
   }
 };
-$scope.ProgramTechnicalElectiveAlternatePlanListener = function () {
-  var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
- if (!ProgramTechnicalElectiveAlternatePlanflag) {
-     ProgramTechnicalElectiveAlternatePlanelement.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveAlternatePlanelement.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveAlternatePlan", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveAlternatePlanflag=true
+$scope.ProgramTechnicalElectiveAlternatePlan1Listener = function () {
+  var ProgramTechnicalElectiveAlternatePlan1element = document.getElementById("ProgramTechnicalElectiveAlternatePlan1");
+ if (!ProgramTechnicalElectiveAlternatePlan1flag) {
+     ProgramTechnicalElectiveAlternatePlan1element.classList.remove("PROG");
+     ProgramTechnicalElectiveAlternatePlan1element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveAlternatePlan1", "PROG"]);
+      ProgramTechnicalElectiveAlternatePlan1flag=true
   }
  else {
-     ProgramTechnicalElectiveAlternatePlanelement.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveAlternatePlanelement.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan");
-      ProgramTechnicalElectiveAlternatePlanflag=false
+     ProgramTechnicalElectiveAlternatePlan1element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveAlternatePlan1element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan1");
+      ProgramTechnicalElectiveAlternatePlan1flag=false
   }
 };
-$scope.ProgramTechnicalElectiveAlternatePlanListener = function () {
-  var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
- if (!ProgramTechnicalElectiveAlternatePlanflag) {
-     ProgramTechnicalElectiveAlternatePlanelement.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveAlternatePlanelement.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveAlternatePlan", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveAlternatePlanflag=true
+$scope.ProgramTechnicalElectiveAlternatePlan2Listener = function () {
+  var ProgramTechnicalElectiveAlternatePlan2element = document.getElementById("ProgramTechnicalElectiveAlternatePlan2");
+ if (!ProgramTechnicalElectiveAlternatePlan2flag) {
+     ProgramTechnicalElectiveAlternatePlan2element.classList.remove("PROG");
+     ProgramTechnicalElectiveAlternatePlan2element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveAlternatePlan2", "PROG"]);
+      ProgramTechnicalElectiveAlternatePlan2flag=true
   }
  else {
-     ProgramTechnicalElectiveAlternatePlanelement.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveAlternatePlanelement.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan");
-      ProgramTechnicalElectiveAlternatePlanflag=false
+     ProgramTechnicalElectiveAlternatePlan2element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveAlternatePlan2element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan2");
+      ProgramTechnicalElectiveAlternatePlan2flag=false
   }
 };
-$scope.ProgramTechnicalElectiveAlternatePlanListener = function () {
-  var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
- if (!ProgramTechnicalElectiveAlternatePlanflag) {
-     ProgramTechnicalElectiveAlternatePlanelement.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveAlternatePlanelement.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveAlternatePlan", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveAlternatePlanflag=true
+$scope.ProgramTechnicalElectiveAlternatePlan3Listener = function () {
+  var ProgramTechnicalElectiveAlternatePlan3element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3");
+ if (!ProgramTechnicalElectiveAlternatePlan3flag) {
+     ProgramTechnicalElectiveAlternatePlan3element.classList.remove("PROG");
+     ProgramTechnicalElectiveAlternatePlan3element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveAlternatePlan3", "PROG"]);
+      ProgramTechnicalElectiveAlternatePlan3flag=true
   }
  else {
-     ProgramTechnicalElectiveAlternatePlanelement.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveAlternatePlanelement.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan");
-      ProgramTechnicalElectiveAlternatePlanflag=false
+     ProgramTechnicalElectiveAlternatePlan3element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveAlternatePlan3element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan3");
+      ProgramTechnicalElectiveAlternatePlan3flag=false
   }
 };
 $scope.CHE448AlternatePlanListener = function () {
@@ -3593,19 +3593,19 @@ $scope.MECE390CoopPlan1Listener = function () {
       MECE390CoopPlan1flag=false
   }
 };
-$scope.ComplementaryElectiveCoopPlan1Listener = function () {
-  var ComplementaryElectiveCoopPlan1element = document.getElementById("ComplementaryElectiveCoopPlan1");
- if (!ComplementaryElectiveCoopPlan1flag) {
-     ComplementaryElectiveCoopPlan1element.classList.remove("ComplementaryElective");
-     ComplementaryElectiveCoopPlan1element.classList.add("ComplementaryElective-highlighted");
-     that.addToClicked(["ComplementaryElectiveCoopPlan1", "ComplementaryElective"]);
-      ComplementaryElectiveCoopPlan1flag=true
+$scope.ComplementaryElectiveCoopPlan10Listener = function () {
+  var ComplementaryElectiveCoopPlan10element = document.getElementById("ComplementaryElectiveCoopPlan10");
+ if (!ComplementaryElectiveCoopPlan10flag) {
+     ComplementaryElectiveCoopPlan10element.classList.remove("COMP");
+     ComplementaryElectiveCoopPlan10element.classList.add("COMP-highlighted");
+     that.addToClicked(["ComplementaryElectiveCoopPlan10", "COMP"]);
+      ComplementaryElectiveCoopPlan10flag=true
   }
  else {
-     ComplementaryElectiveCoopPlan1element.classList.remove("ComplementaryElective-highlighted");
-     ComplementaryElectiveCoopPlan1element.classList.add("ComplementaryElective");
-     that.removeFromClicked("ComplementaryElectiveCoopPlan1");
-      ComplementaryElectiveCoopPlan1flag=false
+     ComplementaryElectiveCoopPlan10element.classList.remove("COMP-highlighted");
+     ComplementaryElectiveCoopPlan10element.classList.add("COMP");
+     that.removeFromClicked("ComplementaryElectiveCoopPlan10");
+      ComplementaryElectiveCoopPlan10flag=false
   }
 };
 $scope.ENGG404CoopPlan1Listener = function () {
@@ -3682,49 +3682,49 @@ $scope.MECE463CoopPlan1Listener = function () {
       MECE463CoopPlan1flag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan1Listener = function () {
-  var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
- if (!ProgramTechnicalElectiveCoopPlan1flag) {
-     ProgramTechnicalElectiveCoopPlan1element.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveCoopPlan1element.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveCoopPlan1", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveCoopPlan1flag=true
+$scope.ProgramTechnicalElectiveCoopPlan10Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan10element = document.getElementById("ProgramTechnicalElectiveCoopPlan10");
+ if (!ProgramTechnicalElectiveCoopPlan10flag) {
+     ProgramTechnicalElectiveCoopPlan10element.classList.remove("PROG");
+     ProgramTechnicalElectiveCoopPlan10element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan10", "PROG"]);
+      ProgramTechnicalElectiveCoopPlan10flag=true
   }
  else {
-     ProgramTechnicalElectiveCoopPlan1element.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveCoopPlan1element.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan1");
-      ProgramTechnicalElectiveCoopPlan1flag=false
+     ProgramTechnicalElectiveCoopPlan10element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveCoopPlan10element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan10");
+      ProgramTechnicalElectiveCoopPlan10flag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan1Listener = function () {
-  var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
- if (!ProgramTechnicalElectiveCoopPlan1flag) {
-     ProgramTechnicalElectiveCoopPlan1element.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveCoopPlan1element.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveCoopPlan1", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveCoopPlan1flag=true
+$scope.ProgramTechnicalElectiveCoopPlan11Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan11element = document.getElementById("ProgramTechnicalElectiveCoopPlan11");
+ if (!ProgramTechnicalElectiveCoopPlan11flag) {
+     ProgramTechnicalElectiveCoopPlan11element.classList.remove("PROG");
+     ProgramTechnicalElectiveCoopPlan11element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan11", "PROG"]);
+      ProgramTechnicalElectiveCoopPlan11flag=true
   }
  else {
-     ProgramTechnicalElectiveCoopPlan1element.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveCoopPlan1element.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan1");
-      ProgramTechnicalElectiveCoopPlan1flag=false
+     ProgramTechnicalElectiveCoopPlan11element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveCoopPlan11element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan11");
+      ProgramTechnicalElectiveCoopPlan11flag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan1Listener = function () {
-  var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
- if (!ProgramTechnicalElectiveCoopPlan1flag) {
-     ProgramTechnicalElectiveCoopPlan1element.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveCoopPlan1element.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveCoopPlan1", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveCoopPlan1flag=true
+$scope.ProgramTechnicalElectiveCoopPlan12Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan12element = document.getElementById("ProgramTechnicalElectiveCoopPlan12");
+ if (!ProgramTechnicalElectiveCoopPlan12flag) {
+     ProgramTechnicalElectiveCoopPlan12element.classList.remove("PROG");
+     ProgramTechnicalElectiveCoopPlan12element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan12", "PROG"]);
+      ProgramTechnicalElectiveCoopPlan12flag=true
   }
  else {
-     ProgramTechnicalElectiveCoopPlan1element.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveCoopPlan1element.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan1");
-      ProgramTechnicalElectiveCoopPlan1flag=false
+     ProgramTechnicalElectiveCoopPlan12element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveCoopPlan12element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan12");
+      ProgramTechnicalElectiveCoopPlan12flag=false
   }
 };
 $scope.WKEXP905CoopPlan1Listener = function () {
@@ -3874,34 +3874,34 @@ $scope.MECE460CoopPlan1Listener = function () {
       MECE460CoopPlan1flag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan1Listener = function () {
-  var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
- if (!ProgramTechnicalElectiveCoopPlan1flag) {
-     ProgramTechnicalElectiveCoopPlan1element.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveCoopPlan1element.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveCoopPlan1", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveCoopPlan1flag=true
+$scope.ProgramTechnicalElectiveCoopPlan13Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan13element = document.getElementById("ProgramTechnicalElectiveCoopPlan13");
+ if (!ProgramTechnicalElectiveCoopPlan13flag) {
+     ProgramTechnicalElectiveCoopPlan13element.classList.remove("PROG");
+     ProgramTechnicalElectiveCoopPlan13element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan13", "PROG"]);
+      ProgramTechnicalElectiveCoopPlan13flag=true
   }
  else {
-     ProgramTechnicalElectiveCoopPlan1element.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveCoopPlan1element.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan1");
-      ProgramTechnicalElectiveCoopPlan1flag=false
+     ProgramTechnicalElectiveCoopPlan13element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveCoopPlan13element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan13");
+      ProgramTechnicalElectiveCoopPlan13flag=false
   }
 };
-$scope.ITSElectiveCoopPlan1Listener = function () {
-  var ITSElectiveCoopPlan1element = document.getElementById("ITSElectiveCoopPlan1");
- if (!ITSElectiveCoopPlan1flag) {
-     ITSElectiveCoopPlan1element.classList.remove("ITSElective");
-     ITSElectiveCoopPlan1element.classList.add("ITSElective-highlighted");
-     that.addToClicked(["ITSElectiveCoopPlan1", "ITSElective"]);
-      ITSElectiveCoopPlan1flag=true
+$scope.ITSElectiveCoopPlan10Listener = function () {
+  var ITSElectiveCoopPlan10element = document.getElementById("ITSElectiveCoopPlan10");
+ if (!ITSElectiveCoopPlan10flag) {
+     ITSElectiveCoopPlan10element.classList.remove("ITS");
+     ITSElectiveCoopPlan10element.classList.add("ITS-highlighted");
+     that.addToClicked(["ITSElectiveCoopPlan10", "ITS"]);
+      ITSElectiveCoopPlan10flag=true
   }
  else {
-     ITSElectiveCoopPlan1element.classList.remove("ITSElective-highlighted");
-     ITSElectiveCoopPlan1element.classList.add("ITSElective");
-     that.removeFromClicked("ITSElectiveCoopPlan1");
-      ITSElectiveCoopPlan1flag=false
+     ITSElectiveCoopPlan10element.classList.remove("ITS-highlighted");
+     ITSElectiveCoopPlan10element.classList.add("ITS");
+     that.removeFromClicked("ITSElectiveCoopPlan10");
+      ITSElectiveCoopPlan10flag=false
   }
 };
   var CHEM103CoopPlan2flag = false;
@@ -4834,19 +4834,19 @@ $scope.MECE390CoopPlan2Listener = function () {
       MECE390CoopPlan2flag=false
   }
 };
-$scope.ComplementaryElectiveCoopPlan2Listener = function () {
-  var ComplementaryElectiveCoopPlan2element = document.getElementById("ComplementaryElectiveCoopPlan2");
- if (!ComplementaryElectiveCoopPlan2flag) {
-     ComplementaryElectiveCoopPlan2element.classList.remove("ComplementaryElective");
-     ComplementaryElectiveCoopPlan2element.classList.add("ComplementaryElective-highlighted");
-     that.addToClicked(["ComplementaryElectiveCoopPlan2", "ComplementaryElective"]);
-      ComplementaryElectiveCoopPlan2flag=true
+$scope.ComplementaryElectiveCoopPlan20Listener = function () {
+  var ComplementaryElectiveCoopPlan20element = document.getElementById("ComplementaryElectiveCoopPlan20");
+ if (!ComplementaryElectiveCoopPlan20flag) {
+     ComplementaryElectiveCoopPlan20element.classList.remove("COMP");
+     ComplementaryElectiveCoopPlan20element.classList.add("COMP-highlighted");
+     that.addToClicked(["ComplementaryElectiveCoopPlan20", "COMP"]);
+      ComplementaryElectiveCoopPlan20flag=true
   }
  else {
-     ComplementaryElectiveCoopPlan2element.classList.remove("ComplementaryElective-highlighted");
-     ComplementaryElectiveCoopPlan2element.classList.add("ComplementaryElective");
-     that.removeFromClicked("ComplementaryElectiveCoopPlan2");
-      ComplementaryElectiveCoopPlan2flag=false
+     ComplementaryElectiveCoopPlan20element.classList.remove("COMP-highlighted");
+     ComplementaryElectiveCoopPlan20element.classList.add("COMP");
+     that.removeFromClicked("ComplementaryElectiveCoopPlan20");
+      ComplementaryElectiveCoopPlan20flag=false
   }
 };
 $scope.WKEXP904CoopPlan2Listener = function () {
@@ -4943,49 +4943,49 @@ $scope.MECE460CoopPlan2Listener = function () {
       MECE460CoopPlan2flag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan2Listener = function () {
-  var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
- if (!ProgramTechnicalElectiveCoopPlan2flag) {
-     ProgramTechnicalElectiveCoopPlan2element.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveCoopPlan2element.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveCoopPlan2", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveCoopPlan2flag=true
+$scope.ProgramTechnicalElectiveCoopPlan20Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan20element = document.getElementById("ProgramTechnicalElectiveCoopPlan20");
+ if (!ProgramTechnicalElectiveCoopPlan20flag) {
+     ProgramTechnicalElectiveCoopPlan20element.classList.remove("PROG");
+     ProgramTechnicalElectiveCoopPlan20element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan20", "PROG"]);
+      ProgramTechnicalElectiveCoopPlan20flag=true
   }
  else {
-     ProgramTechnicalElectiveCoopPlan2element.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveCoopPlan2element.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan2");
-      ProgramTechnicalElectiveCoopPlan2flag=false
+     ProgramTechnicalElectiveCoopPlan20element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveCoopPlan20element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan20");
+      ProgramTechnicalElectiveCoopPlan20flag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan2Listener = function () {
-  var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
- if (!ProgramTechnicalElectiveCoopPlan2flag) {
-     ProgramTechnicalElectiveCoopPlan2element.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveCoopPlan2element.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveCoopPlan2", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveCoopPlan2flag=true
+$scope.ProgramTechnicalElectiveCoopPlan21Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan21element = document.getElementById("ProgramTechnicalElectiveCoopPlan21");
+ if (!ProgramTechnicalElectiveCoopPlan21flag) {
+     ProgramTechnicalElectiveCoopPlan21element.classList.remove("PROG");
+     ProgramTechnicalElectiveCoopPlan21element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan21", "PROG"]);
+      ProgramTechnicalElectiveCoopPlan21flag=true
   }
  else {
-     ProgramTechnicalElectiveCoopPlan2element.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveCoopPlan2element.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan2");
-      ProgramTechnicalElectiveCoopPlan2flag=false
+     ProgramTechnicalElectiveCoopPlan21element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveCoopPlan21element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan21");
+      ProgramTechnicalElectiveCoopPlan21flag=false
   }
 };
-$scope.ITSElectiveCoopPlan2Listener = function () {
-  var ITSElectiveCoopPlan2element = document.getElementById("ITSElectiveCoopPlan2");
- if (!ITSElectiveCoopPlan2flag) {
-     ITSElectiveCoopPlan2element.classList.remove("ITSElective");
-     ITSElectiveCoopPlan2element.classList.add("ITSElective-highlighted");
-     that.addToClicked(["ITSElectiveCoopPlan2", "ITSElective"]);
-      ITSElectiveCoopPlan2flag=true
+$scope.ITSElectiveCoopPlan20Listener = function () {
+  var ITSElectiveCoopPlan20element = document.getElementById("ITSElectiveCoopPlan20");
+ if (!ITSElectiveCoopPlan20flag) {
+     ITSElectiveCoopPlan20element.classList.remove("ITS");
+     ITSElectiveCoopPlan20element.classList.add("ITS-highlighted");
+     that.addToClicked(["ITSElectiveCoopPlan20", "ITS"]);
+      ITSElectiveCoopPlan20flag=true
   }
  else {
-     ITSElectiveCoopPlan2element.classList.remove("ITSElective-highlighted");
-     ITSElectiveCoopPlan2element.classList.add("ITSElective");
-     that.removeFromClicked("ITSElectiveCoopPlan2");
-      ITSElectiveCoopPlan2flag=false
+     ITSElectiveCoopPlan20element.classList.remove("ITS-highlighted");
+     ITSElectiveCoopPlan20element.classList.add("ITS");
+     that.removeFromClicked("ITSElectiveCoopPlan20");
+      ITSElectiveCoopPlan20flag=false
   }
 };
 $scope.WKEXP905CoopPlan2Listener = function () {
@@ -5134,34 +5134,34 @@ $scope.MECE463CoopPlan2Listener = function () {
       MECE463CoopPlan2flag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan2Listener = function () {
-  var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
- if (!ProgramTechnicalElectiveCoopPlan2flag) {
-     ProgramTechnicalElectiveCoopPlan2element.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveCoopPlan2element.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveCoopPlan2", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveCoopPlan2flag=true
+$scope.ProgramTechnicalElectiveCoopPlan22Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan22element = document.getElementById("ProgramTechnicalElectiveCoopPlan22");
+ if (!ProgramTechnicalElectiveCoopPlan22flag) {
+     ProgramTechnicalElectiveCoopPlan22element.classList.remove("PROG");
+     ProgramTechnicalElectiveCoopPlan22element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan22", "PROG"]);
+      ProgramTechnicalElectiveCoopPlan22flag=true
   }
  else {
-     ProgramTechnicalElectiveCoopPlan2element.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveCoopPlan2element.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan2");
-      ProgramTechnicalElectiveCoopPlan2flag=false
+     ProgramTechnicalElectiveCoopPlan22element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveCoopPlan22element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan22");
+      ProgramTechnicalElectiveCoopPlan22flag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan2Listener = function () {
-  var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
- if (!ProgramTechnicalElectiveCoopPlan2flag) {
-     ProgramTechnicalElectiveCoopPlan2element.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveCoopPlan2element.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveCoopPlan2", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveCoopPlan2flag=true
+$scope.ProgramTechnicalElectiveCoopPlan23Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan23element = document.getElementById("ProgramTechnicalElectiveCoopPlan23");
+ if (!ProgramTechnicalElectiveCoopPlan23flag) {
+     ProgramTechnicalElectiveCoopPlan23element.classList.remove("PROG");
+     ProgramTechnicalElectiveCoopPlan23element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan23", "PROG"]);
+      ProgramTechnicalElectiveCoopPlan23flag=true
   }
  else {
-     ProgramTechnicalElectiveCoopPlan2element.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveCoopPlan2element.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan2");
-      ProgramTechnicalElectiveCoopPlan2flag=false
+     ProgramTechnicalElectiveCoopPlan23element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveCoopPlan23element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan23");
+      ProgramTechnicalElectiveCoopPlan23flag=false
   }
 };
   var CHEM103CoopPlan3Biomedicalflag = false;
@@ -6165,34 +6165,34 @@ $scope.STAT337CoopPlan3BiomedicalListener = function () {
       STAT337CoopPlan3Biomedicalflag=false
   }
 };
-$scope.ComplementaryElectiveCoopPlan3BiomedicalListener = function () {
-  var ComplementaryElectiveCoopPlan3Biomedicalelement = document.getElementById("ComplementaryElectiveCoopPlan3Biomedical");
- if (!ComplementaryElectiveCoopPlan3Biomedicalflag) {
-     ComplementaryElectiveCoopPlan3Biomedicalelement.classList.remove("ComplementaryElective");
-     ComplementaryElectiveCoopPlan3Biomedicalelement.classList.add("ComplementaryElective-highlighted");
-     that.addToClicked(["ComplementaryElectiveCoopPlan3Biomedical", "ComplementaryElective"]);
-      ComplementaryElectiveCoopPlan3Biomedicalflag=true
+$scope.ComplementaryElectiveCoopPlan3Biomedical0Listener = function () {
+  var ComplementaryElectiveCoopPlan3Biomedical0element = document.getElementById("ComplementaryElectiveCoopPlan3Biomedical0");
+ if (!ComplementaryElectiveCoopPlan3Biomedical0flag) {
+     ComplementaryElectiveCoopPlan3Biomedical0element.classList.remove("COMP");
+     ComplementaryElectiveCoopPlan3Biomedical0element.classList.add("COMP-highlighted");
+     that.addToClicked(["ComplementaryElectiveCoopPlan3Biomedical0", "COMP"]);
+      ComplementaryElectiveCoopPlan3Biomedical0flag=true
   }
  else {
-     ComplementaryElectiveCoopPlan3Biomedicalelement.classList.remove("ComplementaryElective-highlighted");
-     ComplementaryElectiveCoopPlan3Biomedicalelement.classList.add("ComplementaryElective");
-     that.removeFromClicked("ComplementaryElectiveCoopPlan3Biomedical");
-      ComplementaryElectiveCoopPlan3Biomedicalflag=false
+     ComplementaryElectiveCoopPlan3Biomedical0element.classList.remove("COMP-highlighted");
+     ComplementaryElectiveCoopPlan3Biomedical0element.classList.add("COMP");
+     that.removeFromClicked("ComplementaryElectiveCoopPlan3Biomedical0");
+      ComplementaryElectiveCoopPlan3Biomedical0flag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan3BiomedicalListener = function () {
-  var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
- if (!ProgramTechnicalElectiveCoopPlan3Biomedicalflag) {
-     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveCoopPlan3Biomedical", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveCoopPlan3Biomedicalflag=true
+$scope.ProgramTechnicalElectiveCoopPlan3Biomedical0Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan3Biomedical0element = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical0");
+ if (!ProgramTechnicalElectiveCoopPlan3Biomedical0flag) {
+     ProgramTechnicalElectiveCoopPlan3Biomedical0element.classList.remove("PROG");
+     ProgramTechnicalElectiveCoopPlan3Biomedical0element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan3Biomedical0", "PROG"]);
+      ProgramTechnicalElectiveCoopPlan3Biomedical0flag=true
   }
  else {
-     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan3Biomedical");
-      ProgramTechnicalElectiveCoopPlan3Biomedicalflag=false
+     ProgramTechnicalElectiveCoopPlan3Biomedical0element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveCoopPlan3Biomedical0element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan3Biomedical0");
+      ProgramTechnicalElectiveCoopPlan3Biomedical0flag=false
   }
 };
 $scope.WKEXP904CoopPlan3BiomedicalListener = function () {
@@ -6269,49 +6269,49 @@ $scope.MECE463CoopPlan3BiomedicalListener = function () {
       MECE463CoopPlan3Biomedicalflag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan3BiomedicalListener = function () {
-  var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
- if (!ProgramTechnicalElectiveCoopPlan3Biomedicalflag) {
-     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveCoopPlan3Biomedical", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveCoopPlan3Biomedicalflag=true
+$scope.ProgramTechnicalElectiveCoopPlan3Biomedical1Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan3Biomedical1element = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical1");
+ if (!ProgramTechnicalElectiveCoopPlan3Biomedical1flag) {
+     ProgramTechnicalElectiveCoopPlan3Biomedical1element.classList.remove("PROG");
+     ProgramTechnicalElectiveCoopPlan3Biomedical1element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan3Biomedical1", "PROG"]);
+      ProgramTechnicalElectiveCoopPlan3Biomedical1flag=true
   }
  else {
-     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan3Biomedical");
-      ProgramTechnicalElectiveCoopPlan3Biomedicalflag=false
+     ProgramTechnicalElectiveCoopPlan3Biomedical1element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveCoopPlan3Biomedical1element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan3Biomedical1");
+      ProgramTechnicalElectiveCoopPlan3Biomedical1flag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan3BiomedicalListener = function () {
-  var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
- if (!ProgramTechnicalElectiveCoopPlan3Biomedicalflag) {
-     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveCoopPlan3Biomedical", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveCoopPlan3Biomedicalflag=true
+$scope.ProgramTechnicalElectiveCoopPlan3Biomedical2Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan3Biomedical2element = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical2");
+ if (!ProgramTechnicalElectiveCoopPlan3Biomedical2flag) {
+     ProgramTechnicalElectiveCoopPlan3Biomedical2element.classList.remove("PROG");
+     ProgramTechnicalElectiveCoopPlan3Biomedical2element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan3Biomedical2", "PROG"]);
+      ProgramTechnicalElectiveCoopPlan3Biomedical2flag=true
   }
  else {
-     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan3Biomedical");
-      ProgramTechnicalElectiveCoopPlan3Biomedicalflag=false
+     ProgramTechnicalElectiveCoopPlan3Biomedical2element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveCoopPlan3Biomedical2element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan3Biomedical2");
+      ProgramTechnicalElectiveCoopPlan3Biomedical2flag=false
   }
 };
-$scope.ITSElectiveCoopPlan3BiomedicalListener = function () {
-  var ITSElectiveCoopPlan3Biomedicalelement = document.getElementById("ITSElectiveCoopPlan3Biomedical");
- if (!ITSElectiveCoopPlan3Biomedicalflag) {
-     ITSElectiveCoopPlan3Biomedicalelement.classList.remove("ITSElective");
-     ITSElectiveCoopPlan3Biomedicalelement.classList.add("ITSElective-highlighted");
-     that.addToClicked(["ITSElectiveCoopPlan3Biomedical", "ITSElective"]);
-      ITSElectiveCoopPlan3Biomedicalflag=true
+$scope.ITSElectiveCoopPlan3Biomedical0Listener = function () {
+  var ITSElectiveCoopPlan3Biomedical0element = document.getElementById("ITSElectiveCoopPlan3Biomedical0");
+ if (!ITSElectiveCoopPlan3Biomedical0flag) {
+     ITSElectiveCoopPlan3Biomedical0element.classList.remove("ITS");
+     ITSElectiveCoopPlan3Biomedical0element.classList.add("ITS-highlighted");
+     that.addToClicked(["ITSElectiveCoopPlan3Biomedical0", "ITS"]);
+      ITSElectiveCoopPlan3Biomedical0flag=true
   }
  else {
-     ITSElectiveCoopPlan3Biomedicalelement.classList.remove("ITSElective-highlighted");
-     ITSElectiveCoopPlan3Biomedicalelement.classList.add("ITSElective");
-     that.removeFromClicked("ITSElectiveCoopPlan3Biomedical");
-      ITSElectiveCoopPlan3Biomedicalflag=false
+     ITSElectiveCoopPlan3Biomedical0element.classList.remove("ITS-highlighted");
+     ITSElectiveCoopPlan3Biomedical0element.classList.add("ITS");
+     that.removeFromClicked("ITSElectiveCoopPlan3Biomedical0");
+      ITSElectiveCoopPlan3Biomedical0flag=false
   }
 };
 $scope.CHE448CoopPlan3BiomedicalListener = function () {
@@ -7391,19 +7391,19 @@ $scope.MECE390CoopPlan4Listener = function () {
       MECE390CoopPlan4flag=false
   }
 };
-$scope.ComplementaryElectiveCoopPlan4Listener = function () {
-  var ComplementaryElectiveCoopPlan4element = document.getElementById("ComplementaryElectiveCoopPlan4");
- if (!ComplementaryElectiveCoopPlan4flag) {
-     ComplementaryElectiveCoopPlan4element.classList.remove("ComplementaryElective");
-     ComplementaryElectiveCoopPlan4element.classList.add("ComplementaryElective-highlighted");
-     that.addToClicked(["ComplementaryElectiveCoopPlan4", "ComplementaryElective"]);
-      ComplementaryElectiveCoopPlan4flag=true
+$scope.ComplementaryElectiveCoopPlan40Listener = function () {
+  var ComplementaryElectiveCoopPlan40element = document.getElementById("ComplementaryElectiveCoopPlan40");
+ if (!ComplementaryElectiveCoopPlan40flag) {
+     ComplementaryElectiveCoopPlan40element.classList.remove("COMP");
+     ComplementaryElectiveCoopPlan40element.classList.add("COMP-highlighted");
+     that.addToClicked(["ComplementaryElectiveCoopPlan40", "COMP"]);
+      ComplementaryElectiveCoopPlan40flag=true
   }
  else {
-     ComplementaryElectiveCoopPlan4element.classList.remove("ComplementaryElective-highlighted");
-     ComplementaryElectiveCoopPlan4element.classList.add("ComplementaryElective");
-     that.removeFromClicked("ComplementaryElectiveCoopPlan4");
-      ComplementaryElectiveCoopPlan4flag=false
+     ComplementaryElectiveCoopPlan40element.classList.remove("COMP-highlighted");
+     ComplementaryElectiveCoopPlan40element.classList.add("COMP");
+     that.removeFromClicked("ComplementaryElectiveCoopPlan40");
+      ComplementaryElectiveCoopPlan40flag=false
   }
 };
 $scope.WKEXP903CoopPlan4Listener = function () {
@@ -7535,49 +7535,49 @@ $scope.MECE463CoopPlan4Listener = function () {
       MECE463CoopPlan4flag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan4Listener = function () {
-  var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
- if (!ProgramTechnicalElectiveCoopPlan4flag) {
-     ProgramTechnicalElectiveCoopPlan4element.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveCoopPlan4element.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveCoopPlan4", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveCoopPlan4flag=true
+$scope.ProgramTechnicalElectiveCoopPlan40Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan40element = document.getElementById("ProgramTechnicalElectiveCoopPlan40");
+ if (!ProgramTechnicalElectiveCoopPlan40flag) {
+     ProgramTechnicalElectiveCoopPlan40element.classList.remove("PROG");
+     ProgramTechnicalElectiveCoopPlan40element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan40", "PROG"]);
+      ProgramTechnicalElectiveCoopPlan40flag=true
   }
  else {
-     ProgramTechnicalElectiveCoopPlan4element.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveCoopPlan4element.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan4");
-      ProgramTechnicalElectiveCoopPlan4flag=false
+     ProgramTechnicalElectiveCoopPlan40element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveCoopPlan40element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan40");
+      ProgramTechnicalElectiveCoopPlan40flag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan4Listener = function () {
-  var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
- if (!ProgramTechnicalElectiveCoopPlan4flag) {
-     ProgramTechnicalElectiveCoopPlan4element.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveCoopPlan4element.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveCoopPlan4", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveCoopPlan4flag=true
+$scope.ProgramTechnicalElectiveCoopPlan41Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan41element = document.getElementById("ProgramTechnicalElectiveCoopPlan41");
+ if (!ProgramTechnicalElectiveCoopPlan41flag) {
+     ProgramTechnicalElectiveCoopPlan41element.classList.remove("PROG");
+     ProgramTechnicalElectiveCoopPlan41element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan41", "PROG"]);
+      ProgramTechnicalElectiveCoopPlan41flag=true
   }
  else {
-     ProgramTechnicalElectiveCoopPlan4element.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveCoopPlan4element.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan4");
-      ProgramTechnicalElectiveCoopPlan4flag=false
+     ProgramTechnicalElectiveCoopPlan41element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveCoopPlan41element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan41");
+      ProgramTechnicalElectiveCoopPlan41flag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan4Listener = function () {
-  var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
- if (!ProgramTechnicalElectiveCoopPlan4flag) {
-     ProgramTechnicalElectiveCoopPlan4element.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveCoopPlan4element.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveCoopPlan4", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveCoopPlan4flag=true
+$scope.ProgramTechnicalElectiveCoopPlan42Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan42element = document.getElementById("ProgramTechnicalElectiveCoopPlan42");
+ if (!ProgramTechnicalElectiveCoopPlan42flag) {
+     ProgramTechnicalElectiveCoopPlan42element.classList.remove("PROG");
+     ProgramTechnicalElectiveCoopPlan42element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan42", "PROG"]);
+      ProgramTechnicalElectiveCoopPlan42flag=true
   }
  else {
-     ProgramTechnicalElectiveCoopPlan4element.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveCoopPlan4element.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan4");
-      ProgramTechnicalElectiveCoopPlan4flag=false
+     ProgramTechnicalElectiveCoopPlan42element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveCoopPlan42element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan42");
+      ProgramTechnicalElectiveCoopPlan42flag=false
   }
 };
 $scope.CHE448CoopPlan4Listener = function () {
@@ -7710,34 +7710,34 @@ $scope.MECE460CoopPlan4Listener = function () {
       MECE460CoopPlan4flag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan4Listener = function () {
-  var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
- if (!ProgramTechnicalElectiveCoopPlan4flag) {
-     ProgramTechnicalElectiveCoopPlan4element.classList.remove("Program/TechnicalElective");
-     ProgramTechnicalElectiveCoopPlan4element.classList.add("Program/TechnicalElective-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveCoopPlan4", "Program/TechnicalElective"]);
-      ProgramTechnicalElectiveCoopPlan4flag=true
+$scope.ProgramTechnicalElectiveCoopPlan43Listener = function () {
+  var ProgramTechnicalElectiveCoopPlan43element = document.getElementById("ProgramTechnicalElectiveCoopPlan43");
+ if (!ProgramTechnicalElectiveCoopPlan43flag) {
+     ProgramTechnicalElectiveCoopPlan43element.classList.remove("PROG");
+     ProgramTechnicalElectiveCoopPlan43element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveCoopPlan43", "PROG"]);
+      ProgramTechnicalElectiveCoopPlan43flag=true
   }
  else {
-     ProgramTechnicalElectiveCoopPlan4element.classList.remove("Program/TechnicalElective-highlighted");
-     ProgramTechnicalElectiveCoopPlan4element.classList.add("Program/TechnicalElective");
-     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan4");
-      ProgramTechnicalElectiveCoopPlan4flag=false
+     ProgramTechnicalElectiveCoopPlan43element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveCoopPlan43element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveCoopPlan43");
+      ProgramTechnicalElectiveCoopPlan43flag=false
   }
 };
-$scope.ITSElectiveCoopPlan4Listener = function () {
-  var ITSElectiveCoopPlan4element = document.getElementById("ITSElectiveCoopPlan4");
- if (!ITSElectiveCoopPlan4flag) {
-     ITSElectiveCoopPlan4element.classList.remove("ITSElective");
-     ITSElectiveCoopPlan4element.classList.add("ITSElective-highlighted");
-     that.addToClicked(["ITSElectiveCoopPlan4", "ITSElective"]);
-      ITSElectiveCoopPlan4flag=true
+$scope.ITSElectiveCoopPlan40Listener = function () {
+  var ITSElectiveCoopPlan40element = document.getElementById("ITSElectiveCoopPlan40");
+ if (!ITSElectiveCoopPlan40flag) {
+     ITSElectiveCoopPlan40element.classList.remove("ITS");
+     ITSElectiveCoopPlan40element.classList.add("ITS-highlighted");
+     that.addToClicked(["ITSElectiveCoopPlan40", "ITS"]);
+      ITSElectiveCoopPlan40flag=true
   }
  else {
-     ITSElectiveCoopPlan4element.classList.remove("ITSElective-highlighted");
-     ITSElectiveCoopPlan4element.classList.add("ITSElective");
-     that.removeFromClicked("ITSElectiveCoopPlan4");
-      ITSElectiveCoopPlan4flag=false
+     ITSElectiveCoopPlan40element.classList.remove("ITS-highlighted");
+     ITSElectiveCoopPlan40element.classList.add("ITS");
+     that.removeFromClicked("ITSElectiveCoopPlan40");
+      ITSElectiveCoopPlan40flag=false
   }
 };
 });

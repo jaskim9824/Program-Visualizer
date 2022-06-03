@@ -203,8 +203,17 @@ p.ortext {
     height: 80px;
 }
 
+.COMP-highlighted {
+    height: 80px;
+}
+
 /* Program elective box, taller to fit text */
 .PROG {
+    font-size:90%;
+    height:80px;
+}
+
+.PROG-highlighted {
     font-size:90%;
     height:80px;
 }

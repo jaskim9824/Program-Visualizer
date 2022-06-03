@@ -160,7 +160,7 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
             # Class allows formatting so words fit in course box
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip ITS", 
                                                 "id": courseID, 
-                                                "ng-click":courseID+str(itscounter)+"Listener()"})
+                                                "ng-click":courseID+"Listener()"})
             itscounter += 1
 
         else:

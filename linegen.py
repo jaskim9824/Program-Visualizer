@@ -106,9 +106,32 @@ def placeClickListeners(courseList, controller, lineManager, plan):
     formattedRemoveClickedStatement = "     that.removeFromClicked(\"{courseName}\");\n"
     formattedAddClickedStatement = "     that.addToClicked([\"{courseName}\", \"{category}\"]);\n"
 
+    compcounter = 0
+    progcounter = 0
+    itscounter = 0
+
     for course in courseList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan) 
         courseContClass = course.category.replace(" ", "")
+
+        # program and tech elective
+        if (courseContClass == "Program/TechnicalElective"):
+                courseContClass = "PROG"
+                courseID += str(progcounter)
+                progcounter += 1
+        # comp elective
+        elif (courseContClass == "ComplementaryElective"):
+                courseContClass = "COMP"
+                courseID += str(compcounter)
+                compcounter += 1
+        # its elective
+        elif (courseContClass == "ITSElective"):
+                courseContClass = "ITS"
+                courseID += str(itscounter)
+                itscounter += 1
+        # for course with no category, use default colour
+        elif (courseContClass == ""):
+                courseContClass = "course"
 
         controller.write(formattedListener.format(courseName=courseID))
         controller.write(formattedElementGetter.format(courseName=courseID))
@@ -119,9 +142,7 @@ def placeClickListeners(courseList, controller, lineManager, plan):
             for line in lineManager.getCourseLineDict()[courseID]:
                 controller.write(formattedStatement.format(action="add", num=line))
 
-        # for course with no category, use default colour
-        if (courseContClass == ""):
-                courseContClass = "course"
+  
 
             
         controller.write(formattedHighlightStatement.format(courseName=courseID,
