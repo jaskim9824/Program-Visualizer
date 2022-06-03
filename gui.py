@@ -60,10 +60,11 @@ def debug(sequenceDict):
                 print(course.name)
             print("\n")
         print("\n")
-
+        
 #window
 root = Tk()
 root.title('Web generator')
+root.iconbitmap('C:output/images/favicon.ico')
 root.geometry('700x200')
 root.resizable(0,0)
 
