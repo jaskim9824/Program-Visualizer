@@ -113,52 +113,6 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
     linegen.placeLines(courseList, indexJS, lineManager, plan)
     linegen.placeClickListeners(courseList, controller, lineManager, plan)
 
-
-def formatCourseDescriptionForElective(soup, course, courseDisc):
-    # formatting title in course description
-    courseTitle = soup.new_tag("b", attrs={"class":"descriptiontitle"})
-    courseTitle.append(course.name)    
-
-    courseLine = soup.new_tag("hr", attrs={"class":"descriptionline"})
-
-    courseDescription = soup.new_tag("p", attrs={"class":"fulldescription"})
-    courseDescription.append(course.course_description)
-    
-    courseDisc.append(courseTitle)
-    courseDisc.append(courseLine)
-    courseDisc.append(courseDescription)
-
-
-def formatCourseDescriptionForRegular(soup, course, courseDisc):
-    # formatting title in course description
-    courseTitle = soup.new_tag("b", attrs={"class":"descriptiontitle"})
-    courseTitle.append(course.name + " - " + course.long_title)
-
-    courseLine = soup.new_tag("hr", attrs={"class":"descriptionline"})
-
-    courseCredits = soup.new_tag("p", attrs={"class":"descriptioncredits"})
-    courseCredits.append(html.unescape("&#9733 ") + course.engineering_units + " ")
-
-    courseFeeIndex = soup.new_tag("i", attrs={"class":"descriptionfeeindex"})
-    courseFeeIndex.append("(" + "fi " + course.calc_fee_index + ")" + " ")
-
-    courseTermAvail = soup.new_tag("p", attrs={"class":"descriptionavailability"})
-    courseTermAvail.append("(" + course.duration + ", ")
-
-    courseAlphaHours = soup.new_tag("p", attrs={"class":"descriptionalphahours"})
-    courseAlphaHours.append(course.alpha_hours + ")" + " ")
-
-    courseDescription = soup.new_tag("p", attrs={"class":"fulldescription"})
-    courseDescription.append(course.course_description)
-
-    courseDisc.append(courseTitle)
-    courseDisc.append(courseLine)
-    courseDisc.append(courseCredits)
-    courseDisc.append(courseFeeIndex)
-    courseDisc.append(courseTermAvail)
-    courseDisc.append(courseAlphaHours)
-    courseDisc.append(courseDescription)
-
 # Function that places the course divs within a certain term column of a certain plan
 # Parameters:
 #   termTag - HTML tag representing the specfic term column in question
@@ -167,11 +121,20 @@ def formatCourseDescriptionForRegular(soup, course, courseDisc):
 #   controller - file handle for controller.js, used to write to controller.js
 #   plan - name of plan whose terms are being placed
 #   termcounter - which term is currently being placed (int)
+#   compcounter - number of comp electives that have been placed for this plan
+#   progcounter - number of program electives that have been placed for this plan
+#   itscoutner - number of its electives that have been placed for this plan
 def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcounter, progcounter, itscounter):
     orCounter = 0
     for course in termList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan)
-        courseContDiv = soup.new_tag("div", attrs={"class":"coursecontainer"})
+        courseContClass = course.category.replace(" ", "")
+
+        # In the case of an OR case in a sequence
+        if course.calendar_print.lower().strip() == "or":
+            courseContDiv = soup.new_tag("div", attrs={"class":"orcoursecontainer"})
+        else:
+            courseContDiv = soup.new_tag("div", attrs={"class":"coursecontainer"})
 
         # Prevent tooltip from being off screen
         if termcounter < 4:
@@ -179,11 +142,7 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
         else:
             courseDisc = soup.new_tag("div", attrs={"class":"tooltiptextleft"})
 
-        if course.calendar_print == "or":
-            courseContDiv = soup.new_tag("div", attrs={"class":"orcoursecontainer"})
-
-        courseContClass = course.category.replace(" ", "")
- 
+        # Constructing course div
         if course.name == "Complementary Elective":
             # Class allows formatting so words fit in course box
             courseID = courseID+str(compcounter)
@@ -213,7 +172,7 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
 
         else:
             # This is a regular course. All information should be available
-            courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip " +courseContClass, 
+            courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip " + courseContClass, 
                                                 "id": courseID, 
                                                 "ng-click":courseID+"Listener()"})
             if course.calendar_print.lower().strip() == "or":
@@ -227,14 +186,13 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
                                                 "ng-click":courseID+"Listener()"})
             formatCourseDescriptionForRegular(soup, course, courseDisc)
 
-
         courseHeader = soup.new_tag("h3", attrs={"class":"embed"})
         courseHeader.append(course.name)
 
         courseDiv.append(courseHeader)
         courseDiv.append(courseDisc)
 
-        if course.calendar_print == "or":
+        if course.calendar_print.lower().strip() == "or":
             if orCounter == 0:
                 firstCourseDiv = courseDiv 
                 orCounter += 1
@@ -256,3 +214,63 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
                          "flag = false;\n")
 
     return compcounter, progcounter, itscounter
+
+# Function that consturcts the course description tooltip for an elective
+# Parameters:
+#   - soup: soup object used to create HTML tags
+#   - course: course object 
+#   - courseDisc: course disc HTML tag
+def formatCourseDescriptionForElective(soup, course, courseDisc):
+    # formatting title in course description
+    courseTitle = soup.new_tag("b", attrs={"class":"descriptiontitle"})
+    courseTitle.append(course.name)    
+
+    courseLine = soup.new_tag("hr", attrs={"class":"descriptionline"})
+
+    courseDescription = soup.new_tag("p", attrs={"class":"fulldescription"})
+    courseDescription.append(course.course_description)
+    
+    courseDisc.append(courseTitle)
+    courseDisc.append(courseLine)
+    courseDisc.append(courseDescription)
+
+# Function that consturcts the course description tooltip for a regular course
+# Parameters:
+#   - soup: soup object used to create HTML tags
+#   - course: course object 
+#   - courseDisc: course disc HTML tag
+def formatCourseDescriptionForRegular(soup, course, courseDisc):
+    # formatting title in course description
+    courseTitle = soup.new_tag("b", attrs={"class":"descriptiontitle"})
+    courseTitle.append(course.name + " - " + course.long_title)
+
+    # adding line seperating title and description
+    courseLine = soup.new_tag("hr", attrs={"class":"descriptionline"})
+
+    # adding number of credits
+    courseCredits = soup.new_tag("p", attrs={"class":"descriptioncredits"})
+    courseCredits.append(html.unescape("&#9733 ") + course.engineering_units + " ")
+
+    # adding fee index
+    courseFeeIndex = soup.new_tag("i", attrs={"class":"descriptionfeeindex"})
+    courseFeeIndex.append("(" + "fi " + course.calc_fee_index + ")" + " ")
+
+    # adding term avail 
+    courseTermAvail = soup.new_tag("p", attrs={"class":"descriptionavailability"})
+    courseTermAvail.append("(" + course.duration + ", ")
+
+    # adding alpha hours
+    courseAlphaHours = soup.new_tag("p", attrs={"class":"descriptionalphahours"})
+    courseAlphaHours.append(course.alpha_hours + ")" + " ")
+
+    # adding desc
+    courseDescription = soup.new_tag("p", attrs={"class":"fulldescription"})
+    courseDescription.append(course.course_description)
+
+    courseDisc.append(courseTitle)
+    courseDisc.append(courseLine)
+    courseDisc.append(courseCredits)
+    courseDisc.append(courseFeeIndex)
+    courseDisc.append(courseTermAvail)
+    courseDisc.append(courseAlphaHours)
+    courseDisc.append(courseDescription)
