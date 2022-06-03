@@ -168,6 +168,9 @@ def main():
        print("Exception raised: " + 
              err.strerror + 
              ". The directory you are in does not have a directory named output.")
+       messagebox.showerror("python Error", "Exception raised: " + 
+             err.strerror + 
+             ". The directory you are in does not have a directory named output.")
 
 
         
