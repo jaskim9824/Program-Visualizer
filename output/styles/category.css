@@ -10,15 +10,15 @@
             border-color: #ff5050!important;
         }
 .BASICSCIENCES:hover {
-            background-color: #99ff99!important;
-            border-color: #99ff99!important;
+            background-color: #a2fab0!important;
+            border-color: #a2fab0!important;
         }
         .BASICSCIENCES-highlighted {
-            background-color: #99ff99;
+            background-color: #a2fab0;
         }
         .BASICSCIENCES-highlighted:hover {
-            background-color: #99ff99!important;
-            border-color: #99ff99!important;
+            background-color: #a2fab0!important;
+            border-color: #a2fab0!important;
         }
 .ENGINEERINGSCIENCES:hover {
             background-color: #66ccff!important;
@@ -54,15 +54,15 @@
             border-color: #ff78c0!important;
         }
 .COMP:hover {
-            background-color: #ffff73!important;
-            border-color: #ffff73!important;
+            background-color: #f5f569!important;
+            border-color: #f5f569!important;
         }
         .COMP-highlighted {
-            background-color: #ffff73;
+            background-color: #f5f569;
         }
         .COMP-highlighted:hover {
-            background-color: #ffff73!important;
-            border-color: #ffff73!important;
+            background-color: #f5f569!important;
+            border-color: #f5f569!important;
         }
 .PROG:hover {
             background-color: #cc33ff!important;
@@ -87,13 +87,13 @@
             border-color: #996633!important;
         }
 .Other:hover {
-            background-color: #68fcc8!important;
-            border-color: #68fcc8!important;
+            background-color: #5ce0c4!important;
+            border-color: #5ce0c4!important;
         }
         .Other-highlighted {
-            background-color: #68fcc8;
+            background-color: #5ce0c4;
         }
         .Other-highlighted:hover {
-            background-color: #68fcc8!important;
-            border-color: #68fcc8!important;
+            background-color: #5ce0c4!important;
+            border-color: #5ce0c4!important;
         }

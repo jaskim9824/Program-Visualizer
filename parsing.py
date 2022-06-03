@@ -109,8 +109,13 @@ def parse(filename):
 
     except FileNotFoundError:
         print("Excel course information file not found, ensure it is present and the name is correct.")
+        #GUI Error mssg
+        messagebox.showerror('python Error', "Excel course information file not found, ensure it is present and the name is correct.")
     except xlrd.biffh.XLRDError:
         print("Error reading data from Course information Excel sheet. Ensure it is \
+            formatted exactly as specified")
+        #GUI Error mssg
+        messagebox.showerror('python Error', "Error reading data from Course information Excel sheet. Ensure it is \
             formatted exactly as specified")
 
 
@@ -620,8 +625,13 @@ def pullSeq(filename, course_obj_dict):
 
     except FileNotFoundError:
         print("Excel sequencing file not found, ensure it is present and the name is correct.")
+        #GUI Error mssg
+        messagebox.showerror('Python Error', "Excel sequencing file not found, ensure it is present and the name is correct.")
     except xlrd.biffh.XLRDError:
         print("Error reading data from sequencing Excel sheet. Ensure it is \
+            formatted exactly as specified")
+        #GUI Error mssg
+        messagebox.showerror('python Error', "Error reading data from sequencing Excel sheet. Ensure it is \
             formatted exactly as specified")
 
     return course_seq, dept_name
@@ -851,8 +861,13 @@ def pullCategories(filename, course_obj_dict):
                     course_obj_dict[name].color = color
     except FileNotFoundError:
         print("Excel course categories file not found, ensure it is present and the name is correct.")
+        #GUI Error mssg
+        messagebox.showerror('Python Error', "Excel course categories file not found, ensure it is present and the name is correct.")
     except xlrd.biffh.XLRDError:
         print("Error reading data from course categories Excel sheet. Ensure it is \
+            formatted exactly as specified")
+        #GUI Error mssg
+        messagebox.showerror('python Error', "Error reading data from course categories Excel sheet. Ensure it is \
             formatted exactly as specified")
 
     return course_obj_dict, category_dict, category_list
