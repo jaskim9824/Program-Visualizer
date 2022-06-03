@@ -22,6 +22,15 @@ header {
     margin-bottom: 10px;
     height: 64px;
 }
+/* legend for line legend image */
+#linelegend {
+    height: 150px;
+    width: 300px;
+    position: relative;
+    right: 50px;
+    bottom: 100px;
+    margin: 0;
+}
         
  /*Header link style */
 .header a {
@@ -51,6 +60,17 @@ header {
     float: left;
 }
 
+/* legend for categories */
+.legend {
+    width: 200px;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    left: 75vw;
+    bottom: 25px;
+    text-align: center;
+}
+
 /* at 500px align header left when the screen is 500px wide or less*/
 @media screen and (max-width: 500px) {
     .header a {
@@ -59,31 +79,6 @@ header {
         text-align: left;
     }
 }  
-
-footer {
-    padding: 8px 8px;
-    background-color: #275d38;
-    margin-top: 10px;
-    margin-bottom: 0;
-    height: 64px;
-    position: relative;
-    bottom: 0;
-}
-
-.footer img {
-    width: 183px;
-    height: 50px;
-    margin-right: 0;
-    position: relative;
-    left: 44vw;
-}
-
-#copyright {
-    position: relative;
-    left: 50vw;
-    color: #FFFFFF;
-    font-family: 'Roboto',sans-serif;
-}
 
 #main {
     height: fit-content;
@@ -99,14 +94,6 @@ h3.planhead {
     top: 50px;
     font-size: 175%;
     text-align: center;
-}
-
-/* Plan diagram styling */
-.display {
-    width:fit-content;
-    height: fit-content;
-    position: relative;
-    bottom: 30px;
 }
 
 /* Form styling */
@@ -125,6 +112,14 @@ label {
     padding-top: 10px;
 }
 
+/* Plan diagram styling */
+.display {
+    width:fit-content;
+    height: fit-content;
+    position: relative;
+    bottom: 30px;
+}
+
 /* Term column styling */
 .term {
     margin-left: 60px;
@@ -139,6 +134,13 @@ label {
     margin-bottom: 15px;
     text-align: center;
     font-size: 125%;
+}
+
+/* Contains one (or two if an "or" option) course */
+.coursecontainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
 }
 
 /* Text within a course box styling*/
@@ -157,10 +159,12 @@ label {
     width: 150px;
 }
 
+/* two option with "or" between them, smaller margin */
 .orcourse {
     margin: 8px;
 }
 
+/* format of the word "OR" container */
 .ortext {
     margin: 0;
     padding: 0;
@@ -169,6 +173,7 @@ label {
     left: 40%;
 }
 
+/* format of the word "OR" */
 p.ortext {
     width: 25px;
     border-style: solid;
@@ -177,12 +182,12 @@ p.ortext {
     border-radius: 10px;
 }
 
-/* Complementray elective box*/
+/* Complementray elective box, taller to fit text */
 .COMP {
     height: 80px;
 }
 
-/* Program elective box */
+/* Program elective box, taller to fit text */
 .PROG {
     font-size:90%;
     height:80px;
@@ -205,6 +210,7 @@ p.ortext {
     background-color: #f2cd00;
 }
 
+/* Makes sure margin of orcourse is unchanged */
 .orcourse-highlighted {
     border-style: solid;
     border-color: black;
@@ -223,15 +229,14 @@ p.ortext {
 
     
 /*This is for the Hover over course description*/
-/* The original box colors are commented out for now */
-
 .tooltip {
     position: relative;
     display: inline-block;            
 }
-        
+ 
+/* Most properties taken from Calendar */
+/* Course on left of page, tooltip appears to the right of course */
 .tooltip .tooltiptextright {
-    /* Most properties taken from Calendar */
     visibility: hidden;
     width: 48vw;
     padding: 0px 10px;
@@ -256,8 +261,9 @@ p.ortext {
     white-space: normal;
 }
 
+/* Most properties taken from Calendar */
+/* Course on right of page, tooltip appears to the left of course */
 .tooltip .tooltiptextleft {
-    /* Most properties taken from Calendar */
     visibility: hidden;
     width: 47.4vw;
     padding: 0px 10px;
@@ -281,7 +287,8 @@ p.ortext {
     vertical-align: baseline;
     white-space: normal;
 }
-        
+
+/* After hovering, set content to empty */
 .tooltip .tooltiptextright::after {
     content: "";         
     top: 100%;
@@ -292,6 +299,7 @@ p.ortext {
     border-color: white transparent transparent transparent;
 }
 
+/* After hovering, set content to empty */
 .tooltip .tooltiptextleft::after {
     content: "";         
     top: 100%;
@@ -301,17 +309,20 @@ p.ortext {
     border-style: solid;
     border-color: black transparent transparent transparent;
 }
-        
+
+/* On hover, dsiplay course description */
 .tooltip:hover .tooltiptextright {
     visibility: visible;
     opacity: 1;
 }
 
+/* On hover, dsiplay course description */
 .tooltip:hover .tooltiptextleft {
     visibility: visible;
     opacity: 1;
 }
 
+/* Title of description, format taken from Calendar */
 .descriptiontitle {
     color: #2b292a;
     font-size: 30px;
@@ -319,6 +330,7 @@ p.ortext {
     font-family: 'Roboto', sans-serif;
 }
 
+/* Line between title and body of description */
 .descriptionline {
     height: 0;
     border: 0;
@@ -332,6 +344,7 @@ p.ortext {
     border-width: 1px;
 }
 
+/* Various components of description body */
 .descriptioncredits {
     display: inline;
 }
@@ -352,29 +365,30 @@ p.ortext {
     display: inline;
 }
 
-/* legend for categories */
-.legend {
-    width: 200px;
-    margin: 0;
+/* footer formatting */
+footer {
+    padding: 8px 8px;
+    background-color: #275d38;
+    margin-top: 10px;
+    margin-bottom: 0;
+    height: 64px;
     position: relative;
-    display: inline-block;
-    left: 75vw;
-    bottom: 25px;
-    text-align: center;
+    bottom: 0;
 }
 
-/* legend for line legend image */
-#linelegend {
-    height: 150px;
-    width: 300px;
+/* U of A logo */
+.footer img {
+    width: 183px;
+    height: 50px;
+    margin-right: 0;
     position: relative;
-    right: 50px;
-    bottom: 100px;
-    margin: 0;
+    left: 44vw;
 }
 
-.coursecontainer {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
+/* copyright logo and text */
+#copyright {
+    position: relative;
+    left: 50vw;
+    color: #FFFFFF;
+    font-family: 'Roboto',sans-serif;
 }

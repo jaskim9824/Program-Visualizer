@@ -777,6 +777,10 @@ def pullCategories(filename, course_obj_dict):
     #   category_dict (dict):
     #       Key: category (string): A category ("Basic Science", "Math", etc.)
     #       Value: color (string): six char hex rrggbb color code for that category
+    #   category_list (list of lists of strings): Ordered list with each element being
+    #   a list of length 2. The first element is the category name (string) and the second
+    #   being the hex color code (string) for that category. If category is COMP, PROG, or ITS
+    #   then the full name will be the category name
 
     try:
         category_dict = {}
@@ -796,8 +800,18 @@ def pullCategories(filename, course_obj_dict):
                 color = str(sheet.cell_value(1, col))
 
             category_dict[cat_name] = color  # store the category and color in a dict
-            cat_list_item = [cat_name, color]  # store the category and color in list (order preserved)
-            category_list.append(cat_list_item)
+
+            # Convert elective shorthand to full name
+            if cat_name.upper().strip() == "COMP":
+                list_name = "Complementary Elective"
+            elif cat_name.upper().strip() == "PROG":
+                list_name = "Program/Technical Elective"
+            elif cat_name.upper().strip() == "ITS":
+                list_name = "ITS Elective"
+            else:
+                list_name = cat_name
+            cat_list_item = [list_name, color]  # store the category and color in list (order preserved)
+            category_list.append(cat_list_item)  # store each category-color list in a wrapping list
 
             # Create a new course object if an elective because elective info is not in course_obj_dict
             if cat_name.upper().strip() == "COMP":

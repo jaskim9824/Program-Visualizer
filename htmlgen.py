@@ -44,7 +44,7 @@ def placeRadioInputs(formTag, sequenceDict, soup):
 # its attributes
 # Parameters:
 #   legendTag - HTML tag representing div which holds the category color legend
-#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
+#   categoryList - list with each element a length 2 list. Index 0: category, index 1: hex color code
 #   soup - soup object, used to create HTML tags
 def placeLegend(legendTag, categoryList, soup):
     for i in range(0, len(categoryList)):
