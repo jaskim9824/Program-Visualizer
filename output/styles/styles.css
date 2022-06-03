@@ -265,7 +265,7 @@ p.ortext {
 /* Course on right of page, tooltip appears to the left of course */
 .tooltip .tooltiptextleft {
     visibility: hidden;
-    width: 47.4vw;
+    width: 48vw;
     padding: 0px 10px;
     background-color: #EEEEEE;
     border: 1px solid #444444;
@@ -303,11 +303,11 @@ p.ortext {
 .tooltip .tooltiptextleft::after {
     content: "";         
     top: 100%;
-    left: 50%;
+    right: 50%;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: black transparent transparent transparent;
+    border-color: white transparent transparent transparent;
 }
 
 /* On hover, dsiplay course description */
