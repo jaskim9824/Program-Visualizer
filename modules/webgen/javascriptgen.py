@@ -250,14 +250,13 @@ def generateHighlightCategory(sequenceDict, controller):
 
     formattedCategoriesListener = """$scope.{categoryName}clickListener = function() {{
     if (!{categoryName}flag) {{
-        that.highlightCategory("{categoryName}", "{planName}");
+        that.highlightCategory("{categoryName}", $scope.selectedPlan);
         {categoryName}flag = true
     }}
     else {{
-        that.unhighlightCategory("{categoryName}", "{planName}");
+        that.unhighlightCategory("{categoryName}", $scope.selectedPlan);
         {categoryName}flag = false
-    }}
-}};\n"""
+    }}\n"""
 
     formattedFunctionStatement = """this.{functionName} = function(categoryName, planName) {{
 switch(categoryName) {{ \n"""
@@ -282,8 +281,8 @@ switch(categoryName) {{ \n"""
     formattedAddToUnclicked = """                 {courseName}{planName}element.classList.add("{categoryName}");\n"""
 
     for category in categoriesDict:
-        for plan in categoriesDict[category]:
-            controller.write(formattedCategoriesListener.format(categoryName=category, planName=plan))
+        controller.write(formattedCategoriesListener.format(categoryName=category))
+        controller.write("}\n")
 
     controller.write(formattedFunctionStatement.format(functionName="highlightCategory"))
     for category in categoriesDict:
@@ -295,7 +294,9 @@ switch(categoryName) {{ \n"""
                 controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name)))
                 controller.write(formattedRemoveUnclicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
                 controller.write(formattedAddToClicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
+            controller.write("""               break;\n""")
         controller.write("""       }\n""")
+        controller.write("""       break;\n""")
 
     controller.write(switchEndString)
     
@@ -310,6 +311,7 @@ switch(categoryName) {{ \n"""
                 controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name)))
                 controller.write(formattedRemoveClicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
                 controller.write(formattedAddToUnclicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
+            controller.write("""               break;\n""")
         controller.write("}\n")
 
     controller.write(switchEndString)
