@@ -1,6 +1,11 @@
-import xlrd
+# Author: Zachary Schmidt
+# Collaborators: Jason Kim, Moaz Abdelmonem
+# Oversight: Dr. David Nobes
+# University of Alberta, Summer 2022, Curriculum Development Co-op Term
+
 from copy import deepcopy
 from tkinter import messagebox
+import xlrd
 
 
 # Parses an Excel file with program sequencing information (when courses are taken)

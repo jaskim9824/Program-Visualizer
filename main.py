@@ -11,6 +11,9 @@
 
 from bs4 import BeautifulSoup
 import parsing
+import categoriesparsing
+import courseparsing
+import sequenceparsing
 import javascriptgen
 import htmlgen
 import linegen
@@ -76,16 +79,16 @@ def main():
             lineManager = linegen.LineManager()
 
             # parsing the excel files with course info, pulls dependencies (prereqs, coreqs, reqs) too
-            courseDict = parsing.parseCourses("Courses.xls")
+            courseDict = courseparsing.parseCourses("Courses.xls")
             
             # pulling the category and color info from excel
-            courseDict, categoryDict = parsing.parseCategories("CourseCategories.xls", courseDict)
+            courseDict, categoryDict = categoriesparsing.parseCategories("CourseCategories.xls", courseDict)
 
             # writing colour highlighting CSS
             writeCategoryCSS(categoryDict, categoryCSS)
             
             # sequencing courses
-            sequenceDict, deptName = parsing.parseSeq("Sequencing.xls", courseDict)
+            sequenceDict, deptName = sequenceparsing.parseSeq("Sequencing.xls", courseDict)
 
             # generating intital JS based on the number and names of plans
             javascriptgen.intializeControllerJavaScript(controller, sequenceDict)

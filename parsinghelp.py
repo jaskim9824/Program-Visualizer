@@ -1,3 +1,7 @@
+# Author: Zachary Schmidt
+# Collaborators: Jason Kim, Moaz Abdelmonem
+# Oversight: Dr. David Nobes
+# University of Alberta, Summer 2022, Curriculum Development Co-op Term
 
 # Class that wraps the information about a course
 class Course:
