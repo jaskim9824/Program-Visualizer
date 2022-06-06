@@ -224,13 +224,19 @@ def generateHighlightCategory(sequenceDict, controller):
     for plan in sequenceDict:
         for term in sequenceDict[plan]:
             for course in sequenceDict[plan][term]:
-                if course.category not in categoriesDict.keys():
-                    categoriesDict[course.category] = []
-                    categoriesDict[course.category].append([cleaner.cleanString(plan), course])
+                cat = cleaner.cleanString(course.category)
+                cleanplan = cleaner.cleanString(plan)
+                interdict = {}
+                interdict[cleanplan] = [course]
+                if cat not in categoriesDict.keys():
+                    categoriesDict[cat] = interdict
                 else:
-                    categoriesDict[course.category].append([cleaner.cleanString(plan), course])
-                
+                    if cleanplan not in categoriesDict[cat].keys():
+                        categoriesDict[cat].update(interdict)
+                    else:
+                        categoriesDict[cat][cleanplan].append(course)
 
+                
     formattedCategoriesFlagStatement = """var {categoryName}flag = false;\n"""
     for category in categoriesDict:
         if category != "":
@@ -238,16 +244,16 @@ def generateHighlightCategory(sequenceDict, controller):
 
     formattedCategoriesListener = """$scope.{categoryName}clickListener = function() {{
     if (!{categoryName}flag) {{
-        that.highlightCategory("{categoryName}");
+        that.highlightCategory("{categoryName}", "{planName}");
         {categoryName}flag = true
     }}
     else {{
-        that.unhighlightCategory("{categoryName}");
+        that.unhighlightCategory("{categoryName}", "{planName}");
         {categoryName}flag = false
     }}
 }};\n"""
 
-    formattedFunctionStatement = """this.{functionName} = function(categoryName) {{
+    formattedFunctionStatement = """this.{functionName} = function(categoryName, planName) {{
 switch(categoryName) {{ \n"""
     
     switchEndString = """break;   default:
@@ -255,39 +261,50 @@ switch(categoryName) {{ \n"""
     }
 };\n"""
 
-    formattedSwitchCat = """    case "{categoryName}":\n"""
+    formattedCasePlan  = """            case "{planName}":\n"""
 
-    formattedGetElement = """       var {courseName}{planName}element = document.getElementById("{courseName}{planName}");\n"""
+    formattedCaseCat = """    case "{categoryName}":\n"""
 
-    formattedRemoveUnlicked = """       {courseName}{planName}element.classList.remove("{categoryName}");\n"""
+    formattedGetElement = """               var {courseName}{planName}element = document.getElementById("{courseName}{planName}");\n"""
 
-    formattedAddToClicked = """       {courseName}{planName}element.classList.add("{categoryName}-highlighted");\n"""
+    formattedRemoveUnclicked = """               {courseName}{planName}element.classList.remove("{categoryName}");\n"""
 
-    formattedRemoveClicked = """       {courseName}{planName}element.classList.remove("{categoryName}-highlighted");\n"""
+    formattedAddToClicked = """               {courseName}{planName}element.classList.add("{categoryName}-highlighted");\n"""
 
-    formattedAddToUnclicked = """       {courseName}{planName}element.classList.add("{categoryName}");\n"""
+    formattedRemoveClicked = """             {courseName}{planName}element.classList.remove("{categoryName}-highlighted");\n"""
+
+    formattedAddToUnclicked = """                 {courseName}{planName}element.classList.add("{categoryName}");\n"""
 
     for category in categoriesDict:
-        controller.write(formattedCategoriesListener.format(categoryName=cleaner.cleanString(category)))
+        for plan in categoriesDict[category]:
+            controller.write(formattedCategoriesListener.format(categoryName=category, planName=plan))
 
     controller.write(formattedFunctionStatement.format(functionName="highlightCategory"))
     for category in categoriesDict:
-        controller.write(formattedSwitchCat.format(categoryName=cleaner.cleanString(category)))
-        for courseList in categoriesDict[category]:
-            controller.write(formattedGetElement.format(planName=courseList[0], courseName=cleaner.cleanString(courseList[1].name)))
-            controller.write(formattedRemoveUnlicked.format(planName=courseList[0], categoryName=cleaner.cleanString(category), courseName=cleaner.cleanString(courseList[1].name)))
-            controller.write(formattedAddToClicked.format(planName=courseList[0], categoryName=cleaner.cleanString(category), courseName=cleaner.cleanString(courseList[1].name)))
+        controller.write(formattedCaseCat.format(categoryName=cleaner.cleanString(category)))
+        controller.write("      switch(planName) {\n")
+        for plan in categoriesDict[category]:
+            controller.write(formattedCasePlan.format(planName=cleaner.cleanString(plan)))
+            for course in categoriesDict[category][plan]:
+                controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name)))
+                controller.write(formattedRemoveUnclicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
+                controller.write(formattedAddToClicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
+        controller.write("""       }\n""")
 
     controller.write(switchEndString)
     
 
     controller.write(formattedFunctionStatement.format(functionName="unhighlightCategory"))
     for category in categoriesDict:
-        controller.write(formattedSwitchCat.format(categoryName=cleaner.cleanString(category)))
-        for courseList in categoriesDict[category]:
-            controller.write(formattedGetElement.format(planName=courseList[0], courseName=cleaner.cleanString(courseList[1].name)))
-            controller.write(formattedRemoveClicked.format(planName=courseList[0], categoryName=cleaner.cleanString(category), courseName=cleaner.cleanString(courseList[1].name)))
-            controller.write(formattedAddToUnclicked.format(planName=courseList[0], categoryName=cleaner.cleanString(category), courseName=cleaner.cleanString(courseList[1].name)))
+        controller.write(formattedCaseCat.format(categoryName=cleaner.cleanString(category)))
+        controller.write("switch(planName) {\n")
+        for plan in categoriesDict[category]:
+            controller.write(formattedCasePlan.format(planName=cleaner.cleanString(plan)))
+            for course in categoriesDict[category][plan]:
+                controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name)))
+                controller.write(formattedRemoveClicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
+                controller.write(formattedAddToUnclicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
+        controller.write("}\n")
 
     controller.write(switchEndString)
 
