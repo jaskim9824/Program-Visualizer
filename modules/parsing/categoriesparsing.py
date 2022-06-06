@@ -6,7 +6,7 @@
 import xlrd
 from copy import deepcopy
 from tkinter import messagebox
-import parsinghelp
+from . import parsinghelp
 
 # Parses an Excel file for categorical info about each course (is it 
 # a math course, design, basic science, etc.) Also stores the color code

@@ -8,7 +8,7 @@
 
 # Dependencies: cleaner
 
-import cleaner
+from .. import cleaner
 
 # Function that generates the JS before the generation of the course diagram
 # Parameters:
@@ -17,6 +17,12 @@ import cleaner
 def intializeControllerJavaScript(controller, sequenceDict):
     generateIntitalBlockController(controller, sequenceDict)
     generatePlanBasedBlocksController(controller, sequenceDict)
+
+# Function that properly concludes and closes the controller JS
+#   controller - file handle for controller JS
+def closeControllerJavaScript(controller):
+    controller.write("});")
+    controller.close()
 
 
 # Function that generates the intital block of Javascript

@@ -7,44 +7,16 @@
 # and plan information to generate progamatically an interactive program 
 # diagram in the output directory
 
-# Dependencies: bs4, parsing, javascriptgen, htmlgen, linegen
+# Dependencies: bs4, parsing, webgen
 
 from bs4 import BeautifulSoup
-import parsing
-import categoriesparsing
-import courseparsing
-import sequenceparsing
-import javascriptgen
-import htmlgen
-import linegen
-import cleaner
-
-# Function that properly concludes and closes the controller JS
-#   controller - file handle for controller JS
-def closeControllerJavaScript(controller):
-    controller.write("});")
-    controller.close()
-
-# Function that writes the CSS associated with the highlighting
-# of courses based on category
-#   categoryDict - a dict that maps categories to colours
-#   categoryCSS - file handle to CSS file
-def writeCategoryCSS(categoryDict, categoryCSS):
-    for category in categoryDict:
-        backgroundColour = categoryDict[category]
-        categoryFormattedString = """.{categoryName}:hover {{
-            background-color: #{backColour}!important;
-            border-color: #{backColour}!important;
-        }}
-        .{categoryName}-highlighted {{
-            background-color: #{backColour};
-        }}
-        .{categoryName}-highlighted:hover {{
-            background-color: #{backColour}!important;
-            border-color: #{backColour}!important;
-        }}\n"""
-        categoryCSS.write(categoryFormattedString.format(categoryName=cleaner.cleanString(category),
-                                                         backColour=backgroundColour))
+import modules.parsing.categoriesparsing as categoriesparsing
+import modules.parsing.courseparsing as courseparsing
+import modules.parsing.sequenceparsing as sequenceparsing
+import modules.webgen.javascriptgen as javascriptgen
+import modules.webgen.htmlgen as htmlgen
+import modules.webgen.linegen as linegen
+import modules.webgen.cssgen as cssgen
 
 # Debug function for cleanly printing contents of plan sequences
 # Parameters:
@@ -85,7 +57,7 @@ def main():
             courseDict, categoryDict = categoriesparsing.parseCategories("CourseCategories.xls", courseDict)
 
             # writing colour highlighting CSS
-            writeCategoryCSS(categoryDict, categoryCSS)
+            cssgen.writeCategoryCSS(categoryDict, categoryCSS)
             
             # sequencing courses
             sequenceDict, deptName = sequenceparsing.parseSeq("Sequencing.xls", courseDict)
@@ -121,7 +93,7 @@ def main():
             htmlgen.placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager)
 
             # closing JS and CSS files
-            closeControllerJavaScript(controller)
+            javascriptgen.closeControllerJavaScript(controller)
             indexJS.close()
             categoryCSS.close()
            

@@ -6,7 +6,7 @@
 import xlrd
 from copy import deepcopy
 from tkinter import messagebox
-import parsinghelp
+from . import parsinghelp
 
 # Parses a .xls (NOT .xlsx) file located at the
 # relative path *filename* and stores all relevant course information

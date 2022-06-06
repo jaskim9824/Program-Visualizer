@@ -8,7 +8,7 @@
 
 # Dependencies: cleaner
 
-import cleaner
+from .. import cleaner
 
 
 # Class that defines an object used to manage line generation in the project

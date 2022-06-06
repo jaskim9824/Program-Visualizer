@@ -7,8 +7,8 @@
 
 # Dependencies: cleaner, linegen, html
 
-import cleaner
-import linegen
+from .. import cleaner
+from . import linegen
 import html
 
 # Changes the header title to include deptName, which is pulled
