@@ -79,7 +79,7 @@ def main():
             courseDict = parsing.parseCourses("Courses.xls")
             
             # pulling the category and color info from excel
-            courseDict, categoryDict, categoryList = parsing.parseCategories("CourseCategories.xls", courseDict)
+            courseDict, categoryDict = parsing.parseCategories("CourseCategories.xls", courseDict)
 
             # writing colour highlighting CSS
             writeCategoryCSS(categoryDict, categoryCSS)
@@ -112,7 +112,7 @@ def main():
             htmlgen.placeRadioInputs(formTag, sequenceDict, soup)
 
             # places legend for color-coding
-            htmlgen.placeLegend(legendTag, categoryList, soup)
+            htmlgen.placeLegend(legendTag, categoryDict, soup)
 
             #placing the HTML and generating JS based on the courses (drawing lines)
             htmlgen.placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager)

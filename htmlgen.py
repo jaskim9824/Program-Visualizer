@@ -46,14 +46,13 @@ def placeRadioInputs(formTag, sequenceDict, soup):
 #   legendTag - HTML tag representing div which holds the category color legend
 #   categoryDict - dict mapping category to colour
 #   soup - soup object, used to create HTML tags
-def placeLegend(legendTag, categoryList, soup):
-    for i in range(0, len(categoryList)):
-        categoryName = categoryList[i][0]
-        coursecat = soup.new_tag("div", attrs={"ng-click":categoryName.replace(" ", "") + "clickListener()", 
+def placeLegend(legendTag, categoryDict, soup):
+    for category in categoryDict:
+        coursecat = soup.new_tag("div", attrs={"ng-click":cleaner.cleanString(category) + "clickListener()", 
                                         "class":"legendbutton",
-                                        "id": categoryName,
-                                        "style":"background-color:#" + categoryList[i][1]})
-        coursecat.append(categoryList[i][0])
+                                        "id": cleaner.cleanString(category),
+                                        "style":"background-color:#" + categoryDict[category]})
+        coursecat.append(category)
         legendTag.append(coursecat)
 
 
