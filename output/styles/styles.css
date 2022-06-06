@@ -334,7 +334,7 @@ p.ortext {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: white transparent transparent transparent;
+    border-color: #EEEEEE transparent transparent transparent;
 }
 
 /* After hovering, set content to empty */
