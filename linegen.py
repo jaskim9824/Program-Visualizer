@@ -8,7 +8,6 @@
 
 # Dependencies: cleaner
 
-from unicodedata import category
 import cleaner
 
 

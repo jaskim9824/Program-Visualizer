@@ -14,9 +14,6 @@ import tkinter
 from turtle import back
 from bs4 import BeautifulSoup
 from numpy import pad
-from parsing import parse
-from parsing import pullCategories
-from parsing import pullSeq
 import javascriptgen
 import htmlgen
 import linegen
@@ -60,8 +57,7 @@ def debug(sequenceDict):
                 print(course.name)
             print("\n")
         print("\n")
-
-#######GUI#########    
+        
 #window
 root = Tk()
 root.title('Web generator')
@@ -166,9 +162,6 @@ def main():
     #TO DO: improve expection handling here
     except FileNotFoundError as err:
        print("Exception raised: " + 
-             err.strerror + 
-             ". The directory you are in does not have a directory named output.")
-       messagebox.showerror("python Error", "Exception raised: " + 
              err.strerror + 
              ". The directory you are in does not have a directory named output.")
 

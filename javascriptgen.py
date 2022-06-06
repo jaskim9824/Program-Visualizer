@@ -172,7 +172,10 @@ switch($scope.selectedPlan) {{ \n"""
 
     controller.write(switchEndString)
 
-
+# Function that generates the switch statement associated with the addToClicked method
+# Parameters:
+#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
+#   controller - file handle for controller.js file
 def generateAddToClickSwitch(sequenceDict, controller):
     switchEndString = """    default:
     console.log("shouldn't be here");
@@ -192,6 +195,10 @@ switch($scope.selectedPlan) {{ \n"""
     
     controller.write(switchEndString)
 
+# Function that generates the switch statement associated with the deleteFromClicked method
+# Parameters:
+#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
+#   controller - file handle for controller.js file
 def generateDeleteFromClickSwitch(sequenceDict, controller):
     switchEndString = """    default:
     console.log("shouldn't be here");
