@@ -126,6 +126,8 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
 #   compcounter - number of comp electives that have been placed for this plan
 #   progcounter - number of program electives that have been placed for this plan
 #   itscoutner - number of its electives that have been placed for this plan
+# Returns:
+#   compcounter, progcounter, itscounter 
 def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcounter, progcounter, itscounter):
     orCounter = 0
     for course in termList:

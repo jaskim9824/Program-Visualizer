@@ -3,6 +3,11 @@
 # Oversight: Dr. David Nobes
 # University of Alberta, Summer 2022, Curriculum Development Co-op Term
 
+# This file contains the functions neccesary to parse the Excel file
+# containing the sequncing information
+
+# Dependencies: copy, tkinter, xlrd
+
 from copy import deepcopy
 from tkinter import messagebox
 import xlrd

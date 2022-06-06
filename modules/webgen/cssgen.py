@@ -1,4 +1,12 @@
+# Author: Jason Kim
+# Collaborators: Zachary Schmidt, Moaz Abdelmonem
+# Oversight: Dr. David Nobes
+# University of Alberta, Summer 2022, Curriculum Development Co-op Term
 
+# This file contains the functions neccesary to write the CSS 
+# code for the categories of courses on the visualizer page
+
+# Dependencies: cleaner
 
 from .. import cleaner
 

@@ -3,6 +3,9 @@
 # Oversight: Dr. David Nobes
 # University of Alberta, Summer 2022, Curriculum Development Co-op Term
 
+# This file contains all the helper functions and classes that assist
+# in parsing the Excel files
+
 # Class that wraps the information about a course
 class Course:
     def __init__(self, name = "", faculty = "", department = "", course_id = "", subject = "", catalog = "",

@@ -3,6 +3,12 @@
 # Oversight: Dr. David Nobes
 # University of Alberta, Summer 2022, Curriculum Development Co-op Term
 
+# This files contains all the functions need to parse the Excel file
+# containing the course information 
+
+# Dependencies: copy, tkinter, xlrd, parsinghelp
+
+
 import xlrd
 from copy import deepcopy
 from tkinter import messagebox
