@@ -367,554 +367,104 @@ var ProgramTechnicalElectiveflag = false;
 var ITSElectiveflag = false;
 $scope.BASICSCIENCESclickListener = function() {
     if (!BASICSCIENCESflag) {
-        that.highlightCategory("BASICSCIENCES", "TraditionalPlan");
+        that.highlightCategory("BASICSCIENCES", $scope.selectedPlan);
         BASICSCIENCESflag = true
     }
     else {
-        that.unhighlightCategory("BASICSCIENCES", "TraditionalPlan");
+        that.unhighlightCategory("BASICSCIENCES", $scope.selectedPlan);
         BASICSCIENCESflag = false
     }
-};
-$scope.BASICSCIENCESclickListener = function() {
-    if (!BASICSCIENCESflag) {
-        that.highlightCategory("BASICSCIENCES", "AlternatePlan");
-        BASICSCIENCESflag = true
-    }
-    else {
-        that.unhighlightCategory("BASICSCIENCES", "AlternatePlan");
-        BASICSCIENCESflag = false
-    }
-};
-$scope.BASICSCIENCESclickListener = function() {
-    if (!BASICSCIENCESflag) {
-        that.highlightCategory("BASICSCIENCES", "CoopPlan1");
-        BASICSCIENCESflag = true
-    }
-    else {
-        that.unhighlightCategory("BASICSCIENCES", "CoopPlan1");
-        BASICSCIENCESflag = false
-    }
-};
-$scope.BASICSCIENCESclickListener = function() {
-    if (!BASICSCIENCESflag) {
-        that.highlightCategory("BASICSCIENCES", "CoopPlan2");
-        BASICSCIENCESflag = true
-    }
-    else {
-        that.unhighlightCategory("BASICSCIENCES", "CoopPlan2");
-        BASICSCIENCESflag = false
-    }
-};
-$scope.BASICSCIENCESclickListener = function() {
-    if (!BASICSCIENCESflag) {
-        that.highlightCategory("BASICSCIENCES", "CoopPlan3Biomedical");
-        BASICSCIENCESflag = true
-    }
-    else {
-        that.unhighlightCategory("BASICSCIENCES", "CoopPlan3Biomedical");
-        BASICSCIENCESflag = false
-    }
-};
-$scope.BASICSCIENCESclickListener = function() {
-    if (!BASICSCIENCESflag) {
-        that.highlightCategory("BASICSCIENCES", "CoopPlan4");
-        BASICSCIENCESflag = true
-    }
-    else {
-        that.unhighlightCategory("BASICSCIENCES", "CoopPlan4");
-        BASICSCIENCESflag = false
-    }
-};
+}
 $scope.ENGINEERINGPROFESSIONclickListener = function() {
     if (!ENGINEERINGPROFESSIONflag) {
-        that.highlightCategory("ENGINEERINGPROFESSION", "TraditionalPlan");
+        that.highlightCategory("ENGINEERINGPROFESSION", $scope.selectedPlan);
         ENGINEERINGPROFESSIONflag = true
     }
     else {
-        that.unhighlightCategory("ENGINEERINGPROFESSION", "TraditionalPlan");
+        that.unhighlightCategory("ENGINEERINGPROFESSION", $scope.selectedPlan);
         ENGINEERINGPROFESSIONflag = false
     }
-};
-$scope.ENGINEERINGPROFESSIONclickListener = function() {
-    if (!ENGINEERINGPROFESSIONflag) {
-        that.highlightCategory("ENGINEERINGPROFESSION", "AlternatePlan");
-        ENGINEERINGPROFESSIONflag = true
-    }
-    else {
-        that.unhighlightCategory("ENGINEERINGPROFESSION", "AlternatePlan");
-        ENGINEERINGPROFESSIONflag = false
-    }
-};
-$scope.ENGINEERINGPROFESSIONclickListener = function() {
-    if (!ENGINEERINGPROFESSIONflag) {
-        that.highlightCategory("ENGINEERINGPROFESSION", "CoopPlan1");
-        ENGINEERINGPROFESSIONflag = true
-    }
-    else {
-        that.unhighlightCategory("ENGINEERINGPROFESSION", "CoopPlan1");
-        ENGINEERINGPROFESSIONflag = false
-    }
-};
-$scope.ENGINEERINGPROFESSIONclickListener = function() {
-    if (!ENGINEERINGPROFESSIONflag) {
-        that.highlightCategory("ENGINEERINGPROFESSION", "CoopPlan2");
-        ENGINEERINGPROFESSIONflag = true
-    }
-    else {
-        that.unhighlightCategory("ENGINEERINGPROFESSION", "CoopPlan2");
-        ENGINEERINGPROFESSIONflag = false
-    }
-};
-$scope.ENGINEERINGPROFESSIONclickListener = function() {
-    if (!ENGINEERINGPROFESSIONflag) {
-        that.highlightCategory("ENGINEERINGPROFESSION", "CoopPlan3Biomedical");
-        ENGINEERINGPROFESSIONflag = true
-    }
-    else {
-        that.unhighlightCategory("ENGINEERINGPROFESSION", "CoopPlan3Biomedical");
-        ENGINEERINGPROFESSIONflag = false
-    }
-};
-$scope.ENGINEERINGPROFESSIONclickListener = function() {
-    if (!ENGINEERINGPROFESSIONflag) {
-        that.highlightCategory("ENGINEERINGPROFESSION", "CoopPlan4");
-        ENGINEERINGPROFESSIONflag = true
-    }
-    else {
-        that.unhighlightCategory("ENGINEERINGPROFESSION", "CoopPlan4");
-        ENGINEERINGPROFESSIONflag = false
-    }
-};
+}
 $scope.OtherclickListener = function() {
     if (!Otherflag) {
-        that.highlightCategory("Other", "TraditionalPlan");
+        that.highlightCategory("Other", $scope.selectedPlan);
         Otherflag = true
     }
     else {
-        that.unhighlightCategory("Other", "TraditionalPlan");
+        that.unhighlightCategory("Other", $scope.selectedPlan);
         Otherflag = false
     }
-};
-$scope.OtherclickListener = function() {
-    if (!Otherflag) {
-        that.highlightCategory("Other", "AlternatePlan");
-        Otherflag = true
-    }
-    else {
-        that.unhighlightCategory("Other", "AlternatePlan");
-        Otherflag = false
-    }
-};
-$scope.OtherclickListener = function() {
-    if (!Otherflag) {
-        that.highlightCategory("Other", "CoopPlan1");
-        Otherflag = true
-    }
-    else {
-        that.unhighlightCategory("Other", "CoopPlan1");
-        Otherflag = false
-    }
-};
-$scope.OtherclickListener = function() {
-    if (!Otherflag) {
-        that.highlightCategory("Other", "CoopPlan2");
-        Otherflag = true
-    }
-    else {
-        that.unhighlightCategory("Other", "CoopPlan2");
-        Otherflag = false
-    }
-};
-$scope.OtherclickListener = function() {
-    if (!Otherflag) {
-        that.highlightCategory("Other", "CoopPlan3Biomedical");
-        Otherflag = true
-    }
-    else {
-        that.unhighlightCategory("Other", "CoopPlan3Biomedical");
-        Otherflag = false
-    }
-};
-$scope.OtherclickListener = function() {
-    if (!Otherflag) {
-        that.highlightCategory("Other", "CoopPlan4");
-        Otherflag = true
-    }
-    else {
-        that.unhighlightCategory("Other", "CoopPlan4");
-        Otherflag = false
-    }
-};
+}
 $scope.MATHclickListener = function() {
     if (!MATHflag) {
-        that.highlightCategory("MATH", "TraditionalPlan");
+        that.highlightCategory("MATH", $scope.selectedPlan);
         MATHflag = true
     }
     else {
-        that.unhighlightCategory("MATH", "TraditionalPlan");
+        that.unhighlightCategory("MATH", $scope.selectedPlan);
         MATHflag = false
     }
-};
-$scope.MATHclickListener = function() {
-    if (!MATHflag) {
-        that.highlightCategory("MATH", "AlternatePlan");
-        MATHflag = true
-    }
-    else {
-        that.unhighlightCategory("MATH", "AlternatePlan");
-        MATHflag = false
-    }
-};
-$scope.MATHclickListener = function() {
-    if (!MATHflag) {
-        that.highlightCategory("MATH", "CoopPlan1");
-        MATHflag = true
-    }
-    else {
-        that.unhighlightCategory("MATH", "CoopPlan1");
-        MATHflag = false
-    }
-};
-$scope.MATHclickListener = function() {
-    if (!MATHflag) {
-        that.highlightCategory("MATH", "CoopPlan2");
-        MATHflag = true
-    }
-    else {
-        that.unhighlightCategory("MATH", "CoopPlan2");
-        MATHflag = false
-    }
-};
-$scope.MATHclickListener = function() {
-    if (!MATHflag) {
-        that.highlightCategory("MATH", "CoopPlan3Biomedical");
-        MATHflag = true
-    }
-    else {
-        that.unhighlightCategory("MATH", "CoopPlan3Biomedical");
-        MATHflag = false
-    }
-};
-$scope.MATHclickListener = function() {
-    if (!MATHflag) {
-        that.highlightCategory("MATH", "CoopPlan4");
-        MATHflag = true
-    }
-    else {
-        that.unhighlightCategory("MATH", "CoopPlan4");
-        MATHflag = false
-    }
-};
+}
 $scope.ENGINEERINGDESIGNclickListener = function() {
     if (!ENGINEERINGDESIGNflag) {
-        that.highlightCategory("ENGINEERINGDESIGN", "TraditionalPlan");
+        that.highlightCategory("ENGINEERINGDESIGN", $scope.selectedPlan);
         ENGINEERINGDESIGNflag = true
     }
     else {
-        that.unhighlightCategory("ENGINEERINGDESIGN", "TraditionalPlan");
+        that.unhighlightCategory("ENGINEERINGDESIGN", $scope.selectedPlan);
         ENGINEERINGDESIGNflag = false
     }
-};
-$scope.ENGINEERINGDESIGNclickListener = function() {
-    if (!ENGINEERINGDESIGNflag) {
-        that.highlightCategory("ENGINEERINGDESIGN", "AlternatePlan");
-        ENGINEERINGDESIGNflag = true
-    }
-    else {
-        that.unhighlightCategory("ENGINEERINGDESIGN", "AlternatePlan");
-        ENGINEERINGDESIGNflag = false
-    }
-};
-$scope.ENGINEERINGDESIGNclickListener = function() {
-    if (!ENGINEERINGDESIGNflag) {
-        that.highlightCategory("ENGINEERINGDESIGN", "CoopPlan1");
-        ENGINEERINGDESIGNflag = true
-    }
-    else {
-        that.unhighlightCategory("ENGINEERINGDESIGN", "CoopPlan1");
-        ENGINEERINGDESIGNflag = false
-    }
-};
-$scope.ENGINEERINGDESIGNclickListener = function() {
-    if (!ENGINEERINGDESIGNflag) {
-        that.highlightCategory("ENGINEERINGDESIGN", "CoopPlan2");
-        ENGINEERINGDESIGNflag = true
-    }
-    else {
-        that.unhighlightCategory("ENGINEERINGDESIGN", "CoopPlan2");
-        ENGINEERINGDESIGNflag = false
-    }
-};
-$scope.ENGINEERINGDESIGNclickListener = function() {
-    if (!ENGINEERINGDESIGNflag) {
-        that.highlightCategory("ENGINEERINGDESIGN", "CoopPlan3Biomedical");
-        ENGINEERINGDESIGNflag = true
-    }
-    else {
-        that.unhighlightCategory("ENGINEERINGDESIGN", "CoopPlan3Biomedical");
-        ENGINEERINGDESIGNflag = false
-    }
-};
-$scope.ENGINEERINGDESIGNclickListener = function() {
-    if (!ENGINEERINGDESIGNflag) {
-        that.highlightCategory("ENGINEERINGDESIGN", "CoopPlan4");
-        ENGINEERINGDESIGNflag = true
-    }
-    else {
-        that.unhighlightCategory("ENGINEERINGDESIGN", "CoopPlan4");
-        ENGINEERINGDESIGNflag = false
-    }
-};
+}
 $scope.ENGINEERINGSCIENCESclickListener = function() {
     if (!ENGINEERINGSCIENCESflag) {
-        that.highlightCategory("ENGINEERINGSCIENCES", "TraditionalPlan");
+        that.highlightCategory("ENGINEERINGSCIENCES", $scope.selectedPlan);
         ENGINEERINGSCIENCESflag = true
     }
     else {
-        that.unhighlightCategory("ENGINEERINGSCIENCES", "TraditionalPlan");
+        that.unhighlightCategory("ENGINEERINGSCIENCES", $scope.selectedPlan);
         ENGINEERINGSCIENCESflag = false
     }
-};
-$scope.ENGINEERINGSCIENCESclickListener = function() {
-    if (!ENGINEERINGSCIENCESflag) {
-        that.highlightCategory("ENGINEERINGSCIENCES", "AlternatePlan");
-        ENGINEERINGSCIENCESflag = true
-    }
-    else {
-        that.unhighlightCategory("ENGINEERINGSCIENCES", "AlternatePlan");
-        ENGINEERINGSCIENCESflag = false
-    }
-};
-$scope.ENGINEERINGSCIENCESclickListener = function() {
-    if (!ENGINEERINGSCIENCESflag) {
-        that.highlightCategory("ENGINEERINGSCIENCES", "CoopPlan1");
-        ENGINEERINGSCIENCESflag = true
-    }
-    else {
-        that.unhighlightCategory("ENGINEERINGSCIENCES", "CoopPlan1");
-        ENGINEERINGSCIENCESflag = false
-    }
-};
-$scope.ENGINEERINGSCIENCESclickListener = function() {
-    if (!ENGINEERINGSCIENCESflag) {
-        that.highlightCategory("ENGINEERINGSCIENCES", "CoopPlan2");
-        ENGINEERINGSCIENCESflag = true
-    }
-    else {
-        that.unhighlightCategory("ENGINEERINGSCIENCES", "CoopPlan2");
-        ENGINEERINGSCIENCESflag = false
-    }
-};
-$scope.ENGINEERINGSCIENCESclickListener = function() {
-    if (!ENGINEERINGSCIENCESflag) {
-        that.highlightCategory("ENGINEERINGSCIENCES", "CoopPlan3Biomedical");
-        ENGINEERINGSCIENCESflag = true
-    }
-    else {
-        that.unhighlightCategory("ENGINEERINGSCIENCES", "CoopPlan3Biomedical");
-        ENGINEERINGSCIENCESflag = false
-    }
-};
-$scope.ENGINEERINGSCIENCESclickListener = function() {
-    if (!ENGINEERINGSCIENCESflag) {
-        that.highlightCategory("ENGINEERINGSCIENCES", "CoopPlan4");
-        ENGINEERINGSCIENCESflag = true
-    }
-    else {
-        that.unhighlightCategory("ENGINEERINGSCIENCES", "CoopPlan4");
-        ENGINEERINGSCIENCESflag = false
-    }
-};
+}
 $scope.ComplementaryElectiveclickListener = function() {
     if (!ComplementaryElectiveflag) {
-        that.highlightCategory("ComplementaryElective", "TraditionalPlan");
+        that.highlightCategory("ComplementaryElective", $scope.selectedPlan);
         ComplementaryElectiveflag = true
     }
     else {
-        that.unhighlightCategory("ComplementaryElective", "TraditionalPlan");
+        that.unhighlightCategory("ComplementaryElective", $scope.selectedPlan);
         ComplementaryElectiveflag = false
     }
-};
-$scope.ComplementaryElectiveclickListener = function() {
-    if (!ComplementaryElectiveflag) {
-        that.highlightCategory("ComplementaryElective", "AlternatePlan");
-        ComplementaryElectiveflag = true
-    }
-    else {
-        that.unhighlightCategory("ComplementaryElective", "AlternatePlan");
-        ComplementaryElectiveflag = false
-    }
-};
-$scope.ComplementaryElectiveclickListener = function() {
-    if (!ComplementaryElectiveflag) {
-        that.highlightCategory("ComplementaryElective", "CoopPlan1");
-        ComplementaryElectiveflag = true
-    }
-    else {
-        that.unhighlightCategory("ComplementaryElective", "CoopPlan1");
-        ComplementaryElectiveflag = false
-    }
-};
-$scope.ComplementaryElectiveclickListener = function() {
-    if (!ComplementaryElectiveflag) {
-        that.highlightCategory("ComplementaryElective", "CoopPlan2");
-        ComplementaryElectiveflag = true
-    }
-    else {
-        that.unhighlightCategory("ComplementaryElective", "CoopPlan2");
-        ComplementaryElectiveflag = false
-    }
-};
-$scope.ComplementaryElectiveclickListener = function() {
-    if (!ComplementaryElectiveflag) {
-        that.highlightCategory("ComplementaryElective", "CoopPlan3Biomedical");
-        ComplementaryElectiveflag = true
-    }
-    else {
-        that.unhighlightCategory("ComplementaryElective", "CoopPlan3Biomedical");
-        ComplementaryElectiveflag = false
-    }
-};
-$scope.ComplementaryElectiveclickListener = function() {
-    if (!ComplementaryElectiveflag) {
-        that.highlightCategory("ComplementaryElective", "CoopPlan4");
-        ComplementaryElectiveflag = true
-    }
-    else {
-        that.unhighlightCategory("ComplementaryElective", "CoopPlan4");
-        ComplementaryElectiveflag = false
-    }
-};
+}
 $scope.ProgramTechnicalElectiveclickListener = function() {
     if (!ProgramTechnicalElectiveflag) {
-        that.highlightCategory("ProgramTechnicalElective", "TraditionalPlan");
+        that.highlightCategory("ProgramTechnicalElective", $scope.selectedPlan);
         ProgramTechnicalElectiveflag = true
     }
     else {
-        that.unhighlightCategory("ProgramTechnicalElective", "TraditionalPlan");
+        that.unhighlightCategory("ProgramTechnicalElective", $scope.selectedPlan);
         ProgramTechnicalElectiveflag = false
     }
-};
-$scope.ProgramTechnicalElectiveclickListener = function() {
-    if (!ProgramTechnicalElectiveflag) {
-        that.highlightCategory("ProgramTechnicalElective", "AlternatePlan");
-        ProgramTechnicalElectiveflag = true
-    }
-    else {
-        that.unhighlightCategory("ProgramTechnicalElective", "AlternatePlan");
-        ProgramTechnicalElectiveflag = false
-    }
-};
-$scope.ProgramTechnicalElectiveclickListener = function() {
-    if (!ProgramTechnicalElectiveflag) {
-        that.highlightCategory("ProgramTechnicalElective", "CoopPlan1");
-        ProgramTechnicalElectiveflag = true
-    }
-    else {
-        that.unhighlightCategory("ProgramTechnicalElective", "CoopPlan1");
-        ProgramTechnicalElectiveflag = false
-    }
-};
-$scope.ProgramTechnicalElectiveclickListener = function() {
-    if (!ProgramTechnicalElectiveflag) {
-        that.highlightCategory("ProgramTechnicalElective", "CoopPlan2");
-        ProgramTechnicalElectiveflag = true
-    }
-    else {
-        that.unhighlightCategory("ProgramTechnicalElective", "CoopPlan2");
-        ProgramTechnicalElectiveflag = false
-    }
-};
-$scope.ProgramTechnicalElectiveclickListener = function() {
-    if (!ProgramTechnicalElectiveflag) {
-        that.highlightCategory("ProgramTechnicalElective", "CoopPlan3Biomedical");
-        ProgramTechnicalElectiveflag = true
-    }
-    else {
-        that.unhighlightCategory("ProgramTechnicalElective", "CoopPlan3Biomedical");
-        ProgramTechnicalElectiveflag = false
-    }
-};
-$scope.ProgramTechnicalElectiveclickListener = function() {
-    if (!ProgramTechnicalElectiveflag) {
-        that.highlightCategory("ProgramTechnicalElective", "CoopPlan4");
-        ProgramTechnicalElectiveflag = true
-    }
-    else {
-        that.unhighlightCategory("ProgramTechnicalElective", "CoopPlan4");
-        ProgramTechnicalElectiveflag = false
-    }
-};
+}
 $scope.ITSElectiveclickListener = function() {
     if (!ITSElectiveflag) {
-        that.highlightCategory("ITSElective", "TraditionalPlan");
+        that.highlightCategory("ITSElective", $scope.selectedPlan);
         ITSElectiveflag = true
     }
     else {
-        that.unhighlightCategory("ITSElective", "TraditionalPlan");
+        that.unhighlightCategory("ITSElective", $scope.selectedPlan);
         ITSElectiveflag = false
     }
-};
-$scope.ITSElectiveclickListener = function() {
-    if (!ITSElectiveflag) {
-        that.highlightCategory("ITSElective", "AlternatePlan");
-        ITSElectiveflag = true
-    }
-    else {
-        that.unhighlightCategory("ITSElective", "AlternatePlan");
-        ITSElectiveflag = false
-    }
-};
-$scope.ITSElectiveclickListener = function() {
-    if (!ITSElectiveflag) {
-        that.highlightCategory("ITSElective", "CoopPlan1");
-        ITSElectiveflag = true
-    }
-    else {
-        that.unhighlightCategory("ITSElective", "CoopPlan1");
-        ITSElectiveflag = false
-    }
-};
-$scope.ITSElectiveclickListener = function() {
-    if (!ITSElectiveflag) {
-        that.highlightCategory("ITSElective", "CoopPlan2");
-        ITSElectiveflag = true
-    }
-    else {
-        that.unhighlightCategory("ITSElective", "CoopPlan2");
-        ITSElectiveflag = false
-    }
-};
-$scope.ITSElectiveclickListener = function() {
-    if (!ITSElectiveflag) {
-        that.highlightCategory("ITSElective", "CoopPlan3Biomedical");
-        ITSElectiveflag = true
-    }
-    else {
-        that.unhighlightCategory("ITSElective", "CoopPlan3Biomedical");
-        ITSElectiveflag = false
-    }
-};
-$scope.ITSElectiveclickListener = function() {
-    if (!ITSElectiveflag) {
-        that.highlightCategory("ITSElective", "CoopPlan4");
-        ITSElectiveflag = true
-    }
-    else {
-        that.unhighlightCategory("ITSElective", "CoopPlan4");
-        ITSElectiveflag = false
-    }
-};
+}
 $scope.clickListener = function() {
     if (!flag) {
-        that.highlightCategory("", "CoopPlan3Biomedical");
+        that.highlightCategory("", $scope.selectedPlan);
         flag = true
     }
     else {
-        that.unhighlightCategory("", "CoopPlan3Biomedical");
+        that.unhighlightCategory("", $scope.selectedPlan);
         flag = false
     }
-};
+}
 this.highlightCategory = function(categoryName, planName) {
 switch(categoryName) { 
     case "BASICSCIENCES":
@@ -938,6 +488,7 @@ switch(categoryName) {
                var ENPH131TraditionalPlanelement = document.getElementById("ENPH131TraditionalPlan");
                ENPH131TraditionalPlanelement.classList.remove("BASICSCIENCES");
                ENPH131TraditionalPlanelement.classList.add("BASICSCIENCES-highlighted");
+               break;
             case "AlternatePlan":
                var CHEM103AlternatePlanelement = document.getElementById("CHEM103AlternatePlan");
                CHEM103AlternatePlanelement.classList.remove("BASICSCIENCES");
@@ -957,6 +508,7 @@ switch(categoryName) {
                var ENPH131AlternatePlanelement = document.getElementById("ENPH131AlternatePlan");
                ENPH131AlternatePlanelement.classList.remove("BASICSCIENCES");
                ENPH131AlternatePlanelement.classList.add("BASICSCIENCES-highlighted");
+               break;
             case "CoopPlan1":
                var CHEM103CoopPlan1element = document.getElementById("CHEM103CoopPlan1");
                CHEM103CoopPlan1element.classList.remove("BASICSCIENCES");
@@ -976,6 +528,7 @@ switch(categoryName) {
                var ENPH131CoopPlan1element = document.getElementById("ENPH131CoopPlan1");
                ENPH131CoopPlan1element.classList.remove("BASICSCIENCES");
                ENPH131CoopPlan1element.classList.add("BASICSCIENCES-highlighted");
+               break;
             case "CoopPlan2":
                var CHEM103CoopPlan2element = document.getElementById("CHEM103CoopPlan2");
                CHEM103CoopPlan2element.classList.remove("BASICSCIENCES");
@@ -995,6 +548,7 @@ switch(categoryName) {
                var ENPH131CoopPlan2element = document.getElementById("ENPH131CoopPlan2");
                ENPH131CoopPlan2element.classList.remove("BASICSCIENCES");
                ENPH131CoopPlan2element.classList.add("BASICSCIENCES-highlighted");
+               break;
             case "CoopPlan3Biomedical":
                var CHEM103CoopPlan3Biomedicalelement = document.getElementById("CHEM103CoopPlan3Biomedical");
                CHEM103CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES");
@@ -1014,6 +568,7 @@ switch(categoryName) {
                var ENPH131CoopPlan3Biomedicalelement = document.getElementById("ENPH131CoopPlan3Biomedical");
                ENPH131CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES");
                ENPH131CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES-highlighted");
+               break;
             case "CoopPlan4":
                var CHEM103CoopPlan4element = document.getElementById("CHEM103CoopPlan4");
                CHEM103CoopPlan4element.classList.remove("BASICSCIENCES");
@@ -1033,7 +588,9 @@ switch(categoryName) {
                var ENPH131CoopPlan4element = document.getElementById("ENPH131CoopPlan4");
                ENPH131CoopPlan4element.classList.remove("BASICSCIENCES");
                ENPH131CoopPlan4element.classList.add("BASICSCIENCES-highlighted");
+               break;
        }
+       break;
     case "ENGINEERINGPROFESSION":
       switch(planName) {
             case "TraditionalPlan":
@@ -1049,6 +606,7 @@ switch(categoryName) {
                var ENGG400TraditionalPlanelement = document.getElementById("ENGG400TraditionalPlan");
                ENGG400TraditionalPlanelement.classList.remove("ENGINEERINGPROFESSION");
                ENGG400TraditionalPlanelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+               break;
             case "AlternatePlan":
                var ENGG100AlternatePlanelement = document.getElementById("ENGG100AlternatePlan");
                ENGG100AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION");
@@ -1062,6 +620,7 @@ switch(categoryName) {
                var ENGG400AlternatePlanelement = document.getElementById("ENGG400AlternatePlan");
                ENGG400AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION");
                ENGG400AlternatePlanelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+               break;
             case "CoopPlan1":
                var ENGG100CoopPlan1element = document.getElementById("ENGG100CoopPlan1");
                ENGG100CoopPlan1element.classList.remove("ENGINEERINGPROFESSION");
@@ -1093,6 +652,7 @@ switch(categoryName) {
                var ENGG400CoopPlan1element = document.getElementById("ENGG400CoopPlan1");
                ENGG400CoopPlan1element.classList.remove("ENGINEERINGPROFESSION");
                ENGG400CoopPlan1element.classList.add("ENGINEERINGPROFESSION-highlighted");
+               break;
             case "CoopPlan2":
                var ENGG100CoopPlan2element = document.getElementById("ENGG100CoopPlan2");
                ENGG100CoopPlan2element.classList.remove("ENGINEERINGPROFESSION");
@@ -1124,6 +684,7 @@ switch(categoryName) {
                var ENGG404CoopPlan2element = document.getElementById("ENGG404CoopPlan2");
                ENGG404CoopPlan2element.classList.remove("ENGINEERINGPROFESSION");
                ENGG404CoopPlan2element.classList.add("ENGINEERINGPROFESSION-highlighted");
+               break;
             case "CoopPlan3Biomedical":
                var ENGG100CoopPlan3Biomedicalelement = document.getElementById("ENGG100CoopPlan3Biomedical");
                ENGG100CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION");
@@ -1152,6 +713,7 @@ switch(categoryName) {
                var ENGG400CoopPlan3Biomedicalelement = document.getElementById("ENGG400CoopPlan3Biomedical");
                ENGG400CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION");
                ENGG400CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+               break;
             case "CoopPlan4":
                var ENGG100CoopPlan4element = document.getElementById("ENGG100CoopPlan4");
                ENGG100CoopPlan4element.classList.remove("ENGINEERINGPROFESSION");
@@ -1183,7 +745,9 @@ switch(categoryName) {
                var ENGG400CoopPlan4element = document.getElementById("ENGG400CoopPlan4");
                ENGG400CoopPlan4element.classList.remove("ENGINEERINGPROFESSION");
                ENGG400CoopPlan4element.classList.add("ENGINEERINGPROFESSION-highlighted");
+               break;
        }
+       break;
     case "Other":
       switch(planName) {
             case "TraditionalPlan":
@@ -1196,6 +760,7 @@ switch(categoryName) {
                var ENGM401TraditionalPlanelement = document.getElementById("ENGM401TraditionalPlan");
                ENGM401TraditionalPlanelement.classList.remove("Other");
                ENGM401TraditionalPlanelement.classList.add("Other-highlighted");
+               break;
             case "AlternatePlan":
                var ENGL199AlternatePlanelement = document.getElementById("ENGL199AlternatePlan");
                ENGL199AlternatePlanelement.classList.remove("Other");
@@ -1206,6 +771,7 @@ switch(categoryName) {
                var ENGM401AlternatePlanelement = document.getElementById("ENGM401AlternatePlan");
                ENGM401AlternatePlanelement.classList.remove("Other");
                ENGM401AlternatePlanelement.classList.add("Other-highlighted");
+               break;
             case "CoopPlan1":
                var ENGL199CoopPlan1element = document.getElementById("ENGL199CoopPlan1");
                ENGL199CoopPlan1element.classList.remove("Other");
@@ -1216,6 +782,7 @@ switch(categoryName) {
                var ENGM401CoopPlan1element = document.getElementById("ENGM401CoopPlan1");
                ENGM401CoopPlan1element.classList.remove("Other");
                ENGM401CoopPlan1element.classList.add("Other-highlighted");
+               break;
             case "CoopPlan2":
                var ENGL199CoopPlan2element = document.getElementById("ENGL199CoopPlan2");
                ENGL199CoopPlan2element.classList.remove("Other");
@@ -1226,6 +793,7 @@ switch(categoryName) {
                var ENGM401CoopPlan2element = document.getElementById("ENGM401CoopPlan2");
                ENGM401CoopPlan2element.classList.remove("Other");
                ENGM401CoopPlan2element.classList.add("Other-highlighted");
+               break;
             case "CoopPlan3Biomedical":
                var ENGL199CoopPlan3Biomedicalelement = document.getElementById("ENGL199CoopPlan3Biomedical");
                ENGL199CoopPlan3Biomedicalelement.classList.remove("Other");
@@ -1236,6 +804,7 @@ switch(categoryName) {
                var ENGM401CoopPlan3Biomedicalelement = document.getElementById("ENGM401CoopPlan3Biomedical");
                ENGM401CoopPlan3Biomedicalelement.classList.remove("Other");
                ENGM401CoopPlan3Biomedicalelement.classList.add("Other-highlighted");
+               break;
             case "CoopPlan4":
                var ENGL199CoopPlan4element = document.getElementById("ENGL199CoopPlan4");
                ENGL199CoopPlan4element.classList.remove("Other");
@@ -1246,7 +815,9 @@ switch(categoryName) {
                var ENGM401CoopPlan4element = document.getElementById("ENGM401CoopPlan4");
                ENGM401CoopPlan4element.classList.remove("Other");
                ENGM401CoopPlan4element.classList.add("Other-highlighted");
+               break;
        }
+       break;
     case "MATH":
       switch(planName) {
             case "TraditionalPlan":
@@ -1274,6 +845,7 @@ switch(categoryName) {
                var MECE390TraditionalPlanelement = document.getElementById("MECE390TraditionalPlan");
                MECE390TraditionalPlanelement.classList.remove("MATH");
                MECE390TraditionalPlanelement.classList.add("MATH-highlighted");
+               break;
             case "AlternatePlan":
                var MATH100AlternatePlanelement = document.getElementById("MATH100AlternatePlan");
                MATH100AlternatePlanelement.classList.remove("MATH");
@@ -1299,6 +871,7 @@ switch(categoryName) {
                var MECE390AlternatePlanelement = document.getElementById("MECE390AlternatePlan");
                MECE390AlternatePlanelement.classList.remove("MATH");
                MECE390AlternatePlanelement.classList.add("MATH-highlighted");
+               break;
             case "CoopPlan1":
                var MATH100CoopPlan1element = document.getElementById("MATH100CoopPlan1");
                MATH100CoopPlan1element.classList.remove("MATH");
@@ -1324,6 +897,7 @@ switch(categoryName) {
                var MECE390CoopPlan1element = document.getElementById("MECE390CoopPlan1");
                MECE390CoopPlan1element.classList.remove("MATH");
                MECE390CoopPlan1element.classList.add("MATH-highlighted");
+               break;
             case "CoopPlan2":
                var MATH100CoopPlan2element = document.getElementById("MATH100CoopPlan2");
                MATH100CoopPlan2element.classList.remove("MATH");
@@ -1349,6 +923,7 @@ switch(categoryName) {
                var MECE390CoopPlan2element = document.getElementById("MECE390CoopPlan2");
                MECE390CoopPlan2element.classList.remove("MATH");
                MECE390CoopPlan2element.classList.add("MATH-highlighted");
+               break;
             case "CoopPlan3Biomedical":
                var MATH100CoopPlan3Biomedicalelement = document.getElementById("MATH100CoopPlan3Biomedical");
                MATH100CoopPlan3Biomedicalelement.classList.remove("MATH");
@@ -1374,6 +949,7 @@ switch(categoryName) {
                var MATH300CoopPlan3Biomedicalelement = document.getElementById("MATH300CoopPlan3Biomedical");
                MATH300CoopPlan3Biomedicalelement.classList.remove("MATH");
                MATH300CoopPlan3Biomedicalelement.classList.add("MATH-highlighted");
+               break;
             case "CoopPlan4":
                var MATH100CoopPlan4element = document.getElementById("MATH100CoopPlan4");
                MATH100CoopPlan4element.classList.remove("MATH");
@@ -1399,7 +975,9 @@ switch(categoryName) {
                var MECE390CoopPlan4element = document.getElementById("MECE390CoopPlan4");
                MECE390CoopPlan4element.classList.remove("MATH");
                MECE390CoopPlan4element.classList.add("MATH-highlighted");
+               break;
        }
+       break;
     case "ENGINEERINGDESIGN":
       switch(planName) {
             case "TraditionalPlan":
@@ -1421,6 +999,7 @@ switch(categoryName) {
                var MECE460TraditionalPlanelement = document.getElementById("MECE460TraditionalPlan");
                MECE460TraditionalPlanelement.classList.remove("ENGINEERINGDESIGN");
                MECE460TraditionalPlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
+               break;
             case "AlternatePlan":
                var ENGG160AlternatePlanelement = document.getElementById("ENGG160AlternatePlan");
                ENGG160AlternatePlanelement.classList.remove("ENGINEERINGDESIGN");
@@ -1440,6 +1019,7 @@ switch(categoryName) {
                var MECE460AlternatePlanelement = document.getElementById("MECE460AlternatePlan");
                MECE460AlternatePlanelement.classList.remove("ENGINEERINGDESIGN");
                MECE460AlternatePlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
+               break;
             case "CoopPlan1":
                var ENGG160CoopPlan1element = document.getElementById("ENGG160CoopPlan1");
                ENGG160CoopPlan1element.classList.remove("ENGINEERINGDESIGN");
@@ -1459,6 +1039,7 @@ switch(categoryName) {
                var MECE460CoopPlan1element = document.getElementById("MECE460CoopPlan1");
                MECE460CoopPlan1element.classList.remove("ENGINEERINGDESIGN");
                MECE460CoopPlan1element.classList.add("ENGINEERINGDESIGN-highlighted");
+               break;
             case "CoopPlan2":
                var ENGG160CoopPlan2element = document.getElementById("ENGG160CoopPlan2");
                ENGG160CoopPlan2element.classList.remove("ENGINEERINGDESIGN");
@@ -1478,6 +1059,7 @@ switch(categoryName) {
                var MECE460CoopPlan2element = document.getElementById("MECE460CoopPlan2");
                MECE460CoopPlan2element.classList.remove("ENGINEERINGDESIGN");
                MECE460CoopPlan2element.classList.add("ENGINEERINGDESIGN-highlighted");
+               break;
             case "CoopPlan3Biomedical":
                var ENGG160CoopPlan3Biomedicalelement = document.getElementById("ENGG160CoopPlan3Biomedical");
                ENGG160CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN");
@@ -1497,6 +1079,7 @@ switch(categoryName) {
                var MECE460CoopPlan3Biomedicalelement = document.getElementById("MECE460CoopPlan3Biomedical");
                MECE460CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN");
                MECE460CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN-highlighted");
+               break;
             case "CoopPlan4":
                var ENGG160CoopPlan4element = document.getElementById("ENGG160CoopPlan4");
                ENGG160CoopPlan4element.classList.remove("ENGINEERINGDESIGN");
@@ -1516,7 +1099,9 @@ switch(categoryName) {
                var MECE460CoopPlan4element = document.getElementById("MECE460CoopPlan4");
                MECE460CoopPlan4element.classList.remove("ENGINEERINGDESIGN");
                MECE460CoopPlan4element.classList.add("ENGINEERINGDESIGN-highlighted");
+               break;
        }
+       break;
     case "ENGINEERINGSCIENCES":
       switch(planName) {
             case "TraditionalPlan":
@@ -1577,6 +1162,7 @@ switch(categoryName) {
                var MECE451TraditionalPlanelement = document.getElementById("MECE451TraditionalPlan");
                MECE451TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES");
                MECE451TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+               break;
             case "AlternatePlan":
                var CIVE270AlternatePlanelement = document.getElementById("CIVE270AlternatePlan");
                CIVE270AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
@@ -1635,6 +1221,7 @@ switch(categoryName) {
                var MECE451AlternatePlanelement = document.getElementById("MECE451AlternatePlan");
                MECE451AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
                MECE451AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+               break;
             case "CoopPlan1":
                var CIVE270CoopPlan1element = document.getElementById("CIVE270CoopPlan1");
                CIVE270CoopPlan1element.classList.remove("ENGINEERINGSCIENCES");
@@ -1693,6 +1280,7 @@ switch(categoryName) {
                var MECE451CoopPlan1element = document.getElementById("MECE451CoopPlan1");
                MECE451CoopPlan1element.classList.remove("ENGINEERINGSCIENCES");
                MECE451CoopPlan1element.classList.add("ENGINEERINGSCIENCES-highlighted");
+               break;
             case "CoopPlan2":
                var CHE243CoopPlan2element = document.getElementById("CHE243CoopPlan2");
                CHE243CoopPlan2element.classList.remove("ENGINEERINGSCIENCES");
@@ -1751,6 +1339,7 @@ switch(categoryName) {
                var MECE463CoopPlan2element = document.getElementById("MECE463CoopPlan2");
                MECE463CoopPlan2element.classList.remove("ENGINEERINGSCIENCES");
                MECE463CoopPlan2element.classList.add("ENGINEERINGSCIENCES-highlighted");
+               break;
             case "CoopPlan3Biomedical":
                var CIVE270CoopPlan3Biomedicalelement = document.getElementById("CIVE270CoopPlan3Biomedical");
                CIVE270CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
@@ -1806,6 +1395,7 @@ switch(categoryName) {
                var MECE451CoopPlan3Biomedicalelement = document.getElementById("MECE451CoopPlan3Biomedical");
                MECE451CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
                MECE451CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+               break;
             case "CoopPlan4":
                var CIVE270CoopPlan4element = document.getElementById("CIVE270CoopPlan4");
                CIVE270CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
@@ -1864,34 +1454,43 @@ switch(categoryName) {
                var MECE451CoopPlan4element = document.getElementById("MECE451CoopPlan4");
                MECE451CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
                MECE451CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
+               break;
        }
+       break;
     case "ComplementaryElective":
       switch(planName) {
             case "TraditionalPlan":
                var ComplementaryElectiveTraditionalPlanelement = document.getElementById("ComplementaryElectiveTraditionalPlan");
                ComplementaryElectiveTraditionalPlanelement.classList.remove("ComplementaryElective");
                ComplementaryElectiveTraditionalPlanelement.classList.add("ComplementaryElective-highlighted");
+               break;
             case "AlternatePlan":
                var ComplementaryElectiveAlternatePlanelement = document.getElementById("ComplementaryElectiveAlternatePlan");
                ComplementaryElectiveAlternatePlanelement.classList.remove("ComplementaryElective");
                ComplementaryElectiveAlternatePlanelement.classList.add("ComplementaryElective-highlighted");
+               break;
             case "CoopPlan1":
                var ComplementaryElectiveCoopPlan1element = document.getElementById("ComplementaryElectiveCoopPlan1");
                ComplementaryElectiveCoopPlan1element.classList.remove("ComplementaryElective");
                ComplementaryElectiveCoopPlan1element.classList.add("ComplementaryElective-highlighted");
+               break;
             case "CoopPlan2":
                var ComplementaryElectiveCoopPlan2element = document.getElementById("ComplementaryElectiveCoopPlan2");
                ComplementaryElectiveCoopPlan2element.classList.remove("ComplementaryElective");
                ComplementaryElectiveCoopPlan2element.classList.add("ComplementaryElective-highlighted");
+               break;
             case "CoopPlan3Biomedical":
                var ComplementaryElectiveCoopPlan3Biomedicalelement = document.getElementById("ComplementaryElectiveCoopPlan3Biomedical");
                ComplementaryElectiveCoopPlan3Biomedicalelement.classList.remove("ComplementaryElective");
                ComplementaryElectiveCoopPlan3Biomedicalelement.classList.add("ComplementaryElective-highlighted");
+               break;
             case "CoopPlan4":
                var ComplementaryElectiveCoopPlan4element = document.getElementById("ComplementaryElectiveCoopPlan4");
                ComplementaryElectiveCoopPlan4element.classList.remove("ComplementaryElective");
                ComplementaryElectiveCoopPlan4element.classList.add("ComplementaryElective-highlighted");
+               break;
        }
+       break;
     case "ProgramTechnicalElective":
       switch(planName) {
             case "TraditionalPlan":
@@ -1907,6 +1506,7 @@ switch(categoryName) {
                var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
                ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("ProgramTechnicalElective");
                ProgramTechnicalElectiveTraditionalPlanelement.classList.add("ProgramTechnicalElective-highlighted");
+               break;
             case "AlternatePlan":
                var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
                ProgramTechnicalElectiveAlternatePlanelement.classList.remove("ProgramTechnicalElective");
@@ -1920,6 +1520,7 @@ switch(categoryName) {
                var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
                ProgramTechnicalElectiveAlternatePlanelement.classList.remove("ProgramTechnicalElective");
                ProgramTechnicalElectiveAlternatePlanelement.classList.add("ProgramTechnicalElective-highlighted");
+               break;
             case "CoopPlan1":
                var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
                ProgramTechnicalElectiveCoopPlan1element.classList.remove("ProgramTechnicalElective");
@@ -1933,6 +1534,7 @@ switch(categoryName) {
                var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
                ProgramTechnicalElectiveCoopPlan1element.classList.remove("ProgramTechnicalElective");
                ProgramTechnicalElectiveCoopPlan1element.classList.add("ProgramTechnicalElective-highlighted");
+               break;
             case "CoopPlan2":
                var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
                ProgramTechnicalElectiveCoopPlan2element.classList.remove("ProgramTechnicalElective");
@@ -1946,6 +1548,7 @@ switch(categoryName) {
                var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
                ProgramTechnicalElectiveCoopPlan2element.classList.remove("ProgramTechnicalElective");
                ProgramTechnicalElectiveCoopPlan2element.classList.add("ProgramTechnicalElective-highlighted");
+               break;
             case "CoopPlan3Biomedical":
                var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
                ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("ProgramTechnicalElective");
@@ -1956,6 +1559,7 @@ switch(categoryName) {
                var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
                ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("ProgramTechnicalElective");
                ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("ProgramTechnicalElective-highlighted");
+               break;
             case "CoopPlan4":
                var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
                ProgramTechnicalElectiveCoopPlan4element.classList.remove("ProgramTechnicalElective");
@@ -1969,34 +1573,43 @@ switch(categoryName) {
                var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
                ProgramTechnicalElectiveCoopPlan4element.classList.remove("ProgramTechnicalElective");
                ProgramTechnicalElectiveCoopPlan4element.classList.add("ProgramTechnicalElective-highlighted");
+               break;
        }
+       break;
     case "ITSElective":
       switch(planName) {
             case "TraditionalPlan":
                var ITSElectiveTraditionalPlanelement = document.getElementById("ITSElectiveTraditionalPlan");
                ITSElectiveTraditionalPlanelement.classList.remove("ITSElective");
                ITSElectiveTraditionalPlanelement.classList.add("ITSElective-highlighted");
+               break;
             case "AlternatePlan":
                var ITSElectiveAlternatePlanelement = document.getElementById("ITSElectiveAlternatePlan");
                ITSElectiveAlternatePlanelement.classList.remove("ITSElective");
                ITSElectiveAlternatePlanelement.classList.add("ITSElective-highlighted");
+               break;
             case "CoopPlan1":
                var ITSElectiveCoopPlan1element = document.getElementById("ITSElectiveCoopPlan1");
                ITSElectiveCoopPlan1element.classList.remove("ITSElective");
                ITSElectiveCoopPlan1element.classList.add("ITSElective-highlighted");
+               break;
             case "CoopPlan2":
                var ITSElectiveCoopPlan2element = document.getElementById("ITSElectiveCoopPlan2");
                ITSElectiveCoopPlan2element.classList.remove("ITSElective");
                ITSElectiveCoopPlan2element.classList.add("ITSElective-highlighted");
+               break;
             case "CoopPlan3Biomedical":
                var ITSElectiveCoopPlan3Biomedicalelement = document.getElementById("ITSElectiveCoopPlan3Biomedical");
                ITSElectiveCoopPlan3Biomedicalelement.classList.remove("ITSElective");
                ITSElectiveCoopPlan3Biomedicalelement.classList.add("ITSElective-highlighted");
+               break;
             case "CoopPlan4":
                var ITSElectiveCoopPlan4element = document.getElementById("ITSElectiveCoopPlan4");
                ITSElectiveCoopPlan4element.classList.remove("ITSElective");
                ITSElectiveCoopPlan4element.classList.add("ITSElective-highlighted");
+               break;
        }
+       break;
     case "":
       switch(planName) {
             case "CoopPlan3Biomedical":
@@ -2018,7 +1631,9 @@ switch(categoryName) {
                var PHIL386CoopPlan3Biomedicalelement = document.getElementById("PHIL386CoopPlan3Biomedical");
                PHIL386CoopPlan3Biomedicalelement.classList.remove("");
                PHIL386CoopPlan3Biomedicalelement.classList.add("-highlighted");
+               break;
        }
+       break;
 break;   default:
     console.log("shouldn't be here");
     }
@@ -2046,6 +1661,7 @@ switch(planName) {
                var ENPH131TraditionalPlanelement = document.getElementById("ENPH131TraditionalPlan");
              ENPH131TraditionalPlanelement.classList.remove("BASICSCIENCES-highlighted");
                  ENPH131TraditionalPlanelement.classList.add("BASICSCIENCES");
+               break;
             case "AlternatePlan":
                var CHEM103AlternatePlanelement = document.getElementById("CHEM103AlternatePlan");
              CHEM103AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
@@ -2065,6 +1681,7 @@ switch(planName) {
                var ENPH131AlternatePlanelement = document.getElementById("ENPH131AlternatePlan");
              ENPH131AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
                  ENPH131AlternatePlanelement.classList.add("BASICSCIENCES");
+               break;
             case "CoopPlan1":
                var CHEM103CoopPlan1element = document.getElementById("CHEM103CoopPlan1");
              CHEM103CoopPlan1element.classList.remove("BASICSCIENCES-highlighted");
@@ -2084,6 +1701,7 @@ switch(planName) {
                var ENPH131CoopPlan1element = document.getElementById("ENPH131CoopPlan1");
              ENPH131CoopPlan1element.classList.remove("BASICSCIENCES-highlighted");
                  ENPH131CoopPlan1element.classList.add("BASICSCIENCES");
+               break;
             case "CoopPlan2":
                var CHEM103CoopPlan2element = document.getElementById("CHEM103CoopPlan2");
              CHEM103CoopPlan2element.classList.remove("BASICSCIENCES-highlighted");
@@ -2103,6 +1721,7 @@ switch(planName) {
                var ENPH131CoopPlan2element = document.getElementById("ENPH131CoopPlan2");
              ENPH131CoopPlan2element.classList.remove("BASICSCIENCES-highlighted");
                  ENPH131CoopPlan2element.classList.add("BASICSCIENCES");
+               break;
             case "CoopPlan3Biomedical":
                var CHEM103CoopPlan3Biomedicalelement = document.getElementById("CHEM103CoopPlan3Biomedical");
              CHEM103CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
@@ -2122,6 +1741,7 @@ switch(planName) {
                var ENPH131CoopPlan3Biomedicalelement = document.getElementById("ENPH131CoopPlan3Biomedical");
              ENPH131CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
                  ENPH131CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
+               break;
             case "CoopPlan4":
                var CHEM103CoopPlan4element = document.getElementById("CHEM103CoopPlan4");
              CHEM103CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
@@ -2141,6 +1761,7 @@ switch(planName) {
                var ENPH131CoopPlan4element = document.getElementById("ENPH131CoopPlan4");
              ENPH131CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
                  ENPH131CoopPlan4element.classList.add("BASICSCIENCES");
+               break;
 }
     case "ENGINEERINGPROFESSION":
 switch(planName) {
@@ -2157,6 +1778,7 @@ switch(planName) {
                var ENGG400TraditionalPlanelement = document.getElementById("ENGG400TraditionalPlan");
              ENGG400TraditionalPlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
                  ENGG400TraditionalPlanelement.classList.add("ENGINEERINGPROFESSION");
+               break;
             case "AlternatePlan":
                var ENGG100AlternatePlanelement = document.getElementById("ENGG100AlternatePlan");
              ENGG100AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
@@ -2170,6 +1792,7 @@ switch(planName) {
                var ENGG400AlternatePlanelement = document.getElementById("ENGG400AlternatePlan");
              ENGG400AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
                  ENGG400AlternatePlanelement.classList.add("ENGINEERINGPROFESSION");
+               break;
             case "CoopPlan1":
                var ENGG100CoopPlan1element = document.getElementById("ENGG100CoopPlan1");
              ENGG100CoopPlan1element.classList.remove("ENGINEERINGPROFESSION-highlighted");
@@ -2201,6 +1824,7 @@ switch(planName) {
                var ENGG400CoopPlan1element = document.getElementById("ENGG400CoopPlan1");
              ENGG400CoopPlan1element.classList.remove("ENGINEERINGPROFESSION-highlighted");
                  ENGG400CoopPlan1element.classList.add("ENGINEERINGPROFESSION");
+               break;
             case "CoopPlan2":
                var ENGG100CoopPlan2element = document.getElementById("ENGG100CoopPlan2");
              ENGG100CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
@@ -2232,6 +1856,7 @@ switch(planName) {
                var ENGG404CoopPlan2element = document.getElementById("ENGG404CoopPlan2");
              ENGG404CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
                  ENGG404CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
+               break;
             case "CoopPlan3Biomedical":
                var ENGG100CoopPlan3Biomedicalelement = document.getElementById("ENGG100CoopPlan3Biomedical");
              ENGG100CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
@@ -2260,6 +1885,7 @@ switch(planName) {
                var ENGG400CoopPlan3Biomedicalelement = document.getElementById("ENGG400CoopPlan3Biomedical");
              ENGG400CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
                  ENGG400CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
+               break;
             case "CoopPlan4":
                var ENGG100CoopPlan4element = document.getElementById("ENGG100CoopPlan4");
              ENGG100CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
@@ -2291,6 +1917,7 @@ switch(planName) {
                var ENGG400CoopPlan4element = document.getElementById("ENGG400CoopPlan4");
              ENGG400CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
                  ENGG400CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
+               break;
 }
     case "Other":
 switch(planName) {
@@ -2304,6 +1931,7 @@ switch(planName) {
                var ENGM401TraditionalPlanelement = document.getElementById("ENGM401TraditionalPlan");
              ENGM401TraditionalPlanelement.classList.remove("Other-highlighted");
                  ENGM401TraditionalPlanelement.classList.add("Other");
+               break;
             case "AlternatePlan":
                var ENGL199AlternatePlanelement = document.getElementById("ENGL199AlternatePlan");
              ENGL199AlternatePlanelement.classList.remove("Other-highlighted");
@@ -2314,6 +1942,7 @@ switch(planName) {
                var ENGM401AlternatePlanelement = document.getElementById("ENGM401AlternatePlan");
              ENGM401AlternatePlanelement.classList.remove("Other-highlighted");
                  ENGM401AlternatePlanelement.classList.add("Other");
+               break;
             case "CoopPlan1":
                var ENGL199CoopPlan1element = document.getElementById("ENGL199CoopPlan1");
              ENGL199CoopPlan1element.classList.remove("Other-highlighted");
@@ -2324,6 +1953,7 @@ switch(planName) {
                var ENGM401CoopPlan1element = document.getElementById("ENGM401CoopPlan1");
              ENGM401CoopPlan1element.classList.remove("Other-highlighted");
                  ENGM401CoopPlan1element.classList.add("Other");
+               break;
             case "CoopPlan2":
                var ENGL199CoopPlan2element = document.getElementById("ENGL199CoopPlan2");
              ENGL199CoopPlan2element.classList.remove("Other-highlighted");
@@ -2334,6 +1964,7 @@ switch(planName) {
                var ENGM401CoopPlan2element = document.getElementById("ENGM401CoopPlan2");
              ENGM401CoopPlan2element.classList.remove("Other-highlighted");
                  ENGM401CoopPlan2element.classList.add("Other");
+               break;
             case "CoopPlan3Biomedical":
                var ENGL199CoopPlan3Biomedicalelement = document.getElementById("ENGL199CoopPlan3Biomedical");
              ENGL199CoopPlan3Biomedicalelement.classList.remove("Other-highlighted");
@@ -2344,6 +1975,7 @@ switch(planName) {
                var ENGM401CoopPlan3Biomedicalelement = document.getElementById("ENGM401CoopPlan3Biomedical");
              ENGM401CoopPlan3Biomedicalelement.classList.remove("Other-highlighted");
                  ENGM401CoopPlan3Biomedicalelement.classList.add("Other");
+               break;
             case "CoopPlan4":
                var ENGL199CoopPlan4element = document.getElementById("ENGL199CoopPlan4");
              ENGL199CoopPlan4element.classList.remove("Other-highlighted");
@@ -2354,6 +1986,7 @@ switch(planName) {
                var ENGM401CoopPlan4element = document.getElementById("ENGM401CoopPlan4");
              ENGM401CoopPlan4element.classList.remove("Other-highlighted");
                  ENGM401CoopPlan4element.classList.add("Other");
+               break;
 }
     case "MATH":
 switch(planName) {
@@ -2382,6 +2015,7 @@ switch(planName) {
                var MECE390TraditionalPlanelement = document.getElementById("MECE390TraditionalPlan");
              MECE390TraditionalPlanelement.classList.remove("MATH-highlighted");
                  MECE390TraditionalPlanelement.classList.add("MATH");
+               break;
             case "AlternatePlan":
                var MATH100AlternatePlanelement = document.getElementById("MATH100AlternatePlan");
              MATH100AlternatePlanelement.classList.remove("MATH-highlighted");
@@ -2407,6 +2041,7 @@ switch(planName) {
                var MECE390AlternatePlanelement = document.getElementById("MECE390AlternatePlan");
              MECE390AlternatePlanelement.classList.remove("MATH-highlighted");
                  MECE390AlternatePlanelement.classList.add("MATH");
+               break;
             case "CoopPlan1":
                var MATH100CoopPlan1element = document.getElementById("MATH100CoopPlan1");
              MATH100CoopPlan1element.classList.remove("MATH-highlighted");
@@ -2432,6 +2067,7 @@ switch(planName) {
                var MECE390CoopPlan1element = document.getElementById("MECE390CoopPlan1");
              MECE390CoopPlan1element.classList.remove("MATH-highlighted");
                  MECE390CoopPlan1element.classList.add("MATH");
+               break;
             case "CoopPlan2":
                var MATH100CoopPlan2element = document.getElementById("MATH100CoopPlan2");
              MATH100CoopPlan2element.classList.remove("MATH-highlighted");
@@ -2457,6 +2093,7 @@ switch(planName) {
                var MECE390CoopPlan2element = document.getElementById("MECE390CoopPlan2");
              MECE390CoopPlan2element.classList.remove("MATH-highlighted");
                  MECE390CoopPlan2element.classList.add("MATH");
+               break;
             case "CoopPlan3Biomedical":
                var MATH100CoopPlan3Biomedicalelement = document.getElementById("MATH100CoopPlan3Biomedical");
              MATH100CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
@@ -2482,6 +2119,7 @@ switch(planName) {
                var MATH300CoopPlan3Biomedicalelement = document.getElementById("MATH300CoopPlan3Biomedical");
              MATH300CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
                  MATH300CoopPlan3Biomedicalelement.classList.add("MATH");
+               break;
             case "CoopPlan4":
                var MATH100CoopPlan4element = document.getElementById("MATH100CoopPlan4");
              MATH100CoopPlan4element.classList.remove("MATH-highlighted");
@@ -2507,6 +2145,7 @@ switch(planName) {
                var MECE390CoopPlan4element = document.getElementById("MECE390CoopPlan4");
              MECE390CoopPlan4element.classList.remove("MATH-highlighted");
                  MECE390CoopPlan4element.classList.add("MATH");
+               break;
 }
     case "ENGINEERINGDESIGN":
 switch(planName) {
@@ -2529,6 +2168,7 @@ switch(planName) {
                var MECE460TraditionalPlanelement = document.getElementById("MECE460TraditionalPlan");
              MECE460TraditionalPlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
                  MECE460TraditionalPlanelement.classList.add("ENGINEERINGDESIGN");
+               break;
             case "AlternatePlan":
                var ENGG160AlternatePlanelement = document.getElementById("ENGG160AlternatePlan");
              ENGG160AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
@@ -2548,6 +2188,7 @@ switch(planName) {
                var MECE460AlternatePlanelement = document.getElementById("MECE460AlternatePlan");
              MECE460AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
                  MECE460AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
+               break;
             case "CoopPlan1":
                var ENGG160CoopPlan1element = document.getElementById("ENGG160CoopPlan1");
              ENGG160CoopPlan1element.classList.remove("ENGINEERINGDESIGN-highlighted");
@@ -2567,6 +2208,7 @@ switch(planName) {
                var MECE460CoopPlan1element = document.getElementById("MECE460CoopPlan1");
              MECE460CoopPlan1element.classList.remove("ENGINEERINGDESIGN-highlighted");
                  MECE460CoopPlan1element.classList.add("ENGINEERINGDESIGN");
+               break;
             case "CoopPlan2":
                var ENGG160CoopPlan2element = document.getElementById("ENGG160CoopPlan2");
              ENGG160CoopPlan2element.classList.remove("ENGINEERINGDESIGN-highlighted");
@@ -2586,6 +2228,7 @@ switch(planName) {
                var MECE460CoopPlan2element = document.getElementById("MECE460CoopPlan2");
              MECE460CoopPlan2element.classList.remove("ENGINEERINGDESIGN-highlighted");
                  MECE460CoopPlan2element.classList.add("ENGINEERINGDESIGN");
+               break;
             case "CoopPlan3Biomedical":
                var ENGG160CoopPlan3Biomedicalelement = document.getElementById("ENGG160CoopPlan3Biomedical");
              ENGG160CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN-highlighted");
@@ -2605,6 +2248,7 @@ switch(planName) {
                var MECE460CoopPlan3Biomedicalelement = document.getElementById("MECE460CoopPlan3Biomedical");
              MECE460CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN-highlighted");
                  MECE460CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN");
+               break;
             case "CoopPlan4":
                var ENGG160CoopPlan4element = document.getElementById("ENGG160CoopPlan4");
              ENGG160CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
@@ -2624,6 +2268,7 @@ switch(planName) {
                var MECE460CoopPlan4element = document.getElementById("MECE460CoopPlan4");
              MECE460CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
                  MECE460CoopPlan4element.classList.add("ENGINEERINGDESIGN");
+               break;
 }
     case "ENGINEERINGSCIENCES":
 switch(planName) {
@@ -2685,6 +2330,7 @@ switch(planName) {
                var MECE451TraditionalPlanelement = document.getElementById("MECE451TraditionalPlan");
              MECE451TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
                  MECE451TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
+               break;
             case "AlternatePlan":
                var CIVE270AlternatePlanelement = document.getElementById("CIVE270AlternatePlan");
              CIVE270AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
@@ -2743,6 +2389,7 @@ switch(planName) {
                var MECE451AlternatePlanelement = document.getElementById("MECE451AlternatePlan");
              MECE451AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
                  MECE451AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+               break;
             case "CoopPlan1":
                var CIVE270CoopPlan1element = document.getElementById("CIVE270CoopPlan1");
              CIVE270CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
@@ -2801,6 +2448,7 @@ switch(planName) {
                var MECE451CoopPlan1element = document.getElementById("MECE451CoopPlan1");
              MECE451CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
                  MECE451CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
+               break;
             case "CoopPlan2":
                var CHE243CoopPlan2element = document.getElementById("CHE243CoopPlan2");
              CHE243CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
@@ -2859,6 +2507,7 @@ switch(planName) {
                var MECE463CoopPlan2element = document.getElementById("MECE463CoopPlan2");
              MECE463CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
                  MECE463CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
+               break;
             case "CoopPlan3Biomedical":
                var CIVE270CoopPlan3Biomedicalelement = document.getElementById("CIVE270CoopPlan3Biomedical");
              CIVE270CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
@@ -2914,6 +2563,7 @@ switch(planName) {
                var MECE451CoopPlan3Biomedicalelement = document.getElementById("MECE451CoopPlan3Biomedical");
              MECE451CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
                  MECE451CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
+               break;
             case "CoopPlan4":
                var CIVE270CoopPlan4element = document.getElementById("CIVE270CoopPlan4");
              CIVE270CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
@@ -2972,6 +2622,7 @@ switch(planName) {
                var MECE451CoopPlan4element = document.getElementById("MECE451CoopPlan4");
              MECE451CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
                  MECE451CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
+               break;
 }
     case "ComplementaryElective":
 switch(planName) {
@@ -2979,26 +2630,32 @@ switch(planName) {
                var ComplementaryElectiveTraditionalPlanelement = document.getElementById("ComplementaryElectiveTraditionalPlan");
              ComplementaryElectiveTraditionalPlanelement.classList.remove("ComplementaryElective-highlighted");
                  ComplementaryElectiveTraditionalPlanelement.classList.add("ComplementaryElective");
+               break;
             case "AlternatePlan":
                var ComplementaryElectiveAlternatePlanelement = document.getElementById("ComplementaryElectiveAlternatePlan");
              ComplementaryElectiveAlternatePlanelement.classList.remove("ComplementaryElective-highlighted");
                  ComplementaryElectiveAlternatePlanelement.classList.add("ComplementaryElective");
+               break;
             case "CoopPlan1":
                var ComplementaryElectiveCoopPlan1element = document.getElementById("ComplementaryElectiveCoopPlan1");
              ComplementaryElectiveCoopPlan1element.classList.remove("ComplementaryElective-highlighted");
                  ComplementaryElectiveCoopPlan1element.classList.add("ComplementaryElective");
+               break;
             case "CoopPlan2":
                var ComplementaryElectiveCoopPlan2element = document.getElementById("ComplementaryElectiveCoopPlan2");
              ComplementaryElectiveCoopPlan2element.classList.remove("ComplementaryElective-highlighted");
                  ComplementaryElectiveCoopPlan2element.classList.add("ComplementaryElective");
+               break;
             case "CoopPlan3Biomedical":
                var ComplementaryElectiveCoopPlan3Biomedicalelement = document.getElementById("ComplementaryElectiveCoopPlan3Biomedical");
              ComplementaryElectiveCoopPlan3Biomedicalelement.classList.remove("ComplementaryElective-highlighted");
                  ComplementaryElectiveCoopPlan3Biomedicalelement.classList.add("ComplementaryElective");
+               break;
             case "CoopPlan4":
                var ComplementaryElectiveCoopPlan4element = document.getElementById("ComplementaryElectiveCoopPlan4");
              ComplementaryElectiveCoopPlan4element.classList.remove("ComplementaryElective-highlighted");
                  ComplementaryElectiveCoopPlan4element.classList.add("ComplementaryElective");
+               break;
 }
     case "ProgramTechnicalElective":
 switch(planName) {
@@ -3015,6 +2672,7 @@ switch(planName) {
                var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
              ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("ProgramTechnicalElective-highlighted");
                  ProgramTechnicalElectiveTraditionalPlanelement.classList.add("ProgramTechnicalElective");
+               break;
             case "AlternatePlan":
                var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
              ProgramTechnicalElectiveAlternatePlanelement.classList.remove("ProgramTechnicalElective-highlighted");
@@ -3028,6 +2686,7 @@ switch(planName) {
                var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
              ProgramTechnicalElectiveAlternatePlanelement.classList.remove("ProgramTechnicalElective-highlighted");
                  ProgramTechnicalElectiveAlternatePlanelement.classList.add("ProgramTechnicalElective");
+               break;
             case "CoopPlan1":
                var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
              ProgramTechnicalElectiveCoopPlan1element.classList.remove("ProgramTechnicalElective-highlighted");
@@ -3041,6 +2700,7 @@ switch(planName) {
                var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
              ProgramTechnicalElectiveCoopPlan1element.classList.remove("ProgramTechnicalElective-highlighted");
                  ProgramTechnicalElectiveCoopPlan1element.classList.add("ProgramTechnicalElective");
+               break;
             case "CoopPlan2":
                var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
              ProgramTechnicalElectiveCoopPlan2element.classList.remove("ProgramTechnicalElective-highlighted");
@@ -3054,6 +2714,7 @@ switch(planName) {
                var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
              ProgramTechnicalElectiveCoopPlan2element.classList.remove("ProgramTechnicalElective-highlighted");
                  ProgramTechnicalElectiveCoopPlan2element.classList.add("ProgramTechnicalElective");
+               break;
             case "CoopPlan3Biomedical":
                var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
              ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("ProgramTechnicalElective-highlighted");
@@ -3064,6 +2725,7 @@ switch(planName) {
                var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
              ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("ProgramTechnicalElective-highlighted");
                  ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("ProgramTechnicalElective");
+               break;
             case "CoopPlan4":
                var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
              ProgramTechnicalElectiveCoopPlan4element.classList.remove("ProgramTechnicalElective-highlighted");
@@ -3077,6 +2739,7 @@ switch(planName) {
                var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
              ProgramTechnicalElectiveCoopPlan4element.classList.remove("ProgramTechnicalElective-highlighted");
                  ProgramTechnicalElectiveCoopPlan4element.classList.add("ProgramTechnicalElective");
+               break;
 }
     case "ITSElective":
 switch(planName) {
@@ -3084,26 +2747,32 @@ switch(planName) {
                var ITSElectiveTraditionalPlanelement = document.getElementById("ITSElectiveTraditionalPlan");
              ITSElectiveTraditionalPlanelement.classList.remove("ITSElective-highlighted");
                  ITSElectiveTraditionalPlanelement.classList.add("ITSElective");
+               break;
             case "AlternatePlan":
                var ITSElectiveAlternatePlanelement = document.getElementById("ITSElectiveAlternatePlan");
              ITSElectiveAlternatePlanelement.classList.remove("ITSElective-highlighted");
                  ITSElectiveAlternatePlanelement.classList.add("ITSElective");
+               break;
             case "CoopPlan1":
                var ITSElectiveCoopPlan1element = document.getElementById("ITSElectiveCoopPlan1");
              ITSElectiveCoopPlan1element.classList.remove("ITSElective-highlighted");
                  ITSElectiveCoopPlan1element.classList.add("ITSElective");
+               break;
             case "CoopPlan2":
                var ITSElectiveCoopPlan2element = document.getElementById("ITSElectiveCoopPlan2");
              ITSElectiveCoopPlan2element.classList.remove("ITSElective-highlighted");
                  ITSElectiveCoopPlan2element.classList.add("ITSElective");
+               break;
             case "CoopPlan3Biomedical":
                var ITSElectiveCoopPlan3Biomedicalelement = document.getElementById("ITSElectiveCoopPlan3Biomedical");
              ITSElectiveCoopPlan3Biomedicalelement.classList.remove("ITSElective-highlighted");
                  ITSElectiveCoopPlan3Biomedicalelement.classList.add("ITSElective");
+               break;
             case "CoopPlan4":
                var ITSElectiveCoopPlan4element = document.getElementById("ITSElectiveCoopPlan4");
              ITSElectiveCoopPlan4element.classList.remove("ITSElective-highlighted");
                  ITSElectiveCoopPlan4element.classList.add("ITSElective");
+               break;
 }
     case "":
 switch(planName) {
@@ -3126,6 +2795,7 @@ switch(planName) {
                var PHIL386CoopPlan3Biomedicalelement = document.getElementById("PHIL386CoopPlan3Biomedical");
              PHIL386CoopPlan3Biomedicalelement.classList.remove("-highlighted");
                  PHIL386CoopPlan3Biomedicalelement.classList.add("");
+               break;
 }
 break;   default:
     console.log("shouldn't be here");
