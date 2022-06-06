@@ -9,12 +9,8 @@
 
 # Dependencies: bs4, parsing, javascriptgen, htmlgen, linegen
 
-from encodings import utf_8
-from turtle import back
 from bs4 import BeautifulSoup
-from parsing import parse
-from parsing import pullCategories
-from parsing import pullSeq
+import parsing
 import javascriptgen
 import htmlgen
 import linegen
@@ -26,6 +22,10 @@ def closeControllerJavaScript(controller):
     controller.write("});")
     controller.close()
 
+# Function that writes the CSS associated with the highlighting
+# of courses based on category
+#   categoryDict - a dict that maps categories to colours
+#   categoryCSS - file handle to CSS file
 def writeCategoryCSS(categoryDict, categoryCSS):
     for category in categoryDict:
         backgroundColour = categoryDict[category]
@@ -76,43 +76,52 @@ def main():
             lineManager = linegen.LineManager()
 
             # parsing the excel files with course info, pulls dependencies (prereqs, coreqs, reqs) too
-            courseDict = parse("Courses.xls")
+            courseDict = parsing.parseCourses("Courses.xls")
+            
             # pulling the category and color info from excel
-            courseDict, categoryDict, categoryList = pullCategories("CourseCategories.xls", courseDict)
+            courseDict, categoryDict, categoryList = parsing.parseCategories("CourseCategories.xls", courseDict)
+
+            # writing colour highlighting CSS
+            writeCategoryCSS(categoryDict, categoryCSS)
+            
             # sequencing courses
-            sequenceDict, deptName = pullSeq("Sequencing.xls", courseDict)
+            sequenceDict, deptName = parsing.parseSeq("Sequencing.xls", courseDict)
 
             # generating intital JS based on the number and names of plans
             javascriptgen.intializeControllerJavaScript(controller, sequenceDict)
-            writeCategoryCSS(categoryDict, categoryCSS)
 
+            #locating title tag
             titleTag = soup.body.find("a", class_="site-title")
-      
+
             #locating main div, this is where all the html will be written
             mainTag = soup.body.find("div", id="main")
+
             # locating form tag
             formTag = mainTag.find("form")
+
             # locating legend tag
             legendTag = mainTag.find("div", class_="legend")
+
             # locating display tag, this is where the course divs will be written
             displayTag = mainTag.find("div", class_="display")
 
-            #TO DO: adjust width and height of display and header tag based on sequence
+            # customizing webpage title
+            htmlgen.switchTitle(titleTag, deptName)
+
+            # placing radio inputs
+            htmlgen.placeRadioInputs(formTag, sequenceDict, soup)
+
+            # places legend for color-coding
+            htmlgen.placeLegend(legendTag, categoryList, soup)
 
             #placing the HTML and generating JS based on the courses (drawing lines)
-            htmlgen.switchTitle(titleTag, deptName)
-            htmlgen.placeRadioInputs(formTag, sequenceDict, soup)
-            htmlgen.placeLegend(legendTag, categoryList, soup)  # places legend for color-coding
             htmlgen.placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager)
 
-            #closing JS files
+            # closing JS and CSS files
             closeControllerJavaScript(controller)
             indexJS.close()
             categoryCSS.close()
            
-
-
-    #TO DO: improve expection handling here
     except FileNotFoundError as err:
        print("Exception raised: " + 
        err.strerror + 
@@ -123,7 +132,6 @@ def main():
     try:
         with open("./output/index.html", "w", encoding="utf-8") as output:
             output.write(str(soup))
-    #TO DO: improve expection handling here
     except FileNotFoundError as err:
        print("Exception raised: " + 
              err.strerror + 

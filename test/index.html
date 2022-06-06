@@ -900,6 +900,12 @@ evaluating as null -->
         $scope.ece101Listener = function () {
             var element = document.getElementById("ECE 101")
             if (!ece101flag) {
+                if (element.classList.contains("cateA-highlighed")) {
+                    element.classList.remove("cateA-highlighted");
+                    element.classList.add("cateA");
+                    that.removeFromClicked("ECE 101");
+                    return;
+                }
                 // call getter function to get all lines belonging to course
                 // call addLine() for every single line
                 // set the course info var to the course info
@@ -925,7 +931,7 @@ evaluating as null -->
                 // call getter function to get all lines belonging to course
                 // call removeLine() for every single line
                 // set the course info variable to ""
-                $scope.ece101courseinfo = "";
+            
                 that.removeLine(getLine1());
                 // that.removeLine(getLine2());
                 // that.removeLine(getLine4());
