@@ -48,14 +48,11 @@ def parseSeq(filename, course_obj_dict):
                 term_list = []  # stores Course objects in a list for that term
                 for row in range(1, sheet.nrows):
                     name = str(sheet.cell_value(row, col))
-                    name = name.upper()  # course name must be uppercase
-                    # Remove unnecessary white space
-                    name = name.strip()
-                    name = name.replace("  ", " ")
+                    # course name must be uppercase and  remove unnecessary white space
+                    name = name.upper().strip().replace("  ", " ") 
                     if name == "":
                         # Cell in Excel is empty, skip over this cell
                         continue
-
                     if name == "PROG":
                         # Create Course obj with only name and course_description attribute
                         term_list.append(deepcopy(course_obj_dict["Program/Technical Elective"]))
@@ -189,7 +186,7 @@ def checkReqs(course_seq):
                             continue
                         i += 1
 
-                    if prereqlist != []:
+                    if prereqlist:
                         prereq_count = 0
                         while prereq_count < len(prereqlist):
                             if prereqlist[prereq_count] in term_names:

@@ -288,10 +288,8 @@ def process(prestr):
                 reqlist[i + 1] = reqlist[i + 1].replace("or one of ", "")
 
             # Only one of the upcoming courses is required
-            reqlist[i] = reqlist[i].replace("One of ", "")
-            reqlist[i] = reqlist[i].replace("one of ", "")
-            reqlist[i] = reqlist[i].replace("Either ", "")
-            reqlist[i] = reqlist[i].replace("either ", "")
+            reqlist[i] = reqlist[i].replace("One of ", "").replace("one of ", "").replace("Either ", "").replace("either ", "")
+
 
             j = i + 1
 
