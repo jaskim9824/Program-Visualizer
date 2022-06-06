@@ -15,6 +15,7 @@ from turtle import back
 from bs4 import BeautifulSoup
 from numpy import pad
 import javascriptgen
+import parsing
 import htmlgen
 import linegen
 import cleaner
@@ -107,11 +108,12 @@ def main():
             lineManager = linegen.LineManager()
 
             # parsing the excel files with course info, pulls dependencies (prereqs, coreqs, reqs) too
-            courseDict = parse(courses_excel.get())
+            courseDict = parsing.parseCourses(courses_excel.get())
             # pulling the category and color info from excel
-            courseDict, categoryDict, categoryList = pullCategories(course_cat_excel.get(), courseDict)
+            courseDict, categoryDict = parsing.parseCategories(course_cat_excel.get(), courseDict)
+            
             # sequencing courses
-            sequenceDict, deptName = pullSeq(seq_excel.get(), courseDict)
+            sequenceDict, deptName = parsing.parseSeq(seq_excel.get(), courseDict)
 
             # generating intital JS based on the number and names of plans
             javascriptgen.intializeControllerJavaScript(controller, sequenceDict)
@@ -133,7 +135,7 @@ def main():
             #placing the HTML and generating JS based on the courses (drawing lines)
             htmlgen.switchTitle(titleTag, deptName)
             htmlgen.placeRadioInputs(formTag, sequenceDict, soup)
-            htmlgen.placeLegend(legendTag, categoryList, soup)  # places legend for color-coding
+            htmlgen.placeLegend(legendTag, categoryDict, soup)  # places legend for color-coding
             htmlgen.placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager)
 
             #closing JS files
