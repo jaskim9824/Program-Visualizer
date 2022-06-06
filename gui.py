@@ -9,42 +9,18 @@
 
 # Dependencies: bs4, parsing, javascriptgen, htmlgen, linegen
 
-from encodings import utf_8
-import tkinter
-from turtle import back
 from bs4 import BeautifulSoup
-from numpy import pad
-import javascriptgen
-import parsing
-import htmlgen
-import linegen
-import cleaner
+import modules.parsing.categoriesparsing as categoriesparsing
+import modules.parsing.courseparsing as courseparsing
+import modules.parsing.sequenceparsing as sequenceparsing
+import modules.webgen.javascriptgen as javascriptgen
+import modules.webgen.htmlgen as htmlgen
+import modules.webgen.linegen as linegen
+import modules.webgen.cssgen as cssgen
 from tkinter import *
 from tkinter import messagebox
 from tkinter import ttk
 
-# Function that properly concludes and closes the controller JS
-#   controller - file handle for controller JS
-def closeControllerJavaScript(controller):
-    controller.write("});")
-    controller.close()
-
-def writeCategoryCSS(categoryDict, categoryCSS):
-    for category in categoryDict:
-        backgroundColour = categoryDict[category]
-        categoryFormattedString = """.{categoryName}:hover {{
-            background-color: #{backColour}!important;
-            border-color: #{backColour}!important;
-        }}
-        .{categoryName}-highlighted {{
-            background-color: #{backColour};
-        }}
-        .{categoryName}-highlighted:hover {{
-            background-color: #{backColour}!important;
-            border-color: #{backColour}!important;
-        }}\n"""
-        categoryCSS.write(categoryFormattedString.format(categoryName=cleaner.cleanString(category),
-                                                         backColour=backgroundColour))
 
 # Debug function for cleanly printing contents of plan sequences
 # Parameters:
@@ -108,16 +84,19 @@ def main():
             lineManager = linegen.LineManager()
 
             # parsing the excel files with course info, pulls dependencies (prereqs, coreqs, reqs) too
-            courseDict = parsing.parseCourses(courses_excel.get())
+            courseDict = courseparsing.parseCourses(courses_excel.get())
+
             # pulling the category and color info from excel
-            courseDict, categoryDict = parsing.parseCategories(course_cat_excel.get(), courseDict)
+            courseDict, categoryDict = categoriesparsing.parseCategories(course_cat_excel.get(), courseDict)
+
+            # writing colour highlighting CSS
+            cssgen.writeCategoryCSS(categoryDict, categoryCSS)
             
             # sequencing courses
-            sequenceDict, deptName = parsing.parseSeq(seq_excel.get(), courseDict)
+            sequenceDict, deptName = sequenceparsing.parseSeq(seq_excel.get(), courseDict)
 
             # generating intital JS based on the number and names of plans
             javascriptgen.intializeControllerJavaScript(controller, sequenceDict)
-            writeCategoryCSS(categoryDict, categoryCSS)
 
             titleTag = soup.body.find("a", class_="site-title")
       
@@ -130,16 +109,20 @@ def main():
             # locating display tag, this is where the course divs will be written
             displayTag = mainTag.find("div", class_="display")
 
-            #TO DO: adjust width and height of display and header tag based on sequence
+            # customizing webpage title
+            htmlgen.switchTitle(titleTag, deptName)
+
+            # placing radio inputs
+            htmlgen.placeRadioInputs(formTag, sequenceDict, soup)
+
+            # places legend for color-coding
+            htmlgen.placeLegend(legendTag, categoryDict, soup)
 
             #placing the HTML and generating JS based on the courses (drawing lines)
-            htmlgen.switchTitle(titleTag, deptName)
-            htmlgen.placeRadioInputs(formTag, sequenceDict, soup)
-            htmlgen.placeLegend(legendTag, categoryDict, soup)  # places legend for color-coding
             htmlgen.placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager)
 
             #closing JS files
-            closeControllerJavaScript(controller)
+            javascriptgen.closeControllerJavaScript(controller)
             indexJS.close()
             categoryCSS.close()
            
