@@ -308,8 +308,6 @@ def parseCategories(filename, course_obj_dict):
 #       and value as a list of Course objects to be taken in that term.
 #       The coreq and prereq attributes may or may not have been modified.
 def checkReqs(course_seq):
-
-
     for plan in course_seq:
         # We have to check the sequencing for each plan as courses are taken
         # at different times in different plans
@@ -317,18 +315,14 @@ def checkReqs(course_seq):
         for term in course_seq[plan]:
             # Pulling all of the course names in this plan
             for course in course_seq[plan][term]:
-                course_name = course.name
-                course_name = course_name.replace(" ", "")
-                course_name = course_name.replace("or", " or ")
+                course_name = course.name.replace(" ", "").replace("or", " or ")
                 all_names.append(course_name)
 
         for term in course_seq[plan]:
             term_names = []  # stores all of the names of the courses to be taken in this term
             for course in course_seq[plan][term]:
                 # Pulling all of the course names in this term
-                course_name = course.name
-                course_name = course_name.replace(" ", "")
-                course_name = course_name.replace("or", " or ")
+                course_name = course.name.replace(" ", "").replace("or", " or ")
                 term_names.append(course_name)
 
             for course in course_seq[plan][term]:
@@ -715,18 +709,14 @@ def process(prestr):
 # Returns: 
 #   newlist (list of strings): preprocessed list of pre-requisite courses
 def preprocess(reqlist):
- 
-
     newlist = []
 
     i = 0
     while i < len(reqlist):
         # Remove all commas and brackets
-        reqlist[i] = reqlist[i].replace("(", "")
-        reqlist[i] = reqlist[i].replace(")", "")
-        reqlist[i] = reqlist[i].replace(",", "")
+        reqlist[i] = reqlist[i].replace("(", "").replace(")", "").replace(",", "")
 
-        # A slash between courses indicates the same as "or"
+        # A slash between courses indicates the same as "or". 
         # Replace all slashes with " or "
         splitslash = reqlist[i].split("/")
         if splitslash[0] != reqlist[i]:
@@ -796,16 +786,11 @@ def countNums(str):
 #   dept (string): The department name required for the current course.
 #   Returns -1 on error.
 def pullDept(reqlist, indx):
-    dept = ""
     for n in range(0, len(reqlist[indx])):
     # MATH 100 -> Move from left to right until you hit the
     # first number, the department is from beginning to 2 indices before that
         if reqlist[indx][n].isdigit():
-            dept = reqlist[indx][0:n - 1]  # pull the department name
+            # pull the department name
+            dept = reqlist[indx][0:n - 1]  
             return dept
     return -1
-
-
-
-
-
