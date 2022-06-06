@@ -48,11 +48,14 @@ def parseSeq(filename, course_obj_dict):
                 term_list = []  # stores Course objects in a list for that term
                 for row in range(1, sheet.nrows):
                     name = str(sheet.cell_value(row, col))
-                    # course name must be uppercase and  remove unnecessary white space
-                    name = name.upper().strip().replace("  ", " ") 
+                    name = name.upper()  # course name must be uppercase
+                    # Remove unnecessary white space
+                    name = name.strip()
+                    name = name.replace("  ", " ")
                     if name == "":
                         # Cell in Excel is empty, skip over this cell
                         continue
+
                     if name == "PROG":
                         # Create Course obj with only name and course_description attribute
                         term_list.append(deepcopy(course_obj_dict["Program/Technical Elective"]))
@@ -142,8 +145,30 @@ def checkReqs(course_seq):
                 # Checking coreqs
                 checkCourseCoReqs(course, all_names, term_course_names)
                 # Analagous situation but for prereqs (not coreqs)
-                checkCoursePreReqs(course, all_names, term_course_names)
-    
+                for prereq in course.prereqs:
+                    # For each prereq for a certain course, if there are multiple options
+                    # (MATH 100 or MATH 114 or...) then only keep those that are displayed
+                    # in this plan. eg: Prereqs: MATH 100 or MATH 114, if only MATH 100 is 
+                    # available in this plan, discard MATH 114 and keep MATH 100.
+                    prereqlist = prereq.split(" or ")
+                    i = 0
+                    while i < len(prereqlist):
+                        # If the prereq is not available in this plan, delete it
+                        if prereqlist[i] not in all_names:
+                            del prereqlist[i]
+                            continue
+                        i += 1
+
+                    if prereqlist != []:
+                        prereq_count = 0
+                        while prereq_count < len(prereqlist):
+                            if prereqlist[prereq_count] in term_names:
+                                # The prereq course is taken in the same term,
+                                # it is really a coreq
+                                course.coreqs.append(prereqlist[prereq_count])
+                                if prereq in course.prereqs:
+                                    del course.prereqs[course.prereqs.index(prereq)]
+                            prereq_count += 1
     return course_seq
 
 def extractCoursesFromPlan(course_seq, plan):
@@ -203,7 +228,7 @@ def checkCoursePreReqs(course, all_names, term_course_names):
                 continue
             i += 1
 
-            if prereqlist:
+            if prereqlist != []:
                 prereq_count = 0
                 while prereq_count < len(prereqlist):
                     # The prereq course is taken in the same term,
@@ -213,6 +238,5 @@ def checkCoursePreReqs(course, all_names, term_course_names):
                         if prereq in course.prereqs:
                             del course.prereqs[course.prereqs.index(prereq)]
                     prereq_count += 1
-
 
 
