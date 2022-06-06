@@ -22,6 +22,7 @@ header {
     margin-bottom: 10px;
     height: 64px;
 }
+
 /* legend for line legend image */
 #linelegend {
     height: 150px;
@@ -65,10 +66,16 @@ header {
     width: 200px;
     margin: 0;
     position: relative;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     left: 75vw;
     bottom: 25px;
     text-align: center;
+}
+
+.legend button {
+    text-align: center;
+    margin: 10px;
 }
 
 /* at 500px align header left when the screen is 500px wide or less*/
@@ -118,6 +125,7 @@ label {
     height: fit-content;
     position: relative;
     bottom: 30px;
+    right: 15px;
 }
 
 /* Term column styling */

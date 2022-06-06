@@ -225,6 +225,7 @@ def parseSeq(filename, course_obj_dict):
 def parseCategories(filename, course_obj_dict):
     try:
         category_dict = {}
+        category_list = []
         book = xlrd.open_workbook(filename)
         sheet = book.sheet_by_index(0)
 
@@ -250,6 +251,8 @@ def parseCategories(filename, course_obj_dict):
                 list_name = "ITS Elective"
             else:
                 list_name = cat_name
+            cat_list_item = [list_name, color]  # store the category and color in list (order preserved)
+            category_list.append(cat_list_item)  # store each category-color list in a wrapping list
 
             # Create a new course object if an elective because elective info is not in course_obj_dict
             if cat_name.upper().strip() == "COMP":
@@ -287,7 +290,7 @@ def parseCategories(filename, course_obj_dict):
         messagebox.showerror('python Error', "Error reading data from course categories Excel sheet. Ensure it is \
             formatted exactly as specified")
 
-    return course_obj_dict, category_dict
+    return course_obj_dict, category_dict, category_list
 
 # Checks that all coreqs for a course are taken in the same term,
 # if not, the coreq is changed to become a prereq. Similarly,
