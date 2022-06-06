@@ -127,27 +127,22 @@ def parseSeq(filename, course_obj_dict):
 #       and value as a list of Course objects to be taken in that term.
 #       The coreq and prereq attributes may or may not have been modified.
 def checkReqs(course_seq):
+    # We have to check the sequencing for each plan as courses are taken
+    # at different times in different plans
     for plan in course_seq:
-        # We have to check the sequencing for each plan as courses are taken
-        # at different times in different plans
-        all_names = []  # stores all of the names of the courses to be taken in this plan
-        for term in course_seq[plan]:
-            # Pulling all of the course names in this plan
-            for course in course_seq[plan][term]:
-                course_name = course.name.replace(" ", "").replace("or", " or ")
-                all_names.append(course_name)
-
-        for term in course_seq[plan]:
-            term_names = []  # stores all of the names of the courses to be taken in this term
-            for course in course_seq[plan][term]:
-                # Pulling all of the course names in this term
-                course_name = course.name.replace(" ", "").replace("or", " or ")
-                term_names.append(course_name)
-
-            for course in course_seq[plan][term]:
+        # stores all of the names of the courses to be taken in this plan
+        all_names = extractCoursesFromPlan(course_seq, plan)
+        
+        planDict = course_seq[plan]
+        for term in planDict:
+            # stores all of the names of the courses to be taken in this term
+            term_course_names = extractCourseFromTerm(planDict, term)
+       
+            for course in planDict[term]:
                 # FIXME: fix for ENGG 160 coreq calendar description
                 if course.name == "ENGG 160":
                     continue
+                # Checking coreqs
                 for coreq in course.coreqs:
                     # For each coreq for a certain course, if there are multiple options
                     # (MATH 100 or MATH 114 or...) then only keep those that are displayed
@@ -166,7 +161,7 @@ def checkReqs(course_seq):
                     if coreqlist != []:
                         coreq_count = 0
                         while coreq_count < len(coreqlist):
-                            if coreqlist[coreq_count] not in term_names:
+                            if coreqlist[coreq_count] not in term_course_names:
                                 # The coreq course in not taken in the same term,
                                 # it is really a prereq
                                 course.prereqs.append(coreqlist[coreq_count])
@@ -192,11 +187,30 @@ def checkReqs(course_seq):
                     if prereqlist != []:
                         prereq_count = 0
                         while prereq_count < len(prereqlist):
-                            if prereqlist[prereq_count] in term_names:
+                            if prereqlist[prereq_count] in term_course_names:
                                 # The prereq course is taken in the same term,
                                 # it is really a coreq
                                 course.coreqs.append(prereqlist[prereq_count])
                                 if prereq in course.prereqs:
                                     del course.prereqs[course.prereqs.index(prereq)]
                             prereq_count += 1
+ 
     return course_seq
+
+def extractCoursesFromPlan(course_seq, plan):
+    all_names = []
+    for term in course_seq[plan]:
+        for course in course_seq[plan][term]:
+            course_name = course.name.replace(" ", "").replace("or", " or ")
+            all_names.append(course_name)
+    return all_names
+
+def extractCourseFromTerm(planDict, term):
+    term_course_names = []
+    for course in planDict[term]:
+        course_name = course.name.replace(" ", "").replace("or", " or ")
+        term_course_names.append(course_name)
+    return term_course_names
+
+
+

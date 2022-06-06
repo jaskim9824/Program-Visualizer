@@ -6,7 +6,7 @@
 # This files contains all the functions need to parse the Excel file
 # containing the course category information
 
-# Dependencies: copy, tkinter, xlrd, parsinghelp
+# Dependencies: copy, tkinter, xlrd, p
 
 import xlrd
 from copy import deepcopy
@@ -46,33 +46,27 @@ def parseCategories(filename, course_obj_dict):
                 # It is formatted fine as it is
                 color = str(sheet.cell_value(1, col))
 
-            category_dict[cat_name] = color  # store the category and color in a dict
+            # store the category and color in a dict
+            category_dict[cat_name] = color 
 
             # Create a new course object if an elective because elective info is not in course_obj_dict
-            if cat_name.upper().strip() == "COMP":
+            if cat_name.upper().strip() == "COMP" and "Complementary Elective" not in course_obj_dict:
                 course_obj_dict["Complementary Elective"] = parsinghelp.Course(name = "Complementary Elective", 
                     course_description="A complementary elective of the student's choice. Please consult the calendar for more information.",
                     category = "Complementary Elective", color = color)
-            if cat_name.upper().strip() == "PROG":
+            if cat_name.upper().strip() == "PROG" and "Program/Technical Elective" not in course_obj_dict:
                 course_obj_dict["Program/Technical Elective"] = parsinghelp.Course(name = "Program/Technical Elective", 
                     course_description="A program/technical elective of the student's choice. Please consult the calendar for more information.",
                     category = "Program/Technical Elective", color = color)
-            if cat_name.upper().strip() == "ITS":
+            if cat_name.upper().strip() == "ITS" and "ITS Elective" not in course_obj_dict:
                 course_obj_dict["ITS Elective"] = parsinghelp.Course(name = "ITS Elective", 
                     course_description="An ITS elective of the student's choice. Please consult the calendar for more information.",
                     category = "ITS Elective", color = color)
 
-            for row in range(2, sheet.nrows):
-                # Course names start at third row
-                name = sheet.cell_value(row, col)
-                if name == "":
-                    continue
-                name.upper()
-                name.strip()
-                name.replace("  ", " ")
-                if name in course_obj_dict:  # guard to prevent key not found error
-                    course_obj_dict[name].category = cat_name
-                    course_obj_dict[name].color = color
+            # Add category information to courses in that category
+            course_obj_dict = addCategorytoCourses(course_obj_dict, sheet, col, cat_name, color)
+
+       
     except FileNotFoundError:
         print("Excel course categories file not found, ensure it is present and the name is correct.")
         #GUI Error mssg
@@ -85,3 +79,23 @@ def parseCategories(filename, course_obj_dict):
             formatted exactly as specified")
 
     return course_obj_dict, category_dict
+
+# Function that adds the category information to courses of a specfic category
+# Parameters:
+#   - course_obj_dict: dict that maps the course name to a course object
+#   - sheet: sheet handle to Excel sheet
+#   - col: column number for respective category
+#   - cat_name: name of respective category
+#   - color: colour of respective category
+def addCategorytoCourses(course_obj_dict, sheet, col, cat_name, color):
+        for row in range(2, sheet.nrows):
+                # Course names start at third row
+                name = sheet.cell_value(row, col)
+                if name == "":
+                    continue
+                name = name.upper().strip().replace("  ", " ")
+                # guard to prevent key not found error
+                if name in course_obj_dict: 
+                    course_obj_dict[name].category = cat_name
+                    course_obj_dict[name].color = color
+        return course_obj_dict
