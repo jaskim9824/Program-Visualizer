@@ -8,6 +8,7 @@
 
 # Dependencies: cleaner
 
+from unicodedata import category
 from .. import cleaner
 
 
@@ -99,6 +100,7 @@ def placeLines(courseList, indexJS, lineManager, plan):
 def placeClickListeners(courseList, controller, lineManager, plan):
     formattedListener = "$scope.{courseName}Listener = function () {{\n"
     formattedElementGetter = "  var {courseName}element = document.getElementById(\"{courseName}\");\n"
+    formattedContains = "     if ({courseName}element.classList.contains(\"{category}-highlighted\")) {{ \n"
     formattedIf = " if (!{courseName}flag) {{\n"
     formattedStatement = "      that.{action}Line(getLine{num}());\n"
     formattedHighlightStatement = "     {courseName}element.classList.{action}(\"{className}\");\n"
@@ -135,6 +137,15 @@ def placeClickListeners(courseList, controller, lineManager, plan):
         controller.write(formattedListener.format(courseName=courseID))
         controller.write(formattedElementGetter.format(courseName=courseID))
         controller.write(formattedIf.format(courseName=courseID))
+        controller.write(formattedContains.format(courseName=courseID, category=courseContClass))
+        controller.write(formattedHighlightStatement.format(courseName=courseID, 
+                                                            action="remove",
+                                                            className=courseContClass+"-highlighted"))
+        controller.write(formattedHighlightStatement.format(courseName=courseID, 
+                                                            action="add",
+                                                            className=courseContClass))
+        controller.write("      return;\n")
+        controller.write("}")
 
         # if course owns lines, add addLine statements
         if courseID in lineManager.getCourseLineDict():
