@@ -346,7 +346,7 @@ p.ortext {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: white transparent transparent transparent;
+    border-color: #EEEEEE transparent transparent transparent;
 }
 
 /* On hover, dsiplay course description */
