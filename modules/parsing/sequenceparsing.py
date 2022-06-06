@@ -143,7 +143,32 @@ def checkReqs(course_seq):
                 if course.name == "ENGG 160":
                     continue
                 # Checking coreqs
-                checkCourseCoReqs(course, all_names, term_course_names)
+                for coreq in course.coreqs:
+                    # For each coreq for a certain course, if there are multiple options
+                    # (MATH 100 or MATH 114 or...) then only keep those that are displayed
+                    # in this plan. eg: Coreqs: MATH 100 or MATH 114, if only MATH 100 is 
+                    # available in this plan, discard MATH 114 and keep MATH 100.
+                    coreqlist = coreq.split(" or ")
+
+                    i = 0
+                    while i < len(coreqlist):
+                        if coreqlist[i] not in all_names:
+                            # If the coreq is not available in this plan, delete it
+                            del coreqlist[i]
+                            continue
+                        i += 1
+
+                    if coreqlist != []:
+                        coreq_count = 0
+                        while coreq_count < len(coreqlist):
+                            if coreqlist[coreq_count] not in term_course_names:
+                                # The coreq course in not taken in the same term,
+                                # it is really a prereq
+                                course.prereqs.append(coreqlist[coreq_count])
+                                if coreq in course.coreqs:
+                                    del course.coreqs[course.coreqs.index(coreq)]
+                            coreq_count += 1
+
                 # Analagous situation but for prereqs (not coreqs)
                 for prereq in course.prereqs:
                     # For each prereq for a certain course, if there are multiple options
@@ -162,13 +187,14 @@ def checkReqs(course_seq):
                     if prereqlist != []:
                         prereq_count = 0
                         while prereq_count < len(prereqlist):
-                            if prereqlist[prereq_count] in term_names:
+                            if prereqlist[prereq_count] in term_course_names:
                                 # The prereq course is taken in the same term,
                                 # it is really a coreq
                                 course.coreqs.append(prereqlist[prereq_count])
                                 if prereq in course.prereqs:
                                     del course.prereqs[course.prereqs.index(prereq)]
                             prereq_count += 1
+ 
     return course_seq
 
 def extractCoursesFromPlan(course_seq, plan):
@@ -186,57 +212,5 @@ def extractCourseFromTerm(planDict, term):
         term_course_names.append(course_name)
     return term_course_names
 
-def checkCourseCoReqs(course, all_names, term_course_names):
-    # For each coreq for a certain course, if there are multiple options
-    # (MATH 100 or MATH 114 or...) then only keep those that are displayed
-    # in this plan. eg: Coreqs: MATH 100 or MATH 114, if only MATH 100 is 
-    # available in this plan, discard MATH 114 and keep MATH 100.
-    for coreq in course.coreqs:
-        
-        coreqlist = coreq.split(" or ")
-        i = 0
-        while i < len(coreqlist):
-            # If the coreq is not available in this plan, delete it
-            if coreqlist[i] not in all_names:
-                del coreqlist[i]
-                continue
-            i += 1
-
-            if coreqlist:
-                coreq_count = 0
-                while coreq_count < len(coreqlist):
-                    # The coreq course in not taken in the same term,
-                    # it is really a prereq
-                    if coreqlist[coreq_count] not in term_course_names:
-                        course.prereqs.append(coreqlist[coreq_count])
-                        if coreq in course.coreqs:
-                            del course.coreqs[course.coreqs.index(coreq)]
-                    coreq_count += 1
-
-def checkCoursePreReqs(course, all_names, term_course_names):
-    # For each prereq for a certain course, if there are multiple options
-    # (MATH 100 or MATH 114 or...) then only keep those that are displayed
-    # in this plan. eg: Prereqs: MATH 100 or MATH 114, if only MATH 100 is 
-    # available in this plan, discard MATH 114 and keep MATH 100.
-    for prereq in course.prereqs:
-        prereqlist = prereq.split(" or ")
-        i = 0
-        while i < len(prereqlist):
-            # If the prereq is not available in this plan, delete it
-            if prereqlist[i] not in all_names:
-                del prereqlist[i]
-                continue
-            i += 1
-
-            if prereqlist != []:
-                prereq_count = 0
-                while prereq_count < len(prereqlist):
-                    # The prereq course is taken in the same term,
-                    # it is really a coreq
-                    if prereqlist[prereq_count] in term_course_names:
-                        course.coreqs.append(prereqlist[prereq_count])
-                        if prereq in course.prereqs:
-                            del course.prereqs[course.prereqs.index(prereq)]
-                    prereq_count += 1
 
 
