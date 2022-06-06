@@ -28,10 +28,11 @@ header {
     height: 150px;
     width: 300px;
     position: relative;
-    right: 50px;
-    bottom: 100px;
+    left: 10vw;
+    bottom: 275px;
     margin: 0;
 }
+
 @media screen and (max-width: 980px) {
    #linelegend{
        right: 200px;
@@ -79,9 +80,9 @@ header {
     text-align: center;
 }
 
-.legend button {
+.legendbutton {
     text-align: center;
-    margin: 10px;
+    padding: 8px;
 }
 
 /* at 500px align header left when the screen is 500px wide or less*/
@@ -130,7 +131,7 @@ label {
     width:fit-content;
     height: fit-content;
     position: relative;
-    bottom: 30px;
+    bottom: 160px;
     right: 15px;
 }
 

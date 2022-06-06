@@ -1,0 +1,99 @@
+.MATH:hover {
+            background-color: #ff5050!important;
+            border-color: #ff5050!important;
+        }
+        .MATH-highlighted {
+            background-color: #ff5050;
+        }
+        .MATH-highlighted:hover {
+            background-color: #ff5050!important;
+            border-color: #ff5050!important;
+        }
+.BASICSCIENCES:hover {
+            background-color: #a2fab0!important;
+            border-color: #a2fab0!important;
+        }
+        .BASICSCIENCES-highlighted {
+            background-color: #a2fab0;
+        }
+        .BASICSCIENCES-highlighted:hover {
+            background-color: #a2fab0!important;
+            border-color: #a2fab0!important;
+        }
+.ENGINEERINGSCIENCES:hover {
+            background-color: #66ccff!important;
+            border-color: #66ccff!important;
+        }
+        .ENGINEERINGSCIENCES-highlighted {
+            background-color: #66ccff;
+        }
+        .ENGINEERINGSCIENCES-highlighted:hover {
+            background-color: #66ccff!important;
+            border-color: #66ccff!important;
+        }
+.ENGINEERINGDESIGN:hover {
+            background-color: #ff9900!important;
+            border-color: #ff9900!important;
+        }
+        .ENGINEERINGDESIGN-highlighted {
+            background-color: #ff9900;
+        }
+        .ENGINEERINGDESIGN-highlighted:hover {
+            background-color: #ff9900!important;
+            border-color: #ff9900!important;
+        }
+.ENGINEERINGPROFESSION:hover {
+            background-color: #ff78c0!important;
+            border-color: #ff78c0!important;
+        }
+        .ENGINEERINGPROFESSION-highlighted {
+            background-color: #ff78c0;
+        }
+        .ENGINEERINGPROFESSION-highlighted:hover {
+            background-color: #ff78c0!important;
+            border-color: #ff78c0!important;
+        }
+.COMP:hover {
+            background-color: #f5f569!important;
+            border-color: #f5f569!important;
+        }
+        .COMP-highlighted {
+            background-color: #f5f569;
+        }
+        .COMP-highlighted:hover {
+            background-color: #f5f569!important;
+            border-color: #f5f569!important;
+        }
+.PROG:hover {
+            background-color: #cc33ff!important;
+            border-color: #cc33ff!important;
+        }
+        .PROG-highlighted {
+            background-color: #cc33ff;
+        }
+        .PROG-highlighted:hover {
+            background-color: #cc33ff!important;
+            border-color: #cc33ff!important;
+        }
+.ITS:hover {
+            background-color: #996633!important;
+            border-color: #996633!important;
+        }
+        .ITS-highlighted {
+            background-color: #996633;
+        }
+        .ITS-highlighted:hover {
+            background-color: #996633!important;
+            border-color: #996633!important;
+        }
+.Other:hover {
+            background-color: #5ce0c4!important;
+            border-color: #5ce0c4!important;
+        }
+        .Other-highlighted {
+            background-color: #5ce0c4;
+        }
+        .Other-highlighted:hover {
+            background-color: #5ce0c4!important;
+            border-color: #5ce0c4!important;
+        }
