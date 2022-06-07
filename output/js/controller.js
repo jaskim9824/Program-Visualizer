@@ -54,11 +54,16 @@ this.TraditionalPlan2B3B4BClicked = [];
 this.TraditionalPlan2B3B4BLegendBtns = [];
 this.TraditionalPlan2B3B4BLegendBtnsClicked = [];
 this.TraditionalPlan2B3B4BTerms = 8;
-this.AlternatePlanList = [];
-this.AlternatePlanClicked = [];
-this.AlternatePlanLegendBtns = [];
-this.AlternatePlanLegendBtnsClicked = [];
-this.AlternatePlanTerms = 9;
+this.AlternatePlan3A4AList = [];
+this.AlternatePlan3A4AClicked = [];
+this.AlternatePlan3A4ALegendBtns = [];
+this.AlternatePlan3A4ALegendBtnsClicked = [];
+this.AlternatePlan3A4ATerms = 9;
+this.Sheet1List = [];
+this.Sheet1Clicked = [];
+this.Sheet1LegendBtns = [];
+this.Sheet1LegendBtnsClicked = [];
+this.Sheet1Terms = 0;
 this.CoopPlan13AList = [];
 this.CoopPlan13AClicked = [];
 this.CoopPlan13ALegendBtns = [];
@@ -126,9 +131,14 @@ this.disable = function(plan) {
         this.TraditionalPlan2B3B4BList[i][0].hide(true);
     }
     break; 
-  case "AlternatePlan": 
-    for (let i = 0; i < this.AlternatePlanList.length; i++) {
-        this.AlternatePlanList[i][0].hide(true);
+  case "AlternatePlan3A4A": 
+    for (let i = 0; i < this.AlternatePlan3A4AList.length; i++) {
+        this.AlternatePlan3A4AList[i][0].hide(true);
+    }
+    break; 
+  case "Sheet1": 
+    for (let i = 0; i < this.Sheet1List.length; i++) {
+        this.Sheet1List[i][0].hide(true);
     }
     break; 
   case "CoopPlan13A": 
@@ -169,7 +179,7 @@ this.disable = function(plan) {
   that.TraditionalPlan2B3A4BLegendBtns.push(currbtn);
   that.TraditionalPlan2B3B4ALegendBtns.push(currbtn);
   that.TraditionalPlan2B3B4BLegendBtns.push(currbtn);
-  that.AlternatePlanLegendBtns.push(currbtn);
+  that.AlternatePlan3A4ALegendBtns.push(currbtn);
   that.CoopPlan13ALegendBtns.push(currbtn);
   that.CoopPlan13BLegendBtns.push(currbtn);
   that.CoopPlan2LegendBtns.push(currbtn);
@@ -184,7 +194,7 @@ this.disable = function(plan) {
   that.TraditionalPlan2B3A4BLegendBtns.push(currbtn);
   that.TraditionalPlan2B3B4ALegendBtns.push(currbtn);
   that.TraditionalPlan2B3B4BLegendBtns.push(currbtn);
-  that.AlternatePlanLegendBtns.push(currbtn);
+  that.AlternatePlan3A4ALegendBtns.push(currbtn);
   that.CoopPlan13ALegendBtns.push(currbtn);
   that.CoopPlan13BLegendBtns.push(currbtn);
   that.CoopPlan2LegendBtns.push(currbtn);
@@ -199,7 +209,7 @@ this.disable = function(plan) {
   that.TraditionalPlan2B3A4BLegendBtns.push(currbtn);
   that.TraditionalPlan2B3B4ALegendBtns.push(currbtn);
   that.TraditionalPlan2B3B4BLegendBtns.push(currbtn);
-  that.AlternatePlanLegendBtns.push(currbtn);
+  that.AlternatePlan3A4ALegendBtns.push(currbtn);
   that.CoopPlan13ALegendBtns.push(currbtn);
   that.CoopPlan13BLegendBtns.push(currbtn);
   that.CoopPlan2LegendBtns.push(currbtn);
@@ -214,7 +224,7 @@ this.disable = function(plan) {
   that.TraditionalPlan2B3A4BLegendBtns.push(currbtn);
   that.TraditionalPlan2B3B4ALegendBtns.push(currbtn);
   that.TraditionalPlan2B3B4BLegendBtns.push(currbtn);
-  that.AlternatePlanLegendBtns.push(currbtn);
+  that.AlternatePlan3A4ALegendBtns.push(currbtn);
   that.CoopPlan13ALegendBtns.push(currbtn);
   that.CoopPlan13BLegendBtns.push(currbtn);
   that.CoopPlan2LegendBtns.push(currbtn);
@@ -229,7 +239,7 @@ this.disable = function(plan) {
   that.TraditionalPlan2B3A4BLegendBtns.push(currbtn);
   that.TraditionalPlan2B3B4ALegendBtns.push(currbtn);
   that.TraditionalPlan2B3B4BLegendBtns.push(currbtn);
-  that.AlternatePlanLegendBtns.push(currbtn);
+  that.AlternatePlan3A4ALegendBtns.push(currbtn);
   that.CoopPlan13ALegendBtns.push(currbtn);
   that.CoopPlan13BLegendBtns.push(currbtn);
   that.CoopPlan2LegendBtns.push(currbtn);
@@ -244,7 +254,7 @@ this.disable = function(plan) {
   that.TraditionalPlan2B3A4BLegendBtns.push(currbtn);
   that.TraditionalPlan2B3B4ALegendBtns.push(currbtn);
   that.TraditionalPlan2B3B4BLegendBtns.push(currbtn);
-  that.AlternatePlanLegendBtns.push(currbtn);
+  that.AlternatePlan3A4ALegendBtns.push(currbtn);
   that.CoopPlan13ALegendBtns.push(currbtn);
   that.CoopPlan13BLegendBtns.push(currbtn);
   that.CoopPlan2LegendBtns.push(currbtn);
@@ -259,7 +269,7 @@ this.disable = function(plan) {
   that.TraditionalPlan2B3A4BLegendBtns.push(currbtn);
   that.TraditionalPlan2B3B4ALegendBtns.push(currbtn);
   that.TraditionalPlan2B3B4BLegendBtns.push(currbtn);
-  that.AlternatePlanLegendBtns.push(currbtn);
+  that.AlternatePlan3A4ALegendBtns.push(currbtn);
   that.CoopPlan13ALegendBtns.push(currbtn);
   that.CoopPlan13BLegendBtns.push(currbtn);
   that.CoopPlan2LegendBtns.push(currbtn);
@@ -274,7 +284,7 @@ this.disable = function(plan) {
   that.TraditionalPlan2B3A4BLegendBtns.push(currbtn);
   that.TraditionalPlan2B3B4ALegendBtns.push(currbtn);
   that.TraditionalPlan2B3B4BLegendBtns.push(currbtn);
-  that.AlternatePlanLegendBtns.push(currbtn);
+  that.AlternatePlan3A4ALegendBtns.push(currbtn);
   that.CoopPlan13ALegendBtns.push(currbtn);
   that.CoopPlan13BLegendBtns.push(currbtn);
   that.CoopPlan2LegendBtns.push(currbtn);
@@ -282,7 +292,7 @@ this.disable = function(plan) {
   that.CoopPlan4LegendBtns.push(currbtn);
   var currbtn = document.getElementById("ITS");
   that.TraditionalPlan2A3A4ALegendBtns.push(currbtn);
-  that.AlternatePlanLegendBtns.push(currbtn);
+  that.AlternatePlan3A4ALegendBtns.push(currbtn);
   that.CoopPlan13ALegendBtns.push(currbtn);
   that.CoopPlan13BLegendBtns.push(currbtn);
   that.CoopPlan2LegendBtns.push(currbtn);
@@ -532,33 +542,63 @@ this.enable = function(plan) {
           }
       }
       break; 
-    case "AlternatePlan": 
-      for (let i = 0; i < this.AlternatePlanList.length; i++) {
-          this.AlternatePlanList[i][0].show(true);
+    case "AlternatePlan3A4A": 
+      for (let i = 0; i < this.AlternatePlan3A4AList.length; i++) {
+          this.AlternatePlan3A4AList[i][0].show(true);
       }
-      width = this.AlternatePlanTerms*210 + 50;
+      width = this.AlternatePlan3A4ATerms*210 + 50;
       widthstr = width.toString() + "px";
       document.getElementById("header").style.width = widthstr;
       document.getElementById("footer").style.width = widthstr;
-      for (let i = 0; i < this.AlternatePlanClicked.length; i++) {
-          var element = document.getElementById(this.AlternatePlanClicked[i][0]);
-          element.classList.remove(this.AlternatePlanClicked[i][1]);
-          element.classList.add(this.AlternatePlanClicked[i][1]+"-highlighted");
+      for (let i = 0; i < this.AlternatePlan3A4AClicked.length; i++) {
+          var element = document.getElementById(this.AlternatePlan3A4AClicked[i][0]);
+          element.classList.remove(this.AlternatePlan3A4AClicked[i][1]);
+          element.classList.add(this.AlternatePlan3A4AClicked[i][1]+"-highlighted");
       }
-      for (let i = 0; i < this.AlternatePlanLegendBtns.length; i++) {
+      for (let i = 0; i < this.AlternatePlan3A4ALegendBtns.length; i++) {
           var found = false;
-          for (let j = 0; j < this.AlternatePlanLegendBtnsClicked.length; j++) {
-              if (this.AlternatePlanLegendBtnsClicked[j] == this.AlternatePlanLegendBtns[i]) {
+          for (let j = 0; j < this.AlternatePlan3A4ALegendBtnsClicked.length; j++) {
+              if (this.AlternatePlan3A4ALegendBtnsClicked[j] == this.AlternatePlan3A4ALegendBtns[i]) {
                   found = true;
               }
           }
           if (found == false) {
-              this.AlternatePlanLegendBtns[i].classList.remove("legendbutton-pressed");
-              this.AlternatePlanLegendBtns[i].classList.add("legendbutton");
+              this.AlternatePlan3A4ALegendBtns[i].classList.remove("legendbutton-pressed");
+              this.AlternatePlan3A4ALegendBtns[i].classList.add("legendbutton");
           }
           if (found == true) {
-              this.AlternatePlanLegendBtns[i].classList.remove("legendbutton");
-              this.AlternatePlanLegendBtns[i].classList.add("legendbutton-pressed");
+              this.AlternatePlan3A4ALegendBtns[i].classList.remove("legendbutton");
+              this.AlternatePlan3A4ALegendBtns[i].classList.add("legendbutton-pressed");
+          }
+      }
+      break; 
+    case "Sheet1": 
+      for (let i = 0; i < this.Sheet1List.length; i++) {
+          this.Sheet1List[i][0].show(true);
+      }
+      width = this.Sheet1Terms*210 + 50;
+      widthstr = width.toString() + "px";
+      document.getElementById("header").style.width = widthstr;
+      document.getElementById("footer").style.width = widthstr;
+      for (let i = 0; i < this.Sheet1Clicked.length; i++) {
+          var element = document.getElementById(this.Sheet1Clicked[i][0]);
+          element.classList.remove(this.Sheet1Clicked[i][1]);
+          element.classList.add(this.Sheet1Clicked[i][1]+"-highlighted");
+      }
+      for (let i = 0; i < this.Sheet1LegendBtns.length; i++) {
+          var found = false;
+          for (let j = 0; j < this.Sheet1LegendBtnsClicked.length; j++) {
+              if (this.Sheet1LegendBtnsClicked[j] == this.Sheet1LegendBtns[i]) {
+                  found = true;
+              }
+          }
+          if (found == false) {
+              this.Sheet1LegendBtns[i].classList.remove("legendbutton-pressed");
+              this.Sheet1LegendBtns[i].classList.add("legendbutton");
+          }
+          if (found == true) {
+              this.Sheet1LegendBtns[i].classList.remove("legendbutton");
+              this.Sheet1LegendBtns[i].classList.add("legendbutton-pressed");
           }
       }
       break; 
@@ -798,14 +838,24 @@ switch($scope.selectedPlan) {
         this.TraditionalPlan2B3B4BList[index][1]++;
     }
     break;
- case "AlternatePlan":
-    var index = this.AlternatePlanList.findIndex((element) => element[0] == line);
+ case "AlternatePlan3A4A":
+    var index = this.AlternatePlan3A4AList.findIndex((element) => element[0] == line);
     if (index == -1) {
         line.show(false);
-        this.AlternatePlanList.push([line, 1])
+        this.AlternatePlan3A4AList.push([line, 1])
     }
     else {
-        this.AlternatePlanList[index][1]++;
+        this.AlternatePlan3A4AList[index][1]++;
+    }
+    break;
+ case "Sheet1":
+    var index = this.Sheet1List.findIndex((element) => element[0] == line);
+    if (index == -1) {
+        line.show(false);
+        this.Sheet1List.push([line, 1])
+    }
+    else {
+        this.Sheet1List[index][1]++;
     }
     break;
  case "CoopPlan13A":
@@ -936,13 +986,22 @@ switch($scope.selectedPlan) {
             this.TraditionalPlan2B3B4BList.splice(index, 1);
         }
     }
-    break; case "AlternatePlan":
-    var index = this.AlternatePlanList.findIndex((element) => element[0] == line);
+    break; case "AlternatePlan3A4A":
+    var index = this.AlternatePlan3A4AList.findIndex((element) => element[0] == line);
     if (index != -1) {
-        this.AlternatePlanList[index][1]--
-        if (this.AlternatePlanList[index][1] <= 0) {
+        this.AlternatePlan3A4AList[index][1]--
+        if (this.AlternatePlan3A4AList[index][1] <= 0) {
             line.hide(false);
-            this.AlternatePlanList.splice(index, 1);
+            this.AlternatePlan3A4AList.splice(index, 1);
+        }
+    }
+    break; case "Sheet1":
+    var index = this.Sheet1List.findIndex((element) => element[0] == line);
+    if (index != -1) {
+        this.Sheet1List[index][1]--
+        if (this.Sheet1List[index][1] <= 0) {
+            line.hide(false);
+            this.Sheet1List.splice(index, 1);
         }
     }
     break; case "CoopPlan13A":
@@ -1036,10 +1095,15 @@ switch($scope.selectedPlan) {
     if (index == -1) {
         this.TraditionalPlan2B3B4BClicked.push(element);
     }
-    break; case "AlternatePlan":
-    var index = this.AlternatePlanClicked.findIndex((item) => item[0] == element[0]);
+    break; case "AlternatePlan3A4A":
+    var index = this.AlternatePlan3A4AClicked.findIndex((item) => item[0] == element[0]);
     if (index == -1) {
-        this.AlternatePlanClicked.push(element);
+        this.AlternatePlan3A4AClicked.push(element);
+    }
+    break; case "Sheet1":
+    var index = this.Sheet1Clicked.findIndex((item) => item[0] == element[0]);
+    if (index == -1) {
+        this.Sheet1Clicked.push(element);
     }
     break; case "CoopPlan13A":
     var index = this.CoopPlan13AClicked.findIndex((item) => item[0] == element[0]);
@@ -1112,10 +1176,15 @@ switch($scope.selectedPlan) {
     if (index != -1) {
         this.TraditionalPlan2B3B4BClicked.splice(index, 1);
     }
-    break; case "AlternatePlan":
-    var index = this.AlternatePlanClicked.findIndex((item) => item[0] == element);
+    break; case "AlternatePlan3A4A":
+    var index = this.AlternatePlan3A4AClicked.findIndex((item) => item[0] == element);
     if (index != -1) {
-        this.AlternatePlanClicked.splice(index, 1);
+        this.AlternatePlan3A4AClicked.splice(index, 1);
+    }
+    break; case "Sheet1":
+    var index = this.Sheet1Clicked.findIndex((item) => item[0] == element);
+    if (index != -1) {
+        this.Sheet1Clicked.splice(index, 1);
     }
     break; case "CoopPlan13A":
     var index = this.CoopPlan13AClicked.findIndex((item) => item[0] == element);
@@ -1154,7 +1223,7 @@ var BASICSCIENCESTraditionalPlan2B3A4Aflag = false;
 var BASICSCIENCESTraditionalPlan2B3A4Bflag = false;
 var BASICSCIENCESTraditionalPlan2B3B4Aflag = false;
 var BASICSCIENCESTraditionalPlan2B3B4Bflag = false;
-var BASICSCIENCESAlternatePlanflag = false;
+var BASICSCIENCESAlternatePlan3A4Aflag = false;
 var BASICSCIENCESCoopPlan13Aflag = false;
 var BASICSCIENCESCoopPlan13Bflag = false;
 var BASICSCIENCESCoopPlan2flag = false;
@@ -1168,7 +1237,7 @@ var ENGINEERINGPROFESSIONTraditionalPlan2B3A4Aflag = false;
 var ENGINEERINGPROFESSIONTraditionalPlan2B3A4Bflag = false;
 var ENGINEERINGPROFESSIONTraditionalPlan2B3B4Aflag = false;
 var ENGINEERINGPROFESSIONTraditionalPlan2B3B4Bflag = false;
-var ENGINEERINGPROFESSIONAlternatePlanflag = false;
+var ENGINEERINGPROFESSIONAlternatePlan3A4Aflag = false;
 var ENGINEERINGPROFESSIONCoopPlan13Aflag = false;
 var ENGINEERINGPROFESSIONCoopPlan13Bflag = false;
 var ENGINEERINGPROFESSIONCoopPlan2flag = false;
@@ -1182,7 +1251,7 @@ var OtherTraditionalPlan2B3A4Aflag = false;
 var OtherTraditionalPlan2B3A4Bflag = false;
 var OtherTraditionalPlan2B3B4Aflag = false;
 var OtherTraditionalPlan2B3B4Bflag = false;
-var OtherAlternatePlanflag = false;
+var OtherAlternatePlan3A4Aflag = false;
 var OtherCoopPlan13Aflag = false;
 var OtherCoopPlan13Bflag = false;
 var OtherCoopPlan2flag = false;
@@ -1196,7 +1265,7 @@ var MATHTraditionalPlan2B3A4Aflag = false;
 var MATHTraditionalPlan2B3A4Bflag = false;
 var MATHTraditionalPlan2B3B4Aflag = false;
 var MATHTraditionalPlan2B3B4Bflag = false;
-var MATHAlternatePlanflag = false;
+var MATHAlternatePlan3A4Aflag = false;
 var MATHCoopPlan13Aflag = false;
 var MATHCoopPlan13Bflag = false;
 var MATHCoopPlan2flag = false;
@@ -1210,7 +1279,7 @@ var ENGINEERINGDESIGNTraditionalPlan2B3A4Aflag = false;
 var ENGINEERINGDESIGNTraditionalPlan2B3A4Bflag = false;
 var ENGINEERINGDESIGNTraditionalPlan2B3B4Aflag = false;
 var ENGINEERINGDESIGNTraditionalPlan2B3B4Bflag = false;
-var ENGINEERINGDESIGNAlternatePlanflag = false;
+var ENGINEERINGDESIGNAlternatePlan3A4Aflag = false;
 var ENGINEERINGDESIGNCoopPlan13Aflag = false;
 var ENGINEERINGDESIGNCoopPlan13Bflag = false;
 var ENGINEERINGDESIGNCoopPlan2flag = false;
@@ -1224,7 +1293,7 @@ var ENGINEERINGSCIENCESTraditionalPlan2B3A4Aflag = false;
 var ENGINEERINGSCIENCESTraditionalPlan2B3A4Bflag = false;
 var ENGINEERINGSCIENCESTraditionalPlan2B3B4Aflag = false;
 var ENGINEERINGSCIENCESTraditionalPlan2B3B4Bflag = false;
-var ENGINEERINGSCIENCESAlternatePlanflag = false;
+var ENGINEERINGSCIENCESAlternatePlan3A4Aflag = false;
 var ENGINEERINGSCIENCESCoopPlan13Aflag = false;
 var ENGINEERINGSCIENCESCoopPlan13Bflag = false;
 var ENGINEERINGSCIENCESCoopPlan2flag = false;
@@ -1238,7 +1307,7 @@ var ComplementaryElectiveTraditionalPlan2B3A4Aflag = false;
 var ComplementaryElectiveTraditionalPlan2B3A4Bflag = false;
 var ComplementaryElectiveTraditionalPlan2B3B4Aflag = false;
 var ComplementaryElectiveTraditionalPlan2B3B4Bflag = false;
-var ComplementaryElectiveAlternatePlanflag = false;
+var ComplementaryElectiveAlternatePlan3A4Aflag = false;
 var ComplementaryElectiveCoopPlan13Aflag = false;
 var ComplementaryElectiveCoopPlan13Bflag = false;
 var ComplementaryElectiveCoopPlan2flag = false;
@@ -1252,14 +1321,14 @@ var ProgramTechnicalElectiveTraditionalPlan2B3A4Aflag = false;
 var ProgramTechnicalElectiveTraditionalPlan2B3A4Bflag = false;
 var ProgramTechnicalElectiveTraditionalPlan2B3B4Aflag = false;
 var ProgramTechnicalElectiveTraditionalPlan2B3B4Bflag = false;
-var ProgramTechnicalElectiveAlternatePlanflag = false;
+var ProgramTechnicalElectiveAlternatePlan3A4Aflag = false;
 var ProgramTechnicalElectiveCoopPlan13Aflag = false;
 var ProgramTechnicalElectiveCoopPlan13Bflag = false;
 var ProgramTechnicalElectiveCoopPlan2flag = false;
 var ProgramTechnicalElectiveCoopPlan3Biomedicalflag = false;
 var ProgramTechnicalElectiveCoopPlan4flag = false;
 var ITSElectiveTraditionalPlan2A3A4Aflag = false;
-var ITSElectiveAlternatePlanflag = false;
+var ITSElectiveAlternatePlan3A4Aflag = false;
 var ITSElectiveCoopPlan13Aflag = false;
 var ITSElectiveCoopPlan13Bflag = false;
 var ITSElectiveCoopPlan2flag = false;
@@ -1737,31 +1806,31 @@ switch(categoryName) {
        ENPH131TraditionalPlan2B3B4Belement.classList.add("BASICSCIENCES-highlighted");
        that.addToClicked(["ENPH131TraditionalPlan2B3B4B","BASICSCIENCES"]);
        break;
-      case "AlternatePlan":
-       var CHEM103AlternatePlanelement = document.getElementById("CHEM103AlternatePlan");
-       CHEM103AlternatePlanelement.classList.remove("BASICSCIENCES");
-       CHEM103AlternatePlanelement.classList.add("BASICSCIENCES-highlighted");
-       that.addToClicked(["CHEM103AlternatePlan","BASICSCIENCES"]);
-       var ENGG130AlternatePlanelement = document.getElementById("ENGG130AlternatePlan");
-       ENGG130AlternatePlanelement.classList.remove("BASICSCIENCES");
-       ENGG130AlternatePlanelement.classList.add("BASICSCIENCES-highlighted");
-       that.addToClicked(["ENGG130AlternatePlan","BASICSCIENCES"]);
-       var PHYS130AlternatePlanelement = document.getElementById("PHYS130AlternatePlan");
-       PHYS130AlternatePlanelement.classList.remove("BASICSCIENCES");
-       PHYS130AlternatePlanelement.classList.add("BASICSCIENCES-highlighted");
-       that.addToClicked(["PHYS130AlternatePlan","BASICSCIENCES"]);
-       var CHEM105AlternatePlanelement = document.getElementById("CHEM105AlternatePlan");
-       CHEM105AlternatePlanelement.classList.remove("BASICSCIENCES");
-       CHEM105AlternatePlanelement.classList.add("BASICSCIENCES-highlighted");
-       that.addToClicked(["CHEM105AlternatePlan","BASICSCIENCES"]);
-       var ENCMP100AlternatePlanelement = document.getElementById("ENCMP100AlternatePlan");
-       ENCMP100AlternatePlanelement.classList.remove("BASICSCIENCES");
-       ENCMP100AlternatePlanelement.classList.add("BASICSCIENCES-highlighted");
-       that.addToClicked(["ENCMP100AlternatePlan","BASICSCIENCES"]);
-       var ENPH131AlternatePlanelement = document.getElementById("ENPH131AlternatePlan");
-       ENPH131AlternatePlanelement.classList.remove("BASICSCIENCES");
-       ENPH131AlternatePlanelement.classList.add("BASICSCIENCES-highlighted");
-       that.addToClicked(["ENPH131AlternatePlan","BASICSCIENCES"]);
+      case "AlternatePlan3A4A":
+       var CHEM103AlternatePlan3A4Aelement = document.getElementById("CHEM103AlternatePlan3A4A");
+       CHEM103AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES");
+       CHEM103AlternatePlan3A4Aelement.classList.add("BASICSCIENCES-highlighted");
+       that.addToClicked(["CHEM103AlternatePlan3A4A","BASICSCIENCES"]);
+       var ENGG130AlternatePlan3A4Aelement = document.getElementById("ENGG130AlternatePlan3A4A");
+       ENGG130AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES");
+       ENGG130AlternatePlan3A4Aelement.classList.add("BASICSCIENCES-highlighted");
+       that.addToClicked(["ENGG130AlternatePlan3A4A","BASICSCIENCES"]);
+       var PHYS130AlternatePlan3A4Aelement = document.getElementById("PHYS130AlternatePlan3A4A");
+       PHYS130AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES");
+       PHYS130AlternatePlan3A4Aelement.classList.add("BASICSCIENCES-highlighted");
+       that.addToClicked(["PHYS130AlternatePlan3A4A","BASICSCIENCES"]);
+       var CHEM105AlternatePlan3A4Aelement = document.getElementById("CHEM105AlternatePlan3A4A");
+       CHEM105AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES");
+       CHEM105AlternatePlan3A4Aelement.classList.add("BASICSCIENCES-highlighted");
+       that.addToClicked(["CHEM105AlternatePlan3A4A","BASICSCIENCES"]);
+       var ENCMP100AlternatePlan3A4Aelement = document.getElementById("ENCMP100AlternatePlan3A4A");
+       ENCMP100AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES");
+       ENCMP100AlternatePlan3A4Aelement.classList.add("BASICSCIENCES-highlighted");
+       that.addToClicked(["ENCMP100AlternatePlan3A4A","BASICSCIENCES"]);
+       var ENPH131AlternatePlan3A4Aelement = document.getElementById("ENPH131AlternatePlan3A4A");
+       ENPH131AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES");
+       ENPH131AlternatePlan3A4Aelement.classList.add("BASICSCIENCES-highlighted");
+       that.addToClicked(["ENPH131AlternatePlan3A4A","BASICSCIENCES"]);
        break;
       case "CoopPlan13A":
        var CHEM103CoopPlan13Aelement = document.getElementById("CHEM103CoopPlan13A");
@@ -2041,23 +2110,23 @@ switch(categoryName) {
        ENGG404TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGPROFESSION-highlighted");
        that.addToClicked(["ENGG404TraditionalPlan2B3B4B","ENGINEERINGPROFESSION"]);
        break;
-      case "AlternatePlan":
-       var ENGG100AlternatePlanelement = document.getElementById("ENGG100AlternatePlan");
-       ENGG100AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION");
-       ENGG100AlternatePlanelement.classList.add("ENGINEERINGPROFESSION-highlighted");
-       that.addToClicked(["ENGG100AlternatePlan","ENGINEERINGPROFESSION"]);
-       var ENGG404AlternatePlanelement = document.getElementById("ENGG404AlternatePlan");
-       ENGG404AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION");
-       ENGG404AlternatePlanelement.classList.add("ENGINEERINGPROFESSION-highlighted");
-       that.addToClicked(["ENGG404AlternatePlan","ENGINEERINGPROFESSION"]);
-       var MECE200AlternatePlanelement = document.getElementById("MECE200AlternatePlan");
-       MECE200AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION");
-       MECE200AlternatePlanelement.classList.add("ENGINEERINGPROFESSION-highlighted");
-       that.addToClicked(["MECE200AlternatePlan","ENGINEERINGPROFESSION"]);
-       var ENGG400AlternatePlanelement = document.getElementById("ENGG400AlternatePlan");
-       ENGG400AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION");
-       ENGG400AlternatePlanelement.classList.add("ENGINEERINGPROFESSION-highlighted");
-       that.addToClicked(["ENGG400AlternatePlan","ENGINEERINGPROFESSION"]);
+      case "AlternatePlan3A4A":
+       var ENGG100AlternatePlan3A4Aelement = document.getElementById("ENGG100AlternatePlan3A4A");
+       ENGG100AlternatePlan3A4Aelement.classList.remove("ENGINEERINGPROFESSION");
+       ENGG100AlternatePlan3A4Aelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+       that.addToClicked(["ENGG100AlternatePlan3A4A","ENGINEERINGPROFESSION"]);
+       var ENGG404AlternatePlan3A4Aelement = document.getElementById("ENGG404AlternatePlan3A4A");
+       ENGG404AlternatePlan3A4Aelement.classList.remove("ENGINEERINGPROFESSION");
+       ENGG404AlternatePlan3A4Aelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+       that.addToClicked(["ENGG404AlternatePlan3A4A","ENGINEERINGPROFESSION"]);
+       var MECE200AlternatePlan3A4Aelement = document.getElementById("MECE200AlternatePlan3A4A");
+       MECE200AlternatePlan3A4Aelement.classList.remove("ENGINEERINGPROFESSION");
+       MECE200AlternatePlan3A4Aelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+       that.addToClicked(["MECE200AlternatePlan3A4A","ENGINEERINGPROFESSION"]);
+       var ENGG400AlternatePlan3A4Aelement = document.getElementById("ENGG400AlternatePlan3A4A");
+       ENGG400AlternatePlan3A4Aelement.classList.remove("ENGINEERINGPROFESSION");
+       ENGG400AlternatePlan3A4Aelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+       that.addToClicked(["ENGG400AlternatePlan3A4A","ENGINEERINGPROFESSION"]);
        break;
       case "CoopPlan13A":
        var ENGG100CoopPlan13Aelement = document.getElementById("ENGG100CoopPlan13A");
@@ -2381,19 +2450,19 @@ switch(categoryName) {
        ENGM401TraditionalPlan2B3B4Belement.classList.add("Other-highlighted");
        that.addToClicked(["ENGM401TraditionalPlan2B3B4B","Other"]);
        break;
-      case "AlternatePlan":
-       var ENGL199AlternatePlanelement = document.getElementById("ENGL199AlternatePlan");
-       ENGL199AlternatePlanelement.classList.remove("Other");
-       ENGL199AlternatePlanelement.classList.add("Other-highlighted");
-       that.addToClicked(["ENGL199AlternatePlan","Other"]);
-       var ENGM310AlternatePlanelement = document.getElementById("ENGM310AlternatePlan");
-       ENGM310AlternatePlanelement.classList.remove("Other");
-       ENGM310AlternatePlanelement.classList.add("Other-highlighted");
-       that.addToClicked(["ENGM310AlternatePlan","Other"]);
-       var ENGM401AlternatePlanelement = document.getElementById("ENGM401AlternatePlan");
-       ENGM401AlternatePlanelement.classList.remove("Other");
-       ENGM401AlternatePlanelement.classList.add("Other-highlighted");
-       that.addToClicked(["ENGM401AlternatePlan","Other"]);
+      case "AlternatePlan3A4A":
+       var ENGL199AlternatePlan3A4Aelement = document.getElementById("ENGL199AlternatePlan3A4A");
+       ENGL199AlternatePlan3A4Aelement.classList.remove("Other");
+       ENGL199AlternatePlan3A4Aelement.classList.add("Other-highlighted");
+       that.addToClicked(["ENGL199AlternatePlan3A4A","Other"]);
+       var ENGM310AlternatePlan3A4Aelement = document.getElementById("ENGM310AlternatePlan3A4A");
+       ENGM310AlternatePlan3A4Aelement.classList.remove("Other");
+       ENGM310AlternatePlan3A4Aelement.classList.add("Other-highlighted");
+       that.addToClicked(["ENGM310AlternatePlan3A4A","Other"]);
+       var ENGM401AlternatePlan3A4Aelement = document.getElementById("ENGM401AlternatePlan3A4A");
+       ENGM401AlternatePlan3A4Aelement.classList.remove("Other");
+       ENGM401AlternatePlan3A4Aelement.classList.add("Other-highlighted");
+       that.addToClicked(["ENGM401AlternatePlan3A4A","Other"]);
        break;
       case "CoopPlan13A":
        var ENGL199CoopPlan13Aelement = document.getElementById("ENGL199CoopPlan13A");
@@ -2741,39 +2810,39 @@ switch(categoryName) {
        MATH300TraditionalPlan2B3B4Belement.classList.add("MATH-highlighted");
        that.addToClicked(["MATH300TraditionalPlan2B3B4B","MATH"]);
        break;
-      case "AlternatePlan":
-       var MATH100AlternatePlanelement = document.getElementById("MATH100AlternatePlan");
-       MATH100AlternatePlanelement.classList.remove("MATH");
-       MATH100AlternatePlanelement.classList.add("MATH-highlighted");
-       that.addToClicked(["MATH100AlternatePlan","MATH"]);
-       var MATH101AlternatePlanelement = document.getElementById("MATH101AlternatePlan");
-       MATH101AlternatePlanelement.classList.remove("MATH");
-       MATH101AlternatePlanelement.classList.add("MATH-highlighted");
-       that.addToClicked(["MATH101AlternatePlan","MATH"]);
-       var MATH102AlternatePlanelement = document.getElementById("MATH102AlternatePlan");
-       MATH102AlternatePlanelement.classList.remove("MATH");
-       MATH102AlternatePlanelement.classList.add("MATH-highlighted");
-       that.addToClicked(["MATH102AlternatePlan","MATH"]);
-       var MATH201AlternatePlanelement = document.getElementById("MATH201AlternatePlan");
-       MATH201AlternatePlanelement.classList.remove("MATH");
-       MATH201AlternatePlanelement.classList.add("MATH-highlighted");
-       that.addToClicked(["MATH201AlternatePlan","MATH"]);
-       var MATH209AlternatePlanelement = document.getElementById("MATH209AlternatePlan");
-       MATH209AlternatePlanelement.classList.remove("MATH");
-       MATH209AlternatePlanelement.classList.add("MATH-highlighted");
-       that.addToClicked(["MATH209AlternatePlan","MATH"]);
-       var STAT235AlternatePlanelement = document.getElementById("STAT235AlternatePlan");
-       STAT235AlternatePlanelement.classList.remove("MATH");
-       STAT235AlternatePlanelement.classList.add("MATH-highlighted");
-       that.addToClicked(["STAT235AlternatePlan","MATH"]);
-       var MATH300AlternatePlanelement = document.getElementById("MATH300AlternatePlan");
-       MATH300AlternatePlanelement.classList.remove("MATH");
-       MATH300AlternatePlanelement.classList.add("MATH-highlighted");
-       that.addToClicked(["MATH300AlternatePlan","MATH"]);
-       var MECE390AlternatePlanelement = document.getElementById("MECE390AlternatePlan");
-       MECE390AlternatePlanelement.classList.remove("MATH");
-       MECE390AlternatePlanelement.classList.add("MATH-highlighted");
-       that.addToClicked(["MECE390AlternatePlan","MATH"]);
+      case "AlternatePlan3A4A":
+       var MATH100AlternatePlan3A4Aelement = document.getElementById("MATH100AlternatePlan3A4A");
+       MATH100AlternatePlan3A4Aelement.classList.remove("MATH");
+       MATH100AlternatePlan3A4Aelement.classList.add("MATH-highlighted");
+       that.addToClicked(["MATH100AlternatePlan3A4A","MATH"]);
+       var MATH101AlternatePlan3A4Aelement = document.getElementById("MATH101AlternatePlan3A4A");
+       MATH101AlternatePlan3A4Aelement.classList.remove("MATH");
+       MATH101AlternatePlan3A4Aelement.classList.add("MATH-highlighted");
+       that.addToClicked(["MATH101AlternatePlan3A4A","MATH"]);
+       var MATH102AlternatePlan3A4Aelement = document.getElementById("MATH102AlternatePlan3A4A");
+       MATH102AlternatePlan3A4Aelement.classList.remove("MATH");
+       MATH102AlternatePlan3A4Aelement.classList.add("MATH-highlighted");
+       that.addToClicked(["MATH102AlternatePlan3A4A","MATH"]);
+       var MATH201AlternatePlan3A4Aelement = document.getElementById("MATH201AlternatePlan3A4A");
+       MATH201AlternatePlan3A4Aelement.classList.remove("MATH");
+       MATH201AlternatePlan3A4Aelement.classList.add("MATH-highlighted");
+       that.addToClicked(["MATH201AlternatePlan3A4A","MATH"]);
+       var MATH209AlternatePlan3A4Aelement = document.getElementById("MATH209AlternatePlan3A4A");
+       MATH209AlternatePlan3A4Aelement.classList.remove("MATH");
+       MATH209AlternatePlan3A4Aelement.classList.add("MATH-highlighted");
+       that.addToClicked(["MATH209AlternatePlan3A4A","MATH"]);
+       var STAT235AlternatePlan3A4Aelement = document.getElementById("STAT235AlternatePlan3A4A");
+       STAT235AlternatePlan3A4Aelement.classList.remove("MATH");
+       STAT235AlternatePlan3A4Aelement.classList.add("MATH-highlighted");
+       that.addToClicked(["STAT235AlternatePlan3A4A","MATH"]);
+       var MATH300AlternatePlan3A4Aelement = document.getElementById("MATH300AlternatePlan3A4A");
+       MATH300AlternatePlan3A4Aelement.classList.remove("MATH");
+       MATH300AlternatePlan3A4Aelement.classList.add("MATH-highlighted");
+       that.addToClicked(["MATH300AlternatePlan3A4A","MATH"]);
+       var MECE390AlternatePlan3A4Aelement = document.getElementById("MECE390AlternatePlan3A4A");
+       MECE390AlternatePlan3A4Aelement.classList.remove("MATH");
+       MECE390AlternatePlan3A4Aelement.classList.add("MATH-highlighted");
+       that.addToClicked(["MECE390AlternatePlan3A4A","MATH"]);
        break;
       case "CoopPlan13A":
        var MATH100CoopPlan13Aelement = document.getElementById("MATH100CoopPlan13A");
@@ -3157,31 +3226,31 @@ switch(categoryName) {
        MECE460TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGDESIGN-highlighted");
        that.addToClicked(["MECE460TraditionalPlan2B3B4B","ENGINEERINGDESIGN"]);
        break;
-      case "AlternatePlan":
-       var ENGG160AlternatePlanelement = document.getElementById("ENGG160AlternatePlan");
-       ENGG160AlternatePlanelement.classList.remove("ENGINEERINGDESIGN");
-       ENGG160AlternatePlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-       that.addToClicked(["ENGG160AlternatePlan","ENGINEERINGDESIGN"]);
-       var MECE260AlternatePlanelement = document.getElementById("MECE260AlternatePlan");
-       MECE260AlternatePlanelement.classList.remove("ENGINEERINGDESIGN");
-       MECE260AlternatePlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-       that.addToClicked(["MECE260AlternatePlan","ENGINEERINGDESIGN"]);
-       var MECE265AlternatePlanelement = document.getElementById("MECE265AlternatePlan");
-       MECE265AlternatePlanelement.classList.remove("ENGINEERINGDESIGN");
-       MECE265AlternatePlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-       that.addToClicked(["MECE265AlternatePlan","ENGINEERINGDESIGN"]);
-       var MECE360AlternatePlanelement = document.getElementById("MECE360AlternatePlan");
-       MECE360AlternatePlanelement.classList.remove("ENGINEERINGDESIGN");
-       MECE360AlternatePlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-       that.addToClicked(["MECE360AlternatePlan","ENGINEERINGDESIGN"]);
-       var MECE362AlternatePlanelement = document.getElementById("MECE362AlternatePlan");
-       MECE362AlternatePlanelement.classList.remove("ENGINEERINGDESIGN");
-       MECE362AlternatePlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-       that.addToClicked(["MECE362AlternatePlan","ENGINEERINGDESIGN"]);
-       var MECE460AlternatePlanelement = document.getElementById("MECE460AlternatePlan");
-       MECE460AlternatePlanelement.classList.remove("ENGINEERINGDESIGN");
-       MECE460AlternatePlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-       that.addToClicked(["MECE460AlternatePlan","ENGINEERINGDESIGN"]);
+      case "AlternatePlan3A4A":
+       var ENGG160AlternatePlan3A4Aelement = document.getElementById("ENGG160AlternatePlan3A4A");
+       ENGG160AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN");
+       ENGG160AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN-highlighted");
+       that.addToClicked(["ENGG160AlternatePlan3A4A","ENGINEERINGDESIGN"]);
+       var MECE260AlternatePlan3A4Aelement = document.getElementById("MECE260AlternatePlan3A4A");
+       MECE260AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN");
+       MECE260AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN-highlighted");
+       that.addToClicked(["MECE260AlternatePlan3A4A","ENGINEERINGDESIGN"]);
+       var MECE265AlternatePlan3A4Aelement = document.getElementById("MECE265AlternatePlan3A4A");
+       MECE265AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN");
+       MECE265AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN-highlighted");
+       that.addToClicked(["MECE265AlternatePlan3A4A","ENGINEERINGDESIGN"]);
+       var MECE360AlternatePlan3A4Aelement = document.getElementById("MECE360AlternatePlan3A4A");
+       MECE360AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN");
+       MECE360AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN-highlighted");
+       that.addToClicked(["MECE360AlternatePlan3A4A","ENGINEERINGDESIGN"]);
+       var MECE362AlternatePlan3A4Aelement = document.getElementById("MECE362AlternatePlan3A4A");
+       MECE362AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN");
+       MECE362AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN-highlighted");
+       that.addToClicked(["MECE362AlternatePlan3A4A","ENGINEERINGDESIGN"]);
+       var MECE460AlternatePlan3A4Aelement = document.getElementById("MECE460AlternatePlan3A4A");
+       MECE460AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN");
+       MECE460AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN-highlighted");
+       that.addToClicked(["MECE460AlternatePlan3A4A","ENGINEERINGDESIGN"]);
        break;
       case "CoopPlan13A":
        var ENGG160CoopPlan13Aelement = document.getElementById("ENGG160CoopPlan13A");
@@ -3941,83 +4010,83 @@ switch(categoryName) {
        MECE463TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGSCIENCES-highlighted");
        that.addToClicked(["MECE463TraditionalPlan2B3B4B","ENGINEERINGSCIENCES"]);
        break;
-      case "AlternatePlan":
-       var CIVE270AlternatePlanelement = document.getElementById("CIVE270AlternatePlan");
-       CIVE270AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-       CIVE270AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-       that.addToClicked(["CIVE270AlternatePlan","ENGINEERINGSCIENCES"]);
-       var MECE230AlternatePlanelement = document.getElementById("MECE230AlternatePlan");
-       MECE230AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-       MECE230AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-       that.addToClicked(["MECE230AlternatePlan","ENGINEERINGSCIENCES"]);
-       var CHE243AlternatePlanelement = document.getElementById("CHE243AlternatePlan");
-       CHE243AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-       CHE243AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-       that.addToClicked(["CHE243AlternatePlan","ENGINEERINGSCIENCES"]);
-       var ECE209AlternatePlanelement = document.getElementById("ECE209AlternatePlan");
-       ECE209AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-       ECE209AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-       that.addToClicked(["ECE209AlternatePlan","ENGINEERINGSCIENCES"]);
-       var MATE202AlternatePlanelement = document.getElementById("MATE202AlternatePlan");
-       MATE202AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-       MATE202AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-       that.addToClicked(["MATE202AlternatePlan","ENGINEERINGSCIENCES"]);
-       var MECE250AlternatePlanelement = document.getElementById("MECE250AlternatePlan");
-       MECE250AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-       MECE250AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-       that.addToClicked(["MECE250AlternatePlan","ENGINEERINGSCIENCES"]);
-       var MECE300AlternatePlanelement = document.getElementById("MECE300AlternatePlan");
-       MECE300AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-       MECE300AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-       that.addToClicked(["MECE300AlternatePlan","ENGINEERINGSCIENCES"]);
-       var MECE301AlternatePlanelement = document.getElementById("MECE301AlternatePlan");
-       MECE301AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-       MECE301AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-       that.addToClicked(["MECE301AlternatePlan","ENGINEERINGSCIENCES"]);
-       var MECE331AlternatePlanelement = document.getElementById("MECE331AlternatePlan");
-       MECE331AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-       MECE331AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-       that.addToClicked(["MECE331AlternatePlan","ENGINEERINGSCIENCES"]);
-       var MECE371AlternatePlanelement = document.getElementById("MECE371AlternatePlan");
-       MECE371AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-       MECE371AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-       that.addToClicked(["MECE371AlternatePlan","ENGINEERINGSCIENCES"]);
-       var MECE380AlternatePlanelement = document.getElementById("MECE380AlternatePlan");
-       MECE380AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-       MECE380AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-       that.addToClicked(["MECE380AlternatePlan","ENGINEERINGSCIENCES"]);
-       var MECE340AlternatePlanelement = document.getElementById("MECE340AlternatePlan");
-       MECE340AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-       MECE340AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-       that.addToClicked(["MECE340AlternatePlan","ENGINEERINGSCIENCES"]);
-       var MECE430AlternatePlanelement = document.getElementById("MECE430AlternatePlan");
-       MECE430AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-       MECE430AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-       that.addToClicked(["MECE430AlternatePlan","ENGINEERINGSCIENCES"]);
-       var MECE480AlternatePlanelement = document.getElementById("MECE480AlternatePlan");
-       MECE480AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-       MECE480AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-       that.addToClicked(["MECE480AlternatePlan","ENGINEERINGSCIENCES"]);
-       var MECE463AlternatePlanelement = document.getElementById("MECE463AlternatePlan");
-       MECE463AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-       MECE463AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-       that.addToClicked(["MECE463AlternatePlan","ENGINEERINGSCIENCES"]);
-       var CHE448AlternatePlanelement = document.getElementById("CHE448AlternatePlan");
-       CHE448AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-       CHE448AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-       that.addToClicked(["CHE448AlternatePlan","ENGINEERINGSCIENCES"]);
-       var MECE420AlternatePlanelement = document.getElementById("MECE420AlternatePlan");
-       MECE420AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-       MECE420AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-       that.addToClicked(["MECE420AlternatePlan","ENGINEERINGSCIENCES"]);
-       var MECE403AlternatePlanelement = document.getElementById("MECE403AlternatePlan");
-       MECE403AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-       MECE403AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-       that.addToClicked(["MECE403AlternatePlan","ENGINEERINGSCIENCES"]);
-       var MECE451AlternatePlanelement = document.getElementById("MECE451AlternatePlan");
-       MECE451AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-       MECE451AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-       that.addToClicked(["MECE451AlternatePlan","ENGINEERINGSCIENCES"]);
+      case "AlternatePlan3A4A":
+       var CIVE270AlternatePlan3A4Aelement = document.getElementById("CIVE270AlternatePlan3A4A");
+       CIVE270AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+       CIVE270AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+       that.addToClicked(["CIVE270AlternatePlan3A4A","ENGINEERINGSCIENCES"]);
+       var MECE230AlternatePlan3A4Aelement = document.getElementById("MECE230AlternatePlan3A4A");
+       MECE230AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+       MECE230AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+       that.addToClicked(["MECE230AlternatePlan3A4A","ENGINEERINGSCIENCES"]);
+       var CHE243AlternatePlan3A4Aelement = document.getElementById("CHE243AlternatePlan3A4A");
+       CHE243AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+       CHE243AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+       that.addToClicked(["CHE243AlternatePlan3A4A","ENGINEERINGSCIENCES"]);
+       var ECE209AlternatePlan3A4Aelement = document.getElementById("ECE209AlternatePlan3A4A");
+       ECE209AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+       ECE209AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+       that.addToClicked(["ECE209AlternatePlan3A4A","ENGINEERINGSCIENCES"]);
+       var MATE202AlternatePlan3A4Aelement = document.getElementById("MATE202AlternatePlan3A4A");
+       MATE202AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+       MATE202AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+       that.addToClicked(["MATE202AlternatePlan3A4A","ENGINEERINGSCIENCES"]);
+       var MECE250AlternatePlan3A4Aelement = document.getElementById("MECE250AlternatePlan3A4A");
+       MECE250AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+       MECE250AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+       that.addToClicked(["MECE250AlternatePlan3A4A","ENGINEERINGSCIENCES"]);
+       var MECE300AlternatePlan3A4Aelement = document.getElementById("MECE300AlternatePlan3A4A");
+       MECE300AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+       MECE300AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+       that.addToClicked(["MECE300AlternatePlan3A4A","ENGINEERINGSCIENCES"]);
+       var MECE301AlternatePlan3A4Aelement = document.getElementById("MECE301AlternatePlan3A4A");
+       MECE301AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+       MECE301AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+       that.addToClicked(["MECE301AlternatePlan3A4A","ENGINEERINGSCIENCES"]);
+       var MECE331AlternatePlan3A4Aelement = document.getElementById("MECE331AlternatePlan3A4A");
+       MECE331AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+       MECE331AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+       that.addToClicked(["MECE331AlternatePlan3A4A","ENGINEERINGSCIENCES"]);
+       var MECE371AlternatePlan3A4Aelement = document.getElementById("MECE371AlternatePlan3A4A");
+       MECE371AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+       MECE371AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+       that.addToClicked(["MECE371AlternatePlan3A4A","ENGINEERINGSCIENCES"]);
+       var MECE380AlternatePlan3A4Aelement = document.getElementById("MECE380AlternatePlan3A4A");
+       MECE380AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+       MECE380AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+       that.addToClicked(["MECE380AlternatePlan3A4A","ENGINEERINGSCIENCES"]);
+       var MECE340AlternatePlan3A4Aelement = document.getElementById("MECE340AlternatePlan3A4A");
+       MECE340AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+       MECE340AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+       that.addToClicked(["MECE340AlternatePlan3A4A","ENGINEERINGSCIENCES"]);
+       var MECE430AlternatePlan3A4Aelement = document.getElementById("MECE430AlternatePlan3A4A");
+       MECE430AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+       MECE430AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+       that.addToClicked(["MECE430AlternatePlan3A4A","ENGINEERINGSCIENCES"]);
+       var MECE480AlternatePlan3A4Aelement = document.getElementById("MECE480AlternatePlan3A4A");
+       MECE480AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+       MECE480AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+       that.addToClicked(["MECE480AlternatePlan3A4A","ENGINEERINGSCIENCES"]);
+       var MECE463AlternatePlan3A4Aelement = document.getElementById("MECE463AlternatePlan3A4A");
+       MECE463AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+       MECE463AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+       that.addToClicked(["MECE463AlternatePlan3A4A","ENGINEERINGSCIENCES"]);
+       var CHE448AlternatePlan3A4Aelement = document.getElementById("CHE448AlternatePlan3A4A");
+       CHE448AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+       CHE448AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+       that.addToClicked(["CHE448AlternatePlan3A4A","ENGINEERINGSCIENCES"]);
+       var MECE420AlternatePlan3A4Aelement = document.getElementById("MECE420AlternatePlan3A4A");
+       MECE420AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+       MECE420AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+       that.addToClicked(["MECE420AlternatePlan3A4A","ENGINEERINGSCIENCES"]);
+       var MECE403AlternatePlan3A4Aelement = document.getElementById("MECE403AlternatePlan3A4A");
+       MECE403AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+       MECE403AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+       that.addToClicked(["MECE403AlternatePlan3A4A","ENGINEERINGSCIENCES"]);
+       var MECE451AlternatePlan3A4Aelement = document.getElementById("MECE451AlternatePlan3A4A");
+       MECE451AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+       MECE451AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+       that.addToClicked(["MECE451AlternatePlan3A4A","ENGINEERINGSCIENCES"]);
        break;
       case "CoopPlan13A":
        var CIVE270CoopPlan13Aelement = document.getElementById("CIVE270CoopPlan13A");
@@ -4481,13 +4550,13 @@ switch(categoryName) {
           that.addToClicked(["COMPTraditionalPlan2B3B4B","COMP"]);
         }
        break;
-      case "AlternatePlan":
+      case "AlternatePlan3A4A":
         var COMPelements = document.getElementsByClassName("COMP");
         for (let i = 0; i < COMPelements.length; i++) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["COMPAlternatePlan","COMP"]);
+          that.addToClicked(["COMPAlternatePlan3A4A","COMP"]);
         }
        break;
       case "CoopPlan13A":
@@ -4779,34 +4848,34 @@ switch(categoryName) {
           that.addToClicked(["PROGTraditionalPlan2B3B4B","PROG"]);
         }
        break;
-      case "AlternatePlan":
+      case "AlternatePlan3A4A":
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGAlternatePlan","PROG"]);
+          that.addToClicked(["PROGAlternatePlan3A4A","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGAlternatePlan","PROG"]);
+          that.addToClicked(["PROGAlternatePlan3A4A","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGAlternatePlan","PROG"]);
+          that.addToClicked(["PROGAlternatePlan3A4A","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGAlternatePlan","PROG"]);
+          that.addToClicked(["PROGAlternatePlan3A4A","PROG"]);
         }
        break;
       case "CoopPlan13A":
@@ -4965,13 +5034,13 @@ switch(categoryName) {
           that.addToClicked(["ITSTraditionalPlan2A3A4A","ITS"]);
         }
        break;
-      case "AlternatePlan":
+      case "AlternatePlan3A4A":
         var ITSelements = document.getElementsByClassName("ITS");
         for (let i = 0; i < ITSelements.length; i++) {
           var currelement = document.getElementById(ITSelements.item(i).id);
           currelement.classList.remove("ITS");
           currelement.classList.add("ITS-highlighted");
-          that.addToClicked(["ITSAlternatePlan","ITS"]);
+          that.addToClicked(["ITSAlternatePlan3A4A","ITS"]);
         }
        break;
       case "CoopPlan13A":
@@ -5060,3552 +5129,4896 @@ switch(categoryName) {
   case "BASICSCIENCES":
     switch(planName) {
       case "TraditionalPlan2A3A4A":
+if (!CHEM103TraditionalPlan2A3A4Aflag) { 
        var CHEM103TraditionalPlan2A3A4Aelement = document.getElementById("CHEM103TraditionalPlan2A3A4A");
        CHEM103TraditionalPlan2A3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
        CHEM103TraditionalPlan2A3A4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM103TraditionalPlan2A3A4A");
+ } 
+if (!ENGG130TraditionalPlan2A3A4Aflag) { 
        var ENGG130TraditionalPlan2A3A4Aelement = document.getElementById("ENGG130TraditionalPlan2A3A4A");
        ENGG130TraditionalPlan2A3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
        ENGG130TraditionalPlan2A3A4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENGG130TraditionalPlan2A3A4A");
+ } 
+if (!PHYS130TraditionalPlan2A3A4Aflag) { 
        var PHYS130TraditionalPlan2A3A4Aelement = document.getElementById("PHYS130TraditionalPlan2A3A4A");
        PHYS130TraditionalPlan2A3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
        PHYS130TraditionalPlan2A3A4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("PHYS130TraditionalPlan2A3A4A");
+ } 
+if (!CHEM105TraditionalPlan2A3A4Aflag) { 
        var CHEM105TraditionalPlan2A3A4Aelement = document.getElementById("CHEM105TraditionalPlan2A3A4A");
        CHEM105TraditionalPlan2A3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
        CHEM105TraditionalPlan2A3A4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM105TraditionalPlan2A3A4A");
+ } 
+if (!ENCMP100TraditionalPlan2A3A4Aflag) { 
        var ENCMP100TraditionalPlan2A3A4Aelement = document.getElementById("ENCMP100TraditionalPlan2A3A4A");
        ENCMP100TraditionalPlan2A3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
        ENCMP100TraditionalPlan2A3A4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENCMP100TraditionalPlan2A3A4A");
+ } 
+if (!ENPH131TraditionalPlan2A3A4Aflag) { 
        var ENPH131TraditionalPlan2A3A4Aelement = document.getElementById("ENPH131TraditionalPlan2A3A4A");
        ENPH131TraditionalPlan2A3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
        ENPH131TraditionalPlan2A3A4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENPH131TraditionalPlan2A3A4A");
+ } 
        break;
       case "TraditionalPlan2A3A4B":
+if (!CHEM103TraditionalPlan2A3A4Bflag) { 
        var CHEM103TraditionalPlan2A3A4Belement = document.getElementById("CHEM103TraditionalPlan2A3A4B");
        CHEM103TraditionalPlan2A3A4Belement.classList.remove("BASICSCIENCES-highlighted");
        CHEM103TraditionalPlan2A3A4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM103TraditionalPlan2A3A4B");
+ } 
+if (!ENGG130TraditionalPlan2A3A4Bflag) { 
        var ENGG130TraditionalPlan2A3A4Belement = document.getElementById("ENGG130TraditionalPlan2A3A4B");
        ENGG130TraditionalPlan2A3A4Belement.classList.remove("BASICSCIENCES-highlighted");
        ENGG130TraditionalPlan2A3A4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENGG130TraditionalPlan2A3A4B");
+ } 
+if (!PHYS130TraditionalPlan2A3A4Bflag) { 
        var PHYS130TraditionalPlan2A3A4Belement = document.getElementById("PHYS130TraditionalPlan2A3A4B");
        PHYS130TraditionalPlan2A3A4Belement.classList.remove("BASICSCIENCES-highlighted");
        PHYS130TraditionalPlan2A3A4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("PHYS130TraditionalPlan2A3A4B");
+ } 
+if (!CHEM105TraditionalPlan2A3A4Bflag) { 
        var CHEM105TraditionalPlan2A3A4Belement = document.getElementById("CHEM105TraditionalPlan2A3A4B");
        CHEM105TraditionalPlan2A3A4Belement.classList.remove("BASICSCIENCES-highlighted");
        CHEM105TraditionalPlan2A3A4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM105TraditionalPlan2A3A4B");
+ } 
+if (!ENCMP100TraditionalPlan2A3A4Bflag) { 
        var ENCMP100TraditionalPlan2A3A4Belement = document.getElementById("ENCMP100TraditionalPlan2A3A4B");
        ENCMP100TraditionalPlan2A3A4Belement.classList.remove("BASICSCIENCES-highlighted");
        ENCMP100TraditionalPlan2A3A4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENCMP100TraditionalPlan2A3A4B");
+ } 
+if (!ENPH131TraditionalPlan2A3A4Bflag) { 
        var ENPH131TraditionalPlan2A3A4Belement = document.getElementById("ENPH131TraditionalPlan2A3A4B");
        ENPH131TraditionalPlan2A3A4Belement.classList.remove("BASICSCIENCES-highlighted");
        ENPH131TraditionalPlan2A3A4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENPH131TraditionalPlan2A3A4B");
+ } 
        break;
       case "TraditionalPlan2A3B4A":
+if (!CHEM103TraditionalPlan2A3B4Aflag) { 
        var CHEM103TraditionalPlan2A3B4Aelement = document.getElementById("CHEM103TraditionalPlan2A3B4A");
        CHEM103TraditionalPlan2A3B4Aelement.classList.remove("BASICSCIENCES-highlighted");
        CHEM103TraditionalPlan2A3B4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM103TraditionalPlan2A3B4A");
+ } 
+if (!ENGG130TraditionalPlan2A3B4Aflag) { 
        var ENGG130TraditionalPlan2A3B4Aelement = document.getElementById("ENGG130TraditionalPlan2A3B4A");
        ENGG130TraditionalPlan2A3B4Aelement.classList.remove("BASICSCIENCES-highlighted");
        ENGG130TraditionalPlan2A3B4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENGG130TraditionalPlan2A3B4A");
+ } 
+if (!PHYS130TraditionalPlan2A3B4Aflag) { 
        var PHYS130TraditionalPlan2A3B4Aelement = document.getElementById("PHYS130TraditionalPlan2A3B4A");
        PHYS130TraditionalPlan2A3B4Aelement.classList.remove("BASICSCIENCES-highlighted");
        PHYS130TraditionalPlan2A3B4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("PHYS130TraditionalPlan2A3B4A");
+ } 
+if (!CHEM105TraditionalPlan2A3B4Aflag) { 
        var CHEM105TraditionalPlan2A3B4Aelement = document.getElementById("CHEM105TraditionalPlan2A3B4A");
        CHEM105TraditionalPlan2A3B4Aelement.classList.remove("BASICSCIENCES-highlighted");
        CHEM105TraditionalPlan2A3B4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM105TraditionalPlan2A3B4A");
+ } 
+if (!ENCMP100TraditionalPlan2A3B4Aflag) { 
        var ENCMP100TraditionalPlan2A3B4Aelement = document.getElementById("ENCMP100TraditionalPlan2A3B4A");
        ENCMP100TraditionalPlan2A3B4Aelement.classList.remove("BASICSCIENCES-highlighted");
        ENCMP100TraditionalPlan2A3B4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENCMP100TraditionalPlan2A3B4A");
+ } 
+if (!ENPH131TraditionalPlan2A3B4Aflag) { 
        var ENPH131TraditionalPlan2A3B4Aelement = document.getElementById("ENPH131TraditionalPlan2A3B4A");
        ENPH131TraditionalPlan2A3B4Aelement.classList.remove("BASICSCIENCES-highlighted");
        ENPH131TraditionalPlan2A3B4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENPH131TraditionalPlan2A3B4A");
+ } 
        break;
       case "TraditionalPlan2A3B4B":
+if (!CHEM103TraditionalPlan2A3B4Bflag) { 
        var CHEM103TraditionalPlan2A3B4Belement = document.getElementById("CHEM103TraditionalPlan2A3B4B");
        CHEM103TraditionalPlan2A3B4Belement.classList.remove("BASICSCIENCES-highlighted");
        CHEM103TraditionalPlan2A3B4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM103TraditionalPlan2A3B4B");
+ } 
+if (!ENGG130TraditionalPlan2A3B4Bflag) { 
        var ENGG130TraditionalPlan2A3B4Belement = document.getElementById("ENGG130TraditionalPlan2A3B4B");
        ENGG130TraditionalPlan2A3B4Belement.classList.remove("BASICSCIENCES-highlighted");
        ENGG130TraditionalPlan2A3B4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENGG130TraditionalPlan2A3B4B");
+ } 
+if (!PHYS130TraditionalPlan2A3B4Bflag) { 
        var PHYS130TraditionalPlan2A3B4Belement = document.getElementById("PHYS130TraditionalPlan2A3B4B");
        PHYS130TraditionalPlan2A3B4Belement.classList.remove("BASICSCIENCES-highlighted");
        PHYS130TraditionalPlan2A3B4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("PHYS130TraditionalPlan2A3B4B");
+ } 
+if (!CHEM105TraditionalPlan2A3B4Bflag) { 
        var CHEM105TraditionalPlan2A3B4Belement = document.getElementById("CHEM105TraditionalPlan2A3B4B");
        CHEM105TraditionalPlan2A3B4Belement.classList.remove("BASICSCIENCES-highlighted");
        CHEM105TraditionalPlan2A3B4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM105TraditionalPlan2A3B4B");
+ } 
+if (!ENCMP100TraditionalPlan2A3B4Bflag) { 
        var ENCMP100TraditionalPlan2A3B4Belement = document.getElementById("ENCMP100TraditionalPlan2A3B4B");
        ENCMP100TraditionalPlan2A3B4Belement.classList.remove("BASICSCIENCES-highlighted");
        ENCMP100TraditionalPlan2A3B4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENCMP100TraditionalPlan2A3B4B");
+ } 
+if (!ENPH131TraditionalPlan2A3B4Bflag) { 
        var ENPH131TraditionalPlan2A3B4Belement = document.getElementById("ENPH131TraditionalPlan2A3B4B");
        ENPH131TraditionalPlan2A3B4Belement.classList.remove("BASICSCIENCES-highlighted");
        ENPH131TraditionalPlan2A3B4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENPH131TraditionalPlan2A3B4B");
+ } 
        break;
       case "TraditionalPlan2B3A4A":
+if (!CHEM103TraditionalPlan2B3A4Aflag) { 
        var CHEM103TraditionalPlan2B3A4Aelement = document.getElementById("CHEM103TraditionalPlan2B3A4A");
        CHEM103TraditionalPlan2B3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
        CHEM103TraditionalPlan2B3A4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM103TraditionalPlan2B3A4A");
+ } 
+if (!ENGG130TraditionalPlan2B3A4Aflag) { 
        var ENGG130TraditionalPlan2B3A4Aelement = document.getElementById("ENGG130TraditionalPlan2B3A4A");
        ENGG130TraditionalPlan2B3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
        ENGG130TraditionalPlan2B3A4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENGG130TraditionalPlan2B3A4A");
+ } 
+if (!PHYS130TraditionalPlan2B3A4Aflag) { 
        var PHYS130TraditionalPlan2B3A4Aelement = document.getElementById("PHYS130TraditionalPlan2B3A4A");
        PHYS130TraditionalPlan2B3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
        PHYS130TraditionalPlan2B3A4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("PHYS130TraditionalPlan2B3A4A");
+ } 
+if (!CHEM105TraditionalPlan2B3A4Aflag) { 
        var CHEM105TraditionalPlan2B3A4Aelement = document.getElementById("CHEM105TraditionalPlan2B3A4A");
        CHEM105TraditionalPlan2B3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
        CHEM105TraditionalPlan2B3A4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM105TraditionalPlan2B3A4A");
+ } 
+if (!ENCMP100TraditionalPlan2B3A4Aflag) { 
        var ENCMP100TraditionalPlan2B3A4Aelement = document.getElementById("ENCMP100TraditionalPlan2B3A4A");
        ENCMP100TraditionalPlan2B3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
        ENCMP100TraditionalPlan2B3A4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENCMP100TraditionalPlan2B3A4A");
+ } 
+if (!ENPH131TraditionalPlan2B3A4Aflag) { 
        var ENPH131TraditionalPlan2B3A4Aelement = document.getElementById("ENPH131TraditionalPlan2B3A4A");
        ENPH131TraditionalPlan2B3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
        ENPH131TraditionalPlan2B3A4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENPH131TraditionalPlan2B3A4A");
+ } 
        break;
       case "TraditionalPlan2B3A4B":
+if (!CHEM103TraditionalPlan2B3A4Bflag) { 
        var CHEM103TraditionalPlan2B3A4Belement = document.getElementById("CHEM103TraditionalPlan2B3A4B");
        CHEM103TraditionalPlan2B3A4Belement.classList.remove("BASICSCIENCES-highlighted");
        CHEM103TraditionalPlan2B3A4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM103TraditionalPlan2B3A4B");
+ } 
+if (!ENGG130TraditionalPlan2B3A4Bflag) { 
        var ENGG130TraditionalPlan2B3A4Belement = document.getElementById("ENGG130TraditionalPlan2B3A4B");
        ENGG130TraditionalPlan2B3A4Belement.classList.remove("BASICSCIENCES-highlighted");
        ENGG130TraditionalPlan2B3A4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENGG130TraditionalPlan2B3A4B");
+ } 
+if (!PHYS130TraditionalPlan2B3A4Bflag) { 
        var PHYS130TraditionalPlan2B3A4Belement = document.getElementById("PHYS130TraditionalPlan2B3A4B");
        PHYS130TraditionalPlan2B3A4Belement.classList.remove("BASICSCIENCES-highlighted");
        PHYS130TraditionalPlan2B3A4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("PHYS130TraditionalPlan2B3A4B");
+ } 
+if (!CHEM105TraditionalPlan2B3A4Bflag) { 
        var CHEM105TraditionalPlan2B3A4Belement = document.getElementById("CHEM105TraditionalPlan2B3A4B");
        CHEM105TraditionalPlan2B3A4Belement.classList.remove("BASICSCIENCES-highlighted");
        CHEM105TraditionalPlan2B3A4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM105TraditionalPlan2B3A4B");
+ } 
+if (!ENCMP100TraditionalPlan2B3A4Bflag) { 
        var ENCMP100TraditionalPlan2B3A4Belement = document.getElementById("ENCMP100TraditionalPlan2B3A4B");
        ENCMP100TraditionalPlan2B3A4Belement.classList.remove("BASICSCIENCES-highlighted");
        ENCMP100TraditionalPlan2B3A4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENCMP100TraditionalPlan2B3A4B");
+ } 
+if (!ENPH131TraditionalPlan2B3A4Bflag) { 
        var ENPH131TraditionalPlan2B3A4Belement = document.getElementById("ENPH131TraditionalPlan2B3A4B");
        ENPH131TraditionalPlan2B3A4Belement.classList.remove("BASICSCIENCES-highlighted");
        ENPH131TraditionalPlan2B3A4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENPH131TraditionalPlan2B3A4B");
+ } 
        break;
       case "TraditionalPlan2B3B4A":
+if (!CHEM103TraditionalPlan2B3B4Aflag) { 
        var CHEM103TraditionalPlan2B3B4Aelement = document.getElementById("CHEM103TraditionalPlan2B3B4A");
        CHEM103TraditionalPlan2B3B4Aelement.classList.remove("BASICSCIENCES-highlighted");
        CHEM103TraditionalPlan2B3B4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM103TraditionalPlan2B3B4A");
+ } 
+if (!ENGG130TraditionalPlan2B3B4Aflag) { 
        var ENGG130TraditionalPlan2B3B4Aelement = document.getElementById("ENGG130TraditionalPlan2B3B4A");
        ENGG130TraditionalPlan2B3B4Aelement.classList.remove("BASICSCIENCES-highlighted");
        ENGG130TraditionalPlan2B3B4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENGG130TraditionalPlan2B3B4A");
+ } 
+if (!PHYS130TraditionalPlan2B3B4Aflag) { 
        var PHYS130TraditionalPlan2B3B4Aelement = document.getElementById("PHYS130TraditionalPlan2B3B4A");
        PHYS130TraditionalPlan2B3B4Aelement.classList.remove("BASICSCIENCES-highlighted");
        PHYS130TraditionalPlan2B3B4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("PHYS130TraditionalPlan2B3B4A");
+ } 
+if (!CHEM105TraditionalPlan2B3B4Aflag) { 
        var CHEM105TraditionalPlan2B3B4Aelement = document.getElementById("CHEM105TraditionalPlan2B3B4A");
        CHEM105TraditionalPlan2B3B4Aelement.classList.remove("BASICSCIENCES-highlighted");
        CHEM105TraditionalPlan2B3B4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM105TraditionalPlan2B3B4A");
+ } 
+if (!ENCMP100TraditionalPlan2B3B4Aflag) { 
        var ENCMP100TraditionalPlan2B3B4Aelement = document.getElementById("ENCMP100TraditionalPlan2B3B4A");
        ENCMP100TraditionalPlan2B3B4Aelement.classList.remove("BASICSCIENCES-highlighted");
        ENCMP100TraditionalPlan2B3B4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENCMP100TraditionalPlan2B3B4A");
+ } 
+if (!ENPH131TraditionalPlan2B3B4Aflag) { 
        var ENPH131TraditionalPlan2B3B4Aelement = document.getElementById("ENPH131TraditionalPlan2B3B4A");
        ENPH131TraditionalPlan2B3B4Aelement.classList.remove("BASICSCIENCES-highlighted");
        ENPH131TraditionalPlan2B3B4Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENPH131TraditionalPlan2B3B4A");
+ } 
        break;
       case "TraditionalPlan2B3B4B":
+if (!CHEM103TraditionalPlan2B3B4Bflag) { 
        var CHEM103TraditionalPlan2B3B4Belement = document.getElementById("CHEM103TraditionalPlan2B3B4B");
        CHEM103TraditionalPlan2B3B4Belement.classList.remove("BASICSCIENCES-highlighted");
        CHEM103TraditionalPlan2B3B4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM103TraditionalPlan2B3B4B");
+ } 
+if (!ENGG130TraditionalPlan2B3B4Bflag) { 
        var ENGG130TraditionalPlan2B3B4Belement = document.getElementById("ENGG130TraditionalPlan2B3B4B");
        ENGG130TraditionalPlan2B3B4Belement.classList.remove("BASICSCIENCES-highlighted");
        ENGG130TraditionalPlan2B3B4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENGG130TraditionalPlan2B3B4B");
+ } 
+if (!PHYS130TraditionalPlan2B3B4Bflag) { 
        var PHYS130TraditionalPlan2B3B4Belement = document.getElementById("PHYS130TraditionalPlan2B3B4B");
        PHYS130TraditionalPlan2B3B4Belement.classList.remove("BASICSCIENCES-highlighted");
        PHYS130TraditionalPlan2B3B4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("PHYS130TraditionalPlan2B3B4B");
+ } 
+if (!CHEM105TraditionalPlan2B3B4Bflag) { 
        var CHEM105TraditionalPlan2B3B4Belement = document.getElementById("CHEM105TraditionalPlan2B3B4B");
        CHEM105TraditionalPlan2B3B4Belement.classList.remove("BASICSCIENCES-highlighted");
        CHEM105TraditionalPlan2B3B4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM105TraditionalPlan2B3B4B");
+ } 
+if (!ENCMP100TraditionalPlan2B3B4Bflag) { 
        var ENCMP100TraditionalPlan2B3B4Belement = document.getElementById("ENCMP100TraditionalPlan2B3B4B");
        ENCMP100TraditionalPlan2B3B4Belement.classList.remove("BASICSCIENCES-highlighted");
        ENCMP100TraditionalPlan2B3B4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENCMP100TraditionalPlan2B3B4B");
+ } 
+if (!ENPH131TraditionalPlan2B3B4Bflag) { 
        var ENPH131TraditionalPlan2B3B4Belement = document.getElementById("ENPH131TraditionalPlan2B3B4B");
        ENPH131TraditionalPlan2B3B4Belement.classList.remove("BASICSCIENCES-highlighted");
        ENPH131TraditionalPlan2B3B4Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENPH131TraditionalPlan2B3B4B");
+ } 
        break;
-      case "AlternatePlan":
-       var CHEM103AlternatePlanelement = document.getElementById("CHEM103AlternatePlan");
-       CHEM103AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
-       CHEM103AlternatePlanelement.classList.add("BASICSCIENCES");
+      case "AlternatePlan3A4A":
+if (!CHEM103AlternatePlan3A4Aflag) { 
+       var CHEM103AlternatePlan3A4Aelement = document.getElementById("CHEM103AlternatePlan3A4A");
+       CHEM103AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
+       CHEM103AlternatePlan3A4Aelement.classList.add("BASICSCIENCES");
        
-       that.removeFromClicked("CHEM103AlternatePlan");
-       var ENGG130AlternatePlanelement = document.getElementById("ENGG130AlternatePlan");
-       ENGG130AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
-       ENGG130AlternatePlanelement.classList.add("BASICSCIENCES");
+       that.removeFromClicked("CHEM103AlternatePlan3A4A");
+ } 
+if (!ENGG130AlternatePlan3A4Aflag) { 
+       var ENGG130AlternatePlan3A4Aelement = document.getElementById("ENGG130AlternatePlan3A4A");
+       ENGG130AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
+       ENGG130AlternatePlan3A4Aelement.classList.add("BASICSCIENCES");
        
-       that.removeFromClicked("ENGG130AlternatePlan");
-       var PHYS130AlternatePlanelement = document.getElementById("PHYS130AlternatePlan");
-       PHYS130AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
-       PHYS130AlternatePlanelement.classList.add("BASICSCIENCES");
+       that.removeFromClicked("ENGG130AlternatePlan3A4A");
+ } 
+if (!PHYS130AlternatePlan3A4Aflag) { 
+       var PHYS130AlternatePlan3A4Aelement = document.getElementById("PHYS130AlternatePlan3A4A");
+       PHYS130AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
+       PHYS130AlternatePlan3A4Aelement.classList.add("BASICSCIENCES");
        
-       that.removeFromClicked("PHYS130AlternatePlan");
-       var CHEM105AlternatePlanelement = document.getElementById("CHEM105AlternatePlan");
-       CHEM105AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
-       CHEM105AlternatePlanelement.classList.add("BASICSCIENCES");
+       that.removeFromClicked("PHYS130AlternatePlan3A4A");
+ } 
+if (!CHEM105AlternatePlan3A4Aflag) { 
+       var CHEM105AlternatePlan3A4Aelement = document.getElementById("CHEM105AlternatePlan3A4A");
+       CHEM105AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
+       CHEM105AlternatePlan3A4Aelement.classList.add("BASICSCIENCES");
        
-       that.removeFromClicked("CHEM105AlternatePlan");
-       var ENCMP100AlternatePlanelement = document.getElementById("ENCMP100AlternatePlan");
-       ENCMP100AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
-       ENCMP100AlternatePlanelement.classList.add("BASICSCIENCES");
+       that.removeFromClicked("CHEM105AlternatePlan3A4A");
+ } 
+if (!ENCMP100AlternatePlan3A4Aflag) { 
+       var ENCMP100AlternatePlan3A4Aelement = document.getElementById("ENCMP100AlternatePlan3A4A");
+       ENCMP100AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
+       ENCMP100AlternatePlan3A4Aelement.classList.add("BASICSCIENCES");
        
-       that.removeFromClicked("ENCMP100AlternatePlan");
-       var ENPH131AlternatePlanelement = document.getElementById("ENPH131AlternatePlan");
-       ENPH131AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
-       ENPH131AlternatePlanelement.classList.add("BASICSCIENCES");
+       that.removeFromClicked("ENCMP100AlternatePlan3A4A");
+ } 
+if (!ENPH131AlternatePlan3A4Aflag) { 
+       var ENPH131AlternatePlan3A4Aelement = document.getElementById("ENPH131AlternatePlan3A4A");
+       ENPH131AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
+       ENPH131AlternatePlan3A4Aelement.classList.add("BASICSCIENCES");
        
-       that.removeFromClicked("ENPH131AlternatePlan");
+       that.removeFromClicked("ENPH131AlternatePlan3A4A");
+ } 
        break;
       case "CoopPlan13A":
+if (!CHEM103CoopPlan13Aflag) { 
        var CHEM103CoopPlan13Aelement = document.getElementById("CHEM103CoopPlan13A");
        CHEM103CoopPlan13Aelement.classList.remove("BASICSCIENCES-highlighted");
        CHEM103CoopPlan13Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM103CoopPlan13A");
+ } 
+if (!ENGG130CoopPlan13Aflag) { 
        var ENGG130CoopPlan13Aelement = document.getElementById("ENGG130CoopPlan13A");
        ENGG130CoopPlan13Aelement.classList.remove("BASICSCIENCES-highlighted");
        ENGG130CoopPlan13Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENGG130CoopPlan13A");
+ } 
+if (!PHYS130CoopPlan13Aflag) { 
        var PHYS130CoopPlan13Aelement = document.getElementById("PHYS130CoopPlan13A");
        PHYS130CoopPlan13Aelement.classList.remove("BASICSCIENCES-highlighted");
        PHYS130CoopPlan13Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("PHYS130CoopPlan13A");
+ } 
+if (!CHEM105CoopPlan13Aflag) { 
        var CHEM105CoopPlan13Aelement = document.getElementById("CHEM105CoopPlan13A");
        CHEM105CoopPlan13Aelement.classList.remove("BASICSCIENCES-highlighted");
        CHEM105CoopPlan13Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM105CoopPlan13A");
+ } 
+if (!ENCMP100CoopPlan13Aflag) { 
        var ENCMP100CoopPlan13Aelement = document.getElementById("ENCMP100CoopPlan13A");
        ENCMP100CoopPlan13Aelement.classList.remove("BASICSCIENCES-highlighted");
        ENCMP100CoopPlan13Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENCMP100CoopPlan13A");
+ } 
+if (!ENPH131CoopPlan13Aflag) { 
        var ENPH131CoopPlan13Aelement = document.getElementById("ENPH131CoopPlan13A");
        ENPH131CoopPlan13Aelement.classList.remove("BASICSCIENCES-highlighted");
        ENPH131CoopPlan13Aelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENPH131CoopPlan13A");
+ } 
        break;
       case "CoopPlan13B":
+if (!CHEM103CoopPlan13Bflag) { 
        var CHEM103CoopPlan13Belement = document.getElementById("CHEM103CoopPlan13B");
        CHEM103CoopPlan13Belement.classList.remove("BASICSCIENCES-highlighted");
        CHEM103CoopPlan13Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM103CoopPlan13B");
+ } 
+if (!ENGG130CoopPlan13Bflag) { 
        var ENGG130CoopPlan13Belement = document.getElementById("ENGG130CoopPlan13B");
        ENGG130CoopPlan13Belement.classList.remove("BASICSCIENCES-highlighted");
        ENGG130CoopPlan13Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENGG130CoopPlan13B");
+ } 
+if (!PHYS130CoopPlan13Bflag) { 
        var PHYS130CoopPlan13Belement = document.getElementById("PHYS130CoopPlan13B");
        PHYS130CoopPlan13Belement.classList.remove("BASICSCIENCES-highlighted");
        PHYS130CoopPlan13Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("PHYS130CoopPlan13B");
+ } 
+if (!CHEM105CoopPlan13Bflag) { 
        var CHEM105CoopPlan13Belement = document.getElementById("CHEM105CoopPlan13B");
        CHEM105CoopPlan13Belement.classList.remove("BASICSCIENCES-highlighted");
        CHEM105CoopPlan13Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM105CoopPlan13B");
+ } 
+if (!ENCMP100CoopPlan13Bflag) { 
        var ENCMP100CoopPlan13Belement = document.getElementById("ENCMP100CoopPlan13B");
        ENCMP100CoopPlan13Belement.classList.remove("BASICSCIENCES-highlighted");
        ENCMP100CoopPlan13Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENCMP100CoopPlan13B");
+ } 
+if (!ENPH131CoopPlan13Bflag) { 
        var ENPH131CoopPlan13Belement = document.getElementById("ENPH131CoopPlan13B");
        ENPH131CoopPlan13Belement.classList.remove("BASICSCIENCES-highlighted");
        ENPH131CoopPlan13Belement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENPH131CoopPlan13B");
+ } 
        break;
       case "CoopPlan2":
+if (!CHEM103CoopPlan2flag) { 
        var CHEM103CoopPlan2element = document.getElementById("CHEM103CoopPlan2");
        CHEM103CoopPlan2element.classList.remove("BASICSCIENCES-highlighted");
        CHEM103CoopPlan2element.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM103CoopPlan2");
+ } 
+if (!ENGG130CoopPlan2flag) { 
        var ENGG130CoopPlan2element = document.getElementById("ENGG130CoopPlan2");
        ENGG130CoopPlan2element.classList.remove("BASICSCIENCES-highlighted");
        ENGG130CoopPlan2element.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENGG130CoopPlan2");
+ } 
+if (!PHYS130CoopPlan2flag) { 
        var PHYS130CoopPlan2element = document.getElementById("PHYS130CoopPlan2");
        PHYS130CoopPlan2element.classList.remove("BASICSCIENCES-highlighted");
        PHYS130CoopPlan2element.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("PHYS130CoopPlan2");
+ } 
+if (!CHEM105CoopPlan2flag) { 
        var CHEM105CoopPlan2element = document.getElementById("CHEM105CoopPlan2");
        CHEM105CoopPlan2element.classList.remove("BASICSCIENCES-highlighted");
        CHEM105CoopPlan2element.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM105CoopPlan2");
+ } 
+if (!ENCMP100CoopPlan2flag) { 
        var ENCMP100CoopPlan2element = document.getElementById("ENCMP100CoopPlan2");
        ENCMP100CoopPlan2element.classList.remove("BASICSCIENCES-highlighted");
        ENCMP100CoopPlan2element.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENCMP100CoopPlan2");
+ } 
+if (!ENPH131CoopPlan2flag) { 
        var ENPH131CoopPlan2element = document.getElementById("ENPH131CoopPlan2");
        ENPH131CoopPlan2element.classList.remove("BASICSCIENCES-highlighted");
        ENPH131CoopPlan2element.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENPH131CoopPlan2");
+ } 
        break;
       case "CoopPlan3Biomedical":
+if (!CHEM103CoopPlan3Biomedicalflag) { 
        var CHEM103CoopPlan3Biomedicalelement = document.getElementById("CHEM103CoopPlan3Biomedical");
        CHEM103CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
        CHEM103CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM103CoopPlan3Biomedical");
+ } 
+if (!ENGG130CoopPlan3Biomedicalflag) { 
        var ENGG130CoopPlan3Biomedicalelement = document.getElementById("ENGG130CoopPlan3Biomedical");
        ENGG130CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
        ENGG130CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENGG130CoopPlan3Biomedical");
+ } 
+if (!PHYS130CoopPlan3Biomedicalflag) { 
        var PHYS130CoopPlan3Biomedicalelement = document.getElementById("PHYS130CoopPlan3Biomedical");
        PHYS130CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
        PHYS130CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("PHYS130CoopPlan3Biomedical");
+ } 
+if (!CHEM105CoopPlan3Biomedicalflag) { 
        var CHEM105CoopPlan3Biomedicalelement = document.getElementById("CHEM105CoopPlan3Biomedical");
        CHEM105CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
        CHEM105CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM105CoopPlan3Biomedical");
+ } 
+if (!ENCMP100CoopPlan3Biomedicalflag) { 
        var ENCMP100CoopPlan3Biomedicalelement = document.getElementById("ENCMP100CoopPlan3Biomedical");
        ENCMP100CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
        ENCMP100CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENCMP100CoopPlan3Biomedical");
+ } 
+if (!ENPH131CoopPlan3Biomedicalflag) { 
        var ENPH131CoopPlan3Biomedicalelement = document.getElementById("ENPH131CoopPlan3Biomedical");
        ENPH131CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
        ENPH131CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENPH131CoopPlan3Biomedical");
+ } 
        break;
       case "CoopPlan4":
+if (!CHEM103CoopPlan4flag) { 
        var CHEM103CoopPlan4element = document.getElementById("CHEM103CoopPlan4");
        CHEM103CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
        CHEM103CoopPlan4element.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM103CoopPlan4");
+ } 
+if (!ENGG130CoopPlan4flag) { 
        var ENGG130CoopPlan4element = document.getElementById("ENGG130CoopPlan4");
        ENGG130CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
        ENGG130CoopPlan4element.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENGG130CoopPlan4");
+ } 
+if (!PHYS130CoopPlan4flag) { 
        var PHYS130CoopPlan4element = document.getElementById("PHYS130CoopPlan4");
        PHYS130CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
        PHYS130CoopPlan4element.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("PHYS130CoopPlan4");
+ } 
+if (!CHEM105CoopPlan4flag) { 
        var CHEM105CoopPlan4element = document.getElementById("CHEM105CoopPlan4");
        CHEM105CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
        CHEM105CoopPlan4element.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("CHEM105CoopPlan4");
+ } 
+if (!ENCMP100CoopPlan4flag) { 
        var ENCMP100CoopPlan4element = document.getElementById("ENCMP100CoopPlan4");
        ENCMP100CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
        ENCMP100CoopPlan4element.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENCMP100CoopPlan4");
+ } 
+if (!ENPH131CoopPlan4flag) { 
        var ENPH131CoopPlan4element = document.getElementById("ENPH131CoopPlan4");
        ENPH131CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
        ENPH131CoopPlan4element.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENPH131CoopPlan4");
+ } 
        break;
        }
       break;
   case "ENGINEERINGPROFESSION":
     switch(planName) {
       case "TraditionalPlan2A3A4A":
+if (!ENGG100TraditionalPlan2A3A4Aflag) { 
        var ENGG100TraditionalPlan2A3A4Aelement = document.getElementById("ENGG100TraditionalPlan2A3A4A");
        ENGG100TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG100TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG100TraditionalPlan2A3A4A");
+ } 
+if (!MECE200TraditionalPlan2A3A4Aflag) { 
        var MECE200TraditionalPlan2A3A4Aelement = document.getElementById("MECE200TraditionalPlan2A3A4A");
        MECE200TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        MECE200TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("MECE200TraditionalPlan2A3A4A");
+ } 
+if (!ENGG404TraditionalPlan2A3A4Aflag) { 
        var ENGG404TraditionalPlan2A3A4Aelement = document.getElementById("ENGG404TraditionalPlan2A3A4A");
        ENGG404TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG404TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG404TraditionalPlan2A3A4A");
+ } 
+if (!ENGG400TraditionalPlan2A3A4Aflag) { 
        var ENGG400TraditionalPlan2A3A4Aelement = document.getElementById("ENGG400TraditionalPlan2A3A4A");
        ENGG400TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG400TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG400TraditionalPlan2A3A4A");
+ } 
        break;
       case "TraditionalPlan2A3A4B":
+if (!ENGG100TraditionalPlan2A3A4Bflag) { 
        var ENGG100TraditionalPlan2A3A4Belement = document.getElementById("ENGG100TraditionalPlan2A3A4B");
        ENGG100TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG100TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG100TraditionalPlan2A3A4B");
+ } 
+if (!MECE200TraditionalPlan2A3A4Bflag) { 
        var MECE200TraditionalPlan2A3A4Belement = document.getElementById("MECE200TraditionalPlan2A3A4B");
        MECE200TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        MECE200TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("MECE200TraditionalPlan2A3A4B");
+ } 
+if (!ENGG400TraditionalPlan2A3A4Bflag) { 
        var ENGG400TraditionalPlan2A3A4Belement = document.getElementById("ENGG400TraditionalPlan2A3A4B");
        ENGG400TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG400TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG400TraditionalPlan2A3A4B");
+ } 
+if (!ENGG404TraditionalPlan2A3A4Bflag) { 
        var ENGG404TraditionalPlan2A3A4Belement = document.getElementById("ENGG404TraditionalPlan2A3A4B");
        ENGG404TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG404TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG404TraditionalPlan2A3A4B");
+ } 
        break;
       case "TraditionalPlan2A3B4A":
+if (!ENGG100TraditionalPlan2A3B4Aflag) { 
        var ENGG100TraditionalPlan2A3B4Aelement = document.getElementById("ENGG100TraditionalPlan2A3B4A");
        ENGG100TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG100TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG100TraditionalPlan2A3B4A");
+ } 
+if (!MECE200TraditionalPlan2A3B4Aflag) { 
        var MECE200TraditionalPlan2A3B4Aelement = document.getElementById("MECE200TraditionalPlan2A3B4A");
        MECE200TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        MECE200TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("MECE200TraditionalPlan2A3B4A");
+ } 
+if (!ENGG404TraditionalPlan2A3B4Aflag) { 
        var ENGG404TraditionalPlan2A3B4Aelement = document.getElementById("ENGG404TraditionalPlan2A3B4A");
        ENGG404TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG404TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG404TraditionalPlan2A3B4A");
+ } 
+if (!ENGG400TraditionalPlan2A3B4Aflag) { 
        var ENGG400TraditionalPlan2A3B4Aelement = document.getElementById("ENGG400TraditionalPlan2A3B4A");
        ENGG400TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG400TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG400TraditionalPlan2A3B4A");
+ } 
        break;
       case "TraditionalPlan2A3B4B":
+if (!ENGG100TraditionalPlan2A3B4Bflag) { 
        var ENGG100TraditionalPlan2A3B4Belement = document.getElementById("ENGG100TraditionalPlan2A3B4B");
        ENGG100TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG100TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG100TraditionalPlan2A3B4B");
+ } 
+if (!MECE200TraditionalPlan2A3B4Bflag) { 
        var MECE200TraditionalPlan2A3B4Belement = document.getElementById("MECE200TraditionalPlan2A3B4B");
        MECE200TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        MECE200TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("MECE200TraditionalPlan2A3B4B");
+ } 
+if (!ENGG400TraditionalPlan2A3B4Bflag) { 
        var ENGG400TraditionalPlan2A3B4Belement = document.getElementById("ENGG400TraditionalPlan2A3B4B");
        ENGG400TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG400TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG400TraditionalPlan2A3B4B");
+ } 
+if (!ENGG404TraditionalPlan2A3B4Bflag) { 
        var ENGG404TraditionalPlan2A3B4Belement = document.getElementById("ENGG404TraditionalPlan2A3B4B");
        ENGG404TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG404TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG404TraditionalPlan2A3B4B");
+ } 
        break;
       case "TraditionalPlan2B3A4A":
+if (!ENGG100TraditionalPlan2B3A4Aflag) { 
        var ENGG100TraditionalPlan2B3A4Aelement = document.getElementById("ENGG100TraditionalPlan2B3A4A");
        ENGG100TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG100TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG100TraditionalPlan2B3A4A");
+ } 
+if (!MECE200TraditionalPlan2B3A4Aflag) { 
        var MECE200TraditionalPlan2B3A4Aelement = document.getElementById("MECE200TraditionalPlan2B3A4A");
        MECE200TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        MECE200TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("MECE200TraditionalPlan2B3A4A");
+ } 
+if (!ENGG404TraditionalPlan2B3A4Aflag) { 
        var ENGG404TraditionalPlan2B3A4Aelement = document.getElementById("ENGG404TraditionalPlan2B3A4A");
        ENGG404TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG404TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG404TraditionalPlan2B3A4A");
+ } 
+if (!ENGG400TraditionalPlan2B3A4Aflag) { 
        var ENGG400TraditionalPlan2B3A4Aelement = document.getElementById("ENGG400TraditionalPlan2B3A4A");
        ENGG400TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG400TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG400TraditionalPlan2B3A4A");
+ } 
        break;
       case "TraditionalPlan2B3A4B":
+if (!ENGG100TraditionalPlan2B3A4Bflag) { 
        var ENGG100TraditionalPlan2B3A4Belement = document.getElementById("ENGG100TraditionalPlan2B3A4B");
        ENGG100TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG100TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG100TraditionalPlan2B3A4B");
+ } 
+if (!MECE200TraditionalPlan2B3A4Bflag) { 
        var MECE200TraditionalPlan2B3A4Belement = document.getElementById("MECE200TraditionalPlan2B3A4B");
        MECE200TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        MECE200TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("MECE200TraditionalPlan2B3A4B");
+ } 
+if (!ENGG400TraditionalPlan2B3A4Bflag) { 
        var ENGG400TraditionalPlan2B3A4Belement = document.getElementById("ENGG400TraditionalPlan2B3A4B");
        ENGG400TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG400TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG400TraditionalPlan2B3A4B");
+ } 
+if (!ENGG404TraditionalPlan2B3A4Bflag) { 
        var ENGG404TraditionalPlan2B3A4Belement = document.getElementById("ENGG404TraditionalPlan2B3A4B");
        ENGG404TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG404TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG404TraditionalPlan2B3A4B");
+ } 
        break;
       case "TraditionalPlan2B3B4A":
+if (!ENGG100TraditionalPlan2B3B4Aflag) { 
        var ENGG100TraditionalPlan2B3B4Aelement = document.getElementById("ENGG100TraditionalPlan2B3B4A");
        ENGG100TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG100TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG100TraditionalPlan2B3B4A");
+ } 
+if (!MECE200TraditionalPlan2B3B4Aflag) { 
        var MECE200TraditionalPlan2B3B4Aelement = document.getElementById("MECE200TraditionalPlan2B3B4A");
        MECE200TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        MECE200TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("MECE200TraditionalPlan2B3B4A");
+ } 
+if (!ENGG404TraditionalPlan2B3B4Aflag) { 
        var ENGG404TraditionalPlan2B3B4Aelement = document.getElementById("ENGG404TraditionalPlan2B3B4A");
        ENGG404TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG404TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG404TraditionalPlan2B3B4A");
+ } 
+if (!ENGG400TraditionalPlan2B3B4Aflag) { 
        var ENGG400TraditionalPlan2B3B4Aelement = document.getElementById("ENGG400TraditionalPlan2B3B4A");
        ENGG400TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG400TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG400TraditionalPlan2B3B4A");
+ } 
        break;
       case "TraditionalPlan2B3B4B":
+if (!ENGG100TraditionalPlan2B3B4Bflag) { 
        var ENGG100TraditionalPlan2B3B4Belement = document.getElementById("ENGG100TraditionalPlan2B3B4B");
        ENGG100TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG100TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG100TraditionalPlan2B3B4B");
+ } 
+if (!MECE200TraditionalPlan2B3B4Bflag) { 
        var MECE200TraditionalPlan2B3B4Belement = document.getElementById("MECE200TraditionalPlan2B3B4B");
        MECE200TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        MECE200TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("MECE200TraditionalPlan2B3B4B");
+ } 
+if (!ENGG400TraditionalPlan2B3B4Bflag) { 
        var ENGG400TraditionalPlan2B3B4Belement = document.getElementById("ENGG400TraditionalPlan2B3B4B");
        ENGG400TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG400TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG400TraditionalPlan2B3B4B");
+ } 
+if (!ENGG404TraditionalPlan2B3B4Bflag) { 
        var ENGG404TraditionalPlan2B3B4Belement = document.getElementById("ENGG404TraditionalPlan2B3B4B");
        ENGG404TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG404TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG404TraditionalPlan2B3B4B");
+ } 
        break;
-      case "AlternatePlan":
-       var ENGG100AlternatePlanelement = document.getElementById("ENGG100AlternatePlan");
-       ENGG100AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
-       ENGG100AlternatePlanelement.classList.add("ENGINEERINGPROFESSION");
+      case "AlternatePlan3A4A":
+if (!ENGG100AlternatePlan3A4Aflag) { 
+       var ENGG100AlternatePlan3A4Aelement = document.getElementById("ENGG100AlternatePlan3A4A");
+       ENGG100AlternatePlan3A4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+       ENGG100AlternatePlan3A4Aelement.classList.add("ENGINEERINGPROFESSION");
        
-       that.removeFromClicked("ENGG100AlternatePlan");
-       var ENGG404AlternatePlanelement = document.getElementById("ENGG404AlternatePlan");
-       ENGG404AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
-       ENGG404AlternatePlanelement.classList.add("ENGINEERINGPROFESSION");
+       that.removeFromClicked("ENGG100AlternatePlan3A4A");
+ } 
+if (!ENGG404AlternatePlan3A4Aflag) { 
+       var ENGG404AlternatePlan3A4Aelement = document.getElementById("ENGG404AlternatePlan3A4A");
+       ENGG404AlternatePlan3A4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+       ENGG404AlternatePlan3A4Aelement.classList.add("ENGINEERINGPROFESSION");
        
-       that.removeFromClicked("ENGG404AlternatePlan");
-       var MECE200AlternatePlanelement = document.getElementById("MECE200AlternatePlan");
-       MECE200AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
-       MECE200AlternatePlanelement.classList.add("ENGINEERINGPROFESSION");
+       that.removeFromClicked("ENGG404AlternatePlan3A4A");
+ } 
+if (!MECE200AlternatePlan3A4Aflag) { 
+       var MECE200AlternatePlan3A4Aelement = document.getElementById("MECE200AlternatePlan3A4A");
+       MECE200AlternatePlan3A4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+       MECE200AlternatePlan3A4Aelement.classList.add("ENGINEERINGPROFESSION");
        
-       that.removeFromClicked("MECE200AlternatePlan");
-       var ENGG400AlternatePlanelement = document.getElementById("ENGG400AlternatePlan");
-       ENGG400AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
-       ENGG400AlternatePlanelement.classList.add("ENGINEERINGPROFESSION");
+       that.removeFromClicked("MECE200AlternatePlan3A4A");
+ } 
+if (!ENGG400AlternatePlan3A4Aflag) { 
+       var ENGG400AlternatePlan3A4Aelement = document.getElementById("ENGG400AlternatePlan3A4A");
+       ENGG400AlternatePlan3A4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+       ENGG400AlternatePlan3A4Aelement.classList.add("ENGINEERINGPROFESSION");
        
-       that.removeFromClicked("ENGG400AlternatePlan");
+       that.removeFromClicked("ENGG400AlternatePlan3A4A");
+ } 
        break;
       case "CoopPlan13A":
+if (!ENGG100CoopPlan13Aflag) { 
        var ENGG100CoopPlan13Aelement = document.getElementById("ENGG100CoopPlan13A");
        ENGG100CoopPlan13Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG100CoopPlan13Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG100CoopPlan13A");
+ } 
+if (!ENGG299CoopPlan13Aflag) { 
        var ENGG299CoopPlan13Aelement = document.getElementById("ENGG299CoopPlan13A");
        ENGG299CoopPlan13Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG299CoopPlan13Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG299CoopPlan13A");
+ } 
+if (!MECE200CoopPlan13Aflag) { 
        var MECE200CoopPlan13Aelement = document.getElementById("MECE200CoopPlan13A");
        MECE200CoopPlan13Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        MECE200CoopPlan13Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("MECE200CoopPlan13A");
+ } 
+if (!WKEXP901CoopPlan13Aflag) { 
        var WKEXP901CoopPlan13Aelement = document.getElementById("WKEXP901CoopPlan13A");
        WKEXP901CoopPlan13Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP901CoopPlan13Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP901CoopPlan13A");
+ } 
+if (!WKEXP902CoopPlan13Aflag) { 
        var WKEXP902CoopPlan13Aelement = document.getElementById("WKEXP902CoopPlan13A");
        WKEXP902CoopPlan13Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP902CoopPlan13Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP902CoopPlan13A");
+ } 
+if (!WKEXP903CoopPlan13Aflag) { 
        var WKEXP903CoopPlan13Aelement = document.getElementById("WKEXP903CoopPlan13A");
        WKEXP903CoopPlan13Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP903CoopPlan13Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP903CoopPlan13A");
+ } 
+if (!WKEXP904CoopPlan13Aflag) { 
        var WKEXP904CoopPlan13Aelement = document.getElementById("WKEXP904CoopPlan13A");
        WKEXP904CoopPlan13Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP904CoopPlan13Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP904CoopPlan13A");
+ } 
+if (!ENGG404CoopPlan13Aflag) { 
        var ENGG404CoopPlan13Aelement = document.getElementById("ENGG404CoopPlan13A");
        ENGG404CoopPlan13Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG404CoopPlan13Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG404CoopPlan13A");
+ } 
+if (!WKEXP905CoopPlan13Aflag) { 
        var WKEXP905CoopPlan13Aelement = document.getElementById("WKEXP905CoopPlan13A");
        WKEXP905CoopPlan13Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP905CoopPlan13Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP905CoopPlan13A");
+ } 
+if (!ENGG400CoopPlan13Aflag) { 
        var ENGG400CoopPlan13Aelement = document.getElementById("ENGG400CoopPlan13A");
        ENGG400CoopPlan13Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG400CoopPlan13Aelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG400CoopPlan13A");
+ } 
        break;
       case "CoopPlan13B":
+if (!ENGG100CoopPlan13Bflag) { 
        var ENGG100CoopPlan13Belement = document.getElementById("ENGG100CoopPlan13B");
        ENGG100CoopPlan13Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG100CoopPlan13Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG100CoopPlan13B");
+ } 
+if (!ENGG299CoopPlan13Bflag) { 
        var ENGG299CoopPlan13Belement = document.getElementById("ENGG299CoopPlan13B");
        ENGG299CoopPlan13Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG299CoopPlan13Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG299CoopPlan13B");
+ } 
+if (!MECE200CoopPlan13Bflag) { 
        var MECE200CoopPlan13Belement = document.getElementById("MECE200CoopPlan13B");
        MECE200CoopPlan13Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        MECE200CoopPlan13Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("MECE200CoopPlan13B");
+ } 
+if (!WKEXP901CoopPlan13Bflag) { 
        var WKEXP901CoopPlan13Belement = document.getElementById("WKEXP901CoopPlan13B");
        WKEXP901CoopPlan13Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP901CoopPlan13Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP901CoopPlan13B");
+ } 
+if (!WKEXP902CoopPlan13Bflag) { 
        var WKEXP902CoopPlan13Belement = document.getElementById("WKEXP902CoopPlan13B");
        WKEXP902CoopPlan13Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP902CoopPlan13Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP902CoopPlan13B");
+ } 
+if (!WKEXP903CoopPlan13Bflag) { 
        var WKEXP903CoopPlan13Belement = document.getElementById("WKEXP903CoopPlan13B");
        WKEXP903CoopPlan13Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP903CoopPlan13Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP903CoopPlan13B");
+ } 
+if (!WKEXP904CoopPlan13Bflag) { 
        var WKEXP904CoopPlan13Belement = document.getElementById("WKEXP904CoopPlan13B");
        WKEXP904CoopPlan13Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP904CoopPlan13Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP904CoopPlan13B");
+ } 
+if (!ENGG404CoopPlan13Bflag) { 
        var ENGG404CoopPlan13Belement = document.getElementById("ENGG404CoopPlan13B");
        ENGG404CoopPlan13Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG404CoopPlan13Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG404CoopPlan13B");
+ } 
+if (!WKEXP905CoopPlan13Bflag) { 
        var WKEXP905CoopPlan13Belement = document.getElementById("WKEXP905CoopPlan13B");
        WKEXP905CoopPlan13Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP905CoopPlan13Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP905CoopPlan13B");
+ } 
+if (!ENGG400CoopPlan13Bflag) { 
        var ENGG400CoopPlan13Belement = document.getElementById("ENGG400CoopPlan13B");
        ENGG400CoopPlan13Belement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG400CoopPlan13Belement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG400CoopPlan13B");
+ } 
        break;
       case "CoopPlan2":
+if (!ENGG100CoopPlan2flag) { 
        var ENGG100CoopPlan2element = document.getElementById("ENGG100CoopPlan2");
        ENGG100CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG100CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG100CoopPlan2");
+ } 
+if (!ENGG299CoopPlan2flag) { 
        var ENGG299CoopPlan2element = document.getElementById("ENGG299CoopPlan2");
        ENGG299CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG299CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG299CoopPlan2");
+ } 
+if (!MECE200CoopPlan2flag) { 
        var MECE200CoopPlan2element = document.getElementById("MECE200CoopPlan2");
        MECE200CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        MECE200CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("MECE200CoopPlan2");
+ } 
+if (!WKEXP901CoopPlan2flag) { 
        var WKEXP901CoopPlan2element = document.getElementById("WKEXP901CoopPlan2");
        WKEXP901CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP901CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP901CoopPlan2");
+ } 
+if (!WKEXP902CoopPlan2flag) { 
        var WKEXP902CoopPlan2element = document.getElementById("WKEXP902CoopPlan2");
        WKEXP902CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP902CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP902CoopPlan2");
+ } 
+if (!WKEXP903CoopPlan2flag) { 
        var WKEXP903CoopPlan2element = document.getElementById("WKEXP903CoopPlan2");
        WKEXP903CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP903CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP903CoopPlan2");
+ } 
+if (!WKEXP904CoopPlan2flag) { 
        var WKEXP904CoopPlan2element = document.getElementById("WKEXP904CoopPlan2");
        WKEXP904CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP904CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP904CoopPlan2");
+ } 
+if (!WKEXP905CoopPlan2flag) { 
        var WKEXP905CoopPlan2element = document.getElementById("WKEXP905CoopPlan2");
        WKEXP905CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP905CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP905CoopPlan2");
+ } 
+if (!ENGG400CoopPlan2flag) { 
        var ENGG400CoopPlan2element = document.getElementById("ENGG400CoopPlan2");
        ENGG400CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG400CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG400CoopPlan2");
+ } 
+if (!ENGG404CoopPlan2flag) { 
        var ENGG404CoopPlan2element = document.getElementById("ENGG404CoopPlan2");
        ENGG404CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG404CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG404CoopPlan2");
+ } 
        break;
       case "CoopPlan3Biomedical":
+if (!ENGG100CoopPlan3Biomedicalflag) { 
        var ENGG100CoopPlan3Biomedicalelement = document.getElementById("ENGG100CoopPlan3Biomedical");
        ENGG100CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG100CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG100CoopPlan3Biomedical");
+ } 
+if (!ENGG299CoopPlan3Biomedicalflag) { 
        var ENGG299CoopPlan3Biomedicalelement = document.getElementById("ENGG299CoopPlan3Biomedical");
        ENGG299CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG299CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG299CoopPlan3Biomedical");
+ } 
+if (!MECE200CoopPlan3Biomedicalflag) { 
        var MECE200CoopPlan3Biomedicalelement = document.getElementById("MECE200CoopPlan3Biomedical");
        MECE200CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        MECE200CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("MECE200CoopPlan3Biomedical");
+ } 
+if (!WKEXP902CoopPlan3Biomedicalflag) { 
        var WKEXP902CoopPlan3Biomedicalelement = document.getElementById("WKEXP902CoopPlan3Biomedical");
        WKEXP902CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP902CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP902CoopPlan3Biomedical");
+ } 
+if (!WKEXP903CoopPlan3Biomedicalflag) { 
        var WKEXP903CoopPlan3Biomedicalelement = document.getElementById("WKEXP903CoopPlan3Biomedical");
        WKEXP903CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP903CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP903CoopPlan3Biomedical");
+ } 
+if (!ENGG404CoopPlan3Biomedicalflag) { 
        var ENGG404CoopPlan3Biomedicalelement = document.getElementById("ENGG404CoopPlan3Biomedical");
        ENGG404CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG404CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG404CoopPlan3Biomedical");
+ } 
+if (!WKEXP904CoopPlan3Biomedicalflag) { 
        var WKEXP904CoopPlan3Biomedicalelement = document.getElementById("WKEXP904CoopPlan3Biomedical");
        WKEXP904CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP904CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP904CoopPlan3Biomedical");
+ } 
+if (!WKEXP905CoopPlan3Biomedicalflag) { 
        var WKEXP905CoopPlan3Biomedicalelement = document.getElementById("WKEXP905CoopPlan3Biomedical");
        WKEXP905CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP905CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP905CoopPlan3Biomedical");
+ } 
+if (!ENGG400CoopPlan3Biomedicalflag) { 
        var ENGG400CoopPlan3Biomedicalelement = document.getElementById("ENGG400CoopPlan3Biomedical");
        ENGG400CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG400CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG400CoopPlan3Biomedical");
+ } 
        break;
       case "CoopPlan4":
+if (!ENGG100CoopPlan4flag) { 
        var ENGG100CoopPlan4element = document.getElementById("ENGG100CoopPlan4");
        ENGG100CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG100CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG100CoopPlan4");
+ } 
+if (!ENGG299CoopPlan4flag) { 
        var ENGG299CoopPlan4element = document.getElementById("ENGG299CoopPlan4");
        ENGG299CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG299CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG299CoopPlan4");
+ } 
+if (!MECE200CoopPlan4flag) { 
        var MECE200CoopPlan4element = document.getElementById("MECE200CoopPlan4");
        MECE200CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        MECE200CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("MECE200CoopPlan4");
+ } 
+if (!WKEXP901CoopPlan4flag) { 
        var WKEXP901CoopPlan4element = document.getElementById("WKEXP901CoopPlan4");
        WKEXP901CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP901CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP901CoopPlan4");
+ } 
+if (!WKEXP902CoopPlan4flag) { 
        var WKEXP902CoopPlan4element = document.getElementById("WKEXP902CoopPlan4");
        WKEXP902CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP902CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP902CoopPlan4");
+ } 
+if (!WKEXP903CoopPlan4flag) { 
        var WKEXP903CoopPlan4element = document.getElementById("WKEXP903CoopPlan4");
        WKEXP903CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP903CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP903CoopPlan4");
+ } 
+if (!WKEXP904CoopPlan4flag) { 
        var WKEXP904CoopPlan4element = document.getElementById("WKEXP904CoopPlan4");
        WKEXP904CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP904CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP904CoopPlan4");
+ } 
+if (!WKEXP905CoopPlan4flag) { 
        var WKEXP905CoopPlan4element = document.getElementById("WKEXP905CoopPlan4");
        WKEXP905CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP905CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("WKEXP905CoopPlan4");
+ } 
+if (!ENGG404CoopPlan4flag) { 
        var ENGG404CoopPlan4element = document.getElementById("ENGG404CoopPlan4");
        ENGG404CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG404CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG404CoopPlan4");
+ } 
+if (!ENGG400CoopPlan4flag) { 
        var ENGG400CoopPlan4element = document.getElementById("ENGG400CoopPlan4");
        ENGG400CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG400CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
        
        that.removeFromClicked("ENGG400CoopPlan4");
+ } 
        break;
        }
       break;
   case "Other":
     switch(planName) {
       case "TraditionalPlan2A3A4A":
+if (!ENGL199TraditionalPlan2A3A4Aflag) { 
        var ENGL199TraditionalPlan2A3A4Aelement = document.getElementById("ENGL199TraditionalPlan2A3A4A");
        ENGL199TraditionalPlan2A3A4Aelement.classList.remove("Other-highlighted");
        ENGL199TraditionalPlan2A3A4Aelement.classList.add("Other");
        
        that.removeFromClicked("ENGL199TraditionalPlan2A3A4A");
+ } 
+if (!ENGM310TraditionalPlan2A3A4Aflag) { 
        var ENGM310TraditionalPlan2A3A4Aelement = document.getElementById("ENGM310TraditionalPlan2A3A4A");
        ENGM310TraditionalPlan2A3A4Aelement.classList.remove("Other-highlighted");
        ENGM310TraditionalPlan2A3A4Aelement.classList.add("Other");
        
        that.removeFromClicked("ENGM310TraditionalPlan2A3A4A");
+ } 
+if (!ENGM401TraditionalPlan2A3A4Aflag) { 
        var ENGM401TraditionalPlan2A3A4Aelement = document.getElementById("ENGM401TraditionalPlan2A3A4A");
        ENGM401TraditionalPlan2A3A4Aelement.classList.remove("Other-highlighted");
        ENGM401TraditionalPlan2A3A4Aelement.classList.add("Other");
        
        that.removeFromClicked("ENGM401TraditionalPlan2A3A4A");
+ } 
        break;
       case "TraditionalPlan2A3A4B":
+if (!ENGL199TraditionalPlan2A3A4Bflag) { 
        var ENGL199TraditionalPlan2A3A4Belement = document.getElementById("ENGL199TraditionalPlan2A3A4B");
        ENGL199TraditionalPlan2A3A4Belement.classList.remove("Other-highlighted");
        ENGL199TraditionalPlan2A3A4Belement.classList.add("Other");
        
        that.removeFromClicked("ENGL199TraditionalPlan2A3A4B");
+ } 
+if (!ENGM310TraditionalPlan2A3A4Bflag) { 
        var ENGM310TraditionalPlan2A3A4Belement = document.getElementById("ENGM310TraditionalPlan2A3A4B");
        ENGM310TraditionalPlan2A3A4Belement.classList.remove("Other-highlighted");
        ENGM310TraditionalPlan2A3A4Belement.classList.add("Other");
        
        that.removeFromClicked("ENGM310TraditionalPlan2A3A4B");
+ } 
+if (!ENGM401TraditionalPlan2A3A4Bflag) { 
        var ENGM401TraditionalPlan2A3A4Belement = document.getElementById("ENGM401TraditionalPlan2A3A4B");
        ENGM401TraditionalPlan2A3A4Belement.classList.remove("Other-highlighted");
        ENGM401TraditionalPlan2A3A4Belement.classList.add("Other");
        
        that.removeFromClicked("ENGM401TraditionalPlan2A3A4B");
+ } 
        break;
       case "TraditionalPlan2A3B4A":
+if (!ENGL199TraditionalPlan2A3B4Aflag) { 
        var ENGL199TraditionalPlan2A3B4Aelement = document.getElementById("ENGL199TraditionalPlan2A3B4A");
        ENGL199TraditionalPlan2A3B4Aelement.classList.remove("Other-highlighted");
        ENGL199TraditionalPlan2A3B4Aelement.classList.add("Other");
        
        that.removeFromClicked("ENGL199TraditionalPlan2A3B4A");
+ } 
+if (!ENGM310TraditionalPlan2A3B4Aflag) { 
        var ENGM310TraditionalPlan2A3B4Aelement = document.getElementById("ENGM310TraditionalPlan2A3B4A");
        ENGM310TraditionalPlan2A3B4Aelement.classList.remove("Other-highlighted");
        ENGM310TraditionalPlan2A3B4Aelement.classList.add("Other");
        
        that.removeFromClicked("ENGM310TraditionalPlan2A3B4A");
+ } 
+if (!ENGM401TraditionalPlan2A3B4Aflag) { 
        var ENGM401TraditionalPlan2A3B4Aelement = document.getElementById("ENGM401TraditionalPlan2A3B4A");
        ENGM401TraditionalPlan2A3B4Aelement.classList.remove("Other-highlighted");
        ENGM401TraditionalPlan2A3B4Aelement.classList.add("Other");
        
        that.removeFromClicked("ENGM401TraditionalPlan2A3B4A");
+ } 
        break;
       case "TraditionalPlan2A3B4B":
+if (!ENGL199TraditionalPlan2A3B4Bflag) { 
        var ENGL199TraditionalPlan2A3B4Belement = document.getElementById("ENGL199TraditionalPlan2A3B4B");
        ENGL199TraditionalPlan2A3B4Belement.classList.remove("Other-highlighted");
        ENGL199TraditionalPlan2A3B4Belement.classList.add("Other");
        
        that.removeFromClicked("ENGL199TraditionalPlan2A3B4B");
+ } 
+if (!ENGM310TraditionalPlan2A3B4Bflag) { 
        var ENGM310TraditionalPlan2A3B4Belement = document.getElementById("ENGM310TraditionalPlan2A3B4B");
        ENGM310TraditionalPlan2A3B4Belement.classList.remove("Other-highlighted");
        ENGM310TraditionalPlan2A3B4Belement.classList.add("Other");
        
        that.removeFromClicked("ENGM310TraditionalPlan2A3B4B");
+ } 
+if (!ENGM401TraditionalPlan2A3B4Bflag) { 
        var ENGM401TraditionalPlan2A3B4Belement = document.getElementById("ENGM401TraditionalPlan2A3B4B");
        ENGM401TraditionalPlan2A3B4Belement.classList.remove("Other-highlighted");
        ENGM401TraditionalPlan2A3B4Belement.classList.add("Other");
        
        that.removeFromClicked("ENGM401TraditionalPlan2A3B4B");
+ } 
        break;
       case "TraditionalPlan2B3A4A":
+if (!ENGL199TraditionalPlan2B3A4Aflag) { 
        var ENGL199TraditionalPlan2B3A4Aelement = document.getElementById("ENGL199TraditionalPlan2B3A4A");
        ENGL199TraditionalPlan2B3A4Aelement.classList.remove("Other-highlighted");
        ENGL199TraditionalPlan2B3A4Aelement.classList.add("Other");
        
        that.removeFromClicked("ENGL199TraditionalPlan2B3A4A");
+ } 
+if (!ENGM310TraditionalPlan2B3A4Aflag) { 
        var ENGM310TraditionalPlan2B3A4Aelement = document.getElementById("ENGM310TraditionalPlan2B3A4A");
        ENGM310TraditionalPlan2B3A4Aelement.classList.remove("Other-highlighted");
        ENGM310TraditionalPlan2B3A4Aelement.classList.add("Other");
        
        that.removeFromClicked("ENGM310TraditionalPlan2B3A4A");
+ } 
+if (!ENGM401TraditionalPlan2B3A4Aflag) { 
        var ENGM401TraditionalPlan2B3A4Aelement = document.getElementById("ENGM401TraditionalPlan2B3A4A");
        ENGM401TraditionalPlan2B3A4Aelement.classList.remove("Other-highlighted");
        ENGM401TraditionalPlan2B3A4Aelement.classList.add("Other");
        
        that.removeFromClicked("ENGM401TraditionalPlan2B3A4A");
+ } 
        break;
       case "TraditionalPlan2B3A4B":
+if (!ENGL199TraditionalPlan2B3A4Bflag) { 
        var ENGL199TraditionalPlan2B3A4Belement = document.getElementById("ENGL199TraditionalPlan2B3A4B");
        ENGL199TraditionalPlan2B3A4Belement.classList.remove("Other-highlighted");
        ENGL199TraditionalPlan2B3A4Belement.classList.add("Other");
        
        that.removeFromClicked("ENGL199TraditionalPlan2B3A4B");
+ } 
+if (!ENGM310TraditionalPlan2B3A4Bflag) { 
        var ENGM310TraditionalPlan2B3A4Belement = document.getElementById("ENGM310TraditionalPlan2B3A4B");
        ENGM310TraditionalPlan2B3A4Belement.classList.remove("Other-highlighted");
        ENGM310TraditionalPlan2B3A4Belement.classList.add("Other");
        
        that.removeFromClicked("ENGM310TraditionalPlan2B3A4B");
+ } 
+if (!ENGM401TraditionalPlan2B3A4Bflag) { 
        var ENGM401TraditionalPlan2B3A4Belement = document.getElementById("ENGM401TraditionalPlan2B3A4B");
        ENGM401TraditionalPlan2B3A4Belement.classList.remove("Other-highlighted");
        ENGM401TraditionalPlan2B3A4Belement.classList.add("Other");
        
        that.removeFromClicked("ENGM401TraditionalPlan2B3A4B");
+ } 
        break;
       case "TraditionalPlan2B3B4A":
+if (!ENGL199TraditionalPlan2B3B4Aflag) { 
        var ENGL199TraditionalPlan2B3B4Aelement = document.getElementById("ENGL199TraditionalPlan2B3B4A");
        ENGL199TraditionalPlan2B3B4Aelement.classList.remove("Other-highlighted");
        ENGL199TraditionalPlan2B3B4Aelement.classList.add("Other");
        
        that.removeFromClicked("ENGL199TraditionalPlan2B3B4A");
+ } 
+if (!ENGM310TraditionalPlan2B3B4Aflag) { 
        var ENGM310TraditionalPlan2B3B4Aelement = document.getElementById("ENGM310TraditionalPlan2B3B4A");
        ENGM310TraditionalPlan2B3B4Aelement.classList.remove("Other-highlighted");
        ENGM310TraditionalPlan2B3B4Aelement.classList.add("Other");
        
        that.removeFromClicked("ENGM310TraditionalPlan2B3B4A");
+ } 
+if (!ENGM401TraditionalPlan2B3B4Aflag) { 
        var ENGM401TraditionalPlan2B3B4Aelement = document.getElementById("ENGM401TraditionalPlan2B3B4A");
        ENGM401TraditionalPlan2B3B4Aelement.classList.remove("Other-highlighted");
        ENGM401TraditionalPlan2B3B4Aelement.classList.add("Other");
        
        that.removeFromClicked("ENGM401TraditionalPlan2B3B4A");
+ } 
        break;
       case "TraditionalPlan2B3B4B":
+if (!ENGL199TraditionalPlan2B3B4Bflag) { 
        var ENGL199TraditionalPlan2B3B4Belement = document.getElementById("ENGL199TraditionalPlan2B3B4B");
        ENGL199TraditionalPlan2B3B4Belement.classList.remove("Other-highlighted");
        ENGL199TraditionalPlan2B3B4Belement.classList.add("Other");
        
        that.removeFromClicked("ENGL199TraditionalPlan2B3B4B");
+ } 
+if (!ENGM310TraditionalPlan2B3B4Bflag) { 
        var ENGM310TraditionalPlan2B3B4Belement = document.getElementById("ENGM310TraditionalPlan2B3B4B");
        ENGM310TraditionalPlan2B3B4Belement.classList.remove("Other-highlighted");
        ENGM310TraditionalPlan2B3B4Belement.classList.add("Other");
        
        that.removeFromClicked("ENGM310TraditionalPlan2B3B4B");
+ } 
+if (!ENGM401TraditionalPlan2B3B4Bflag) { 
        var ENGM401TraditionalPlan2B3B4Belement = document.getElementById("ENGM401TraditionalPlan2B3B4B");
        ENGM401TraditionalPlan2B3B4Belement.classList.remove("Other-highlighted");
        ENGM401TraditionalPlan2B3B4Belement.classList.add("Other");
        
        that.removeFromClicked("ENGM401TraditionalPlan2B3B4B");
+ } 
        break;
-      case "AlternatePlan":
-       var ENGL199AlternatePlanelement = document.getElementById("ENGL199AlternatePlan");
-       ENGL199AlternatePlanelement.classList.remove("Other-highlighted");
-       ENGL199AlternatePlanelement.classList.add("Other");
+      case "AlternatePlan3A4A":
+if (!ENGL199AlternatePlan3A4Aflag) { 
+       var ENGL199AlternatePlan3A4Aelement = document.getElementById("ENGL199AlternatePlan3A4A");
+       ENGL199AlternatePlan3A4Aelement.classList.remove("Other-highlighted");
+       ENGL199AlternatePlan3A4Aelement.classList.add("Other");
        
-       that.removeFromClicked("ENGL199AlternatePlan");
-       var ENGM310AlternatePlanelement = document.getElementById("ENGM310AlternatePlan");
-       ENGM310AlternatePlanelement.classList.remove("Other-highlighted");
-       ENGM310AlternatePlanelement.classList.add("Other");
+       that.removeFromClicked("ENGL199AlternatePlan3A4A");
+ } 
+if (!ENGM310AlternatePlan3A4Aflag) { 
+       var ENGM310AlternatePlan3A4Aelement = document.getElementById("ENGM310AlternatePlan3A4A");
+       ENGM310AlternatePlan3A4Aelement.classList.remove("Other-highlighted");
+       ENGM310AlternatePlan3A4Aelement.classList.add("Other");
        
-       that.removeFromClicked("ENGM310AlternatePlan");
-       var ENGM401AlternatePlanelement = document.getElementById("ENGM401AlternatePlan");
-       ENGM401AlternatePlanelement.classList.remove("Other-highlighted");
-       ENGM401AlternatePlanelement.classList.add("Other");
+       that.removeFromClicked("ENGM310AlternatePlan3A4A");
+ } 
+if (!ENGM401AlternatePlan3A4Aflag) { 
+       var ENGM401AlternatePlan3A4Aelement = document.getElementById("ENGM401AlternatePlan3A4A");
+       ENGM401AlternatePlan3A4Aelement.classList.remove("Other-highlighted");
+       ENGM401AlternatePlan3A4Aelement.classList.add("Other");
        
-       that.removeFromClicked("ENGM401AlternatePlan");
+       that.removeFromClicked("ENGM401AlternatePlan3A4A");
+ } 
        break;
       case "CoopPlan13A":
+if (!ENGL199CoopPlan13Aflag) { 
        var ENGL199CoopPlan13Aelement = document.getElementById("ENGL199CoopPlan13A");
        ENGL199CoopPlan13Aelement.classList.remove("Other-highlighted");
        ENGL199CoopPlan13Aelement.classList.add("Other");
        
        that.removeFromClicked("ENGL199CoopPlan13A");
+ } 
+if (!ENGM310CoopPlan13Aflag) { 
        var ENGM310CoopPlan13Aelement = document.getElementById("ENGM310CoopPlan13A");
        ENGM310CoopPlan13Aelement.classList.remove("Other-highlighted");
        ENGM310CoopPlan13Aelement.classList.add("Other");
        
        that.removeFromClicked("ENGM310CoopPlan13A");
+ } 
+if (!ENGM401CoopPlan13Aflag) { 
        var ENGM401CoopPlan13Aelement = document.getElementById("ENGM401CoopPlan13A");
        ENGM401CoopPlan13Aelement.classList.remove("Other-highlighted");
        ENGM401CoopPlan13Aelement.classList.add("Other");
        
        that.removeFromClicked("ENGM401CoopPlan13A");
+ } 
        break;
       case "CoopPlan13B":
+if (!ENGL199CoopPlan13Bflag) { 
        var ENGL199CoopPlan13Belement = document.getElementById("ENGL199CoopPlan13B");
        ENGL199CoopPlan13Belement.classList.remove("Other-highlighted");
        ENGL199CoopPlan13Belement.classList.add("Other");
        
        that.removeFromClicked("ENGL199CoopPlan13B");
+ } 
+if (!ENGM310CoopPlan13Bflag) { 
        var ENGM310CoopPlan13Belement = document.getElementById("ENGM310CoopPlan13B");
        ENGM310CoopPlan13Belement.classList.remove("Other-highlighted");
        ENGM310CoopPlan13Belement.classList.add("Other");
        
        that.removeFromClicked("ENGM310CoopPlan13B");
+ } 
+if (!ENGM401CoopPlan13Bflag) { 
        var ENGM401CoopPlan13Belement = document.getElementById("ENGM401CoopPlan13B");
        ENGM401CoopPlan13Belement.classList.remove("Other-highlighted");
        ENGM401CoopPlan13Belement.classList.add("Other");
        
        that.removeFromClicked("ENGM401CoopPlan13B");
+ } 
        break;
       case "CoopPlan2":
+if (!ENGL199CoopPlan2flag) { 
        var ENGL199CoopPlan2element = document.getElementById("ENGL199CoopPlan2");
        ENGL199CoopPlan2element.classList.remove("Other-highlighted");
        ENGL199CoopPlan2element.classList.add("Other");
        
        that.removeFromClicked("ENGL199CoopPlan2");
+ } 
+if (!ENGM310CoopPlan2flag) { 
        var ENGM310CoopPlan2element = document.getElementById("ENGM310CoopPlan2");
        ENGM310CoopPlan2element.classList.remove("Other-highlighted");
        ENGM310CoopPlan2element.classList.add("Other");
        
        that.removeFromClicked("ENGM310CoopPlan2");
+ } 
+if (!ENGM401CoopPlan2flag) { 
        var ENGM401CoopPlan2element = document.getElementById("ENGM401CoopPlan2");
        ENGM401CoopPlan2element.classList.remove("Other-highlighted");
        ENGM401CoopPlan2element.classList.add("Other");
        
        that.removeFromClicked("ENGM401CoopPlan2");
+ } 
        break;
       case "CoopPlan3Biomedical":
+if (!ENGL199CoopPlan3Biomedicalflag) { 
        var ENGL199CoopPlan3Biomedicalelement = document.getElementById("ENGL199CoopPlan3Biomedical");
        ENGL199CoopPlan3Biomedicalelement.classList.remove("Other-highlighted");
        ENGL199CoopPlan3Biomedicalelement.classList.add("Other");
        
        that.removeFromClicked("ENGL199CoopPlan3Biomedical");
+ } 
+if (!ENGM310CoopPlan3Biomedicalflag) { 
        var ENGM310CoopPlan3Biomedicalelement = document.getElementById("ENGM310CoopPlan3Biomedical");
        ENGM310CoopPlan3Biomedicalelement.classList.remove("Other-highlighted");
        ENGM310CoopPlan3Biomedicalelement.classList.add("Other");
        
        that.removeFromClicked("ENGM310CoopPlan3Biomedical");
+ } 
+if (!ENGM401CoopPlan3Biomedicalflag) { 
        var ENGM401CoopPlan3Biomedicalelement = document.getElementById("ENGM401CoopPlan3Biomedical");
        ENGM401CoopPlan3Biomedicalelement.classList.remove("Other-highlighted");
        ENGM401CoopPlan3Biomedicalelement.classList.add("Other");
        
        that.removeFromClicked("ENGM401CoopPlan3Biomedical");
+ } 
        break;
       case "CoopPlan4":
+if (!ENGL199CoopPlan4flag) { 
        var ENGL199CoopPlan4element = document.getElementById("ENGL199CoopPlan4");
        ENGL199CoopPlan4element.classList.remove("Other-highlighted");
        ENGL199CoopPlan4element.classList.add("Other");
        
        that.removeFromClicked("ENGL199CoopPlan4");
+ } 
+if (!ENGM310CoopPlan4flag) { 
        var ENGM310CoopPlan4element = document.getElementById("ENGM310CoopPlan4");
        ENGM310CoopPlan4element.classList.remove("Other-highlighted");
        ENGM310CoopPlan4element.classList.add("Other");
        
        that.removeFromClicked("ENGM310CoopPlan4");
+ } 
+if (!ENGM401CoopPlan4flag) { 
        var ENGM401CoopPlan4element = document.getElementById("ENGM401CoopPlan4");
        ENGM401CoopPlan4element.classList.remove("Other-highlighted");
        ENGM401CoopPlan4element.classList.add("Other");
        
        that.removeFromClicked("ENGM401CoopPlan4");
+ } 
        break;
        }
       break;
   case "MATH":
     switch(planName) {
       case "TraditionalPlan2A3A4A":
+if (!MATH100TraditionalPlan2A3A4Aflag) { 
        var MATH100TraditionalPlan2A3A4Aelement = document.getElementById("MATH100TraditionalPlan2A3A4A");
        MATH100TraditionalPlan2A3A4Aelement.classList.remove("MATH-highlighted");
        MATH100TraditionalPlan2A3A4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH100TraditionalPlan2A3A4A");
+ } 
+if (!MATH101TraditionalPlan2A3A4Aflag) { 
        var MATH101TraditionalPlan2A3A4Aelement = document.getElementById("MATH101TraditionalPlan2A3A4A");
        MATH101TraditionalPlan2A3A4Aelement.classList.remove("MATH-highlighted");
        MATH101TraditionalPlan2A3A4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH101TraditionalPlan2A3A4A");
+ } 
+if (!MATH102TraditionalPlan2A3A4Aflag) { 
        var MATH102TraditionalPlan2A3A4Aelement = document.getElementById("MATH102TraditionalPlan2A3A4A");
        MATH102TraditionalPlan2A3A4Aelement.classList.remove("MATH-highlighted");
        MATH102TraditionalPlan2A3A4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH102TraditionalPlan2A3A4A");
+ } 
+if (!MATH209TraditionalPlan2A3A4Aflag) { 
        var MATH209TraditionalPlan2A3A4Aelement = document.getElementById("MATH209TraditionalPlan2A3A4A");
        MATH209TraditionalPlan2A3A4Aelement.classList.remove("MATH-highlighted");
        MATH209TraditionalPlan2A3A4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH209TraditionalPlan2A3A4A");
+ } 
+if (!STAT235TraditionalPlan2A3A4Aflag) { 
        var STAT235TraditionalPlan2A3A4Aelement = document.getElementById("STAT235TraditionalPlan2A3A4A");
        STAT235TraditionalPlan2A3A4Aelement.classList.remove("MATH-highlighted");
        STAT235TraditionalPlan2A3A4Aelement.classList.add("MATH");
        
        that.removeFromClicked("STAT235TraditionalPlan2A3A4A");
+ } 
+if (!MATH201TraditionalPlan2A3A4Aflag) { 
        var MATH201TraditionalPlan2A3A4Aelement = document.getElementById("MATH201TraditionalPlan2A3A4A");
        MATH201TraditionalPlan2A3A4Aelement.classList.remove("MATH-highlighted");
        MATH201TraditionalPlan2A3A4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH201TraditionalPlan2A3A4A");
+ } 
+if (!MATH300TraditionalPlan2A3A4Aflag) { 
        var MATH300TraditionalPlan2A3A4Aelement = document.getElementById("MATH300TraditionalPlan2A3A4A");
        MATH300TraditionalPlan2A3A4Aelement.classList.remove("MATH-highlighted");
        MATH300TraditionalPlan2A3A4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH300TraditionalPlan2A3A4A");
+ } 
+if (!MECE390TraditionalPlan2A3A4Aflag) { 
        var MECE390TraditionalPlan2A3A4Aelement = document.getElementById("MECE390TraditionalPlan2A3A4A");
        MECE390TraditionalPlan2A3A4Aelement.classList.remove("MATH-highlighted");
        MECE390TraditionalPlan2A3A4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MECE390TraditionalPlan2A3A4A");
+ } 
        break;
       case "TraditionalPlan2A3A4B":
+if (!MATH100TraditionalPlan2A3A4Bflag) { 
        var MATH100TraditionalPlan2A3A4Belement = document.getElementById("MATH100TraditionalPlan2A3A4B");
        MATH100TraditionalPlan2A3A4Belement.classList.remove("MATH-highlighted");
        MATH100TraditionalPlan2A3A4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH100TraditionalPlan2A3A4B");
+ } 
+if (!MATH101TraditionalPlan2A3A4Bflag) { 
        var MATH101TraditionalPlan2A3A4Belement = document.getElementById("MATH101TraditionalPlan2A3A4B");
        MATH101TraditionalPlan2A3A4Belement.classList.remove("MATH-highlighted");
        MATH101TraditionalPlan2A3A4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH101TraditionalPlan2A3A4B");
+ } 
+if (!MATH102TraditionalPlan2A3A4Bflag) { 
        var MATH102TraditionalPlan2A3A4Belement = document.getElementById("MATH102TraditionalPlan2A3A4B");
        MATH102TraditionalPlan2A3A4Belement.classList.remove("MATH-highlighted");
        MATH102TraditionalPlan2A3A4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH102TraditionalPlan2A3A4B");
+ } 
+if (!MATH209TraditionalPlan2A3A4Bflag) { 
        var MATH209TraditionalPlan2A3A4Belement = document.getElementById("MATH209TraditionalPlan2A3A4B");
        MATH209TraditionalPlan2A3A4Belement.classList.remove("MATH-highlighted");
        MATH209TraditionalPlan2A3A4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH209TraditionalPlan2A3A4B");
+ } 
+if (!STAT235TraditionalPlan2A3A4Bflag) { 
        var STAT235TraditionalPlan2A3A4Belement = document.getElementById("STAT235TraditionalPlan2A3A4B");
        STAT235TraditionalPlan2A3A4Belement.classList.remove("MATH-highlighted");
        STAT235TraditionalPlan2A3A4Belement.classList.add("MATH");
        
        that.removeFromClicked("STAT235TraditionalPlan2A3A4B");
+ } 
+if (!MATH201TraditionalPlan2A3A4Bflag) { 
        var MATH201TraditionalPlan2A3A4Belement = document.getElementById("MATH201TraditionalPlan2A3A4B");
        MATH201TraditionalPlan2A3A4Belement.classList.remove("MATH-highlighted");
        MATH201TraditionalPlan2A3A4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH201TraditionalPlan2A3A4B");
+ } 
+if (!MATH300TraditionalPlan2A3A4Bflag) { 
        var MATH300TraditionalPlan2A3A4Belement = document.getElementById("MATH300TraditionalPlan2A3A4B");
        MATH300TraditionalPlan2A3A4Belement.classList.remove("MATH-highlighted");
        MATH300TraditionalPlan2A3A4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH300TraditionalPlan2A3A4B");
+ } 
+if (!MECE390TraditionalPlan2A3A4Bflag) { 
        var MECE390TraditionalPlan2A3A4Belement = document.getElementById("MECE390TraditionalPlan2A3A4B");
        MECE390TraditionalPlan2A3A4Belement.classList.remove("MATH-highlighted");
        MECE390TraditionalPlan2A3A4Belement.classList.add("MATH");
        
        that.removeFromClicked("MECE390TraditionalPlan2A3A4B");
+ } 
        break;
       case "TraditionalPlan2A3B4A":
+if (!MATH100TraditionalPlan2A3B4Aflag) { 
        var MATH100TraditionalPlan2A3B4Aelement = document.getElementById("MATH100TraditionalPlan2A3B4A");
        MATH100TraditionalPlan2A3B4Aelement.classList.remove("MATH-highlighted");
        MATH100TraditionalPlan2A3B4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH100TraditionalPlan2A3B4A");
+ } 
+if (!MATH101TraditionalPlan2A3B4Aflag) { 
        var MATH101TraditionalPlan2A3B4Aelement = document.getElementById("MATH101TraditionalPlan2A3B4A");
        MATH101TraditionalPlan2A3B4Aelement.classList.remove("MATH-highlighted");
        MATH101TraditionalPlan2A3B4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH101TraditionalPlan2A3B4A");
+ } 
+if (!MATH102TraditionalPlan2A3B4Aflag) { 
        var MATH102TraditionalPlan2A3B4Aelement = document.getElementById("MATH102TraditionalPlan2A3B4A");
        MATH102TraditionalPlan2A3B4Aelement.classList.remove("MATH-highlighted");
        MATH102TraditionalPlan2A3B4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH102TraditionalPlan2A3B4A");
+ } 
+if (!MATH209TraditionalPlan2A3B4Aflag) { 
        var MATH209TraditionalPlan2A3B4Aelement = document.getElementById("MATH209TraditionalPlan2A3B4A");
        MATH209TraditionalPlan2A3B4Aelement.classList.remove("MATH-highlighted");
        MATH209TraditionalPlan2A3B4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH209TraditionalPlan2A3B4A");
+ } 
+if (!STAT235TraditionalPlan2A3B4Aflag) { 
        var STAT235TraditionalPlan2A3B4Aelement = document.getElementById("STAT235TraditionalPlan2A3B4A");
        STAT235TraditionalPlan2A3B4Aelement.classList.remove("MATH-highlighted");
        STAT235TraditionalPlan2A3B4Aelement.classList.add("MATH");
        
        that.removeFromClicked("STAT235TraditionalPlan2A3B4A");
+ } 
+if (!MATH201TraditionalPlan2A3B4Aflag) { 
        var MATH201TraditionalPlan2A3B4Aelement = document.getElementById("MATH201TraditionalPlan2A3B4A");
        MATH201TraditionalPlan2A3B4Aelement.classList.remove("MATH-highlighted");
        MATH201TraditionalPlan2A3B4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH201TraditionalPlan2A3B4A");
+ } 
+if (!MECE390TraditionalPlan2A3B4Aflag) { 
        var MECE390TraditionalPlan2A3B4Aelement = document.getElementById("MECE390TraditionalPlan2A3B4A");
        MECE390TraditionalPlan2A3B4Aelement.classList.remove("MATH-highlighted");
        MECE390TraditionalPlan2A3B4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MECE390TraditionalPlan2A3B4A");
+ } 
+if (!MATH300TraditionalPlan2A3B4Aflag) { 
        var MATH300TraditionalPlan2A3B4Aelement = document.getElementById("MATH300TraditionalPlan2A3B4A");
        MATH300TraditionalPlan2A3B4Aelement.classList.remove("MATH-highlighted");
        MATH300TraditionalPlan2A3B4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH300TraditionalPlan2A3B4A");
+ } 
        break;
       case "TraditionalPlan2A3B4B":
+if (!MATH100TraditionalPlan2A3B4Bflag) { 
        var MATH100TraditionalPlan2A3B4Belement = document.getElementById("MATH100TraditionalPlan2A3B4B");
        MATH100TraditionalPlan2A3B4Belement.classList.remove("MATH-highlighted");
        MATH100TraditionalPlan2A3B4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH100TraditionalPlan2A3B4B");
+ } 
+if (!MATH101TraditionalPlan2A3B4Bflag) { 
        var MATH101TraditionalPlan2A3B4Belement = document.getElementById("MATH101TraditionalPlan2A3B4B");
        MATH101TraditionalPlan2A3B4Belement.classList.remove("MATH-highlighted");
        MATH101TraditionalPlan2A3B4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH101TraditionalPlan2A3B4B");
+ } 
+if (!MATH102TraditionalPlan2A3B4Bflag) { 
        var MATH102TraditionalPlan2A3B4Belement = document.getElementById("MATH102TraditionalPlan2A3B4B");
        MATH102TraditionalPlan2A3B4Belement.classList.remove("MATH-highlighted");
        MATH102TraditionalPlan2A3B4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH102TraditionalPlan2A3B4B");
+ } 
+if (!MATH209TraditionalPlan2A3B4Bflag) { 
        var MATH209TraditionalPlan2A3B4Belement = document.getElementById("MATH209TraditionalPlan2A3B4B");
        MATH209TraditionalPlan2A3B4Belement.classList.remove("MATH-highlighted");
        MATH209TraditionalPlan2A3B4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH209TraditionalPlan2A3B4B");
+ } 
+if (!STAT235TraditionalPlan2A3B4Bflag) { 
        var STAT235TraditionalPlan2A3B4Belement = document.getElementById("STAT235TraditionalPlan2A3B4B");
        STAT235TraditionalPlan2A3B4Belement.classList.remove("MATH-highlighted");
        STAT235TraditionalPlan2A3B4Belement.classList.add("MATH");
        
        that.removeFromClicked("STAT235TraditionalPlan2A3B4B");
+ } 
+if (!MATH201TraditionalPlan2A3B4Bflag) { 
        var MATH201TraditionalPlan2A3B4Belement = document.getElementById("MATH201TraditionalPlan2A3B4B");
        MATH201TraditionalPlan2A3B4Belement.classList.remove("MATH-highlighted");
        MATH201TraditionalPlan2A3B4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH201TraditionalPlan2A3B4B");
+ } 
+if (!MECE390TraditionalPlan2A3B4Bflag) { 
        var MECE390TraditionalPlan2A3B4Belement = document.getElementById("MECE390TraditionalPlan2A3B4B");
        MECE390TraditionalPlan2A3B4Belement.classList.remove("MATH-highlighted");
        MECE390TraditionalPlan2A3B4Belement.classList.add("MATH");
        
        that.removeFromClicked("MECE390TraditionalPlan2A3B4B");
+ } 
+if (!MATH300TraditionalPlan2A3B4Bflag) { 
        var MATH300TraditionalPlan2A3B4Belement = document.getElementById("MATH300TraditionalPlan2A3B4B");
        MATH300TraditionalPlan2A3B4Belement.classList.remove("MATH-highlighted");
        MATH300TraditionalPlan2A3B4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH300TraditionalPlan2A3B4B");
+ } 
        break;
       case "TraditionalPlan2B3A4A":
+if (!MATH100TraditionalPlan2B3A4Aflag) { 
        var MATH100TraditionalPlan2B3A4Aelement = document.getElementById("MATH100TraditionalPlan2B3A4A");
        MATH100TraditionalPlan2B3A4Aelement.classList.remove("MATH-highlighted");
        MATH100TraditionalPlan2B3A4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH100TraditionalPlan2B3A4A");
+ } 
+if (!MATH101TraditionalPlan2B3A4Aflag) { 
        var MATH101TraditionalPlan2B3A4Aelement = document.getElementById("MATH101TraditionalPlan2B3A4A");
        MATH101TraditionalPlan2B3A4Aelement.classList.remove("MATH-highlighted");
        MATH101TraditionalPlan2B3A4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH101TraditionalPlan2B3A4A");
+ } 
+if (!MATH102TraditionalPlan2B3A4Aflag) { 
        var MATH102TraditionalPlan2B3A4Aelement = document.getElementById("MATH102TraditionalPlan2B3A4A");
        MATH102TraditionalPlan2B3A4Aelement.classList.remove("MATH-highlighted");
        MATH102TraditionalPlan2B3A4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH102TraditionalPlan2B3A4A");
+ } 
+if (!MATH201TraditionalPlan2B3A4Aflag) { 
        var MATH201TraditionalPlan2B3A4Aelement = document.getElementById("MATH201TraditionalPlan2B3A4A");
        MATH201TraditionalPlan2B3A4Aelement.classList.remove("MATH-highlighted");
        MATH201TraditionalPlan2B3A4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH201TraditionalPlan2B3A4A");
+ } 
+if (!MATH209TraditionalPlan2B3A4Aflag) { 
        var MATH209TraditionalPlan2B3A4Aelement = document.getElementById("MATH209TraditionalPlan2B3A4A");
        MATH209TraditionalPlan2B3A4Aelement.classList.remove("MATH-highlighted");
        MATH209TraditionalPlan2B3A4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH209TraditionalPlan2B3A4A");
+ } 
+if (!STAT235TraditionalPlan2B3A4Aflag) { 
        var STAT235TraditionalPlan2B3A4Aelement = document.getElementById("STAT235TraditionalPlan2B3A4A");
        STAT235TraditionalPlan2B3A4Aelement.classList.remove("MATH-highlighted");
        STAT235TraditionalPlan2B3A4Aelement.classList.add("MATH");
        
        that.removeFromClicked("STAT235TraditionalPlan2B3A4A");
+ } 
+if (!MATH300TraditionalPlan2B3A4Aflag) { 
        var MATH300TraditionalPlan2B3A4Aelement = document.getElementById("MATH300TraditionalPlan2B3A4A");
        MATH300TraditionalPlan2B3A4Aelement.classList.remove("MATH-highlighted");
        MATH300TraditionalPlan2B3A4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH300TraditionalPlan2B3A4A");
+ } 
+if (!MECE390TraditionalPlan2B3A4Aflag) { 
        var MECE390TraditionalPlan2B3A4Aelement = document.getElementById("MECE390TraditionalPlan2B3A4A");
        MECE390TraditionalPlan2B3A4Aelement.classList.remove("MATH-highlighted");
        MECE390TraditionalPlan2B3A4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MECE390TraditionalPlan2B3A4A");
+ } 
        break;
       case "TraditionalPlan2B3A4B":
+if (!MATH100TraditionalPlan2B3A4Bflag) { 
        var MATH100TraditionalPlan2B3A4Belement = document.getElementById("MATH100TraditionalPlan2B3A4B");
        MATH100TraditionalPlan2B3A4Belement.classList.remove("MATH-highlighted");
        MATH100TraditionalPlan2B3A4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH100TraditionalPlan2B3A4B");
+ } 
+if (!MATH101TraditionalPlan2B3A4Bflag) { 
        var MATH101TraditionalPlan2B3A4Belement = document.getElementById("MATH101TraditionalPlan2B3A4B");
        MATH101TraditionalPlan2B3A4Belement.classList.remove("MATH-highlighted");
        MATH101TraditionalPlan2B3A4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH101TraditionalPlan2B3A4B");
+ } 
+if (!MATH102TraditionalPlan2B3A4Bflag) { 
        var MATH102TraditionalPlan2B3A4Belement = document.getElementById("MATH102TraditionalPlan2B3A4B");
        MATH102TraditionalPlan2B3A4Belement.classList.remove("MATH-highlighted");
        MATH102TraditionalPlan2B3A4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH102TraditionalPlan2B3A4B");
+ } 
+if (!MATH201TraditionalPlan2B3A4Bflag) { 
        var MATH201TraditionalPlan2B3A4Belement = document.getElementById("MATH201TraditionalPlan2B3A4B");
        MATH201TraditionalPlan2B3A4Belement.classList.remove("MATH-highlighted");
        MATH201TraditionalPlan2B3A4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH201TraditionalPlan2B3A4B");
+ } 
+if (!MATH209TraditionalPlan2B3A4Bflag) { 
        var MATH209TraditionalPlan2B3A4Belement = document.getElementById("MATH209TraditionalPlan2B3A4B");
        MATH209TraditionalPlan2B3A4Belement.classList.remove("MATH-highlighted");
        MATH209TraditionalPlan2B3A4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH209TraditionalPlan2B3A4B");
+ } 
+if (!STAT235TraditionalPlan2B3A4Bflag) { 
        var STAT235TraditionalPlan2B3A4Belement = document.getElementById("STAT235TraditionalPlan2B3A4B");
        STAT235TraditionalPlan2B3A4Belement.classList.remove("MATH-highlighted");
        STAT235TraditionalPlan2B3A4Belement.classList.add("MATH");
        
        that.removeFromClicked("STAT235TraditionalPlan2B3A4B");
+ } 
+if (!MATH300TraditionalPlan2B3A4Bflag) { 
        var MATH300TraditionalPlan2B3A4Belement = document.getElementById("MATH300TraditionalPlan2B3A4B");
        MATH300TraditionalPlan2B3A4Belement.classList.remove("MATH-highlighted");
        MATH300TraditionalPlan2B3A4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH300TraditionalPlan2B3A4B");
+ } 
+if (!MECE390TraditionalPlan2B3A4Bflag) { 
        var MECE390TraditionalPlan2B3A4Belement = document.getElementById("MECE390TraditionalPlan2B3A4B");
        MECE390TraditionalPlan2B3A4Belement.classList.remove("MATH-highlighted");
        MECE390TraditionalPlan2B3A4Belement.classList.add("MATH");
        
        that.removeFromClicked("MECE390TraditionalPlan2B3A4B");
+ } 
        break;
       case "TraditionalPlan2B3B4A":
+if (!MATH100TraditionalPlan2B3B4Aflag) { 
        var MATH100TraditionalPlan2B3B4Aelement = document.getElementById("MATH100TraditionalPlan2B3B4A");
        MATH100TraditionalPlan2B3B4Aelement.classList.remove("MATH-highlighted");
        MATH100TraditionalPlan2B3B4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH100TraditionalPlan2B3B4A");
+ } 
+if (!MATH101TraditionalPlan2B3B4Aflag) { 
        var MATH101TraditionalPlan2B3B4Aelement = document.getElementById("MATH101TraditionalPlan2B3B4A");
        MATH101TraditionalPlan2B3B4Aelement.classList.remove("MATH-highlighted");
        MATH101TraditionalPlan2B3B4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH101TraditionalPlan2B3B4A");
+ } 
+if (!MATH102TraditionalPlan2B3B4Aflag) { 
        var MATH102TraditionalPlan2B3B4Aelement = document.getElementById("MATH102TraditionalPlan2B3B4A");
        MATH102TraditionalPlan2B3B4Aelement.classList.remove("MATH-highlighted");
        MATH102TraditionalPlan2B3B4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH102TraditionalPlan2B3B4A");
+ } 
+if (!MATH201TraditionalPlan2B3B4Aflag) { 
        var MATH201TraditionalPlan2B3B4Aelement = document.getElementById("MATH201TraditionalPlan2B3B4A");
        MATH201TraditionalPlan2B3B4Aelement.classList.remove("MATH-highlighted");
        MATH201TraditionalPlan2B3B4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH201TraditionalPlan2B3B4A");
+ } 
+if (!MATH209TraditionalPlan2B3B4Aflag) { 
        var MATH209TraditionalPlan2B3B4Aelement = document.getElementById("MATH209TraditionalPlan2B3B4A");
        MATH209TraditionalPlan2B3B4Aelement.classList.remove("MATH-highlighted");
        MATH209TraditionalPlan2B3B4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH209TraditionalPlan2B3B4A");
+ } 
+if (!STAT235TraditionalPlan2B3B4Aflag) { 
        var STAT235TraditionalPlan2B3B4Aelement = document.getElementById("STAT235TraditionalPlan2B3B4A");
        STAT235TraditionalPlan2B3B4Aelement.classList.remove("MATH-highlighted");
        STAT235TraditionalPlan2B3B4Aelement.classList.add("MATH");
        
        that.removeFromClicked("STAT235TraditionalPlan2B3B4A");
+ } 
+if (!MECE390TraditionalPlan2B3B4Aflag) { 
        var MECE390TraditionalPlan2B3B4Aelement = document.getElementById("MECE390TraditionalPlan2B3B4A");
        MECE390TraditionalPlan2B3B4Aelement.classList.remove("MATH-highlighted");
        MECE390TraditionalPlan2B3B4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MECE390TraditionalPlan2B3B4A");
+ } 
+if (!MATH300TraditionalPlan2B3B4Aflag) { 
        var MATH300TraditionalPlan2B3B4Aelement = document.getElementById("MATH300TraditionalPlan2B3B4A");
        MATH300TraditionalPlan2B3B4Aelement.classList.remove("MATH-highlighted");
        MATH300TraditionalPlan2B3B4Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH300TraditionalPlan2B3B4A");
+ } 
        break;
       case "TraditionalPlan2B3B4B":
+if (!MATH100TraditionalPlan2B3B4Bflag) { 
        var MATH100TraditionalPlan2B3B4Belement = document.getElementById("MATH100TraditionalPlan2B3B4B");
        MATH100TraditionalPlan2B3B4Belement.classList.remove("MATH-highlighted");
        MATH100TraditionalPlan2B3B4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH100TraditionalPlan2B3B4B");
+ } 
+if (!MATH101TraditionalPlan2B3B4Bflag) { 
        var MATH101TraditionalPlan2B3B4Belement = document.getElementById("MATH101TraditionalPlan2B3B4B");
        MATH101TraditionalPlan2B3B4Belement.classList.remove("MATH-highlighted");
        MATH101TraditionalPlan2B3B4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH101TraditionalPlan2B3B4B");
+ } 
+if (!MATH102TraditionalPlan2B3B4Bflag) { 
        var MATH102TraditionalPlan2B3B4Belement = document.getElementById("MATH102TraditionalPlan2B3B4B");
        MATH102TraditionalPlan2B3B4Belement.classList.remove("MATH-highlighted");
        MATH102TraditionalPlan2B3B4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH102TraditionalPlan2B3B4B");
+ } 
+if (!MATH201TraditionalPlan2B3B4Bflag) { 
        var MATH201TraditionalPlan2B3B4Belement = document.getElementById("MATH201TraditionalPlan2B3B4B");
        MATH201TraditionalPlan2B3B4Belement.classList.remove("MATH-highlighted");
        MATH201TraditionalPlan2B3B4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH201TraditionalPlan2B3B4B");
+ } 
+if (!MATH209TraditionalPlan2B3B4Bflag) { 
        var MATH209TraditionalPlan2B3B4Belement = document.getElementById("MATH209TraditionalPlan2B3B4B");
        MATH209TraditionalPlan2B3B4Belement.classList.remove("MATH-highlighted");
        MATH209TraditionalPlan2B3B4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH209TraditionalPlan2B3B4B");
+ } 
+if (!STAT235TraditionalPlan2B3B4Bflag) { 
        var STAT235TraditionalPlan2B3B4Belement = document.getElementById("STAT235TraditionalPlan2B3B4B");
        STAT235TraditionalPlan2B3B4Belement.classList.remove("MATH-highlighted");
        STAT235TraditionalPlan2B3B4Belement.classList.add("MATH");
        
        that.removeFromClicked("STAT235TraditionalPlan2B3B4B");
+ } 
+if (!MECE390TraditionalPlan2B3B4Bflag) { 
        var MECE390TraditionalPlan2B3B4Belement = document.getElementById("MECE390TraditionalPlan2B3B4B");
        MECE390TraditionalPlan2B3B4Belement.classList.remove("MATH-highlighted");
        MECE390TraditionalPlan2B3B4Belement.classList.add("MATH");
        
        that.removeFromClicked("MECE390TraditionalPlan2B3B4B");
+ } 
+if (!MATH300TraditionalPlan2B3B4Bflag) { 
        var MATH300TraditionalPlan2B3B4Belement = document.getElementById("MATH300TraditionalPlan2B3B4B");
        MATH300TraditionalPlan2B3B4Belement.classList.remove("MATH-highlighted");
        MATH300TraditionalPlan2B3B4Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH300TraditionalPlan2B3B4B");
+ } 
        break;
-      case "AlternatePlan":
-       var MATH100AlternatePlanelement = document.getElementById("MATH100AlternatePlan");
-       MATH100AlternatePlanelement.classList.remove("MATH-highlighted");
-       MATH100AlternatePlanelement.classList.add("MATH");
+      case "AlternatePlan3A4A":
+if (!MATH100AlternatePlan3A4Aflag) { 
+       var MATH100AlternatePlan3A4Aelement = document.getElementById("MATH100AlternatePlan3A4A");
+       MATH100AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+       MATH100AlternatePlan3A4Aelement.classList.add("MATH");
        
-       that.removeFromClicked("MATH100AlternatePlan");
-       var MATH101AlternatePlanelement = document.getElementById("MATH101AlternatePlan");
-       MATH101AlternatePlanelement.classList.remove("MATH-highlighted");
-       MATH101AlternatePlanelement.classList.add("MATH");
+       that.removeFromClicked("MATH100AlternatePlan3A4A");
+ } 
+if (!MATH101AlternatePlan3A4Aflag) { 
+       var MATH101AlternatePlan3A4Aelement = document.getElementById("MATH101AlternatePlan3A4A");
+       MATH101AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+       MATH101AlternatePlan3A4Aelement.classList.add("MATH");
        
-       that.removeFromClicked("MATH101AlternatePlan");
-       var MATH102AlternatePlanelement = document.getElementById("MATH102AlternatePlan");
-       MATH102AlternatePlanelement.classList.remove("MATH-highlighted");
-       MATH102AlternatePlanelement.classList.add("MATH");
+       that.removeFromClicked("MATH101AlternatePlan3A4A");
+ } 
+if (!MATH102AlternatePlan3A4Aflag) { 
+       var MATH102AlternatePlan3A4Aelement = document.getElementById("MATH102AlternatePlan3A4A");
+       MATH102AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+       MATH102AlternatePlan3A4Aelement.classList.add("MATH");
        
-       that.removeFromClicked("MATH102AlternatePlan");
-       var MATH201AlternatePlanelement = document.getElementById("MATH201AlternatePlan");
-       MATH201AlternatePlanelement.classList.remove("MATH-highlighted");
-       MATH201AlternatePlanelement.classList.add("MATH");
+       that.removeFromClicked("MATH102AlternatePlan3A4A");
+ } 
+if (!MATH201AlternatePlan3A4Aflag) { 
+       var MATH201AlternatePlan3A4Aelement = document.getElementById("MATH201AlternatePlan3A4A");
+       MATH201AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+       MATH201AlternatePlan3A4Aelement.classList.add("MATH");
        
-       that.removeFromClicked("MATH201AlternatePlan");
-       var MATH209AlternatePlanelement = document.getElementById("MATH209AlternatePlan");
-       MATH209AlternatePlanelement.classList.remove("MATH-highlighted");
-       MATH209AlternatePlanelement.classList.add("MATH");
+       that.removeFromClicked("MATH201AlternatePlan3A4A");
+ } 
+if (!MATH209AlternatePlan3A4Aflag) { 
+       var MATH209AlternatePlan3A4Aelement = document.getElementById("MATH209AlternatePlan3A4A");
+       MATH209AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+       MATH209AlternatePlan3A4Aelement.classList.add("MATH");
        
-       that.removeFromClicked("MATH209AlternatePlan");
-       var STAT235AlternatePlanelement = document.getElementById("STAT235AlternatePlan");
-       STAT235AlternatePlanelement.classList.remove("MATH-highlighted");
-       STAT235AlternatePlanelement.classList.add("MATH");
+       that.removeFromClicked("MATH209AlternatePlan3A4A");
+ } 
+if (!STAT235AlternatePlan3A4Aflag) { 
+       var STAT235AlternatePlan3A4Aelement = document.getElementById("STAT235AlternatePlan3A4A");
+       STAT235AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+       STAT235AlternatePlan3A4Aelement.classList.add("MATH");
        
-       that.removeFromClicked("STAT235AlternatePlan");
-       var MATH300AlternatePlanelement = document.getElementById("MATH300AlternatePlan");
-       MATH300AlternatePlanelement.classList.remove("MATH-highlighted");
-       MATH300AlternatePlanelement.classList.add("MATH");
+       that.removeFromClicked("STAT235AlternatePlan3A4A");
+ } 
+if (!MATH300AlternatePlan3A4Aflag) { 
+       var MATH300AlternatePlan3A4Aelement = document.getElementById("MATH300AlternatePlan3A4A");
+       MATH300AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+       MATH300AlternatePlan3A4Aelement.classList.add("MATH");
        
-       that.removeFromClicked("MATH300AlternatePlan");
-       var MECE390AlternatePlanelement = document.getElementById("MECE390AlternatePlan");
-       MECE390AlternatePlanelement.classList.remove("MATH-highlighted");
-       MECE390AlternatePlanelement.classList.add("MATH");
+       that.removeFromClicked("MATH300AlternatePlan3A4A");
+ } 
+if (!MECE390AlternatePlan3A4Aflag) { 
+       var MECE390AlternatePlan3A4Aelement = document.getElementById("MECE390AlternatePlan3A4A");
+       MECE390AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+       MECE390AlternatePlan3A4Aelement.classList.add("MATH");
        
-       that.removeFromClicked("MECE390AlternatePlan");
+       that.removeFromClicked("MECE390AlternatePlan3A4A");
+ } 
        break;
       case "CoopPlan13A":
+if (!MATH100CoopPlan13Aflag) { 
        var MATH100CoopPlan13Aelement = document.getElementById("MATH100CoopPlan13A");
        MATH100CoopPlan13Aelement.classList.remove("MATH-highlighted");
        MATH100CoopPlan13Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH100CoopPlan13A");
+ } 
+if (!MATH101CoopPlan13Aflag) { 
        var MATH101CoopPlan13Aelement = document.getElementById("MATH101CoopPlan13A");
        MATH101CoopPlan13Aelement.classList.remove("MATH-highlighted");
        MATH101CoopPlan13Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH101CoopPlan13A");
+ } 
+if (!MATH102CoopPlan13Aflag) { 
        var MATH102CoopPlan13Aelement = document.getElementById("MATH102CoopPlan13A");
        MATH102CoopPlan13Aelement.classList.remove("MATH-highlighted");
        MATH102CoopPlan13Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH102CoopPlan13A");
+ } 
+if (!MATH209CoopPlan13Aflag) { 
        var MATH209CoopPlan13Aelement = document.getElementById("MATH209CoopPlan13A");
        MATH209CoopPlan13Aelement.classList.remove("MATH-highlighted");
        MATH209CoopPlan13Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH209CoopPlan13A");
+ } 
+if (!STAT235CoopPlan13Aflag) { 
        var STAT235CoopPlan13Aelement = document.getElementById("STAT235CoopPlan13A");
        STAT235CoopPlan13Aelement.classList.remove("MATH-highlighted");
        STAT235CoopPlan13Aelement.classList.add("MATH");
        
        that.removeFromClicked("STAT235CoopPlan13A");
+ } 
+if (!MATH201CoopPlan13Aflag) { 
        var MATH201CoopPlan13Aelement = document.getElementById("MATH201CoopPlan13A");
        MATH201CoopPlan13Aelement.classList.remove("MATH-highlighted");
        MATH201CoopPlan13Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH201CoopPlan13A");
+ } 
+if (!MATH300CoopPlan13Aflag) { 
        var MATH300CoopPlan13Aelement = document.getElementById("MATH300CoopPlan13A");
        MATH300CoopPlan13Aelement.classList.remove("MATH-highlighted");
        MATH300CoopPlan13Aelement.classList.add("MATH");
        
        that.removeFromClicked("MATH300CoopPlan13A");
+ } 
+if (!MECE390CoopPlan13Aflag) { 
        var MECE390CoopPlan13Aelement = document.getElementById("MECE390CoopPlan13A");
        MECE390CoopPlan13Aelement.classList.remove("MATH-highlighted");
        MECE390CoopPlan13Aelement.classList.add("MATH");
        
        that.removeFromClicked("MECE390CoopPlan13A");
+ } 
        break;
       case "CoopPlan13B":
+if (!MATH100CoopPlan13Bflag) { 
        var MATH100CoopPlan13Belement = document.getElementById("MATH100CoopPlan13B");
        MATH100CoopPlan13Belement.classList.remove("MATH-highlighted");
        MATH100CoopPlan13Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH100CoopPlan13B");
+ } 
+if (!MATH101CoopPlan13Bflag) { 
        var MATH101CoopPlan13Belement = document.getElementById("MATH101CoopPlan13B");
        MATH101CoopPlan13Belement.classList.remove("MATH-highlighted");
        MATH101CoopPlan13Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH101CoopPlan13B");
+ } 
+if (!MATH102CoopPlan13Bflag) { 
        var MATH102CoopPlan13Belement = document.getElementById("MATH102CoopPlan13B");
        MATH102CoopPlan13Belement.classList.remove("MATH-highlighted");
        MATH102CoopPlan13Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH102CoopPlan13B");
+ } 
+if (!MATH209CoopPlan13Bflag) { 
        var MATH209CoopPlan13Belement = document.getElementById("MATH209CoopPlan13B");
        MATH209CoopPlan13Belement.classList.remove("MATH-highlighted");
        MATH209CoopPlan13Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH209CoopPlan13B");
+ } 
+if (!STAT235CoopPlan13Bflag) { 
        var STAT235CoopPlan13Belement = document.getElementById("STAT235CoopPlan13B");
        STAT235CoopPlan13Belement.classList.remove("MATH-highlighted");
        STAT235CoopPlan13Belement.classList.add("MATH");
        
        that.removeFromClicked("STAT235CoopPlan13B");
+ } 
+if (!MATH201CoopPlan13Bflag) { 
        var MATH201CoopPlan13Belement = document.getElementById("MATH201CoopPlan13B");
        MATH201CoopPlan13Belement.classList.remove("MATH-highlighted");
        MATH201CoopPlan13Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH201CoopPlan13B");
+ } 
+if (!MECE390CoopPlan13Bflag) { 
        var MECE390CoopPlan13Belement = document.getElementById("MECE390CoopPlan13B");
        MECE390CoopPlan13Belement.classList.remove("MATH-highlighted");
        MECE390CoopPlan13Belement.classList.add("MATH");
        
        that.removeFromClicked("MECE390CoopPlan13B");
+ } 
+if (!MATH300CoopPlan13Bflag) { 
        var MATH300CoopPlan13Belement = document.getElementById("MATH300CoopPlan13B");
        MATH300CoopPlan13Belement.classList.remove("MATH-highlighted");
        MATH300CoopPlan13Belement.classList.add("MATH");
        
        that.removeFromClicked("MATH300CoopPlan13B");
+ } 
        break;
       case "CoopPlan2":
+if (!MATH100CoopPlan2flag) { 
        var MATH100CoopPlan2element = document.getElementById("MATH100CoopPlan2");
        MATH100CoopPlan2element.classList.remove("MATH-highlighted");
        MATH100CoopPlan2element.classList.add("MATH");
        
        that.removeFromClicked("MATH100CoopPlan2");
+ } 
+if (!MATH101CoopPlan2flag) { 
        var MATH101CoopPlan2element = document.getElementById("MATH101CoopPlan2");
        MATH101CoopPlan2element.classList.remove("MATH-highlighted");
        MATH101CoopPlan2element.classList.add("MATH");
        
        that.removeFromClicked("MATH101CoopPlan2");
+ } 
+if (!MATH102CoopPlan2flag) { 
        var MATH102CoopPlan2element = document.getElementById("MATH102CoopPlan2");
        MATH102CoopPlan2element.classList.remove("MATH-highlighted");
        MATH102CoopPlan2element.classList.add("MATH");
        
        that.removeFromClicked("MATH102CoopPlan2");
+ } 
+if (!MATH209CoopPlan2flag) { 
        var MATH209CoopPlan2element = document.getElementById("MATH209CoopPlan2");
        MATH209CoopPlan2element.classList.remove("MATH-highlighted");
        MATH209CoopPlan2element.classList.add("MATH");
        
        that.removeFromClicked("MATH209CoopPlan2");
+ } 
+if (!STAT235CoopPlan2flag) { 
        var STAT235CoopPlan2element = document.getElementById("STAT235CoopPlan2");
        STAT235CoopPlan2element.classList.remove("MATH-highlighted");
        STAT235CoopPlan2element.classList.add("MATH");
        
        that.removeFromClicked("STAT235CoopPlan2");
+ } 
+if (!MATH201CoopPlan2flag) { 
        var MATH201CoopPlan2element = document.getElementById("MATH201CoopPlan2");
        MATH201CoopPlan2element.classList.remove("MATH-highlighted");
        MATH201CoopPlan2element.classList.add("MATH");
        
        that.removeFromClicked("MATH201CoopPlan2");
+ } 
+if (!MATH300CoopPlan2flag) { 
        var MATH300CoopPlan2element = document.getElementById("MATH300CoopPlan2");
        MATH300CoopPlan2element.classList.remove("MATH-highlighted");
        MATH300CoopPlan2element.classList.add("MATH");
        
        that.removeFromClicked("MATH300CoopPlan2");
+ } 
+if (!MECE390CoopPlan2flag) { 
        var MECE390CoopPlan2element = document.getElementById("MECE390CoopPlan2");
        MECE390CoopPlan2element.classList.remove("MATH-highlighted");
        MECE390CoopPlan2element.classList.add("MATH");
        
        that.removeFromClicked("MECE390CoopPlan2");
+ } 
        break;
       case "CoopPlan3Biomedical":
+if (!MATH100CoopPlan3Biomedicalflag) { 
        var MATH100CoopPlan3Biomedicalelement = document.getElementById("MATH100CoopPlan3Biomedical");
        MATH100CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
        MATH100CoopPlan3Biomedicalelement.classList.add("MATH");
        
        that.removeFromClicked("MATH100CoopPlan3Biomedical");
+ } 
+if (!MATH101CoopPlan3Biomedicalflag) { 
        var MATH101CoopPlan3Biomedicalelement = document.getElementById("MATH101CoopPlan3Biomedical");
        MATH101CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
        MATH101CoopPlan3Biomedicalelement.classList.add("MATH");
        
        that.removeFromClicked("MATH101CoopPlan3Biomedical");
+ } 
+if (!MATH102CoopPlan3Biomedicalflag) { 
        var MATH102CoopPlan3Biomedicalelement = document.getElementById("MATH102CoopPlan3Biomedical");
        MATH102CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
        MATH102CoopPlan3Biomedicalelement.classList.add("MATH");
        
        that.removeFromClicked("MATH102CoopPlan3Biomedical");
+ } 
+if (!MATH209CoopPlan3Biomedicalflag) { 
        var MATH209CoopPlan3Biomedicalelement = document.getElementById("MATH209CoopPlan3Biomedical");
        MATH209CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
        MATH209CoopPlan3Biomedicalelement.classList.add("MATH");
        
        that.removeFromClicked("MATH209CoopPlan3Biomedical");
+ } 
+if (!STAT235CoopPlan3Biomedicalflag) { 
        var STAT235CoopPlan3Biomedicalelement = document.getElementById("STAT235CoopPlan3Biomedical");
        STAT235CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
        STAT235CoopPlan3Biomedicalelement.classList.add("MATH");
        
        that.removeFromClicked("STAT235CoopPlan3Biomedical");
+ } 
+if (!MATH201CoopPlan3Biomedicalflag) { 
        var MATH201CoopPlan3Biomedicalelement = document.getElementById("MATH201CoopPlan3Biomedical");
        MATH201CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
        MATH201CoopPlan3Biomedicalelement.classList.add("MATH");
        
        that.removeFromClicked("MATH201CoopPlan3Biomedical");
+ } 
+if (!MECE390CoopPlan3Biomedicalflag) { 
        var MECE390CoopPlan3Biomedicalelement = document.getElementById("MECE390CoopPlan3Biomedical");
        MECE390CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
        MECE390CoopPlan3Biomedicalelement.classList.add("MATH");
        
        that.removeFromClicked("MECE390CoopPlan3Biomedical");
+ } 
+if (!MATH300CoopPlan3Biomedicalflag) { 
        var MATH300CoopPlan3Biomedicalelement = document.getElementById("MATH300CoopPlan3Biomedical");
        MATH300CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
        MATH300CoopPlan3Biomedicalelement.classList.add("MATH");
        
        that.removeFromClicked("MATH300CoopPlan3Biomedical");
+ } 
        break;
       case "CoopPlan4":
+if (!MATH100CoopPlan4flag) { 
        var MATH100CoopPlan4element = document.getElementById("MATH100CoopPlan4");
        MATH100CoopPlan4element.classList.remove("MATH-highlighted");
        MATH100CoopPlan4element.classList.add("MATH");
        
        that.removeFromClicked("MATH100CoopPlan4");
+ } 
+if (!MATH101CoopPlan4flag) { 
        var MATH101CoopPlan4element = document.getElementById("MATH101CoopPlan4");
        MATH101CoopPlan4element.classList.remove("MATH-highlighted");
        MATH101CoopPlan4element.classList.add("MATH");
        
        that.removeFromClicked("MATH101CoopPlan4");
+ } 
+if (!MATH102CoopPlan4flag) { 
        var MATH102CoopPlan4element = document.getElementById("MATH102CoopPlan4");
        MATH102CoopPlan4element.classList.remove("MATH-highlighted");
        MATH102CoopPlan4element.classList.add("MATH");
        
        that.removeFromClicked("MATH102CoopPlan4");
+ } 
+if (!MATH209CoopPlan4flag) { 
        var MATH209CoopPlan4element = document.getElementById("MATH209CoopPlan4");
        MATH209CoopPlan4element.classList.remove("MATH-highlighted");
        MATH209CoopPlan4element.classList.add("MATH");
        
        that.removeFromClicked("MATH209CoopPlan4");
+ } 
+if (!STAT235CoopPlan4flag) { 
        var STAT235CoopPlan4element = document.getElementById("STAT235CoopPlan4");
        STAT235CoopPlan4element.classList.remove("MATH-highlighted");
        STAT235CoopPlan4element.classList.add("MATH");
        
        that.removeFromClicked("STAT235CoopPlan4");
+ } 
+if (!MATH201CoopPlan4flag) { 
        var MATH201CoopPlan4element = document.getElementById("MATH201CoopPlan4");
        MATH201CoopPlan4element.classList.remove("MATH-highlighted");
        MATH201CoopPlan4element.classList.add("MATH");
        
        that.removeFromClicked("MATH201CoopPlan4");
+ } 
+if (!MATH300CoopPlan4flag) { 
        var MATH300CoopPlan4element = document.getElementById("MATH300CoopPlan4");
        MATH300CoopPlan4element.classList.remove("MATH-highlighted");
        MATH300CoopPlan4element.classList.add("MATH");
        
        that.removeFromClicked("MATH300CoopPlan4");
+ } 
+if (!MECE390CoopPlan4flag) { 
        var MECE390CoopPlan4element = document.getElementById("MECE390CoopPlan4");
        MECE390CoopPlan4element.classList.remove("MATH-highlighted");
        MECE390CoopPlan4element.classList.add("MATH");
        
        that.removeFromClicked("MECE390CoopPlan4");
+ } 
        break;
        }
       break;
   case "ENGINEERINGDESIGN":
     switch(planName) {
       case "TraditionalPlan2A3A4A":
+if (!ENGG160TraditionalPlan2A3A4Aflag) { 
        var ENGG160TraditionalPlan2A3A4Aelement = document.getElementById("ENGG160TraditionalPlan2A3A4A");
        ENGG160TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        ENGG160TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("ENGG160TraditionalPlan2A3A4A");
+ } 
+if (!MECE260TraditionalPlan2A3A4Aflag) { 
        var MECE260TraditionalPlan2A3A4Aelement = document.getElementById("MECE260TraditionalPlan2A3A4A");
        MECE260TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE260TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE260TraditionalPlan2A3A4A");
+ } 
+if (!MECE265TraditionalPlan2A3A4Aflag) { 
        var MECE265TraditionalPlan2A3A4Aelement = document.getElementById("MECE265TraditionalPlan2A3A4A");
        MECE265TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE265TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE265TraditionalPlan2A3A4A");
+ } 
+if (!MECE360TraditionalPlan2A3A4Aflag) { 
        var MECE360TraditionalPlan2A3A4Aelement = document.getElementById("MECE360TraditionalPlan2A3A4A");
        MECE360TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE360TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE360TraditionalPlan2A3A4A");
+ } 
+if (!MECE362TraditionalPlan2A3A4Aflag) { 
        var MECE362TraditionalPlan2A3A4Aelement = document.getElementById("MECE362TraditionalPlan2A3A4A");
        MECE362TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE362TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE362TraditionalPlan2A3A4A");
+ } 
+if (!MECE460TraditionalPlan2A3A4Aflag) { 
        var MECE460TraditionalPlan2A3A4Aelement = document.getElementById("MECE460TraditionalPlan2A3A4A");
        MECE460TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE460TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE460TraditionalPlan2A3A4A");
+ } 
        break;
       case "TraditionalPlan2A3A4B":
+if (!ENGG160TraditionalPlan2A3A4Bflag) { 
        var ENGG160TraditionalPlan2A3A4Belement = document.getElementById("ENGG160TraditionalPlan2A3A4B");
        ENGG160TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        ENGG160TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("ENGG160TraditionalPlan2A3A4B");
+ } 
+if (!MECE260TraditionalPlan2A3A4Bflag) { 
        var MECE260TraditionalPlan2A3A4Belement = document.getElementById("MECE260TraditionalPlan2A3A4B");
        MECE260TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE260TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE260TraditionalPlan2A3A4B");
+ } 
+if (!MECE265TraditionalPlan2A3A4Bflag) { 
        var MECE265TraditionalPlan2A3A4Belement = document.getElementById("MECE265TraditionalPlan2A3A4B");
        MECE265TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE265TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE265TraditionalPlan2A3A4B");
+ } 
+if (!MECE360TraditionalPlan2A3A4Bflag) { 
        var MECE360TraditionalPlan2A3A4Belement = document.getElementById("MECE360TraditionalPlan2A3A4B");
        MECE360TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE360TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE360TraditionalPlan2A3A4B");
+ } 
+if (!MECE362TraditionalPlan2A3A4Bflag) { 
        var MECE362TraditionalPlan2A3A4Belement = document.getElementById("MECE362TraditionalPlan2A3A4B");
        MECE362TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE362TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE362TraditionalPlan2A3A4B");
+ } 
+if (!MECE460TraditionalPlan2A3A4Bflag) { 
        var MECE460TraditionalPlan2A3A4Belement = document.getElementById("MECE460TraditionalPlan2A3A4B");
        MECE460TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE460TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE460TraditionalPlan2A3A4B");
+ } 
        break;
       case "TraditionalPlan2A3B4A":
+if (!ENGG160TraditionalPlan2A3B4Aflag) { 
        var ENGG160TraditionalPlan2A3B4Aelement = document.getElementById("ENGG160TraditionalPlan2A3B4A");
        ENGG160TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        ENGG160TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("ENGG160TraditionalPlan2A3B4A");
+ } 
+if (!MECE260TraditionalPlan2A3B4Aflag) { 
        var MECE260TraditionalPlan2A3B4Aelement = document.getElementById("MECE260TraditionalPlan2A3B4A");
        MECE260TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE260TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE260TraditionalPlan2A3B4A");
+ } 
+if (!MECE265TraditionalPlan2A3B4Aflag) { 
        var MECE265TraditionalPlan2A3B4Aelement = document.getElementById("MECE265TraditionalPlan2A3B4A");
        MECE265TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE265TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE265TraditionalPlan2A3B4A");
+ } 
+if (!MECE360TraditionalPlan2A3B4Aflag) { 
        var MECE360TraditionalPlan2A3B4Aelement = document.getElementById("MECE360TraditionalPlan2A3B4A");
        MECE360TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE360TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE360TraditionalPlan2A3B4A");
+ } 
+if (!MECE362TraditionalPlan2A3B4Aflag) { 
        var MECE362TraditionalPlan2A3B4Aelement = document.getElementById("MECE362TraditionalPlan2A3B4A");
        MECE362TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE362TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE362TraditionalPlan2A3B4A");
+ } 
+if (!MECE460TraditionalPlan2A3B4Aflag) { 
        var MECE460TraditionalPlan2A3B4Aelement = document.getElementById("MECE460TraditionalPlan2A3B4A");
        MECE460TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE460TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE460TraditionalPlan2A3B4A");
+ } 
        break;
       case "TraditionalPlan2A3B4B":
+if (!ENGG160TraditionalPlan2A3B4Bflag) { 
        var ENGG160TraditionalPlan2A3B4Belement = document.getElementById("ENGG160TraditionalPlan2A3B4B");
        ENGG160TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        ENGG160TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("ENGG160TraditionalPlan2A3B4B");
+ } 
+if (!MECE260TraditionalPlan2A3B4Bflag) { 
        var MECE260TraditionalPlan2A3B4Belement = document.getElementById("MECE260TraditionalPlan2A3B4B");
        MECE260TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE260TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE260TraditionalPlan2A3B4B");
+ } 
+if (!MECE265TraditionalPlan2A3B4Bflag) { 
        var MECE265TraditionalPlan2A3B4Belement = document.getElementById("MECE265TraditionalPlan2A3B4B");
        MECE265TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE265TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE265TraditionalPlan2A3B4B");
+ } 
+if (!MECE360TraditionalPlan2A3B4Bflag) { 
        var MECE360TraditionalPlan2A3B4Belement = document.getElementById("MECE360TraditionalPlan2A3B4B");
        MECE360TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE360TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE360TraditionalPlan2A3B4B");
+ } 
+if (!MECE362TraditionalPlan2A3B4Bflag) { 
        var MECE362TraditionalPlan2A3B4Belement = document.getElementById("MECE362TraditionalPlan2A3B4B");
        MECE362TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE362TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE362TraditionalPlan2A3B4B");
+ } 
+if (!MECE460TraditionalPlan2A3B4Bflag) { 
        var MECE460TraditionalPlan2A3B4Belement = document.getElementById("MECE460TraditionalPlan2A3B4B");
        MECE460TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE460TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE460TraditionalPlan2A3B4B");
+ } 
        break;
       case "TraditionalPlan2B3A4A":
+if (!ENGG160TraditionalPlan2B3A4Aflag) { 
        var ENGG160TraditionalPlan2B3A4Aelement = document.getElementById("ENGG160TraditionalPlan2B3A4A");
        ENGG160TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        ENGG160TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("ENGG160TraditionalPlan2B3A4A");
+ } 
+if (!MECE260TraditionalPlan2B3A4Aflag) { 
        var MECE260TraditionalPlan2B3A4Aelement = document.getElementById("MECE260TraditionalPlan2B3A4A");
        MECE260TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE260TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE260TraditionalPlan2B3A4A");
+ } 
+if (!MECE265TraditionalPlan2B3A4Aflag) { 
        var MECE265TraditionalPlan2B3A4Aelement = document.getElementById("MECE265TraditionalPlan2B3A4A");
        MECE265TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE265TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE265TraditionalPlan2B3A4A");
+ } 
+if (!MECE360TraditionalPlan2B3A4Aflag) { 
        var MECE360TraditionalPlan2B3A4Aelement = document.getElementById("MECE360TraditionalPlan2B3A4A");
        MECE360TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE360TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE360TraditionalPlan2B3A4A");
+ } 
+if (!MECE362TraditionalPlan2B3A4Aflag) { 
        var MECE362TraditionalPlan2B3A4Aelement = document.getElementById("MECE362TraditionalPlan2B3A4A");
        MECE362TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE362TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE362TraditionalPlan2B3A4A");
+ } 
+if (!MECE460TraditionalPlan2B3A4Aflag) { 
        var MECE460TraditionalPlan2B3A4Aelement = document.getElementById("MECE460TraditionalPlan2B3A4A");
        MECE460TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE460TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE460TraditionalPlan2B3A4A");
+ } 
        break;
       case "TraditionalPlan2B3A4B":
+if (!ENGG160TraditionalPlan2B3A4Bflag) { 
        var ENGG160TraditionalPlan2B3A4Belement = document.getElementById("ENGG160TraditionalPlan2B3A4B");
        ENGG160TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        ENGG160TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("ENGG160TraditionalPlan2B3A4B");
+ } 
+if (!MECE260TraditionalPlan2B3A4Bflag) { 
        var MECE260TraditionalPlan2B3A4Belement = document.getElementById("MECE260TraditionalPlan2B3A4B");
        MECE260TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE260TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE260TraditionalPlan2B3A4B");
+ } 
+if (!MECE265TraditionalPlan2B3A4Bflag) { 
        var MECE265TraditionalPlan2B3A4Belement = document.getElementById("MECE265TraditionalPlan2B3A4B");
        MECE265TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE265TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE265TraditionalPlan2B3A4B");
+ } 
+if (!MECE360TraditionalPlan2B3A4Bflag) { 
        var MECE360TraditionalPlan2B3A4Belement = document.getElementById("MECE360TraditionalPlan2B3A4B");
        MECE360TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE360TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE360TraditionalPlan2B3A4B");
+ } 
+if (!MECE362TraditionalPlan2B3A4Bflag) { 
        var MECE362TraditionalPlan2B3A4Belement = document.getElementById("MECE362TraditionalPlan2B3A4B");
        MECE362TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE362TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE362TraditionalPlan2B3A4B");
+ } 
+if (!MECE460TraditionalPlan2B3A4Bflag) { 
        var MECE460TraditionalPlan2B3A4Belement = document.getElementById("MECE460TraditionalPlan2B3A4B");
        MECE460TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE460TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE460TraditionalPlan2B3A4B");
+ } 
        break;
       case "TraditionalPlan2B3B4A":
+if (!ENGG160TraditionalPlan2B3B4Aflag) { 
        var ENGG160TraditionalPlan2B3B4Aelement = document.getElementById("ENGG160TraditionalPlan2B3B4A");
        ENGG160TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        ENGG160TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("ENGG160TraditionalPlan2B3B4A");
+ } 
+if (!MECE260TraditionalPlan2B3B4Aflag) { 
        var MECE260TraditionalPlan2B3B4Aelement = document.getElementById("MECE260TraditionalPlan2B3B4A");
        MECE260TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE260TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE260TraditionalPlan2B3B4A");
+ } 
+if (!MECE265TraditionalPlan2B3B4Aflag) { 
        var MECE265TraditionalPlan2B3B4Aelement = document.getElementById("MECE265TraditionalPlan2B3B4A");
        MECE265TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE265TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE265TraditionalPlan2B3B4A");
+ } 
+if (!MECE360TraditionalPlan2B3B4Aflag) { 
        var MECE360TraditionalPlan2B3B4Aelement = document.getElementById("MECE360TraditionalPlan2B3B4A");
        MECE360TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE360TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE360TraditionalPlan2B3B4A");
+ } 
+if (!MECE362TraditionalPlan2B3B4Aflag) { 
        var MECE362TraditionalPlan2B3B4Aelement = document.getElementById("MECE362TraditionalPlan2B3B4A");
        MECE362TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE362TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE362TraditionalPlan2B3B4A");
+ } 
+if (!MECE460TraditionalPlan2B3B4Aflag) { 
        var MECE460TraditionalPlan2B3B4Aelement = document.getElementById("MECE460TraditionalPlan2B3B4A");
        MECE460TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE460TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE460TraditionalPlan2B3B4A");
+ } 
        break;
       case "TraditionalPlan2B3B4B":
+if (!ENGG160TraditionalPlan2B3B4Bflag) { 
        var ENGG160TraditionalPlan2B3B4Belement = document.getElementById("ENGG160TraditionalPlan2B3B4B");
        ENGG160TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        ENGG160TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("ENGG160TraditionalPlan2B3B4B");
+ } 
+if (!MECE260TraditionalPlan2B3B4Bflag) { 
        var MECE260TraditionalPlan2B3B4Belement = document.getElementById("MECE260TraditionalPlan2B3B4B");
        MECE260TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE260TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE260TraditionalPlan2B3B4B");
+ } 
+if (!MECE265TraditionalPlan2B3B4Bflag) { 
        var MECE265TraditionalPlan2B3B4Belement = document.getElementById("MECE265TraditionalPlan2B3B4B");
        MECE265TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE265TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE265TraditionalPlan2B3B4B");
+ } 
+if (!MECE360TraditionalPlan2B3B4Bflag) { 
        var MECE360TraditionalPlan2B3B4Belement = document.getElementById("MECE360TraditionalPlan2B3B4B");
        MECE360TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE360TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE360TraditionalPlan2B3B4B");
+ } 
+if (!MECE362TraditionalPlan2B3B4Bflag) { 
        var MECE362TraditionalPlan2B3B4Belement = document.getElementById("MECE362TraditionalPlan2B3B4B");
        MECE362TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE362TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE362TraditionalPlan2B3B4B");
+ } 
+if (!MECE460TraditionalPlan2B3B4Bflag) { 
        var MECE460TraditionalPlan2B3B4Belement = document.getElementById("MECE460TraditionalPlan2B3B4B");
        MECE460TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE460TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE460TraditionalPlan2B3B4B");
+ } 
        break;
-      case "AlternatePlan":
-       var ENGG160AlternatePlanelement = document.getElementById("ENGG160AlternatePlan");
-       ENGG160AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
-       ENGG160AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
+      case "AlternatePlan3A4A":
+if (!ENGG160AlternatePlan3A4Aflag) { 
+       var ENGG160AlternatePlan3A4Aelement = document.getElementById("ENGG160AlternatePlan3A4A");
+       ENGG160AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
+       ENGG160AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN");
        
-       that.removeFromClicked("ENGG160AlternatePlan");
-       var MECE260AlternatePlanelement = document.getElementById("MECE260AlternatePlan");
-       MECE260AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
-       MECE260AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
+       that.removeFromClicked("ENGG160AlternatePlan3A4A");
+ } 
+if (!MECE260AlternatePlan3A4Aflag) { 
+       var MECE260AlternatePlan3A4Aelement = document.getElementById("MECE260AlternatePlan3A4A");
+       MECE260AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
+       MECE260AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN");
        
-       that.removeFromClicked("MECE260AlternatePlan");
-       var MECE265AlternatePlanelement = document.getElementById("MECE265AlternatePlan");
-       MECE265AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
-       MECE265AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
+       that.removeFromClicked("MECE260AlternatePlan3A4A");
+ } 
+if (!MECE265AlternatePlan3A4Aflag) { 
+       var MECE265AlternatePlan3A4Aelement = document.getElementById("MECE265AlternatePlan3A4A");
+       MECE265AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
+       MECE265AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN");
        
-       that.removeFromClicked("MECE265AlternatePlan");
-       var MECE360AlternatePlanelement = document.getElementById("MECE360AlternatePlan");
-       MECE360AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
-       MECE360AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
+       that.removeFromClicked("MECE265AlternatePlan3A4A");
+ } 
+if (!MECE360AlternatePlan3A4Aflag) { 
+       var MECE360AlternatePlan3A4Aelement = document.getElementById("MECE360AlternatePlan3A4A");
+       MECE360AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
+       MECE360AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN");
        
-       that.removeFromClicked("MECE360AlternatePlan");
-       var MECE362AlternatePlanelement = document.getElementById("MECE362AlternatePlan");
-       MECE362AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
-       MECE362AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
+       that.removeFromClicked("MECE360AlternatePlan3A4A");
+ } 
+if (!MECE362AlternatePlan3A4Aflag) { 
+       var MECE362AlternatePlan3A4Aelement = document.getElementById("MECE362AlternatePlan3A4A");
+       MECE362AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
+       MECE362AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN");
        
-       that.removeFromClicked("MECE362AlternatePlan");
-       var MECE460AlternatePlanelement = document.getElementById("MECE460AlternatePlan");
-       MECE460AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
-       MECE460AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
+       that.removeFromClicked("MECE362AlternatePlan3A4A");
+ } 
+if (!MECE460AlternatePlan3A4Aflag) { 
+       var MECE460AlternatePlan3A4Aelement = document.getElementById("MECE460AlternatePlan3A4A");
+       MECE460AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
+       MECE460AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN");
        
-       that.removeFromClicked("MECE460AlternatePlan");
+       that.removeFromClicked("MECE460AlternatePlan3A4A");
+ } 
        break;
       case "CoopPlan13A":
+if (!ENGG160CoopPlan13Aflag) { 
        var ENGG160CoopPlan13Aelement = document.getElementById("ENGG160CoopPlan13A");
        ENGG160CoopPlan13Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        ENGG160CoopPlan13Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("ENGG160CoopPlan13A");
+ } 
+if (!MECE260CoopPlan13Aflag) { 
        var MECE260CoopPlan13Aelement = document.getElementById("MECE260CoopPlan13A");
        MECE260CoopPlan13Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE260CoopPlan13Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE260CoopPlan13A");
+ } 
+if (!MECE265CoopPlan13Aflag) { 
        var MECE265CoopPlan13Aelement = document.getElementById("MECE265CoopPlan13A");
        MECE265CoopPlan13Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE265CoopPlan13Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE265CoopPlan13A");
+ } 
+if (!MECE360CoopPlan13Aflag) { 
        var MECE360CoopPlan13Aelement = document.getElementById("MECE360CoopPlan13A");
        MECE360CoopPlan13Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE360CoopPlan13Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE360CoopPlan13A");
+ } 
+if (!MECE362CoopPlan13Aflag) { 
        var MECE362CoopPlan13Aelement = document.getElementById("MECE362CoopPlan13A");
        MECE362CoopPlan13Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE362CoopPlan13Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE362CoopPlan13A");
+ } 
+if (!MECE460CoopPlan13Aflag) { 
        var MECE460CoopPlan13Aelement = document.getElementById("MECE460CoopPlan13A");
        MECE460CoopPlan13Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE460CoopPlan13Aelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE460CoopPlan13A");
+ } 
        break;
       case "CoopPlan13B":
+if (!ENGG160CoopPlan13Bflag) { 
        var ENGG160CoopPlan13Belement = document.getElementById("ENGG160CoopPlan13B");
        ENGG160CoopPlan13Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        ENGG160CoopPlan13Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("ENGG160CoopPlan13B");
+ } 
+if (!MECE260CoopPlan13Bflag) { 
        var MECE260CoopPlan13Belement = document.getElementById("MECE260CoopPlan13B");
        MECE260CoopPlan13Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE260CoopPlan13Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE260CoopPlan13B");
+ } 
+if (!MECE265CoopPlan13Bflag) { 
        var MECE265CoopPlan13Belement = document.getElementById("MECE265CoopPlan13B");
        MECE265CoopPlan13Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE265CoopPlan13Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE265CoopPlan13B");
+ } 
+if (!MECE360CoopPlan13Bflag) { 
        var MECE360CoopPlan13Belement = document.getElementById("MECE360CoopPlan13B");
        MECE360CoopPlan13Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE360CoopPlan13Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE360CoopPlan13B");
+ } 
+if (!MECE362CoopPlan13Bflag) { 
        var MECE362CoopPlan13Belement = document.getElementById("MECE362CoopPlan13B");
        MECE362CoopPlan13Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE362CoopPlan13Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE362CoopPlan13B");
+ } 
+if (!MECE460CoopPlan13Bflag) { 
        var MECE460CoopPlan13Belement = document.getElementById("MECE460CoopPlan13B");
        MECE460CoopPlan13Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE460CoopPlan13Belement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE460CoopPlan13B");
+ } 
        break;
       case "CoopPlan2":
+if (!ENGG160CoopPlan2flag) { 
        var ENGG160CoopPlan2element = document.getElementById("ENGG160CoopPlan2");
        ENGG160CoopPlan2element.classList.remove("ENGINEERINGDESIGN-highlighted");
        ENGG160CoopPlan2element.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("ENGG160CoopPlan2");
+ } 
+if (!MECE260CoopPlan2flag) { 
        var MECE260CoopPlan2element = document.getElementById("MECE260CoopPlan2");
        MECE260CoopPlan2element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE260CoopPlan2element.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE260CoopPlan2");
+ } 
+if (!MECE265CoopPlan2flag) { 
        var MECE265CoopPlan2element = document.getElementById("MECE265CoopPlan2");
        MECE265CoopPlan2element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE265CoopPlan2element.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE265CoopPlan2");
+ } 
+if (!MECE360CoopPlan2flag) { 
        var MECE360CoopPlan2element = document.getElementById("MECE360CoopPlan2");
        MECE360CoopPlan2element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE360CoopPlan2element.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE360CoopPlan2");
+ } 
+if (!MECE362CoopPlan2flag) { 
        var MECE362CoopPlan2element = document.getElementById("MECE362CoopPlan2");
        MECE362CoopPlan2element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE362CoopPlan2element.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE362CoopPlan2");
+ } 
+if (!MECE460CoopPlan2flag) { 
        var MECE460CoopPlan2element = document.getElementById("MECE460CoopPlan2");
        MECE460CoopPlan2element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE460CoopPlan2element.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE460CoopPlan2");
+ } 
        break;
       case "CoopPlan3Biomedical":
+if (!ENGG160CoopPlan3Biomedicalflag) { 
        var ENGG160CoopPlan3Biomedicalelement = document.getElementById("ENGG160CoopPlan3Biomedical");
        ENGG160CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        ENGG160CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("ENGG160CoopPlan3Biomedical");
+ } 
+if (!MECE260CoopPlan3Biomedicalflag) { 
        var MECE260CoopPlan3Biomedicalelement = document.getElementById("MECE260CoopPlan3Biomedical");
        MECE260CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE260CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE260CoopPlan3Biomedical");
+ } 
+if (!MECE265CoopPlan3Biomedicalflag) { 
        var MECE265CoopPlan3Biomedicalelement = document.getElementById("MECE265CoopPlan3Biomedical");
        MECE265CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE265CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE265CoopPlan3Biomedical");
+ } 
+if (!MECE360CoopPlan3Biomedicalflag) { 
        var MECE360CoopPlan3Biomedicalelement = document.getElementById("MECE360CoopPlan3Biomedical");
        MECE360CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE360CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE360CoopPlan3Biomedical");
+ } 
+if (!MECE362CoopPlan3Biomedicalflag) { 
        var MECE362CoopPlan3Biomedicalelement = document.getElementById("MECE362CoopPlan3Biomedical");
        MECE362CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE362CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE362CoopPlan3Biomedical");
+ } 
+if (!MECE460CoopPlan3Biomedicalflag) { 
        var MECE460CoopPlan3Biomedicalelement = document.getElementById("MECE460CoopPlan3Biomedical");
        MECE460CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE460CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE460CoopPlan3Biomedical");
+ } 
        break;
       case "CoopPlan4":
+if (!ENGG160CoopPlan4flag) { 
        var ENGG160CoopPlan4element = document.getElementById("ENGG160CoopPlan4");
        ENGG160CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
        ENGG160CoopPlan4element.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("ENGG160CoopPlan4");
+ } 
+if (!MECE260CoopPlan4flag) { 
        var MECE260CoopPlan4element = document.getElementById("MECE260CoopPlan4");
        MECE260CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE260CoopPlan4element.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE260CoopPlan4");
+ } 
+if (!MECE265CoopPlan4flag) { 
        var MECE265CoopPlan4element = document.getElementById("MECE265CoopPlan4");
        MECE265CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE265CoopPlan4element.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE265CoopPlan4");
+ } 
+if (!MECE360CoopPlan4flag) { 
        var MECE360CoopPlan4element = document.getElementById("MECE360CoopPlan4");
        MECE360CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE360CoopPlan4element.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE360CoopPlan4");
+ } 
+if (!MECE362CoopPlan4flag) { 
        var MECE362CoopPlan4element = document.getElementById("MECE362CoopPlan4");
        MECE362CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE362CoopPlan4element.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE362CoopPlan4");
+ } 
+if (!MECE460CoopPlan4flag) { 
        var MECE460CoopPlan4element = document.getElementById("MECE460CoopPlan4");
        MECE460CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE460CoopPlan4element.classList.add("ENGINEERINGDESIGN");
        
        that.removeFromClicked("MECE460CoopPlan4");
+ } 
        break;
        }
       break;
   case "ENGINEERINGSCIENCES":
     switch(planName) {
       case "TraditionalPlan2A3A4A":
+if (!CIVE270TraditionalPlan2A3A4Aflag) { 
        var CIVE270TraditionalPlan2A3A4Aelement = document.getElementById("CIVE270TraditionalPlan2A3A4A");
        CIVE270TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CIVE270TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CIVE270TraditionalPlan2A3A4A");
+ } 
+if (!CHE243TraditionalPlan2A3A4Aflag) { 
        var CHE243TraditionalPlan2A3A4Aelement = document.getElementById("CHE243TraditionalPlan2A3A4A");
        CHE243TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE243TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE243TraditionalPlan2A3A4A");
+ } 
+if (!MECE250TraditionalPlan2A3A4Aflag) { 
        var MECE250TraditionalPlan2A3A4Aelement = document.getElementById("MECE250TraditionalPlan2A3A4A");
        MECE250TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE250TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE250TraditionalPlan2A3A4A");
+ } 
+if (!ECE209TraditionalPlan2A3A4Aflag) { 
        var ECE209TraditionalPlan2A3A4Aelement = document.getElementById("ECE209TraditionalPlan2A3A4A");
        ECE209TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        ECE209TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("ECE209TraditionalPlan2A3A4A");
+ } 
+if (!MATE202TraditionalPlan2A3A4Aflag) { 
        var MATE202TraditionalPlan2A3A4Aelement = document.getElementById("MATE202TraditionalPlan2A3A4A");
        MATE202TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MATE202TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MATE202TraditionalPlan2A3A4A");
+ } 
+if (!MECE230TraditionalPlan2A3A4Aflag) { 
        var MECE230TraditionalPlan2A3A4Aelement = document.getElementById("MECE230TraditionalPlan2A3A4A");
        MECE230TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE230TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE230TraditionalPlan2A3A4A");
+ } 
+if (!MECE300TraditionalPlan2A3A4Aflag) { 
        var MECE300TraditionalPlan2A3A4Aelement = document.getElementById("MECE300TraditionalPlan2A3A4A");
        MECE300TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE300TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE300TraditionalPlan2A3A4A");
+ } 
+if (!MECE301TraditionalPlan2A3A4Aflag) { 
        var MECE301TraditionalPlan2A3A4Aelement = document.getElementById("MECE301TraditionalPlan2A3A4A");
        MECE301TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE301TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE301TraditionalPlan2A3A4A");
+ } 
+if (!MECE331TraditionalPlan2A3A4Aflag) { 
        var MECE331TraditionalPlan2A3A4Aelement = document.getElementById("MECE331TraditionalPlan2A3A4A");
        MECE331TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE331TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE331TraditionalPlan2A3A4A");
+ } 
+if (!MECE371TraditionalPlan2A3A4Aflag) { 
        var MECE371TraditionalPlan2A3A4Aelement = document.getElementById("MECE371TraditionalPlan2A3A4A");
        MECE371TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE371TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE371TraditionalPlan2A3A4A");
+ } 
+if (!MECE380TraditionalPlan2A3A4Aflag) { 
        var MECE380TraditionalPlan2A3A4Aelement = document.getElementById("MECE380TraditionalPlan2A3A4A");
        MECE380TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE380TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE380TraditionalPlan2A3A4A");
+ } 
+if (!MECE340TraditionalPlan2A3A4Aflag) { 
        var MECE340TraditionalPlan2A3A4Aelement = document.getElementById("MECE340TraditionalPlan2A3A4A");
        MECE340TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE340TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE340TraditionalPlan2A3A4A");
+ } 
+if (!MECE430TraditionalPlan2A3A4Aflag) { 
        var MECE430TraditionalPlan2A3A4Aelement = document.getElementById("MECE430TraditionalPlan2A3A4A");
        MECE430TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE430TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE430TraditionalPlan2A3A4A");
+ } 
+if (!MECE480TraditionalPlan2A3A4Aflag) { 
        var MECE480TraditionalPlan2A3A4Aelement = document.getElementById("MECE480TraditionalPlan2A3A4A");
        MECE480TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE480TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE480TraditionalPlan2A3A4A");
+ } 
+if (!MECE463TraditionalPlan2A3A4Aflag) { 
        var MECE463TraditionalPlan2A3A4Aelement = document.getElementById("MECE463TraditionalPlan2A3A4A");
        MECE463TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE463TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE463TraditionalPlan2A3A4A");
+ } 
+if (!CHE448TraditionalPlan2A3A4Aflag) { 
        var CHE448TraditionalPlan2A3A4Aelement = document.getElementById("CHE448TraditionalPlan2A3A4A");
        CHE448TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE448TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE448TraditionalPlan2A3A4A");
+ } 
+if (!MECE420TraditionalPlan2A3A4Aflag) { 
        var MECE420TraditionalPlan2A3A4Aelement = document.getElementById("MECE420TraditionalPlan2A3A4A");
        MECE420TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE420TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE420TraditionalPlan2A3A4A");
+ } 
+if (!MECE403TraditionalPlan2A3A4Aflag) { 
        var MECE403TraditionalPlan2A3A4Aelement = document.getElementById("MECE403TraditionalPlan2A3A4A");
        MECE403TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE403TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE403TraditionalPlan2A3A4A");
+ } 
+if (!MECE451TraditionalPlan2A3A4Aflag) { 
        var MECE451TraditionalPlan2A3A4Aelement = document.getElementById("MECE451TraditionalPlan2A3A4A");
        MECE451TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE451TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE451TraditionalPlan2A3A4A");
+ } 
        break;
       case "TraditionalPlan2A3A4B":
+if (!CIVE270TraditionalPlan2A3A4Bflag) { 
        var CIVE270TraditionalPlan2A3A4Belement = document.getElementById("CIVE270TraditionalPlan2A3A4B");
        CIVE270TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CIVE270TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CIVE270TraditionalPlan2A3A4B");
+ } 
+if (!CHE243TraditionalPlan2A3A4Bflag) { 
        var CHE243TraditionalPlan2A3A4Belement = document.getElementById("CHE243TraditionalPlan2A3A4B");
        CHE243TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE243TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE243TraditionalPlan2A3A4B");
+ } 
+if (!MECE250TraditionalPlan2A3A4Bflag) { 
        var MECE250TraditionalPlan2A3A4Belement = document.getElementById("MECE250TraditionalPlan2A3A4B");
        MECE250TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE250TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE250TraditionalPlan2A3A4B");
+ } 
+if (!ECE209TraditionalPlan2A3A4Bflag) { 
        var ECE209TraditionalPlan2A3A4Belement = document.getElementById("ECE209TraditionalPlan2A3A4B");
        ECE209TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        ECE209TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("ECE209TraditionalPlan2A3A4B");
+ } 
+if (!MATE202TraditionalPlan2A3A4Bflag) { 
        var MATE202TraditionalPlan2A3A4Belement = document.getElementById("MATE202TraditionalPlan2A3A4B");
        MATE202TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MATE202TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MATE202TraditionalPlan2A3A4B");
+ } 
+if (!MECE230TraditionalPlan2A3A4Bflag) { 
        var MECE230TraditionalPlan2A3A4Belement = document.getElementById("MECE230TraditionalPlan2A3A4B");
        MECE230TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE230TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE230TraditionalPlan2A3A4B");
+ } 
+if (!MECE300TraditionalPlan2A3A4Bflag) { 
        var MECE300TraditionalPlan2A3A4Belement = document.getElementById("MECE300TraditionalPlan2A3A4B");
        MECE300TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE300TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE300TraditionalPlan2A3A4B");
+ } 
+if (!MECE301TraditionalPlan2A3A4Bflag) { 
        var MECE301TraditionalPlan2A3A4Belement = document.getElementById("MECE301TraditionalPlan2A3A4B");
        MECE301TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE301TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE301TraditionalPlan2A3A4B");
+ } 
+if (!MECE331TraditionalPlan2A3A4Bflag) { 
        var MECE331TraditionalPlan2A3A4Belement = document.getElementById("MECE331TraditionalPlan2A3A4B");
        MECE331TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE331TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE331TraditionalPlan2A3A4B");
+ } 
+if (!MECE371TraditionalPlan2A3A4Bflag) { 
        var MECE371TraditionalPlan2A3A4Belement = document.getElementById("MECE371TraditionalPlan2A3A4B");
        MECE371TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE371TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE371TraditionalPlan2A3A4B");
+ } 
+if (!MECE380TraditionalPlan2A3A4Bflag) { 
        var MECE380TraditionalPlan2A3A4Belement = document.getElementById("MECE380TraditionalPlan2A3A4B");
        MECE380TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE380TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE380TraditionalPlan2A3A4B");
+ } 
+if (!MECE340TraditionalPlan2A3A4Bflag) { 
        var MECE340TraditionalPlan2A3A4Belement = document.getElementById("MECE340TraditionalPlan2A3A4B");
        MECE340TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE340TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE340TraditionalPlan2A3A4B");
+ } 
+if (!CHE448TraditionalPlan2A3A4Bflag) { 
        var CHE448TraditionalPlan2A3A4Belement = document.getElementById("CHE448TraditionalPlan2A3A4B");
        CHE448TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE448TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE448TraditionalPlan2A3A4B");
+ } 
+if (!MECE420TraditionalPlan2A3A4Bflag) { 
        var MECE420TraditionalPlan2A3A4Belement = document.getElementById("MECE420TraditionalPlan2A3A4B");
        MECE420TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE420TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE420TraditionalPlan2A3A4B");
+ } 
+if (!MECE403TraditionalPlan2A3A4Bflag) { 
        var MECE403TraditionalPlan2A3A4Belement = document.getElementById("MECE403TraditionalPlan2A3A4B");
        MECE403TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE403TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE403TraditionalPlan2A3A4B");
+ } 
+if (!MECE451TraditionalPlan2A3A4Bflag) { 
        var MECE451TraditionalPlan2A3A4Belement = document.getElementById("MECE451TraditionalPlan2A3A4B");
        MECE451TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE451TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE451TraditionalPlan2A3A4B");
+ } 
+if (!MECE430TraditionalPlan2A3A4Bflag) { 
        var MECE430TraditionalPlan2A3A4Belement = document.getElementById("MECE430TraditionalPlan2A3A4B");
        MECE430TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE430TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE430TraditionalPlan2A3A4B");
+ } 
+if (!MECE480TraditionalPlan2A3A4Bflag) { 
        var MECE480TraditionalPlan2A3A4Belement = document.getElementById("MECE480TraditionalPlan2A3A4B");
        MECE480TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE480TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE480TraditionalPlan2A3A4B");
+ } 
+if (!MECE463TraditionalPlan2A3A4Bflag) { 
        var MECE463TraditionalPlan2A3A4Belement = document.getElementById("MECE463TraditionalPlan2A3A4B");
        MECE463TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE463TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE463TraditionalPlan2A3A4B");
+ } 
        break;
       case "TraditionalPlan2A3B4A":
+if (!CIVE270TraditionalPlan2A3B4Aflag) { 
        var CIVE270TraditionalPlan2A3B4Aelement = document.getElementById("CIVE270TraditionalPlan2A3B4A");
        CIVE270TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CIVE270TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CIVE270TraditionalPlan2A3B4A");
+ } 
+if (!CHE243TraditionalPlan2A3B4Aflag) { 
        var CHE243TraditionalPlan2A3B4Aelement = document.getElementById("CHE243TraditionalPlan2A3B4A");
        CHE243TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE243TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE243TraditionalPlan2A3B4A");
+ } 
+if (!MECE250TraditionalPlan2A3B4Aflag) { 
        var MECE250TraditionalPlan2A3B4Aelement = document.getElementById("MECE250TraditionalPlan2A3B4A");
        MECE250TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE250TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE250TraditionalPlan2A3B4A");
+ } 
+if (!ECE209TraditionalPlan2A3B4Aflag) { 
        var ECE209TraditionalPlan2A3B4Aelement = document.getElementById("ECE209TraditionalPlan2A3B4A");
        ECE209TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        ECE209TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("ECE209TraditionalPlan2A3B4A");
+ } 
+if (!MATE202TraditionalPlan2A3B4Aflag) { 
        var MATE202TraditionalPlan2A3B4Aelement = document.getElementById("MATE202TraditionalPlan2A3B4A");
        MATE202TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MATE202TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MATE202TraditionalPlan2A3B4A");
+ } 
+if (!MECE230TraditionalPlan2A3B4Aflag) { 
        var MECE230TraditionalPlan2A3B4Aelement = document.getElementById("MECE230TraditionalPlan2A3B4A");
        MECE230TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE230TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE230TraditionalPlan2A3B4A");
+ } 
+if (!MECE340TraditionalPlan2A3B4Aflag) { 
        var MECE340TraditionalPlan2A3B4Aelement = document.getElementById("MECE340TraditionalPlan2A3B4A");
        MECE340TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE340TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE340TraditionalPlan2A3B4A");
+ } 
+if (!MECE300TraditionalPlan2A3B4Aflag) { 
        var MECE300TraditionalPlan2A3B4Aelement = document.getElementById("MECE300TraditionalPlan2A3B4A");
        MECE300TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE300TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE300TraditionalPlan2A3B4A");
+ } 
+if (!MECE301TraditionalPlan2A3B4Aflag) { 
        var MECE301TraditionalPlan2A3B4Aelement = document.getElementById("MECE301TraditionalPlan2A3B4A");
        MECE301TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE301TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE301TraditionalPlan2A3B4A");
+ } 
+if (!MECE331TraditionalPlan2A3B4Aflag) { 
        var MECE331TraditionalPlan2A3B4Aelement = document.getElementById("MECE331TraditionalPlan2A3B4A");
        MECE331TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE331TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE331TraditionalPlan2A3B4A");
+ } 
+if (!MECE371TraditionalPlan2A3B4Aflag) { 
        var MECE371TraditionalPlan2A3B4Aelement = document.getElementById("MECE371TraditionalPlan2A3B4A");
        MECE371TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE371TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE371TraditionalPlan2A3B4A");
+ } 
+if (!MECE380TraditionalPlan2A3B4Aflag) { 
        var MECE380TraditionalPlan2A3B4Aelement = document.getElementById("MECE380TraditionalPlan2A3B4A");
        MECE380TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE380TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE380TraditionalPlan2A3B4A");
+ } 
+if (!MECE430TraditionalPlan2A3B4Aflag) { 
        var MECE430TraditionalPlan2A3B4Aelement = document.getElementById("MECE430TraditionalPlan2A3B4A");
        MECE430TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE430TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE430TraditionalPlan2A3B4A");
+ } 
+if (!MECE480TraditionalPlan2A3B4Aflag) { 
        var MECE480TraditionalPlan2A3B4Aelement = document.getElementById("MECE480TraditionalPlan2A3B4A");
        MECE480TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE480TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE480TraditionalPlan2A3B4A");
+ } 
+if (!MECE463TraditionalPlan2A3B4Aflag) { 
        var MECE463TraditionalPlan2A3B4Aelement = document.getElementById("MECE463TraditionalPlan2A3B4A");
        MECE463TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE463TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE463TraditionalPlan2A3B4A");
+ } 
+if (!CHE448TraditionalPlan2A3B4Aflag) { 
        var CHE448TraditionalPlan2A3B4Aelement = document.getElementById("CHE448TraditionalPlan2A3B4A");
        CHE448TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE448TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE448TraditionalPlan2A3B4A");
+ } 
+if (!MECE420TraditionalPlan2A3B4Aflag) { 
        var MECE420TraditionalPlan2A3B4Aelement = document.getElementById("MECE420TraditionalPlan2A3B4A");
        MECE420TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE420TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE420TraditionalPlan2A3B4A");
+ } 
+if (!MECE403TraditionalPlan2A3B4Aflag) { 
        var MECE403TraditionalPlan2A3B4Aelement = document.getElementById("MECE403TraditionalPlan2A3B4A");
        MECE403TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE403TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE403TraditionalPlan2A3B4A");
+ } 
+if (!MECE451TraditionalPlan2A3B4Aflag) { 
        var MECE451TraditionalPlan2A3B4Aelement = document.getElementById("MECE451TraditionalPlan2A3B4A");
        MECE451TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE451TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE451TraditionalPlan2A3B4A");
+ } 
        break;
       case "TraditionalPlan2A3B4B":
+if (!CIVE270TraditionalPlan2A3B4Bflag) { 
        var CIVE270TraditionalPlan2A3B4Belement = document.getElementById("CIVE270TraditionalPlan2A3B4B");
        CIVE270TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CIVE270TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CIVE270TraditionalPlan2A3B4B");
+ } 
+if (!CHE243TraditionalPlan2A3B4Bflag) { 
        var CHE243TraditionalPlan2A3B4Belement = document.getElementById("CHE243TraditionalPlan2A3B4B");
        CHE243TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE243TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE243TraditionalPlan2A3B4B");
+ } 
+if (!MECE250TraditionalPlan2A3B4Bflag) { 
        var MECE250TraditionalPlan2A3B4Belement = document.getElementById("MECE250TraditionalPlan2A3B4B");
        MECE250TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE250TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE250TraditionalPlan2A3B4B");
+ } 
+if (!ECE209TraditionalPlan2A3B4Bflag) { 
        var ECE209TraditionalPlan2A3B4Belement = document.getElementById("ECE209TraditionalPlan2A3B4B");
        ECE209TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        ECE209TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("ECE209TraditionalPlan2A3B4B");
+ } 
+if (!MATE202TraditionalPlan2A3B4Bflag) { 
        var MATE202TraditionalPlan2A3B4Belement = document.getElementById("MATE202TraditionalPlan2A3B4B");
        MATE202TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MATE202TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MATE202TraditionalPlan2A3B4B");
+ } 
+if (!MECE230TraditionalPlan2A3B4Bflag) { 
        var MECE230TraditionalPlan2A3B4Belement = document.getElementById("MECE230TraditionalPlan2A3B4B");
        MECE230TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE230TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE230TraditionalPlan2A3B4B");
+ } 
+if (!MECE340TraditionalPlan2A3B4Bflag) { 
        var MECE340TraditionalPlan2A3B4Belement = document.getElementById("MECE340TraditionalPlan2A3B4B");
        MECE340TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE340TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE340TraditionalPlan2A3B4B");
+ } 
+if (!MECE300TraditionalPlan2A3B4Bflag) { 
        var MECE300TraditionalPlan2A3B4Belement = document.getElementById("MECE300TraditionalPlan2A3B4B");
        MECE300TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE300TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE300TraditionalPlan2A3B4B");
+ } 
+if (!MECE301TraditionalPlan2A3B4Bflag) { 
        var MECE301TraditionalPlan2A3B4Belement = document.getElementById("MECE301TraditionalPlan2A3B4B");
        MECE301TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE301TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE301TraditionalPlan2A3B4B");
+ } 
+if (!MECE331TraditionalPlan2A3B4Bflag) { 
        var MECE331TraditionalPlan2A3B4Belement = document.getElementById("MECE331TraditionalPlan2A3B4B");
        MECE331TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE331TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE331TraditionalPlan2A3B4B");
+ } 
+if (!MECE371TraditionalPlan2A3B4Bflag) { 
        var MECE371TraditionalPlan2A3B4Belement = document.getElementById("MECE371TraditionalPlan2A3B4B");
        MECE371TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE371TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE371TraditionalPlan2A3B4B");
+ } 
+if (!MECE380TraditionalPlan2A3B4Bflag) { 
        var MECE380TraditionalPlan2A3B4Belement = document.getElementById("MECE380TraditionalPlan2A3B4B");
        MECE380TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE380TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE380TraditionalPlan2A3B4B");
+ } 
+if (!CHE448TraditionalPlan2A3B4Bflag) { 
        var CHE448TraditionalPlan2A3B4Belement = document.getElementById("CHE448TraditionalPlan2A3B4B");
        CHE448TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE448TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE448TraditionalPlan2A3B4B");
+ } 
+if (!MECE420TraditionalPlan2A3B4Bflag) { 
        var MECE420TraditionalPlan2A3B4Belement = document.getElementById("MECE420TraditionalPlan2A3B4B");
        MECE420TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE420TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE420TraditionalPlan2A3B4B");
+ } 
+if (!MECE403TraditionalPlan2A3B4Bflag) { 
        var MECE403TraditionalPlan2A3B4Belement = document.getElementById("MECE403TraditionalPlan2A3B4B");
        MECE403TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE403TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE403TraditionalPlan2A3B4B");
+ } 
+if (!MECE451TraditionalPlan2A3B4Bflag) { 
        var MECE451TraditionalPlan2A3B4Belement = document.getElementById("MECE451TraditionalPlan2A3B4B");
        MECE451TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE451TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE451TraditionalPlan2A3B4B");
+ } 
+if (!MECE430TraditionalPlan2A3B4Bflag) { 
        var MECE430TraditionalPlan2A3B4Belement = document.getElementById("MECE430TraditionalPlan2A3B4B");
        MECE430TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE430TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE430TraditionalPlan2A3B4B");
+ } 
+if (!MECE480TraditionalPlan2A3B4Bflag) { 
        var MECE480TraditionalPlan2A3B4Belement = document.getElementById("MECE480TraditionalPlan2A3B4B");
        MECE480TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE480TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE480TraditionalPlan2A3B4B");
+ } 
+if (!MECE463TraditionalPlan2A3B4Bflag) { 
        var MECE463TraditionalPlan2A3B4Belement = document.getElementById("MECE463TraditionalPlan2A3B4B");
        MECE463TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE463TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE463TraditionalPlan2A3B4B");
+ } 
        break;
       case "TraditionalPlan2B3A4A":
+if (!ECE209TraditionalPlan2B3A4Aflag) { 
        var ECE209TraditionalPlan2B3A4Aelement = document.getElementById("ECE209TraditionalPlan2B3A4A");
        ECE209TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        ECE209TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("ECE209TraditionalPlan2B3A4A");
+ } 
+if (!MATE202TraditionalPlan2B3A4Aflag) { 
        var MATE202TraditionalPlan2B3A4Aelement = document.getElementById("MATE202TraditionalPlan2B3A4A");
        MATE202TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MATE202TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MATE202TraditionalPlan2B3A4A");
+ } 
+if (!MECE230TraditionalPlan2B3A4Aflag) { 
        var MECE230TraditionalPlan2B3A4Aelement = document.getElementById("MECE230TraditionalPlan2B3A4A");
        MECE230TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE230TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE230TraditionalPlan2B3A4A");
+ } 
+if (!CIVE270TraditionalPlan2B3A4Aflag) { 
        var CIVE270TraditionalPlan2B3A4Aelement = document.getElementById("CIVE270TraditionalPlan2B3A4A");
        CIVE270TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CIVE270TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CIVE270TraditionalPlan2B3A4A");
+ } 
+if (!CHE243TraditionalPlan2B3A4Aflag) { 
        var CHE243TraditionalPlan2B3A4Aelement = document.getElementById("CHE243TraditionalPlan2B3A4A");
        CHE243TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE243TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE243TraditionalPlan2B3A4A");
+ } 
+if (!MECE250TraditionalPlan2B3A4Aflag) { 
        var MECE250TraditionalPlan2B3A4Aelement = document.getElementById("MECE250TraditionalPlan2B3A4A");
        MECE250TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE250TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE250TraditionalPlan2B3A4A");
+ } 
+if (!MECE300TraditionalPlan2B3A4Aflag) { 
        var MECE300TraditionalPlan2B3A4Aelement = document.getElementById("MECE300TraditionalPlan2B3A4A");
        MECE300TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE300TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE300TraditionalPlan2B3A4A");
+ } 
+if (!MECE301TraditionalPlan2B3A4Aflag) { 
        var MECE301TraditionalPlan2B3A4Aelement = document.getElementById("MECE301TraditionalPlan2B3A4A");
        MECE301TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE301TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE301TraditionalPlan2B3A4A");
+ } 
+if (!MECE331TraditionalPlan2B3A4Aflag) { 
        var MECE331TraditionalPlan2B3A4Aelement = document.getElementById("MECE331TraditionalPlan2B3A4A");
        MECE331TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE331TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE331TraditionalPlan2B3A4A");
+ } 
+if (!MECE371TraditionalPlan2B3A4Aflag) { 
        var MECE371TraditionalPlan2B3A4Aelement = document.getElementById("MECE371TraditionalPlan2B3A4A");
        MECE371TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE371TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE371TraditionalPlan2B3A4A");
+ } 
+if (!MECE380TraditionalPlan2B3A4Aflag) { 
        var MECE380TraditionalPlan2B3A4Aelement = document.getElementById("MECE380TraditionalPlan2B3A4A");
        MECE380TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE380TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE380TraditionalPlan2B3A4A");
+ } 
+if (!MECE340TraditionalPlan2B3A4Aflag) { 
        var MECE340TraditionalPlan2B3A4Aelement = document.getElementById("MECE340TraditionalPlan2B3A4A");
        MECE340TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE340TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE340TraditionalPlan2B3A4A");
+ } 
+if (!MECE430TraditionalPlan2B3A4Aflag) { 
        var MECE430TraditionalPlan2B3A4Aelement = document.getElementById("MECE430TraditionalPlan2B3A4A");
        MECE430TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE430TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE430TraditionalPlan2B3A4A");
+ } 
+if (!MECE480TraditionalPlan2B3A4Aflag) { 
        var MECE480TraditionalPlan2B3A4Aelement = document.getElementById("MECE480TraditionalPlan2B3A4A");
        MECE480TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE480TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE480TraditionalPlan2B3A4A");
+ } 
+if (!MECE463TraditionalPlan2B3A4Aflag) { 
        var MECE463TraditionalPlan2B3A4Aelement = document.getElementById("MECE463TraditionalPlan2B3A4A");
        MECE463TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE463TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE463TraditionalPlan2B3A4A");
+ } 
+if (!CHE448TraditionalPlan2B3A4Aflag) { 
        var CHE448TraditionalPlan2B3A4Aelement = document.getElementById("CHE448TraditionalPlan2B3A4A");
        CHE448TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE448TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE448TraditionalPlan2B3A4A");
+ } 
+if (!MECE420TraditionalPlan2B3A4Aflag) { 
        var MECE420TraditionalPlan2B3A4Aelement = document.getElementById("MECE420TraditionalPlan2B3A4A");
        MECE420TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE420TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE420TraditionalPlan2B3A4A");
+ } 
+if (!MECE403TraditionalPlan2B3A4Aflag) { 
        var MECE403TraditionalPlan2B3A4Aelement = document.getElementById("MECE403TraditionalPlan2B3A4A");
        MECE403TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE403TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE403TraditionalPlan2B3A4A");
+ } 
+if (!MECE451TraditionalPlan2B3A4Aflag) { 
        var MECE451TraditionalPlan2B3A4Aelement = document.getElementById("MECE451TraditionalPlan2B3A4A");
        MECE451TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE451TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE451TraditionalPlan2B3A4A");
+ } 
        break;
       case "TraditionalPlan2B3A4B":
+if (!ECE209TraditionalPlan2B3A4Bflag) { 
        var ECE209TraditionalPlan2B3A4Belement = document.getElementById("ECE209TraditionalPlan2B3A4B");
        ECE209TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        ECE209TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("ECE209TraditionalPlan2B3A4B");
+ } 
+if (!MATE202TraditionalPlan2B3A4Bflag) { 
        var MATE202TraditionalPlan2B3A4Belement = document.getElementById("MATE202TraditionalPlan2B3A4B");
        MATE202TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MATE202TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MATE202TraditionalPlan2B3A4B");
+ } 
+if (!MECE230TraditionalPlan2B3A4Bflag) { 
        var MECE230TraditionalPlan2B3A4Belement = document.getElementById("MECE230TraditionalPlan2B3A4B");
        MECE230TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE230TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE230TraditionalPlan2B3A4B");
+ } 
+if (!CIVE270TraditionalPlan2B3A4Bflag) { 
        var CIVE270TraditionalPlan2B3A4Belement = document.getElementById("CIVE270TraditionalPlan2B3A4B");
        CIVE270TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CIVE270TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CIVE270TraditionalPlan2B3A4B");
+ } 
+if (!CHE243TraditionalPlan2B3A4Bflag) { 
        var CHE243TraditionalPlan2B3A4Belement = document.getElementById("CHE243TraditionalPlan2B3A4B");
        CHE243TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE243TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE243TraditionalPlan2B3A4B");
+ } 
+if (!MECE250TraditionalPlan2B3A4Bflag) { 
        var MECE250TraditionalPlan2B3A4Belement = document.getElementById("MECE250TraditionalPlan2B3A4B");
        MECE250TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE250TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE250TraditionalPlan2B3A4B");
+ } 
+if (!MECE300TraditionalPlan2B3A4Bflag) { 
        var MECE300TraditionalPlan2B3A4Belement = document.getElementById("MECE300TraditionalPlan2B3A4B");
        MECE300TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE300TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE300TraditionalPlan2B3A4B");
+ } 
+if (!MECE301TraditionalPlan2B3A4Bflag) { 
        var MECE301TraditionalPlan2B3A4Belement = document.getElementById("MECE301TraditionalPlan2B3A4B");
        MECE301TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE301TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE301TraditionalPlan2B3A4B");
+ } 
+if (!MECE331TraditionalPlan2B3A4Bflag) { 
        var MECE331TraditionalPlan2B3A4Belement = document.getElementById("MECE331TraditionalPlan2B3A4B");
        MECE331TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE331TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE331TraditionalPlan2B3A4B");
+ } 
+if (!MECE371TraditionalPlan2B3A4Bflag) { 
        var MECE371TraditionalPlan2B3A4Belement = document.getElementById("MECE371TraditionalPlan2B3A4B");
        MECE371TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE371TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE371TraditionalPlan2B3A4B");
+ } 
+if (!MECE380TraditionalPlan2B3A4Bflag) { 
        var MECE380TraditionalPlan2B3A4Belement = document.getElementById("MECE380TraditionalPlan2B3A4B");
        MECE380TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE380TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE380TraditionalPlan2B3A4B");
+ } 
+if (!MECE340TraditionalPlan2B3A4Bflag) { 
        var MECE340TraditionalPlan2B3A4Belement = document.getElementById("MECE340TraditionalPlan2B3A4B");
        MECE340TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE340TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE340TraditionalPlan2B3A4B");
+ } 
+if (!CHE448TraditionalPlan2B3A4Bflag) { 
        var CHE448TraditionalPlan2B3A4Belement = document.getElementById("CHE448TraditionalPlan2B3A4B");
        CHE448TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE448TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE448TraditionalPlan2B3A4B");
+ } 
+if (!MECE420TraditionalPlan2B3A4Bflag) { 
        var MECE420TraditionalPlan2B3A4Belement = document.getElementById("MECE420TraditionalPlan2B3A4B");
        MECE420TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE420TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE420TraditionalPlan2B3A4B");
+ } 
+if (!MECE403TraditionalPlan2B3A4Bflag) { 
        var MECE403TraditionalPlan2B3A4Belement = document.getElementById("MECE403TraditionalPlan2B3A4B");
        MECE403TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE403TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE403TraditionalPlan2B3A4B");
+ } 
+if (!MECE451TraditionalPlan2B3A4Bflag) { 
        var MECE451TraditionalPlan2B3A4Belement = document.getElementById("MECE451TraditionalPlan2B3A4B");
        MECE451TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE451TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE451TraditionalPlan2B3A4B");
+ } 
+if (!MECE430TraditionalPlan2B3A4Bflag) { 
        var MECE430TraditionalPlan2B3A4Belement = document.getElementById("MECE430TraditionalPlan2B3A4B");
        MECE430TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE430TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE430TraditionalPlan2B3A4B");
+ } 
+if (!MECE480TraditionalPlan2B3A4Bflag) { 
        var MECE480TraditionalPlan2B3A4Belement = document.getElementById("MECE480TraditionalPlan2B3A4B");
        MECE480TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE480TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE480TraditionalPlan2B3A4B");
+ } 
+if (!MECE463TraditionalPlan2B3A4Bflag) { 
        var MECE463TraditionalPlan2B3A4Belement = document.getElementById("MECE463TraditionalPlan2B3A4B");
        MECE463TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE463TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE463TraditionalPlan2B3A4B");
+ } 
        break;
       case "TraditionalPlan2B3B4A":
+if (!ECE209TraditionalPlan2B3B4Aflag) { 
        var ECE209TraditionalPlan2B3B4Aelement = document.getElementById("ECE209TraditionalPlan2B3B4A");
        ECE209TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        ECE209TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("ECE209TraditionalPlan2B3B4A");
+ } 
+if (!MATE202TraditionalPlan2B3B4Aflag) { 
        var MATE202TraditionalPlan2B3B4Aelement = document.getElementById("MATE202TraditionalPlan2B3B4A");
        MATE202TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MATE202TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MATE202TraditionalPlan2B3B4A");
+ } 
+if (!MECE230TraditionalPlan2B3B4Aflag) { 
        var MECE230TraditionalPlan2B3B4Aelement = document.getElementById("MECE230TraditionalPlan2B3B4A");
        MECE230TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE230TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE230TraditionalPlan2B3B4A");
+ } 
+if (!CIVE270TraditionalPlan2B3B4Aflag) { 
        var CIVE270TraditionalPlan2B3B4Aelement = document.getElementById("CIVE270TraditionalPlan2B3B4A");
        CIVE270TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CIVE270TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CIVE270TraditionalPlan2B3B4A");
+ } 
+if (!CHE243TraditionalPlan2B3B4Aflag) { 
        var CHE243TraditionalPlan2B3B4Aelement = document.getElementById("CHE243TraditionalPlan2B3B4A");
        CHE243TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE243TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE243TraditionalPlan2B3B4A");
+ } 
+if (!MECE250TraditionalPlan2B3B4Aflag) { 
        var MECE250TraditionalPlan2B3B4Aelement = document.getElementById("MECE250TraditionalPlan2B3B4A");
        MECE250TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE250TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE250TraditionalPlan2B3B4A");
+ } 
+if (!MECE340TraditionalPlan2B3B4Aflag) { 
        var MECE340TraditionalPlan2B3B4Aelement = document.getElementById("MECE340TraditionalPlan2B3B4A");
        MECE340TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE340TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE340TraditionalPlan2B3B4A");
+ } 
+if (!MECE300TraditionalPlan2B3B4Aflag) { 
        var MECE300TraditionalPlan2B3B4Aelement = document.getElementById("MECE300TraditionalPlan2B3B4A");
        MECE300TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE300TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE300TraditionalPlan2B3B4A");
+ } 
+if (!MECE301TraditionalPlan2B3B4Aflag) { 
        var MECE301TraditionalPlan2B3B4Aelement = document.getElementById("MECE301TraditionalPlan2B3B4A");
        MECE301TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE301TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE301TraditionalPlan2B3B4A");
+ } 
+if (!MECE331TraditionalPlan2B3B4Aflag) { 
        var MECE331TraditionalPlan2B3B4Aelement = document.getElementById("MECE331TraditionalPlan2B3B4A");
        MECE331TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE331TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE331TraditionalPlan2B3B4A");
+ } 
+if (!MECE371TraditionalPlan2B3B4Aflag) { 
        var MECE371TraditionalPlan2B3B4Aelement = document.getElementById("MECE371TraditionalPlan2B3B4A");
        MECE371TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE371TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE371TraditionalPlan2B3B4A");
+ } 
+if (!MECE380TraditionalPlan2B3B4Aflag) { 
        var MECE380TraditionalPlan2B3B4Aelement = document.getElementById("MECE380TraditionalPlan2B3B4A");
        MECE380TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE380TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE380TraditionalPlan2B3B4A");
+ } 
+if (!MECE430TraditionalPlan2B3B4Aflag) { 
        var MECE430TraditionalPlan2B3B4Aelement = document.getElementById("MECE430TraditionalPlan2B3B4A");
        MECE430TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE430TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE430TraditionalPlan2B3B4A");
+ } 
+if (!MECE480TraditionalPlan2B3B4Aflag) { 
        var MECE480TraditionalPlan2B3B4Aelement = document.getElementById("MECE480TraditionalPlan2B3B4A");
        MECE480TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE480TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE480TraditionalPlan2B3B4A");
+ } 
+if (!MECE463TraditionalPlan2B3B4Aflag) { 
        var MECE463TraditionalPlan2B3B4Aelement = document.getElementById("MECE463TraditionalPlan2B3B4A");
        MECE463TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE463TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE463TraditionalPlan2B3B4A");
+ } 
+if (!CHE448TraditionalPlan2B3B4Aflag) { 
        var CHE448TraditionalPlan2B3B4Aelement = document.getElementById("CHE448TraditionalPlan2B3B4A");
        CHE448TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE448TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE448TraditionalPlan2B3B4A");
+ } 
+if (!MECE420TraditionalPlan2B3B4Aflag) { 
        var MECE420TraditionalPlan2B3B4Aelement = document.getElementById("MECE420TraditionalPlan2B3B4A");
        MECE420TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE420TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE420TraditionalPlan2B3B4A");
+ } 
+if (!MECE403TraditionalPlan2B3B4Aflag) { 
        var MECE403TraditionalPlan2B3B4Aelement = document.getElementById("MECE403TraditionalPlan2B3B4A");
        MECE403TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE403TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE403TraditionalPlan2B3B4A");
+ } 
+if (!MECE451TraditionalPlan2B3B4Aflag) { 
        var MECE451TraditionalPlan2B3B4Aelement = document.getElementById("MECE451TraditionalPlan2B3B4A");
        MECE451TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE451TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE451TraditionalPlan2B3B4A");
+ } 
        break;
       case "TraditionalPlan2B3B4B":
+if (!ECE209TraditionalPlan2B3B4Bflag) { 
        var ECE209TraditionalPlan2B3B4Belement = document.getElementById("ECE209TraditionalPlan2B3B4B");
        ECE209TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        ECE209TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("ECE209TraditionalPlan2B3B4B");
+ } 
+if (!MATE202TraditionalPlan2B3B4Bflag) { 
        var MATE202TraditionalPlan2B3B4Belement = document.getElementById("MATE202TraditionalPlan2B3B4B");
        MATE202TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MATE202TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MATE202TraditionalPlan2B3B4B");
+ } 
+if (!MECE230TraditionalPlan2B3B4Bflag) { 
        var MECE230TraditionalPlan2B3B4Belement = document.getElementById("MECE230TraditionalPlan2B3B4B");
        MECE230TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE230TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE230TraditionalPlan2B3B4B");
+ } 
+if (!CIVE270TraditionalPlan2B3B4Bflag) { 
        var CIVE270TraditionalPlan2B3B4Belement = document.getElementById("CIVE270TraditionalPlan2B3B4B");
        CIVE270TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CIVE270TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CIVE270TraditionalPlan2B3B4B");
+ } 
+if (!CHE243TraditionalPlan2B3B4Bflag) { 
        var CHE243TraditionalPlan2B3B4Belement = document.getElementById("CHE243TraditionalPlan2B3B4B");
        CHE243TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE243TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE243TraditionalPlan2B3B4B");
+ } 
+if (!MECE250TraditionalPlan2B3B4Bflag) { 
        var MECE250TraditionalPlan2B3B4Belement = document.getElementById("MECE250TraditionalPlan2B3B4B");
        MECE250TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE250TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE250TraditionalPlan2B3B4B");
+ } 
+if (!MECE340TraditionalPlan2B3B4Bflag) { 
        var MECE340TraditionalPlan2B3B4Belement = document.getElementById("MECE340TraditionalPlan2B3B4B");
        MECE340TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE340TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE340TraditionalPlan2B3B4B");
+ } 
+if (!MECE300TraditionalPlan2B3B4Bflag) { 
        var MECE300TraditionalPlan2B3B4Belement = document.getElementById("MECE300TraditionalPlan2B3B4B");
        MECE300TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE300TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE300TraditionalPlan2B3B4B");
+ } 
+if (!MECE301TraditionalPlan2B3B4Bflag) { 
        var MECE301TraditionalPlan2B3B4Belement = document.getElementById("MECE301TraditionalPlan2B3B4B");
        MECE301TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE301TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE301TraditionalPlan2B3B4B");
+ } 
+if (!MECE331TraditionalPlan2B3B4Bflag) { 
        var MECE331TraditionalPlan2B3B4Belement = document.getElementById("MECE331TraditionalPlan2B3B4B");
        MECE331TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE331TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE331TraditionalPlan2B3B4B");
+ } 
+if (!MECE371TraditionalPlan2B3B4Bflag) { 
        var MECE371TraditionalPlan2B3B4Belement = document.getElementById("MECE371TraditionalPlan2B3B4B");
        MECE371TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE371TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE371TraditionalPlan2B3B4B");
+ } 
+if (!MECE380TraditionalPlan2B3B4Bflag) { 
        var MECE380TraditionalPlan2B3B4Belement = document.getElementById("MECE380TraditionalPlan2B3B4B");
        MECE380TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE380TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE380TraditionalPlan2B3B4B");
+ } 
+if (!CHE448TraditionalPlan2B3B4Bflag) { 
        var CHE448TraditionalPlan2B3B4Belement = document.getElementById("CHE448TraditionalPlan2B3B4B");
        CHE448TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE448TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE448TraditionalPlan2B3B4B");
+ } 
+if (!MECE420TraditionalPlan2B3B4Bflag) { 
        var MECE420TraditionalPlan2B3B4Belement = document.getElementById("MECE420TraditionalPlan2B3B4B");
        MECE420TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE420TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE420TraditionalPlan2B3B4B");
+ } 
+if (!MECE403TraditionalPlan2B3B4Bflag) { 
        var MECE403TraditionalPlan2B3B4Belement = document.getElementById("MECE403TraditionalPlan2B3B4B");
        MECE403TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE403TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE403TraditionalPlan2B3B4B");
+ } 
+if (!MECE451TraditionalPlan2B3B4Bflag) { 
        var MECE451TraditionalPlan2B3B4Belement = document.getElementById("MECE451TraditionalPlan2B3B4B");
        MECE451TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE451TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE451TraditionalPlan2B3B4B");
+ } 
+if (!MECE430TraditionalPlan2B3B4Bflag) { 
        var MECE430TraditionalPlan2B3B4Belement = document.getElementById("MECE430TraditionalPlan2B3B4B");
        MECE430TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE430TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE430TraditionalPlan2B3B4B");
+ } 
+if (!MECE480TraditionalPlan2B3B4Bflag) { 
        var MECE480TraditionalPlan2B3B4Belement = document.getElementById("MECE480TraditionalPlan2B3B4B");
        MECE480TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE480TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE480TraditionalPlan2B3B4B");
+ } 
+if (!MECE463TraditionalPlan2B3B4Bflag) { 
        var MECE463TraditionalPlan2B3B4Belement = document.getElementById("MECE463TraditionalPlan2B3B4B");
        MECE463TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE463TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE463TraditionalPlan2B3B4B");
+ } 
        break;
-      case "AlternatePlan":
-       var CIVE270AlternatePlanelement = document.getElementById("CIVE270AlternatePlan");
-       CIVE270AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-       CIVE270AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+      case "AlternatePlan3A4A":
+if (!CIVE270AlternatePlan3A4Aflag) { 
+       var CIVE270AlternatePlan3A4Aelement = document.getElementById("CIVE270AlternatePlan3A4A");
+       CIVE270AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+       CIVE270AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
-       that.removeFromClicked("CIVE270AlternatePlan");
-       var MECE230AlternatePlanelement = document.getElementById("MECE230AlternatePlan");
-       MECE230AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-       MECE230AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+       that.removeFromClicked("CIVE270AlternatePlan3A4A");
+ } 
+if (!MECE230AlternatePlan3A4Aflag) { 
+       var MECE230AlternatePlan3A4Aelement = document.getElementById("MECE230AlternatePlan3A4A");
+       MECE230AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+       MECE230AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
-       that.removeFromClicked("MECE230AlternatePlan");
-       var CHE243AlternatePlanelement = document.getElementById("CHE243AlternatePlan");
-       CHE243AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-       CHE243AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+       that.removeFromClicked("MECE230AlternatePlan3A4A");
+ } 
+if (!CHE243AlternatePlan3A4Aflag) { 
+       var CHE243AlternatePlan3A4Aelement = document.getElementById("CHE243AlternatePlan3A4A");
+       CHE243AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+       CHE243AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
-       that.removeFromClicked("CHE243AlternatePlan");
-       var ECE209AlternatePlanelement = document.getElementById("ECE209AlternatePlan");
-       ECE209AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-       ECE209AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+       that.removeFromClicked("CHE243AlternatePlan3A4A");
+ } 
+if (!ECE209AlternatePlan3A4Aflag) { 
+       var ECE209AlternatePlan3A4Aelement = document.getElementById("ECE209AlternatePlan3A4A");
+       ECE209AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+       ECE209AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
-       that.removeFromClicked("ECE209AlternatePlan");
-       var MATE202AlternatePlanelement = document.getElementById("MATE202AlternatePlan");
-       MATE202AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-       MATE202AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+       that.removeFromClicked("ECE209AlternatePlan3A4A");
+ } 
+if (!MATE202AlternatePlan3A4Aflag) { 
+       var MATE202AlternatePlan3A4Aelement = document.getElementById("MATE202AlternatePlan3A4A");
+       MATE202AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+       MATE202AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
-       that.removeFromClicked("MATE202AlternatePlan");
-       var MECE250AlternatePlanelement = document.getElementById("MECE250AlternatePlan");
-       MECE250AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-       MECE250AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+       that.removeFromClicked("MATE202AlternatePlan3A4A");
+ } 
+if (!MECE250AlternatePlan3A4Aflag) { 
+       var MECE250AlternatePlan3A4Aelement = document.getElementById("MECE250AlternatePlan3A4A");
+       MECE250AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+       MECE250AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
-       that.removeFromClicked("MECE250AlternatePlan");
-       var MECE300AlternatePlanelement = document.getElementById("MECE300AlternatePlan");
-       MECE300AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-       MECE300AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+       that.removeFromClicked("MECE250AlternatePlan3A4A");
+ } 
+if (!MECE300AlternatePlan3A4Aflag) { 
+       var MECE300AlternatePlan3A4Aelement = document.getElementById("MECE300AlternatePlan3A4A");
+       MECE300AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+       MECE300AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
-       that.removeFromClicked("MECE300AlternatePlan");
-       var MECE301AlternatePlanelement = document.getElementById("MECE301AlternatePlan");
-       MECE301AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-       MECE301AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+       that.removeFromClicked("MECE300AlternatePlan3A4A");
+ } 
+if (!MECE301AlternatePlan3A4Aflag) { 
+       var MECE301AlternatePlan3A4Aelement = document.getElementById("MECE301AlternatePlan3A4A");
+       MECE301AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+       MECE301AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
-       that.removeFromClicked("MECE301AlternatePlan");
-       var MECE331AlternatePlanelement = document.getElementById("MECE331AlternatePlan");
-       MECE331AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-       MECE331AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+       that.removeFromClicked("MECE301AlternatePlan3A4A");
+ } 
+if (!MECE331AlternatePlan3A4Aflag) { 
+       var MECE331AlternatePlan3A4Aelement = document.getElementById("MECE331AlternatePlan3A4A");
+       MECE331AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+       MECE331AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
-       that.removeFromClicked("MECE331AlternatePlan");
-       var MECE371AlternatePlanelement = document.getElementById("MECE371AlternatePlan");
-       MECE371AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-       MECE371AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+       that.removeFromClicked("MECE331AlternatePlan3A4A");
+ } 
+if (!MECE371AlternatePlan3A4Aflag) { 
+       var MECE371AlternatePlan3A4Aelement = document.getElementById("MECE371AlternatePlan3A4A");
+       MECE371AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+       MECE371AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
-       that.removeFromClicked("MECE371AlternatePlan");
-       var MECE380AlternatePlanelement = document.getElementById("MECE380AlternatePlan");
-       MECE380AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-       MECE380AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+       that.removeFromClicked("MECE371AlternatePlan3A4A");
+ } 
+if (!MECE380AlternatePlan3A4Aflag) { 
+       var MECE380AlternatePlan3A4Aelement = document.getElementById("MECE380AlternatePlan3A4A");
+       MECE380AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+       MECE380AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
-       that.removeFromClicked("MECE380AlternatePlan");
-       var MECE340AlternatePlanelement = document.getElementById("MECE340AlternatePlan");
-       MECE340AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-       MECE340AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+       that.removeFromClicked("MECE380AlternatePlan3A4A");
+ } 
+if (!MECE340AlternatePlan3A4Aflag) { 
+       var MECE340AlternatePlan3A4Aelement = document.getElementById("MECE340AlternatePlan3A4A");
+       MECE340AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+       MECE340AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
-       that.removeFromClicked("MECE340AlternatePlan");
-       var MECE430AlternatePlanelement = document.getElementById("MECE430AlternatePlan");
-       MECE430AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-       MECE430AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+       that.removeFromClicked("MECE340AlternatePlan3A4A");
+ } 
+if (!MECE430AlternatePlan3A4Aflag) { 
+       var MECE430AlternatePlan3A4Aelement = document.getElementById("MECE430AlternatePlan3A4A");
+       MECE430AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+       MECE430AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
-       that.removeFromClicked("MECE430AlternatePlan");
-       var MECE480AlternatePlanelement = document.getElementById("MECE480AlternatePlan");
-       MECE480AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-       MECE480AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+       that.removeFromClicked("MECE430AlternatePlan3A4A");
+ } 
+if (!MECE480AlternatePlan3A4Aflag) { 
+       var MECE480AlternatePlan3A4Aelement = document.getElementById("MECE480AlternatePlan3A4A");
+       MECE480AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+       MECE480AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
-       that.removeFromClicked("MECE480AlternatePlan");
-       var MECE463AlternatePlanelement = document.getElementById("MECE463AlternatePlan");
-       MECE463AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-       MECE463AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+       that.removeFromClicked("MECE480AlternatePlan3A4A");
+ } 
+if (!MECE463AlternatePlan3A4Aflag) { 
+       var MECE463AlternatePlan3A4Aelement = document.getElementById("MECE463AlternatePlan3A4A");
+       MECE463AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+       MECE463AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
-       that.removeFromClicked("MECE463AlternatePlan");
-       var CHE448AlternatePlanelement = document.getElementById("CHE448AlternatePlan");
-       CHE448AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-       CHE448AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+       that.removeFromClicked("MECE463AlternatePlan3A4A");
+ } 
+if (!CHE448AlternatePlan3A4Aflag) { 
+       var CHE448AlternatePlan3A4Aelement = document.getElementById("CHE448AlternatePlan3A4A");
+       CHE448AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+       CHE448AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
-       that.removeFromClicked("CHE448AlternatePlan");
-       var MECE420AlternatePlanelement = document.getElementById("MECE420AlternatePlan");
-       MECE420AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-       MECE420AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+       that.removeFromClicked("CHE448AlternatePlan3A4A");
+ } 
+if (!MECE420AlternatePlan3A4Aflag) { 
+       var MECE420AlternatePlan3A4Aelement = document.getElementById("MECE420AlternatePlan3A4A");
+       MECE420AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+       MECE420AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
-       that.removeFromClicked("MECE420AlternatePlan");
-       var MECE403AlternatePlanelement = document.getElementById("MECE403AlternatePlan");
-       MECE403AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-       MECE403AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+       that.removeFromClicked("MECE420AlternatePlan3A4A");
+ } 
+if (!MECE403AlternatePlan3A4Aflag) { 
+       var MECE403AlternatePlan3A4Aelement = document.getElementById("MECE403AlternatePlan3A4A");
+       MECE403AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+       MECE403AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
-       that.removeFromClicked("MECE403AlternatePlan");
-       var MECE451AlternatePlanelement = document.getElementById("MECE451AlternatePlan");
-       MECE451AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-       MECE451AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+       that.removeFromClicked("MECE403AlternatePlan3A4A");
+ } 
+if (!MECE451AlternatePlan3A4Aflag) { 
+       var MECE451AlternatePlan3A4Aelement = document.getElementById("MECE451AlternatePlan3A4A");
+       MECE451AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+       MECE451AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
        
-       that.removeFromClicked("MECE451AlternatePlan");
+       that.removeFromClicked("MECE451AlternatePlan3A4A");
+ } 
        break;
       case "CoopPlan13A":
+if (!CIVE270CoopPlan13Aflag) { 
        var CIVE270CoopPlan13Aelement = document.getElementById("CIVE270CoopPlan13A");
        CIVE270CoopPlan13Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CIVE270CoopPlan13Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CIVE270CoopPlan13A");
+ } 
+if (!MECE230CoopPlan13Aflag) { 
        var MECE230CoopPlan13Aelement = document.getElementById("MECE230CoopPlan13A");
        MECE230CoopPlan13Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE230CoopPlan13Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE230CoopPlan13A");
+ } 
+if (!CHE243CoopPlan13Aflag) { 
        var CHE243CoopPlan13Aelement = document.getElementById("CHE243CoopPlan13A");
        CHE243CoopPlan13Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE243CoopPlan13Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE243CoopPlan13A");
+ } 
+if (!ECE209CoopPlan13Aflag) { 
        var ECE209CoopPlan13Aelement = document.getElementById("ECE209CoopPlan13A");
        ECE209CoopPlan13Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        ECE209CoopPlan13Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("ECE209CoopPlan13A");
+ } 
+if (!MATE202CoopPlan13Aflag) { 
        var MATE202CoopPlan13Aelement = document.getElementById("MATE202CoopPlan13A");
        MATE202CoopPlan13Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MATE202CoopPlan13Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MATE202CoopPlan13A");
+ } 
+if (!MECE250CoopPlan13Aflag) { 
        var MECE250CoopPlan13Aelement = document.getElementById("MECE250CoopPlan13A");
        MECE250CoopPlan13Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE250CoopPlan13Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE250CoopPlan13A");
+ } 
+if (!MECE300CoopPlan13Aflag) { 
        var MECE300CoopPlan13Aelement = document.getElementById("MECE300CoopPlan13A");
        MECE300CoopPlan13Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE300CoopPlan13Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE300CoopPlan13A");
+ } 
+if (!MECE301CoopPlan13Aflag) { 
        var MECE301CoopPlan13Aelement = document.getElementById("MECE301CoopPlan13A");
        MECE301CoopPlan13Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE301CoopPlan13Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE301CoopPlan13A");
+ } 
+if (!MECE331CoopPlan13Aflag) { 
        var MECE331CoopPlan13Aelement = document.getElementById("MECE331CoopPlan13A");
        MECE331CoopPlan13Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE331CoopPlan13Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE331CoopPlan13A");
+ } 
+if (!MECE371CoopPlan13Aflag) { 
        var MECE371CoopPlan13Aelement = document.getElementById("MECE371CoopPlan13A");
        MECE371CoopPlan13Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE371CoopPlan13Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE371CoopPlan13A");
+ } 
+if (!MECE380CoopPlan13Aflag) { 
        var MECE380CoopPlan13Aelement = document.getElementById("MECE380CoopPlan13A");
        MECE380CoopPlan13Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE380CoopPlan13Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE380CoopPlan13A");
+ } 
+if (!MECE340CoopPlan13Aflag) { 
        var MECE340CoopPlan13Aelement = document.getElementById("MECE340CoopPlan13A");
        MECE340CoopPlan13Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE340CoopPlan13Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE340CoopPlan13A");
+ } 
+if (!MECE430CoopPlan13Aflag) { 
        var MECE430CoopPlan13Aelement = document.getElementById("MECE430CoopPlan13A");
        MECE430CoopPlan13Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE430CoopPlan13Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE430CoopPlan13A");
+ } 
+if (!MECE480CoopPlan13Aflag) { 
        var MECE480CoopPlan13Aelement = document.getElementById("MECE480CoopPlan13A");
        MECE480CoopPlan13Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE480CoopPlan13Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE480CoopPlan13A");
+ } 
+if (!MECE463CoopPlan13Aflag) { 
        var MECE463CoopPlan13Aelement = document.getElementById("MECE463CoopPlan13A");
        MECE463CoopPlan13Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE463CoopPlan13Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE463CoopPlan13A");
+ } 
+if (!CHE448CoopPlan13Aflag) { 
        var CHE448CoopPlan13Aelement = document.getElementById("CHE448CoopPlan13A");
        CHE448CoopPlan13Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE448CoopPlan13Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE448CoopPlan13A");
+ } 
+if (!MECE420CoopPlan13Aflag) { 
        var MECE420CoopPlan13Aelement = document.getElementById("MECE420CoopPlan13A");
        MECE420CoopPlan13Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE420CoopPlan13Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE420CoopPlan13A");
+ } 
+if (!MECE403CoopPlan13Aflag) { 
        var MECE403CoopPlan13Aelement = document.getElementById("MECE403CoopPlan13A");
        MECE403CoopPlan13Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE403CoopPlan13Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE403CoopPlan13A");
+ } 
+if (!MECE451CoopPlan13Aflag) { 
        var MECE451CoopPlan13Aelement = document.getElementById("MECE451CoopPlan13A");
        MECE451CoopPlan13Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE451CoopPlan13Aelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE451CoopPlan13A");
+ } 
        break;
       case "CoopPlan13B":
+if (!CIVE270CoopPlan13Bflag) { 
        var CIVE270CoopPlan13Belement = document.getElementById("CIVE270CoopPlan13B");
        CIVE270CoopPlan13Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CIVE270CoopPlan13Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CIVE270CoopPlan13B");
+ } 
+if (!MECE230CoopPlan13Bflag) { 
        var MECE230CoopPlan13Belement = document.getElementById("MECE230CoopPlan13B");
        MECE230CoopPlan13Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE230CoopPlan13Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE230CoopPlan13B");
+ } 
+if (!CHE243CoopPlan13Bflag) { 
        var CHE243CoopPlan13Belement = document.getElementById("CHE243CoopPlan13B");
        CHE243CoopPlan13Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE243CoopPlan13Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE243CoopPlan13B");
+ } 
+if (!ECE209CoopPlan13Bflag) { 
        var ECE209CoopPlan13Belement = document.getElementById("ECE209CoopPlan13B");
        ECE209CoopPlan13Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        ECE209CoopPlan13Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("ECE209CoopPlan13B");
+ } 
+if (!MATE202CoopPlan13Bflag) { 
        var MATE202CoopPlan13Belement = document.getElementById("MATE202CoopPlan13B");
        MATE202CoopPlan13Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MATE202CoopPlan13Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MATE202CoopPlan13B");
+ } 
+if (!MECE250CoopPlan13Bflag) { 
        var MECE250CoopPlan13Belement = document.getElementById("MECE250CoopPlan13B");
        MECE250CoopPlan13Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE250CoopPlan13Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE250CoopPlan13B");
+ } 
+if (!MECE340CoopPlan13Bflag) { 
        var MECE340CoopPlan13Belement = document.getElementById("MECE340CoopPlan13B");
        MECE340CoopPlan13Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE340CoopPlan13Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE340CoopPlan13B");
+ } 
+if (!MECE300CoopPlan13Bflag) { 
        var MECE300CoopPlan13Belement = document.getElementById("MECE300CoopPlan13B");
        MECE300CoopPlan13Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE300CoopPlan13Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE300CoopPlan13B");
+ } 
+if (!MECE301CoopPlan13Bflag) { 
        var MECE301CoopPlan13Belement = document.getElementById("MECE301CoopPlan13B");
        MECE301CoopPlan13Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE301CoopPlan13Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE301CoopPlan13B");
+ } 
+if (!MECE331CoopPlan13Bflag) { 
        var MECE331CoopPlan13Belement = document.getElementById("MECE331CoopPlan13B");
        MECE331CoopPlan13Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE331CoopPlan13Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE331CoopPlan13B");
+ } 
+if (!MECE371CoopPlan13Bflag) { 
        var MECE371CoopPlan13Belement = document.getElementById("MECE371CoopPlan13B");
        MECE371CoopPlan13Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE371CoopPlan13Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE371CoopPlan13B");
+ } 
+if (!MECE380CoopPlan13Bflag) { 
        var MECE380CoopPlan13Belement = document.getElementById("MECE380CoopPlan13B");
        MECE380CoopPlan13Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE380CoopPlan13Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE380CoopPlan13B");
+ } 
+if (!MECE430CoopPlan13Bflag) { 
        var MECE430CoopPlan13Belement = document.getElementById("MECE430CoopPlan13B");
        MECE430CoopPlan13Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE430CoopPlan13Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE430CoopPlan13B");
+ } 
+if (!MECE480CoopPlan13Bflag) { 
        var MECE480CoopPlan13Belement = document.getElementById("MECE480CoopPlan13B");
        MECE480CoopPlan13Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE480CoopPlan13Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE480CoopPlan13B");
+ } 
+if (!MECE463CoopPlan13Bflag) { 
        var MECE463CoopPlan13Belement = document.getElementById("MECE463CoopPlan13B");
        MECE463CoopPlan13Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE463CoopPlan13Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE463CoopPlan13B");
+ } 
+if (!CHE448CoopPlan13Bflag) { 
        var CHE448CoopPlan13Belement = document.getElementById("CHE448CoopPlan13B");
        CHE448CoopPlan13Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE448CoopPlan13Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE448CoopPlan13B");
+ } 
+if (!MECE420CoopPlan13Bflag) { 
        var MECE420CoopPlan13Belement = document.getElementById("MECE420CoopPlan13B");
        MECE420CoopPlan13Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE420CoopPlan13Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE420CoopPlan13B");
+ } 
+if (!MECE403CoopPlan13Bflag) { 
        var MECE403CoopPlan13Belement = document.getElementById("MECE403CoopPlan13B");
        MECE403CoopPlan13Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE403CoopPlan13Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE403CoopPlan13B");
+ } 
+if (!MECE451CoopPlan13Bflag) { 
        var MECE451CoopPlan13Belement = document.getElementById("MECE451CoopPlan13B");
        MECE451CoopPlan13Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE451CoopPlan13Belement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE451CoopPlan13B");
+ } 
        break;
       case "CoopPlan2":
+if (!CHE243CoopPlan2flag) { 
        var CHE243CoopPlan2element = document.getElementById("CHE243CoopPlan2");
        CHE243CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE243CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE243CoopPlan2");
+ } 
+if (!CIVE270CoopPlan2flag) { 
        var CIVE270CoopPlan2element = document.getElementById("CIVE270CoopPlan2");
        CIVE270CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CIVE270CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CIVE270CoopPlan2");
+ } 
+if (!MECE250CoopPlan2flag) { 
        var MECE250CoopPlan2element = document.getElementById("MECE250CoopPlan2");
        MECE250CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE250CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE250CoopPlan2");
+ } 
+if (!ECE209CoopPlan2flag) { 
        var ECE209CoopPlan2element = document.getElementById("ECE209CoopPlan2");
        ECE209CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        ECE209CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("ECE209CoopPlan2");
+ } 
+if (!MATE202CoopPlan2flag) { 
        var MATE202CoopPlan2element = document.getElementById("MATE202CoopPlan2");
        MATE202CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MATE202CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MATE202CoopPlan2");
+ } 
+if (!MECE230CoopPlan2flag) { 
        var MECE230CoopPlan2element = document.getElementById("MECE230CoopPlan2");
        MECE230CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE230CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE230CoopPlan2");
+ } 
+if (!MECE300CoopPlan2flag) { 
        var MECE300CoopPlan2element = document.getElementById("MECE300CoopPlan2");
        MECE300CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE300CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE300CoopPlan2");
+ } 
+if (!MECE301CoopPlan2flag) { 
        var MECE301CoopPlan2element = document.getElementById("MECE301CoopPlan2");
        MECE301CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE301CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE301CoopPlan2");
+ } 
+if (!MECE331CoopPlan2flag) { 
        var MECE331CoopPlan2element = document.getElementById("MECE331CoopPlan2");
        MECE331CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE331CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE331CoopPlan2");
+ } 
+if (!MECE371CoopPlan2flag) { 
        var MECE371CoopPlan2element = document.getElementById("MECE371CoopPlan2");
        MECE371CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE371CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE371CoopPlan2");
+ } 
+if (!MECE380CoopPlan2flag) { 
        var MECE380CoopPlan2element = document.getElementById("MECE380CoopPlan2");
        MECE380CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE380CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE380CoopPlan2");
+ } 
+if (!MECE340CoopPlan2flag) { 
        var MECE340CoopPlan2element = document.getElementById("MECE340CoopPlan2");
        MECE340CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE340CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE340CoopPlan2");
+ } 
+if (!MECE403CoopPlan2flag) { 
        var MECE403CoopPlan2element = document.getElementById("MECE403CoopPlan2");
        MECE403CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE403CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE403CoopPlan2");
+ } 
+if (!MECE451CoopPlan2flag) { 
        var MECE451CoopPlan2element = document.getElementById("MECE451CoopPlan2");
        MECE451CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE451CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE451CoopPlan2");
+ } 
+if (!CHE448CoopPlan2flag) { 
        var CHE448CoopPlan2element = document.getElementById("CHE448CoopPlan2");
        CHE448CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE448CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE448CoopPlan2");
+ } 
+if (!MECE420CoopPlan2flag) { 
        var MECE420CoopPlan2element = document.getElementById("MECE420CoopPlan2");
        MECE420CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE420CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE420CoopPlan2");
+ } 
+if (!MECE430CoopPlan2flag) { 
        var MECE430CoopPlan2element = document.getElementById("MECE430CoopPlan2");
        MECE430CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE430CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE430CoopPlan2");
+ } 
+if (!MECE480CoopPlan2flag) { 
        var MECE480CoopPlan2element = document.getElementById("MECE480CoopPlan2");
        MECE480CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE480CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE480CoopPlan2");
+ } 
+if (!MECE463CoopPlan2flag) { 
        var MECE463CoopPlan2element = document.getElementById("MECE463CoopPlan2");
        MECE463CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE463CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE463CoopPlan2");
+ } 
        break;
       case "CoopPlan3Biomedical":
+if (!CIVE270CoopPlan3Biomedicalflag) { 
        var CIVE270CoopPlan3Biomedicalelement = document.getElementById("CIVE270CoopPlan3Biomedical");
        CIVE270CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CIVE270CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CIVE270CoopPlan3Biomedical");
+ } 
+if (!CHE243CoopPlan3Biomedicalflag) { 
        var CHE243CoopPlan3Biomedicalelement = document.getElementById("CHE243CoopPlan3Biomedical");
        CHE243CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE243CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE243CoopPlan3Biomedical");
+ } 
+if (!MECE250CoopPlan3Biomedicalflag) { 
        var MECE250CoopPlan3Biomedicalelement = document.getElementById("MECE250CoopPlan3Biomedical");
        MECE250CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE250CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE250CoopPlan3Biomedical");
+ } 
+if (!ECE209CoopPlan3Biomedicalflag) { 
        var ECE209CoopPlan3Biomedicalelement = document.getElementById("ECE209CoopPlan3Biomedical");
        ECE209CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        ECE209CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("ECE209CoopPlan3Biomedical");
+ } 
+if (!MATE202CoopPlan3Biomedicalflag) { 
        var MATE202CoopPlan3Biomedicalelement = document.getElementById("MATE202CoopPlan3Biomedical");
        MATE202CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MATE202CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MATE202CoopPlan3Biomedical");
+ } 
+if (!MECE230CoopPlan3Biomedicalflag) { 
        var MECE230CoopPlan3Biomedicalelement = document.getElementById("MECE230CoopPlan3Biomedical");
        MECE230CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE230CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE230CoopPlan3Biomedical");
+ } 
+if (!MECE340CoopPlan3Biomedicalflag) { 
        var MECE340CoopPlan3Biomedicalelement = document.getElementById("MECE340CoopPlan3Biomedical");
        MECE340CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE340CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE340CoopPlan3Biomedical");
+ } 
+if (!MECE300CoopPlan3Biomedicalflag) { 
        var MECE300CoopPlan3Biomedicalelement = document.getElementById("MECE300CoopPlan3Biomedical");
        MECE300CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE300CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE300CoopPlan3Biomedical");
+ } 
+if (!MECE301CoopPlan3Biomedicalflag) { 
        var MECE301CoopPlan3Biomedicalelement = document.getElementById("MECE301CoopPlan3Biomedical");
        MECE301CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE301CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE301CoopPlan3Biomedical");
+ } 
+if (!MECE331CoopPlan3Biomedicalflag) { 
        var MECE331CoopPlan3Biomedicalelement = document.getElementById("MECE331CoopPlan3Biomedical");
        MECE331CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE331CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE331CoopPlan3Biomedical");
+ } 
+if (!MECE371CoopPlan3Biomedicalflag) { 
        var MECE371CoopPlan3Biomedicalelement = document.getElementById("MECE371CoopPlan3Biomedical");
        MECE371CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE371CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE371CoopPlan3Biomedical");
+ } 
+if (!MECE380CoopPlan3Biomedicalflag) { 
        var MECE380CoopPlan3Biomedicalelement = document.getElementById("MECE380CoopPlan3Biomedical");
        MECE380CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE380CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE380CoopPlan3Biomedical");
+ } 
+if (!MECE430CoopPlan3Biomedicalflag) { 
        var MECE430CoopPlan3Biomedicalelement = document.getElementById("MECE430CoopPlan3Biomedical");
        MECE430CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE430CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE430CoopPlan3Biomedical");
+ } 
+if (!MECE463CoopPlan3Biomedicalflag) { 
        var MECE463CoopPlan3Biomedicalelement = document.getElementById("MECE463CoopPlan3Biomedical");
        MECE463CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE463CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE463CoopPlan3Biomedical");
+ } 
+if (!CHE448CoopPlan3Biomedicalflag) { 
        var CHE448CoopPlan3Biomedicalelement = document.getElementById("CHE448CoopPlan3Biomedical");
        CHE448CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE448CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE448CoopPlan3Biomedical");
+ } 
+if (!MECE420CoopPlan3Biomedicalflag) { 
        var MECE420CoopPlan3Biomedicalelement = document.getElementById("MECE420CoopPlan3Biomedical");
        MECE420CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE420CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE420CoopPlan3Biomedical");
+ } 
+if (!MECE403CoopPlan3Biomedicalflag) { 
        var MECE403CoopPlan3Biomedicalelement = document.getElementById("MECE403CoopPlan3Biomedical");
        MECE403CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE403CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE403CoopPlan3Biomedical");
+ } 
+if (!MECE451CoopPlan3Biomedicalflag) { 
        var MECE451CoopPlan3Biomedicalelement = document.getElementById("MECE451CoopPlan3Biomedical");
        MECE451CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE451CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE451CoopPlan3Biomedical");
+ } 
        break;
       case "CoopPlan4":
+if (!CIVE270CoopPlan4flag) { 
        var CIVE270CoopPlan4element = document.getElementById("CIVE270CoopPlan4");
        CIVE270CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CIVE270CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CIVE270CoopPlan4");
+ } 
+if (!MECE230CoopPlan4flag) { 
        var MECE230CoopPlan4element = document.getElementById("MECE230CoopPlan4");
        MECE230CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE230CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE230CoopPlan4");
+ } 
+if (!ECE209CoopPlan4flag) { 
        var ECE209CoopPlan4element = document.getElementById("ECE209CoopPlan4");
        ECE209CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        ECE209CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("ECE209CoopPlan4");
+ } 
+if (!CHE243CoopPlan4flag) { 
        var CHE243CoopPlan4element = document.getElementById("CHE243CoopPlan4");
        CHE243CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE243CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE243CoopPlan4");
+ } 
+if (!MATE202CoopPlan4flag) { 
        var MATE202CoopPlan4element = document.getElementById("MATE202CoopPlan4");
        MATE202CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MATE202CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MATE202CoopPlan4");
+ } 
+if (!MECE250CoopPlan4flag) { 
        var MECE250CoopPlan4element = document.getElementById("MECE250CoopPlan4");
        MECE250CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE250CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE250CoopPlan4");
+ } 
+if (!MECE300CoopPlan4flag) { 
        var MECE300CoopPlan4element = document.getElementById("MECE300CoopPlan4");
        MECE300CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE300CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE300CoopPlan4");
+ } 
+if (!MECE301CoopPlan4flag) { 
        var MECE301CoopPlan4element = document.getElementById("MECE301CoopPlan4");
        MECE301CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE301CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE301CoopPlan4");
+ } 
+if (!MECE331CoopPlan4flag) { 
        var MECE331CoopPlan4element = document.getElementById("MECE331CoopPlan4");
        MECE331CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE331CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE331CoopPlan4");
+ } 
+if (!MECE371CoopPlan4flag) { 
        var MECE371CoopPlan4element = document.getElementById("MECE371CoopPlan4");
        MECE371CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE371CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE371CoopPlan4");
+ } 
+if (!MECE380CoopPlan4flag) { 
        var MECE380CoopPlan4element = document.getElementById("MECE380CoopPlan4");
        MECE380CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE380CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE380CoopPlan4");
+ } 
+if (!MECE340CoopPlan4flag) { 
        var MECE340CoopPlan4element = document.getElementById("MECE340CoopPlan4");
        MECE340CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE340CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE340CoopPlan4");
+ } 
+if (!MECE430CoopPlan4flag) { 
        var MECE430CoopPlan4element = document.getElementById("MECE430CoopPlan4");
        MECE430CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE430CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE430CoopPlan4");
+ } 
+if (!MECE480CoopPlan4flag) { 
        var MECE480CoopPlan4element = document.getElementById("MECE480CoopPlan4");
        MECE480CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE480CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE480CoopPlan4");
+ } 
+if (!MECE463CoopPlan4flag) { 
        var MECE463CoopPlan4element = document.getElementById("MECE463CoopPlan4");
        MECE463CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE463CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE463CoopPlan4");
+ } 
+if (!CHE448CoopPlan4flag) { 
        var CHE448CoopPlan4element = document.getElementById("CHE448CoopPlan4");
        CHE448CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE448CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("CHE448CoopPlan4");
+ } 
+if (!MECE420CoopPlan4flag) { 
        var MECE420CoopPlan4element = document.getElementById("MECE420CoopPlan4");
        MECE420CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE420CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE420CoopPlan4");
+ } 
+if (!MECE403CoopPlan4flag) { 
        var MECE403CoopPlan4element = document.getElementById("MECE403CoopPlan4");
        MECE403CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE403CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE403CoopPlan4");
+ } 
+if (!MECE451CoopPlan4flag) { 
        var MECE451CoopPlan4element = document.getElementById("MECE451CoopPlan4");
        MECE451CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE451CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE451CoopPlan4");
+ } 
        break;
        }
       break;
@@ -8683,13 +10096,13 @@ switch(categoryName) {
           that.removeFromClicked("COMPTraditionalPlan2B3B4B");
         }
        break;
-      case "AlternatePlan":
+      case "AlternatePlan3A4A":
         var COMPelements = document.getElementsByClassName("COMP-highlighted");
         for (let i = 0; i < COMPelements.length; i++) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("COMPAlternatePlan");
+          that.removeFromClicked("COMPAlternatePlan3A4A");
         }
        break;
       case "CoopPlan13A":
@@ -8981,34 +10394,34 @@ switch(categoryName) {
           that.removeFromClicked("PROGTraditionalPlan2B3B4B");
         }
        break;
-      case "AlternatePlan":
+      case "AlternatePlan3A4A":
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGAlternatePlan");
+          that.removeFromClicked("PROGAlternatePlan3A4A");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGAlternatePlan");
+          that.removeFromClicked("PROGAlternatePlan3A4A");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGAlternatePlan");
+          that.removeFromClicked("PROGAlternatePlan3A4A");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGAlternatePlan");
+          that.removeFromClicked("PROGAlternatePlan3A4A");
         }
        break;
       case "CoopPlan13A":
@@ -9167,13 +10580,13 @@ switch(categoryName) {
           that.removeFromClicked("ITSTraditionalPlan2A3A4A");
         }
        break;
-      case "AlternatePlan":
+      case "AlternatePlan3A4A":
         var ITSelements = document.getElementsByClassName("ITS-highlighted");
         for (let i = 0; i < ITSelements.length; i++) {
           var currelement = document.getElementById(ITSelements.item(i).id);
           currelement.classList.remove("ITS-highlighted");
           currelement.classList.add("ITS");
-          that.removeFromClicked("ITSAlternatePlan");
+          that.removeFromClicked("ITSAlternatePlan3A4A");
         }
        break;
       case "CoopPlan13A":
@@ -9226,36 +10639,48 @@ switch(categoryName) {
   case "":
     switch(planName) {
       case "CoopPlan3Biomedical":
+if (!BME320CoopPlan3Biomedicalflag) { 
        var BME320CoopPlan3Biomedicalelement = document.getElementById("BME320CoopPlan3Biomedical");
        BME320CoopPlan3Biomedicalelement.classList.remove("-highlighted");
        BME320CoopPlan3Biomedicalelement.classList.add("");
        
        that.removeFromClicked("BME320CoopPlan3Biomedical");
+ } 
+if (!BME321CoopPlan3Biomedicalflag) { 
        var BME321CoopPlan3Biomedicalelement = document.getElementById("BME321CoopPlan3Biomedical");
        BME321CoopPlan3Biomedicalelement.classList.remove("-highlighted");
        BME321CoopPlan3Biomedicalelement.classList.add("");
        
        that.removeFromClicked("BME321CoopPlan3Biomedical");
+ } 
+if (!MECE563CoopPlan3Biomedicalflag) { 
        var MECE563CoopPlan3Biomedicalelement = document.getElementById("MECE563CoopPlan3Biomedical");
        MECE563CoopPlan3Biomedicalelement.classList.remove("-highlighted");
        MECE563CoopPlan3Biomedicalelement.classList.add("");
        
        that.removeFromClicked("MECE563CoopPlan3Biomedical");
+ } 
+if (!STAT337CoopPlan3Biomedicalflag) { 
        var STAT337CoopPlan3Biomedicalelement = document.getElementById("STAT337CoopPlan3Biomedical");
        STAT337CoopPlan3Biomedicalelement.classList.remove("-highlighted");
        STAT337CoopPlan3Biomedicalelement.classList.add("");
        
        that.removeFromClicked("STAT337CoopPlan3Biomedical");
+ } 
+if (!MECE485CoopPlan3Biomedicalflag) { 
        var MECE485CoopPlan3Biomedicalelement = document.getElementById("MECE485CoopPlan3Biomedical");
        MECE485CoopPlan3Biomedicalelement.classList.remove("-highlighted");
        MECE485CoopPlan3Biomedicalelement.classList.add("");
        
        that.removeFromClicked("MECE485CoopPlan3Biomedical");
+ } 
+if (!PHIL386CoopPlan3Biomedicalflag) { 
        var PHIL386CoopPlan3Biomedicalelement = document.getElementById("PHIL386CoopPlan3Biomedical");
        PHIL386CoopPlan3Biomedicalelement.classList.remove("-highlighted");
        PHIL386CoopPlan3Biomedicalelement.classList.add("");
        
        that.removeFromClicked("PHIL386CoopPlan3Biomedical");
+ } 
        break;
        }
       break;
@@ -19939,152 +21364,152 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4B3Listener = function () {
       ProgramTechnicalElectiveTraditionalPlan2B3B4B3flag=false
   }
 };
-  var CHEM103AlternatePlanflag = false;
-  var ENGG100AlternatePlanflag = false;
-  var ENGG130AlternatePlanflag = false;
-  var ENGL199AlternatePlanflag = false;
-  var MATH100AlternatePlanflag = false;
-  var PHYS130AlternatePlanflag = false;
-  var CHEM105AlternatePlanflag = false;
-  var ENCMP100AlternatePlanflag = false;
-  var ENGG160AlternatePlanflag = false;
-  var ENPH131AlternatePlanflag = false;
-  var MATH101AlternatePlanflag = false;
-  var MATH102AlternatePlanflag = false;
-  var ENGM310AlternatePlanflag = false;
-  var ENGM401AlternatePlanflag = false;
-  var ENGG404AlternatePlanflag = false;
-  var MATH201AlternatePlanflag = false;
-  var MATH209AlternatePlanflag = false;
-  var ComplementaryElectiveAlternatePlan0flag = false;
-  var ITSElectiveAlternatePlan0flag = false;
-  var CIVE270AlternatePlanflag = false;
-  var MECE230AlternatePlanflag = false;
-  var MECE260AlternatePlanflag = false;
-  var MECE265AlternatePlanflag = false;
-  var STAT235AlternatePlanflag = false;
-  var CHE243AlternatePlanflag = false;
-  var ECE209AlternatePlanflag = false;
-  var MATE202AlternatePlanflag = false;
-  var MECE200AlternatePlanflag = false;
-  var MECE250AlternatePlanflag = false;
-  var MATH300AlternatePlanflag = false;
-  var MECE300AlternatePlanflag = false;
-  var MECE301AlternatePlanflag = false;
-  var MECE331AlternatePlanflag = false;
-  var MECE371AlternatePlanflag = false;
-  var MECE380AlternatePlanflag = false;
-  var MECE340AlternatePlanflag = false;
-  var MECE360AlternatePlanflag = false;
-  var MECE362AlternatePlanflag = false;
-  var MECE390AlternatePlanflag = false;
-  var ProgramTechnicalElectiveAlternatePlan0flag = false;
-  var MECE430AlternatePlanflag = false;
-  var MECE480AlternatePlanflag = false;
-  var MECE463AlternatePlanflag = false;
-  var ProgramTechnicalElectiveAlternatePlan1flag = false;
-  var ProgramTechnicalElectiveAlternatePlan2flag = false;
-  var ProgramTechnicalElectiveAlternatePlan3flag = false;
-  var CHE448AlternatePlanflag = false;
-  var MECE420AlternatePlanflag = false;
-  var ENGG400AlternatePlanflag = false;
-  var MECE403AlternatePlanflag = false;
-  var MECE451AlternatePlanflag = false;
-  var MECE460AlternatePlanflag = false;
-$scope.CHEM103AlternatePlanListener = function () {
-  var CHEM103AlternatePlanelement = document.getElementById("CHEM103AlternatePlan");
- if (!CHEM103AlternatePlanflag) {
-     if (CHEM103AlternatePlanelement.classList.contains("BASICSCIENCES-highlighted")) { 
-     CHEM103AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
-     CHEM103AlternatePlanelement.classList.add("BASICSCIENCES");
+  var CHEM103AlternatePlan3A4Aflag = false;
+  var ENGG100AlternatePlan3A4Aflag = false;
+  var ENGG130AlternatePlan3A4Aflag = false;
+  var ENGL199AlternatePlan3A4Aflag = false;
+  var MATH100AlternatePlan3A4Aflag = false;
+  var PHYS130AlternatePlan3A4Aflag = false;
+  var CHEM105AlternatePlan3A4Aflag = false;
+  var ENCMP100AlternatePlan3A4Aflag = false;
+  var ENGG160AlternatePlan3A4Aflag = false;
+  var ENPH131AlternatePlan3A4Aflag = false;
+  var MATH101AlternatePlan3A4Aflag = false;
+  var MATH102AlternatePlan3A4Aflag = false;
+  var ENGM310AlternatePlan3A4Aflag = false;
+  var ENGM401AlternatePlan3A4Aflag = false;
+  var ENGG404AlternatePlan3A4Aflag = false;
+  var MATH201AlternatePlan3A4Aflag = false;
+  var MATH209AlternatePlan3A4Aflag = false;
+  var ComplementaryElectiveAlternatePlan3A4A0flag = false;
+  var ITSElectiveAlternatePlan3A4A0flag = false;
+  var CIVE270AlternatePlan3A4Aflag = false;
+  var MECE230AlternatePlan3A4Aflag = false;
+  var MECE260AlternatePlan3A4Aflag = false;
+  var MECE265AlternatePlan3A4Aflag = false;
+  var STAT235AlternatePlan3A4Aflag = false;
+  var CHE243AlternatePlan3A4Aflag = false;
+  var ECE209AlternatePlan3A4Aflag = false;
+  var MATE202AlternatePlan3A4Aflag = false;
+  var MECE200AlternatePlan3A4Aflag = false;
+  var MECE250AlternatePlan3A4Aflag = false;
+  var MATH300AlternatePlan3A4Aflag = false;
+  var MECE300AlternatePlan3A4Aflag = false;
+  var MECE301AlternatePlan3A4Aflag = false;
+  var MECE331AlternatePlan3A4Aflag = false;
+  var MECE371AlternatePlan3A4Aflag = false;
+  var MECE380AlternatePlan3A4Aflag = false;
+  var MECE340AlternatePlan3A4Aflag = false;
+  var MECE360AlternatePlan3A4Aflag = false;
+  var MECE362AlternatePlan3A4Aflag = false;
+  var MECE390AlternatePlan3A4Aflag = false;
+  var ProgramTechnicalElectiveAlternatePlan3A4A0flag = false;
+  var MECE430AlternatePlan3A4Aflag = false;
+  var MECE480AlternatePlan3A4Aflag = false;
+  var MECE463AlternatePlan3A4Aflag = false;
+  var ProgramTechnicalElectiveAlternatePlan3A4A1flag = false;
+  var ProgramTechnicalElectiveAlternatePlan3A4A2flag = false;
+  var ProgramTechnicalElectiveAlternatePlan3A4A3flag = false;
+  var CHE448AlternatePlan3A4Aflag = false;
+  var MECE420AlternatePlan3A4Aflag = false;
+  var ENGG400AlternatePlan3A4Aflag = false;
+  var MECE403AlternatePlan3A4Aflag = false;
+  var MECE451AlternatePlan3A4Aflag = false;
+  var MECE460AlternatePlan3A4Aflag = false;
+$scope.CHEM103AlternatePlan3A4AListener = function () {
+  var CHEM103AlternatePlan3A4Aelement = document.getElementById("CHEM103AlternatePlan3A4A");
+ if (!CHEM103AlternatePlan3A4Aflag) {
+     if (CHEM103AlternatePlan3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
+     CHEM103AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
+     CHEM103AlternatePlan3A4Aelement.classList.add("BASICSCIENCES");
       return;
 }      that.addLine(getLine626());
-     CHEM103AlternatePlanelement.classList.remove("BASICSCIENCES");
-     CHEM103AlternatePlanelement.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked(["CHEM103AlternatePlan", "BASICSCIENCES"]);
-      CHEM103AlternatePlanflag=true
+     CHEM103AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES");
+     CHEM103AlternatePlan3A4Aelement.classList.add("BASICSCIENCES-highlighted");
+     that.addToClicked(["CHEM103AlternatePlan3A4A", "BASICSCIENCES"]);
+      CHEM103AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine626());
-     CHEM103AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
-     CHEM103AlternatePlanelement.classList.add("BASICSCIENCES");
-     that.removeFromClicked("CHEM103AlternatePlan");
-      CHEM103AlternatePlanflag=false
+     CHEM103AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
+     CHEM103AlternatePlan3A4Aelement.classList.add("BASICSCIENCES");
+     that.removeFromClicked("CHEM103AlternatePlan3A4A");
+      CHEM103AlternatePlan3A4Aflag=false
   }
 };
-$scope.ENGG100AlternatePlanListener = function () {
-  var ENGG100AlternatePlanelement = document.getElementById("ENGG100AlternatePlan");
- if (!ENGG100AlternatePlanflag) {
-     if (ENGG100AlternatePlanelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
-     ENGG100AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
-     ENGG100AlternatePlanelement.classList.add("ENGINEERINGPROFESSION");
+$scope.ENGG100AlternatePlan3A4AListener = function () {
+  var ENGG100AlternatePlan3A4Aelement = document.getElementById("ENGG100AlternatePlan3A4A");
+ if (!ENGG100AlternatePlan3A4Aflag) {
+     if (ENGG100AlternatePlan3A4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
+     ENGG100AlternatePlan3A4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG100AlternatePlan3A4Aelement.classList.add("ENGINEERINGPROFESSION");
       return;
-}     ENGG100AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION");
-     ENGG100AlternatePlanelement.classList.add("ENGINEERINGPROFESSION-highlighted");
-     that.addToClicked(["ENGG100AlternatePlan", "ENGINEERINGPROFESSION"]);
-      ENGG100AlternatePlanflag=true
+}     ENGG100AlternatePlan3A4Aelement.classList.remove("ENGINEERINGPROFESSION");
+     ENGG100AlternatePlan3A4Aelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG100AlternatePlan3A4A", "ENGINEERINGPROFESSION"]);
+      ENGG100AlternatePlan3A4Aflag=true
   }
  else {
-     ENGG100AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
-     ENGG100AlternatePlanelement.classList.add("ENGINEERINGPROFESSION");
-     that.removeFromClicked("ENGG100AlternatePlan");
-      ENGG100AlternatePlanflag=false
+     ENGG100AlternatePlan3A4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG100AlternatePlan3A4Aelement.classList.add("ENGINEERINGPROFESSION");
+     that.removeFromClicked("ENGG100AlternatePlan3A4A");
+      ENGG100AlternatePlan3A4Aflag=false
   }
 };
-$scope.ENGG130AlternatePlanListener = function () {
-  var ENGG130AlternatePlanelement = document.getElementById("ENGG130AlternatePlan");
- if (!ENGG130AlternatePlanflag) {
-     if (ENGG130AlternatePlanelement.classList.contains("BASICSCIENCES-highlighted")) { 
-     ENGG130AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
-     ENGG130AlternatePlanelement.classList.add("BASICSCIENCES");
+$scope.ENGG130AlternatePlan3A4AListener = function () {
+  var ENGG130AlternatePlan3A4Aelement = document.getElementById("ENGG130AlternatePlan3A4A");
+ if (!ENGG130AlternatePlan3A4Aflag) {
+     if (ENGG130AlternatePlan3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
+     ENGG130AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
+     ENGG130AlternatePlan3A4Aelement.classList.add("BASICSCIENCES");
       return;
 }      that.addLine(getLine624());
       that.addLine(getLine629());
       that.addLine(getLine636());
       that.addLine(getLine647());
-     ENGG130AlternatePlanelement.classList.remove("BASICSCIENCES");
-     ENGG130AlternatePlanelement.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked(["ENGG130AlternatePlan", "BASICSCIENCES"]);
-      ENGG130AlternatePlanflag=true
+     ENGG130AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES");
+     ENGG130AlternatePlan3A4Aelement.classList.add("BASICSCIENCES-highlighted");
+     that.addToClicked(["ENGG130AlternatePlan3A4A", "BASICSCIENCES"]);
+      ENGG130AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine624());
       that.removeLine(getLine629());
       that.removeLine(getLine636());
       that.removeLine(getLine647());
-     ENGG130AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
-     ENGG130AlternatePlanelement.classList.add("BASICSCIENCES");
-     that.removeFromClicked("ENGG130AlternatePlan");
-      ENGG130AlternatePlanflag=false
+     ENGG130AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
+     ENGG130AlternatePlan3A4Aelement.classList.add("BASICSCIENCES");
+     that.removeFromClicked("ENGG130AlternatePlan3A4A");
+      ENGG130AlternatePlan3A4Aflag=false
   }
 };
-$scope.ENGL199AlternatePlanListener = function () {
-  var ENGL199AlternatePlanelement = document.getElementById("ENGL199AlternatePlan");
- if (!ENGL199AlternatePlanflag) {
-     if (ENGL199AlternatePlanelement.classList.contains("Other-highlighted")) { 
-     ENGL199AlternatePlanelement.classList.remove("Other-highlighted");
-     ENGL199AlternatePlanelement.classList.add("Other");
+$scope.ENGL199AlternatePlan3A4AListener = function () {
+  var ENGL199AlternatePlan3A4Aelement = document.getElementById("ENGL199AlternatePlan3A4A");
+ if (!ENGL199AlternatePlan3A4Aflag) {
+     if (ENGL199AlternatePlan3A4Aelement.classList.contains("Other-highlighted")) { 
+     ENGL199AlternatePlan3A4Aelement.classList.remove("Other-highlighted");
+     ENGL199AlternatePlan3A4Aelement.classList.add("Other");
       return;
 }      that.addLine(getLine627());
-     ENGL199AlternatePlanelement.classList.remove("Other");
-     ENGL199AlternatePlanelement.classList.add("Other-highlighted");
-     that.addToClicked(["ENGL199AlternatePlan", "Other"]);
-      ENGL199AlternatePlanflag=true
+     ENGL199AlternatePlan3A4Aelement.classList.remove("Other");
+     ENGL199AlternatePlan3A4Aelement.classList.add("Other-highlighted");
+     that.addToClicked(["ENGL199AlternatePlan3A4A", "Other"]);
+      ENGL199AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine627());
-     ENGL199AlternatePlanelement.classList.remove("Other-highlighted");
-     ENGL199AlternatePlanelement.classList.add("Other");
-     that.removeFromClicked("ENGL199AlternatePlan");
-      ENGL199AlternatePlanflag=false
+     ENGL199AlternatePlan3A4Aelement.classList.remove("Other-highlighted");
+     ENGL199AlternatePlan3A4Aelement.classList.add("Other");
+     that.removeFromClicked("ENGL199AlternatePlan3A4A");
+      ENGL199AlternatePlan3A4Aflag=false
   }
 };
-$scope.MATH100AlternatePlanListener = function () {
-  var MATH100AlternatePlanelement = document.getElementById("MATH100AlternatePlan");
- if (!MATH100AlternatePlanflag) {
-     if (MATH100AlternatePlanelement.classList.contains("MATH-highlighted")) { 
-     MATH100AlternatePlanelement.classList.remove("MATH-highlighted");
-     MATH100AlternatePlanelement.classList.add("MATH");
+$scope.MATH100AlternatePlan3A4AListener = function () {
+  var MATH100AlternatePlan3A4Aelement = document.getElementById("MATH100AlternatePlan3A4A");
+ if (!MATH100AlternatePlan3A4Aflag) {
+     if (MATH100AlternatePlan3A4Aelement.classList.contains("MATH-highlighted")) { 
+     MATH100AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+     MATH100AlternatePlan3A4Aelement.classList.add("MATH");
       return;
 }      that.addLine(getLine624());
       that.addLine(getLine625());
@@ -20092,10 +21517,10 @@ $scope.MATH100AlternatePlanListener = function () {
       that.addLine(getLine631());
       that.addLine(getLine632());
       that.addLine(getLine643());
-     MATH100AlternatePlanelement.classList.remove("MATH");
-     MATH100AlternatePlanelement.classList.add("MATH-highlighted");
-     that.addToClicked(["MATH100AlternatePlan", "MATH"]);
-      MATH100AlternatePlanflag=true
+     MATH100AlternatePlan3A4Aelement.classList.remove("MATH");
+     MATH100AlternatePlan3A4Aelement.classList.add("MATH-highlighted");
+     that.addToClicked(["MATH100AlternatePlan3A4A", "MATH"]);
+      MATH100AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine624());
@@ -20104,114 +21529,114 @@ $scope.MATH100AlternatePlanListener = function () {
       that.removeLine(getLine631());
       that.removeLine(getLine632());
       that.removeLine(getLine643());
-     MATH100AlternatePlanelement.classList.remove("MATH-highlighted");
-     MATH100AlternatePlanelement.classList.add("MATH");
-     that.removeFromClicked("MATH100AlternatePlan");
-      MATH100AlternatePlanflag=false
+     MATH100AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+     MATH100AlternatePlan3A4Aelement.classList.add("MATH");
+     that.removeFromClicked("MATH100AlternatePlan3A4A");
+      MATH100AlternatePlan3A4Aflag=false
   }
 };
-$scope.PHYS130AlternatePlanListener = function () {
-  var PHYS130AlternatePlanelement = document.getElementById("PHYS130AlternatePlan");
- if (!PHYS130AlternatePlanflag) {
-     if (PHYS130AlternatePlanelement.classList.contains("BASICSCIENCES-highlighted")) { 
-     PHYS130AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
-     PHYS130AlternatePlanelement.classList.add("BASICSCIENCES");
+$scope.PHYS130AlternatePlan3A4AListener = function () {
+  var PHYS130AlternatePlan3A4Aelement = document.getElementById("PHYS130AlternatePlan3A4A");
+ if (!PHYS130AlternatePlan3A4Aflag) {
+     if (PHYS130AlternatePlan3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
+     PHYS130AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
+     PHYS130AlternatePlan3A4Aelement.classList.add("BASICSCIENCES");
       return;
 }      that.addLine(getLine625());
-     PHYS130AlternatePlanelement.classList.remove("BASICSCIENCES");
-     PHYS130AlternatePlanelement.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked(["PHYS130AlternatePlan", "BASICSCIENCES"]);
-      PHYS130AlternatePlanflag=true
+     PHYS130AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES");
+     PHYS130AlternatePlan3A4Aelement.classList.add("BASICSCIENCES-highlighted");
+     that.addToClicked(["PHYS130AlternatePlan3A4A", "BASICSCIENCES"]);
+      PHYS130AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine625());
-     PHYS130AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
-     PHYS130AlternatePlanelement.classList.add("BASICSCIENCES");
-     that.removeFromClicked("PHYS130AlternatePlan");
-      PHYS130AlternatePlanflag=false
+     PHYS130AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
+     PHYS130AlternatePlan3A4Aelement.classList.add("BASICSCIENCES");
+     that.removeFromClicked("PHYS130AlternatePlan3A4A");
+      PHYS130AlternatePlan3A4Aflag=false
   }
 };
-$scope.CHEM105AlternatePlanListener = function () {
-  var CHEM105AlternatePlanelement = document.getElementById("CHEM105AlternatePlan");
- if (!CHEM105AlternatePlanflag) {
-     if (CHEM105AlternatePlanelement.classList.contains("BASICSCIENCES-highlighted")) { 
-     CHEM105AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
-     CHEM105AlternatePlanelement.classList.add("BASICSCIENCES");
+$scope.CHEM105AlternatePlan3A4AListener = function () {
+  var CHEM105AlternatePlan3A4Aelement = document.getElementById("CHEM105AlternatePlan3A4A");
+ if (!CHEM105AlternatePlan3A4Aflag) {
+     if (CHEM105AlternatePlan3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
+     CHEM105AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
+     CHEM105AlternatePlan3A4Aelement.classList.add("BASICSCIENCES");
       return;
 }      that.addLine(getLine626());
       that.addLine(getLine646());
-     CHEM105AlternatePlanelement.classList.remove("BASICSCIENCES");
-     CHEM105AlternatePlanelement.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked(["CHEM105AlternatePlan", "BASICSCIENCES"]);
-      CHEM105AlternatePlanflag=true
+     CHEM105AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES");
+     CHEM105AlternatePlan3A4Aelement.classList.add("BASICSCIENCES-highlighted");
+     that.addToClicked(["CHEM105AlternatePlan3A4A", "BASICSCIENCES"]);
+      CHEM105AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine626());
       that.removeLine(getLine646());
-     CHEM105AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
-     CHEM105AlternatePlanelement.classList.add("BASICSCIENCES");
-     that.removeFromClicked("CHEM105AlternatePlan");
-      CHEM105AlternatePlanflag=false
+     CHEM105AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
+     CHEM105AlternatePlan3A4Aelement.classList.add("BASICSCIENCES");
+     that.removeFromClicked("CHEM105AlternatePlan3A4A");
+      CHEM105AlternatePlan3A4Aflag=false
   }
 };
-$scope.ENCMP100AlternatePlanListener = function () {
-  var ENCMP100AlternatePlanelement = document.getElementById("ENCMP100AlternatePlan");
- if (!ENCMP100AlternatePlanflag) {
-     if (ENCMP100AlternatePlanelement.classList.contains("BASICSCIENCES-highlighted")) { 
-     ENCMP100AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
-     ENCMP100AlternatePlanelement.classList.add("BASICSCIENCES");
+$scope.ENCMP100AlternatePlan3A4AListener = function () {
+  var ENCMP100AlternatePlan3A4Aelement = document.getElementById("ENCMP100AlternatePlan3A4A");
+ if (!ENCMP100AlternatePlan3A4Aflag) {
+     if (ENCMP100AlternatePlan3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
+     ENCMP100AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
+     ENCMP100AlternatePlan3A4Aelement.classList.add("BASICSCIENCES");
       return;
-}     ENCMP100AlternatePlanelement.classList.remove("BASICSCIENCES");
-     ENCMP100AlternatePlanelement.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked(["ENCMP100AlternatePlan", "BASICSCIENCES"]);
-      ENCMP100AlternatePlanflag=true
+}     ENCMP100AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES");
+     ENCMP100AlternatePlan3A4Aelement.classList.add("BASICSCIENCES-highlighted");
+     that.addToClicked(["ENCMP100AlternatePlan3A4A", "BASICSCIENCES"]);
+      ENCMP100AlternatePlan3A4Aflag=true
   }
  else {
-     ENCMP100AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
-     ENCMP100AlternatePlanelement.classList.add("BASICSCIENCES");
-     that.removeFromClicked("ENCMP100AlternatePlan");
-      ENCMP100AlternatePlanflag=false
+     ENCMP100AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
+     ENCMP100AlternatePlan3A4Aelement.classList.add("BASICSCIENCES");
+     that.removeFromClicked("ENCMP100AlternatePlan3A4A");
+      ENCMP100AlternatePlan3A4Aflag=false
   }
 };
-$scope.ENGG160AlternatePlanListener = function () {
-  var ENGG160AlternatePlanelement = document.getElementById("ENGG160AlternatePlan");
- if (!ENGG160AlternatePlanflag) {
-     if (ENGG160AlternatePlanelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
-     ENGG160AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
-     ENGG160AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
+$scope.ENGG160AlternatePlan3A4AListener = function () {
+  var ENGG160AlternatePlan3A4Aelement = document.getElementById("ENGG160AlternatePlan3A4A");
+ if (!ENGG160AlternatePlan3A4Aflag) {
+     if (ENGG160AlternatePlan3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
+     ENGG160AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
+     ENGG160AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN");
       return;
 }      that.addLine(getLine627());
       that.addLine(getLine640());
-     ENGG160AlternatePlanelement.classList.remove("ENGINEERINGDESIGN");
-     ENGG160AlternatePlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked(["ENGG160AlternatePlan", "ENGINEERINGDESIGN"]);
-      ENGG160AlternatePlanflag=true
+     ENGG160AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN");
+     ENGG160AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN-highlighted");
+     that.addToClicked(["ENGG160AlternatePlan3A4A", "ENGINEERINGDESIGN"]);
+      ENGG160AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine627());
       that.removeLine(getLine640());
-     ENGG160AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
-     ENGG160AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
-     that.removeFromClicked("ENGG160AlternatePlan");
-      ENGG160AlternatePlanflag=false
+     ENGG160AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
+     ENGG160AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN");
+     that.removeFromClicked("ENGG160AlternatePlan3A4A");
+      ENGG160AlternatePlan3A4Aflag=false
   }
 };
-$scope.ENPH131AlternatePlanListener = function () {
-  var ENPH131AlternatePlanelement = document.getElementById("ENPH131AlternatePlan");
- if (!ENPH131AlternatePlanflag) {
-     if (ENPH131AlternatePlanelement.classList.contains("BASICSCIENCES-highlighted")) { 
-     ENPH131AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
-     ENPH131AlternatePlanelement.classList.add("BASICSCIENCES");
+$scope.ENPH131AlternatePlan3A4AListener = function () {
+  var ENPH131AlternatePlan3A4Aelement = document.getElementById("ENPH131AlternatePlan3A4A");
+ if (!ENPH131AlternatePlan3A4Aflag) {
+     if (ENPH131AlternatePlan3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
+     ENPH131AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
+     ENPH131AlternatePlan3A4Aelement.classList.add("BASICSCIENCES");
       return;
 }      that.addLine(getLine628());
       that.addLine(getLine629());
       that.addLine(getLine630());
       that.addLine(getLine639());
       that.addLine(getLine648());
-     ENPH131AlternatePlanelement.classList.remove("BASICSCIENCES");
-     ENPH131AlternatePlanelement.classList.add("BASICSCIENCES-highlighted");
-     that.addToClicked(["ENPH131AlternatePlan", "BASICSCIENCES"]);
-      ENPH131AlternatePlanflag=true
+     ENPH131AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES");
+     ENPH131AlternatePlan3A4Aelement.classList.add("BASICSCIENCES-highlighted");
+     that.addToClicked(["ENPH131AlternatePlan3A4A", "BASICSCIENCES"]);
+      ENPH131AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine628());
@@ -20219,18 +21644,18 @@ $scope.ENPH131AlternatePlanListener = function () {
       that.removeLine(getLine630());
       that.removeLine(getLine639());
       that.removeLine(getLine648());
-     ENPH131AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
-     ENPH131AlternatePlanelement.classList.add("BASICSCIENCES");
-     that.removeFromClicked("ENPH131AlternatePlan");
-      ENPH131AlternatePlanflag=false
+     ENPH131AlternatePlan3A4Aelement.classList.remove("BASICSCIENCES-highlighted");
+     ENPH131AlternatePlan3A4Aelement.classList.add("BASICSCIENCES");
+     that.removeFromClicked("ENPH131AlternatePlan3A4A");
+      ENPH131AlternatePlan3A4Aflag=false
   }
 };
-$scope.MATH101AlternatePlanListener = function () {
-  var MATH101AlternatePlanelement = document.getElementById("MATH101AlternatePlan");
- if (!MATH101AlternatePlanflag) {
-     if (MATH101AlternatePlanelement.classList.contains("MATH-highlighted")) { 
-     MATH101AlternatePlanelement.classList.remove("MATH-highlighted");
-     MATH101AlternatePlanelement.classList.add("MATH");
+$scope.MATH101AlternatePlan3A4AListener = function () {
+  var MATH101AlternatePlan3A4Aelement = document.getElementById("MATH101AlternatePlan3A4A");
+ if (!MATH101AlternatePlan3A4Aflag) {
+     if (MATH101AlternatePlan3A4Aelement.classList.contains("MATH-highlighted")) { 
+     MATH101AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+     MATH101AlternatePlan3A4Aelement.classList.add("MATH");
       return;
 }      that.addLine(getLine630());
       that.addLine(getLine631());
@@ -20240,10 +21665,10 @@ $scope.MATH101AlternatePlanListener = function () {
       that.addLine(getLine644());
       that.addLine(getLine645());
       that.addLine(getLine649());
-     MATH101AlternatePlanelement.classList.remove("MATH");
-     MATH101AlternatePlanelement.classList.add("MATH-highlighted");
-     that.addToClicked(["MATH101AlternatePlan", "MATH"]);
-      MATH101AlternatePlanflag=true
+     MATH101AlternatePlan3A4Aelement.classList.remove("MATH");
+     MATH101AlternatePlan3A4Aelement.classList.add("MATH-highlighted");
+     that.addToClicked(["MATH101AlternatePlan3A4A", "MATH"]);
+      MATH101AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine630());
@@ -20254,131 +21679,131 @@ $scope.MATH101AlternatePlanListener = function () {
       that.removeLine(getLine644());
       that.removeLine(getLine645());
       that.removeLine(getLine649());
-     MATH101AlternatePlanelement.classList.remove("MATH-highlighted");
-     MATH101AlternatePlanelement.classList.add("MATH");
-     that.removeFromClicked("MATH101AlternatePlan");
-      MATH101AlternatePlanflag=false
+     MATH101AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+     MATH101AlternatePlan3A4Aelement.classList.add("MATH");
+     that.removeFromClicked("MATH101AlternatePlan3A4A");
+      MATH101AlternatePlan3A4Aflag=false
   }
 };
-$scope.MATH102AlternatePlanListener = function () {
-  var MATH102AlternatePlanelement = document.getElementById("MATH102AlternatePlan");
- if (!MATH102AlternatePlanflag) {
-     if (MATH102AlternatePlanelement.classList.contains("MATH-highlighted")) { 
-     MATH102AlternatePlanelement.classList.remove("MATH-highlighted");
-     MATH102AlternatePlanelement.classList.add("MATH");
+$scope.MATH102AlternatePlan3A4AListener = function () {
+  var MATH102AlternatePlan3A4Aelement = document.getElementById("MATH102AlternatePlan3A4A");
+ if (!MATH102AlternatePlan3A4Aflag) {
+     if (MATH102AlternatePlan3A4Aelement.classList.contains("MATH-highlighted")) { 
+     MATH102AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+     MATH102AlternatePlan3A4Aelement.classList.add("MATH");
       return;
 }      that.addLine(getLine632());
       that.addLine(getLine635());
       that.addLine(getLine673());
-     MATH102AlternatePlanelement.classList.remove("MATH");
-     MATH102AlternatePlanelement.classList.add("MATH-highlighted");
-     that.addToClicked(["MATH102AlternatePlan", "MATH"]);
-      MATH102AlternatePlanflag=true
+     MATH102AlternatePlan3A4Aelement.classList.remove("MATH");
+     MATH102AlternatePlan3A4Aelement.classList.add("MATH-highlighted");
+     that.addToClicked(["MATH102AlternatePlan3A4A", "MATH"]);
+      MATH102AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine632());
       that.removeLine(getLine635());
       that.removeLine(getLine673());
-     MATH102AlternatePlanelement.classList.remove("MATH-highlighted");
-     MATH102AlternatePlanelement.classList.add("MATH");
-     that.removeFromClicked("MATH102AlternatePlan");
-      MATH102AlternatePlanflag=false
+     MATH102AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+     MATH102AlternatePlan3A4Aelement.classList.add("MATH");
+     that.removeFromClicked("MATH102AlternatePlan3A4A");
+      MATH102AlternatePlan3A4Aflag=false
   }
 };
-$scope.ENGM310AlternatePlanListener = function () {
-  var ENGM310AlternatePlanelement = document.getElementById("ENGM310AlternatePlan");
- if (!ENGM310AlternatePlanflag) {
-     if (ENGM310AlternatePlanelement.classList.contains("Other-highlighted")) { 
-     ENGM310AlternatePlanelement.classList.remove("Other-highlighted");
-     ENGM310AlternatePlanelement.classList.add("Other");
+$scope.ENGM310AlternatePlan3A4AListener = function () {
+  var ENGM310AlternatePlan3A4Aelement = document.getElementById("ENGM310AlternatePlan3A4A");
+ if (!ENGM310AlternatePlan3A4Aflag) {
+     if (ENGM310AlternatePlan3A4Aelement.classList.contains("Other-highlighted")) { 
+     ENGM310AlternatePlan3A4Aelement.classList.remove("Other-highlighted");
+     ENGM310AlternatePlan3A4Aelement.classList.add("Other");
       return;
 }      that.addLine(getLine700());
-     ENGM310AlternatePlanelement.classList.remove("Other");
-     ENGM310AlternatePlanelement.classList.add("Other-highlighted");
-     that.addToClicked(["ENGM310AlternatePlan", "Other"]);
-      ENGM310AlternatePlanflag=true
+     ENGM310AlternatePlan3A4Aelement.classList.remove("Other");
+     ENGM310AlternatePlan3A4Aelement.classList.add("Other-highlighted");
+     that.addToClicked(["ENGM310AlternatePlan3A4A", "Other"]);
+      ENGM310AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine700());
-     ENGM310AlternatePlanelement.classList.remove("Other-highlighted");
-     ENGM310AlternatePlanelement.classList.add("Other");
-     that.removeFromClicked("ENGM310AlternatePlan");
-      ENGM310AlternatePlanflag=false
+     ENGM310AlternatePlan3A4Aelement.classList.remove("Other-highlighted");
+     ENGM310AlternatePlan3A4Aelement.classList.add("Other");
+     that.removeFromClicked("ENGM310AlternatePlan3A4A");
+      ENGM310AlternatePlan3A4Aflag=false
   }
 };
-$scope.ENGM401AlternatePlanListener = function () {
-  var ENGM401AlternatePlanelement = document.getElementById("ENGM401AlternatePlan");
- if (!ENGM401AlternatePlanflag) {
-     if (ENGM401AlternatePlanelement.classList.contains("Other-highlighted")) { 
-     ENGM401AlternatePlanelement.classList.remove("Other-highlighted");
-     ENGM401AlternatePlanelement.classList.add("Other");
+$scope.ENGM401AlternatePlan3A4AListener = function () {
+  var ENGM401AlternatePlan3A4Aelement = document.getElementById("ENGM401AlternatePlan3A4A");
+ if (!ENGM401AlternatePlan3A4Aflag) {
+     if (ENGM401AlternatePlan3A4Aelement.classList.contains("Other-highlighted")) { 
+     ENGM401AlternatePlan3A4Aelement.classList.remove("Other-highlighted");
+     ENGM401AlternatePlan3A4Aelement.classList.add("Other");
       return;
 }      that.addLine(getLine701());
-     ENGM401AlternatePlanelement.classList.remove("Other");
-     ENGM401AlternatePlanelement.classList.add("Other-highlighted");
-     that.addToClicked(["ENGM401AlternatePlan", "Other"]);
-      ENGM401AlternatePlanflag=true
+     ENGM401AlternatePlan3A4Aelement.classList.remove("Other");
+     ENGM401AlternatePlan3A4Aelement.classList.add("Other-highlighted");
+     that.addToClicked(["ENGM401AlternatePlan3A4A", "Other"]);
+      ENGM401AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine701());
-     ENGM401AlternatePlanelement.classList.remove("Other-highlighted");
-     ENGM401AlternatePlanelement.classList.add("Other");
-     that.removeFromClicked("ENGM401AlternatePlan");
-      ENGM401AlternatePlanflag=false
+     ENGM401AlternatePlan3A4Aelement.classList.remove("Other-highlighted");
+     ENGM401AlternatePlan3A4Aelement.classList.add("Other");
+     that.removeFromClicked("ENGM401AlternatePlan3A4A");
+      ENGM401AlternatePlan3A4Aflag=false
   }
 };
-$scope.ENGG404AlternatePlanListener = function () {
-  var ENGG404AlternatePlanelement = document.getElementById("ENGG404AlternatePlan");
- if (!ENGG404AlternatePlanflag) {
-     if (ENGG404AlternatePlanelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
-     ENGG404AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
-     ENGG404AlternatePlanelement.classList.add("ENGINEERINGPROFESSION");
+$scope.ENGG404AlternatePlan3A4AListener = function () {
+  var ENGG404AlternatePlan3A4Aelement = document.getElementById("ENGG404AlternatePlan3A4A");
+ if (!ENGG404AlternatePlan3A4Aflag) {
+     if (ENGG404AlternatePlan3A4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
+     ENGG404AlternatePlan3A4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG404AlternatePlan3A4Aelement.classList.add("ENGINEERINGPROFESSION");
       return;
-}     ENGG404AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION");
-     ENGG404AlternatePlanelement.classList.add("ENGINEERINGPROFESSION-highlighted");
-     that.addToClicked(["ENGG404AlternatePlan", "ENGINEERINGPROFESSION"]);
-      ENGG404AlternatePlanflag=true
+}     ENGG404AlternatePlan3A4Aelement.classList.remove("ENGINEERINGPROFESSION");
+     ENGG404AlternatePlan3A4Aelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG404AlternatePlan3A4A", "ENGINEERINGPROFESSION"]);
+      ENGG404AlternatePlan3A4Aflag=true
   }
  else {
-     ENGG404AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
-     ENGG404AlternatePlanelement.classList.add("ENGINEERINGPROFESSION");
-     that.removeFromClicked("ENGG404AlternatePlan");
-      ENGG404AlternatePlanflag=false
+     ENGG404AlternatePlan3A4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG404AlternatePlan3A4Aelement.classList.add("ENGINEERINGPROFESSION");
+     that.removeFromClicked("ENGG404AlternatePlan3A4A");
+      ENGG404AlternatePlan3A4Aflag=false
   }
 };
-$scope.MATH201AlternatePlanListener = function () {
-  var MATH201AlternatePlanelement = document.getElementById("MATH201AlternatePlan");
- if (!MATH201AlternatePlanflag) {
-     if (MATH201AlternatePlanelement.classList.contains("MATH-highlighted")) { 
-     MATH201AlternatePlanelement.classList.remove("MATH-highlighted");
-     MATH201AlternatePlanelement.classList.add("MATH");
+$scope.MATH201AlternatePlan3A4AListener = function () {
+  var MATH201AlternatePlan3A4Aelement = document.getElementById("MATH201AlternatePlan3A4A");
+ if (!MATH201AlternatePlan3A4Aflag) {
+     if (MATH201AlternatePlan3A4Aelement.classList.contains("MATH-highlighted")) { 
+     MATH201AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+     MATH201AlternatePlan3A4Aelement.classList.add("MATH");
       return;
 }      that.addLine(getLine633());
       that.addLine(getLine650());
       that.addLine(getLine674());
       that.addLine(getLine682());
-     MATH201AlternatePlanelement.classList.remove("MATH");
-     MATH201AlternatePlanelement.classList.add("MATH-highlighted");
-     that.addToClicked(["MATH201AlternatePlan", "MATH"]);
-      MATH201AlternatePlanflag=true
+     MATH201AlternatePlan3A4Aelement.classList.remove("MATH");
+     MATH201AlternatePlan3A4Aelement.classList.add("MATH-highlighted");
+     that.addToClicked(["MATH201AlternatePlan3A4A", "MATH"]);
+      MATH201AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine633());
       that.removeLine(getLine650());
       that.removeLine(getLine674());
       that.removeLine(getLine682());
-     MATH201AlternatePlanelement.classList.remove("MATH-highlighted");
-     MATH201AlternatePlanelement.classList.add("MATH");
-     that.removeFromClicked("MATH201AlternatePlan");
-      MATH201AlternatePlanflag=false
+     MATH201AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+     MATH201AlternatePlan3A4Aelement.classList.add("MATH");
+     that.removeFromClicked("MATH201AlternatePlan3A4A");
+      MATH201AlternatePlan3A4Aflag=false
   }
 };
-$scope.MATH209AlternatePlanListener = function () {
-  var MATH209AlternatePlanelement = document.getElementById("MATH209AlternatePlan");
- if (!MATH209AlternatePlanflag) {
-     if (MATH209AlternatePlanelement.classList.contains("MATH-highlighted")) { 
-     MATH209AlternatePlanelement.classList.remove("MATH-highlighted");
-     MATH209AlternatePlanelement.classList.add("MATH");
+$scope.MATH209AlternatePlan3A4AListener = function () {
+  var MATH209AlternatePlan3A4Aelement = document.getElementById("MATH209AlternatePlan3A4A");
+ if (!MATH209AlternatePlan3A4Aflag) {
+     if (MATH209AlternatePlan3A4Aelement.classList.contains("MATH-highlighted")) { 
+     MATH209AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+     MATH209AlternatePlan3A4Aelement.classList.add("MATH");
       return;
 }      that.addLine(getLine633());
       that.addLine(getLine634());
@@ -20386,10 +21811,10 @@ $scope.MATH209AlternatePlanListener = function () {
       that.addLine(getLine651());
       that.addLine(getLine659());
       that.addLine(getLine683());
-     MATH209AlternatePlanelement.classList.remove("MATH");
-     MATH209AlternatePlanelement.classList.add("MATH-highlighted");
-     that.addToClicked(["MATH209AlternatePlan", "MATH"]);
-      MATH209AlternatePlanflag=true
+     MATH209AlternatePlan3A4Aelement.classList.remove("MATH");
+     MATH209AlternatePlan3A4Aelement.classList.add("MATH-highlighted");
+     that.addToClicked(["MATH209AlternatePlan3A4A", "MATH"]);
+      MATH209AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine633());
@@ -20398,56 +21823,56 @@ $scope.MATH209AlternatePlanListener = function () {
       that.removeLine(getLine651());
       that.removeLine(getLine659());
       that.removeLine(getLine683());
-     MATH209AlternatePlanelement.classList.remove("MATH-highlighted");
-     MATH209AlternatePlanelement.classList.add("MATH");
-     that.removeFromClicked("MATH209AlternatePlan");
-      MATH209AlternatePlanflag=false
+     MATH209AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+     MATH209AlternatePlan3A4Aelement.classList.add("MATH");
+     that.removeFromClicked("MATH209AlternatePlan3A4A");
+      MATH209AlternatePlan3A4Aflag=false
   }
 };
-$scope.ComplementaryElectiveAlternatePlan0Listener = function () {
-  var ComplementaryElectiveAlternatePlan0element = document.getElementById("ComplementaryElectiveAlternatePlan0");
- if (!ComplementaryElectiveAlternatePlan0flag) {
-     if (ComplementaryElectiveAlternatePlan0element.classList.contains("COMP-highlighted")) { 
-     ComplementaryElectiveAlternatePlan0element.classList.remove("COMP-highlighted");
-     ComplementaryElectiveAlternatePlan0element.classList.add("COMP");
+$scope.ComplementaryElectiveAlternatePlan3A4A0Listener = function () {
+  var ComplementaryElectiveAlternatePlan3A4A0element = document.getElementById("ComplementaryElectiveAlternatePlan3A4A0");
+ if (!ComplementaryElectiveAlternatePlan3A4A0flag) {
+     if (ComplementaryElectiveAlternatePlan3A4A0element.classList.contains("COMP-highlighted")) { 
+     ComplementaryElectiveAlternatePlan3A4A0element.classList.remove("COMP-highlighted");
+     ComplementaryElectiveAlternatePlan3A4A0element.classList.add("COMP");
       return;
-}     ComplementaryElectiveAlternatePlan0element.classList.remove("COMP");
-     ComplementaryElectiveAlternatePlan0element.classList.add("COMP-highlighted");
-     that.addToClicked(["ComplementaryElectiveAlternatePlan0", "COMP"]);
-      ComplementaryElectiveAlternatePlan0flag=true
+}     ComplementaryElectiveAlternatePlan3A4A0element.classList.remove("COMP");
+     ComplementaryElectiveAlternatePlan3A4A0element.classList.add("COMP-highlighted");
+     that.addToClicked(["ComplementaryElectiveAlternatePlan3A4A0", "COMP"]);
+      ComplementaryElectiveAlternatePlan3A4A0flag=true
   }
  else {
-     ComplementaryElectiveAlternatePlan0element.classList.remove("COMP-highlighted");
-     ComplementaryElectiveAlternatePlan0element.classList.add("COMP");
-     that.removeFromClicked("ComplementaryElectiveAlternatePlan0");
-      ComplementaryElectiveAlternatePlan0flag=false
+     ComplementaryElectiveAlternatePlan3A4A0element.classList.remove("COMP-highlighted");
+     ComplementaryElectiveAlternatePlan3A4A0element.classList.add("COMP");
+     that.removeFromClicked("ComplementaryElectiveAlternatePlan3A4A0");
+      ComplementaryElectiveAlternatePlan3A4A0flag=false
   }
 };
-$scope.ITSElectiveAlternatePlan0Listener = function () {
-  var ITSElectiveAlternatePlan0element = document.getElementById("ITSElectiveAlternatePlan0");
- if (!ITSElectiveAlternatePlan0flag) {
-     if (ITSElectiveAlternatePlan0element.classList.contains("ITS-highlighted")) { 
-     ITSElectiveAlternatePlan0element.classList.remove("ITS-highlighted");
-     ITSElectiveAlternatePlan0element.classList.add("ITS");
+$scope.ITSElectiveAlternatePlan3A4A0Listener = function () {
+  var ITSElectiveAlternatePlan3A4A0element = document.getElementById("ITSElectiveAlternatePlan3A4A0");
+ if (!ITSElectiveAlternatePlan3A4A0flag) {
+     if (ITSElectiveAlternatePlan3A4A0element.classList.contains("ITS-highlighted")) { 
+     ITSElectiveAlternatePlan3A4A0element.classList.remove("ITS-highlighted");
+     ITSElectiveAlternatePlan3A4A0element.classList.add("ITS");
       return;
-}     ITSElectiveAlternatePlan0element.classList.remove("ITS");
-     ITSElectiveAlternatePlan0element.classList.add("ITS-highlighted");
-     that.addToClicked(["ITSElectiveAlternatePlan0", "ITS"]);
-      ITSElectiveAlternatePlan0flag=true
+}     ITSElectiveAlternatePlan3A4A0element.classList.remove("ITS");
+     ITSElectiveAlternatePlan3A4A0element.classList.add("ITS-highlighted");
+     that.addToClicked(["ITSElectiveAlternatePlan3A4A0", "ITS"]);
+      ITSElectiveAlternatePlan3A4A0flag=true
   }
  else {
-     ITSElectiveAlternatePlan0element.classList.remove("ITS-highlighted");
-     ITSElectiveAlternatePlan0element.classList.add("ITS");
-     that.removeFromClicked("ITSElectiveAlternatePlan0");
-      ITSElectiveAlternatePlan0flag=false
+     ITSElectiveAlternatePlan3A4A0element.classList.remove("ITS-highlighted");
+     ITSElectiveAlternatePlan3A4A0element.classList.add("ITS");
+     that.removeFromClicked("ITSElectiveAlternatePlan3A4A0");
+      ITSElectiveAlternatePlan3A4A0flag=false
   }
 };
-$scope.CIVE270AlternatePlanListener = function () {
-  var CIVE270AlternatePlanelement = document.getElementById("CIVE270AlternatePlan");
- if (!CIVE270AlternatePlanflag) {
-     if (CIVE270AlternatePlanelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
-     CIVE270AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     CIVE270AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+$scope.CIVE270AlternatePlan3A4AListener = function () {
+  var CIVE270AlternatePlan3A4Aelement = document.getElementById("CIVE270AlternatePlan3A4A");
+ if (!CIVE270AlternatePlan3A4Aflag) {
+     if (CIVE270AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
+     CIVE270AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     CIVE270AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine636());
       that.addLine(getLine637());
@@ -20455,10 +21880,10 @@ $scope.CIVE270AlternatePlanListener = function () {
       that.addLine(getLine652());
       that.addLine(getLine665());
       that.addLine(getLine670());
-     CIVE270AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-     CIVE270AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked(["CIVE270AlternatePlan", "ENGINEERINGSCIENCES"]);
-      CIVE270AlternatePlanflag=true
+     CIVE270AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+     CIVE270AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["CIVE270AlternatePlan3A4A", "ENGINEERINGSCIENCES"]);
+      CIVE270AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine636());
@@ -20467,212 +21892,212 @@ $scope.CIVE270AlternatePlanListener = function () {
       that.removeLine(getLine652());
       that.removeLine(getLine665());
       that.removeLine(getLine670());
-     CIVE270AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     CIVE270AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
-     that.removeFromClicked("CIVE270AlternatePlan");
-      CIVE270AlternatePlanflag=false
+     CIVE270AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     CIVE270AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
+     that.removeFromClicked("CIVE270AlternatePlan3A4A");
+      CIVE270AlternatePlan3A4Aflag=false
   }
 };
-$scope.MECE230AlternatePlanListener = function () {
-  var MECE230AlternatePlanelement = document.getElementById("MECE230AlternatePlan");
- if (!MECE230AlternatePlanflag) {
-     if (MECE230AlternatePlanelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
-     MECE230AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE230AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+$scope.MECE230AlternatePlan3A4AListener = function () {
+  var MECE230AlternatePlan3A4Aelement = document.getElementById("MECE230AlternatePlan3A4A");
+ if (!MECE230AlternatePlan3A4Aflag) {
+     if (MECE230AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
+     MECE230AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE230AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine638());
       that.addLine(getLine639());
       that.addLine(getLine657());
       that.addLine(getLine661());
-     MECE230AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-     MECE230AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked(["MECE230AlternatePlan", "ENGINEERINGSCIENCES"]);
-      MECE230AlternatePlanflag=true
+     MECE230AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+     MECE230AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE230AlternatePlan3A4A", "ENGINEERINGSCIENCES"]);
+      MECE230AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine638());
       that.removeLine(getLine639());
       that.removeLine(getLine657());
       that.removeLine(getLine661());
-     MECE230AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE230AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
-     that.removeFromClicked("MECE230AlternatePlan");
-      MECE230AlternatePlanflag=false
+     MECE230AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE230AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
+     that.removeFromClicked("MECE230AlternatePlan3A4A");
+      MECE230AlternatePlan3A4Aflag=false
   }
 };
-$scope.MECE260AlternatePlanListener = function () {
-  var MECE260AlternatePlanelement = document.getElementById("MECE260AlternatePlan");
- if (!MECE260AlternatePlanflag) {
-     if (MECE260AlternatePlanelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
-     MECE260AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
-     MECE260AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
+$scope.MECE260AlternatePlan3A4AListener = function () {
+  var MECE260AlternatePlan3A4Aelement = document.getElementById("MECE260AlternatePlan3A4A");
+ if (!MECE260AlternatePlan3A4Aflag) {
+     if (MECE260AlternatePlan3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
+     MECE260AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
+     MECE260AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN");
       return;
 }      that.addLine(getLine640());
       that.addLine(getLine641());
       that.addLine(getLine642());
       that.addLine(getLine667());
-     MECE260AlternatePlanelement.classList.remove("ENGINEERINGDESIGN");
-     MECE260AlternatePlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked(["MECE260AlternatePlan", "ENGINEERINGDESIGN"]);
-      MECE260AlternatePlanflag=true
+     MECE260AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN");
+     MECE260AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN-highlighted");
+     that.addToClicked(["MECE260AlternatePlan3A4A", "ENGINEERINGDESIGN"]);
+      MECE260AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine640());
       that.removeLine(getLine641());
       that.removeLine(getLine642());
       that.removeLine(getLine667());
-     MECE260AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
-     MECE260AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
-     that.removeFromClicked("MECE260AlternatePlan");
-      MECE260AlternatePlanflag=false
+     MECE260AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
+     MECE260AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN");
+     that.removeFromClicked("MECE260AlternatePlan3A4A");
+      MECE260AlternatePlan3A4Aflag=false
   }
 };
-$scope.MECE265AlternatePlanListener = function () {
-  var MECE265AlternatePlanelement = document.getElementById("MECE265AlternatePlan");
- if (!MECE265AlternatePlanflag) {
-     if (MECE265AlternatePlanelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
-     MECE265AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
-     MECE265AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
+$scope.MECE265AlternatePlan3A4AListener = function () {
+  var MECE265AlternatePlan3A4Aelement = document.getElementById("MECE265AlternatePlan3A4A");
+ if (!MECE265AlternatePlan3A4Aflag) {
+     if (MECE265AlternatePlan3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
+     MECE265AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
+     MECE265AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN");
       return;
 }      that.addLine(getLine641());
       that.addLine(getLine668());
-     MECE265AlternatePlanelement.classList.remove("ENGINEERINGDESIGN");
-     MECE265AlternatePlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked(["MECE265AlternatePlan", "ENGINEERINGDESIGN"]);
-      MECE265AlternatePlanflag=true
+     MECE265AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN");
+     MECE265AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN-highlighted");
+     that.addToClicked(["MECE265AlternatePlan3A4A", "ENGINEERINGDESIGN"]);
+      MECE265AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine641());
       that.removeLine(getLine668());
-     MECE265AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
-     MECE265AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
-     that.removeFromClicked("MECE265AlternatePlan");
-      MECE265AlternatePlanflag=false
+     MECE265AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
+     MECE265AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN");
+     that.removeFromClicked("MECE265AlternatePlan3A4A");
+      MECE265AlternatePlan3A4Aflag=false
   }
 };
-$scope.STAT235AlternatePlanListener = function () {
-  var STAT235AlternatePlanelement = document.getElementById("STAT235AlternatePlan");
- if (!STAT235AlternatePlanflag) {
-     if (STAT235AlternatePlanelement.classList.contains("MATH-highlighted")) { 
-     STAT235AlternatePlanelement.classList.remove("MATH-highlighted");
-     STAT235AlternatePlanelement.classList.add("MATH");
+$scope.STAT235AlternatePlan3A4AListener = function () {
+  var STAT235AlternatePlan3A4Aelement = document.getElementById("STAT235AlternatePlan3A4A");
+ if (!STAT235AlternatePlan3A4Aflag) {
+     if (STAT235AlternatePlan3A4Aelement.classList.contains("MATH-highlighted")) { 
+     STAT235AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+     STAT235AlternatePlan3A4Aelement.classList.add("MATH");
       return;
 }      that.addLine(getLine643());
       that.addLine(getLine644());
       that.addLine(getLine654());
-     STAT235AlternatePlanelement.classList.remove("MATH");
-     STAT235AlternatePlanelement.classList.add("MATH-highlighted");
-     that.addToClicked(["STAT235AlternatePlan", "MATH"]);
-      STAT235AlternatePlanflag=true
+     STAT235AlternatePlan3A4Aelement.classList.remove("MATH");
+     STAT235AlternatePlan3A4Aelement.classList.add("MATH-highlighted");
+     that.addToClicked(["STAT235AlternatePlan3A4A", "MATH"]);
+      STAT235AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine643());
       that.removeLine(getLine644());
       that.removeLine(getLine654());
-     STAT235AlternatePlanelement.classList.remove("MATH-highlighted");
-     STAT235AlternatePlanelement.classList.add("MATH");
-     that.removeFromClicked("STAT235AlternatePlan");
-      STAT235AlternatePlanflag=false
+     STAT235AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+     STAT235AlternatePlan3A4Aelement.classList.add("MATH");
+     that.removeFromClicked("STAT235AlternatePlan3A4A");
+      STAT235AlternatePlan3A4Aflag=false
   }
 };
-$scope.CHE243AlternatePlanListener = function () {
-  var CHE243AlternatePlanelement = document.getElementById("CHE243AlternatePlan");
- if (!CHE243AlternatePlanflag) {
-     if (CHE243AlternatePlanelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
-     CHE243AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     CHE243AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+$scope.CHE243AlternatePlan3A4AListener = function () {
+  var CHE243AlternatePlan3A4Aelement = document.getElementById("CHE243AlternatePlan3A4A");
+ if (!CHE243AlternatePlan3A4Aflag) {
+     if (CHE243AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
+     CHE243AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     CHE243AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine645());
       that.addLine(getLine660());
       that.addLine(getLine662());
       that.addLine(getLine666());
-     CHE243AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-     CHE243AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked(["CHE243AlternatePlan", "ENGINEERINGSCIENCES"]);
-      CHE243AlternatePlanflag=true
+     CHE243AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+     CHE243AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["CHE243AlternatePlan3A4A", "ENGINEERINGSCIENCES"]);
+      CHE243AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine645());
       that.removeLine(getLine660());
       that.removeLine(getLine662());
       that.removeLine(getLine666());
-     CHE243AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     CHE243AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
-     that.removeFromClicked("CHE243AlternatePlan");
-      CHE243AlternatePlanflag=false
+     CHE243AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     CHE243AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
+     that.removeFromClicked("CHE243AlternatePlan3A4A");
+      CHE243AlternatePlan3A4Aflag=false
   }
 };
-$scope.ECE209AlternatePlanListener = function () {
-  var ECE209AlternatePlanelement = document.getElementById("ECE209AlternatePlan");
- if (!ECE209AlternatePlanflag) {
-     if (ECE209AlternatePlanelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
-     ECE209AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     ECE209AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+$scope.ECE209AlternatePlan3A4AListener = function () {
+  var ECE209AlternatePlan3A4Aelement = document.getElementById("ECE209AlternatePlan3A4A");
+ if (!ECE209AlternatePlan3A4Aflag) {
+     if (ECE209AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
+     ECE209AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     ECE209AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine653());
-     ECE209AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-     ECE209AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked(["ECE209AlternatePlan", "ENGINEERINGSCIENCES"]);
-      ECE209AlternatePlanflag=true
+     ECE209AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+     ECE209AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["ECE209AlternatePlan3A4A", "ENGINEERINGSCIENCES"]);
+      ECE209AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine653());
-     ECE209AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     ECE209AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
-     that.removeFromClicked("ECE209AlternatePlan");
-      ECE209AlternatePlanflag=false
+     ECE209AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     ECE209AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
+     that.removeFromClicked("ECE209AlternatePlan3A4A");
+      ECE209AlternatePlan3A4Aflag=false
   }
 };
-$scope.MATE202AlternatePlanListener = function () {
-  var MATE202AlternatePlanelement = document.getElementById("MATE202AlternatePlan");
- if (!MATE202AlternatePlanflag) {
-     if (MATE202AlternatePlanelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
-     MATE202AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MATE202AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+$scope.MATE202AlternatePlan3A4AListener = function () {
+  var MATE202AlternatePlan3A4Aelement = document.getElementById("MATE202AlternatePlan3A4A");
+ if (!MATE202AlternatePlan3A4Aflag) {
+     if (MATE202AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
+     MATE202AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MATE202AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine646());
       that.addLine(getLine669());
-     MATE202AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-     MATE202AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked(["MATE202AlternatePlan", "ENGINEERINGSCIENCES"]);
-      MATE202AlternatePlanflag=true
+     MATE202AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+     MATE202AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MATE202AlternatePlan3A4A", "ENGINEERINGSCIENCES"]);
+      MATE202AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine646());
       that.removeLine(getLine669());
-     MATE202AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MATE202AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
-     that.removeFromClicked("MATE202AlternatePlan");
-      MATE202AlternatePlanflag=false
+     MATE202AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MATE202AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
+     that.removeFromClicked("MATE202AlternatePlan3A4A");
+      MATE202AlternatePlan3A4Aflag=false
   }
 };
-$scope.MECE200AlternatePlanListener = function () {
-  var MECE200AlternatePlanelement = document.getElementById("MECE200AlternatePlan");
- if (!MECE200AlternatePlanflag) {
-     if (MECE200AlternatePlanelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
-     MECE200AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
-     MECE200AlternatePlanelement.classList.add("ENGINEERINGPROFESSION");
+$scope.MECE200AlternatePlan3A4AListener = function () {
+  var MECE200AlternatePlan3A4Aelement = document.getElementById("MECE200AlternatePlan3A4A");
+ if (!MECE200AlternatePlan3A4Aflag) {
+     if (MECE200AlternatePlan3A4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
+     MECE200AlternatePlan3A4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     MECE200AlternatePlan3A4Aelement.classList.add("ENGINEERINGPROFESSION");
       return;
 }      that.addLine(getLine693());
-     MECE200AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION");
-     MECE200AlternatePlanelement.classList.add("ENGINEERINGPROFESSION-highlighted");
-     that.addToClicked(["MECE200AlternatePlan", "ENGINEERINGPROFESSION"]);
-      MECE200AlternatePlanflag=true
+     MECE200AlternatePlan3A4Aelement.classList.remove("ENGINEERINGPROFESSION");
+     MECE200AlternatePlan3A4Aelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["MECE200AlternatePlan3A4A", "ENGINEERINGPROFESSION"]);
+      MECE200AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine693());
-     MECE200AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
-     MECE200AlternatePlanelement.classList.add("ENGINEERINGPROFESSION");
-     that.removeFromClicked("MECE200AlternatePlan");
-      MECE200AlternatePlanflag=false
+     MECE200AlternatePlan3A4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     MECE200AlternatePlan3A4Aelement.classList.add("ENGINEERINGPROFESSION");
+     that.removeFromClicked("MECE200AlternatePlan3A4A");
+      MECE200AlternatePlan3A4Aflag=false
   }
 };
-$scope.MECE250AlternatePlanListener = function () {
-  var MECE250AlternatePlanelement = document.getElementById("MECE250AlternatePlan");
- if (!MECE250AlternatePlanflag) {
-     if (MECE250AlternatePlanelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
-     MECE250AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE250AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+$scope.MECE250AlternatePlan3A4AListener = function () {
+  var MECE250AlternatePlan3A4Aelement = document.getElementById("MECE250AlternatePlan3A4A");
+ if (!MECE250AlternatePlan3A4Aflag) {
+     if (MECE250AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
+     MECE250AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE250AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine647());
       that.addLine(getLine648());
@@ -20680,10 +22105,10 @@ $scope.MECE250AlternatePlanListener = function () {
       that.addLine(getLine658());
       that.addLine(getLine672());
       that.addLine(getLine691());
-     MECE250AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-     MECE250AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked(["MECE250AlternatePlan", "ENGINEERINGSCIENCES"]);
-      MECE250AlternatePlanflag=true
+     MECE250AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+     MECE250AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE250AlternatePlan3A4A", "ENGINEERINGSCIENCES"]);
+      MECE250AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine647());
@@ -20692,28 +22117,28 @@ $scope.MECE250AlternatePlanListener = function () {
       that.removeLine(getLine658());
       that.removeLine(getLine672());
       that.removeLine(getLine691());
-     MECE250AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE250AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
-     that.removeFromClicked("MECE250AlternatePlan");
-      MECE250AlternatePlanflag=false
+     MECE250AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE250AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
+     that.removeFromClicked("MECE250AlternatePlan3A4A");
+      MECE250AlternatePlan3A4Aflag=false
   }
 };
-$scope.MATH300AlternatePlanListener = function () {
-  var MATH300AlternatePlanelement = document.getElementById("MATH300AlternatePlan");
- if (!MATH300AlternatePlanflag) {
-     if (MATH300AlternatePlanelement.classList.contains("MATH-highlighted")) { 
-     MATH300AlternatePlanelement.classList.remove("MATH-highlighted");
-     MATH300AlternatePlanelement.classList.add("MATH");
+$scope.MATH300AlternatePlan3A4AListener = function () {
+  var MATH300AlternatePlan3A4Aelement = document.getElementById("MATH300AlternatePlan3A4A");
+ if (!MATH300AlternatePlan3A4Aflag) {
+     if (MATH300AlternatePlan3A4Aelement.classList.contains("MATH-highlighted")) { 
+     MATH300AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+     MATH300AlternatePlan3A4Aelement.classList.add("MATH");
       return;
 }      that.addLine(getLine650());
       that.addLine(getLine651());
       that.addLine(getLine663());
       that.addLine(getLine678());
       that.addLine(getLine692());
-     MATH300AlternatePlanelement.classList.remove("MATH");
-     MATH300AlternatePlanelement.classList.add("MATH-highlighted");
-     that.addToClicked(["MATH300AlternatePlan", "MATH"]);
-      MATH300AlternatePlanflag=true
+     MATH300AlternatePlan3A4Aelement.classList.remove("MATH");
+     MATH300AlternatePlan3A4Aelement.classList.add("MATH-highlighted");
+     that.addToClicked(["MATH300AlternatePlan3A4A", "MATH"]);
+      MATH300AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine650());
@@ -20721,18 +22146,18 @@ $scope.MATH300AlternatePlanListener = function () {
       that.removeLine(getLine663());
       that.removeLine(getLine678());
       that.removeLine(getLine692());
-     MATH300AlternatePlanelement.classList.remove("MATH-highlighted");
-     MATH300AlternatePlanelement.classList.add("MATH");
-     that.removeFromClicked("MATH300AlternatePlan");
-      MATH300AlternatePlanflag=false
+     MATH300AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+     MATH300AlternatePlan3A4Aelement.classList.add("MATH");
+     that.removeFromClicked("MATH300AlternatePlan3A4A");
+      MATH300AlternatePlan3A4Aflag=false
   }
 };
-$scope.MECE300AlternatePlanListener = function () {
-  var MECE300AlternatePlanelement = document.getElementById("MECE300AlternatePlan");
- if (!MECE300AlternatePlanflag) {
-     if (MECE300AlternatePlanelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
-     MECE300AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE300AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+$scope.MECE300AlternatePlan3A4AListener = function () {
+  var MECE300AlternatePlan3A4Aelement = document.getElementById("MECE300AlternatePlan3A4A");
+ if (!MECE300AlternatePlan3A4Aflag) {
+     if (MECE300AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
+     MECE300AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE300AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine652());
       that.addLine(getLine653());
@@ -20740,10 +22165,10 @@ $scope.MECE300AlternatePlanListener = function () {
       that.addLine(getLine655());
       that.addLine(getLine656());
       that.addLine(getLine687());
-     MECE300AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-     MECE300AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked(["MECE300AlternatePlan", "ENGINEERINGSCIENCES"]);
-      MECE300AlternatePlanflag=true
+     MECE300AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+     MECE300AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE300AlternatePlan3A4A", "ENGINEERINGSCIENCES"]);
+      MECE300AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine652());
@@ -20752,41 +22177,41 @@ $scope.MECE300AlternatePlanListener = function () {
       that.removeLine(getLine655());
       that.removeLine(getLine656());
       that.removeLine(getLine687());
-     MECE300AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE300AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
-     that.removeFromClicked("MECE300AlternatePlan");
-      MECE300AlternatePlanflag=false
+     MECE300AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE300AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
+     that.removeFromClicked("MECE300AlternatePlan3A4A");
+      MECE300AlternatePlan3A4Aflag=false
   }
 };
-$scope.MECE301AlternatePlanListener = function () {
-  var MECE301AlternatePlanelement = document.getElementById("MECE301AlternatePlan");
- if (!MECE301AlternatePlanflag) {
-     if (MECE301AlternatePlanelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
-     MECE301AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE301AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+$scope.MECE301AlternatePlan3A4AListener = function () {
+  var MECE301AlternatePlan3A4Aelement = document.getElementById("MECE301AlternatePlan3A4A");
+ if (!MECE301AlternatePlan3A4Aflag) {
+     if (MECE301AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
+     MECE301AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE301AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine656());
       that.addLine(getLine688());
-     MECE301AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-     MECE301AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked(["MECE301AlternatePlan", "ENGINEERINGSCIENCES"]);
-      MECE301AlternatePlanflag=true
+     MECE301AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+     MECE301AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE301AlternatePlan3A4A", "ENGINEERINGSCIENCES"]);
+      MECE301AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine656());
       that.removeLine(getLine688());
-     MECE301AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE301AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
-     that.removeFromClicked("MECE301AlternatePlan");
-      MECE301AlternatePlanflag=false
+     MECE301AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE301AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
+     that.removeFromClicked("MECE301AlternatePlan3A4A");
+      MECE301AlternatePlan3A4Aflag=false
   }
 };
-$scope.MECE331AlternatePlanListener = function () {
-  var MECE331AlternatePlanelement = document.getElementById("MECE331AlternatePlan");
- if (!MECE331AlternatePlanflag) {
-     if (MECE331AlternatePlanelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
-     MECE331AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE331AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+$scope.MECE331AlternatePlan3A4AListener = function () {
+  var MECE331AlternatePlan3A4Aelement = document.getElementById("MECE331AlternatePlan3A4A");
+ if (!MECE331AlternatePlan3A4Aflag) {
+     if (MECE331AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
+     MECE331AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE331AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine655());
       that.addLine(getLine657());
@@ -20798,10 +22223,10 @@ $scope.MECE331AlternatePlanListener = function () {
       that.addLine(getLine679());
       that.addLine(getLine684());
       that.addLine(getLine694());
-     MECE331AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-     MECE331AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked(["MECE331AlternatePlan", "ENGINEERINGSCIENCES"]);
-      MECE331AlternatePlanflag=true
+     MECE331AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+     MECE331AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE331AlternatePlan3A4A", "ENGINEERINGSCIENCES"]);
+      MECE331AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine655());
@@ -20814,18 +22239,18 @@ $scope.MECE331AlternatePlanListener = function () {
       that.removeLine(getLine679());
       that.removeLine(getLine684());
       that.removeLine(getLine694());
-     MECE331AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE331AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
-     that.removeFromClicked("MECE331AlternatePlan");
-      MECE331AlternatePlanflag=false
+     MECE331AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE331AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
+     that.removeFromClicked("MECE331AlternatePlan3A4A");
+      MECE331AlternatePlan3A4Aflag=false
   }
 };
-$scope.MECE371AlternatePlanListener = function () {
-  var MECE371AlternatePlanelement = document.getElementById("MECE371AlternatePlan");
- if (!MECE371AlternatePlanflag) {
-     if (MECE371AlternatePlanelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
-     MECE371AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE371AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+$scope.MECE371AlternatePlan3A4AListener = function () {
+  var MECE371AlternatePlan3A4Aelement = document.getElementById("MECE371AlternatePlan3A4A");
+ if (!MECE371AlternatePlan3A4Aflag) {
+     if (MECE371AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
+     MECE371AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE371AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine661());
       that.addLine(getLine662());
@@ -20834,10 +22259,10 @@ $scope.MECE371AlternatePlanListener = function () {
       that.addLine(getLine681());
       that.addLine(getLine685());
       that.addLine(getLine698());
-     MECE371AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-     MECE371AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked(["MECE371AlternatePlan", "ENGINEERINGSCIENCES"]);
-      MECE371AlternatePlanflag=true
+     MECE371AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+     MECE371AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE371AlternatePlan3A4A", "ENGINEERINGSCIENCES"]);
+      MECE371AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine661());
@@ -20847,70 +22272,70 @@ $scope.MECE371AlternatePlanListener = function () {
       that.removeLine(getLine681());
       that.removeLine(getLine685());
       that.removeLine(getLine698());
-     MECE371AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE371AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
-     that.removeFromClicked("MECE371AlternatePlan");
-      MECE371AlternatePlanflag=false
+     MECE371AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE371AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
+     that.removeFromClicked("MECE371AlternatePlan3A4A");
+      MECE371AlternatePlan3A4Aflag=false
   }
 };
-$scope.MECE380AlternatePlanListener = function () {
-  var MECE380AlternatePlanelement = document.getElementById("MECE380AlternatePlan");
- if (!MECE380AlternatePlanflag) {
-     if (MECE380AlternatePlanelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
-     MECE380AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE380AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+$scope.MECE380AlternatePlan3A4AListener = function () {
+  var MECE380AlternatePlan3A4Aelement = document.getElementById("MECE380AlternatePlan3A4A");
+ if (!MECE380AlternatePlan3A4Aflag) {
+     if (MECE380AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
+     MECE380AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE380AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine665());
       that.addLine(getLine677());
       that.addLine(getLine699());
-     MECE380AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-     MECE380AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked(["MECE380AlternatePlan", "ENGINEERINGSCIENCES"]);
-      MECE380AlternatePlanflag=true
+     MECE380AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+     MECE380AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE380AlternatePlan3A4A", "ENGINEERINGSCIENCES"]);
+      MECE380AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine665());
       that.removeLine(getLine677());
       that.removeLine(getLine699());
-     MECE380AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE380AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
-     that.removeFromClicked("MECE380AlternatePlan");
-      MECE380AlternatePlanflag=false
+     MECE380AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE380AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
+     that.removeFromClicked("MECE380AlternatePlan3A4A");
+      MECE380AlternatePlan3A4Aflag=false
   }
 };
-$scope.MECE340AlternatePlanListener = function () {
-  var MECE340AlternatePlanelement = document.getElementById("MECE340AlternatePlan");
- if (!MECE340AlternatePlanflag) {
-     if (MECE340AlternatePlanelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
-     MECE340AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE340AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+$scope.MECE340AlternatePlan3A4AListener = function () {
+  var MECE340AlternatePlan3A4Aelement = document.getElementById("MECE340AlternatePlan3A4A");
+ if (!MECE340AlternatePlan3A4Aflag) {
+     if (MECE340AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
+     MECE340AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE340AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine666());
       that.addLine(getLine680());
       that.addLine(getLine689());
       that.addLine(getLine695());
-     MECE340AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-     MECE340AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked(["MECE340AlternatePlan", "ENGINEERINGSCIENCES"]);
-      MECE340AlternatePlanflag=true
+     MECE340AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+     MECE340AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE340AlternatePlan3A4A", "ENGINEERINGSCIENCES"]);
+      MECE340AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine666());
       that.removeLine(getLine680());
       that.removeLine(getLine689());
       that.removeLine(getLine695());
-     MECE340AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE340AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
-     that.removeFromClicked("MECE340AlternatePlan");
-      MECE340AlternatePlanflag=false
+     MECE340AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE340AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
+     that.removeFromClicked("MECE340AlternatePlan3A4A");
+      MECE340AlternatePlan3A4Aflag=false
   }
 };
-$scope.MECE360AlternatePlanListener = function () {
-  var MECE360AlternatePlanelement = document.getElementById("MECE360AlternatePlan");
- if (!MECE360AlternatePlanflag) {
-     if (MECE360AlternatePlanelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
-     MECE360AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
-     MECE360AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
+$scope.MECE360AlternatePlan3A4AListener = function () {
+  var MECE360AlternatePlan3A4Aelement = document.getElementById("MECE360AlternatePlan3A4A");
+ if (!MECE360AlternatePlan3A4Aflag) {
+     if (MECE360AlternatePlan3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
+     MECE360AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
+     MECE360AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN");
       return;
 }      that.addLine(getLine667());
       that.addLine(getLine668());
@@ -20920,10 +22345,10 @@ $scope.MECE360AlternatePlanListener = function () {
       that.addLine(getLine676());
       that.addLine(getLine690());
       that.addLine(getLine696());
-     MECE360AlternatePlanelement.classList.remove("ENGINEERINGDESIGN");
-     MECE360AlternatePlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked(["MECE360AlternatePlan", "ENGINEERINGDESIGN"]);
-      MECE360AlternatePlanflag=true
+     MECE360AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN");
+     MECE360AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN-highlighted");
+     that.addToClicked(["MECE360AlternatePlan3A4A", "ENGINEERINGDESIGN"]);
+      MECE360AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine667());
@@ -20934,332 +22359,332 @@ $scope.MECE360AlternatePlanListener = function () {
       that.removeLine(getLine676());
       that.removeLine(getLine690());
       that.removeLine(getLine696());
-     MECE360AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
-     MECE360AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
-     that.removeFromClicked("MECE360AlternatePlan");
-      MECE360AlternatePlanflag=false
+     MECE360AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
+     MECE360AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN");
+     that.removeFromClicked("MECE360AlternatePlan3A4A");
+      MECE360AlternatePlan3A4Aflag=false
   }
 };
-$scope.MECE362AlternatePlanListener = function () {
-  var MECE362AlternatePlanelement = document.getElementById("MECE362AlternatePlan");
- if (!MECE362AlternatePlanflag) {
-     if (MECE362AlternatePlanelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
-     MECE362AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
-     MECE362AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
+$scope.MECE362AlternatePlan3A4AListener = function () {
+  var MECE362AlternatePlan3A4Aelement = document.getElementById("MECE362AlternatePlan3A4A");
+ if (!MECE362AlternatePlan3A4Aflag) {
+     if (MECE362AlternatePlan3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
+     MECE362AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
+     MECE362AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN");
       return;
 }      that.addLine(getLine671());
       that.addLine(getLine672());
       that.addLine(getLine697());
-     MECE362AlternatePlanelement.classList.remove("ENGINEERINGDESIGN");
-     MECE362AlternatePlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked(["MECE362AlternatePlan", "ENGINEERINGDESIGN"]);
-      MECE362AlternatePlanflag=true
+     MECE362AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN");
+     MECE362AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN-highlighted");
+     that.addToClicked(["MECE362AlternatePlan3A4A", "ENGINEERINGDESIGN"]);
+      MECE362AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine671());
       that.removeLine(getLine672());
       that.removeLine(getLine697());
-     MECE362AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
-     MECE362AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
-     that.removeFromClicked("MECE362AlternatePlan");
-      MECE362AlternatePlanflag=false
+     MECE362AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
+     MECE362AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN");
+     that.removeFromClicked("MECE362AlternatePlan3A4A");
+      MECE362AlternatePlan3A4Aflag=false
   }
 };
-$scope.MECE390AlternatePlanListener = function () {
-  var MECE390AlternatePlanelement = document.getElementById("MECE390AlternatePlan");
- if (!MECE390AlternatePlanflag) {
-     if (MECE390AlternatePlanelement.classList.contains("MATH-highlighted")) { 
-     MECE390AlternatePlanelement.classList.remove("MATH-highlighted");
-     MECE390AlternatePlanelement.classList.add("MATH");
+$scope.MECE390AlternatePlan3A4AListener = function () {
+  var MECE390AlternatePlan3A4Aelement = document.getElementById("MECE390AlternatePlan3A4A");
+ if (!MECE390AlternatePlan3A4Aflag) {
+     if (MECE390AlternatePlan3A4Aelement.classList.contains("MATH-highlighted")) { 
+     MECE390AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+     MECE390AlternatePlan3A4Aelement.classList.add("MATH");
       return;
 }      that.addLine(getLine673());
       that.addLine(getLine674());
       that.addLine(getLine686());
-     MECE390AlternatePlanelement.classList.remove("MATH");
-     MECE390AlternatePlanelement.classList.add("MATH-highlighted");
-     that.addToClicked(["MECE390AlternatePlan", "MATH"]);
-      MECE390AlternatePlanflag=true
+     MECE390AlternatePlan3A4Aelement.classList.remove("MATH");
+     MECE390AlternatePlan3A4Aelement.classList.add("MATH-highlighted");
+     that.addToClicked(["MECE390AlternatePlan3A4A", "MATH"]);
+      MECE390AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine673());
       that.removeLine(getLine674());
       that.removeLine(getLine686());
-     MECE390AlternatePlanelement.classList.remove("MATH-highlighted");
-     MECE390AlternatePlanelement.classList.add("MATH");
-     that.removeFromClicked("MECE390AlternatePlan");
-      MECE390AlternatePlanflag=false
+     MECE390AlternatePlan3A4Aelement.classList.remove("MATH-highlighted");
+     MECE390AlternatePlan3A4Aelement.classList.add("MATH");
+     that.removeFromClicked("MECE390AlternatePlan3A4A");
+      MECE390AlternatePlan3A4Aflag=false
   }
 };
-$scope.ProgramTechnicalElectiveAlternatePlan0Listener = function () {
-  var ProgramTechnicalElectiveAlternatePlan0element = document.getElementById("ProgramTechnicalElectiveAlternatePlan0");
- if (!ProgramTechnicalElectiveAlternatePlan0flag) {
-     if (ProgramTechnicalElectiveAlternatePlan0element.classList.contains("PROG-highlighted")) { 
-     ProgramTechnicalElectiveAlternatePlan0element.classList.remove("PROG-highlighted");
-     ProgramTechnicalElectiveAlternatePlan0element.classList.add("PROG");
+$scope.ProgramTechnicalElectiveAlternatePlan3A4A0Listener = function () {
+  var ProgramTechnicalElectiveAlternatePlan3A4A0element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3A4A0");
+ if (!ProgramTechnicalElectiveAlternatePlan3A4A0flag) {
+     if (ProgramTechnicalElectiveAlternatePlan3A4A0element.classList.contains("PROG-highlighted")) { 
+     ProgramTechnicalElectiveAlternatePlan3A4A0element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveAlternatePlan3A4A0element.classList.add("PROG");
       return;
-}     ProgramTechnicalElectiveAlternatePlan0element.classList.remove("PROG");
-     ProgramTechnicalElectiveAlternatePlan0element.classList.add("PROG-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveAlternatePlan0", "PROG"]);
-      ProgramTechnicalElectiveAlternatePlan0flag=true
+}     ProgramTechnicalElectiveAlternatePlan3A4A0element.classList.remove("PROG");
+     ProgramTechnicalElectiveAlternatePlan3A4A0element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveAlternatePlan3A4A0", "PROG"]);
+      ProgramTechnicalElectiveAlternatePlan3A4A0flag=true
   }
  else {
-     ProgramTechnicalElectiveAlternatePlan0element.classList.remove("PROG-highlighted");
-     ProgramTechnicalElectiveAlternatePlan0element.classList.add("PROG");
-     that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan0");
-      ProgramTechnicalElectiveAlternatePlan0flag=false
+     ProgramTechnicalElectiveAlternatePlan3A4A0element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveAlternatePlan3A4A0element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan3A4A0");
+      ProgramTechnicalElectiveAlternatePlan3A4A0flag=false
   }
 };
-$scope.MECE430AlternatePlanListener = function () {
-  var MECE430AlternatePlanelement = document.getElementById("MECE430AlternatePlan");
- if (!MECE430AlternatePlanflag) {
-     if (MECE430AlternatePlanelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
-     MECE430AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE430AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+$scope.MECE430AlternatePlan3A4AListener = function () {
+  var MECE430AlternatePlan3A4Aelement = document.getElementById("MECE430AlternatePlan3A4A");
+ if (!MECE430AlternatePlan3A4Aflag) {
+     if (MECE430AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
+     MECE430AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE430AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine675());
-     MECE430AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-     MECE430AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked(["MECE430AlternatePlan", "ENGINEERINGSCIENCES"]);
-      MECE430AlternatePlanflag=true
+     MECE430AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+     MECE430AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE430AlternatePlan3A4A", "ENGINEERINGSCIENCES"]);
+      MECE430AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine675());
-     MECE430AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE430AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
-     that.removeFromClicked("MECE430AlternatePlan");
-      MECE430AlternatePlanflag=false
+     MECE430AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE430AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
+     that.removeFromClicked("MECE430AlternatePlan3A4A");
+      MECE430AlternatePlan3A4Aflag=false
   }
 };
-$scope.MECE480AlternatePlanListener = function () {
-  var MECE480AlternatePlanelement = document.getElementById("MECE480AlternatePlan");
- if (!MECE480AlternatePlanflag) {
-     if (MECE480AlternatePlanelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
-     MECE480AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE480AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+$scope.MECE480AlternatePlan3A4AListener = function () {
+  var MECE480AlternatePlan3A4Aelement = document.getElementById("MECE480AlternatePlan3A4A");
+ if (!MECE480AlternatePlan3A4Aflag) {
+     if (MECE480AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
+     MECE480AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE480AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine676());
       that.addLine(getLine677());
       that.addLine(getLine678());
-     MECE480AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-     MECE480AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked(["MECE480AlternatePlan", "ENGINEERINGSCIENCES"]);
-      MECE480AlternatePlanflag=true
+     MECE480AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+     MECE480AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE480AlternatePlan3A4A", "ENGINEERINGSCIENCES"]);
+      MECE480AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine676());
       that.removeLine(getLine677());
       that.removeLine(getLine678());
-     MECE480AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE480AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
-     that.removeFromClicked("MECE480AlternatePlan");
-      MECE480AlternatePlanflag=false
+     MECE480AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE480AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
+     that.removeFromClicked("MECE480AlternatePlan3A4A");
+      MECE480AlternatePlan3A4Aflag=false
   }
 };
-$scope.MECE463AlternatePlanListener = function () {
-  var MECE463AlternatePlanelement = document.getElementById("MECE463AlternatePlan");
- if (!MECE463AlternatePlanflag) {
-     if (MECE463AlternatePlanelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
-     MECE463AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE463AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+$scope.MECE463AlternatePlan3A4AListener = function () {
+  var MECE463AlternatePlan3A4Aelement = document.getElementById("MECE463AlternatePlan3A4A");
+ if (!MECE463AlternatePlan3A4Aflag) {
+     if (MECE463AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
+     MECE463AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE463AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine679());
       that.addLine(getLine680());
       that.addLine(getLine681());
-     MECE463AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-     MECE463AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked(["MECE463AlternatePlan", "ENGINEERINGSCIENCES"]);
-      MECE463AlternatePlanflag=true
+     MECE463AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+     MECE463AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE463AlternatePlan3A4A", "ENGINEERINGSCIENCES"]);
+      MECE463AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine679());
       that.removeLine(getLine680());
       that.removeLine(getLine681());
-     MECE463AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE463AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
-     that.removeFromClicked("MECE463AlternatePlan");
-      MECE463AlternatePlanflag=false
+     MECE463AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE463AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
+     that.removeFromClicked("MECE463AlternatePlan3A4A");
+      MECE463AlternatePlan3A4Aflag=false
   }
 };
-$scope.ProgramTechnicalElectiveAlternatePlan1Listener = function () {
-  var ProgramTechnicalElectiveAlternatePlan1element = document.getElementById("ProgramTechnicalElectiveAlternatePlan1");
- if (!ProgramTechnicalElectiveAlternatePlan1flag) {
-     if (ProgramTechnicalElectiveAlternatePlan1element.classList.contains("PROG-highlighted")) { 
-     ProgramTechnicalElectiveAlternatePlan1element.classList.remove("PROG-highlighted");
-     ProgramTechnicalElectiveAlternatePlan1element.classList.add("PROG");
+$scope.ProgramTechnicalElectiveAlternatePlan3A4A1Listener = function () {
+  var ProgramTechnicalElectiveAlternatePlan3A4A1element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3A4A1");
+ if (!ProgramTechnicalElectiveAlternatePlan3A4A1flag) {
+     if (ProgramTechnicalElectiveAlternatePlan3A4A1element.classList.contains("PROG-highlighted")) { 
+     ProgramTechnicalElectiveAlternatePlan3A4A1element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveAlternatePlan3A4A1element.classList.add("PROG");
       return;
-}     ProgramTechnicalElectiveAlternatePlan1element.classList.remove("PROG");
-     ProgramTechnicalElectiveAlternatePlan1element.classList.add("PROG-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveAlternatePlan1", "PROG"]);
-      ProgramTechnicalElectiveAlternatePlan1flag=true
+}     ProgramTechnicalElectiveAlternatePlan3A4A1element.classList.remove("PROG");
+     ProgramTechnicalElectiveAlternatePlan3A4A1element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveAlternatePlan3A4A1", "PROG"]);
+      ProgramTechnicalElectiveAlternatePlan3A4A1flag=true
   }
  else {
-     ProgramTechnicalElectiveAlternatePlan1element.classList.remove("PROG-highlighted");
-     ProgramTechnicalElectiveAlternatePlan1element.classList.add("PROG");
-     that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan1");
-      ProgramTechnicalElectiveAlternatePlan1flag=false
+     ProgramTechnicalElectiveAlternatePlan3A4A1element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveAlternatePlan3A4A1element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan3A4A1");
+      ProgramTechnicalElectiveAlternatePlan3A4A1flag=false
   }
 };
-$scope.ProgramTechnicalElectiveAlternatePlan2Listener = function () {
-  var ProgramTechnicalElectiveAlternatePlan2element = document.getElementById("ProgramTechnicalElectiveAlternatePlan2");
- if (!ProgramTechnicalElectiveAlternatePlan2flag) {
-     if (ProgramTechnicalElectiveAlternatePlan2element.classList.contains("PROG-highlighted")) { 
-     ProgramTechnicalElectiveAlternatePlan2element.classList.remove("PROG-highlighted");
-     ProgramTechnicalElectiveAlternatePlan2element.classList.add("PROG");
+$scope.ProgramTechnicalElectiveAlternatePlan3A4A2Listener = function () {
+  var ProgramTechnicalElectiveAlternatePlan3A4A2element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3A4A2");
+ if (!ProgramTechnicalElectiveAlternatePlan3A4A2flag) {
+     if (ProgramTechnicalElectiveAlternatePlan3A4A2element.classList.contains("PROG-highlighted")) { 
+     ProgramTechnicalElectiveAlternatePlan3A4A2element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveAlternatePlan3A4A2element.classList.add("PROG");
       return;
-}     ProgramTechnicalElectiveAlternatePlan2element.classList.remove("PROG");
-     ProgramTechnicalElectiveAlternatePlan2element.classList.add("PROG-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveAlternatePlan2", "PROG"]);
-      ProgramTechnicalElectiveAlternatePlan2flag=true
+}     ProgramTechnicalElectiveAlternatePlan3A4A2element.classList.remove("PROG");
+     ProgramTechnicalElectiveAlternatePlan3A4A2element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveAlternatePlan3A4A2", "PROG"]);
+      ProgramTechnicalElectiveAlternatePlan3A4A2flag=true
   }
  else {
-     ProgramTechnicalElectiveAlternatePlan2element.classList.remove("PROG-highlighted");
-     ProgramTechnicalElectiveAlternatePlan2element.classList.add("PROG");
-     that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan2");
-      ProgramTechnicalElectiveAlternatePlan2flag=false
+     ProgramTechnicalElectiveAlternatePlan3A4A2element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveAlternatePlan3A4A2element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan3A4A2");
+      ProgramTechnicalElectiveAlternatePlan3A4A2flag=false
   }
 };
-$scope.ProgramTechnicalElectiveAlternatePlan3Listener = function () {
-  var ProgramTechnicalElectiveAlternatePlan3element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3");
- if (!ProgramTechnicalElectiveAlternatePlan3flag) {
-     if (ProgramTechnicalElectiveAlternatePlan3element.classList.contains("PROG-highlighted")) { 
-     ProgramTechnicalElectiveAlternatePlan3element.classList.remove("PROG-highlighted");
-     ProgramTechnicalElectiveAlternatePlan3element.classList.add("PROG");
+$scope.ProgramTechnicalElectiveAlternatePlan3A4A3Listener = function () {
+  var ProgramTechnicalElectiveAlternatePlan3A4A3element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3A4A3");
+ if (!ProgramTechnicalElectiveAlternatePlan3A4A3flag) {
+     if (ProgramTechnicalElectiveAlternatePlan3A4A3element.classList.contains("PROG-highlighted")) { 
+     ProgramTechnicalElectiveAlternatePlan3A4A3element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveAlternatePlan3A4A3element.classList.add("PROG");
       return;
-}     ProgramTechnicalElectiveAlternatePlan3element.classList.remove("PROG");
-     ProgramTechnicalElectiveAlternatePlan3element.classList.add("PROG-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveAlternatePlan3", "PROG"]);
-      ProgramTechnicalElectiveAlternatePlan3flag=true
+}     ProgramTechnicalElectiveAlternatePlan3A4A3element.classList.remove("PROG");
+     ProgramTechnicalElectiveAlternatePlan3A4A3element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveAlternatePlan3A4A3", "PROG"]);
+      ProgramTechnicalElectiveAlternatePlan3A4A3flag=true
   }
  else {
-     ProgramTechnicalElectiveAlternatePlan3element.classList.remove("PROG-highlighted");
-     ProgramTechnicalElectiveAlternatePlan3element.classList.add("PROG");
-     that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan3");
-      ProgramTechnicalElectiveAlternatePlan3flag=false
+     ProgramTechnicalElectiveAlternatePlan3A4A3element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveAlternatePlan3A4A3element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan3A4A3");
+      ProgramTechnicalElectiveAlternatePlan3A4A3flag=false
   }
 };
-$scope.CHE448AlternatePlanListener = function () {
-  var CHE448AlternatePlanelement = document.getElementById("CHE448AlternatePlan");
- if (!CHE448AlternatePlanflag) {
-     if (CHE448AlternatePlanelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
-     CHE448AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     CHE448AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+$scope.CHE448AlternatePlan3A4AListener = function () {
+  var CHE448AlternatePlan3A4Aelement = document.getElementById("CHE448AlternatePlan3A4A");
+ if (!CHE448AlternatePlan3A4Aflag) {
+     if (CHE448AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
+     CHE448AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     CHE448AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine682());
       that.addLine(getLine683());
       that.addLine(getLine684());
       that.addLine(getLine685());
-     CHE448AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-     CHE448AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked(["CHE448AlternatePlan", "ENGINEERINGSCIENCES"]);
-      CHE448AlternatePlanflag=true
+     CHE448AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+     CHE448AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["CHE448AlternatePlan3A4A", "ENGINEERINGSCIENCES"]);
+      CHE448AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine682());
       that.removeLine(getLine683());
       that.removeLine(getLine684());
       that.removeLine(getLine685());
-     CHE448AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     CHE448AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
-     that.removeFromClicked("CHE448AlternatePlan");
-      CHE448AlternatePlanflag=false
+     CHE448AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     CHE448AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
+     that.removeFromClicked("CHE448AlternatePlan3A4A");
+      CHE448AlternatePlan3A4Aflag=false
   }
 };
-$scope.MECE420AlternatePlanListener = function () {
-  var MECE420AlternatePlanelement = document.getElementById("MECE420AlternatePlan");
- if (!MECE420AlternatePlanflag) {
-     if (MECE420AlternatePlanelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
-     MECE420AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE420AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+$scope.MECE420AlternatePlan3A4AListener = function () {
+  var MECE420AlternatePlan3A4Aelement = document.getElementById("MECE420AlternatePlan3A4A");
+ if (!MECE420AlternatePlan3A4Aflag) {
+     if (MECE420AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
+     MECE420AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE420AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine686());
-     MECE420AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-     MECE420AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked(["MECE420AlternatePlan", "ENGINEERINGSCIENCES"]);
-      MECE420AlternatePlanflag=true
+     MECE420AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+     MECE420AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE420AlternatePlan3A4A", "ENGINEERINGSCIENCES"]);
+      MECE420AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine686());
-     MECE420AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE420AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
-     that.removeFromClicked("MECE420AlternatePlan");
-      MECE420AlternatePlanflag=false
+     MECE420AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE420AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
+     that.removeFromClicked("MECE420AlternatePlan3A4A");
+      MECE420AlternatePlan3A4Aflag=false
   }
 };
-$scope.ENGG400AlternatePlanListener = function () {
-  var ENGG400AlternatePlanelement = document.getElementById("ENGG400AlternatePlan");
- if (!ENGG400AlternatePlanflag) {
-     if (ENGG400AlternatePlanelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
-     ENGG400AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
-     ENGG400AlternatePlanelement.classList.add("ENGINEERINGPROFESSION");
+$scope.ENGG400AlternatePlan3A4AListener = function () {
+  var ENGG400AlternatePlan3A4Aelement = document.getElementById("ENGG400AlternatePlan3A4A");
+ if (!ENGG400AlternatePlan3A4Aflag) {
+     if (ENGG400AlternatePlan3A4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
+     ENGG400AlternatePlan3A4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG400AlternatePlan3A4Aelement.classList.add("ENGINEERINGPROFESSION");
       return;
-}     ENGG400AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION");
-     ENGG400AlternatePlanelement.classList.add("ENGINEERINGPROFESSION-highlighted");
-     that.addToClicked(["ENGG400AlternatePlan", "ENGINEERINGPROFESSION"]);
-      ENGG400AlternatePlanflag=true
+}     ENGG400AlternatePlan3A4Aelement.classList.remove("ENGINEERINGPROFESSION");
+     ENGG400AlternatePlan3A4Aelement.classList.add("ENGINEERINGPROFESSION-highlighted");
+     that.addToClicked(["ENGG400AlternatePlan3A4A", "ENGINEERINGPROFESSION"]);
+      ENGG400AlternatePlan3A4Aflag=true
   }
  else {
-     ENGG400AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
-     ENGG400AlternatePlanelement.classList.add("ENGINEERINGPROFESSION");
-     that.removeFromClicked("ENGG400AlternatePlan");
-      ENGG400AlternatePlanflag=false
+     ENGG400AlternatePlan3A4Aelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
+     ENGG400AlternatePlan3A4Aelement.classList.add("ENGINEERINGPROFESSION");
+     that.removeFromClicked("ENGG400AlternatePlan3A4A");
+      ENGG400AlternatePlan3A4Aflag=false
   }
 };
-$scope.MECE403AlternatePlanListener = function () {
-  var MECE403AlternatePlanelement = document.getElementById("MECE403AlternatePlan");
- if (!MECE403AlternatePlanflag) {
-     if (MECE403AlternatePlanelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
-     MECE403AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE403AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+$scope.MECE403AlternatePlan3A4AListener = function () {
+  var MECE403AlternatePlan3A4Aelement = document.getElementById("MECE403AlternatePlan3A4A");
+ if (!MECE403AlternatePlan3A4Aflag) {
+     if (MECE403AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
+     MECE403AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE403AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine687());
       that.addLine(getLine688());
       that.addLine(getLine689());
       that.addLine(getLine690());
-     MECE403AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-     MECE403AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked(["MECE403AlternatePlan", "ENGINEERINGSCIENCES"]);
-      MECE403AlternatePlanflag=true
+     MECE403AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+     MECE403AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE403AlternatePlan3A4A", "ENGINEERINGSCIENCES"]);
+      MECE403AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine687());
       that.removeLine(getLine688());
       that.removeLine(getLine689());
       that.removeLine(getLine690());
-     MECE403AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE403AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
-     that.removeFromClicked("MECE403AlternatePlan");
-      MECE403AlternatePlanflag=false
+     MECE403AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE403AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
+     that.removeFromClicked("MECE403AlternatePlan3A4A");
+      MECE403AlternatePlan3A4Aflag=false
   }
 };
-$scope.MECE451AlternatePlanListener = function () {
-  var MECE451AlternatePlanelement = document.getElementById("MECE451AlternatePlan");
- if (!MECE451AlternatePlanflag) {
-     if (MECE451AlternatePlanelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
-     MECE451AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE451AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+$scope.MECE451AlternatePlan3A4AListener = function () {
+  var MECE451AlternatePlan3A4Aelement = document.getElementById("MECE451AlternatePlan3A4A");
+ if (!MECE451AlternatePlan3A4Aflag) {
+     if (MECE451AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
+     MECE451AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE451AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine691());
       that.addLine(getLine692());
-     MECE451AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES");
-     MECE451AlternatePlanelement.classList.add("ENGINEERINGSCIENCES-highlighted");
-     that.addToClicked(["MECE451AlternatePlan", "ENGINEERINGSCIENCES"]);
-      MECE451AlternatePlanflag=true
+     MECE451AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES");
+     MECE451AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE451AlternatePlan3A4A", "ENGINEERINGSCIENCES"]);
+      MECE451AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine691());
       that.removeLine(getLine692());
-     MECE451AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
-     MECE451AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
-     that.removeFromClicked("MECE451AlternatePlan");
-      MECE451AlternatePlanflag=false
+     MECE451AlternatePlan3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE451AlternatePlan3A4Aelement.classList.add("ENGINEERINGSCIENCES");
+     that.removeFromClicked("MECE451AlternatePlan3A4A");
+      MECE451AlternatePlan3A4Aflag=false
   }
 };
-$scope.MECE460AlternatePlanListener = function () {
-  var MECE460AlternatePlanelement = document.getElementById("MECE460AlternatePlan");
- if (!MECE460AlternatePlanflag) {
-     if (MECE460AlternatePlanelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
-     MECE460AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
-     MECE460AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
+$scope.MECE460AlternatePlan3A4AListener = function () {
+  var MECE460AlternatePlan3A4Aelement = document.getElementById("MECE460AlternatePlan3A4A");
+ if (!MECE460AlternatePlan3A4Aflag) {
+     if (MECE460AlternatePlan3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
+     MECE460AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
+     MECE460AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN");
       return;
 }      that.addLine(getLine693());
       that.addLine(getLine694());
@@ -21270,10 +22695,10 @@ $scope.MECE460AlternatePlanListener = function () {
       that.addLine(getLine699());
       that.addLine(getLine700());
       that.addLine(getLine701());
-     MECE460AlternatePlanelement.classList.remove("ENGINEERINGDESIGN");
-     MECE460AlternatePlanelement.classList.add("ENGINEERINGDESIGN-highlighted");
-     that.addToClicked(["MECE460AlternatePlan", "ENGINEERINGDESIGN"]);
-      MECE460AlternatePlanflag=true
+     MECE460AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN");
+     MECE460AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN-highlighted");
+     that.addToClicked(["MECE460AlternatePlan3A4A", "ENGINEERINGDESIGN"]);
+      MECE460AlternatePlan3A4Aflag=true
   }
  else {
       that.removeLine(getLine693());
@@ -21285,10 +22710,10 @@ $scope.MECE460AlternatePlanListener = function () {
       that.removeLine(getLine699());
       that.removeLine(getLine700());
       that.removeLine(getLine701());
-     MECE460AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
-     MECE460AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
-     that.removeFromClicked("MECE460AlternatePlan");
-      MECE460AlternatePlanflag=false
+     MECE460AlternatePlan3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
+     MECE460AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN");
+     that.removeFromClicked("MECE460AlternatePlan3A4A");
+      MECE460AlternatePlan3A4Aflag=false
   }
 };
   var CHEM103CoopPlan13Aflag = false;

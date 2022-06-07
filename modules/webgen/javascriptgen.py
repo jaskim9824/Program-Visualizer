@@ -390,7 +390,7 @@ switch(categoryName) {{ \n"""
                 controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name)))
                 controller.write(formattedRemoveUnclicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
                 controller.write(formattedAddToClicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
-                controller.write(" } \n")
+           
             controller.write("""       break;\n""")
         controller.write("""       }\n""")
         controller.write("""      break;\n""")
@@ -423,6 +423,7 @@ switch(categoryName) {{ \n"""
                 controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name)))
                 controller.write(formattedRemoveClicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
                 controller.write(formattedAddToUnclicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
+                controller.write(" } \n")
             controller.write("""       break;\n""")
         controller.write("""       }\n""")
         controller.write("""      break;\n""")
