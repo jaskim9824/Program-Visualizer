@@ -48,7 +48,23 @@ def placeRadioInputs(formTag, sequenceDict, soup):
 #   soup - soup object, used to create HTML tags
 def placeLegend(legendTag, categoryDict, soup):
     for category in categoryDict:
-        coursecat = soup.new_tag("div", attrs={"ng-click":cleaner.cleanString(category) + "clickListener()", 
+        if category == "COMP":
+            coursecat = soup.new_tag("div", attrs={"ng-click":"ComplementaryElectiveclickListener()", 
+                                        "class":"legendbutton",
+                                        "id": cleaner.cleanString(category),
+                                        "style":"background-color:#" + categoryDict[category]})
+        elif category == "PROG":
+            coursecat = soup.new_tag("div", attrs={"ng-click":"ProgramTechnicalElectiveclickListener()", 
+                                        "class":"legendbutton",
+                                        "id": cleaner.cleanString(category),
+                                        "style":"background-color:#" + categoryDict[category]})
+        elif category == "ITS":
+            coursecat = soup.new_tag("div", attrs={"ng-click":"ITSElectiveclickListener()", 
+                                        "class":"legendbutton",
+                                        "id": cleaner.cleanString(category),
+                                        "style":"background-color:#" + categoryDict[category]})
+        else:
+            coursecat = soup.new_tag("div", attrs={"ng-click":cleaner.cleanString(category) + "clickListener()", 
                                         "class":"legendbutton",
                                         "id": cleaner.cleanString(category),
                                         "style":"background-color:#" + categoryDict[category]})

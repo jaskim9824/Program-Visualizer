@@ -1460,153 +1460,258 @@ switch(categoryName) {
   case "ComplementaryElective":
     switch(planName) {
       case "TraditionalPlan":
-       var ComplementaryElectiveTraditionalPlanelement = document.getElementById("ComplementaryElectiveTraditionalPlan");
-       ComplementaryElectiveTraditionalPlanelement.classList.remove("ComplementaryElective");
-       ComplementaryElectiveTraditionalPlanelement.classList.add("ComplementaryElective-highlighted");
+        var COMPelements = document.getElementsByClassName("COMP");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP");
+          currelement.classList.add("COMP-highlighted");
+        }
        break;
       case "AlternatePlan":
-       var ComplementaryElectiveAlternatePlanelement = document.getElementById("ComplementaryElectiveAlternatePlan");
-       ComplementaryElectiveAlternatePlanelement.classList.remove("ComplementaryElective");
-       ComplementaryElectiveAlternatePlanelement.classList.add("ComplementaryElective-highlighted");
+        var COMPelements = document.getElementsByClassName("COMP");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP");
+          currelement.classList.add("COMP-highlighted");
+        }
        break;
       case "CoopPlan1":
-       var ComplementaryElectiveCoopPlan1element = document.getElementById("ComplementaryElectiveCoopPlan1");
-       ComplementaryElectiveCoopPlan1element.classList.remove("ComplementaryElective");
-       ComplementaryElectiveCoopPlan1element.classList.add("ComplementaryElective-highlighted");
+        var COMPelements = document.getElementsByClassName("COMP");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP");
+          currelement.classList.add("COMP-highlighted");
+        }
        break;
       case "CoopPlan2":
-       var ComplementaryElectiveCoopPlan2element = document.getElementById("ComplementaryElectiveCoopPlan2");
-       ComplementaryElectiveCoopPlan2element.classList.remove("ComplementaryElective");
-       ComplementaryElectiveCoopPlan2element.classList.add("ComplementaryElective-highlighted");
+        var COMPelements = document.getElementsByClassName("COMP");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP");
+          currelement.classList.add("COMP-highlighted");
+        }
        break;
       case "CoopPlan3Biomedical":
-       var ComplementaryElectiveCoopPlan3Biomedicalelement = document.getElementById("ComplementaryElectiveCoopPlan3Biomedical");
-       ComplementaryElectiveCoopPlan3Biomedicalelement.classList.remove("ComplementaryElective");
-       ComplementaryElectiveCoopPlan3Biomedicalelement.classList.add("ComplementaryElective-highlighted");
+        var COMPelements = document.getElementsByClassName("COMP");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP");
+          currelement.classList.add("COMP-highlighted");
+        }
        break;
       case "CoopPlan4":
-       var ComplementaryElectiveCoopPlan4element = document.getElementById("ComplementaryElectiveCoopPlan4");
-       ComplementaryElectiveCoopPlan4element.classList.remove("ComplementaryElective");
-       ComplementaryElectiveCoopPlan4element.classList.add("ComplementaryElective-highlighted");
+        var COMPelements = document.getElementsByClassName("COMP");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP");
+          currelement.classList.add("COMP-highlighted");
+        }
        break;
        }
       break;
   case "ProgramTechnicalElective":
     switch(planName) {
       case "TraditionalPlan":
-       var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.add("ProgramTechnicalElective-highlighted");
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
        break;
       case "AlternatePlan":
-       var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.add("ProgramTechnicalElective-highlighted");
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
        break;
       case "CoopPlan1":
-       var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
-       ProgramTechnicalElectiveCoopPlan1element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan1element.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
-       ProgramTechnicalElectiveCoopPlan1element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan1element.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
-       ProgramTechnicalElectiveCoopPlan1element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan1element.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
-       ProgramTechnicalElectiveCoopPlan1element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan1element.classList.add("ProgramTechnicalElective-highlighted");
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
        break;
       case "CoopPlan2":
-       var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
-       ProgramTechnicalElectiveCoopPlan2element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan2element.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
-       ProgramTechnicalElectiveCoopPlan2element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan2element.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
-       ProgramTechnicalElectiveCoopPlan2element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan2element.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
-       ProgramTechnicalElectiveCoopPlan2element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan2element.classList.add("ProgramTechnicalElective-highlighted");
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
        break;
       case "CoopPlan3Biomedical":
-       var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("ProgramTechnicalElective-highlighted");
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
        break;
       case "CoopPlan4":
-       var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
-       ProgramTechnicalElectiveCoopPlan4element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan4element.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
-       ProgramTechnicalElectiveCoopPlan4element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan4element.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
-       ProgramTechnicalElectiveCoopPlan4element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan4element.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
-       ProgramTechnicalElectiveCoopPlan4element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan4element.classList.add("ProgramTechnicalElective-highlighted");
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
        break;
        }
       break;
   case "ITSElective":
     switch(planName) {
       case "TraditionalPlan":
-       var ITSElectiveTraditionalPlanelement = document.getElementById("ITSElectiveTraditionalPlan");
-       ITSElectiveTraditionalPlanelement.classList.remove("ITSElective");
-       ITSElectiveTraditionalPlanelement.classList.add("ITSElective-highlighted");
+        var ITSelements = document.getElementsByClassName("ITS");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS");
+          currelement.classList.add("ITS-highlighted");
+        }
        break;
       case "AlternatePlan":
-       var ITSElectiveAlternatePlanelement = document.getElementById("ITSElectiveAlternatePlan");
-       ITSElectiveAlternatePlanelement.classList.remove("ITSElective");
-       ITSElectiveAlternatePlanelement.classList.add("ITSElective-highlighted");
+        var ITSelements = document.getElementsByClassName("ITS");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS");
+          currelement.classList.add("ITS-highlighted");
+        }
        break;
       case "CoopPlan1":
-       var ITSElectiveCoopPlan1element = document.getElementById("ITSElectiveCoopPlan1");
-       ITSElectiveCoopPlan1element.classList.remove("ITSElective");
-       ITSElectiveCoopPlan1element.classList.add("ITSElective-highlighted");
+        var ITSelements = document.getElementsByClassName("ITS");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS");
+          currelement.classList.add("ITS-highlighted");
+        }
        break;
       case "CoopPlan2":
-       var ITSElectiveCoopPlan2element = document.getElementById("ITSElectiveCoopPlan2");
-       ITSElectiveCoopPlan2element.classList.remove("ITSElective");
-       ITSElectiveCoopPlan2element.classList.add("ITSElective-highlighted");
+        var ITSelements = document.getElementsByClassName("ITS");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS");
+          currelement.classList.add("ITS-highlighted");
+        }
        break;
       case "CoopPlan3Biomedical":
-       var ITSElectiveCoopPlan3Biomedicalelement = document.getElementById("ITSElectiveCoopPlan3Biomedical");
-       ITSElectiveCoopPlan3Biomedicalelement.classList.remove("ITSElective");
-       ITSElectiveCoopPlan3Biomedicalelement.classList.add("ITSElective-highlighted");
+        var ITSelements = document.getElementsByClassName("ITS");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS");
+          currelement.classList.add("ITS-highlighted");
+        }
        break;
       case "CoopPlan4":
-       var ITSElectiveCoopPlan4element = document.getElementById("ITSElectiveCoopPlan4");
-       ITSElectiveCoopPlan4element.classList.remove("ITSElective");
-       ITSElectiveCoopPlan4element.classList.add("ITSElective-highlighted");
+        var ITSelements = document.getElementsByClassName("ITS");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS");
+          currelement.classList.add("ITS-highlighted");
+        }
        break;
        }
       break;
@@ -2633,153 +2738,258 @@ switch(categoryName) {
   case "ComplementaryElective":
     switch(planName) {
       case "TraditionalPlan":
-       var ComplementaryElectiveTraditionalPlanelement = document.getElementById("ComplementaryElectiveTraditionalPlan");
-       ComplementaryElectiveTraditionalPlanelement.classList.remove("ComplementaryElective-highlighted");
-       ComplementaryElectiveTraditionalPlanelement.classList.add("ComplementaryElective");
+        var COMPelements = document.getElementsByClassName("COMP-highlighted");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP-highlighted");
+          currelement.classList.add("COMP");
+        }
        break;
       case "AlternatePlan":
-       var ComplementaryElectiveAlternatePlanelement = document.getElementById("ComplementaryElectiveAlternatePlan");
-       ComplementaryElectiveAlternatePlanelement.classList.remove("ComplementaryElective-highlighted");
-       ComplementaryElectiveAlternatePlanelement.classList.add("ComplementaryElective");
+        var COMPelements = document.getElementsByClassName("COMP-highlighted");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP-highlighted");
+          currelement.classList.add("COMP");
+        }
        break;
       case "CoopPlan1":
-       var ComplementaryElectiveCoopPlan1element = document.getElementById("ComplementaryElectiveCoopPlan1");
-       ComplementaryElectiveCoopPlan1element.classList.remove("ComplementaryElective-highlighted");
-       ComplementaryElectiveCoopPlan1element.classList.add("ComplementaryElective");
+        var COMPelements = document.getElementsByClassName("COMP-highlighted");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP-highlighted");
+          currelement.classList.add("COMP");
+        }
        break;
       case "CoopPlan2":
-       var ComplementaryElectiveCoopPlan2element = document.getElementById("ComplementaryElectiveCoopPlan2");
-       ComplementaryElectiveCoopPlan2element.classList.remove("ComplementaryElective-highlighted");
-       ComplementaryElectiveCoopPlan2element.classList.add("ComplementaryElective");
+        var COMPelements = document.getElementsByClassName("COMP-highlighted");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP-highlighted");
+          currelement.classList.add("COMP");
+        }
        break;
       case "CoopPlan3Biomedical":
-       var ComplementaryElectiveCoopPlan3Biomedicalelement = document.getElementById("ComplementaryElectiveCoopPlan3Biomedical");
-       ComplementaryElectiveCoopPlan3Biomedicalelement.classList.remove("ComplementaryElective-highlighted");
-       ComplementaryElectiveCoopPlan3Biomedicalelement.classList.add("ComplementaryElective");
+        var COMPelements = document.getElementsByClassName("COMP-highlighted");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP-highlighted");
+          currelement.classList.add("COMP");
+        }
        break;
       case "CoopPlan4":
-       var ComplementaryElectiveCoopPlan4element = document.getElementById("ComplementaryElectiveCoopPlan4");
-       ComplementaryElectiveCoopPlan4element.classList.remove("ComplementaryElective-highlighted");
-       ComplementaryElectiveCoopPlan4element.classList.add("ComplementaryElective");
+        var COMPelements = document.getElementsByClassName("COMP-highlighted");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP-highlighted");
+          currelement.classList.add("COMP");
+        }
        break;
        }
       break;
   case "ProgramTechnicalElective":
     switch(planName) {
       case "TraditionalPlan":
-       var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.add("ProgramTechnicalElective");
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
        break;
       case "AlternatePlan":
-       var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.add("ProgramTechnicalElective");
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
        break;
       case "CoopPlan1":
-       var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
-       ProgramTechnicalElectiveCoopPlan1element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan1element.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
-       ProgramTechnicalElectiveCoopPlan1element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan1element.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
-       ProgramTechnicalElectiveCoopPlan1element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan1element.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
-       ProgramTechnicalElectiveCoopPlan1element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan1element.classList.add("ProgramTechnicalElective");
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
        break;
       case "CoopPlan2":
-       var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
-       ProgramTechnicalElectiveCoopPlan2element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan2element.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
-       ProgramTechnicalElectiveCoopPlan2element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan2element.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
-       ProgramTechnicalElectiveCoopPlan2element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan2element.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
-       ProgramTechnicalElectiveCoopPlan2element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan2element.classList.add("ProgramTechnicalElective");
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
        break;
       case "CoopPlan3Biomedical":
-       var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("ProgramTechnicalElective");
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
        break;
       case "CoopPlan4":
-       var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
-       ProgramTechnicalElectiveCoopPlan4element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan4element.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
-       ProgramTechnicalElectiveCoopPlan4element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan4element.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
-       ProgramTechnicalElectiveCoopPlan4element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan4element.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
-       ProgramTechnicalElectiveCoopPlan4element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan4element.classList.add("ProgramTechnicalElective");
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
        break;
        }
       break;
   case "ITSElective":
     switch(planName) {
       case "TraditionalPlan":
-       var ITSElectiveTraditionalPlanelement = document.getElementById("ITSElectiveTraditionalPlan");
-       ITSElectiveTraditionalPlanelement.classList.remove("ITSElective-highlighted");
-       ITSElectiveTraditionalPlanelement.classList.add("ITSElective");
+        var ITSelements = document.getElementsByClassName("ITS-highlighted");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS-highlighted");
+          currelement.classList.add("ITS");
+        }
        break;
       case "AlternatePlan":
-       var ITSElectiveAlternatePlanelement = document.getElementById("ITSElectiveAlternatePlan");
-       ITSElectiveAlternatePlanelement.classList.remove("ITSElective-highlighted");
-       ITSElectiveAlternatePlanelement.classList.add("ITSElective");
+        var ITSelements = document.getElementsByClassName("ITS-highlighted");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS-highlighted");
+          currelement.classList.add("ITS");
+        }
        break;
       case "CoopPlan1":
-       var ITSElectiveCoopPlan1element = document.getElementById("ITSElectiveCoopPlan1");
-       ITSElectiveCoopPlan1element.classList.remove("ITSElective-highlighted");
-       ITSElectiveCoopPlan1element.classList.add("ITSElective");
+        var ITSelements = document.getElementsByClassName("ITS-highlighted");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS-highlighted");
+          currelement.classList.add("ITS");
+        }
        break;
       case "CoopPlan2":
-       var ITSElectiveCoopPlan2element = document.getElementById("ITSElectiveCoopPlan2");
-       ITSElectiveCoopPlan2element.classList.remove("ITSElective-highlighted");
-       ITSElectiveCoopPlan2element.classList.add("ITSElective");
+        var ITSelements = document.getElementsByClassName("ITS-highlighted");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS-highlighted");
+          currelement.classList.add("ITS");
+        }
        break;
       case "CoopPlan3Biomedical":
-       var ITSElectiveCoopPlan3Biomedicalelement = document.getElementById("ITSElectiveCoopPlan3Biomedical");
-       ITSElectiveCoopPlan3Biomedicalelement.classList.remove("ITSElective-highlighted");
-       ITSElectiveCoopPlan3Biomedicalelement.classList.add("ITSElective");
+        var ITSelements = document.getElementsByClassName("ITS-highlighted");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS-highlighted");
+          currelement.classList.add("ITS");
+        }
        break;
       case "CoopPlan4":
-       var ITSElectiveCoopPlan4element = document.getElementById("ITSElectiveCoopPlan4");
-       ITSElectiveCoopPlan4element.classList.remove("ITSElective-highlighted");
-       ITSElectiveCoopPlan4element.classList.add("ITSElective");
+        var ITSelements = document.getElementsByClassName("ITS-highlighted");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS-highlighted");
+          currelement.classList.add("ITS");
+        }
        break;
        }
       break;
