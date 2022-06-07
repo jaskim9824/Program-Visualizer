@@ -59,8 +59,13 @@
             <label for="A">A</label><br>
             <input type="radio" name="planselector" ng-model="selectedPlan" value="B">
             <label for="B">B</label><br>
-            <input type="radio" name="planselector" ng-model="selectedPlan" value="C">
-            <label for="C">C</label><br>
+            <div class ="submenu-dropdown">
+                <label>C</label>    
+                <div class="submenu-dropdown-content">
+                    <input type="radio" name="planselector" ng-model="selectedPlan" value="CA">
+                    <label for="CA">CA</label><br>
+                </div>
+            </div><br>
             <input type="radio" name="planselector" ng-model="selectedPlan" value="D">
             <label for="D">D</label><br>
         </div>

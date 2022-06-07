@@ -153,7 +153,20 @@ header {
     display: inline-block;  
 }
 
+.submenu-dropdown {
+    position: relative;
+    display: inline-block;  
+}
+
 .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.submenu-dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -169,6 +182,10 @@ header {
 }
 
 .dropdown:hover .dropdown-content {
+    display: block;
+} 
+
+.submenu-dropdown:hover .submenu-dropdown-content {
     display: block;
 }
 

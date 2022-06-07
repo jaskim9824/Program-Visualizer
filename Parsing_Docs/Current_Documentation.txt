@@ -66,6 +66,12 @@ Sequencing.xls:
 - For Complementary Electives: enter "COMP"
 - For ITS electives: enter "ITS"
 - Again, try to maintain the format already present. The program can handle some irregularities but not all.
+- For course groups within a plan, create a new sheet for every possible combination of choices for the course groups and organize the
+  sequence accordingly like specified before
+- Name each sheet <planname> {<course group choices>}. Ensure that the plan name has no { or } characters. For example, if Plan A has
+  the choice between Course group 3A and Course group 3B, then there should be two sheets named "Plan A {3A}" and "Plan A {3B}".
+- IF there are mutiple course groups in a plan, seperate the choices via spaces. For example, if Plan B has the choice between course group 3A
+  and 3B, and the choice between 4A and 4B, the sheets should be named "Plan B {3A 4A}", "Plan B {3A 4B}", "Plan B {3B 4A}" and "Plan B {3B 4B}"
 
 CourseCategories.xls:
 - Ensure this file is a .xls file and NOT a .xlsx file. A .xlsx file can be saved as a .xls file
