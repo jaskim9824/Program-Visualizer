@@ -69,6 +69,7 @@ seq_excel.insert(tkinter.END, "")
 seq_excel.grid(row=2, column=2, **paddings)
 seqLabel = Label(root, text="Enter course sequencing file (filename.xls):").grid(row=2, column=1, **paddings)
 
+#browse functions
 def courseBrowse():
     filename =filedialog.askopenfilename()
     courses_excel.insert(tkinter.END, filename) 
@@ -167,7 +168,7 @@ def main():
              err.strerror + 
              ". The directory you are in does not have a directory named output.")
 
-
+#browse buttons
 button_excel = ttk.Button(root, text="Browse", command=courseBrowse)
 button_excel.grid(row=0, column=3, **paddings)
 
