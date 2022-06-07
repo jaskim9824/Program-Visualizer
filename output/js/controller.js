@@ -368,100 +368,160 @@ var ITSElectiveflag = false;
 $scope.BASICSCIENCESclickListener = function() {
     if (!BASICSCIENCESflag) {
         that.highlightCategory("BASICSCIENCES", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("BASICSCIENCES");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         BASICSCIENCESflag = true
     }
     else {
         that.unhighlightCategory("BASICSCIENCES", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("BASICSCIENCES");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         BASICSCIENCESflag = false
     }
 }
 $scope.ENGINEERINGPROFESSIONclickListener = function() {
     if (!ENGINEERINGPROFESSIONflag) {
         that.highlightCategory("ENGINEERINGPROFESSION", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("ENGINEERINGPROFESSION");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         ENGINEERINGPROFESSIONflag = true
     }
     else {
         that.unhighlightCategory("ENGINEERINGPROFESSION", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("ENGINEERINGPROFESSION");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         ENGINEERINGPROFESSIONflag = false
     }
 }
 $scope.OtherclickListener = function() {
     if (!Otherflag) {
         that.highlightCategory("Other", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("Other");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         Otherflag = true
     }
     else {
         that.unhighlightCategory("Other", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("Other");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         Otherflag = false
     }
 }
 $scope.MATHclickListener = function() {
     if (!MATHflag) {
         that.highlightCategory("MATH", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("MATH");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         MATHflag = true
     }
     else {
         that.unhighlightCategory("MATH", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("MATH");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         MATHflag = false
     }
 }
 $scope.ENGINEERINGDESIGNclickListener = function() {
     if (!ENGINEERINGDESIGNflag) {
         that.highlightCategory("ENGINEERINGDESIGN", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("ENGINEERINGDESIGN");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         ENGINEERINGDESIGNflag = true
     }
     else {
         that.unhighlightCategory("ENGINEERINGDESIGN", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("ENGINEERINGDESIGN");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         ENGINEERINGDESIGNflag = false
     }
 }
 $scope.ENGINEERINGSCIENCESclickListener = function() {
     if (!ENGINEERINGSCIENCESflag) {
         that.highlightCategory("ENGINEERINGSCIENCES", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("ENGINEERINGSCIENCES");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         ENGINEERINGSCIENCESflag = true
     }
     else {
         that.unhighlightCategory("ENGINEERINGSCIENCES", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("ENGINEERINGSCIENCES");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         ENGINEERINGSCIENCESflag = false
     }
 }
 $scope.ComplementaryElectiveclickListener = function() {
     if (!ComplementaryElectiveflag) {
         that.highlightCategory("ComplementaryElective", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("COMP");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         ComplementaryElectiveflag = true
     }
     else {
         that.unhighlightCategory("ComplementaryElective", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("COMP");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         ComplementaryElectiveflag = false
     }
 }
 $scope.ProgramTechnicalElectiveclickListener = function() {
     if (!ProgramTechnicalElectiveflag) {
         that.highlightCategory("ProgramTechnicalElective", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("PROG");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         ProgramTechnicalElectiveflag = true
     }
     else {
         that.unhighlightCategory("ProgramTechnicalElective", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("PROG");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         ProgramTechnicalElectiveflag = false
     }
 }
 $scope.ITSElectiveclickListener = function() {
     if (!ITSElectiveflag) {
         that.highlightCategory("ITSElective", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("ITS");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         ITSElectiveflag = true
     }
     else {
         that.unhighlightCategory("ITSElective", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("ITS");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         ITSElectiveflag = false
     }
 }
 $scope.clickListener = function() {
     if (!flag) {
         that.highlightCategory("", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         flag = true
     }
     else {
         that.unhighlightCategory("", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         flag = false
     }
 }

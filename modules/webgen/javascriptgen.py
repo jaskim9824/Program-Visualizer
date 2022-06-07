@@ -260,10 +260,16 @@ def generateHighlightCategory(sequenceDict, controller):
     formattedCategoriesListener = """$scope.{categoryName}clickListener = function() {{
     if (!{categoryName}flag) {{
         that.highlightCategory("{categoryName}", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("{categoryNameId}");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         {categoryName}flag = true
     }}
     else {{
         that.unhighlightCategory("{categoryName}", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("{categoryNameId}");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         {categoryName}flag = false
     }}\n"""
 
@@ -311,8 +317,15 @@ switch(categoryName) {{ \n"""
         }}\n"""
 
     for category in categoriesDict:
-        # adding listener for each category
-        controller.write(formattedCategoriesListener.format(categoryName=category))
+        if category == "ComplementaryElective":
+            controller.write(formattedCategoriesListener.format(categoryName=category, categoryNameId="COMP"))
+        elif category == "ProgramTechnicalElective":
+            controller.write(formattedCategoriesListener.format(categoryName=category, categoryNameId="PROG"))
+        elif category == "ITSElective":
+            controller.write(formattedCategoriesListener.format(categoryName=category, categoryNameId="ITS"))
+        else:
+            # adding listener for each category
+            controller.write(formattedCategoriesListener.format(categoryName=category, categoryNameId=category))
         controller.write("}\n")
 
     controller.write(formattedFunctionStatement.format(functionName="highlightCategory"))
