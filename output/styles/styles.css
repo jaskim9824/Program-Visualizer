@@ -29,7 +29,7 @@ header {
     width: 300px;
     position: relative;
     left: 10vw;
-    bottom: 275px;
+    bottom: 225px;
     margin: 0;
 }
 
@@ -71,11 +71,13 @@ header {
 /* legend for categories */
 .legend {
     width: 200px;
+    height: 250px;
     margin: 0;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    left: 75vw;
+    left: 70vw;
     bottom: 25px;
     text-align: center;
 }
@@ -83,6 +85,17 @@ header {
 .legendbutton {
     text-align: center;
     padding: 8px;
+    box-shadow: 0px 5px gray;
+    margin: 5px;
+}
+
+.legendbutton-pressed {
+    text-align: center;
+    padding: 6px;
+    border: 2px solid white;
+    position: relative;
+    top: 5px;
+    margin: 5px;
 }
 
 /* at 500px align header left when the screen is 500px wide or less*/
@@ -105,7 +118,7 @@ h3.planhead {
     height: 33px;
     position: relative;
     left: 45vw;
-    top: 50px;
+    top: 20px;
     font-size: 175%;
     text-align: center;
 }
@@ -116,7 +129,7 @@ h3.planhead {
     position: absolute;
     display: inline-block;
     left: 45vw;
-    margin-top: 50px;
+    margin-top: 15px;
 }
 
 /* Form text styling */

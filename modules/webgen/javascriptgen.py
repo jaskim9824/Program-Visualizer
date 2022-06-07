@@ -260,10 +260,16 @@ def generateHighlightCategory(sequenceDict, controller):
     formattedCategoriesListener = """$scope.{categoryName}clickListener = function() {{
     if (!{categoryName}flag) {{
         that.highlightCategory("{categoryName}", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("{categoryNameId}");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         {categoryName}flag = true
     }}
     else {{
         that.unhighlightCategory("{categoryName}", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("{categoryNameId}");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         {categoryName}flag = false
     }}\n"""
 
@@ -296,9 +302,30 @@ switch(categoryName) {{ \n"""
     # add to list of unclicked
     formattedAddToUnclicked = """       {courseName}{planName}element.classList.add("{categoryName}");\n"""
 
+    # special case for electives
+    formattedElectiveGetUnhighlightedElement = """        var {electiveName}elements = document.getElementsByClassName("{electiveName}");\n"""
+    formattedElectiveGetHighlightedElement = """        var {electiveName}elements = document.getElementsByClassName("{electiveName}-highlighted");\n"""
+    formattedElectivesHighlight = """        for (let i = 0; i < {electiveName}elements.length; i++) {{
+          var currelement = document.getElementById({electiveName}elements.item(i).id);
+          currelement.classList.remove("{electiveName}");
+          currelement.classList.add("{electiveName}-highlighted");
+        }}\n"""
+    formattedElectivesUnhighlight = """        for (let i = 0; i < {electiveName}elements.length; i++) {{
+          var currelement = document.getElementById({electiveName}elements.item(i).id);
+          currelement.classList.remove("{electiveName}-highlighted");
+          currelement.classList.add("{electiveName}");
+        }}\n"""
+
     for category in categoriesDict:
-        # adding listener for each category
-        controller.write(formattedCategoriesListener.format(categoryName=category))
+        if category == "ComplementaryElective":
+            controller.write(formattedCategoriesListener.format(categoryName=category, categoryNameId="COMP"))
+        elif category == "ProgramTechnicalElective":
+            controller.write(formattedCategoriesListener.format(categoryName=category, categoryNameId="PROG"))
+        elif category == "ITSElective":
+            controller.write(formattedCategoriesListener.format(categoryName=category, categoryNameId="ITS"))
+        else:
+            # adding listener for each category
+            controller.write(formattedCategoriesListener.format(categoryName=category, categoryNameId=category))
         controller.write("}\n")
 
     controller.write(formattedFunctionStatement.format(functionName="highlightCategory"))
@@ -310,7 +337,18 @@ switch(categoryName) {{ \n"""
             # inner switch between plans
             controller.write(formattedCasePlan.format(planName=cleaner.cleanString(plan)))
             for course in categoriesDict[category][plan]:
-                # add the statements for each course (add to clicked, remove from unclicked)
+                if course.name == "Complementary Elective":
+                    controller.write(formattedElectiveGetUnhighlightedElement.format(electiveName="COMP"))
+                    controller.write(formattedElectivesHighlight.format(electiveName="COMP"))
+                    continue
+                if course.name == "Program/Technical Elective":
+                    controller.write(formattedElectiveGetUnhighlightedElement.format(electiveName="PROG"))
+                    controller.write(formattedElectivesHighlight.format(electiveName="PROG"))
+                    continue
+                if course.name == "ITS Elective":
+                    controller.write(formattedElectiveGetUnhighlightedElement.format(electiveName="ITS"))
+                    controller.write(formattedElectivesHighlight.format(electiveName="ITS"))
+                    continue
                 controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name)))
                 controller.write(formattedRemoveUnclicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
                 controller.write(formattedAddToClicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
@@ -321,6 +359,7 @@ switch(categoryName) {{ \n"""
     controller.write(switchEndString)
 
     # same as above but for deselecting a course category
+    formattedIfStatement = "if (!{courseName}{planName}flag) {{ \n"
     controller.write(formattedFunctionStatement.format(functionName="unhighlightCategory"))
     for category in categoriesDict:
         controller.write(formattedCaseCat.format(categoryName=cleaner.cleanString(category)))
@@ -328,9 +367,24 @@ switch(categoryName) {{ \n"""
         for plan in categoriesDict[category]:
             controller.write(formattedCasePlan.format(planName=cleaner.cleanString(plan)))
             for course in categoriesDict[category][plan]:
+                if course.name == "Complementary Elective":
+                    controller.write(formattedElectiveGetHighlightedElement.format(electiveName="COMP"))
+                    controller.write(formattedElectivesUnhighlight.format(electiveName="COMP"))
+                    continue
+                if course.name == "Program/Technical Elective":
+                    controller.write(formattedElectiveGetHighlightedElement.format(electiveName="PROG"))
+                    controller.write(formattedElectivesUnhighlight.format(electiveName="PROG"))
+                    continue
+                if course.name == "ITS Elective":
+                    controller.write(formattedElectiveGetHighlightedElement.format(electiveName="ITS"))
+                    controller.write(formattedElectivesUnhighlight.format(electiveName="ITS"))
+                    continue
+                controller.write(formattedIfStatement.format(planName=cleaner.cleanString(plan), 
+                                                             courseName=cleaner.cleanString(course.name)))
                 controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name)))
                 controller.write(formattedRemoveClicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
                 controller.write(formattedAddToUnclicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
+                controller.write(" } \n")
             controller.write("""       break;\n""")
         controller.write("""       }\n""")
         controller.write("""      break;\n""")

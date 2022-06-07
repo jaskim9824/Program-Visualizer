@@ -368,100 +368,160 @@ var ITSElectiveflag = false;
 $scope.BASICSCIENCESclickListener = function() {
     if (!BASICSCIENCESflag) {
         that.highlightCategory("BASICSCIENCES", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("BASICSCIENCES");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         BASICSCIENCESflag = true
     }
     else {
         that.unhighlightCategory("BASICSCIENCES", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("BASICSCIENCES");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         BASICSCIENCESflag = false
     }
 }
 $scope.ENGINEERINGPROFESSIONclickListener = function() {
     if (!ENGINEERINGPROFESSIONflag) {
         that.highlightCategory("ENGINEERINGPROFESSION", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("ENGINEERINGPROFESSION");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         ENGINEERINGPROFESSIONflag = true
     }
     else {
         that.unhighlightCategory("ENGINEERINGPROFESSION", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("ENGINEERINGPROFESSION");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         ENGINEERINGPROFESSIONflag = false
     }
 }
 $scope.OtherclickListener = function() {
     if (!Otherflag) {
         that.highlightCategory("Other", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("Other");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         Otherflag = true
     }
     else {
         that.unhighlightCategory("Other", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("Other");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         Otherflag = false
     }
 }
 $scope.MATHclickListener = function() {
     if (!MATHflag) {
         that.highlightCategory("MATH", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("MATH");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         MATHflag = true
     }
     else {
         that.unhighlightCategory("MATH", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("MATH");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         MATHflag = false
     }
 }
 $scope.ENGINEERINGDESIGNclickListener = function() {
     if (!ENGINEERINGDESIGNflag) {
         that.highlightCategory("ENGINEERINGDESIGN", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("ENGINEERINGDESIGN");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         ENGINEERINGDESIGNflag = true
     }
     else {
         that.unhighlightCategory("ENGINEERINGDESIGN", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("ENGINEERINGDESIGN");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         ENGINEERINGDESIGNflag = false
     }
 }
 $scope.ENGINEERINGSCIENCESclickListener = function() {
     if (!ENGINEERINGSCIENCESflag) {
         that.highlightCategory("ENGINEERINGSCIENCES", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("ENGINEERINGSCIENCES");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         ENGINEERINGSCIENCESflag = true
     }
     else {
         that.unhighlightCategory("ENGINEERINGSCIENCES", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("ENGINEERINGSCIENCES");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         ENGINEERINGSCIENCESflag = false
     }
 }
 $scope.ComplementaryElectiveclickListener = function() {
     if (!ComplementaryElectiveflag) {
         that.highlightCategory("ComplementaryElective", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("COMP");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         ComplementaryElectiveflag = true
     }
     else {
         that.unhighlightCategory("ComplementaryElective", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("COMP");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         ComplementaryElectiveflag = false
     }
 }
 $scope.ProgramTechnicalElectiveclickListener = function() {
     if (!ProgramTechnicalElectiveflag) {
         that.highlightCategory("ProgramTechnicalElective", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("PROG");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         ProgramTechnicalElectiveflag = true
     }
     else {
         that.unhighlightCategory("ProgramTechnicalElective", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("PROG");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         ProgramTechnicalElectiveflag = false
     }
 }
 $scope.ITSElectiveclickListener = function() {
     if (!ITSElectiveflag) {
         that.highlightCategory("ITSElective", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("ITS");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         ITSElectiveflag = true
     }
     else {
         that.unhighlightCategory("ITSElective", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("ITS");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         ITSElectiveflag = false
     }
 }
 $scope.clickListener = function() {
     if (!flag) {
         that.highlightCategory("", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("");
+        pressedbtn.classList.remove("legendbutton");
+        pressedbtn.classList.add("legendbutton-pressed");
         flag = true
     }
     else {
         that.unhighlightCategory("", $scope.selectedPlan);
+        var pressedbtn = document.getElementById("");
+        pressedbtn.classList.remove("legendbutton-pressed");
+        pressedbtn.classList.add("legendbutton");
         flag = false
     }
 }
@@ -1460,153 +1520,258 @@ switch(categoryName) {
   case "ComplementaryElective":
     switch(planName) {
       case "TraditionalPlan":
-       var ComplementaryElectiveTraditionalPlanelement = document.getElementById("ComplementaryElectiveTraditionalPlan");
-       ComplementaryElectiveTraditionalPlanelement.classList.remove("ComplementaryElective");
-       ComplementaryElectiveTraditionalPlanelement.classList.add("ComplementaryElective-highlighted");
+        var COMPelements = document.getElementsByClassName("COMP");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP");
+          currelement.classList.add("COMP-highlighted");
+        }
        break;
       case "AlternatePlan":
-       var ComplementaryElectiveAlternatePlanelement = document.getElementById("ComplementaryElectiveAlternatePlan");
-       ComplementaryElectiveAlternatePlanelement.classList.remove("ComplementaryElective");
-       ComplementaryElectiveAlternatePlanelement.classList.add("ComplementaryElective-highlighted");
+        var COMPelements = document.getElementsByClassName("COMP");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP");
+          currelement.classList.add("COMP-highlighted");
+        }
        break;
       case "CoopPlan1":
-       var ComplementaryElectiveCoopPlan1element = document.getElementById("ComplementaryElectiveCoopPlan1");
-       ComplementaryElectiveCoopPlan1element.classList.remove("ComplementaryElective");
-       ComplementaryElectiveCoopPlan1element.classList.add("ComplementaryElective-highlighted");
+        var COMPelements = document.getElementsByClassName("COMP");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP");
+          currelement.classList.add("COMP-highlighted");
+        }
        break;
       case "CoopPlan2":
-       var ComplementaryElectiveCoopPlan2element = document.getElementById("ComplementaryElectiveCoopPlan2");
-       ComplementaryElectiveCoopPlan2element.classList.remove("ComplementaryElective");
-       ComplementaryElectiveCoopPlan2element.classList.add("ComplementaryElective-highlighted");
+        var COMPelements = document.getElementsByClassName("COMP");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP");
+          currelement.classList.add("COMP-highlighted");
+        }
        break;
       case "CoopPlan3Biomedical":
-       var ComplementaryElectiveCoopPlan3Biomedicalelement = document.getElementById("ComplementaryElectiveCoopPlan3Biomedical");
-       ComplementaryElectiveCoopPlan3Biomedicalelement.classList.remove("ComplementaryElective");
-       ComplementaryElectiveCoopPlan3Biomedicalelement.classList.add("ComplementaryElective-highlighted");
+        var COMPelements = document.getElementsByClassName("COMP");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP");
+          currelement.classList.add("COMP-highlighted");
+        }
        break;
       case "CoopPlan4":
-       var ComplementaryElectiveCoopPlan4element = document.getElementById("ComplementaryElectiveCoopPlan4");
-       ComplementaryElectiveCoopPlan4element.classList.remove("ComplementaryElective");
-       ComplementaryElectiveCoopPlan4element.classList.add("ComplementaryElective-highlighted");
+        var COMPelements = document.getElementsByClassName("COMP");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP");
+          currelement.classList.add("COMP-highlighted");
+        }
        break;
        }
       break;
   case "ProgramTechnicalElective":
     switch(planName) {
       case "TraditionalPlan":
-       var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.add("ProgramTechnicalElective-highlighted");
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
        break;
       case "AlternatePlan":
-       var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.add("ProgramTechnicalElective-highlighted");
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
        break;
       case "CoopPlan1":
-       var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
-       ProgramTechnicalElectiveCoopPlan1element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan1element.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
-       ProgramTechnicalElectiveCoopPlan1element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan1element.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
-       ProgramTechnicalElectiveCoopPlan1element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan1element.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
-       ProgramTechnicalElectiveCoopPlan1element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan1element.classList.add("ProgramTechnicalElective-highlighted");
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
        break;
       case "CoopPlan2":
-       var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
-       ProgramTechnicalElectiveCoopPlan2element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan2element.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
-       ProgramTechnicalElectiveCoopPlan2element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan2element.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
-       ProgramTechnicalElectiveCoopPlan2element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan2element.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
-       ProgramTechnicalElectiveCoopPlan2element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan2element.classList.add("ProgramTechnicalElective-highlighted");
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
        break;
       case "CoopPlan3Biomedical":
-       var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("ProgramTechnicalElective-highlighted");
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
        break;
       case "CoopPlan4":
-       var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
-       ProgramTechnicalElectiveCoopPlan4element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan4element.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
-       ProgramTechnicalElectiveCoopPlan4element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan4element.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
-       ProgramTechnicalElectiveCoopPlan4element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan4element.classList.add("ProgramTechnicalElective-highlighted");
-       var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
-       ProgramTechnicalElectiveCoopPlan4element.classList.remove("ProgramTechnicalElective");
-       ProgramTechnicalElectiveCoopPlan4element.classList.add("ProgramTechnicalElective-highlighted");
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
+        var PROGelements = document.getElementsByClassName("PROG");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG");
+          currelement.classList.add("PROG-highlighted");
+        }
        break;
        }
       break;
   case "ITSElective":
     switch(planName) {
       case "TraditionalPlan":
-       var ITSElectiveTraditionalPlanelement = document.getElementById("ITSElectiveTraditionalPlan");
-       ITSElectiveTraditionalPlanelement.classList.remove("ITSElective");
-       ITSElectiveTraditionalPlanelement.classList.add("ITSElective-highlighted");
+        var ITSelements = document.getElementsByClassName("ITS");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS");
+          currelement.classList.add("ITS-highlighted");
+        }
        break;
       case "AlternatePlan":
-       var ITSElectiveAlternatePlanelement = document.getElementById("ITSElectiveAlternatePlan");
-       ITSElectiveAlternatePlanelement.classList.remove("ITSElective");
-       ITSElectiveAlternatePlanelement.classList.add("ITSElective-highlighted");
+        var ITSelements = document.getElementsByClassName("ITS");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS");
+          currelement.classList.add("ITS-highlighted");
+        }
        break;
       case "CoopPlan1":
-       var ITSElectiveCoopPlan1element = document.getElementById("ITSElectiveCoopPlan1");
-       ITSElectiveCoopPlan1element.classList.remove("ITSElective");
-       ITSElectiveCoopPlan1element.classList.add("ITSElective-highlighted");
+        var ITSelements = document.getElementsByClassName("ITS");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS");
+          currelement.classList.add("ITS-highlighted");
+        }
        break;
       case "CoopPlan2":
-       var ITSElectiveCoopPlan2element = document.getElementById("ITSElectiveCoopPlan2");
-       ITSElectiveCoopPlan2element.classList.remove("ITSElective");
-       ITSElectiveCoopPlan2element.classList.add("ITSElective-highlighted");
+        var ITSelements = document.getElementsByClassName("ITS");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS");
+          currelement.classList.add("ITS-highlighted");
+        }
        break;
       case "CoopPlan3Biomedical":
-       var ITSElectiveCoopPlan3Biomedicalelement = document.getElementById("ITSElectiveCoopPlan3Biomedical");
-       ITSElectiveCoopPlan3Biomedicalelement.classList.remove("ITSElective");
-       ITSElectiveCoopPlan3Biomedicalelement.classList.add("ITSElective-highlighted");
+        var ITSelements = document.getElementsByClassName("ITS");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS");
+          currelement.classList.add("ITS-highlighted");
+        }
        break;
       case "CoopPlan4":
-       var ITSElectiveCoopPlan4element = document.getElementById("ITSElectiveCoopPlan4");
-       ITSElectiveCoopPlan4element.classList.remove("ITSElective");
-       ITSElectiveCoopPlan4element.classList.add("ITSElective-highlighted");
+        var ITSelements = document.getElementsByClassName("ITS");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS");
+          currelement.classList.add("ITS-highlighted");
+        }
        break;
        }
       break;
@@ -1643,1167 +1808,1880 @@ switch(categoryName) {
   case "BASICSCIENCES":
     switch(planName) {
       case "TraditionalPlan":
+if (!CHEM103TraditionalPlanflag) { 
        var CHEM103TraditionalPlanelement = document.getElementById("CHEM103TraditionalPlan");
        CHEM103TraditionalPlanelement.classList.remove("BASICSCIENCES-highlighted");
        CHEM103TraditionalPlanelement.classList.add("BASICSCIENCES");
+ } 
+if (!ENGG130TraditionalPlanflag) { 
        var ENGG130TraditionalPlanelement = document.getElementById("ENGG130TraditionalPlan");
        ENGG130TraditionalPlanelement.classList.remove("BASICSCIENCES-highlighted");
        ENGG130TraditionalPlanelement.classList.add("BASICSCIENCES");
+ } 
+if (!PHYS130TraditionalPlanflag) { 
        var PHYS130TraditionalPlanelement = document.getElementById("PHYS130TraditionalPlan");
        PHYS130TraditionalPlanelement.classList.remove("BASICSCIENCES-highlighted");
        PHYS130TraditionalPlanelement.classList.add("BASICSCIENCES");
+ } 
+if (!CHEM105TraditionalPlanflag) { 
        var CHEM105TraditionalPlanelement = document.getElementById("CHEM105TraditionalPlan");
        CHEM105TraditionalPlanelement.classList.remove("BASICSCIENCES-highlighted");
        CHEM105TraditionalPlanelement.classList.add("BASICSCIENCES");
+ } 
+if (!ENCMP100TraditionalPlanflag) { 
        var ENCMP100TraditionalPlanelement = document.getElementById("ENCMP100TraditionalPlan");
        ENCMP100TraditionalPlanelement.classList.remove("BASICSCIENCES-highlighted");
        ENCMP100TraditionalPlanelement.classList.add("BASICSCIENCES");
+ } 
+if (!ENPH131TraditionalPlanflag) { 
        var ENPH131TraditionalPlanelement = document.getElementById("ENPH131TraditionalPlan");
        ENPH131TraditionalPlanelement.classList.remove("BASICSCIENCES-highlighted");
        ENPH131TraditionalPlanelement.classList.add("BASICSCIENCES");
+ } 
        break;
       case "AlternatePlan":
+if (!CHEM103AlternatePlanflag) { 
        var CHEM103AlternatePlanelement = document.getElementById("CHEM103AlternatePlan");
        CHEM103AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
        CHEM103AlternatePlanelement.classList.add("BASICSCIENCES");
+ } 
+if (!ENGG130AlternatePlanflag) { 
        var ENGG130AlternatePlanelement = document.getElementById("ENGG130AlternatePlan");
        ENGG130AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
        ENGG130AlternatePlanelement.classList.add("BASICSCIENCES");
+ } 
+if (!PHYS130AlternatePlanflag) { 
        var PHYS130AlternatePlanelement = document.getElementById("PHYS130AlternatePlan");
        PHYS130AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
        PHYS130AlternatePlanelement.classList.add("BASICSCIENCES");
+ } 
+if (!CHEM105AlternatePlanflag) { 
        var CHEM105AlternatePlanelement = document.getElementById("CHEM105AlternatePlan");
        CHEM105AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
        CHEM105AlternatePlanelement.classList.add("BASICSCIENCES");
+ } 
+if (!ENCMP100AlternatePlanflag) { 
        var ENCMP100AlternatePlanelement = document.getElementById("ENCMP100AlternatePlan");
        ENCMP100AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
        ENCMP100AlternatePlanelement.classList.add("BASICSCIENCES");
+ } 
+if (!ENPH131AlternatePlanflag) { 
        var ENPH131AlternatePlanelement = document.getElementById("ENPH131AlternatePlan");
        ENPH131AlternatePlanelement.classList.remove("BASICSCIENCES-highlighted");
        ENPH131AlternatePlanelement.classList.add("BASICSCIENCES");
+ } 
        break;
       case "CoopPlan1":
+if (!CHEM103CoopPlan1flag) { 
        var CHEM103CoopPlan1element = document.getElementById("CHEM103CoopPlan1");
        CHEM103CoopPlan1element.classList.remove("BASICSCIENCES-highlighted");
        CHEM103CoopPlan1element.classList.add("BASICSCIENCES");
+ } 
+if (!ENGG130CoopPlan1flag) { 
        var ENGG130CoopPlan1element = document.getElementById("ENGG130CoopPlan1");
        ENGG130CoopPlan1element.classList.remove("BASICSCIENCES-highlighted");
        ENGG130CoopPlan1element.classList.add("BASICSCIENCES");
+ } 
+if (!PHYS130CoopPlan1flag) { 
        var PHYS130CoopPlan1element = document.getElementById("PHYS130CoopPlan1");
        PHYS130CoopPlan1element.classList.remove("BASICSCIENCES-highlighted");
        PHYS130CoopPlan1element.classList.add("BASICSCIENCES");
+ } 
+if (!CHEM105CoopPlan1flag) { 
        var CHEM105CoopPlan1element = document.getElementById("CHEM105CoopPlan1");
        CHEM105CoopPlan1element.classList.remove("BASICSCIENCES-highlighted");
        CHEM105CoopPlan1element.classList.add("BASICSCIENCES");
+ } 
+if (!ENCMP100CoopPlan1flag) { 
        var ENCMP100CoopPlan1element = document.getElementById("ENCMP100CoopPlan1");
        ENCMP100CoopPlan1element.classList.remove("BASICSCIENCES-highlighted");
        ENCMP100CoopPlan1element.classList.add("BASICSCIENCES");
+ } 
+if (!ENPH131CoopPlan1flag) { 
        var ENPH131CoopPlan1element = document.getElementById("ENPH131CoopPlan1");
        ENPH131CoopPlan1element.classList.remove("BASICSCIENCES-highlighted");
        ENPH131CoopPlan1element.classList.add("BASICSCIENCES");
+ } 
        break;
       case "CoopPlan2":
+if (!CHEM103CoopPlan2flag) { 
        var CHEM103CoopPlan2element = document.getElementById("CHEM103CoopPlan2");
        CHEM103CoopPlan2element.classList.remove("BASICSCIENCES-highlighted");
        CHEM103CoopPlan2element.classList.add("BASICSCIENCES");
+ } 
+if (!ENGG130CoopPlan2flag) { 
        var ENGG130CoopPlan2element = document.getElementById("ENGG130CoopPlan2");
        ENGG130CoopPlan2element.classList.remove("BASICSCIENCES-highlighted");
        ENGG130CoopPlan2element.classList.add("BASICSCIENCES");
+ } 
+if (!PHYS130CoopPlan2flag) { 
        var PHYS130CoopPlan2element = document.getElementById("PHYS130CoopPlan2");
        PHYS130CoopPlan2element.classList.remove("BASICSCIENCES-highlighted");
        PHYS130CoopPlan2element.classList.add("BASICSCIENCES");
+ } 
+if (!CHEM105CoopPlan2flag) { 
        var CHEM105CoopPlan2element = document.getElementById("CHEM105CoopPlan2");
        CHEM105CoopPlan2element.classList.remove("BASICSCIENCES-highlighted");
        CHEM105CoopPlan2element.classList.add("BASICSCIENCES");
+ } 
+if (!ENCMP100CoopPlan2flag) { 
        var ENCMP100CoopPlan2element = document.getElementById("ENCMP100CoopPlan2");
        ENCMP100CoopPlan2element.classList.remove("BASICSCIENCES-highlighted");
        ENCMP100CoopPlan2element.classList.add("BASICSCIENCES");
+ } 
+if (!ENPH131CoopPlan2flag) { 
        var ENPH131CoopPlan2element = document.getElementById("ENPH131CoopPlan2");
        ENPH131CoopPlan2element.classList.remove("BASICSCIENCES-highlighted");
        ENPH131CoopPlan2element.classList.add("BASICSCIENCES");
+ } 
        break;
       case "CoopPlan3Biomedical":
+if (!CHEM103CoopPlan3Biomedicalflag) { 
        var CHEM103CoopPlan3Biomedicalelement = document.getElementById("CHEM103CoopPlan3Biomedical");
        CHEM103CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
        CHEM103CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
+ } 
+if (!ENGG130CoopPlan3Biomedicalflag) { 
        var ENGG130CoopPlan3Biomedicalelement = document.getElementById("ENGG130CoopPlan3Biomedical");
        ENGG130CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
        ENGG130CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
+ } 
+if (!PHYS130CoopPlan3Biomedicalflag) { 
        var PHYS130CoopPlan3Biomedicalelement = document.getElementById("PHYS130CoopPlan3Biomedical");
        PHYS130CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
        PHYS130CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
+ } 
+if (!CHEM105CoopPlan3Biomedicalflag) { 
        var CHEM105CoopPlan3Biomedicalelement = document.getElementById("CHEM105CoopPlan3Biomedical");
        CHEM105CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
        CHEM105CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
+ } 
+if (!ENCMP100CoopPlan3Biomedicalflag) { 
        var ENCMP100CoopPlan3Biomedicalelement = document.getElementById("ENCMP100CoopPlan3Biomedical");
        ENCMP100CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
        ENCMP100CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
+ } 
+if (!ENPH131CoopPlan3Biomedicalflag) { 
        var ENPH131CoopPlan3Biomedicalelement = document.getElementById("ENPH131CoopPlan3Biomedical");
        ENPH131CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
        ENPH131CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
+ } 
        break;
       case "CoopPlan4":
+if (!CHEM103CoopPlan4flag) { 
        var CHEM103CoopPlan4element = document.getElementById("CHEM103CoopPlan4");
        CHEM103CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
        CHEM103CoopPlan4element.classList.add("BASICSCIENCES");
+ } 
+if (!ENGG130CoopPlan4flag) { 
        var ENGG130CoopPlan4element = document.getElementById("ENGG130CoopPlan4");
        ENGG130CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
        ENGG130CoopPlan4element.classList.add("BASICSCIENCES");
+ } 
+if (!PHYS130CoopPlan4flag) { 
        var PHYS130CoopPlan4element = document.getElementById("PHYS130CoopPlan4");
        PHYS130CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
        PHYS130CoopPlan4element.classList.add("BASICSCIENCES");
+ } 
+if (!CHEM105CoopPlan4flag) { 
        var CHEM105CoopPlan4element = document.getElementById("CHEM105CoopPlan4");
        CHEM105CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
        CHEM105CoopPlan4element.classList.add("BASICSCIENCES");
+ } 
+if (!ENCMP100CoopPlan4flag) { 
        var ENCMP100CoopPlan4element = document.getElementById("ENCMP100CoopPlan4");
        ENCMP100CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
        ENCMP100CoopPlan4element.classList.add("BASICSCIENCES");
+ } 
+if (!ENPH131CoopPlan4flag) { 
        var ENPH131CoopPlan4element = document.getElementById("ENPH131CoopPlan4");
        ENPH131CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
        ENPH131CoopPlan4element.classList.add("BASICSCIENCES");
+ } 
        break;
        }
       break;
   case "ENGINEERINGPROFESSION":
     switch(planName) {
       case "TraditionalPlan":
+if (!ENGG100TraditionalPlanflag) { 
        var ENGG100TraditionalPlanelement = document.getElementById("ENGG100TraditionalPlan");
        ENGG100TraditionalPlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG100TraditionalPlanelement.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!MECE200TraditionalPlanflag) { 
        var MECE200TraditionalPlanelement = document.getElementById("MECE200TraditionalPlan");
        MECE200TraditionalPlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        MECE200TraditionalPlanelement.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!ENGG404TraditionalPlanflag) { 
        var ENGG404TraditionalPlanelement = document.getElementById("ENGG404TraditionalPlan");
        ENGG404TraditionalPlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG404TraditionalPlanelement.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!ENGG400TraditionalPlanflag) { 
        var ENGG400TraditionalPlanelement = document.getElementById("ENGG400TraditionalPlan");
        ENGG400TraditionalPlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG400TraditionalPlanelement.classList.add("ENGINEERINGPROFESSION");
+ } 
        break;
       case "AlternatePlan":
+if (!ENGG100AlternatePlanflag) { 
        var ENGG100AlternatePlanelement = document.getElementById("ENGG100AlternatePlan");
        ENGG100AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG100AlternatePlanelement.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!ENGG404AlternatePlanflag) { 
        var ENGG404AlternatePlanelement = document.getElementById("ENGG404AlternatePlan");
        ENGG404AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG404AlternatePlanelement.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!MECE200AlternatePlanflag) { 
        var MECE200AlternatePlanelement = document.getElementById("MECE200AlternatePlan");
        MECE200AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        MECE200AlternatePlanelement.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!ENGG400AlternatePlanflag) { 
        var ENGG400AlternatePlanelement = document.getElementById("ENGG400AlternatePlan");
        ENGG400AlternatePlanelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG400AlternatePlanelement.classList.add("ENGINEERINGPROFESSION");
+ } 
        break;
       case "CoopPlan1":
+if (!ENGG100CoopPlan1flag) { 
        var ENGG100CoopPlan1element = document.getElementById("ENGG100CoopPlan1");
        ENGG100CoopPlan1element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG100CoopPlan1element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!ENGG299CoopPlan1flag) { 
        var ENGG299CoopPlan1element = document.getElementById("ENGG299CoopPlan1");
        ENGG299CoopPlan1element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG299CoopPlan1element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!MECE200CoopPlan1flag) { 
        var MECE200CoopPlan1element = document.getElementById("MECE200CoopPlan1");
        MECE200CoopPlan1element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        MECE200CoopPlan1element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!WKEXP901CoopPlan1flag) { 
        var WKEXP901CoopPlan1element = document.getElementById("WKEXP901CoopPlan1");
        WKEXP901CoopPlan1element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP901CoopPlan1element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!WKEXP902CoopPlan1flag) { 
        var WKEXP902CoopPlan1element = document.getElementById("WKEXP902CoopPlan1");
        WKEXP902CoopPlan1element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP902CoopPlan1element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!WKEXP903CoopPlan1flag) { 
        var WKEXP903CoopPlan1element = document.getElementById("WKEXP903CoopPlan1");
        WKEXP903CoopPlan1element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP903CoopPlan1element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!WKEXP904CoopPlan1flag) { 
        var WKEXP904CoopPlan1element = document.getElementById("WKEXP904CoopPlan1");
        WKEXP904CoopPlan1element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP904CoopPlan1element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!ENGG404CoopPlan1flag) { 
        var ENGG404CoopPlan1element = document.getElementById("ENGG404CoopPlan1");
        ENGG404CoopPlan1element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG404CoopPlan1element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!WKEXP905CoopPlan1flag) { 
        var WKEXP905CoopPlan1element = document.getElementById("WKEXP905CoopPlan1");
        WKEXP905CoopPlan1element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP905CoopPlan1element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!ENGG400CoopPlan1flag) { 
        var ENGG400CoopPlan1element = document.getElementById("ENGG400CoopPlan1");
        ENGG400CoopPlan1element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG400CoopPlan1element.classList.add("ENGINEERINGPROFESSION");
+ } 
        break;
       case "CoopPlan2":
+if (!ENGG100CoopPlan2flag) { 
        var ENGG100CoopPlan2element = document.getElementById("ENGG100CoopPlan2");
        ENGG100CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG100CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!ENGG299CoopPlan2flag) { 
        var ENGG299CoopPlan2element = document.getElementById("ENGG299CoopPlan2");
        ENGG299CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG299CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!MECE200CoopPlan2flag) { 
        var MECE200CoopPlan2element = document.getElementById("MECE200CoopPlan2");
        MECE200CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        MECE200CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!WKEXP901CoopPlan2flag) { 
        var WKEXP901CoopPlan2element = document.getElementById("WKEXP901CoopPlan2");
        WKEXP901CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP901CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!WKEXP902CoopPlan2flag) { 
        var WKEXP902CoopPlan2element = document.getElementById("WKEXP902CoopPlan2");
        WKEXP902CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP902CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!WKEXP903CoopPlan2flag) { 
        var WKEXP903CoopPlan2element = document.getElementById("WKEXP903CoopPlan2");
        WKEXP903CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP903CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!WKEXP904CoopPlan2flag) { 
        var WKEXP904CoopPlan2element = document.getElementById("WKEXP904CoopPlan2");
        WKEXP904CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP904CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!WKEXP905CoopPlan2flag) { 
        var WKEXP905CoopPlan2element = document.getElementById("WKEXP905CoopPlan2");
        WKEXP905CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP905CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!ENGG400CoopPlan2flag) { 
        var ENGG400CoopPlan2element = document.getElementById("ENGG400CoopPlan2");
        ENGG400CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG400CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!ENGG404CoopPlan2flag) { 
        var ENGG404CoopPlan2element = document.getElementById("ENGG404CoopPlan2");
        ENGG404CoopPlan2element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG404CoopPlan2element.classList.add("ENGINEERINGPROFESSION");
+ } 
        break;
       case "CoopPlan3Biomedical":
+if (!ENGG100CoopPlan3Biomedicalflag) { 
        var ENGG100CoopPlan3Biomedicalelement = document.getElementById("ENGG100CoopPlan3Biomedical");
        ENGG100CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG100CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!ENGG299CoopPlan3Biomedicalflag) { 
        var ENGG299CoopPlan3Biomedicalelement = document.getElementById("ENGG299CoopPlan3Biomedical");
        ENGG299CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG299CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!MECE200CoopPlan3Biomedicalflag) { 
        var MECE200CoopPlan3Biomedicalelement = document.getElementById("MECE200CoopPlan3Biomedical");
        MECE200CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        MECE200CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!WKEXP902CoopPlan3Biomedicalflag) { 
        var WKEXP902CoopPlan3Biomedicalelement = document.getElementById("WKEXP902CoopPlan3Biomedical");
        WKEXP902CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP902CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!WKEXP903CoopPlan3Biomedicalflag) { 
        var WKEXP903CoopPlan3Biomedicalelement = document.getElementById("WKEXP903CoopPlan3Biomedical");
        WKEXP903CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP903CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!ENGG404CoopPlan3Biomedicalflag) { 
        var ENGG404CoopPlan3Biomedicalelement = document.getElementById("ENGG404CoopPlan3Biomedical");
        ENGG404CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG404CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!WKEXP904CoopPlan3Biomedicalflag) { 
        var WKEXP904CoopPlan3Biomedicalelement = document.getElementById("WKEXP904CoopPlan3Biomedical");
        WKEXP904CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP904CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!WKEXP905CoopPlan3Biomedicalflag) { 
        var WKEXP905CoopPlan3Biomedicalelement = document.getElementById("WKEXP905CoopPlan3Biomedical");
        WKEXP905CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP905CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!ENGG400CoopPlan3Biomedicalflag) { 
        var ENGG400CoopPlan3Biomedicalelement = document.getElementById("ENGG400CoopPlan3Biomedical");
        ENGG400CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG400CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
+ } 
        break;
       case "CoopPlan4":
+if (!ENGG100CoopPlan4flag) { 
        var ENGG100CoopPlan4element = document.getElementById("ENGG100CoopPlan4");
        ENGG100CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG100CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!ENGG299CoopPlan4flag) { 
        var ENGG299CoopPlan4element = document.getElementById("ENGG299CoopPlan4");
        ENGG299CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG299CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!MECE200CoopPlan4flag) { 
        var MECE200CoopPlan4element = document.getElementById("MECE200CoopPlan4");
        MECE200CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        MECE200CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!WKEXP901CoopPlan4flag) { 
        var WKEXP901CoopPlan4element = document.getElementById("WKEXP901CoopPlan4");
        WKEXP901CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP901CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!WKEXP902CoopPlan4flag) { 
        var WKEXP902CoopPlan4element = document.getElementById("WKEXP902CoopPlan4");
        WKEXP902CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP902CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!WKEXP903CoopPlan4flag) { 
        var WKEXP903CoopPlan4element = document.getElementById("WKEXP903CoopPlan4");
        WKEXP903CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP903CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!WKEXP904CoopPlan4flag) { 
        var WKEXP904CoopPlan4element = document.getElementById("WKEXP904CoopPlan4");
        WKEXP904CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP904CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!WKEXP905CoopPlan4flag) { 
        var WKEXP905CoopPlan4element = document.getElementById("WKEXP905CoopPlan4");
        WKEXP905CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        WKEXP905CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!ENGG404CoopPlan4flag) { 
        var ENGG404CoopPlan4element = document.getElementById("ENGG404CoopPlan4");
        ENGG404CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG404CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
+ } 
+if (!ENGG400CoopPlan4flag) { 
        var ENGG400CoopPlan4element = document.getElementById("ENGG400CoopPlan4");
        ENGG400CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
        ENGG400CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
+ } 
        break;
        }
       break;
   case "Other":
     switch(planName) {
       case "TraditionalPlan":
+if (!ENGL199TraditionalPlanflag) { 
        var ENGL199TraditionalPlanelement = document.getElementById("ENGL199TraditionalPlan");
        ENGL199TraditionalPlanelement.classList.remove("Other-highlighted");
        ENGL199TraditionalPlanelement.classList.add("Other");
+ } 
+if (!ENGM310TraditionalPlanflag) { 
        var ENGM310TraditionalPlanelement = document.getElementById("ENGM310TraditionalPlan");
        ENGM310TraditionalPlanelement.classList.remove("Other-highlighted");
        ENGM310TraditionalPlanelement.classList.add("Other");
+ } 
+if (!ENGM401TraditionalPlanflag) { 
        var ENGM401TraditionalPlanelement = document.getElementById("ENGM401TraditionalPlan");
        ENGM401TraditionalPlanelement.classList.remove("Other-highlighted");
        ENGM401TraditionalPlanelement.classList.add("Other");
+ } 
        break;
       case "AlternatePlan":
+if (!ENGL199AlternatePlanflag) { 
        var ENGL199AlternatePlanelement = document.getElementById("ENGL199AlternatePlan");
        ENGL199AlternatePlanelement.classList.remove("Other-highlighted");
        ENGL199AlternatePlanelement.classList.add("Other");
+ } 
+if (!ENGM310AlternatePlanflag) { 
        var ENGM310AlternatePlanelement = document.getElementById("ENGM310AlternatePlan");
        ENGM310AlternatePlanelement.classList.remove("Other-highlighted");
        ENGM310AlternatePlanelement.classList.add("Other");
+ } 
+if (!ENGM401AlternatePlanflag) { 
        var ENGM401AlternatePlanelement = document.getElementById("ENGM401AlternatePlan");
        ENGM401AlternatePlanelement.classList.remove("Other-highlighted");
        ENGM401AlternatePlanelement.classList.add("Other");
+ } 
        break;
       case "CoopPlan1":
+if (!ENGL199CoopPlan1flag) { 
        var ENGL199CoopPlan1element = document.getElementById("ENGL199CoopPlan1");
        ENGL199CoopPlan1element.classList.remove("Other-highlighted");
        ENGL199CoopPlan1element.classList.add("Other");
+ } 
+if (!ENGM310CoopPlan1flag) { 
        var ENGM310CoopPlan1element = document.getElementById("ENGM310CoopPlan1");
        ENGM310CoopPlan1element.classList.remove("Other-highlighted");
        ENGM310CoopPlan1element.classList.add("Other");
+ } 
+if (!ENGM401CoopPlan1flag) { 
        var ENGM401CoopPlan1element = document.getElementById("ENGM401CoopPlan1");
        ENGM401CoopPlan1element.classList.remove("Other-highlighted");
        ENGM401CoopPlan1element.classList.add("Other");
+ } 
        break;
       case "CoopPlan2":
+if (!ENGL199CoopPlan2flag) { 
        var ENGL199CoopPlan2element = document.getElementById("ENGL199CoopPlan2");
        ENGL199CoopPlan2element.classList.remove("Other-highlighted");
        ENGL199CoopPlan2element.classList.add("Other");
+ } 
+if (!ENGM310CoopPlan2flag) { 
        var ENGM310CoopPlan2element = document.getElementById("ENGM310CoopPlan2");
        ENGM310CoopPlan2element.classList.remove("Other-highlighted");
        ENGM310CoopPlan2element.classList.add("Other");
+ } 
+if (!ENGM401CoopPlan2flag) { 
        var ENGM401CoopPlan2element = document.getElementById("ENGM401CoopPlan2");
        ENGM401CoopPlan2element.classList.remove("Other-highlighted");
        ENGM401CoopPlan2element.classList.add("Other");
+ } 
        break;
       case "CoopPlan3Biomedical":
+if (!ENGL199CoopPlan3Biomedicalflag) { 
        var ENGL199CoopPlan3Biomedicalelement = document.getElementById("ENGL199CoopPlan3Biomedical");
        ENGL199CoopPlan3Biomedicalelement.classList.remove("Other-highlighted");
        ENGL199CoopPlan3Biomedicalelement.classList.add("Other");
+ } 
+if (!ENGM310CoopPlan3Biomedicalflag) { 
        var ENGM310CoopPlan3Biomedicalelement = document.getElementById("ENGM310CoopPlan3Biomedical");
        ENGM310CoopPlan3Biomedicalelement.classList.remove("Other-highlighted");
        ENGM310CoopPlan3Biomedicalelement.classList.add("Other");
+ } 
+if (!ENGM401CoopPlan3Biomedicalflag) { 
        var ENGM401CoopPlan3Biomedicalelement = document.getElementById("ENGM401CoopPlan3Biomedical");
        ENGM401CoopPlan3Biomedicalelement.classList.remove("Other-highlighted");
        ENGM401CoopPlan3Biomedicalelement.classList.add("Other");
+ } 
        break;
       case "CoopPlan4":
+if (!ENGL199CoopPlan4flag) { 
        var ENGL199CoopPlan4element = document.getElementById("ENGL199CoopPlan4");
        ENGL199CoopPlan4element.classList.remove("Other-highlighted");
        ENGL199CoopPlan4element.classList.add("Other");
+ } 
+if (!ENGM310CoopPlan4flag) { 
        var ENGM310CoopPlan4element = document.getElementById("ENGM310CoopPlan4");
        ENGM310CoopPlan4element.classList.remove("Other-highlighted");
        ENGM310CoopPlan4element.classList.add("Other");
+ } 
+if (!ENGM401CoopPlan4flag) { 
        var ENGM401CoopPlan4element = document.getElementById("ENGM401CoopPlan4");
        ENGM401CoopPlan4element.classList.remove("Other-highlighted");
        ENGM401CoopPlan4element.classList.add("Other");
+ } 
        break;
        }
       break;
   case "MATH":
     switch(planName) {
       case "TraditionalPlan":
+if (!MATH100TraditionalPlanflag) { 
        var MATH100TraditionalPlanelement = document.getElementById("MATH100TraditionalPlan");
        MATH100TraditionalPlanelement.classList.remove("MATH-highlighted");
        MATH100TraditionalPlanelement.classList.add("MATH");
+ } 
+if (!MATH101TraditionalPlanflag) { 
        var MATH101TraditionalPlanelement = document.getElementById("MATH101TraditionalPlan");
        MATH101TraditionalPlanelement.classList.remove("MATH-highlighted");
        MATH101TraditionalPlanelement.classList.add("MATH");
+ } 
+if (!MATH102TraditionalPlanflag) { 
        var MATH102TraditionalPlanelement = document.getElementById("MATH102TraditionalPlan");
        MATH102TraditionalPlanelement.classList.remove("MATH-highlighted");
        MATH102TraditionalPlanelement.classList.add("MATH");
+ } 
+if (!MATH209TraditionalPlanflag) { 
        var MATH209TraditionalPlanelement = document.getElementById("MATH209TraditionalPlan");
        MATH209TraditionalPlanelement.classList.remove("MATH-highlighted");
        MATH209TraditionalPlanelement.classList.add("MATH");
+ } 
+if (!STAT235TraditionalPlanflag) { 
        var STAT235TraditionalPlanelement = document.getElementById("STAT235TraditionalPlan");
        STAT235TraditionalPlanelement.classList.remove("MATH-highlighted");
        STAT235TraditionalPlanelement.classList.add("MATH");
+ } 
+if (!MATH201TraditionalPlanflag) { 
        var MATH201TraditionalPlanelement = document.getElementById("MATH201TraditionalPlan");
        MATH201TraditionalPlanelement.classList.remove("MATH-highlighted");
        MATH201TraditionalPlanelement.classList.add("MATH");
+ } 
+if (!MATH300TraditionalPlanflag) { 
        var MATH300TraditionalPlanelement = document.getElementById("MATH300TraditionalPlan");
        MATH300TraditionalPlanelement.classList.remove("MATH-highlighted");
        MATH300TraditionalPlanelement.classList.add("MATH");
+ } 
+if (!MECE390TraditionalPlanflag) { 
        var MECE390TraditionalPlanelement = document.getElementById("MECE390TraditionalPlan");
        MECE390TraditionalPlanelement.classList.remove("MATH-highlighted");
        MECE390TraditionalPlanelement.classList.add("MATH");
+ } 
        break;
       case "AlternatePlan":
+if (!MATH100AlternatePlanflag) { 
        var MATH100AlternatePlanelement = document.getElementById("MATH100AlternatePlan");
        MATH100AlternatePlanelement.classList.remove("MATH-highlighted");
        MATH100AlternatePlanelement.classList.add("MATH");
+ } 
+if (!MATH101AlternatePlanflag) { 
        var MATH101AlternatePlanelement = document.getElementById("MATH101AlternatePlan");
        MATH101AlternatePlanelement.classList.remove("MATH-highlighted");
        MATH101AlternatePlanelement.classList.add("MATH");
+ } 
+if (!MATH102AlternatePlanflag) { 
        var MATH102AlternatePlanelement = document.getElementById("MATH102AlternatePlan");
        MATH102AlternatePlanelement.classList.remove("MATH-highlighted");
        MATH102AlternatePlanelement.classList.add("MATH");
+ } 
+if (!MATH201AlternatePlanflag) { 
        var MATH201AlternatePlanelement = document.getElementById("MATH201AlternatePlan");
        MATH201AlternatePlanelement.classList.remove("MATH-highlighted");
        MATH201AlternatePlanelement.classList.add("MATH");
+ } 
+if (!MATH209AlternatePlanflag) { 
        var MATH209AlternatePlanelement = document.getElementById("MATH209AlternatePlan");
        MATH209AlternatePlanelement.classList.remove("MATH-highlighted");
        MATH209AlternatePlanelement.classList.add("MATH");
+ } 
+if (!STAT235AlternatePlanflag) { 
        var STAT235AlternatePlanelement = document.getElementById("STAT235AlternatePlan");
        STAT235AlternatePlanelement.classList.remove("MATH-highlighted");
        STAT235AlternatePlanelement.classList.add("MATH");
+ } 
+if (!MATH300AlternatePlanflag) { 
        var MATH300AlternatePlanelement = document.getElementById("MATH300AlternatePlan");
        MATH300AlternatePlanelement.classList.remove("MATH-highlighted");
        MATH300AlternatePlanelement.classList.add("MATH");
+ } 
+if (!MECE390AlternatePlanflag) { 
        var MECE390AlternatePlanelement = document.getElementById("MECE390AlternatePlan");
        MECE390AlternatePlanelement.classList.remove("MATH-highlighted");
        MECE390AlternatePlanelement.classList.add("MATH");
+ } 
        break;
       case "CoopPlan1":
+if (!MATH100CoopPlan1flag) { 
        var MATH100CoopPlan1element = document.getElementById("MATH100CoopPlan1");
        MATH100CoopPlan1element.classList.remove("MATH-highlighted");
        MATH100CoopPlan1element.classList.add("MATH");
+ } 
+if (!MATH101CoopPlan1flag) { 
        var MATH101CoopPlan1element = document.getElementById("MATH101CoopPlan1");
        MATH101CoopPlan1element.classList.remove("MATH-highlighted");
        MATH101CoopPlan1element.classList.add("MATH");
+ } 
+if (!MATH102CoopPlan1flag) { 
        var MATH102CoopPlan1element = document.getElementById("MATH102CoopPlan1");
        MATH102CoopPlan1element.classList.remove("MATH-highlighted");
        MATH102CoopPlan1element.classList.add("MATH");
+ } 
+if (!MATH209CoopPlan1flag) { 
        var MATH209CoopPlan1element = document.getElementById("MATH209CoopPlan1");
        MATH209CoopPlan1element.classList.remove("MATH-highlighted");
        MATH209CoopPlan1element.classList.add("MATH");
+ } 
+if (!STAT235CoopPlan1flag) { 
        var STAT235CoopPlan1element = document.getElementById("STAT235CoopPlan1");
        STAT235CoopPlan1element.classList.remove("MATH-highlighted");
        STAT235CoopPlan1element.classList.add("MATH");
+ } 
+if (!MATH201CoopPlan1flag) { 
        var MATH201CoopPlan1element = document.getElementById("MATH201CoopPlan1");
        MATH201CoopPlan1element.classList.remove("MATH-highlighted");
        MATH201CoopPlan1element.classList.add("MATH");
+ } 
+if (!MATH300CoopPlan1flag) { 
        var MATH300CoopPlan1element = document.getElementById("MATH300CoopPlan1");
        MATH300CoopPlan1element.classList.remove("MATH-highlighted");
        MATH300CoopPlan1element.classList.add("MATH");
+ } 
+if (!MECE390CoopPlan1flag) { 
        var MECE390CoopPlan1element = document.getElementById("MECE390CoopPlan1");
        MECE390CoopPlan1element.classList.remove("MATH-highlighted");
        MECE390CoopPlan1element.classList.add("MATH");
+ } 
        break;
       case "CoopPlan2":
+if (!MATH100CoopPlan2flag) { 
        var MATH100CoopPlan2element = document.getElementById("MATH100CoopPlan2");
        MATH100CoopPlan2element.classList.remove("MATH-highlighted");
        MATH100CoopPlan2element.classList.add("MATH");
+ } 
+if (!MATH101CoopPlan2flag) { 
        var MATH101CoopPlan2element = document.getElementById("MATH101CoopPlan2");
        MATH101CoopPlan2element.classList.remove("MATH-highlighted");
        MATH101CoopPlan2element.classList.add("MATH");
+ } 
+if (!MATH102CoopPlan2flag) { 
        var MATH102CoopPlan2element = document.getElementById("MATH102CoopPlan2");
        MATH102CoopPlan2element.classList.remove("MATH-highlighted");
        MATH102CoopPlan2element.classList.add("MATH");
+ } 
+if (!MATH209CoopPlan2flag) { 
        var MATH209CoopPlan2element = document.getElementById("MATH209CoopPlan2");
        MATH209CoopPlan2element.classList.remove("MATH-highlighted");
        MATH209CoopPlan2element.classList.add("MATH");
+ } 
+if (!STAT235CoopPlan2flag) { 
        var STAT235CoopPlan2element = document.getElementById("STAT235CoopPlan2");
        STAT235CoopPlan2element.classList.remove("MATH-highlighted");
        STAT235CoopPlan2element.classList.add("MATH");
+ } 
+if (!MATH201CoopPlan2flag) { 
        var MATH201CoopPlan2element = document.getElementById("MATH201CoopPlan2");
        MATH201CoopPlan2element.classList.remove("MATH-highlighted");
        MATH201CoopPlan2element.classList.add("MATH");
+ } 
+if (!MATH300CoopPlan2flag) { 
        var MATH300CoopPlan2element = document.getElementById("MATH300CoopPlan2");
        MATH300CoopPlan2element.classList.remove("MATH-highlighted");
        MATH300CoopPlan2element.classList.add("MATH");
+ } 
+if (!MECE390CoopPlan2flag) { 
        var MECE390CoopPlan2element = document.getElementById("MECE390CoopPlan2");
        MECE390CoopPlan2element.classList.remove("MATH-highlighted");
        MECE390CoopPlan2element.classList.add("MATH");
+ } 
        break;
       case "CoopPlan3Biomedical":
+if (!MATH100CoopPlan3Biomedicalflag) { 
        var MATH100CoopPlan3Biomedicalelement = document.getElementById("MATH100CoopPlan3Biomedical");
        MATH100CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
        MATH100CoopPlan3Biomedicalelement.classList.add("MATH");
+ } 
+if (!MATH101CoopPlan3Biomedicalflag) { 
        var MATH101CoopPlan3Biomedicalelement = document.getElementById("MATH101CoopPlan3Biomedical");
        MATH101CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
        MATH101CoopPlan3Biomedicalelement.classList.add("MATH");
+ } 
+if (!MATH102CoopPlan3Biomedicalflag) { 
        var MATH102CoopPlan3Biomedicalelement = document.getElementById("MATH102CoopPlan3Biomedical");
        MATH102CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
        MATH102CoopPlan3Biomedicalelement.classList.add("MATH");
+ } 
+if (!MATH209CoopPlan3Biomedicalflag) { 
        var MATH209CoopPlan3Biomedicalelement = document.getElementById("MATH209CoopPlan3Biomedical");
        MATH209CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
        MATH209CoopPlan3Biomedicalelement.classList.add("MATH");
+ } 
+if (!STAT235CoopPlan3Biomedicalflag) { 
        var STAT235CoopPlan3Biomedicalelement = document.getElementById("STAT235CoopPlan3Biomedical");
        STAT235CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
        STAT235CoopPlan3Biomedicalelement.classList.add("MATH");
+ } 
+if (!MATH201CoopPlan3Biomedicalflag) { 
        var MATH201CoopPlan3Biomedicalelement = document.getElementById("MATH201CoopPlan3Biomedical");
        MATH201CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
        MATH201CoopPlan3Biomedicalelement.classList.add("MATH");
+ } 
+if (!MECE390CoopPlan3Biomedicalflag) { 
        var MECE390CoopPlan3Biomedicalelement = document.getElementById("MECE390CoopPlan3Biomedical");
        MECE390CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
        MECE390CoopPlan3Biomedicalelement.classList.add("MATH");
+ } 
+if (!MATH300CoopPlan3Biomedicalflag) { 
        var MATH300CoopPlan3Biomedicalelement = document.getElementById("MATH300CoopPlan3Biomedical");
        MATH300CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
        MATH300CoopPlan3Biomedicalelement.classList.add("MATH");
+ } 
        break;
       case "CoopPlan4":
+if (!MATH100CoopPlan4flag) { 
        var MATH100CoopPlan4element = document.getElementById("MATH100CoopPlan4");
        MATH100CoopPlan4element.classList.remove("MATH-highlighted");
        MATH100CoopPlan4element.classList.add("MATH");
+ } 
+if (!MATH101CoopPlan4flag) { 
        var MATH101CoopPlan4element = document.getElementById("MATH101CoopPlan4");
        MATH101CoopPlan4element.classList.remove("MATH-highlighted");
        MATH101CoopPlan4element.classList.add("MATH");
+ } 
+if (!MATH102CoopPlan4flag) { 
        var MATH102CoopPlan4element = document.getElementById("MATH102CoopPlan4");
        MATH102CoopPlan4element.classList.remove("MATH-highlighted");
        MATH102CoopPlan4element.classList.add("MATH");
+ } 
+if (!MATH209CoopPlan4flag) { 
        var MATH209CoopPlan4element = document.getElementById("MATH209CoopPlan4");
        MATH209CoopPlan4element.classList.remove("MATH-highlighted");
        MATH209CoopPlan4element.classList.add("MATH");
+ } 
+if (!STAT235CoopPlan4flag) { 
        var STAT235CoopPlan4element = document.getElementById("STAT235CoopPlan4");
        STAT235CoopPlan4element.classList.remove("MATH-highlighted");
        STAT235CoopPlan4element.classList.add("MATH");
+ } 
+if (!MATH201CoopPlan4flag) { 
        var MATH201CoopPlan4element = document.getElementById("MATH201CoopPlan4");
        MATH201CoopPlan4element.classList.remove("MATH-highlighted");
        MATH201CoopPlan4element.classList.add("MATH");
+ } 
+if (!MATH300CoopPlan4flag) { 
        var MATH300CoopPlan4element = document.getElementById("MATH300CoopPlan4");
        MATH300CoopPlan4element.classList.remove("MATH-highlighted");
        MATH300CoopPlan4element.classList.add("MATH");
+ } 
+if (!MECE390CoopPlan4flag) { 
        var MECE390CoopPlan4element = document.getElementById("MECE390CoopPlan4");
        MECE390CoopPlan4element.classList.remove("MATH-highlighted");
        MECE390CoopPlan4element.classList.add("MATH");
+ } 
        break;
        }
       break;
   case "ENGINEERINGDESIGN":
     switch(planName) {
       case "TraditionalPlan":
+if (!ENGG160TraditionalPlanflag) { 
        var ENGG160TraditionalPlanelement = document.getElementById("ENGG160TraditionalPlan");
        ENGG160TraditionalPlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        ENGG160TraditionalPlanelement.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE260TraditionalPlanflag) { 
        var MECE260TraditionalPlanelement = document.getElementById("MECE260TraditionalPlan");
        MECE260TraditionalPlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE260TraditionalPlanelement.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE265TraditionalPlanflag) { 
        var MECE265TraditionalPlanelement = document.getElementById("MECE265TraditionalPlan");
        MECE265TraditionalPlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE265TraditionalPlanelement.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE360TraditionalPlanflag) { 
        var MECE360TraditionalPlanelement = document.getElementById("MECE360TraditionalPlan");
        MECE360TraditionalPlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE360TraditionalPlanelement.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE362TraditionalPlanflag) { 
        var MECE362TraditionalPlanelement = document.getElementById("MECE362TraditionalPlan");
        MECE362TraditionalPlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE362TraditionalPlanelement.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE460TraditionalPlanflag) { 
        var MECE460TraditionalPlanelement = document.getElementById("MECE460TraditionalPlan");
        MECE460TraditionalPlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE460TraditionalPlanelement.classList.add("ENGINEERINGDESIGN");
+ } 
        break;
       case "AlternatePlan":
+if (!ENGG160AlternatePlanflag) { 
        var ENGG160AlternatePlanelement = document.getElementById("ENGG160AlternatePlan");
        ENGG160AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        ENGG160AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE260AlternatePlanflag) { 
        var MECE260AlternatePlanelement = document.getElementById("MECE260AlternatePlan");
        MECE260AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE260AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE265AlternatePlanflag) { 
        var MECE265AlternatePlanelement = document.getElementById("MECE265AlternatePlan");
        MECE265AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE265AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE360AlternatePlanflag) { 
        var MECE360AlternatePlanelement = document.getElementById("MECE360AlternatePlan");
        MECE360AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE360AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE362AlternatePlanflag) { 
        var MECE362AlternatePlanelement = document.getElementById("MECE362AlternatePlan");
        MECE362AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE362AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE460AlternatePlanflag) { 
        var MECE460AlternatePlanelement = document.getElementById("MECE460AlternatePlan");
        MECE460AlternatePlanelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE460AlternatePlanelement.classList.add("ENGINEERINGDESIGN");
+ } 
        break;
       case "CoopPlan1":
+if (!ENGG160CoopPlan1flag) { 
        var ENGG160CoopPlan1element = document.getElementById("ENGG160CoopPlan1");
        ENGG160CoopPlan1element.classList.remove("ENGINEERINGDESIGN-highlighted");
        ENGG160CoopPlan1element.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE260CoopPlan1flag) { 
        var MECE260CoopPlan1element = document.getElementById("MECE260CoopPlan1");
        MECE260CoopPlan1element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE260CoopPlan1element.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE265CoopPlan1flag) { 
        var MECE265CoopPlan1element = document.getElementById("MECE265CoopPlan1");
        MECE265CoopPlan1element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE265CoopPlan1element.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE360CoopPlan1flag) { 
        var MECE360CoopPlan1element = document.getElementById("MECE360CoopPlan1");
        MECE360CoopPlan1element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE360CoopPlan1element.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE362CoopPlan1flag) { 
        var MECE362CoopPlan1element = document.getElementById("MECE362CoopPlan1");
        MECE362CoopPlan1element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE362CoopPlan1element.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE460CoopPlan1flag) { 
        var MECE460CoopPlan1element = document.getElementById("MECE460CoopPlan1");
        MECE460CoopPlan1element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE460CoopPlan1element.classList.add("ENGINEERINGDESIGN");
+ } 
        break;
       case "CoopPlan2":
+if (!ENGG160CoopPlan2flag) { 
        var ENGG160CoopPlan2element = document.getElementById("ENGG160CoopPlan2");
        ENGG160CoopPlan2element.classList.remove("ENGINEERINGDESIGN-highlighted");
        ENGG160CoopPlan2element.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE260CoopPlan2flag) { 
        var MECE260CoopPlan2element = document.getElementById("MECE260CoopPlan2");
        MECE260CoopPlan2element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE260CoopPlan2element.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE265CoopPlan2flag) { 
        var MECE265CoopPlan2element = document.getElementById("MECE265CoopPlan2");
        MECE265CoopPlan2element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE265CoopPlan2element.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE360CoopPlan2flag) { 
        var MECE360CoopPlan2element = document.getElementById("MECE360CoopPlan2");
        MECE360CoopPlan2element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE360CoopPlan2element.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE362CoopPlan2flag) { 
        var MECE362CoopPlan2element = document.getElementById("MECE362CoopPlan2");
        MECE362CoopPlan2element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE362CoopPlan2element.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE460CoopPlan2flag) { 
        var MECE460CoopPlan2element = document.getElementById("MECE460CoopPlan2");
        MECE460CoopPlan2element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE460CoopPlan2element.classList.add("ENGINEERINGDESIGN");
+ } 
        break;
       case "CoopPlan3Biomedical":
+if (!ENGG160CoopPlan3Biomedicalflag) { 
        var ENGG160CoopPlan3Biomedicalelement = document.getElementById("ENGG160CoopPlan3Biomedical");
        ENGG160CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        ENGG160CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE260CoopPlan3Biomedicalflag) { 
        var MECE260CoopPlan3Biomedicalelement = document.getElementById("MECE260CoopPlan3Biomedical");
        MECE260CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE260CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE265CoopPlan3Biomedicalflag) { 
        var MECE265CoopPlan3Biomedicalelement = document.getElementById("MECE265CoopPlan3Biomedical");
        MECE265CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE265CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE360CoopPlan3Biomedicalflag) { 
        var MECE360CoopPlan3Biomedicalelement = document.getElementById("MECE360CoopPlan3Biomedical");
        MECE360CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE360CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE362CoopPlan3Biomedicalflag) { 
        var MECE362CoopPlan3Biomedicalelement = document.getElementById("MECE362CoopPlan3Biomedical");
        MECE362CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE362CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE460CoopPlan3Biomedicalflag) { 
        var MECE460CoopPlan3Biomedicalelement = document.getElementById("MECE460CoopPlan3Biomedical");
        MECE460CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE460CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN");
+ } 
        break;
       case "CoopPlan4":
+if (!ENGG160CoopPlan4flag) { 
        var ENGG160CoopPlan4element = document.getElementById("ENGG160CoopPlan4");
        ENGG160CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
        ENGG160CoopPlan4element.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE260CoopPlan4flag) { 
        var MECE260CoopPlan4element = document.getElementById("MECE260CoopPlan4");
        MECE260CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE260CoopPlan4element.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE265CoopPlan4flag) { 
        var MECE265CoopPlan4element = document.getElementById("MECE265CoopPlan4");
        MECE265CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE265CoopPlan4element.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE360CoopPlan4flag) { 
        var MECE360CoopPlan4element = document.getElementById("MECE360CoopPlan4");
        MECE360CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE360CoopPlan4element.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE362CoopPlan4flag) { 
        var MECE362CoopPlan4element = document.getElementById("MECE362CoopPlan4");
        MECE362CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE362CoopPlan4element.classList.add("ENGINEERINGDESIGN");
+ } 
+if (!MECE460CoopPlan4flag) { 
        var MECE460CoopPlan4element = document.getElementById("MECE460CoopPlan4");
        MECE460CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
        MECE460CoopPlan4element.classList.add("ENGINEERINGDESIGN");
+ } 
        break;
        }
       break;
   case "ENGINEERINGSCIENCES":
     switch(planName) {
       case "TraditionalPlan":
+if (!CIVE270TraditionalPlanflag) { 
        var CIVE270TraditionalPlanelement = document.getElementById("CIVE270TraditionalPlan");
        CIVE270TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CIVE270TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!CHE243TraditionalPlanflag) { 
        var CHE243TraditionalPlanelement = document.getElementById("CHE243TraditionalPlan");
        CHE243TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE243TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE250TraditionalPlanflag) { 
        var MECE250TraditionalPlanelement = document.getElementById("MECE250TraditionalPlan");
        MECE250TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE250TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!ECE209TraditionalPlanflag) { 
        var ECE209TraditionalPlanelement = document.getElementById("ECE209TraditionalPlan");
        ECE209TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        ECE209TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MATE202TraditionalPlanflag) { 
        var MATE202TraditionalPlanelement = document.getElementById("MATE202TraditionalPlan");
        MATE202TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MATE202TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE230TraditionalPlanflag) { 
        var MECE230TraditionalPlanelement = document.getElementById("MECE230TraditionalPlan");
        MECE230TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE230TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE300TraditionalPlanflag) { 
        var MECE300TraditionalPlanelement = document.getElementById("MECE300TraditionalPlan");
        MECE300TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE300TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE301TraditionalPlanflag) { 
        var MECE301TraditionalPlanelement = document.getElementById("MECE301TraditionalPlan");
        MECE301TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE301TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE331TraditionalPlanflag) { 
        var MECE331TraditionalPlanelement = document.getElementById("MECE331TraditionalPlan");
        MECE331TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE331TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE371TraditionalPlanflag) { 
        var MECE371TraditionalPlanelement = document.getElementById("MECE371TraditionalPlan");
        MECE371TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE371TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE380TraditionalPlanflag) { 
        var MECE380TraditionalPlanelement = document.getElementById("MECE380TraditionalPlan");
        MECE380TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE380TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE340TraditionalPlanflag) { 
        var MECE340TraditionalPlanelement = document.getElementById("MECE340TraditionalPlan");
        MECE340TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE340TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE430TraditionalPlanflag) { 
        var MECE430TraditionalPlanelement = document.getElementById("MECE430TraditionalPlan");
        MECE430TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE430TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE480TraditionalPlanflag) { 
        var MECE480TraditionalPlanelement = document.getElementById("MECE480TraditionalPlan");
        MECE480TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE480TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE463TraditionalPlanflag) { 
        var MECE463TraditionalPlanelement = document.getElementById("MECE463TraditionalPlan");
        MECE463TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE463TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!CHE448TraditionalPlanflag) { 
        var CHE448TraditionalPlanelement = document.getElementById("CHE448TraditionalPlan");
        CHE448TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE448TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE420TraditionalPlanflag) { 
        var MECE420TraditionalPlanelement = document.getElementById("MECE420TraditionalPlan");
        MECE420TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE420TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE403TraditionalPlanflag) { 
        var MECE403TraditionalPlanelement = document.getElementById("MECE403TraditionalPlan");
        MECE403TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE403TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE451TraditionalPlanflag) { 
        var MECE451TraditionalPlanelement = document.getElementById("MECE451TraditionalPlan");
        MECE451TraditionalPlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE451TraditionalPlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
        break;
       case "AlternatePlan":
+if (!CIVE270AlternatePlanflag) { 
        var CIVE270AlternatePlanelement = document.getElementById("CIVE270AlternatePlan");
        CIVE270AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CIVE270AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE230AlternatePlanflag) { 
        var MECE230AlternatePlanelement = document.getElementById("MECE230AlternatePlan");
        MECE230AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE230AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!CHE243AlternatePlanflag) { 
        var CHE243AlternatePlanelement = document.getElementById("CHE243AlternatePlan");
        CHE243AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE243AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!ECE209AlternatePlanflag) { 
        var ECE209AlternatePlanelement = document.getElementById("ECE209AlternatePlan");
        ECE209AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        ECE209AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MATE202AlternatePlanflag) { 
        var MATE202AlternatePlanelement = document.getElementById("MATE202AlternatePlan");
        MATE202AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MATE202AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE250AlternatePlanflag) { 
        var MECE250AlternatePlanelement = document.getElementById("MECE250AlternatePlan");
        MECE250AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE250AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE300AlternatePlanflag) { 
        var MECE300AlternatePlanelement = document.getElementById("MECE300AlternatePlan");
        MECE300AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE300AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE301AlternatePlanflag) { 
        var MECE301AlternatePlanelement = document.getElementById("MECE301AlternatePlan");
        MECE301AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE301AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE331AlternatePlanflag) { 
        var MECE331AlternatePlanelement = document.getElementById("MECE331AlternatePlan");
        MECE331AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE331AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE371AlternatePlanflag) { 
        var MECE371AlternatePlanelement = document.getElementById("MECE371AlternatePlan");
        MECE371AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE371AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE380AlternatePlanflag) { 
        var MECE380AlternatePlanelement = document.getElementById("MECE380AlternatePlan");
        MECE380AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE380AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE340AlternatePlanflag) { 
        var MECE340AlternatePlanelement = document.getElementById("MECE340AlternatePlan");
        MECE340AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE340AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE430AlternatePlanflag) { 
        var MECE430AlternatePlanelement = document.getElementById("MECE430AlternatePlan");
        MECE430AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE430AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE480AlternatePlanflag) { 
        var MECE480AlternatePlanelement = document.getElementById("MECE480AlternatePlan");
        MECE480AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE480AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE463AlternatePlanflag) { 
        var MECE463AlternatePlanelement = document.getElementById("MECE463AlternatePlan");
        MECE463AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE463AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!CHE448AlternatePlanflag) { 
        var CHE448AlternatePlanelement = document.getElementById("CHE448AlternatePlan");
        CHE448AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE448AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE420AlternatePlanflag) { 
        var MECE420AlternatePlanelement = document.getElementById("MECE420AlternatePlan");
        MECE420AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE420AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE403AlternatePlanflag) { 
        var MECE403AlternatePlanelement = document.getElementById("MECE403AlternatePlan");
        MECE403AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE403AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE451AlternatePlanflag) { 
        var MECE451AlternatePlanelement = document.getElementById("MECE451AlternatePlan");
        MECE451AlternatePlanelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE451AlternatePlanelement.classList.add("ENGINEERINGSCIENCES");
+ } 
        break;
       case "CoopPlan1":
+if (!CIVE270CoopPlan1flag) { 
        var CIVE270CoopPlan1element = document.getElementById("CIVE270CoopPlan1");
        CIVE270CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CIVE270CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE230CoopPlan1flag) { 
        var MECE230CoopPlan1element = document.getElementById("MECE230CoopPlan1");
        MECE230CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE230CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!CHE243CoopPlan1flag) { 
        var CHE243CoopPlan1element = document.getElementById("CHE243CoopPlan1");
        CHE243CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE243CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!ECE209CoopPlan1flag) { 
        var ECE209CoopPlan1element = document.getElementById("ECE209CoopPlan1");
        ECE209CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        ECE209CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MATE202CoopPlan1flag) { 
        var MATE202CoopPlan1element = document.getElementById("MATE202CoopPlan1");
        MATE202CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MATE202CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE250CoopPlan1flag) { 
        var MECE250CoopPlan1element = document.getElementById("MECE250CoopPlan1");
        MECE250CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE250CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE300CoopPlan1flag) { 
        var MECE300CoopPlan1element = document.getElementById("MECE300CoopPlan1");
        MECE300CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE300CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE301CoopPlan1flag) { 
        var MECE301CoopPlan1element = document.getElementById("MECE301CoopPlan1");
        MECE301CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE301CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE331CoopPlan1flag) { 
        var MECE331CoopPlan1element = document.getElementById("MECE331CoopPlan1");
        MECE331CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE331CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE371CoopPlan1flag) { 
        var MECE371CoopPlan1element = document.getElementById("MECE371CoopPlan1");
        MECE371CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE371CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE380CoopPlan1flag) { 
        var MECE380CoopPlan1element = document.getElementById("MECE380CoopPlan1");
        MECE380CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE380CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE340CoopPlan1flag) { 
        var MECE340CoopPlan1element = document.getElementById("MECE340CoopPlan1");
        MECE340CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE340CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE430CoopPlan1flag) { 
        var MECE430CoopPlan1element = document.getElementById("MECE430CoopPlan1");
        MECE430CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE430CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE480CoopPlan1flag) { 
        var MECE480CoopPlan1element = document.getElementById("MECE480CoopPlan1");
        MECE480CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE480CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE463CoopPlan1flag) { 
        var MECE463CoopPlan1element = document.getElementById("MECE463CoopPlan1");
        MECE463CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE463CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!CHE448CoopPlan1flag) { 
        var CHE448CoopPlan1element = document.getElementById("CHE448CoopPlan1");
        CHE448CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE448CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE420CoopPlan1flag) { 
        var MECE420CoopPlan1element = document.getElementById("MECE420CoopPlan1");
        MECE420CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE420CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE403CoopPlan1flag) { 
        var MECE403CoopPlan1element = document.getElementById("MECE403CoopPlan1");
        MECE403CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE403CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE451CoopPlan1flag) { 
        var MECE451CoopPlan1element = document.getElementById("MECE451CoopPlan1");
        MECE451CoopPlan1element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE451CoopPlan1element.classList.add("ENGINEERINGSCIENCES");
+ } 
        break;
       case "CoopPlan2":
+if (!CHE243CoopPlan2flag) { 
        var CHE243CoopPlan2element = document.getElementById("CHE243CoopPlan2");
        CHE243CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE243CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!CIVE270CoopPlan2flag) { 
        var CIVE270CoopPlan2element = document.getElementById("CIVE270CoopPlan2");
        CIVE270CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CIVE270CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE250CoopPlan2flag) { 
        var MECE250CoopPlan2element = document.getElementById("MECE250CoopPlan2");
        MECE250CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE250CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!ECE209CoopPlan2flag) { 
        var ECE209CoopPlan2element = document.getElementById("ECE209CoopPlan2");
        ECE209CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        ECE209CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MATE202CoopPlan2flag) { 
        var MATE202CoopPlan2element = document.getElementById("MATE202CoopPlan2");
        MATE202CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MATE202CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE230CoopPlan2flag) { 
        var MECE230CoopPlan2element = document.getElementById("MECE230CoopPlan2");
        MECE230CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE230CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE300CoopPlan2flag) { 
        var MECE300CoopPlan2element = document.getElementById("MECE300CoopPlan2");
        MECE300CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE300CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE301CoopPlan2flag) { 
        var MECE301CoopPlan2element = document.getElementById("MECE301CoopPlan2");
        MECE301CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE301CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE331CoopPlan2flag) { 
        var MECE331CoopPlan2element = document.getElementById("MECE331CoopPlan2");
        MECE331CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE331CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE371CoopPlan2flag) { 
        var MECE371CoopPlan2element = document.getElementById("MECE371CoopPlan2");
        MECE371CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE371CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE380CoopPlan2flag) { 
        var MECE380CoopPlan2element = document.getElementById("MECE380CoopPlan2");
        MECE380CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE380CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE340CoopPlan2flag) { 
        var MECE340CoopPlan2element = document.getElementById("MECE340CoopPlan2");
        MECE340CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE340CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE403CoopPlan2flag) { 
        var MECE403CoopPlan2element = document.getElementById("MECE403CoopPlan2");
        MECE403CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE403CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE451CoopPlan2flag) { 
        var MECE451CoopPlan2element = document.getElementById("MECE451CoopPlan2");
        MECE451CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE451CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!CHE448CoopPlan2flag) { 
        var CHE448CoopPlan2element = document.getElementById("CHE448CoopPlan2");
        CHE448CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE448CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE420CoopPlan2flag) { 
        var MECE420CoopPlan2element = document.getElementById("MECE420CoopPlan2");
        MECE420CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE420CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE430CoopPlan2flag) { 
        var MECE430CoopPlan2element = document.getElementById("MECE430CoopPlan2");
        MECE430CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE430CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE480CoopPlan2flag) { 
        var MECE480CoopPlan2element = document.getElementById("MECE480CoopPlan2");
        MECE480CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE480CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE463CoopPlan2flag) { 
        var MECE463CoopPlan2element = document.getElementById("MECE463CoopPlan2");
        MECE463CoopPlan2element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE463CoopPlan2element.classList.add("ENGINEERINGSCIENCES");
+ } 
        break;
       case "CoopPlan3Biomedical":
+if (!CIVE270CoopPlan3Biomedicalflag) { 
        var CIVE270CoopPlan3Biomedicalelement = document.getElementById("CIVE270CoopPlan3Biomedical");
        CIVE270CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CIVE270CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!CHE243CoopPlan3Biomedicalflag) { 
        var CHE243CoopPlan3Biomedicalelement = document.getElementById("CHE243CoopPlan3Biomedical");
        CHE243CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE243CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE250CoopPlan3Biomedicalflag) { 
        var MECE250CoopPlan3Biomedicalelement = document.getElementById("MECE250CoopPlan3Biomedical");
        MECE250CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE250CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!ECE209CoopPlan3Biomedicalflag) { 
        var ECE209CoopPlan3Biomedicalelement = document.getElementById("ECE209CoopPlan3Biomedical");
        ECE209CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        ECE209CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MATE202CoopPlan3Biomedicalflag) { 
        var MATE202CoopPlan3Biomedicalelement = document.getElementById("MATE202CoopPlan3Biomedical");
        MATE202CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MATE202CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE230CoopPlan3Biomedicalflag) { 
        var MECE230CoopPlan3Biomedicalelement = document.getElementById("MECE230CoopPlan3Biomedical");
        MECE230CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE230CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE340CoopPlan3Biomedicalflag) { 
        var MECE340CoopPlan3Biomedicalelement = document.getElementById("MECE340CoopPlan3Biomedical");
        MECE340CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE340CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE300CoopPlan3Biomedicalflag) { 
        var MECE300CoopPlan3Biomedicalelement = document.getElementById("MECE300CoopPlan3Biomedical");
        MECE300CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE300CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE301CoopPlan3Biomedicalflag) { 
        var MECE301CoopPlan3Biomedicalelement = document.getElementById("MECE301CoopPlan3Biomedical");
        MECE301CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE301CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE331CoopPlan3Biomedicalflag) { 
        var MECE331CoopPlan3Biomedicalelement = document.getElementById("MECE331CoopPlan3Biomedical");
        MECE331CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE331CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE371CoopPlan3Biomedicalflag) { 
        var MECE371CoopPlan3Biomedicalelement = document.getElementById("MECE371CoopPlan3Biomedical");
        MECE371CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE371CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE380CoopPlan3Biomedicalflag) { 
        var MECE380CoopPlan3Biomedicalelement = document.getElementById("MECE380CoopPlan3Biomedical");
        MECE380CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE380CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE430CoopPlan3Biomedicalflag) { 
        var MECE430CoopPlan3Biomedicalelement = document.getElementById("MECE430CoopPlan3Biomedical");
        MECE430CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE430CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE463CoopPlan3Biomedicalflag) { 
        var MECE463CoopPlan3Biomedicalelement = document.getElementById("MECE463CoopPlan3Biomedical");
        MECE463CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE463CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!CHE448CoopPlan3Biomedicalflag) { 
        var CHE448CoopPlan3Biomedicalelement = document.getElementById("CHE448CoopPlan3Biomedical");
        CHE448CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE448CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE420CoopPlan3Biomedicalflag) { 
        var MECE420CoopPlan3Biomedicalelement = document.getElementById("MECE420CoopPlan3Biomedical");
        MECE420CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE420CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE403CoopPlan3Biomedicalflag) { 
        var MECE403CoopPlan3Biomedicalelement = document.getElementById("MECE403CoopPlan3Biomedical");
        MECE403CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE403CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE451CoopPlan3Biomedicalflag) { 
        var MECE451CoopPlan3Biomedicalelement = document.getElementById("MECE451CoopPlan3Biomedical");
        MECE451CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE451CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
+ } 
        break;
       case "CoopPlan4":
+if (!CIVE270CoopPlan4flag) { 
        var CIVE270CoopPlan4element = document.getElementById("CIVE270CoopPlan4");
        CIVE270CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CIVE270CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE230CoopPlan4flag) { 
        var MECE230CoopPlan4element = document.getElementById("MECE230CoopPlan4");
        MECE230CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE230CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!ECE209CoopPlan4flag) { 
        var ECE209CoopPlan4element = document.getElementById("ECE209CoopPlan4");
        ECE209CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        ECE209CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!CHE243CoopPlan4flag) { 
        var CHE243CoopPlan4element = document.getElementById("CHE243CoopPlan4");
        CHE243CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE243CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MATE202CoopPlan4flag) { 
        var MATE202CoopPlan4element = document.getElementById("MATE202CoopPlan4");
        MATE202CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MATE202CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE250CoopPlan4flag) { 
        var MECE250CoopPlan4element = document.getElementById("MECE250CoopPlan4");
        MECE250CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE250CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE300CoopPlan4flag) { 
        var MECE300CoopPlan4element = document.getElementById("MECE300CoopPlan4");
        MECE300CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE300CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE301CoopPlan4flag) { 
        var MECE301CoopPlan4element = document.getElementById("MECE301CoopPlan4");
        MECE301CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE301CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE331CoopPlan4flag) { 
        var MECE331CoopPlan4element = document.getElementById("MECE331CoopPlan4");
        MECE331CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE331CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE371CoopPlan4flag) { 
        var MECE371CoopPlan4element = document.getElementById("MECE371CoopPlan4");
        MECE371CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE371CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE380CoopPlan4flag) { 
        var MECE380CoopPlan4element = document.getElementById("MECE380CoopPlan4");
        MECE380CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE380CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE340CoopPlan4flag) { 
        var MECE340CoopPlan4element = document.getElementById("MECE340CoopPlan4");
        MECE340CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE340CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE430CoopPlan4flag) { 
        var MECE430CoopPlan4element = document.getElementById("MECE430CoopPlan4");
        MECE430CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE430CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE480CoopPlan4flag) { 
        var MECE480CoopPlan4element = document.getElementById("MECE480CoopPlan4");
        MECE480CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE480CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE463CoopPlan4flag) { 
        var MECE463CoopPlan4element = document.getElementById("MECE463CoopPlan4");
        MECE463CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE463CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!CHE448CoopPlan4flag) { 
        var CHE448CoopPlan4element = document.getElementById("CHE448CoopPlan4");
        CHE448CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        CHE448CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE420CoopPlan4flag) { 
        var MECE420CoopPlan4element = document.getElementById("MECE420CoopPlan4");
        MECE420CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE420CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE403CoopPlan4flag) { 
        var MECE403CoopPlan4element = document.getElementById("MECE403CoopPlan4");
        MECE403CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE403CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
+ } 
+if (!MECE451CoopPlan4flag) { 
        var MECE451CoopPlan4element = document.getElementById("MECE451CoopPlan4");
        MECE451CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
        MECE451CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
+ } 
        break;
        }
       break;
   case "ComplementaryElective":
     switch(planName) {
       case "TraditionalPlan":
-       var ComplementaryElectiveTraditionalPlanelement = document.getElementById("ComplementaryElectiveTraditionalPlan");
-       ComplementaryElectiveTraditionalPlanelement.classList.remove("ComplementaryElective-highlighted");
-       ComplementaryElectiveTraditionalPlanelement.classList.add("ComplementaryElective");
+        var COMPelements = document.getElementsByClassName("COMP-highlighted");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP-highlighted");
+          currelement.classList.add("COMP");
+        }
        break;
       case "AlternatePlan":
-       var ComplementaryElectiveAlternatePlanelement = document.getElementById("ComplementaryElectiveAlternatePlan");
-       ComplementaryElectiveAlternatePlanelement.classList.remove("ComplementaryElective-highlighted");
-       ComplementaryElectiveAlternatePlanelement.classList.add("ComplementaryElective");
+        var COMPelements = document.getElementsByClassName("COMP-highlighted");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP-highlighted");
+          currelement.classList.add("COMP");
+        }
        break;
       case "CoopPlan1":
-       var ComplementaryElectiveCoopPlan1element = document.getElementById("ComplementaryElectiveCoopPlan1");
-       ComplementaryElectiveCoopPlan1element.classList.remove("ComplementaryElective-highlighted");
-       ComplementaryElectiveCoopPlan1element.classList.add("ComplementaryElective");
+        var COMPelements = document.getElementsByClassName("COMP-highlighted");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP-highlighted");
+          currelement.classList.add("COMP");
+        }
        break;
       case "CoopPlan2":
-       var ComplementaryElectiveCoopPlan2element = document.getElementById("ComplementaryElectiveCoopPlan2");
-       ComplementaryElectiveCoopPlan2element.classList.remove("ComplementaryElective-highlighted");
-       ComplementaryElectiveCoopPlan2element.classList.add("ComplementaryElective");
+        var COMPelements = document.getElementsByClassName("COMP-highlighted");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP-highlighted");
+          currelement.classList.add("COMP");
+        }
        break;
       case "CoopPlan3Biomedical":
-       var ComplementaryElectiveCoopPlan3Biomedicalelement = document.getElementById("ComplementaryElectiveCoopPlan3Biomedical");
-       ComplementaryElectiveCoopPlan3Biomedicalelement.classList.remove("ComplementaryElective-highlighted");
-       ComplementaryElectiveCoopPlan3Biomedicalelement.classList.add("ComplementaryElective");
+        var COMPelements = document.getElementsByClassName("COMP-highlighted");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP-highlighted");
+          currelement.classList.add("COMP");
+        }
        break;
       case "CoopPlan4":
-       var ComplementaryElectiveCoopPlan4element = document.getElementById("ComplementaryElectiveCoopPlan4");
-       ComplementaryElectiveCoopPlan4element.classList.remove("ComplementaryElective-highlighted");
-       ComplementaryElectiveCoopPlan4element.classList.add("ComplementaryElective");
+        var COMPelements = document.getElementsByClassName("COMP-highlighted");
+        for (let i = 0; i < COMPelements.length; i++) {
+          var currelement = document.getElementById(COMPelements.item(i).id);
+          currelement.classList.remove("COMP-highlighted");
+          currelement.classList.add("COMP");
+        }
        break;
        }
       break;
   case "ProgramTechnicalElective":
     switch(planName) {
       case "TraditionalPlan":
-       var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveTraditionalPlanelement = document.getElementById("ProgramTechnicalElectiveTraditionalPlan");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveTraditionalPlanelement.classList.add("ProgramTechnicalElective");
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
        break;
       case "AlternatePlan":
-       var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveAlternatePlanelement = document.getElementById("ProgramTechnicalElectiveAlternatePlan");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveAlternatePlanelement.classList.add("ProgramTechnicalElective");
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
        break;
       case "CoopPlan1":
-       var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
-       ProgramTechnicalElectiveCoopPlan1element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan1element.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
-       ProgramTechnicalElectiveCoopPlan1element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan1element.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
-       ProgramTechnicalElectiveCoopPlan1element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan1element.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan1element = document.getElementById("ProgramTechnicalElectiveCoopPlan1");
-       ProgramTechnicalElectiveCoopPlan1element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan1element.classList.add("ProgramTechnicalElective");
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
        break;
       case "CoopPlan2":
-       var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
-       ProgramTechnicalElectiveCoopPlan2element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan2element.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
-       ProgramTechnicalElectiveCoopPlan2element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan2element.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
-       ProgramTechnicalElectiveCoopPlan2element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan2element.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan2element = document.getElementById("ProgramTechnicalElectiveCoopPlan2");
-       ProgramTechnicalElectiveCoopPlan2element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan2element.classList.add("ProgramTechnicalElective");
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
        break;
       case "CoopPlan3Biomedical":
-       var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan3Biomedicalelement = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan3Biomedicalelement.classList.add("ProgramTechnicalElective");
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
        break;
       case "CoopPlan4":
-       var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
-       ProgramTechnicalElectiveCoopPlan4element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan4element.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
-       ProgramTechnicalElectiveCoopPlan4element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan4element.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
-       ProgramTechnicalElectiveCoopPlan4element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan4element.classList.add("ProgramTechnicalElective");
-       var ProgramTechnicalElectiveCoopPlan4element = document.getElementById("ProgramTechnicalElectiveCoopPlan4");
-       ProgramTechnicalElectiveCoopPlan4element.classList.remove("ProgramTechnicalElective-highlighted");
-       ProgramTechnicalElectiveCoopPlan4element.classList.add("ProgramTechnicalElective");
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
+        var PROGelements = document.getElementsByClassName("PROG-highlighted");
+        for (let i = 0; i < PROGelements.length; i++) {
+          var currelement = document.getElementById(PROGelements.item(i).id);
+          currelement.classList.remove("PROG-highlighted");
+          currelement.classList.add("PROG");
+        }
        break;
        }
       break;
   case "ITSElective":
     switch(planName) {
       case "TraditionalPlan":
-       var ITSElectiveTraditionalPlanelement = document.getElementById("ITSElectiveTraditionalPlan");
-       ITSElectiveTraditionalPlanelement.classList.remove("ITSElective-highlighted");
-       ITSElectiveTraditionalPlanelement.classList.add("ITSElective");
+        var ITSelements = document.getElementsByClassName("ITS-highlighted");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS-highlighted");
+          currelement.classList.add("ITS");
+        }
        break;
       case "AlternatePlan":
-       var ITSElectiveAlternatePlanelement = document.getElementById("ITSElectiveAlternatePlan");
-       ITSElectiveAlternatePlanelement.classList.remove("ITSElective-highlighted");
-       ITSElectiveAlternatePlanelement.classList.add("ITSElective");
+        var ITSelements = document.getElementsByClassName("ITS-highlighted");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS-highlighted");
+          currelement.classList.add("ITS");
+        }
        break;
       case "CoopPlan1":
-       var ITSElectiveCoopPlan1element = document.getElementById("ITSElectiveCoopPlan1");
-       ITSElectiveCoopPlan1element.classList.remove("ITSElective-highlighted");
-       ITSElectiveCoopPlan1element.classList.add("ITSElective");
+        var ITSelements = document.getElementsByClassName("ITS-highlighted");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS-highlighted");
+          currelement.classList.add("ITS");
+        }
        break;
       case "CoopPlan2":
-       var ITSElectiveCoopPlan2element = document.getElementById("ITSElectiveCoopPlan2");
-       ITSElectiveCoopPlan2element.classList.remove("ITSElective-highlighted");
-       ITSElectiveCoopPlan2element.classList.add("ITSElective");
+        var ITSelements = document.getElementsByClassName("ITS-highlighted");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS-highlighted");
+          currelement.classList.add("ITS");
+        }
        break;
       case "CoopPlan3Biomedical":
-       var ITSElectiveCoopPlan3Biomedicalelement = document.getElementById("ITSElectiveCoopPlan3Biomedical");
-       ITSElectiveCoopPlan3Biomedicalelement.classList.remove("ITSElective-highlighted");
-       ITSElectiveCoopPlan3Biomedicalelement.classList.add("ITSElective");
+        var ITSelements = document.getElementsByClassName("ITS-highlighted");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS-highlighted");
+          currelement.classList.add("ITS");
+        }
        break;
       case "CoopPlan4":
-       var ITSElectiveCoopPlan4element = document.getElementById("ITSElectiveCoopPlan4");
-       ITSElectiveCoopPlan4element.classList.remove("ITSElective-highlighted");
-       ITSElectiveCoopPlan4element.classList.add("ITSElective");
+        var ITSelements = document.getElementsByClassName("ITS-highlighted");
+        for (let i = 0; i < ITSelements.length; i++) {
+          var currelement = document.getElementById(ITSelements.item(i).id);
+          currelement.classList.remove("ITS-highlighted");
+          currelement.classList.add("ITS");
+        }
        break;
        }
       break;
   case "":
     switch(planName) {
       case "CoopPlan3Biomedical":
+if (!BME320CoopPlan3Biomedicalflag) { 
        var BME320CoopPlan3Biomedicalelement = document.getElementById("BME320CoopPlan3Biomedical");
        BME320CoopPlan3Biomedicalelement.classList.remove("-highlighted");
        BME320CoopPlan3Biomedicalelement.classList.add("");
+ } 
+if (!BME321CoopPlan3Biomedicalflag) { 
        var BME321CoopPlan3Biomedicalelement = document.getElementById("BME321CoopPlan3Biomedical");
        BME321CoopPlan3Biomedicalelement.classList.remove("-highlighted");
        BME321CoopPlan3Biomedicalelement.classList.add("");
+ } 
+if (!MECE563CoopPlan3Biomedicalflag) { 
        var MECE563CoopPlan3Biomedicalelement = document.getElementById("MECE563CoopPlan3Biomedical");
        MECE563CoopPlan3Biomedicalelement.classList.remove("-highlighted");
        MECE563CoopPlan3Biomedicalelement.classList.add("");
+ } 
+if (!STAT337CoopPlan3Biomedicalflag) { 
        var STAT337CoopPlan3Biomedicalelement = document.getElementById("STAT337CoopPlan3Biomedical");
        STAT337CoopPlan3Biomedicalelement.classList.remove("-highlighted");
        STAT337CoopPlan3Biomedicalelement.classList.add("");
+ } 
+if (!MECE485CoopPlan3Biomedicalflag) { 
        var MECE485CoopPlan3Biomedicalelement = document.getElementById("MECE485CoopPlan3Biomedical");
        MECE485CoopPlan3Biomedicalelement.classList.remove("-highlighted");
        MECE485CoopPlan3Biomedicalelement.classList.add("");
+ } 
+if (!PHIL386CoopPlan3Biomedicalflag) { 
        var PHIL386CoopPlan3Biomedicalelement = document.getElementById("PHIL386CoopPlan3Biomedical");
        PHIL386CoopPlan3Biomedicalelement.classList.remove("-highlighted");
        PHIL386CoopPlan3Biomedicalelement.classList.add("");
+ } 
        break;
        }
       break;
