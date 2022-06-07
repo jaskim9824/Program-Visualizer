@@ -26,17 +26,48 @@ def switchTitle(titleTag, deptName):
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   soup - soup object, used to create HTML tags
 def placeRadioInputs(formTag, sequenceDict, soup):
+    currentPlan = ""
     for plan in sequenceDict:
-        radioInput = soup.new_tag("input", attrs={"type":"radio", 
+        if "{" in plan or "}" in plan:
+            cleanedPlanName = plan[0:plan.find("{")].strip()
+            if currentPlan != cleanedPlanName: 
+                if currentPlan != "":
+                    breakTag = soup.new_tag("br")
+                    formTag.append(breakTag)
+                currentPlan = cleanedPlanName
+                dropdownMenu = soup.new_tag("div", attrs={"class":"dropdown"})
+                dropdownContent = soup.new_tag("div", attrs={"class":"dropdown-content"})
+                labelTag = soup.new_tag("label") 
+                labelTag.append(cleanedPlanName)
+                dropdownMenu.append(labelTag)
+                dropdownMenu.append(dropdownContent)
+                formTag.append(dropdownMenu)
+            subPlanName = plan[plan.find("{")+1:plan.find("}")]
+            radioInput = soup.new_tag("input", attrs={"type":"radio", 
                                                   "name":"planselector", 
                                                   "ng-model":"selectedPlan",
                                                   "value": cleaner.cleanString(plan)})
-        labelTag = soup.new_tag("label", attrs={"for":cleaner.cleanString(plan)})
-        breakTag = soup.new_tag("br")
-        labelTag.append(plan)
-        formTag.append(radioInput)
-        formTag.append(labelTag)
-        formTag.append(breakTag)
+            labelTag = soup.new_tag("label", attrs={"for":cleaner.cleanString(plan)})
+            labelTag.append(subPlanName)
+            dropdownContent.append(radioInput)
+            dropdownContent.append(labelTag)
+            breakTag = soup.new_tag("br")
+            dropdownContent.append(breakTag)
+        else:
+            if currentPlan != "":
+                breakTag = soup.new_tag("br")
+                formTag.append(breakTag)
+                currentPlan = ""
+            radioInput = soup.new_tag("input", attrs={"type":"radio", 
+                                                  "name":"planselector", 
+                                                  "ng-model":"selectedPlan",
+                                                  "value": cleaner.cleanString(plan)})
+            labelTag = soup.new_tag("label", attrs={"for":cleaner.cleanString(plan)})
+            labelTag.append(plan)
+            formTag.append(radioInput)
+            formTag.append(labelTag)
+            breakTag = soup.new_tag("br")
+            formTag.append(breakTag)
 
 
 # Places the legend for the categories of courses (math, basic sciences, design, etc.)
@@ -81,7 +112,6 @@ def placeLegend(legendTag, categoryDict, soup):
 #   controller - file handle for controller.js, used to write to controller.js
 #   lineManager - line manager object, used to handle line placement and generation
 def placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager):
-
     for plan in sequenceDict:
         switchInput = soup.new_tag("div", attrs={"id":cleaner.cleanString(plan),
                                                  "ng-switch-when":cleaner.cleanString(plan),
