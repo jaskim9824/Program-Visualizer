@@ -346,6 +346,7 @@ switch(categoryName) {{ \n"""
     controller.write(switchEndString)
 
     # same as above but for deselecting a course category
+    formattedIfStatement = "if (!{courseName}{planName}flag) {{ \n"
     controller.write(formattedFunctionStatement.format(functionName="unhighlightCategory"))
     for category in categoriesDict:
         controller.write(formattedCaseCat.format(categoryName=cleaner.cleanString(category)))
@@ -365,9 +366,12 @@ switch(categoryName) {{ \n"""
                     controller.write(formattedElectiveGetHighlightedElement.format(electiveName="ITS"))
                     controller.write(formattedElectivesUnhighlight.format(electiveName="ITS"))
                     continue
+                controller.write(formattedIfStatement.format(planName=cleaner.cleanString(plan), 
+                                                             courseName=cleaner.cleanString(course.name)))
                 controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name)))
                 controller.write(formattedRemoveClicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
                 controller.write(formattedAddToUnclicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
+                controller.write(" } \n")
             controller.write("""       break;\n""")
         controller.write("""       }\n""")
         controller.write("""      break;\n""")
