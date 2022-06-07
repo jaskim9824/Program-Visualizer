@@ -104,7 +104,7 @@ header {
 }
 
 /* at 500px align header left when the screen is 500px wide or less*/
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 840px) {
     .header a {
         float: none;
         display: block;
