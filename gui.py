@@ -1,13 +1,17 @@
-# Authors: Jason Kim, Moaz Abdelmonem, Zachary Schmidt
+# Author: Moaz Abdelmonem
+# Collaborators: Jason Kim, Zachary Schmidt
 # Oversight: Dr. David Nobes
 # University of Alberta, Summer 2022, Curriculum Development Co-op Term
 
-# This file is the main script for the generation of the program 
-# visualizer. When run, it will parse Excel files containing course
-# and plan information to generate progamatically an interactive program 
-# diagram in the output directory
 
-# Dependencies: bs4, parsing, javascriptgen, htmlgen, linegen
+# This file is the main script for the generation of the program
+# visualizer. When run, it will generate a Graphical User Interface (GUI)
+# which will alow user to insert all necessary excel files.
+# the file will parse the provided Excel files containing course
+# and plan information to generate progamatically an interactive program
+# diagram in the output directory.
+
+# Dependencies: bs4, parsing, javascriptgen, htmlgen, linegen, tkinter
 
 from statistics import mode
 import tkinter
