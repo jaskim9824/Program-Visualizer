@@ -92,7 +92,7 @@ header {
 .legendbutton-pressed {
     text-align: center;
     padding: 6px;
-    border: 2px solid red;
+    border: 2px solid white;
     position: relative;
     top: 5px;
     margin: 5px;
