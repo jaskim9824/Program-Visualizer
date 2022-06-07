@@ -16,10 +16,10 @@ The webpage allows users to switch between the different program sequences as di
 ![planswitchinganimation](https://user-images.githubusercontent.com/60327441/171229118-bd8b6ac5-c27f-46ab-b607-6da859731733.gif)
 
 
-The project, in its current state, consists of a Python script `main.py`. The Python script reads
-Excel files containing course and program information along with a template HTML file (`template.html`) 
+The project, in its current state, consists of a Python script `main.py`, which depend on the modules located in the `modules` directory. The Python script reads
+Excel files located in the same directory as the script (.xls files, note that .xlsx files will not work) containing course and program information along with a template HTML file (`template.html`) 
 and produces an resultant HTML (`index.html`) in the `output` directory alongside the needed
-Javascript files (`index.js` and `controller.js`) in `output/js.` The output directory contains the
+Javascript files (`index.js` and `controller.js`) in `output/js`, and the needed CSS files (`category.css`) in `output/styles`. The output directory contains the
 files needed to be uploaded to the web server alongside with the webpage.
 
 This project is initially designed for only MEC E programs at the University of Alberta, 
