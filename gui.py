@@ -9,6 +9,8 @@
 
 # Dependencies: bs4, parsing, javascriptgen, htmlgen, linegen
 
+from statistics import mode
+import tkinter
 from bs4 import BeautifulSoup
 import modules.parsing.categoriesparsing as categoriesparsing
 import modules.parsing.courseparsing as courseparsing
@@ -20,6 +22,7 @@ import modules.webgen.cssgen as cssgen
 from tkinter import *
 from tkinter import messagebox
 from tkinter import ttk
+from tkinter import filedialog
 
 
 # Debug function for cleanly printing contents of plan sequences
@@ -50,19 +53,33 @@ root.columnconfigure(1, weight=3)
 
 #course excel UI
 courses_excel = ttk.Entry(root, width=30, **entry_font)
+courses_excel.insert(tkinter.END, "")
 courses_excel.grid(row=0, column=2, **paddings)
 excelLabel = Label(root,text="Enter the Courses excel file (filename.xls):").grid(row=0, column=1, **paddings)
 
 #course category excel UI
 course_cat_excel = ttk.Entry(root, width=30, **entry_font)
+course_cat_excel.insert(tkinter.END, "")
 course_cat_excel.grid(row=1, column=2, **paddings)
 courseCat = Label(root, text="Enter Course Categories excel file (filename.xls):").grid(row=1, column=1,**paddings )
 
 #sequence excel UI
 seq_excel = ttk.Entry(root, width=30, **entry_font)
+seq_excel.insert(tkinter.END, "")
 seq_excel.grid(row=2, column=2, **paddings)
 seqLabel = Label(root, text="Enter course sequencing file (filename.xls):").grid(row=2, column=1, **paddings)
 
+def courseBrowse():
+    filename =filedialog.askopenfilename()
+    courses_excel.insert(tkinter.END, filename) 
+
+def catBrowse():
+    filename =filedialog.askopenfilename()
+    course_cat_excel.insert(tkinter.END, filename) 
+
+def seqBrowse():
+    filename =filedialog.askopenfilename()
+    seq_excel.insert(tkinter.END, filename) 
 
 # Main function   
 def main():
@@ -151,7 +168,15 @@ def main():
              ". The directory you are in does not have a directory named output.")
 
 
-        
+button_excel = ttk.Button(root, text="Browse", command=courseBrowse)
+button_excel.grid(row=0, column=3, **paddings)
+
+button_excel = ttk.Button(root, text="Browse", command=catBrowse)
+button_excel.grid(row=1, column=3, **paddings)
+
+button_excel = ttk.Button(root, text="Browse", command=seqBrowse)
+button_excel.grid(row=2, column=3, **paddings)
+
 button_main = ttk.Button(root, text="Generate website", command=main)
 button_main.grid(row=3, column=2, **paddings)
 
