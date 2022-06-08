@@ -4484,7 +4484,7 @@ switch(categoryName) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["COMPTraditionalPlan2A3A4A","COMP"]);
+          that.addToClicked(["ComplementaryElectiveTraditionalPlan2A3A4A0","COMP"]);
         }
        break;
       case "TraditionalPlan2A3A4B":
@@ -4493,7 +4493,7 @@ switch(categoryName) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["COMPTraditionalPlan2A3A4B","COMP"]);
+          that.addToClicked(["ComplementaryElectiveTraditionalPlan2A3A4B0","COMP"]);
         }
        break;
       case "TraditionalPlan2A3B4A":
@@ -4502,7 +4502,7 @@ switch(categoryName) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["COMPTraditionalPlan2A3B4A","COMP"]);
+          that.addToClicked(["ComplementaryElectiveTraditionalPlan2A3B4A0","COMP"]);
         }
        break;
       case "TraditionalPlan2A3B4B":
@@ -4511,7 +4511,7 @@ switch(categoryName) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["COMPTraditionalPlan2A3B4B","COMP"]);
+          that.addToClicked(["ComplementaryElectiveTraditionalPlan2A3B4B0","COMP"]);
         }
        break;
       case "TraditionalPlan2B3A4A":
@@ -4520,7 +4520,7 @@ switch(categoryName) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["COMPTraditionalPlan2B3A4A","COMP"]);
+          that.addToClicked(["ComplementaryElectiveTraditionalPlan2B3A4A0","COMP"]);
         }
        break;
       case "TraditionalPlan2B3A4B":
@@ -4529,7 +4529,7 @@ switch(categoryName) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["COMPTraditionalPlan2B3A4B","COMP"]);
+          that.addToClicked(["ComplementaryElectiveTraditionalPlan2B3A4B0","COMP"]);
         }
        break;
       case "TraditionalPlan2B3B4A":
@@ -4538,7 +4538,7 @@ switch(categoryName) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["COMPTraditionalPlan2B3B4A","COMP"]);
+          that.addToClicked(["ComplementaryElectiveTraditionalPlan2B3B4A0","COMP"]);
         }
        break;
       case "TraditionalPlan2B3B4B":
@@ -4547,7 +4547,7 @@ switch(categoryName) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["COMPTraditionalPlan2B3B4B","COMP"]);
+          that.addToClicked(["ComplementaryElectiveTraditionalPlan2B3B4B0","COMP"]);
         }
        break;
       case "AlternatePlan3A4A":
@@ -4556,7 +4556,7 @@ switch(categoryName) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["COMPAlternatePlan3A4A","COMP"]);
+          that.addToClicked(["ComplementaryElectiveAlternatePlan3A4A0","COMP"]);
         }
        break;
       case "CoopPlan13A":
@@ -4565,7 +4565,7 @@ switch(categoryName) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["COMPCoopPlan13A","COMP"]);
+          that.addToClicked(["ComplementaryElectiveCoopPlan13A0","COMP"]);
         }
        break;
       case "CoopPlan13B":
@@ -4574,7 +4574,7 @@ switch(categoryName) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["COMPCoopPlan13B","COMP"]);
+          that.addToClicked(["ComplementaryElectiveCoopPlan13B0","COMP"]);
         }
        break;
       case "CoopPlan2":
@@ -4583,7 +4583,7 @@ switch(categoryName) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["COMPCoopPlan2","COMP"]);
+          that.addToClicked(["ComplementaryElectiveCoopPlan20","COMP"]);
         }
        break;
       case "CoopPlan3Biomedical":
@@ -4592,7 +4592,7 @@ switch(categoryName) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["COMPCoopPlan3Biomedical","COMP"]);
+          that.addToClicked(["ComplementaryElectiveCoopPlan3Biomedical0","COMP"]);
         }
        break;
       case "CoopPlan4":
@@ -4601,7 +4601,7 @@ switch(categoryName) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["COMPCoopPlan4","COMP"]);
+          that.addToClicked(["ComplementaryElectiveCoopPlan40","COMP"]);
         }
        break;
        }
@@ -4614,28 +4614,28 @@ switch(categoryName) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2A3A4A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4A0","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2A3A4A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4A1","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2A3A4A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4A2","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2A3A4A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4A3","PROG"]);
         }
        break;
       case "TraditionalPlan2A3A4B":
@@ -4644,28 +4644,28 @@ switch(categoryName) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2A3A4B","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4B0","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2A3A4B","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4B1","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2A3A4B","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4B2","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2A3A4B","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4B3","PROG"]);
         }
        break;
       case "TraditionalPlan2A3B4A":
@@ -4674,28 +4674,28 @@ switch(categoryName) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2A3B4A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3B4A0","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2A3B4A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3B4A1","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2A3B4A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3B4A2","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2A3B4A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3B4A3","PROG"]);
         }
        break;
       case "TraditionalPlan2A3B4B":
@@ -4704,28 +4704,28 @@ switch(categoryName) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2A3B4B","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3B4B0","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2A3B4B","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3B4B1","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2A3B4B","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3B4B2","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2A3B4B","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3B4B3","PROG"]);
         }
        break;
       case "TraditionalPlan2B3A4A":
@@ -4734,28 +4734,28 @@ switch(categoryName) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2B3A4A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3A4A0","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2B3A4A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3A4A1","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2B3A4A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3A4A2","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2B3A4A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3A4A3","PROG"]);
         }
        break;
       case "TraditionalPlan2B3A4B":
@@ -4764,28 +4764,28 @@ switch(categoryName) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2B3A4B","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3A4B0","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2B3A4B","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3A4B1","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2B3A4B","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3A4B2","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2B3A4B","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3A4B3","PROG"]);
         }
        break;
       case "TraditionalPlan2B3B4A":
@@ -4794,28 +4794,28 @@ switch(categoryName) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2B3B4A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3B4A0","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2B3B4A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3B4A1","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2B3B4A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3B4A2","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2B3B4A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3B4A3","PROG"]);
         }
        break;
       case "TraditionalPlan2B3B4B":
@@ -4824,28 +4824,28 @@ switch(categoryName) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2B3B4B","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3B4B0","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2B3B4B","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3B4B1","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2B3B4B","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3B4B2","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGTraditionalPlan2B3B4B","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3B4B3","PROG"]);
         }
        break;
       case "AlternatePlan3A4A":
@@ -4854,28 +4854,28 @@ switch(categoryName) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGAlternatePlan3A4A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveAlternatePlan3A4A0","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGAlternatePlan3A4A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveAlternatePlan3A4A1","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGAlternatePlan3A4A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveAlternatePlan3A4A2","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGAlternatePlan3A4A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveAlternatePlan3A4A3","PROG"]);
         }
        break;
       case "CoopPlan13A":
@@ -4884,28 +4884,28 @@ switch(categoryName) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGCoopPlan13A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan13A0","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGCoopPlan13A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan13A1","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGCoopPlan13A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan13A2","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGCoopPlan13A","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan13A3","PROG"]);
         }
        break;
       case "CoopPlan13B":
@@ -4914,28 +4914,28 @@ switch(categoryName) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGCoopPlan13B","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan13B0","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGCoopPlan13B","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan13B1","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGCoopPlan13B","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan13B2","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGCoopPlan13B","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan13B3","PROG"]);
         }
        break;
       case "CoopPlan2":
@@ -4944,28 +4944,28 @@ switch(categoryName) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGCoopPlan2","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan20","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGCoopPlan2","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan21","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGCoopPlan2","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan22","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGCoopPlan2","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan23","PROG"]);
         }
        break;
       case "CoopPlan3Biomedical":
@@ -4974,21 +4974,21 @@ switch(categoryName) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGCoopPlan3Biomedical","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan3Biomedical0","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGCoopPlan3Biomedical","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan3Biomedical1","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGCoopPlan3Biomedical","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan3Biomedical2","PROG"]);
         }
        break;
       case "CoopPlan4":
@@ -4997,28 +4997,28 @@ switch(categoryName) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGCoopPlan4","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan40","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGCoopPlan4","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan41","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGCoopPlan4","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan42","PROG"]);
         }
         var PROGelements = document.getElementsByClassName("PROG");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["PROGCoopPlan4","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan43","PROG"]);
         }
        break;
        }
@@ -5031,7 +5031,7 @@ switch(categoryName) {
           var currelement = document.getElementById(ITSelements.item(i).id);
           currelement.classList.remove("ITS");
           currelement.classList.add("ITS-highlighted");
-          that.addToClicked(["ITSTraditionalPlan2A3A4A","ITS"]);
+          that.addToClicked(["ITSElectiveTraditionalPlan2A3A4A0","ITS"]);
         }
        break;
       case "AlternatePlan3A4A":
@@ -5040,7 +5040,7 @@ switch(categoryName) {
           var currelement = document.getElementById(ITSelements.item(i).id);
           currelement.classList.remove("ITS");
           currelement.classList.add("ITS-highlighted");
-          that.addToClicked(["ITSAlternatePlan3A4A","ITS"]);
+          that.addToClicked(["ITSElectiveAlternatePlan3A4A0","ITS"]);
         }
        break;
       case "CoopPlan13A":
@@ -5049,7 +5049,7 @@ switch(categoryName) {
           var currelement = document.getElementById(ITSelements.item(i).id);
           currelement.classList.remove("ITS");
           currelement.classList.add("ITS-highlighted");
-          that.addToClicked(["ITSCoopPlan13A","ITS"]);
+          that.addToClicked(["ITSElectiveCoopPlan13A0","ITS"]);
         }
        break;
       case "CoopPlan13B":
@@ -5058,7 +5058,7 @@ switch(categoryName) {
           var currelement = document.getElementById(ITSelements.item(i).id);
           currelement.classList.remove("ITS");
           currelement.classList.add("ITS-highlighted");
-          that.addToClicked(["ITSCoopPlan13B","ITS"]);
+          that.addToClicked(["ITSElectiveCoopPlan13B0","ITS"]);
         }
        break;
       case "CoopPlan2":
@@ -5067,7 +5067,7 @@ switch(categoryName) {
           var currelement = document.getElementById(ITSelements.item(i).id);
           currelement.classList.remove("ITS");
           currelement.classList.add("ITS-highlighted");
-          that.addToClicked(["ITSCoopPlan2","ITS"]);
+          that.addToClicked(["ITSElectiveCoopPlan20","ITS"]);
         }
        break;
       case "CoopPlan3Biomedical":
@@ -5076,7 +5076,7 @@ switch(categoryName) {
           var currelement = document.getElementById(ITSelements.item(i).id);
           currelement.classList.remove("ITS");
           currelement.classList.add("ITS-highlighted");
-          that.addToClicked(["ITSCoopPlan3Biomedical","ITS"]);
+          that.addToClicked(["ITSElectiveCoopPlan3Biomedical0","ITS"]);
         }
        break;
       case "CoopPlan4":
@@ -5085,7 +5085,7 @@ switch(categoryName) {
           var currelement = document.getElementById(ITSelements.item(i).id);
           currelement.classList.remove("ITS");
           currelement.classList.add("ITS-highlighted");
-          that.addToClicked(["ITSCoopPlan4","ITS"]);
+          that.addToClicked(["ITSElectiveCoopPlan40","ITS"]);
         }
        break;
        }
@@ -10030,7 +10030,7 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("COMPTraditionalPlan2A3A4A");
+          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2A3A4A0");
         }
        break;
       case "TraditionalPlan2A3A4B":
@@ -10039,7 +10039,7 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("COMPTraditionalPlan2A3A4B");
+          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2A3A4B0");
         }
        break;
       case "TraditionalPlan2A3B4A":
@@ -10048,7 +10048,7 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("COMPTraditionalPlan2A3B4A");
+          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2A3B4A0");
         }
        break;
       case "TraditionalPlan2A3B4B":
@@ -10057,7 +10057,7 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("COMPTraditionalPlan2A3B4B");
+          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2A3B4B0");
         }
        break;
       case "TraditionalPlan2B3A4A":
@@ -10066,7 +10066,7 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("COMPTraditionalPlan2B3A4A");
+          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2B3A4A0");
         }
        break;
       case "TraditionalPlan2B3A4B":
@@ -10075,7 +10075,7 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("COMPTraditionalPlan2B3A4B");
+          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2B3A4B0");
         }
        break;
       case "TraditionalPlan2B3B4A":
@@ -10084,7 +10084,7 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("COMPTraditionalPlan2B3B4A");
+          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2B3B4A0");
         }
        break;
       case "TraditionalPlan2B3B4B":
@@ -10093,7 +10093,7 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("COMPTraditionalPlan2B3B4B");
+          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2B3B4B0");
         }
        break;
       case "AlternatePlan3A4A":
@@ -10102,7 +10102,7 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("COMPAlternatePlan3A4A");
+          that.removeFromClicked("ComplementaryElectiveAlternatePlan3A4A0");
         }
        break;
       case "CoopPlan13A":
@@ -10111,7 +10111,7 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("COMPCoopPlan13A");
+          that.removeFromClicked("ComplementaryElectiveCoopPlan13A0");
         }
        break;
       case "CoopPlan13B":
@@ -10120,7 +10120,7 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("COMPCoopPlan13B");
+          that.removeFromClicked("ComplementaryElectiveCoopPlan13B0");
         }
        break;
       case "CoopPlan2":
@@ -10129,7 +10129,7 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("COMPCoopPlan2");
+          that.removeFromClicked("ComplementaryElectiveCoopPlan20");
         }
        break;
       case "CoopPlan3Biomedical":
@@ -10138,7 +10138,7 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("COMPCoopPlan3Biomedical");
+          that.removeFromClicked("ComplementaryElectiveCoopPlan3Biomedical0");
         }
        break;
       case "CoopPlan4":
@@ -10147,7 +10147,7 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(COMPelements.item(i).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("COMPCoopPlan4");
+          that.removeFromClicked("ComplementaryElectiveCoopPlan40");
         }
        break;
        }
@@ -10160,28 +10160,28 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2A3A4A");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4A0");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2A3A4A");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4A1");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2A3A4A");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4A2");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2A3A4A");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4A3");
         }
        break;
       case "TraditionalPlan2A3A4B":
@@ -10190,28 +10190,28 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2A3A4B");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4B0");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2A3A4B");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4B1");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2A3A4B");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4B2");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2A3A4B");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4B3");
         }
        break;
       case "TraditionalPlan2A3B4A":
@@ -10220,28 +10220,28 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2A3B4A");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3B4A0");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2A3B4A");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3B4A1");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2A3B4A");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3B4A2");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2A3B4A");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3B4A3");
         }
        break;
       case "TraditionalPlan2A3B4B":
@@ -10250,28 +10250,28 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2A3B4B");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3B4B0");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2A3B4B");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3B4B1");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2A3B4B");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3B4B2");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2A3B4B");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3B4B3");
         }
        break;
       case "TraditionalPlan2B3A4A":
@@ -10280,28 +10280,28 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2B3A4A");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3A4A0");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2B3A4A");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3A4A1");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2B3A4A");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3A4A2");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2B3A4A");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3A4A3");
         }
        break;
       case "TraditionalPlan2B3A4B":
@@ -10310,28 +10310,28 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2B3A4B");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3A4B0");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2B3A4B");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3A4B1");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2B3A4B");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3A4B2");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2B3A4B");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3A4B3");
         }
        break;
       case "TraditionalPlan2B3B4A":
@@ -10340,28 +10340,28 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2B3B4A");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3B4A0");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2B3B4A");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3B4A1");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2B3B4A");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3B4A2");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2B3B4A");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3B4A3");
         }
        break;
       case "TraditionalPlan2B3B4B":
@@ -10370,28 +10370,28 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2B3B4B");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3B4B0");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2B3B4B");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3B4B1");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2B3B4B");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3B4B2");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGTraditionalPlan2B3B4B");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3B4B3");
         }
        break;
       case "AlternatePlan3A4A":
@@ -10400,28 +10400,28 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGAlternatePlan3A4A");
+          that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan3A4A0");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGAlternatePlan3A4A");
+          that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan3A4A1");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGAlternatePlan3A4A");
+          that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan3A4A2");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGAlternatePlan3A4A");
+          that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan3A4A3");
         }
        break;
       case "CoopPlan13A":
@@ -10430,28 +10430,28 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGCoopPlan13A");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan13A0");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGCoopPlan13A");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan13A1");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGCoopPlan13A");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan13A2");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGCoopPlan13A");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan13A3");
         }
        break;
       case "CoopPlan13B":
@@ -10460,28 +10460,28 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGCoopPlan13B");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan13B0");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGCoopPlan13B");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan13B1");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGCoopPlan13B");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan13B2");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGCoopPlan13B");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan13B3");
         }
        break;
       case "CoopPlan2":
@@ -10490,28 +10490,28 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGCoopPlan2");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan20");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGCoopPlan2");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan21");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGCoopPlan2");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan22");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGCoopPlan2");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan23");
         }
        break;
       case "CoopPlan3Biomedical":
@@ -10520,21 +10520,21 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGCoopPlan3Biomedical");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan3Biomedical0");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGCoopPlan3Biomedical");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan3Biomedical1");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGCoopPlan3Biomedical");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan3Biomedical2");
         }
        break;
       case "CoopPlan4":
@@ -10543,28 +10543,28 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGCoopPlan4");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan40");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGCoopPlan4");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan41");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGCoopPlan4");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan42");
         }
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         for (let i = 0; i < PROGelements.length; i++) {
           var currelement = document.getElementById(PROGelements.item(i).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("PROGCoopPlan4");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan43");
         }
        break;
        }
@@ -10577,7 +10577,7 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(ITSelements.item(i).id);
           currelement.classList.remove("ITS-highlighted");
           currelement.classList.add("ITS");
-          that.removeFromClicked("ITSTraditionalPlan2A3A4A");
+          that.removeFromClicked("ITSElectiveTraditionalPlan2A3A4A0");
         }
        break;
       case "AlternatePlan3A4A":
@@ -10586,7 +10586,7 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(ITSelements.item(i).id);
           currelement.classList.remove("ITS-highlighted");
           currelement.classList.add("ITS");
-          that.removeFromClicked("ITSAlternatePlan3A4A");
+          that.removeFromClicked("ITSElectiveAlternatePlan3A4A0");
         }
        break;
       case "CoopPlan13A":
@@ -10595,7 +10595,7 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(ITSelements.item(i).id);
           currelement.classList.remove("ITS-highlighted");
           currelement.classList.add("ITS");
-          that.removeFromClicked("ITSCoopPlan13A");
+          that.removeFromClicked("ITSElectiveCoopPlan13A0");
         }
        break;
       case "CoopPlan13B":
@@ -10604,7 +10604,7 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(ITSelements.item(i).id);
           currelement.classList.remove("ITS-highlighted");
           currelement.classList.add("ITS");
-          that.removeFromClicked("ITSCoopPlan13B");
+          that.removeFromClicked("ITSElectiveCoopPlan13B0");
         }
        break;
       case "CoopPlan2":
@@ -10613,7 +10613,7 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(ITSelements.item(i).id);
           currelement.classList.remove("ITS-highlighted");
           currelement.classList.add("ITS");
-          that.removeFromClicked("ITSCoopPlan2");
+          that.removeFromClicked("ITSElectiveCoopPlan20");
         }
        break;
       case "CoopPlan3Biomedical":
@@ -10622,7 +10622,7 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(ITSelements.item(i).id);
           currelement.classList.remove("ITS-highlighted");
           currelement.classList.add("ITS");
-          that.removeFromClicked("ITSCoopPlan3Biomedical");
+          that.removeFromClicked("ITSElectiveCoopPlan3Biomedical0");
         }
        break;
       case "CoopPlan4":
@@ -10631,7 +10631,7 @@ if (!MECE451CoopPlan4flag) {
           var currelement = document.getElementById(ITSelements.item(i).id);
           currelement.classList.remove("ITS-highlighted");
           currelement.classList.add("ITS");
-          that.removeFromClicked("ITSCoopPlan4");
+          that.removeFromClicked("ITSElectiveCoopPlan40");
         }
        break;
        }
