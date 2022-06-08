@@ -1,5 +1,9 @@
 /*TO DO: adjust formatting of webpage */
 
+:root {
+    font-size: 100%;
+}
+
 /*body style*/
 body {
     margin: 0;
@@ -21,7 +25,6 @@ header {
     background-color: #275d38;
     margin-bottom: 10px;
     height: 4rem;
-    white-space: nowrap;
 }
 
 /* legend for line legend image */
@@ -131,7 +134,7 @@ header {
 .header a.site-title {
     font-size: 15px;
 }
-}  
+}
 
 #main {
     height: fit-content;

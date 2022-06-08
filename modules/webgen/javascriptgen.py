@@ -77,7 +77,7 @@ def generatePlanBasedBlocksController(controller, sequenceDict):
     generateHighlightCategory(sequenceDict, controller)
 
 # Function that generates the switch statements and functions which handle
-# disabling the lines of a plan when switched off
+# disabling the lines of a plan when switched off.
 # Parameters:
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   controller - file handle for controller.js file
@@ -101,34 +101,31 @@ def generateDisableSwitchStatement(sequenceDict, controller):
 
 
 # Function that generates the switch statements and functions which handle
-# enabling the lines of plan when switched on
+# enabling of course boxes, lines between plans, and boxes that were highlighted
+# from the legend.
 # Parameters:
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   controller - file handle for controller.js file
 def generateEnableSwitchStatement(sequenceDict, controller):
 
-    categoriesDict = sortIntoCategories(sequenceDict)
-    formattedbtnStatement = """  var currbtn = document.getElementById("{categoryName}");\n"""
-    formattedpushbtnStatement = """  that.{planName}LegendBtns.push(currbtn);\n"""
-    for category in categoriesDict:
-        if category == "ComplementaryElective":
-            controller.write(formattedbtnStatement.format(categoryName="COMP"))
-        elif category == "ProgramTechnicalElective":
-            controller.write(formattedbtnStatement.format(categoryName="PROG"))
-        elif category == "ITSElective":
-            controller.write(formattedbtnStatement.format(categoryName="ITS"))
-        else:
-            controller.write(formattedbtnStatement.format(categoryName=category))
+    categoriesDict = sortIntoCategories(sequenceDict)  # sort courses into categories
+    findLegendButtons(categoriesDict, controller)  # find legend buttons in the document, store them in a list
 
-        for plan in categoriesDict[category]:
-            controller.write(formattedpushbtnStatement.format(planName=plan))
+    formattedFunctionStatement = """this.{functionName} = function(plan) {{
+  switch(plan) {{\n"""
 
-    formattedFunctionStatement = """this.{functionName} = function(plan) {{\n"""
+    # layout: for each plan, show/display every course box in that plan,
+    # then adjust the webpage width and height, then (for loop #1) restore all courses
+    # that were clicked to their clicked state (highlighted with arrows drawn).
+    # For loop #2: Restore all courses that were highlighted with the legend buttons
+    # to their highlighted state and restore legend buttons to their pressed state.
     formattedSwitchStatement = """    case "{planName}": 
       for (let i = 0; i < this.{planName}List.length; i++) {{
           this.{planName}List[i][0].{actionName}(true);
       }}
-      height = this.{planName}MaxCourses*150 + 20;
+      width = this.{planName}Terms*220 + 25;
+      widthstr = width.toString() + "px";
+      height = this.{planName}MaxCourses*100 + 440;
       heightstr = height.toString() + "px";
       document.getElementById("main").style.height = heightstr;
       for (let i = 0; i < this.{planName}Clicked.length; i++) {{
@@ -153,17 +150,48 @@ def generateEnableSwitchStatement(sequenceDict, controller):
           }}
       }}
       break; \n"""
+
     switchEndString = """    default:
     console.log("shouldn't be here");
     }
 };\n"""
+
     controller.write(formattedFunctionStatement.format(functionName="enable"))
-    controller.write("""  switch(plan) {\n""")
     for plan in sequenceDict:
         controller.write(formattedSwitchStatement.format(planName=cleaner.cleanString(plan), 
                                                          actionName="show"))
-
     controller.write(switchEndString)
+
+# Finds all of the legend buttons in all categories & plans. Writes the js that
+# pushes these button elements to a list storing all buttons in that plan.
+# eg: TraditionalPlanLegendBtns is a list that holds all legend button elements in
+# the Traditional Plan
+# Parameters:
+#   categoriesDict - dict storing course objects
+#       key - category name (eg: MATH)
+#       value - dict with key as plan name, value as course object
+#   controller - file handle for controller.js file
+def findLegendButtons(categoriesDict, controller):
+    # find the button in the doc
+    formattedbtnStatement = """  var currbtn = document.getElementById("{categoryName}");\n"""
+    # push the button element to a list
+    formattedpushbtnStatement = """  that.{planName}LegendBtns.push(currbtn);\n"""
+
+    for category in categoriesDict:
+        # Only necessary to find button for each category (not each plan)
+        # Special cases to handle electives
+        if category == "ComplementaryElective":
+            controller.write(formattedbtnStatement.format(categoryName="COMP"))
+        elif category == "ProgramTechnicalElective":
+            controller.write(formattedbtnStatement.format(categoryName="PROG"))
+        elif category == "ITSElective":
+            controller.write(formattedbtnStatement.format(categoryName="ITS"))
+        else:
+            # not an elective
+            controller.write(formattedbtnStatement.format(categoryName=category))
+
+        for plan in categoriesDict[category]:
+            controller.write(formattedpushbtnStatement.format(planName=plan))
 
 # Function that generates the switch statement and function addLine
 # Parameters:
@@ -269,7 +297,9 @@ switch($scope.selectedPlan) {{ \n"""
 # Generates the clickable category legend. Allows a click to highlight all
 # courses in that category.
 # Parameters:
-#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
+#   sequenceDict - dict that stores course objects
+#       key - plan name
+#       value - dict with term name as key and list of course objs in that plan & term
 #   controller - file handle for controller.js file
 # Returns:
 #   None
@@ -360,6 +390,7 @@ switch(categoryName) {{ \n"""
         }}\n"""
 
     for category in categoriesDict:
+        # special cases to handle electives, category is not the same as ID
         if category == "ComplementaryElective":
             controller.write(formattedCategoriesListener.format(categoryName=category, categoryNameId="COMP"))
         elif category == "ProgramTechnicalElective":
@@ -367,7 +398,7 @@ switch(categoryName) {{ \n"""
         elif category == "ITSElective":
             controller.write(formattedCategoriesListener.format(categoryName=category, categoryNameId="ITS"))
         else:
-            # adding listener for each category
+            # not an elective
             controller.write(formattedCategoriesListener.format(categoryName=category, categoryNameId=category))
         controller.write("}\n")
 
@@ -379,10 +410,13 @@ switch(categoryName) {{ \n"""
         for plan in categoriesDict[category]:
             # inner switch between plans
             controller.write(formattedCasePlan.format(planName=cleaner.cleanString(plan)))
+            # elective ids include a number on the end, need to count and add this number to
+            # find use document.findById()
             compcounter = 0
             progcounter = 0
             itscounter = 0
             for course in categoriesDict[category][plan]:
+                # special cases to handle electives
                 if course.name == "Complementary Elective":
                     controller.write(formattedElectiveGetUnhighlightedElement.format(electiveName="COMP"))
                     controller.write(formattedElectivesHighlight.format(electiveName="COMP", count=compcounter, longElectiveName="ComplementaryElective", planName=plan, categoryName="COMP"))
@@ -398,6 +432,7 @@ switch(categoryName) {{ \n"""
                     controller.write(formattedElectivesHighlight.format(electiveName="ITS", count=itscounter, longElectiveName="ITSElective", planName=plan, categoryName="ITS"))
                     itscounter += 1
                     continue
+                # not an elective, fill formatted statement in with course attributes
                 controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name)))
                 controller.write(formattedRemoveUnclicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
                 controller.write(formattedAddToClicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
@@ -447,7 +482,15 @@ switch(categoryName) {{ \n"""
 
     controller.write(switchEndString)
 
-# Sorts courses in sequnceDict into their 
+# Sorts courses in sequnceDict into their categories.
+# Parameters:
+#   sequenceDict - dict that stores course objects
+#       key - plan name
+#       value - dict with term name as key and list of course objs in that plan & term
+# Returns:
+#   categoriesDict - dict storing course objects
+#       key - category name (eg: MATH)
+#       value - dict with key as plan name, value as course object
 def sortIntoCategories(sequenceDict):
     categoriesDict = {}  # outer dict
     for plan in sequenceDict:
