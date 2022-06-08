@@ -24,15 +24,22 @@ header {
     padding: 8px 8px;
     background-color: #275d38;
     margin-bottom: 10px;
-    height: 4rem;
+    height: 60px;
+}
+
+.linelegenddescription {
+    width: 25rem;
+    position: relative;
+    left: 12rem;
+    bottom: 42.5rem;
 }
 
 /* legend for line legend image */
-#linelegend {
+.linelegend {
     width: 275px;
     height: 150px;
     position: relative;
-    left: 10rem;
+    left: 12rem;
     bottom: 42rem;
     margin: 0;
 }
@@ -172,7 +179,7 @@ label {
     width:fit-content;
     height: fit-content;
     position: relative;
-    bottom: 36rem;
+    bottom: 39rem;
     right: 15px;
 }
 
