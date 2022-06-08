@@ -309,28 +309,31 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
                                                 "ng-click":courseID+"Listener()"})
             formatCourseDescriptionForRegular(soup, course, courseDisc)
 
-        courseHeader = soup.new_tag("h3", attrs={"class":"embed"})
+        courseHeader = soup.new_tag("h3", attrs={"class":"embed"})  # text appearing in course box (eg: CHEM 103)
         courseHeader.append(course.name)
 
         courseDiv.append(courseHeader)
         courseDiv.append(courseDisc)
 
         if course.calendar_print.lower().strip() == "or":
+            # This course is one of two options (eg: ENG M 310 or ENG M 401)
             if orCounter == 0:
-                firstCourseDiv = courseDiv 
+                # this first of two options
+                firstCourseDiv = courseDiv   # save the courseDiv which we access on the next iteration
                 orCounter += 1
                 controller.write("  var " + 
                          courseID +
                          "flag = false;\n")
                 continue
             else:
-                courseContDiv.append(firstCourseDiv)
+                # the second of two options
+                courseContDiv.append(firstCourseDiv)  # appending the first course option we saved from last iteration
                 courseOr = soup.new_tag("p", attrs={"class":"ortext"})
-                courseOr.append("OR")
+                courseOr.append("OR")  # add the word or between course boxes
                 courseContDiv.append(courseOr)
                 orCounter = 0
 
-        courseContDiv.append(courseDiv)
+        courseContDiv.append(courseDiv)  # append the seocnd course option
         termTag.append(courseContDiv)
         controller.write("  var " + 
                          courseID +

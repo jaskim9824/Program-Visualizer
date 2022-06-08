@@ -110,7 +110,8 @@ header {
 .legendbutton {
     text-align: center;
     padding: 8px;
-    box-shadow: 0px 5px 2px gray;
+    box-shadow: 0px 5px 2px #757575, inset 0px 2px 0px rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
     margin: 5px;
 }
 
@@ -118,6 +119,7 @@ header {
     text-align: center;
     padding: 6px;
     border: 2px solid white;
+    border-radius: 2px;
     position: relative;
     top: 5px;
     margin: 5px;
@@ -132,10 +134,11 @@ header {
         
     }
     .header img{
-    width: 19vw;
-    height: 6vh;
-    margin-right: 0;
-    float: left;
+        margin-right: 0;
+        float: left;
+        /* img needs to be re-aligned on narrow screens */
+        position: relative;
+        bottom: 10px;
     }
 
 .header a.site-title {
