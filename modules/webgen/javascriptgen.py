@@ -42,7 +42,7 @@ def generateIntitalBlockController(controller, sequenceDict):
             this.previousPlan = plan;
 };\n""")
 
-    controller.write("""var radios = document.querySelectorAll("input[type=radio][name=planselector");
+    controller.write("""var radios = document.querySelectorAll("input[type=radio][name=planselector]");
 Array.prototype.forEach.call(radios, function (radio) {
     radio.addEventListener("change", function () {
         that.render($scope.selectedPlan);
@@ -62,6 +62,12 @@ def generatePlanBasedBlocksController(controller, sequenceDict):
         controller.write("this." + cleaner.cleanString(plan) + "LegendBtnsClicked = [];\n")
         numterms = len(sequenceDict[plan].keys())
         controller.write("this." + cleaner.cleanString(plan) + "Terms = " + str(numterms) + ";\n")
+        maxcourses = 0
+        for term in sequenceDict[plan]:
+            termcourses = len(sequenceDict[plan][term])
+            if termcourses > maxcourses:
+                maxcourses = termcourses
+        controller.write("this." + cleaner.cleanString(plan) + "MaxCourses = " + str(maxcourses) + ";\n")
     generateDisableSwitchStatement(sequenceDict, controller)
     generateEnableSwitchStatement(sequenceDict, controller)
     generateAddLineSwitch(sequenceDict, controller)
@@ -122,10 +128,9 @@ def generateEnableSwitchStatement(sequenceDict, controller):
       for (let i = 0; i < this.{planName}List.length; i++) {{
           this.{planName}List[i][0].{actionName}(true);
       }}
-      width = this.{planName}Terms*210 + 50;
-      widthstr = width.toString() + "px";
-      document.getElementById("header").style.width = widthstr;
-      document.getElementById("footer").style.width = widthstr;
+      height = this.{planName}MaxCourses*150 + 20;
+      heightstr = height.toString() + "px";
+      document.getElementById("main").style.height = heightstr;
       for (let i = 0; i < this.{planName}Clicked.length; i++) {{
           var element = document.getElementById(this.{planName}Clicked[i][0]);
           element.classList.remove(this.{planName}Clicked[i][1]);

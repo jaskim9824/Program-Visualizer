@@ -8,7 +8,7 @@ this.render = function(plan) {
             this.enable(plan);
             this.previousPlan = plan;
 };
-var radios = document.querySelectorAll("input[type=radio][name=planselector");
+var radios = document.querySelectorAll("input[type=radio][name=planselector]");
 Array.prototype.forEach.call(radios, function (radio) {
     radio.addEventListener("change", function () {
         that.render($scope.selectedPlan);
@@ -19,71 +19,85 @@ this.TraditionalPlan2A3A4AClicked = [];
 this.TraditionalPlan2A3A4ALegendBtns = [];
 this.TraditionalPlan2A3A4ALegendBtnsClicked = [];
 this.TraditionalPlan2A3A4ATerms = 8;
+this.TraditionalPlan2A3A4AMaxCourses = 8;
 this.TraditionalPlan2A3A4BList = [];
 this.TraditionalPlan2A3A4BClicked = [];
 this.TraditionalPlan2A3A4BLegendBtns = [];
 this.TraditionalPlan2A3A4BLegendBtnsClicked = [];
 this.TraditionalPlan2A3A4BTerms = 8;
+this.TraditionalPlan2A3A4BMaxCourses = 7;
 this.TraditionalPlan2A3B4AList = [];
 this.TraditionalPlan2A3B4AClicked = [];
 this.TraditionalPlan2A3B4ALegendBtns = [];
 this.TraditionalPlan2A3B4ALegendBtnsClicked = [];
 this.TraditionalPlan2A3B4ATerms = 8;
+this.TraditionalPlan2A3B4AMaxCourses = 7;
 this.TraditionalPlan2A3B4BList = [];
 this.TraditionalPlan2A3B4BClicked = [];
 this.TraditionalPlan2A3B4BLegendBtns = [];
 this.TraditionalPlan2A3B4BLegendBtnsClicked = [];
 this.TraditionalPlan2A3B4BTerms = 8;
+this.TraditionalPlan2A3B4BMaxCourses = 7;
 this.TraditionalPlan2B3A4AList = [];
 this.TraditionalPlan2B3A4AClicked = [];
 this.TraditionalPlan2B3A4ALegendBtns = [];
 this.TraditionalPlan2B3A4ALegendBtnsClicked = [];
 this.TraditionalPlan2B3A4ATerms = 8;
+this.TraditionalPlan2B3A4AMaxCourses = 7;
 this.TraditionalPlan2B3A4BList = [];
 this.TraditionalPlan2B3A4BClicked = [];
 this.TraditionalPlan2B3A4BLegendBtns = [];
 this.TraditionalPlan2B3A4BLegendBtnsClicked = [];
 this.TraditionalPlan2B3A4BTerms = 8;
+this.TraditionalPlan2B3A4BMaxCourses = 7;
 this.TraditionalPlan2B3B4AList = [];
 this.TraditionalPlan2B3B4AClicked = [];
 this.TraditionalPlan2B3B4ALegendBtns = [];
 this.TraditionalPlan2B3B4ALegendBtnsClicked = [];
 this.TraditionalPlan2B3B4ATerms = 8;
+this.TraditionalPlan2B3B4AMaxCourses = 7;
 this.TraditionalPlan2B3B4BList = [];
 this.TraditionalPlan2B3B4BClicked = [];
 this.TraditionalPlan2B3B4BLegendBtns = [];
 this.TraditionalPlan2B3B4BLegendBtnsClicked = [];
 this.TraditionalPlan2B3B4BTerms = 8;
+this.TraditionalPlan2B3B4BMaxCourses = 7;
 this.AlternatePlan3A4AList = [];
 this.AlternatePlan3A4AClicked = [];
 this.AlternatePlan3A4ALegendBtns = [];
 this.AlternatePlan3A4ALegendBtnsClicked = [];
 this.AlternatePlan3A4ATerms = 9;
+this.AlternatePlan3A4AMaxCourses = 7;
 this.CoopPlan13AList = [];
 this.CoopPlan13AClicked = [];
 this.CoopPlan13ALegendBtns = [];
 this.CoopPlan13ALegendBtnsClicked = [];
 this.CoopPlan13ATerms = 13;
+this.CoopPlan13AMaxCourses = 8;
 this.CoopPlan13BList = [];
 this.CoopPlan13BClicked = [];
 this.CoopPlan13BLegendBtns = [];
 this.CoopPlan13BLegendBtnsClicked = [];
 this.CoopPlan13BTerms = 13;
+this.CoopPlan13BMaxCourses = 8;
 this.CoopPlan2List = [];
 this.CoopPlan2Clicked = [];
 this.CoopPlan2LegendBtns = [];
 this.CoopPlan2LegendBtnsClicked = [];
 this.CoopPlan2Terms = 13;
+this.CoopPlan2MaxCourses = 9;
 this.CoopPlan3BiomedicalList = [];
 this.CoopPlan3BiomedicalClicked = [];
 this.CoopPlan3BiomedicalLegendBtns = [];
 this.CoopPlan3BiomedicalLegendBtnsClicked = [];
 this.CoopPlan3BiomedicalTerms = 13;
+this.CoopPlan3BiomedicalMaxCourses = 8;
 this.CoopPlan4List = [];
 this.CoopPlan4Clicked = [];
 this.CoopPlan4LegendBtns = [];
 this.CoopPlan4LegendBtnsClicked = [];
 this.CoopPlan4Terms = 13;
+this.CoopPlan4MaxCourses = 8;
 this.disable = function(plan) {
     switch (plan) { 
   case "TraditionalPlan2A3A4A": 
@@ -296,10 +310,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.TraditionalPlan2A3A4AList.length; i++) {
           this.TraditionalPlan2A3A4AList[i][0].show(true);
       }
-      width = this.TraditionalPlan2A3A4ATerms*210 + 50;
-      widthstr = width.toString() + "px";
-      document.getElementById("header").style.width = widthstr;
-      document.getElementById("footer").style.width = widthstr;
+      height = this.TraditionalPlan2A3A4AMaxCourses*150 + 20;
+      heightstr = height.toString() + "px";
+      document.getElementById("main").style.height = heightstr;
       for (let i = 0; i < this.TraditionalPlan2A3A4AClicked.length; i++) {
           var element = document.getElementById(this.TraditionalPlan2A3A4AClicked[i][0]);
           element.classList.remove(this.TraditionalPlan2A3A4AClicked[i][1]);
@@ -326,10 +339,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.TraditionalPlan2A3A4BList.length; i++) {
           this.TraditionalPlan2A3A4BList[i][0].show(true);
       }
-      width = this.TraditionalPlan2A3A4BTerms*210 + 50;
-      widthstr = width.toString() + "px";
-      document.getElementById("header").style.width = widthstr;
-      document.getElementById("footer").style.width = widthstr;
+      height = this.TraditionalPlan2A3A4BMaxCourses*150 + 20;
+      heightstr = height.toString() + "px";
+      document.getElementById("main").style.height = heightstr;
       for (let i = 0; i < this.TraditionalPlan2A3A4BClicked.length; i++) {
           var element = document.getElementById(this.TraditionalPlan2A3A4BClicked[i][0]);
           element.classList.remove(this.TraditionalPlan2A3A4BClicked[i][1]);
@@ -356,10 +368,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.TraditionalPlan2A3B4AList.length; i++) {
           this.TraditionalPlan2A3B4AList[i][0].show(true);
       }
-      width = this.TraditionalPlan2A3B4ATerms*210 + 50;
-      widthstr = width.toString() + "px";
-      document.getElementById("header").style.width = widthstr;
-      document.getElementById("footer").style.width = widthstr;
+      height = this.TraditionalPlan2A3B4AMaxCourses*150 + 20;
+      heightstr = height.toString() + "px";
+      document.getElementById("main").style.height = heightstr;
       for (let i = 0; i < this.TraditionalPlan2A3B4AClicked.length; i++) {
           var element = document.getElementById(this.TraditionalPlan2A3B4AClicked[i][0]);
           element.classList.remove(this.TraditionalPlan2A3B4AClicked[i][1]);
@@ -386,10 +397,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.TraditionalPlan2A3B4BList.length; i++) {
           this.TraditionalPlan2A3B4BList[i][0].show(true);
       }
-      width = this.TraditionalPlan2A3B4BTerms*210 + 50;
-      widthstr = width.toString() + "px";
-      document.getElementById("header").style.width = widthstr;
-      document.getElementById("footer").style.width = widthstr;
+      height = this.TraditionalPlan2A3B4BMaxCourses*150 + 20;
+      heightstr = height.toString() + "px";
+      document.getElementById("main").style.height = heightstr;
       for (let i = 0; i < this.TraditionalPlan2A3B4BClicked.length; i++) {
           var element = document.getElementById(this.TraditionalPlan2A3B4BClicked[i][0]);
           element.classList.remove(this.TraditionalPlan2A3B4BClicked[i][1]);
@@ -416,10 +426,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.TraditionalPlan2B3A4AList.length; i++) {
           this.TraditionalPlan2B3A4AList[i][0].show(true);
       }
-      width = this.TraditionalPlan2B3A4ATerms*210 + 50;
-      widthstr = width.toString() + "px";
-      document.getElementById("header").style.width = widthstr;
-      document.getElementById("footer").style.width = widthstr;
+      height = this.TraditionalPlan2B3A4AMaxCourses*150 + 20;
+      heightstr = height.toString() + "px";
+      document.getElementById("main").style.height = heightstr;
       for (let i = 0; i < this.TraditionalPlan2B3A4AClicked.length; i++) {
           var element = document.getElementById(this.TraditionalPlan2B3A4AClicked[i][0]);
           element.classList.remove(this.TraditionalPlan2B3A4AClicked[i][1]);
@@ -446,10 +455,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.TraditionalPlan2B3A4BList.length; i++) {
           this.TraditionalPlan2B3A4BList[i][0].show(true);
       }
-      width = this.TraditionalPlan2B3A4BTerms*210 + 50;
-      widthstr = width.toString() + "px";
-      document.getElementById("header").style.width = widthstr;
-      document.getElementById("footer").style.width = widthstr;
+      height = this.TraditionalPlan2B3A4BMaxCourses*150 + 20;
+      heightstr = height.toString() + "px";
+      document.getElementById("main").style.height = heightstr;
       for (let i = 0; i < this.TraditionalPlan2B3A4BClicked.length; i++) {
           var element = document.getElementById(this.TraditionalPlan2B3A4BClicked[i][0]);
           element.classList.remove(this.TraditionalPlan2B3A4BClicked[i][1]);
@@ -476,10 +484,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.TraditionalPlan2B3B4AList.length; i++) {
           this.TraditionalPlan2B3B4AList[i][0].show(true);
       }
-      width = this.TraditionalPlan2B3B4ATerms*210 + 50;
-      widthstr = width.toString() + "px";
-      document.getElementById("header").style.width = widthstr;
-      document.getElementById("footer").style.width = widthstr;
+      height = this.TraditionalPlan2B3B4AMaxCourses*150 + 20;
+      heightstr = height.toString() + "px";
+      document.getElementById("main").style.height = heightstr;
       for (let i = 0; i < this.TraditionalPlan2B3B4AClicked.length; i++) {
           var element = document.getElementById(this.TraditionalPlan2B3B4AClicked[i][0]);
           element.classList.remove(this.TraditionalPlan2B3B4AClicked[i][1]);
@@ -506,10 +513,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.TraditionalPlan2B3B4BList.length; i++) {
           this.TraditionalPlan2B3B4BList[i][0].show(true);
       }
-      width = this.TraditionalPlan2B3B4BTerms*210 + 50;
-      widthstr = width.toString() + "px";
-      document.getElementById("header").style.width = widthstr;
-      document.getElementById("footer").style.width = widthstr;
+      height = this.TraditionalPlan2B3B4BMaxCourses*150 + 20;
+      heightstr = height.toString() + "px";
+      document.getElementById("main").style.height = heightstr;
       for (let i = 0; i < this.TraditionalPlan2B3B4BClicked.length; i++) {
           var element = document.getElementById(this.TraditionalPlan2B3B4BClicked[i][0]);
           element.classList.remove(this.TraditionalPlan2B3B4BClicked[i][1]);
@@ -536,10 +542,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.AlternatePlan3A4AList.length; i++) {
           this.AlternatePlan3A4AList[i][0].show(true);
       }
-      width = this.AlternatePlan3A4ATerms*210 + 50;
-      widthstr = width.toString() + "px";
-      document.getElementById("header").style.width = widthstr;
-      document.getElementById("footer").style.width = widthstr;
+      height = this.AlternatePlan3A4AMaxCourses*150 + 20;
+      heightstr = height.toString() + "px";
+      document.getElementById("main").style.height = heightstr;
       for (let i = 0; i < this.AlternatePlan3A4AClicked.length; i++) {
           var element = document.getElementById(this.AlternatePlan3A4AClicked[i][0]);
           element.classList.remove(this.AlternatePlan3A4AClicked[i][1]);
@@ -566,10 +571,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.CoopPlan13AList.length; i++) {
           this.CoopPlan13AList[i][0].show(true);
       }
-      width = this.CoopPlan13ATerms*210 + 50;
-      widthstr = width.toString() + "px";
-      document.getElementById("header").style.width = widthstr;
-      document.getElementById("footer").style.width = widthstr;
+      height = this.CoopPlan13AMaxCourses*150 + 20;
+      heightstr = height.toString() + "px";
+      document.getElementById("main").style.height = heightstr;
       for (let i = 0; i < this.CoopPlan13AClicked.length; i++) {
           var element = document.getElementById(this.CoopPlan13AClicked[i][0]);
           element.classList.remove(this.CoopPlan13AClicked[i][1]);
@@ -596,10 +600,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.CoopPlan13BList.length; i++) {
           this.CoopPlan13BList[i][0].show(true);
       }
-      width = this.CoopPlan13BTerms*210 + 50;
-      widthstr = width.toString() + "px";
-      document.getElementById("header").style.width = widthstr;
-      document.getElementById("footer").style.width = widthstr;
+      height = this.CoopPlan13BMaxCourses*150 + 20;
+      heightstr = height.toString() + "px";
+      document.getElementById("main").style.height = heightstr;
       for (let i = 0; i < this.CoopPlan13BClicked.length; i++) {
           var element = document.getElementById(this.CoopPlan13BClicked[i][0]);
           element.classList.remove(this.CoopPlan13BClicked[i][1]);
@@ -626,10 +629,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.CoopPlan2List.length; i++) {
           this.CoopPlan2List[i][0].show(true);
       }
-      width = this.CoopPlan2Terms*210 + 50;
-      widthstr = width.toString() + "px";
-      document.getElementById("header").style.width = widthstr;
-      document.getElementById("footer").style.width = widthstr;
+      height = this.CoopPlan2MaxCourses*150 + 20;
+      heightstr = height.toString() + "px";
+      document.getElementById("main").style.height = heightstr;
       for (let i = 0; i < this.CoopPlan2Clicked.length; i++) {
           var element = document.getElementById(this.CoopPlan2Clicked[i][0]);
           element.classList.remove(this.CoopPlan2Clicked[i][1]);
@@ -656,10 +658,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.CoopPlan3BiomedicalList.length; i++) {
           this.CoopPlan3BiomedicalList[i][0].show(true);
       }
-      width = this.CoopPlan3BiomedicalTerms*210 + 50;
-      widthstr = width.toString() + "px";
-      document.getElementById("header").style.width = widthstr;
-      document.getElementById("footer").style.width = widthstr;
+      height = this.CoopPlan3BiomedicalMaxCourses*150 + 20;
+      heightstr = height.toString() + "px";
+      document.getElementById("main").style.height = heightstr;
       for (let i = 0; i < this.CoopPlan3BiomedicalClicked.length; i++) {
           var element = document.getElementById(this.CoopPlan3BiomedicalClicked[i][0]);
           element.classList.remove(this.CoopPlan3BiomedicalClicked[i][1]);
@@ -686,10 +687,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.CoopPlan4List.length; i++) {
           this.CoopPlan4List[i][0].show(true);
       }
-      width = this.CoopPlan4Terms*210 + 50;
-      widthstr = width.toString() + "px";
-      document.getElementById("header").style.width = widthstr;
-      document.getElementById("footer").style.width = widthstr;
+      height = this.CoopPlan4MaxCourses*150 + 20;
+      heightstr = height.toString() + "px";
+      document.getElementById("main").style.height = heightstr;
       for (let i = 0; i < this.CoopPlan4Clicked.length; i++) {
           var element = document.getElementById(this.CoopPlan4Clicked[i][0]);
           element.classList.remove(this.CoopPlan4Clicked[i][1]);
@@ -10974,7 +10974,7 @@ $scope.CIVE270TraditionalPlan2A3A4AListener = function () {
       return;
 }      that.addLine(getLine9());
       that.addLine(getLine10());
-      that.addLine(getLine24());
+      that.addLine(getLine25());
       that.addLine(getLine28());
       that.addLine(getLine41());
       that.addLine(getLine46());
@@ -10986,7 +10986,7 @@ $scope.CIVE270TraditionalPlan2A3A4AListener = function () {
  else {
       that.removeLine(getLine9());
       that.removeLine(getLine10());
-      that.removeLine(getLine24());
+      that.removeLine(getLine25());
       that.removeLine(getLine28());
       that.removeLine(getLine41());
       that.removeLine(getLine46());
@@ -11263,7 +11263,7 @@ $scope.MECE265TraditionalPlan2A3A4AListener = function () {
      MECE265TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGDESIGN");
       return;
-}      that.addLine(getLine25());
+}      that.addLine(getLine24());
       that.addLine(getLine44());
      MECE265TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGDESIGN");
      MECE265TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGDESIGN-highlighted");
@@ -11271,7 +11271,7 @@ $scope.MECE265TraditionalPlan2A3A4AListener = function () {
       MECE265TraditionalPlan2A3A4Aflag=true
   }
  else {
-      that.removeLine(getLine25());
+      that.removeLine(getLine24());
       that.removeLine(getLine44());
      MECE265TraditionalPlan2A3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGDESIGN");
@@ -12325,7 +12325,7 @@ $scope.CIVE270TraditionalPlan2A3A4BListener = function () {
       return;
 }      that.addLine(getLine87());
       that.addLine(getLine88());
-      that.addLine(getLine102());
+      that.addLine(getLine103());
       that.addLine(getLine106());
       that.addLine(getLine119());
       that.addLine(getLine124());
@@ -12337,7 +12337,7 @@ $scope.CIVE270TraditionalPlan2A3A4BListener = function () {
  else {
       that.removeLine(getLine87());
       that.removeLine(getLine88());
-      that.removeLine(getLine102());
+      that.removeLine(getLine103());
       that.removeLine(getLine106());
       that.removeLine(getLine119());
       that.removeLine(getLine124());
@@ -12614,7 +12614,7 @@ $scope.MECE265TraditionalPlan2A3A4BListener = function () {
      MECE265TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGDESIGN");
       return;
-}      that.addLine(getLine103());
+}      that.addLine(getLine102());
       that.addLine(getLine122());
      MECE265TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGDESIGN");
      MECE265TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGDESIGN-highlighted");
@@ -12622,7 +12622,7 @@ $scope.MECE265TraditionalPlan2A3A4BListener = function () {
       MECE265TraditionalPlan2A3A4Bflag=true
   }
  else {
-      that.removeLine(getLine103());
+      that.removeLine(getLine102());
       that.removeLine(getLine122());
      MECE265TraditionalPlan2A3A4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265TraditionalPlan2A3A4Belement.classList.add("ENGINEERINGDESIGN");
@@ -13657,7 +13657,7 @@ $scope.CIVE270TraditionalPlan2A3B4AListener = function () {
       return;
 }      that.addLine(getLine165());
       that.addLine(getLine166());
-      that.addLine(getLine180());
+      that.addLine(getLine181());
       that.addLine(getLine186());
       that.addLine(getLine193());
       that.addLine(getLine206());
@@ -13669,7 +13669,7 @@ $scope.CIVE270TraditionalPlan2A3B4AListener = function () {
  else {
       that.removeLine(getLine165());
       that.removeLine(getLine166());
-      that.removeLine(getLine180());
+      that.removeLine(getLine181());
       that.removeLine(getLine186());
       that.removeLine(getLine193());
       that.removeLine(getLine206());
@@ -13946,7 +13946,7 @@ $scope.MECE265TraditionalPlan2A3B4AListener = function () {
      MECE265TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGDESIGN");
       return;
-}      that.addLine(getLine181());
+}      that.addLine(getLine180());
       that.addLine(getLine184());
      MECE265TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGDESIGN");
      MECE265TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGDESIGN-highlighted");
@@ -13954,7 +13954,7 @@ $scope.MECE265TraditionalPlan2A3B4AListener = function () {
       MECE265TraditionalPlan2A3B4Aflag=true
   }
  else {
-      that.removeLine(getLine181());
+      that.removeLine(getLine180());
       that.removeLine(getLine184());
      MECE265TraditionalPlan2A3B4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265TraditionalPlan2A3B4Aelement.classList.add("ENGINEERINGDESIGN");
@@ -14989,7 +14989,7 @@ $scope.CIVE270TraditionalPlan2A3B4BListener = function () {
       return;
 }      that.addLine(getLine243());
       that.addLine(getLine244());
-      that.addLine(getLine258());
+      that.addLine(getLine259());
       that.addLine(getLine264());
       that.addLine(getLine271());
       that.addLine(getLine284());
@@ -15001,7 +15001,7 @@ $scope.CIVE270TraditionalPlan2A3B4BListener = function () {
  else {
       that.removeLine(getLine243());
       that.removeLine(getLine244());
-      that.removeLine(getLine258());
+      that.removeLine(getLine259());
       that.removeLine(getLine264());
       that.removeLine(getLine271());
       that.removeLine(getLine284());
@@ -15278,7 +15278,7 @@ $scope.MECE265TraditionalPlan2A3B4BListener = function () {
      MECE265TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGDESIGN");
       return;
-}      that.addLine(getLine259());
+}      that.addLine(getLine258());
       that.addLine(getLine262());
      MECE265TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGDESIGN");
      MECE265TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGDESIGN-highlighted");
@@ -15286,7 +15286,7 @@ $scope.MECE265TraditionalPlan2A3B4BListener = function () {
       MECE265TraditionalPlan2A3B4Bflag=true
   }
  else {
-      that.removeLine(getLine259());
+      that.removeLine(getLine258());
       that.removeLine(getLine262());
      MECE265TraditionalPlan2A3B4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265TraditionalPlan2A3B4Belement.classList.add("ENGINEERINGDESIGN");
@@ -16444,7 +16444,7 @@ $scope.MECE265TraditionalPlan2B3A4AListener = function () {
      MECE265TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGDESIGN");
       return;
-}      that.addLine(getLine327());
+}      that.addLine(getLine326());
       that.addLine(getLine356());
      MECE265TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGDESIGN");
      MECE265TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGDESIGN-highlighted");
@@ -16452,7 +16452,7 @@ $scope.MECE265TraditionalPlan2B3A4AListener = function () {
       MECE265TraditionalPlan2B3A4Aflag=true
   }
  else {
-      that.removeLine(getLine327());
+      that.removeLine(getLine326());
       that.removeLine(getLine356());
      MECE265TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGDESIGN");
@@ -16467,7 +16467,7 @@ $scope.CIVE270TraditionalPlan2B3A4AListener = function () {
      CIVE270TraditionalPlan2B3A4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
      CIVE270TraditionalPlan2B3A4Aelement.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine326());
+}      that.addLine(getLine327());
       that.addLine(getLine328());
       that.addLine(getLine329());
       that.addLine(getLine340());
@@ -16479,7 +16479,7 @@ $scope.CIVE270TraditionalPlan2B3A4AListener = function () {
       CIVE270TraditionalPlan2B3A4Aflag=true
   }
  else {
-      that.removeLine(getLine326());
+      that.removeLine(getLine327());
       that.removeLine(getLine328());
       that.removeLine(getLine329());
       that.removeLine(getLine340());
@@ -17776,7 +17776,7 @@ $scope.MECE265TraditionalPlan2B3A4BListener = function () {
      MECE265TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGDESIGN");
       return;
-}      that.addLine(getLine405());
+}      that.addLine(getLine404());
       that.addLine(getLine434());
      MECE265TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGDESIGN");
      MECE265TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGDESIGN-highlighted");
@@ -17784,7 +17784,7 @@ $scope.MECE265TraditionalPlan2B3A4BListener = function () {
       MECE265TraditionalPlan2B3A4Bflag=true
   }
  else {
-      that.removeLine(getLine405());
+      that.removeLine(getLine404());
       that.removeLine(getLine434());
      MECE265TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGDESIGN");
@@ -17799,7 +17799,7 @@ $scope.CIVE270TraditionalPlan2B3A4BListener = function () {
      CIVE270TraditionalPlan2B3A4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
      CIVE270TraditionalPlan2B3A4Belement.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine404());
+}      that.addLine(getLine405());
       that.addLine(getLine406());
       that.addLine(getLine407());
       that.addLine(getLine418());
@@ -17811,7 +17811,7 @@ $scope.CIVE270TraditionalPlan2B3A4BListener = function () {
       CIVE270TraditionalPlan2B3A4Bflag=true
   }
  else {
-      that.removeLine(getLine404());
+      that.removeLine(getLine405());
       that.removeLine(getLine406());
       that.removeLine(getLine407());
       that.removeLine(getLine418());
@@ -19108,7 +19108,7 @@ $scope.MECE265TraditionalPlan2B3B4AListener = function () {
      MECE265TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGDESIGN");
       return;
-}      that.addLine(getLine483());
+}      that.addLine(getLine482());
       that.addLine(getLine496());
      MECE265TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGDESIGN");
      MECE265TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGDESIGN-highlighted");
@@ -19116,7 +19116,7 @@ $scope.MECE265TraditionalPlan2B3B4AListener = function () {
       MECE265TraditionalPlan2B3B4Aflag=true
   }
  else {
-      that.removeLine(getLine483());
+      that.removeLine(getLine482());
       that.removeLine(getLine496());
      MECE265TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGDESIGN");
@@ -19131,7 +19131,7 @@ $scope.CIVE270TraditionalPlan2B3B4AListener = function () {
      CIVE270TraditionalPlan2B3B4Aelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
      CIVE270TraditionalPlan2B3B4Aelement.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine482());
+}      that.addLine(getLine483());
       that.addLine(getLine484());
       that.addLine(getLine485());
       that.addLine(getLine498());
@@ -19143,7 +19143,7 @@ $scope.CIVE270TraditionalPlan2B3B4AListener = function () {
       CIVE270TraditionalPlan2B3B4Aflag=true
   }
  else {
-      that.removeLine(getLine482());
+      that.removeLine(getLine483());
       that.removeLine(getLine484());
       that.removeLine(getLine485());
       that.removeLine(getLine498());
@@ -20440,7 +20440,7 @@ $scope.MECE265TraditionalPlan2B3B4BListener = function () {
      MECE265TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGDESIGN");
       return;
-}      that.addLine(getLine561());
+}      that.addLine(getLine560());
       that.addLine(getLine574());
      MECE265TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGDESIGN");
      MECE265TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGDESIGN-highlighted");
@@ -20448,7 +20448,7 @@ $scope.MECE265TraditionalPlan2B3B4BListener = function () {
       MECE265TraditionalPlan2B3B4Bflag=true
   }
  else {
-      that.removeLine(getLine561());
+      that.removeLine(getLine560());
       that.removeLine(getLine574());
      MECE265TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGDESIGN");
@@ -20463,7 +20463,7 @@ $scope.CIVE270TraditionalPlan2B3B4BListener = function () {
      CIVE270TraditionalPlan2B3B4Belement.classList.remove("ENGINEERINGSCIENCES-highlighted");
      CIVE270TraditionalPlan2B3B4Belement.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine560());
+}      that.addLine(getLine561());
       that.addLine(getLine562());
       that.addLine(getLine563());
       that.addLine(getLine576());
@@ -20475,7 +20475,7 @@ $scope.CIVE270TraditionalPlan2B3B4BListener = function () {
       CIVE270TraditionalPlan2B3B4Bflag=true
   }
  else {
-      that.removeLine(getLine560());
+      that.removeLine(getLine561());
       that.removeLine(getLine562());
       that.removeLine(getLine563());
       that.removeLine(getLine576());
@@ -26019,7 +26019,7 @@ $scope.CIVE270CoopPlan2Listener = function () {
       return;
 }      that.addLine(getLine878());
       that.addLine(getLine879());
-      that.addLine(getLine893());
+      that.addLine(getLine894());
       that.addLine(getLine897());
       that.addLine(getLine910());
       that.addLine(getLine917());
@@ -26031,7 +26031,7 @@ $scope.CIVE270CoopPlan2Listener = function () {
  else {
       that.removeLine(getLine878());
       that.removeLine(getLine879());
-      that.removeLine(getLine893());
+      that.removeLine(getLine894());
       that.removeLine(getLine897());
       that.removeLine(getLine910());
       that.removeLine(getLine917());
@@ -26325,7 +26325,7 @@ $scope.MECE265CoopPlan2Listener = function () {
      MECE265CoopPlan2element.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265CoopPlan2element.classList.add("ENGINEERINGDESIGN");
       return;
-}      that.addLine(getLine894());
+}      that.addLine(getLine893());
       that.addLine(getLine915());
      MECE265CoopPlan2element.classList.remove("ENGINEERINGDESIGN");
      MECE265CoopPlan2element.classList.add("ENGINEERINGDESIGN-highlighted");
@@ -26333,7 +26333,7 @@ $scope.MECE265CoopPlan2Listener = function () {
       MECE265CoopPlan2flag=true
   }
  else {
-      that.removeLine(getLine894());
+      that.removeLine(getLine893());
       that.removeLine(getLine915());
      MECE265CoopPlan2element.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265CoopPlan2element.classList.add("ENGINEERINGDESIGN");
@@ -27487,7 +27487,7 @@ $scope.CIVE270CoopPlan3BiomedicalListener = function () {
       return;
 }      that.addLine(getLine960());
       that.addLine(getLine961());
-      that.addLine(getLine975());
+      that.addLine(getLine976());
       that.addLine(getLine981());
       that.addLine(getLine989());
       that.addLine(getLine1002());
@@ -27499,7 +27499,7 @@ $scope.CIVE270CoopPlan3BiomedicalListener = function () {
  else {
       that.removeLine(getLine960());
       that.removeLine(getLine961());
-      that.removeLine(getLine975());
+      that.removeLine(getLine976());
       that.removeLine(getLine981());
       that.removeLine(getLine989());
       that.removeLine(getLine1002());
@@ -27795,7 +27795,7 @@ $scope.MECE265CoopPlan3BiomedicalListener = function () {
      MECE265CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN");
       return;
-}      that.addLine(getLine976());
+}      that.addLine(getLine975());
       that.addLine(getLine979());
      MECE265CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN");
      MECE265CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN-highlighted");
@@ -27803,7 +27803,7 @@ $scope.MECE265CoopPlan3BiomedicalListener = function () {
       MECE265CoopPlan3Biomedicalflag=true
   }
  else {
-      that.removeLine(getLine976());
+      that.removeLine(getLine975());
       that.removeLine(getLine979());
      MECE265CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN");

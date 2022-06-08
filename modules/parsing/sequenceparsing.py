@@ -93,7 +93,7 @@ def parseSeq(filename, course_obj_dict):
 
         # Make sure that co-reqs are only for courses in the same term
         # Had to do this after pulling from Sequencing.xls
-        course_seq = checkReqs(course_seq)
+        # course_seq = checkReqs(course_seq)  Not used, keep everything exactly like Calendar
 
     except FileNotFoundError:
         print("Excel sequencing file not found, ensure it is present and the name is correct.")

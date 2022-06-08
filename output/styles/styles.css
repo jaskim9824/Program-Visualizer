@@ -20,9 +20,8 @@ header {
     padding: 8px 8px;
     background-color: #275d38;
     margin-bottom: 10px;
-    /* height: 64px; */
-    height: 8vh;
-    
+    height: 4rem;
+    white-space: nowrap;
 }
 
 /* legend for line legend image */
@@ -35,18 +34,18 @@ header {
     margin: 0;
 }
 
-@media screen and (max-width: 980px) {
+/* @media screen and (max-width: 980px) {
    #linelegend{
        right: 200px;
        width: 24.7vw;
    }
-}
+} */
         
  /*Header link style */
-.header a {
+ .header a {
     padding: 15px;
     text-decoration: none;
-    line-height: 3vh;
+    line-height: 1.5rem;
     border-radius: 4px;
     color: #f2cd00;
     font-size: 100%;
@@ -101,7 +100,7 @@ header {
 .legendbutton {
     text-align: center;
     padding: 8px;
-    box-shadow: 0px 5px gray;
+    box-shadow: 0px 5px 2px gray;
     margin: 5px;
 }
 
@@ -316,7 +315,7 @@ p.ortext {
 /* Course on left of page, tooltip appears to the right of course */
 .tooltip .tooltiptextright {
     visibility: hidden;
-    width: 48vw;
+    width: 46vw;
     padding: 0px 10px;
     background-color: #EEEEEE;
     border: 1px solid #444444;
@@ -331,10 +330,10 @@ p.ortext {
     margin-left: -60px;
     opacity: 0;
     transition: opacity 0.3s;
-    font-size: 18px;
+    font-size: 100%;
     font-weight: inherit;
     font-style: inherit;
-    font-family: inherit;
+    font-family: 'Roboto', sans-serif;
     vertical-align: baseline;
     white-space: normal;
 }
@@ -343,7 +342,7 @@ p.ortext {
 /* Course on right of page, tooltip appears to the left of course */
 .tooltip .tooltiptextleft {
     visibility: hidden;
-    width: 48vw;
+    width: 46vw;
     padding: 0px 10px;
     background-color: #EEEEEE;
     border: 1px solid #444444;
@@ -358,10 +357,10 @@ p.ortext {
     margin-left: -60px;
     opacity: 0;
     transition: opacity 0.3s;
-    font-size: 18px;
+    font-size: 100%;
     font-weight: inherit;
     font-style: inherit;
-    font-family: inherit;
+    font-family: 'Roboto', sans-serif;
     vertical-align: baseline;
     white-space: normal;
 }
@@ -460,13 +459,13 @@ footer {
     height: 50px;
     margin-right: 0;
     position: relative;
-    left: 44vw;
+    left: 44rem;
 }
 
 /* copyright logo and text */
 #copyright {
     position: relative;
-    left: 60vw;
+    left: 60rem;
     color: #FFFFFF;
     font-family: 'Roboto',sans-serif;
     font-size: 75%;
