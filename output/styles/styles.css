@@ -27,11 +27,11 @@ header {
 
 /* legend for line legend image */
 #linelegend {
+    width: 275px;
     height: 150px;
-    width: 300px;
     position: relative;
-    left: 10vw;
-    bottom: 225px;
+    left: 10rem;
+    bottom: 42rem;
     margin: 0;
 }
 
@@ -56,34 +56,45 @@ header {
 
 /*Title style*/
 .header a.site-title {
+    width: fit-content;
     font-size: 25px;
     position: absolute;
-    left: 35vw;
+    left: 38rem;
     top: 12px;
     color: #F2CD00;
 }
 
 /*Image style*/
 .header img {
-    /* width: 183px;
-    height: 50px; */
-    width: 12vw;
-    height: 8vh;
+    width: 183px;
+    height: 50px;
     margin-right: 0;
     float: left;
 }
 
-/* legend for categories */
 .legend {
-    width: 200px;
-    height: 250px;
+    width: 25rem;
+    height: 30rem;
+    margin: 0;
+    position: relative;
+    left: 75rem;
+    bottom: 15rem;
+    text-align: center;
+}
+
+.legenddescription {
+    text-align: left;
+}
+
+/* legend for categories */
+.legendboxes {
+    width: 12rem;
+    height: 17rem;
     margin: 0;
     position: relative;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    left: 70vw;
-    bottom: 25px;
     text-align: center;
 }
 
@@ -130,10 +141,9 @@ header {
 /* Plan header styling*/
 h3.planhead {
     margin: 0;
-    width: 125px;
-    height: 33px;
+    width: 5rem;
     position: relative;
-    left: 45vw;
+    left: 50rem;
     top: 20px;
     font-size: 175%;
     text-align: center;
@@ -141,11 +151,11 @@ h3.planhead {
 
 /* Form styling */
 .select {
-    width: 300px;
-    position: absolute;
-    display: inline-block;
-    left: 45vw;
+    width: 20rem;
+    position: relative;
+    left: 49rem;
     margin-top: 15px;
+    margin-right: 0;
 }
 
 /* Form text styling */
@@ -160,13 +170,13 @@ label {
     width:fit-content;
     height: fit-content;
     position: relative;
-    bottom: 160px;
+    bottom: 36rem;
     right: 15px;
 }
 
 /* Term column styling */
 .term {
-    margin-left: 60px;
+    margin-left: 4rem;
     position: relative;
     display: flex;
     flex-direction: column;
