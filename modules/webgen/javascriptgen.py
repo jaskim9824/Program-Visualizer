@@ -345,13 +345,13 @@ switch(categoryName) {{ \n"""
           var currelement = document.getElementById({electiveName}elements.item(i).id);
           currelement.classList.remove("{electiveName}");
           currelement.classList.add("{electiveName}-highlighted");
-          that.addToClicked(["{electiveName}{planName}","{categoryName}"]);
+          that.addToClicked(["{longElectiveName}{planName}{count}","{categoryName}"]);
         }}\n"""
     formattedElectivesUnhighlight = """        for (let i = 0; i < {electiveName}elements.length; i++) {{
           var currelement = document.getElementById({electiveName}elements.item(i).id);
           currelement.classList.remove("{electiveName}-highlighted");
           currelement.classList.add("{electiveName}");
-          that.removeFromClicked("{electiveName}{planName}");
+          that.removeFromClicked("{longElectiveName}{planName}{count}");
         }}\n"""
 
     for category in categoriesDict:
@@ -374,18 +374,24 @@ switch(categoryName) {{ \n"""
         for plan in categoriesDict[category]:
             # inner switch between plans
             controller.write(formattedCasePlan.format(planName=cleaner.cleanString(plan)))
+            compcounter = 0
+            progcounter = 0
+            itscounter = 0
             for course in categoriesDict[category][plan]:
                 if course.name == "Complementary Elective":
                     controller.write(formattedElectiveGetUnhighlightedElement.format(electiveName="COMP"))
-                    controller.write(formattedElectivesHighlight.format(electiveName="COMP", planName=plan, categoryName="COMP"))
+                    controller.write(formattedElectivesHighlight.format(electiveName="COMP", count=compcounter, longElectiveName="ComplementaryElective", planName=plan, categoryName="COMP"))
+                    compcounter += 1
                     continue
                 if course.name == "Program/Technical Elective":
-                    controller.write(formattedElectiveGetUnhighlightedElement.format(electiveName="PROG", planName=plan, categoryName=category))
-                    controller.write(formattedElectivesHighlight.format(electiveName="PROG", planName=plan, categoryName="PROG"))
+                    controller.write(formattedElectiveGetUnhighlightedElement.format(electiveName="PROG"))
+                    controller.write(formattedElectivesHighlight.format(electiveName="PROG", count=progcounter, longElectiveName="ProgramTechnicalElective", planName=plan, categoryName="PROG"))
+                    progcounter += 1
                     continue
                 if course.name == "ITS Elective":
                     controller.write(formattedElectiveGetUnhighlightedElement.format(electiveName="ITS"))
-                    controller.write(formattedElectivesHighlight.format(electiveName="ITS", planName=plan, categoryName="ITS"))
+                    controller.write(formattedElectivesHighlight.format(electiveName="ITS", count=itscounter, longElectiveName="ITSElective", planName=plan, categoryName="ITS"))
+                    itscounter += 1
                     continue
                 controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name)))
                 controller.write(formattedRemoveUnclicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
@@ -404,19 +410,25 @@ switch(categoryName) {{ \n"""
         controller.write(formattedCaseCat.format(categoryName=cleaner.cleanString(category)))
         controller.write("    switch(planName) {\n")
         for plan in categoriesDict[category]:
+            compcounter = 0
+            progcounter = 0
+            itscounter = 0
             controller.write(formattedCasePlan.format(planName=cleaner.cleanString(plan)))
             for course in categoriesDict[category][plan]:
                 if course.name == "Complementary Elective":
                     controller.write(formattedElectiveGetHighlightedElement.format(electiveName="COMP"))
-                    controller.write(formattedElectivesUnhighlight.format(electiveName="COMP", planName=plan, categoryName="COMP"))
+                    controller.write(formattedElectivesUnhighlight.format(electiveName="COMP", longElectiveName="ComplementaryElective", count=compcounter, planName=plan, categoryName="COMP"))
+                    compcounter += 1
                     continue
                 if course.name == "Program/Technical Elective":
                     controller.write(formattedElectiveGetHighlightedElement.format(electiveName="PROG"))
-                    controller.write(formattedElectivesUnhighlight.format(electiveName="PROG", planName=plan, categoryName="PROG"))
+                    controller.write(formattedElectivesUnhighlight.format(electiveName="PROG", longElectiveName="ProgramTechnicalElective", count=progcounter, planName=plan, categoryName="PROG"))
+                    progcounter += 1
                     continue
                 if course.name == "ITS Elective":
                     controller.write(formattedElectiveGetHighlightedElement.format(electiveName="ITS"))
-                    controller.write(formattedElectivesUnhighlight.format(electiveName="ITS", planName=plan, categoryName="ITS"))
+                    controller.write(formattedElectivesUnhighlight.format(electiveName="ITS", longElectiveName="ITSElective", count=itscounter, planName=plan, categoryName="ITS"))
+                    itscounter += 1
                     continue
                 controller.write(formattedIfStatement.format(planName=cleaner.cleanString(plan), 
                                                              courseName=cleaner.cleanString(course.name)))
