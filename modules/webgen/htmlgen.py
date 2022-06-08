@@ -27,13 +27,14 @@ def switchTitle(titleTag, deptName):
 #   soup - soup object, used to create HTML tags
 def placeRadioInputs(formTag, sequenceDict, soup):
     currentPlan = ""
+    tagList = []
+    currentSubPlanList = []
     for plan in sequenceDict:
         if "{" in plan or "}" in plan:
             cleanedPlanName = plan[0:plan.find("{")].strip()
             if currentPlan != cleanedPlanName: 
-                if currentPlan != "":
-                    breakTag = soup.new_tag("br")
-                    formTag.append(breakTag)
+                tagList = []
+                currentSubPlanList = []
                 currentPlan = cleanedPlanName
                 dropdownMenu = soup.new_tag("div", attrs={"class":"dropdown"})
                 dropdownContent = soup.new_tag("div", attrs={"class":"dropdown-content"})
@@ -42,22 +43,33 @@ def placeRadioInputs(formTag, sequenceDict, soup):
                 dropdownMenu.append(labelTag)
                 dropdownMenu.append(dropdownContent)
                 formTag.append(dropdownMenu)
-            subPlanName = plan[plan.find("{")+1:plan.find("}")]
-            radioInput = soup.new_tag("input", attrs={"type":"radio", 
-                                                  "name":"planselector", 
-                                                  "ng-model":"selectedPlan",
-                                                  "value": cleaner.cleanString(plan)})
-            labelTag = soup.new_tag("label", attrs={"for":cleaner.cleanString(plan)})
-            labelTag.append(subPlanName)
-            dropdownContent.append(radioInput)
-            dropdownContent.append(labelTag)
-            breakTag = soup.new_tag("br")
-            dropdownContent.append(breakTag)
-        else:
-            if currentPlan != "":
                 breakTag = soup.new_tag("br")
                 formTag.append(breakTag)
+            
+            subPlanList = plan[plan.find("{")+1:plan.find("}")].split()
+            # subPlanName = plan[plan.find("{")+1:plan.find("}")]
+            tagList.append(dropdownContent)
+            print("Current sub plan list is..." + str(currentSubPlanList))
+            depth = getStartingDepth(currentSubPlanList, subPlanList)
+            currentSubPlanList = subPlanList
+            print("Printing " + plan + "....")
+            print("Depth is " + str(depth))
+            generateSubMenus(tagList, subPlanList, cleaner.cleanString(plan), depth, soup)
+            # radioInput = soup.new_tag("input", attrs={"type":"radio", 
+            #                                       "name":"planselector", 
+            #                                       "ng-model":"selectedPlan",
+            #                                       "value": cleaner.cleanString(plan)})
+            # labelTag = soup.new_tag("label", attrs={"for":cleaner.cleanString(plan)})
+            # labelTag.append(subPlanName)
+            # dropdownContent.append(radioInput)
+            # dropdownContent.append(labelTag)
+            # breakTag = soup.new_tag("br")
+            # dropdownContent.append(breakTag)
+        else:
+            if currentPlan != "":    
                 currentPlan = ""
+                tagList = []
+                currentSubPlanList = []
             radioInput = soup.new_tag("input", attrs={"type":"radio", 
                                                   "name":"planselector", 
                                                   "ng-model":"selectedPlan",
@@ -68,6 +80,55 @@ def placeRadioInputs(formTag, sequenceDict, soup):
             formTag.append(labelTag)
             breakTag = soup.new_tag("br")
             formTag.append(breakTag)
+
+def getStartingDepth(currentList, inputList):
+    if currentList == []:
+        return 1
+    else:
+        counter = 0
+        for i in range(len(inputList)):
+            counter += 1
+            if currentList[i] != inputList[i]:
+                return counter
+
+def generateSubMenus(tagList, inputList, plan, depth, soup):
+    if depth == len(inputList):
+        labelTag = soup.new_tag("label", attrs={"for":plan})
+        radioInput = soup.new_tag("input", attrs={"type":"radio", 
+                                                  "name":"planselector", 
+                                                  "ng-model":"selectedPlan",
+                                                  "value": plan})
+        labelTag.append(plan)
+        tagList[depth-1].append(radioInput)
+        tagList[depth-1].append(labelTag)
+        breakTag = soup.new_tag("br")
+        tagList[depth-1].append(breakTag)
+    else:
+        if len(tagList) != len(inputList):
+            subText = "sub"*depth
+            dropdownMenu = soup.new_tag("div", attrs={"class":subText+"dropdown"})
+            dropdownContent = soup.new_tag("div", attrs={"class":subText+"dropdown-content"})
+            labelTag = soup.new_tag("label")
+            labelTag.append(inputList[depth-1])
+            dropdownMenu.append(labelTag)
+            dropdownMenu.append(dropdownContent)
+            tagList[depth-1].append(dropdownMenu)
+            breakTag = soup.new_tag("br")
+            tagList[depth-1].append(breakTag)
+            tagList.append(dropdownContent)
+        else:
+            subText = "sub"*depth
+            dropdownMenu = soup.new_tag("div", attrs={"class":subText+"dropdown"})
+            dropdownContent = soup.new_tag("div", attrs={"class":subText+"dropdown-content"})
+            labelTag = soup.new_tag("label")
+            labelTag.append(inputList[depth-1])
+            dropdownMenu.append(labelTag)
+            dropdownMenu.append(dropdownContent)
+            tagList[depth-1].append(dropdownMenu)
+            breakTag = soup.new_tag("br")
+            tagList[depth-1].append(breakTag)
+            tagList[depth] = dropdownContent
+        generateSubMenus(tagList, inputList, plan, depth+1, soup)
 
 
 # Places the legend for the categories of courses (math, basic sciences, design, etc.)

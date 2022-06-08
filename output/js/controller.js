@@ -59,11 +59,6 @@ this.AlternatePlan3A4AClicked = [];
 this.AlternatePlan3A4ALegendBtns = [];
 this.AlternatePlan3A4ALegendBtnsClicked = [];
 this.AlternatePlan3A4ATerms = 9;
-this.Sheet1List = [];
-this.Sheet1Clicked = [];
-this.Sheet1LegendBtns = [];
-this.Sheet1LegendBtnsClicked = [];
-this.Sheet1Terms = 0;
 this.CoopPlan13AList = [];
 this.CoopPlan13AClicked = [];
 this.CoopPlan13ALegendBtns = [];
@@ -134,11 +129,6 @@ this.disable = function(plan) {
   case "AlternatePlan3A4A": 
     for (let i = 0; i < this.AlternatePlan3A4AList.length; i++) {
         this.AlternatePlan3A4AList[i][0].hide(true);
-    }
-    break; 
-  case "Sheet1": 
-    for (let i = 0; i < this.Sheet1List.length; i++) {
-        this.Sheet1List[i][0].hide(true);
     }
     break; 
   case "CoopPlan13A": 
@@ -572,36 +562,6 @@ this.enable = function(plan) {
           }
       }
       break; 
-    case "Sheet1": 
-      for (let i = 0; i < this.Sheet1List.length; i++) {
-          this.Sheet1List[i][0].show(true);
-      }
-      width = this.Sheet1Terms*210 + 50;
-      widthstr = width.toString() + "px";
-      document.getElementById("header").style.width = widthstr;
-      document.getElementById("footer").style.width = widthstr;
-      for (let i = 0; i < this.Sheet1Clicked.length; i++) {
-          var element = document.getElementById(this.Sheet1Clicked[i][0]);
-          element.classList.remove(this.Sheet1Clicked[i][1]);
-          element.classList.add(this.Sheet1Clicked[i][1]+"-highlighted");
-      }
-      for (let i = 0; i < this.Sheet1LegendBtns.length; i++) {
-          var found = false;
-          for (let j = 0; j < this.Sheet1LegendBtnsClicked.length; j++) {
-              if (this.Sheet1LegendBtnsClicked[j] == this.Sheet1LegendBtns[i]) {
-                  found = true;
-              }
-          }
-          if (found == false) {
-              this.Sheet1LegendBtns[i].classList.remove("legendbutton-pressed");
-              this.Sheet1LegendBtns[i].classList.add("legendbutton");
-          }
-          if (found == true) {
-              this.Sheet1LegendBtns[i].classList.remove("legendbutton");
-              this.Sheet1LegendBtns[i].classList.add("legendbutton-pressed");
-          }
-      }
-      break; 
     case "CoopPlan13A": 
       for (let i = 0; i < this.CoopPlan13AList.length; i++) {
           this.CoopPlan13AList[i][0].show(true);
@@ -848,16 +808,6 @@ switch($scope.selectedPlan) {
         this.AlternatePlan3A4AList[index][1]++;
     }
     break;
- case "Sheet1":
-    var index = this.Sheet1List.findIndex((element) => element[0] == line);
-    if (index == -1) {
-        line.show(false);
-        this.Sheet1List.push([line, 1])
-    }
-    else {
-        this.Sheet1List[index][1]++;
-    }
-    break;
  case "CoopPlan13A":
     var index = this.CoopPlan13AList.findIndex((element) => element[0] == line);
     if (index == -1) {
@@ -995,15 +945,6 @@ switch($scope.selectedPlan) {
             this.AlternatePlan3A4AList.splice(index, 1);
         }
     }
-    break; case "Sheet1":
-    var index = this.Sheet1List.findIndex((element) => element[0] == line);
-    if (index != -1) {
-        this.Sheet1List[index][1]--
-        if (this.Sheet1List[index][1] <= 0) {
-            line.hide(false);
-            this.Sheet1List.splice(index, 1);
-        }
-    }
     break; case "CoopPlan13A":
     var index = this.CoopPlan13AList.findIndex((element) => element[0] == line);
     if (index != -1) {
@@ -1100,11 +1041,6 @@ switch($scope.selectedPlan) {
     if (index == -1) {
         this.AlternatePlan3A4AClicked.push(element);
     }
-    break; case "Sheet1":
-    var index = this.Sheet1Clicked.findIndex((item) => item[0] == element[0]);
-    if (index == -1) {
-        this.Sheet1Clicked.push(element);
-    }
     break; case "CoopPlan13A":
     var index = this.CoopPlan13AClicked.findIndex((item) => item[0] == element[0]);
     if (index == -1) {
@@ -1180,11 +1116,6 @@ switch($scope.selectedPlan) {
     var index = this.AlternatePlan3A4AClicked.findIndex((item) => item[0] == element);
     if (index != -1) {
         this.AlternatePlan3A4AClicked.splice(index, 1);
-    }
-    break; case "Sheet1":
-    var index = this.Sheet1Clicked.findIndex((item) => item[0] == element);
-    if (index != -1) {
-        this.Sheet1Clicked.splice(index, 1);
     }
     break; case "CoopPlan13A":
     var index = this.CoopPlan13AClicked.findIndex((item) => item[0] == element);
