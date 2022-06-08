@@ -78,6 +78,11 @@ def placeRadioInputs(formTag, sequenceDict, soup):
 #   categoryDict - dict mapping category to colour
 #   soup - soup object, used to create HTML tags
 def placeLegend(legendTag, categoryDict, soup):
+    legendDescription = soup.new_tag("b", attrs={"class":"legenddescription"})
+    legendDescription.append("Click on a Category Below to Highlight all Courses in that Category")
+    legendTag.append(legendDescription)
+    
+    legendBoxes = soup.new_tag("div", attrs={"class":"legendboxes"})
     for category in categoryDict:
         if category == "COMP":
             coursecat = soup.new_tag("div", attrs={"ng-click":"ComplementaryElectiveclickListener()", 
@@ -100,7 +105,8 @@ def placeLegend(legendTag, categoryDict, soup):
                                         "id": cleaner.cleanString(category),
                                         "style":"background-color:#" + categoryDict[category]})
         coursecat.append(category)
-        legendTag.append(coursecat)
+        legendBoxes.append(coursecat)
+    legendTag.append(legendBoxes)
 
 
 # Function that places the outer divs representing each plan
