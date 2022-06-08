@@ -45,15 +45,15 @@ def placeRadioInputs(formTag, sequenceDict, soup):
                 formTag.append(dropdownMenu)
                 breakTag = soup.new_tag("br")
                 formTag.append(breakTag)
+                tagList.append(dropdownContent)
             
             subPlanList = plan[plan.find("{")+1:plan.find("}")].split()
             # subPlanName = plan[plan.find("{")+1:plan.find("}")]
-            tagList.append(dropdownContent)
-            print("Current sub plan list is..." + str(currentSubPlanList))
+            # print("Current sub plan list is..." + str(currentSubPlanList))
             depth = getStartingDepth(currentSubPlanList, subPlanList)
             currentSubPlanList = subPlanList
-            print("Printing " + plan + "....")
-            print("Depth is " + str(depth))
+            # print("Printing " + plan + "....")
+            # print("Depth is " + str(depth))
             generateSubMenus(tagList, subPlanList, cleaner.cleanString(plan), depth, soup)
             # radioInput = soup.new_tag("input", attrs={"type":"radio", 
             #                                       "name":"planselector", 
@@ -92,13 +92,18 @@ def getStartingDepth(currentList, inputList):
                 return counter
 
 def generateSubMenus(tagList, inputList, plan, depth, soup):
+    # print(len(tagList))
+    # print(len(inputList))
     if depth == len(inputList):
+        # print("Inserting radio input...")
         labelTag = soup.new_tag("label", attrs={"for":plan})
         radioInput = soup.new_tag("input", attrs={"type":"radio", 
                                                   "name":"planselector", 
                                                   "ng-model":"selectedPlan",
                                                   "value": plan})
-        labelTag.append(plan)
+        labelTag.append(inputList[depth-1])
+        # print("Parent tag is:")
+        # print(tagList[depth-1])
         tagList[depth-1].append(radioInput)
         tagList[depth-1].append(labelTag)
         breakTag = soup.new_tag("br")
@@ -127,6 +132,7 @@ def generateSubMenus(tagList, inputList, plan, depth, soup):
             tagList[depth-1].append(dropdownMenu)
             breakTag = soup.new_tag("br")
             tagList[depth-1].append(breakTag)
+            # print("Reassigning...")
             tagList[depth] = dropdownContent
         generateSubMenus(tagList, inputList, plan, depth+1, soup)
 
