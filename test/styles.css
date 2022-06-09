@@ -129,6 +129,13 @@ header {
     margin-left: -60px;
     opacity: 1;
     transition: opacity 0.3s;
+    -webkit-user-select: all;
+    /* Chrome all / Safari all */
+    -moz-user-select: all;
+    /* Firefox all */
+    -ms-user-select: all;
+    /* IE 10+ */
+    user-select: all;
 }
         
 .tooltip .tooltiptext::after {
