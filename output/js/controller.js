@@ -310,8 +310,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.TraditionalPlan2A3A4AList.length; i++) {
           this.TraditionalPlan2A3A4AList[i][0].show(true);
       }
-      width = this.TraditionalPlan2A3A4ATerms*220 + 25;
+      width = this.TraditionalPlan2A3A4ATerms*220 + 20;
       widthstr = width.toString() + "px";
+      document.getElementById("main").style.width = widthstr;
       height = this.TraditionalPlan2A3A4AMaxCourses*100 + 440;
       heightstr = height.toString() + "px";
       document.getElementById("main").style.height = heightstr;
@@ -341,8 +342,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.TraditionalPlan2A3A4BList.length; i++) {
           this.TraditionalPlan2A3A4BList[i][0].show(true);
       }
-      width = this.TraditionalPlan2A3A4BTerms*220 + 25;
+      width = this.TraditionalPlan2A3A4BTerms*220 + 20;
       widthstr = width.toString() + "px";
+      document.getElementById("main").style.width = widthstr;
       height = this.TraditionalPlan2A3A4BMaxCourses*100 + 440;
       heightstr = height.toString() + "px";
       document.getElementById("main").style.height = heightstr;
@@ -372,8 +374,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.TraditionalPlan2A3B4AList.length; i++) {
           this.TraditionalPlan2A3B4AList[i][0].show(true);
       }
-      width = this.TraditionalPlan2A3B4ATerms*220 + 25;
+      width = this.TraditionalPlan2A3B4ATerms*220 + 20;
       widthstr = width.toString() + "px";
+      document.getElementById("main").style.width = widthstr;
       height = this.TraditionalPlan2A3B4AMaxCourses*100 + 440;
       heightstr = height.toString() + "px";
       document.getElementById("main").style.height = heightstr;
@@ -403,8 +406,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.TraditionalPlan2A3B4BList.length; i++) {
           this.TraditionalPlan2A3B4BList[i][0].show(true);
       }
-      width = this.TraditionalPlan2A3B4BTerms*220 + 25;
+      width = this.TraditionalPlan2A3B4BTerms*220 + 20;
       widthstr = width.toString() + "px";
+      document.getElementById("main").style.width = widthstr;
       height = this.TraditionalPlan2A3B4BMaxCourses*100 + 440;
       heightstr = height.toString() + "px";
       document.getElementById("main").style.height = heightstr;
@@ -434,8 +438,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.TraditionalPlan2B3A4AList.length; i++) {
           this.TraditionalPlan2B3A4AList[i][0].show(true);
       }
-      width = this.TraditionalPlan2B3A4ATerms*220 + 25;
+      width = this.TraditionalPlan2B3A4ATerms*220 + 20;
       widthstr = width.toString() + "px";
+      document.getElementById("main").style.width = widthstr;
       height = this.TraditionalPlan2B3A4AMaxCourses*100 + 440;
       heightstr = height.toString() + "px";
       document.getElementById("main").style.height = heightstr;
@@ -465,8 +470,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.TraditionalPlan2B3A4BList.length; i++) {
           this.TraditionalPlan2B3A4BList[i][0].show(true);
       }
-      width = this.TraditionalPlan2B3A4BTerms*220 + 25;
+      width = this.TraditionalPlan2B3A4BTerms*220 + 20;
       widthstr = width.toString() + "px";
+      document.getElementById("main").style.width = widthstr;
       height = this.TraditionalPlan2B3A4BMaxCourses*100 + 440;
       heightstr = height.toString() + "px";
       document.getElementById("main").style.height = heightstr;
@@ -496,8 +502,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.TraditionalPlan2B3B4AList.length; i++) {
           this.TraditionalPlan2B3B4AList[i][0].show(true);
       }
-      width = this.TraditionalPlan2B3B4ATerms*220 + 25;
+      width = this.TraditionalPlan2B3B4ATerms*220 + 20;
       widthstr = width.toString() + "px";
+      document.getElementById("main").style.width = widthstr;
       height = this.TraditionalPlan2B3B4AMaxCourses*100 + 440;
       heightstr = height.toString() + "px";
       document.getElementById("main").style.height = heightstr;
@@ -527,8 +534,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.TraditionalPlan2B3B4BList.length; i++) {
           this.TraditionalPlan2B3B4BList[i][0].show(true);
       }
-      width = this.TraditionalPlan2B3B4BTerms*220 + 25;
+      width = this.TraditionalPlan2B3B4BTerms*220 + 20;
       widthstr = width.toString() + "px";
+      document.getElementById("main").style.width = widthstr;
       height = this.TraditionalPlan2B3B4BMaxCourses*100 + 440;
       heightstr = height.toString() + "px";
       document.getElementById("main").style.height = heightstr;
@@ -558,8 +566,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.AlternatePlan3A4AList.length; i++) {
           this.AlternatePlan3A4AList[i][0].show(true);
       }
-      width = this.AlternatePlan3A4ATerms*220 + 25;
+      width = this.AlternatePlan3A4ATerms*220 + 20;
       widthstr = width.toString() + "px";
+      document.getElementById("main").style.width = widthstr;
       height = this.AlternatePlan3A4AMaxCourses*100 + 440;
       heightstr = height.toString() + "px";
       document.getElementById("main").style.height = heightstr;
@@ -589,8 +598,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.CoopPlan13AList.length; i++) {
           this.CoopPlan13AList[i][0].show(true);
       }
-      width = this.CoopPlan13ATerms*220 + 25;
+      width = this.CoopPlan13ATerms*220 + 20;
       widthstr = width.toString() + "px";
+      document.getElementById("main").style.width = widthstr;
       height = this.CoopPlan13AMaxCourses*100 + 440;
       heightstr = height.toString() + "px";
       document.getElementById("main").style.height = heightstr;
@@ -620,8 +630,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.CoopPlan13BList.length; i++) {
           this.CoopPlan13BList[i][0].show(true);
       }
-      width = this.CoopPlan13BTerms*220 + 25;
+      width = this.CoopPlan13BTerms*220 + 20;
       widthstr = width.toString() + "px";
+      document.getElementById("main").style.width = widthstr;
       height = this.CoopPlan13BMaxCourses*100 + 440;
       heightstr = height.toString() + "px";
       document.getElementById("main").style.height = heightstr;
@@ -651,8 +662,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.CoopPlan2List.length; i++) {
           this.CoopPlan2List[i][0].show(true);
       }
-      width = this.CoopPlan2Terms*220 + 25;
+      width = this.CoopPlan2Terms*220 + 20;
       widthstr = width.toString() + "px";
+      document.getElementById("main").style.width = widthstr;
       height = this.CoopPlan2MaxCourses*100 + 440;
       heightstr = height.toString() + "px";
       document.getElementById("main").style.height = heightstr;
@@ -682,8 +694,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.CoopPlan3BiomedicalList.length; i++) {
           this.CoopPlan3BiomedicalList[i][0].show(true);
       }
-      width = this.CoopPlan3BiomedicalTerms*220 + 25;
+      width = this.CoopPlan3BiomedicalTerms*220 + 20;
       widthstr = width.toString() + "px";
+      document.getElementById("main").style.width = widthstr;
       height = this.CoopPlan3BiomedicalMaxCourses*100 + 440;
       heightstr = height.toString() + "px";
       document.getElementById("main").style.height = heightstr;
@@ -713,8 +726,9 @@ this.enable = function(plan) {
       for (let i = 0; i < this.CoopPlan4List.length; i++) {
           this.CoopPlan4List[i][0].show(true);
       }
-      width = this.CoopPlan4Terms*220 + 25;
+      width = this.CoopPlan4Terms*220 + 20;
       widthstr = width.toString() + "px";
+      document.getElementById("main").style.width = widthstr;
       height = this.CoopPlan4MaxCourses*100 + 440;
       heightstr = height.toString() + "px";
       document.getElementById("main").style.height = heightstr;

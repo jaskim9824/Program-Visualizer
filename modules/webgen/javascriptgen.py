@@ -143,8 +143,9 @@ def generateEnableSwitchStatement(sequenceDict, controller):
       for (let i = 0; i < this.{planName}List.length; i++) {{
           this.{planName}List[i][0].{actionName}(true);
       }}
-      width = this.{planName}Terms*220 + 25;
+      width = this.{planName}Terms*220 + 20;
       widthstr = width.toString() + "px";
+      document.getElementById("main").style.width = widthstr;
       height = this.{planName}MaxCourses*100 + 440;
       heightstr = height.toString() + "px";
       document.getElementById("main").style.height = heightstr;

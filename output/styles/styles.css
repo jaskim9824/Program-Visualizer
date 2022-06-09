@@ -218,8 +218,9 @@ label {
 /* Term header styling */
 .termheader {
     margin-bottom: 15px;
+    width: 125%;
     text-align: center;
-    font-size: 125%;
+    font-size: 115%;
 }
 
 /* Contains one (or two if an "or" option) course */
@@ -240,7 +241,7 @@ label {
 .embed {
     text-align: center;
     position: relative;
-    bottom: 3px;
+    bottom: 4px;
 }
       
 /* Course box styling */
@@ -288,8 +289,12 @@ p.ortext {
 
 /* Program elective box, taller to fit text */
 .PROG, .PROG-highlighted {
-    font-size: 90%;
     height: 80px;
+}
+
+/* Fits better if text is scaled */
+.PROG .embed {
+    font-size: 110%;
 }
 
 /* Default course hover */
