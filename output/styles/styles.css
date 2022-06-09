@@ -293,7 +293,7 @@ p.ortext {
 }
 
 /* Fits better if text is scaled */
-.PROG .embed {
+.PROG .embed, .PROG-highlighted .embed {
     font-size: 110%;
 }
 
