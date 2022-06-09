@@ -213,8 +213,34 @@ def placeRightClickListeners(courseList, controller, plan):
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }\n"""
+
+    compcounter = 0
+    progcounter = 0
+    itscounter = 0
+
     for course in courseList:
-        courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan)
+        courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan) 
+        courseContClass = course.category.replace(" ", "")
+
+        # program and tech elective
+        if (courseContClass == "Program/TechnicalElective"):
+                courseContClass = "PROG"
+                courseID += str(progcounter)
+                progcounter += 1
+        # comp elective
+        elif (courseContClass == "ComplementaryElective"):
+                courseContClass = "COMP"
+                courseID += str(compcounter)
+                compcounter += 1
+        # its elective
+        elif (courseContClass == "ITSElective"):
+                courseContClass = "ITS"
+                courseID += str(itscounter)
+                itscounter += 1
+        # for course with no category, use default colour
+        elif (courseContClass == ""):
+                courseContClass = "course"
+
         controller.write(formattedListener.format(courseName=courseID))
         controller.write(formattedElementGetter.format(courseName=courseID))
         controller.write(formattedClickIf.format(courseName=courseID))

@@ -288,8 +288,8 @@ p.ortext {
 
 /* Program elective box, taller to fit text */
 .PROG, .PROG-highlighted {
-    font-size:90%;
-    height:80px;
+    font-size: 90%;
+    height: 80px;
 }
 
 /* Default course hover */

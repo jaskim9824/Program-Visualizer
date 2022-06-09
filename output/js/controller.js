@@ -13243,9 +13243,9 @@ $scope.MECE390TraditionalPlan2A3A4ARCListener = function () {
       MECE390TraditionalPlan2A3A4Arflag=false
   }
 };
-$scope.ComplementaryElectiveTraditionalPlan2A3A4ARCListener = function () {
-  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2A3A4Adesc");
- if (!ComplementaryElectiveTraditionalPlan2A3A4Arflag) {
+$scope.ComplementaryElectiveTraditionalPlan2A3A4A0RCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2A3A4A0desc");
+ if (!ComplementaryElectiveTraditionalPlan2A3A4A0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -13253,7 +13253,7 @@ $scope.ComplementaryElectiveTraditionalPlan2A3A4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ComplementaryElectiveTraditionalPlan2A3A4Arflag=true
+      ComplementaryElectiveTraditionalPlan2A3A4A0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -13263,7 +13263,7 @@ $scope.ComplementaryElectiveTraditionalPlan2A3A4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ComplementaryElectiveTraditionalPlan2A3A4Arflag=false
+      ComplementaryElectiveTraditionalPlan2A3A4A0rflag=false
   }
 };
 $scope.ENGG404TraditionalPlan2A3A4ARCListener = function () {
@@ -13358,9 +13358,9 @@ $scope.MECE463TraditionalPlan2A3A4ARCListener = function () {
       MECE463TraditionalPlan2A3A4Arflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4Adesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A0RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4A0desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3A4A0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -13368,7 +13368,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag=true
+      ProgramTechnicalElectiveTraditionalPlan2A3A4A0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -13378,12 +13378,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag=false
+      ProgramTechnicalElectiveTraditionalPlan2A3A4A0rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4Adesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A1RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4A1desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3A4A1rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -13391,7 +13391,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag=true
+      ProgramTechnicalElectiveTraditionalPlan2A3A4A1rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -13401,12 +13401,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag=false
+      ProgramTechnicalElectiveTraditionalPlan2A3A4A1rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4Adesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A2RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4A2desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3A4A2rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -13414,7 +13414,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag=true
+      ProgramTechnicalElectiveTraditionalPlan2A3A4A2rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -13424,7 +13424,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag=false
+      ProgramTechnicalElectiveTraditionalPlan2A3A4A2rflag=false
   }
 };
 $scope.CHE448TraditionalPlan2A3A4ARCListener = function () {
@@ -13565,9 +13565,9 @@ $scope.MECE460TraditionalPlan2A3A4ARCListener = function () {
       MECE460TraditionalPlan2A3A4Arflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4Adesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A3RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4A3desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3A4A3rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -13575,7 +13575,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag=true
+      ProgramTechnicalElectiveTraditionalPlan2A3A4A3rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -13585,12 +13585,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag=false
+      ProgramTechnicalElectiveTraditionalPlan2A3A4A3rflag=false
   }
 };
-$scope.ITSElectiveTraditionalPlan2A3A4ARCListener = function () {
-  var element = document.getElementById("ITSElectiveTraditionalPlan2A3A4Adesc");
- if (!ITSElectiveTraditionalPlan2A3A4Arflag) {
+$scope.ITSElectiveTraditionalPlan2A3A4A0RCListener = function () {
+  var element = document.getElementById("ITSElectiveTraditionalPlan2A3A4A0desc");
+ if (!ITSElectiveTraditionalPlan2A3A4A0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -13598,7 +13598,7 @@ $scope.ITSElectiveTraditionalPlan2A3A4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ITSElectiveTraditionalPlan2A3A4Arflag=true
+      ITSElectiveTraditionalPlan2A3A4A0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -13608,7 +13608,7 @@ $scope.ITSElectiveTraditionalPlan2A3A4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ITSElectiveTraditionalPlan2A3A4Arflag=false
+      ITSElectiveTraditionalPlan2A3A4A0rflag=false
   }
 };
   var CHEM103TraditionalPlan2A3A4Bflag = false;
@@ -16179,9 +16179,9 @@ $scope.MECE390TraditionalPlan2A3A4BRCListener = function () {
       MECE390TraditionalPlan2A3A4Brflag=false
   }
 };
-$scope.ComplementaryElectiveTraditionalPlan2A3A4BRCListener = function () {
-  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2A3A4Bdesc");
- if (!ComplementaryElectiveTraditionalPlan2A3A4Brflag) {
+$scope.ComplementaryElectiveTraditionalPlan2A3A4B0RCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2A3A4B0desc");
+ if (!ComplementaryElectiveTraditionalPlan2A3A4B0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -16189,7 +16189,7 @@ $scope.ComplementaryElectiveTraditionalPlan2A3A4BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ComplementaryElectiveTraditionalPlan2A3A4Brflag=true
+      ComplementaryElectiveTraditionalPlan2A3A4B0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -16199,7 +16199,7 @@ $scope.ComplementaryElectiveTraditionalPlan2A3A4BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ComplementaryElectiveTraditionalPlan2A3A4Brflag=false
+      ComplementaryElectiveTraditionalPlan2A3A4B0rflag=false
   }
 };
 $scope.CHE448TraditionalPlan2A3A4BRCListener = function () {
@@ -16340,9 +16340,9 @@ $scope.MECE460TraditionalPlan2A3A4BRCListener = function () {
       MECE460TraditionalPlan2A3A4Brflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4BRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4Bdesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4B0RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4B0desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3A4B0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -16350,7 +16350,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag=true
+      ProgramTechnicalElectiveTraditionalPlan2A3A4B0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -16360,7 +16360,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag=false
+      ProgramTechnicalElectiveTraditionalPlan2A3A4B0rflag=false
   }
 };
 $scope.ENGG404TraditionalPlan2A3A4BRCListener = function () {
@@ -16455,9 +16455,9 @@ $scope.MECE463TraditionalPlan2A3A4BRCListener = function () {
       MECE463TraditionalPlan2A3A4Brflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4BRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4Bdesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4B1RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4B1desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3A4B1rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -16465,7 +16465,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag=true
+      ProgramTechnicalElectiveTraditionalPlan2A3A4B1rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -16475,12 +16475,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag=false
+      ProgramTechnicalElectiveTraditionalPlan2A3A4B1rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4BRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4Bdesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4B2RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4B2desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3A4B2rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -16488,7 +16488,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag=true
+      ProgramTechnicalElectiveTraditionalPlan2A3A4B2rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -16498,12 +16498,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag=false
+      ProgramTechnicalElectiveTraditionalPlan2A3A4B2rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4BRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4Bdesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4B3RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4B3desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3A4B3rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -16511,7 +16511,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag=true
+      ProgramTechnicalElectiveTraditionalPlan2A3A4B3rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -16521,7 +16521,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag=false
+      ProgramTechnicalElectiveTraditionalPlan2A3A4B3rflag=false
   }
 };
   var CHEM103TraditionalPlan2A3B4Aflag = false;
@@ -18954,9 +18954,9 @@ $scope.MECE390TraditionalPlan2A3B4ARCListener = function () {
       MECE390TraditionalPlan2A3B4Arflag=false
   }
 };
-$scope.ComplementaryElectiveTraditionalPlan2A3B4ARCListener = function () {
-  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2A3B4Adesc");
- if (!ComplementaryElectiveTraditionalPlan2A3B4Arflag) {
+$scope.ComplementaryElectiveTraditionalPlan2A3B4A0RCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2A3B4A0desc");
+ if (!ComplementaryElectiveTraditionalPlan2A3B4A0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -18964,7 +18964,7 @@ $scope.ComplementaryElectiveTraditionalPlan2A3B4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ComplementaryElectiveTraditionalPlan2A3B4Arflag=true
+      ComplementaryElectiveTraditionalPlan2A3B4A0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -18974,7 +18974,7 @@ $scope.ComplementaryElectiveTraditionalPlan2A3B4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ComplementaryElectiveTraditionalPlan2A3B4Arflag=false
+      ComplementaryElectiveTraditionalPlan2A3B4A0rflag=false
   }
 };
 $scope.MATH300TraditionalPlan2A3B4ARCListener = function () {
@@ -19207,9 +19207,9 @@ $scope.MECE463TraditionalPlan2A3B4ARCListener = function () {
       MECE463TraditionalPlan2A3B4Arflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4Adesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4A0RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4A0desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3B4A0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -19217,7 +19217,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag=true
+      ProgramTechnicalElectiveTraditionalPlan2A3B4A0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -19227,12 +19227,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag=false
+      ProgramTechnicalElectiveTraditionalPlan2A3B4A0rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4Adesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4A1RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4A1desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3B4A1rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -19240,7 +19240,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag=true
+      ProgramTechnicalElectiveTraditionalPlan2A3B4A1rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -19250,12 +19250,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag=false
+      ProgramTechnicalElectiveTraditionalPlan2A3B4A1rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4Adesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4A2RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4A2desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3B4A2rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -19263,7 +19263,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag=true
+      ProgramTechnicalElectiveTraditionalPlan2A3B4A2rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -19273,7 +19273,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag=false
+      ProgramTechnicalElectiveTraditionalPlan2A3B4A2rflag=false
   }
 };
 $scope.CHE448TraditionalPlan2A3B4ARCListener = function () {
@@ -19414,9 +19414,9 @@ $scope.MECE460TraditionalPlan2A3B4ARCListener = function () {
       MECE460TraditionalPlan2A3B4Arflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4Adesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4A3RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4A3desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3B4A3rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -19424,7 +19424,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag=true
+      ProgramTechnicalElectiveTraditionalPlan2A3B4A3rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -19434,7 +19434,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag=false
+      ProgramTechnicalElectiveTraditionalPlan2A3B4A3rflag=false
   }
 };
   var CHEM103TraditionalPlan2A3B4Bflag = false;
@@ -21867,9 +21867,9 @@ $scope.MECE390TraditionalPlan2A3B4BRCListener = function () {
       MECE390TraditionalPlan2A3B4Brflag=false
   }
 };
-$scope.ComplementaryElectiveTraditionalPlan2A3B4BRCListener = function () {
-  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2A3B4Bdesc");
- if (!ComplementaryElectiveTraditionalPlan2A3B4Brflag) {
+$scope.ComplementaryElectiveTraditionalPlan2A3B4B0RCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2A3B4B0desc");
+ if (!ComplementaryElectiveTraditionalPlan2A3B4B0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -21877,7 +21877,7 @@ $scope.ComplementaryElectiveTraditionalPlan2A3B4BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ComplementaryElectiveTraditionalPlan2A3B4Brflag=true
+      ComplementaryElectiveTraditionalPlan2A3B4B0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -21887,7 +21887,7 @@ $scope.ComplementaryElectiveTraditionalPlan2A3B4BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ComplementaryElectiveTraditionalPlan2A3B4Brflag=false
+      ComplementaryElectiveTraditionalPlan2A3B4B0rflag=false
   }
 };
 $scope.MATH300TraditionalPlan2A3B4BRCListener = function () {
@@ -22166,9 +22166,9 @@ $scope.MECE460TraditionalPlan2A3B4BRCListener = function () {
       MECE460TraditionalPlan2A3B4Brflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4BRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4Bdesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4B0RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4B0desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3B4B0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -22176,7 +22176,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag=true
+      ProgramTechnicalElectiveTraditionalPlan2A3B4B0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -22186,7 +22186,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag=false
+      ProgramTechnicalElectiveTraditionalPlan2A3B4B0rflag=false
   }
 };
 $scope.ENGG404TraditionalPlan2A3B4BRCListener = function () {
@@ -22281,9 +22281,9 @@ $scope.MECE463TraditionalPlan2A3B4BRCListener = function () {
       MECE463TraditionalPlan2A3B4Brflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4BRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4Bdesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4B1RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4B1desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3B4B1rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -22291,7 +22291,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag=true
+      ProgramTechnicalElectiveTraditionalPlan2A3B4B1rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -22301,12 +22301,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag=false
+      ProgramTechnicalElectiveTraditionalPlan2A3B4B1rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4BRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4Bdesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4B2RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4B2desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3B4B2rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -22314,7 +22314,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag=true
+      ProgramTechnicalElectiveTraditionalPlan2A3B4B2rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -22324,12 +22324,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag=false
+      ProgramTechnicalElectiveTraditionalPlan2A3B4B2rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4BRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4Bdesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4B3RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4B3desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3B4B3rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -22337,7 +22337,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag=true
+      ProgramTechnicalElectiveTraditionalPlan2A3B4B3rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -22347,7 +22347,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag=false
+      ProgramTechnicalElectiveTraditionalPlan2A3B4B3rflag=false
   }
 };
   var CHEM103TraditionalPlan2B3A4Aflag = false;
@@ -24918,9 +24918,9 @@ $scope.MECE390TraditionalPlan2B3A4ARCListener = function () {
       MECE390TraditionalPlan2B3A4Arflag=false
   }
 };
-$scope.ComplementaryElectiveTraditionalPlan2B3A4ARCListener = function () {
-  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2B3A4Adesc");
- if (!ComplementaryElectiveTraditionalPlan2B3A4Arflag) {
+$scope.ComplementaryElectiveTraditionalPlan2B3A4A0RCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2B3A4A0desc");
+ if (!ComplementaryElectiveTraditionalPlan2B3A4A0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -24928,7 +24928,7 @@ $scope.ComplementaryElectiveTraditionalPlan2B3A4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ComplementaryElectiveTraditionalPlan2B3A4Arflag=true
+      ComplementaryElectiveTraditionalPlan2B3A4A0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -24938,7 +24938,7 @@ $scope.ComplementaryElectiveTraditionalPlan2B3A4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ComplementaryElectiveTraditionalPlan2B3A4Arflag=false
+      ComplementaryElectiveTraditionalPlan2B3A4A0rflag=false
   }
 };
 $scope.ENGG404TraditionalPlan2B3A4ARCListener = function () {
@@ -25033,9 +25033,9 @@ $scope.MECE463TraditionalPlan2B3A4ARCListener = function () {
       MECE463TraditionalPlan2B3A4Arflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4Adesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4A0RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4A0desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3A4A0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -25043,7 +25043,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag=true
+      ProgramTechnicalElectiveTraditionalPlan2B3A4A0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -25053,12 +25053,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag=false
+      ProgramTechnicalElectiveTraditionalPlan2B3A4A0rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4Adesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4A1RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4A1desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3A4A1rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -25066,7 +25066,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag=true
+      ProgramTechnicalElectiveTraditionalPlan2B3A4A1rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -25076,12 +25076,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag=false
+      ProgramTechnicalElectiveTraditionalPlan2B3A4A1rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4Adesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4A2RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4A2desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3A4A2rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -25089,7 +25089,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag=true
+      ProgramTechnicalElectiveTraditionalPlan2B3A4A2rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -25099,7 +25099,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag=false
+      ProgramTechnicalElectiveTraditionalPlan2B3A4A2rflag=false
   }
 };
 $scope.CHE448TraditionalPlan2B3A4ARCListener = function () {
@@ -25240,9 +25240,9 @@ $scope.MECE460TraditionalPlan2B3A4ARCListener = function () {
       MECE460TraditionalPlan2B3A4Arflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4Adesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4A3RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4A3desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3A4A3rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -25250,7 +25250,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag=true
+      ProgramTechnicalElectiveTraditionalPlan2B3A4A3rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -25260,7 +25260,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag=false
+      ProgramTechnicalElectiveTraditionalPlan2B3A4A3rflag=false
   }
 };
   var CHEM103TraditionalPlan2B3A4Bflag = false;
@@ -27831,9 +27831,9 @@ $scope.MECE390TraditionalPlan2B3A4BRCListener = function () {
       MECE390TraditionalPlan2B3A4Brflag=false
   }
 };
-$scope.ComplementaryElectiveTraditionalPlan2B3A4BRCListener = function () {
-  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2B3A4Bdesc");
- if (!ComplementaryElectiveTraditionalPlan2B3A4Brflag) {
+$scope.ComplementaryElectiveTraditionalPlan2B3A4B0RCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2B3A4B0desc");
+ if (!ComplementaryElectiveTraditionalPlan2B3A4B0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -27841,7 +27841,7 @@ $scope.ComplementaryElectiveTraditionalPlan2B3A4BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ComplementaryElectiveTraditionalPlan2B3A4Brflag=true
+      ComplementaryElectiveTraditionalPlan2B3A4B0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -27851,7 +27851,7 @@ $scope.ComplementaryElectiveTraditionalPlan2B3A4BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ComplementaryElectiveTraditionalPlan2B3A4Brflag=false
+      ComplementaryElectiveTraditionalPlan2B3A4B0rflag=false
   }
 };
 $scope.CHE448TraditionalPlan2B3A4BRCListener = function () {
@@ -27992,9 +27992,9 @@ $scope.MECE460TraditionalPlan2B3A4BRCListener = function () {
       MECE460TraditionalPlan2B3A4Brflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4BRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4Bdesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4B0RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4B0desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3A4B0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -28002,7 +28002,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag=true
+      ProgramTechnicalElectiveTraditionalPlan2B3A4B0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -28012,7 +28012,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag=false
+      ProgramTechnicalElectiveTraditionalPlan2B3A4B0rflag=false
   }
 };
 $scope.ENGG404TraditionalPlan2B3A4BRCListener = function () {
@@ -28107,9 +28107,9 @@ $scope.MECE463TraditionalPlan2B3A4BRCListener = function () {
       MECE463TraditionalPlan2B3A4Brflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4BRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4Bdesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4B1RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4B1desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3A4B1rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -28117,7 +28117,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag=true
+      ProgramTechnicalElectiveTraditionalPlan2B3A4B1rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -28127,12 +28127,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag=false
+      ProgramTechnicalElectiveTraditionalPlan2B3A4B1rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4BRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4Bdesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4B2RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4B2desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3A4B2rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -28140,7 +28140,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag=true
+      ProgramTechnicalElectiveTraditionalPlan2B3A4B2rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -28150,12 +28150,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag=false
+      ProgramTechnicalElectiveTraditionalPlan2B3A4B2rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4BRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4Bdesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4B3RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4B3desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3A4B3rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -28163,7 +28163,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag=true
+      ProgramTechnicalElectiveTraditionalPlan2B3A4B3rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -28173,7 +28173,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag=false
+      ProgramTechnicalElectiveTraditionalPlan2B3A4B3rflag=false
   }
 };
   var CHEM103TraditionalPlan2B3B4Aflag = false;
@@ -30606,9 +30606,9 @@ $scope.MECE390TraditionalPlan2B3B4ARCListener = function () {
       MECE390TraditionalPlan2B3B4Arflag=false
   }
 };
-$scope.ComplementaryElectiveTraditionalPlan2B3B4ARCListener = function () {
-  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2B3B4Adesc");
- if (!ComplementaryElectiveTraditionalPlan2B3B4Arflag) {
+$scope.ComplementaryElectiveTraditionalPlan2B3B4A0RCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2B3B4A0desc");
+ if (!ComplementaryElectiveTraditionalPlan2B3B4A0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -30616,7 +30616,7 @@ $scope.ComplementaryElectiveTraditionalPlan2B3B4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ComplementaryElectiveTraditionalPlan2B3B4Arflag=true
+      ComplementaryElectiveTraditionalPlan2B3B4A0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -30626,7 +30626,7 @@ $scope.ComplementaryElectiveTraditionalPlan2B3B4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ComplementaryElectiveTraditionalPlan2B3B4Arflag=false
+      ComplementaryElectiveTraditionalPlan2B3B4A0rflag=false
   }
 };
 $scope.MATH300TraditionalPlan2B3B4ARCListener = function () {
@@ -30859,9 +30859,9 @@ $scope.MECE463TraditionalPlan2B3B4ARCListener = function () {
       MECE463TraditionalPlan2B3B4Arflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4Adesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4A0RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4A0desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3B4A0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -30869,7 +30869,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag=true
+      ProgramTechnicalElectiveTraditionalPlan2B3B4A0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -30879,12 +30879,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag=false
+      ProgramTechnicalElectiveTraditionalPlan2B3B4A0rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4Adesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4A1RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4A1desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3B4A1rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -30892,7 +30892,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag=true
+      ProgramTechnicalElectiveTraditionalPlan2B3B4A1rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -30902,12 +30902,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag=false
+      ProgramTechnicalElectiveTraditionalPlan2B3B4A1rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4Adesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4A2RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4A2desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3B4A2rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -30915,7 +30915,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag=true
+      ProgramTechnicalElectiveTraditionalPlan2B3B4A2rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -30925,7 +30925,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag=false
+      ProgramTechnicalElectiveTraditionalPlan2B3B4A2rflag=false
   }
 };
 $scope.CHE448TraditionalPlan2B3B4ARCListener = function () {
@@ -31066,9 +31066,9 @@ $scope.MECE460TraditionalPlan2B3B4ARCListener = function () {
       MECE460TraditionalPlan2B3B4Arflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4Adesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4A3RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4A3desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3B4A3rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -31076,7 +31076,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag=true
+      ProgramTechnicalElectiveTraditionalPlan2B3B4A3rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -31086,7 +31086,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag=false
+      ProgramTechnicalElectiveTraditionalPlan2B3B4A3rflag=false
   }
 };
   var CHEM103TraditionalPlan2B3B4Bflag = false;
@@ -33519,9 +33519,9 @@ $scope.MECE390TraditionalPlan2B3B4BRCListener = function () {
       MECE390TraditionalPlan2B3B4Brflag=false
   }
 };
-$scope.ComplementaryElectiveTraditionalPlan2B3B4BRCListener = function () {
-  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2B3B4Bdesc");
- if (!ComplementaryElectiveTraditionalPlan2B3B4Brflag) {
+$scope.ComplementaryElectiveTraditionalPlan2B3B4B0RCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2B3B4B0desc");
+ if (!ComplementaryElectiveTraditionalPlan2B3B4B0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -33529,7 +33529,7 @@ $scope.ComplementaryElectiveTraditionalPlan2B3B4BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ComplementaryElectiveTraditionalPlan2B3B4Brflag=true
+      ComplementaryElectiveTraditionalPlan2B3B4B0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -33539,7 +33539,7 @@ $scope.ComplementaryElectiveTraditionalPlan2B3B4BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ComplementaryElectiveTraditionalPlan2B3B4Brflag=false
+      ComplementaryElectiveTraditionalPlan2B3B4B0rflag=false
   }
 };
 $scope.MATH300TraditionalPlan2B3B4BRCListener = function () {
@@ -33818,9 +33818,9 @@ $scope.MECE460TraditionalPlan2B3B4BRCListener = function () {
       MECE460TraditionalPlan2B3B4Brflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4BRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4Bdesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4B0RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4B0desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3B4B0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -33828,7 +33828,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag=true
+      ProgramTechnicalElectiveTraditionalPlan2B3B4B0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -33838,7 +33838,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag=false
+      ProgramTechnicalElectiveTraditionalPlan2B3B4B0rflag=false
   }
 };
 $scope.ENGG404TraditionalPlan2B3B4BRCListener = function () {
@@ -33933,9 +33933,9 @@ $scope.MECE463TraditionalPlan2B3B4BRCListener = function () {
       MECE463TraditionalPlan2B3B4Brflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4BRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4Bdesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4B1RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4B1desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3B4B1rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -33943,7 +33943,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag=true
+      ProgramTechnicalElectiveTraditionalPlan2B3B4B1rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -33953,12 +33953,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag=false
+      ProgramTechnicalElectiveTraditionalPlan2B3B4B1rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4BRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4Bdesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4B2RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4B2desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3B4B2rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -33966,7 +33966,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag=true
+      ProgramTechnicalElectiveTraditionalPlan2B3B4B2rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -33976,12 +33976,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag=false
+      ProgramTechnicalElectiveTraditionalPlan2B3B4B2rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4BRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4Bdesc");
- if (!ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag) {
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4B3RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4B3desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3B4B3rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -33989,7 +33989,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag=true
+      ProgramTechnicalElectiveTraditionalPlan2B3B4B3rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -33999,7 +33999,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag=false
+      ProgramTechnicalElectiveTraditionalPlan2B3B4B3rflag=false
   }
 };
   var CHEM103AlternatePlan3A4Aflag = false;
@@ -36161,9 +36161,9 @@ $scope.MATH209AlternatePlan3A4ARCListener = function () {
       MATH209AlternatePlan3A4Arflag=false
   }
 };
-$scope.ComplementaryElectiveAlternatePlan3A4ARCListener = function () {
-  var element = document.getElementById("ComplementaryElectiveAlternatePlan3A4Adesc");
- if (!ComplementaryElectiveAlternatePlan3A4Arflag) {
+$scope.ComplementaryElectiveAlternatePlan3A4A0RCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveAlternatePlan3A4A0desc");
+ if (!ComplementaryElectiveAlternatePlan3A4A0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -36171,7 +36171,7 @@ $scope.ComplementaryElectiveAlternatePlan3A4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ComplementaryElectiveAlternatePlan3A4Arflag=true
+      ComplementaryElectiveAlternatePlan3A4A0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -36181,12 +36181,12 @@ $scope.ComplementaryElectiveAlternatePlan3A4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ComplementaryElectiveAlternatePlan3A4Arflag=false
+      ComplementaryElectiveAlternatePlan3A4A0rflag=false
   }
 };
-$scope.ITSElectiveAlternatePlan3A4ARCListener = function () {
-  var element = document.getElementById("ITSElectiveAlternatePlan3A4Adesc");
- if (!ITSElectiveAlternatePlan3A4Arflag) {
+$scope.ITSElectiveAlternatePlan3A4A0RCListener = function () {
+  var element = document.getElementById("ITSElectiveAlternatePlan3A4A0desc");
+ if (!ITSElectiveAlternatePlan3A4A0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -36194,7 +36194,7 @@ $scope.ITSElectiveAlternatePlan3A4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ITSElectiveAlternatePlan3A4Arflag=true
+      ITSElectiveAlternatePlan3A4A0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -36204,7 +36204,7 @@ $scope.ITSElectiveAlternatePlan3A4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ITSElectiveAlternatePlan3A4Arflag=false
+      ITSElectiveAlternatePlan3A4A0rflag=false
   }
 };
 $scope.CIVE270AlternatePlan3A4ARCListener = function () {
@@ -36667,9 +36667,9 @@ $scope.MECE390AlternatePlan3A4ARCListener = function () {
       MECE390AlternatePlan3A4Arflag=false
   }
 };
-$scope.ProgramTechnicalElectiveAlternatePlan3A4ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3A4Adesc");
- if (!ProgramTechnicalElectiveAlternatePlan3A4Arflag) {
+$scope.ProgramTechnicalElectiveAlternatePlan3A4A0RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3A4A0desc");
+ if (!ProgramTechnicalElectiveAlternatePlan3A4A0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -36677,7 +36677,7 @@ $scope.ProgramTechnicalElectiveAlternatePlan3A4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveAlternatePlan3A4Arflag=true
+      ProgramTechnicalElectiveAlternatePlan3A4A0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -36687,7 +36687,7 @@ $scope.ProgramTechnicalElectiveAlternatePlan3A4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveAlternatePlan3A4Arflag=false
+      ProgramTechnicalElectiveAlternatePlan3A4A0rflag=false
   }
 };
 $scope.MECE430AlternatePlan3A4ARCListener = function () {
@@ -36759,9 +36759,9 @@ $scope.MECE463AlternatePlan3A4ARCListener = function () {
       MECE463AlternatePlan3A4Arflag=false
   }
 };
-$scope.ProgramTechnicalElectiveAlternatePlan3A4ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3A4Adesc");
- if (!ProgramTechnicalElectiveAlternatePlan3A4Arflag) {
+$scope.ProgramTechnicalElectiveAlternatePlan3A4A1RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3A4A1desc");
+ if (!ProgramTechnicalElectiveAlternatePlan3A4A1rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -36769,7 +36769,7 @@ $scope.ProgramTechnicalElectiveAlternatePlan3A4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveAlternatePlan3A4Arflag=true
+      ProgramTechnicalElectiveAlternatePlan3A4A1rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -36779,12 +36779,12 @@ $scope.ProgramTechnicalElectiveAlternatePlan3A4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveAlternatePlan3A4Arflag=false
+      ProgramTechnicalElectiveAlternatePlan3A4A1rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveAlternatePlan3A4ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3A4Adesc");
- if (!ProgramTechnicalElectiveAlternatePlan3A4Arflag) {
+$scope.ProgramTechnicalElectiveAlternatePlan3A4A2RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3A4A2desc");
+ if (!ProgramTechnicalElectiveAlternatePlan3A4A2rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -36792,7 +36792,7 @@ $scope.ProgramTechnicalElectiveAlternatePlan3A4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveAlternatePlan3A4Arflag=true
+      ProgramTechnicalElectiveAlternatePlan3A4A2rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -36802,12 +36802,12 @@ $scope.ProgramTechnicalElectiveAlternatePlan3A4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveAlternatePlan3A4Arflag=false
+      ProgramTechnicalElectiveAlternatePlan3A4A2rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveAlternatePlan3A4ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3A4Adesc");
- if (!ProgramTechnicalElectiveAlternatePlan3A4Arflag) {
+$scope.ProgramTechnicalElectiveAlternatePlan3A4A3RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3A4A3desc");
+ if (!ProgramTechnicalElectiveAlternatePlan3A4A3rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -36815,7 +36815,7 @@ $scope.ProgramTechnicalElectiveAlternatePlan3A4ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveAlternatePlan3A4Arflag=true
+      ProgramTechnicalElectiveAlternatePlan3A4A3rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -36825,7 +36825,7 @@ $scope.ProgramTechnicalElectiveAlternatePlan3A4ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveAlternatePlan3A4Arflag=false
+      ProgramTechnicalElectiveAlternatePlan3A4A3rflag=false
   }
 };
 $scope.CHE448AlternatePlan3A4ARCListener = function () {
@@ -39865,9 +39865,9 @@ $scope.MECE390CoopPlan13ARCListener = function () {
       MECE390CoopPlan13Arflag=false
   }
 };
-$scope.ComplementaryElectiveCoopPlan13ARCListener = function () {
-  var element = document.getElementById("ComplementaryElectiveCoopPlan13Adesc");
- if (!ComplementaryElectiveCoopPlan13Arflag) {
+$scope.ComplementaryElectiveCoopPlan13A0RCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveCoopPlan13A0desc");
+ if (!ComplementaryElectiveCoopPlan13A0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -39875,7 +39875,7 @@ $scope.ComplementaryElectiveCoopPlan13ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ComplementaryElectiveCoopPlan13Arflag=true
+      ComplementaryElectiveCoopPlan13A0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -39885,7 +39885,7 @@ $scope.ComplementaryElectiveCoopPlan13ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ComplementaryElectiveCoopPlan13Arflag=false
+      ComplementaryElectiveCoopPlan13A0rflag=false
   }
 };
 $scope.ENGG404CoopPlan13ARCListener = function () {
@@ -39980,9 +39980,9 @@ $scope.MECE463CoopPlan13ARCListener = function () {
       MECE463CoopPlan13Arflag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan13ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13Adesc");
- if (!ProgramTechnicalElectiveCoopPlan13Arflag) {
+$scope.ProgramTechnicalElectiveCoopPlan13A0RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13A0desc");
+ if (!ProgramTechnicalElectiveCoopPlan13A0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -39990,7 +39990,7 @@ $scope.ProgramTechnicalElectiveCoopPlan13ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveCoopPlan13Arflag=true
+      ProgramTechnicalElectiveCoopPlan13A0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -40000,12 +40000,12 @@ $scope.ProgramTechnicalElectiveCoopPlan13ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveCoopPlan13Arflag=false
+      ProgramTechnicalElectiveCoopPlan13A0rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan13ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13Adesc");
- if (!ProgramTechnicalElectiveCoopPlan13Arflag) {
+$scope.ProgramTechnicalElectiveCoopPlan13A1RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13A1desc");
+ if (!ProgramTechnicalElectiveCoopPlan13A1rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -40013,7 +40013,7 @@ $scope.ProgramTechnicalElectiveCoopPlan13ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveCoopPlan13Arflag=true
+      ProgramTechnicalElectiveCoopPlan13A1rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -40023,12 +40023,12 @@ $scope.ProgramTechnicalElectiveCoopPlan13ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveCoopPlan13Arflag=false
+      ProgramTechnicalElectiveCoopPlan13A1rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan13ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13Adesc");
- if (!ProgramTechnicalElectiveCoopPlan13Arflag) {
+$scope.ProgramTechnicalElectiveCoopPlan13A2RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13A2desc");
+ if (!ProgramTechnicalElectiveCoopPlan13A2rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -40036,7 +40036,7 @@ $scope.ProgramTechnicalElectiveCoopPlan13ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveCoopPlan13Arflag=true
+      ProgramTechnicalElectiveCoopPlan13A2rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -40046,7 +40046,7 @@ $scope.ProgramTechnicalElectiveCoopPlan13ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveCoopPlan13Arflag=false
+      ProgramTechnicalElectiveCoopPlan13A2rflag=false
   }
 };
 $scope.WKEXP905CoopPlan13ARCListener = function () {
@@ -40210,9 +40210,9 @@ $scope.MECE460CoopPlan13ARCListener = function () {
       MECE460CoopPlan13Arflag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan13ARCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13Adesc");
- if (!ProgramTechnicalElectiveCoopPlan13Arflag) {
+$scope.ProgramTechnicalElectiveCoopPlan13A3RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13A3desc");
+ if (!ProgramTechnicalElectiveCoopPlan13A3rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -40220,7 +40220,7 @@ $scope.ProgramTechnicalElectiveCoopPlan13ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveCoopPlan13Arflag=true
+      ProgramTechnicalElectiveCoopPlan13A3rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -40230,12 +40230,12 @@ $scope.ProgramTechnicalElectiveCoopPlan13ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveCoopPlan13Arflag=false
+      ProgramTechnicalElectiveCoopPlan13A3rflag=false
   }
 };
-$scope.ITSElectiveCoopPlan13ARCListener = function () {
-  var element = document.getElementById("ITSElectiveCoopPlan13Adesc");
- if (!ITSElectiveCoopPlan13Arflag) {
+$scope.ITSElectiveCoopPlan13A0RCListener = function () {
+  var element = document.getElementById("ITSElectiveCoopPlan13A0desc");
+ if (!ITSElectiveCoopPlan13A0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -40243,7 +40243,7 @@ $scope.ITSElectiveCoopPlan13ARCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ITSElectiveCoopPlan13Arflag=true
+      ITSElectiveCoopPlan13A0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -40253,7 +40253,7 @@ $scope.ITSElectiveCoopPlan13ARCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ITSElectiveCoopPlan13Arflag=false
+      ITSElectiveCoopPlan13A0rflag=false
   }
 };
   var CHEM103CoopPlan13Bflag = false;
@@ -42971,9 +42971,9 @@ $scope.MECE390CoopPlan13BRCListener = function () {
       MECE390CoopPlan13Brflag=false
   }
 };
-$scope.ComplementaryElectiveCoopPlan13BRCListener = function () {
-  var element = document.getElementById("ComplementaryElectiveCoopPlan13Bdesc");
- if (!ComplementaryElectiveCoopPlan13Brflag) {
+$scope.ComplementaryElectiveCoopPlan13B0RCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveCoopPlan13B0desc");
+ if (!ComplementaryElectiveCoopPlan13B0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -42981,7 +42981,7 @@ $scope.ComplementaryElectiveCoopPlan13BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ComplementaryElectiveCoopPlan13Brflag=true
+      ComplementaryElectiveCoopPlan13B0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -42991,7 +42991,7 @@ $scope.ComplementaryElectiveCoopPlan13BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ComplementaryElectiveCoopPlan13Brflag=false
+      ComplementaryElectiveCoopPlan13B0rflag=false
   }
 };
 $scope.WKEXP903CoopPlan13BRCListener = function () {
@@ -43270,9 +43270,9 @@ $scope.MECE463CoopPlan13BRCListener = function () {
       MECE463CoopPlan13Brflag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan13BRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13Bdesc");
- if (!ProgramTechnicalElectiveCoopPlan13Brflag) {
+$scope.ProgramTechnicalElectiveCoopPlan13B0RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13B0desc");
+ if (!ProgramTechnicalElectiveCoopPlan13B0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -43280,7 +43280,7 @@ $scope.ProgramTechnicalElectiveCoopPlan13BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveCoopPlan13Brflag=true
+      ProgramTechnicalElectiveCoopPlan13B0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -43290,12 +43290,12 @@ $scope.ProgramTechnicalElectiveCoopPlan13BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveCoopPlan13Brflag=false
+      ProgramTechnicalElectiveCoopPlan13B0rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan13BRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13Bdesc");
- if (!ProgramTechnicalElectiveCoopPlan13Brflag) {
+$scope.ProgramTechnicalElectiveCoopPlan13B1RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13B1desc");
+ if (!ProgramTechnicalElectiveCoopPlan13B1rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -43303,7 +43303,7 @@ $scope.ProgramTechnicalElectiveCoopPlan13BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveCoopPlan13Brflag=true
+      ProgramTechnicalElectiveCoopPlan13B1rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -43313,12 +43313,12 @@ $scope.ProgramTechnicalElectiveCoopPlan13BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveCoopPlan13Brflag=false
+      ProgramTechnicalElectiveCoopPlan13B1rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan13BRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13Bdesc");
- if (!ProgramTechnicalElectiveCoopPlan13Brflag) {
+$scope.ProgramTechnicalElectiveCoopPlan13B2RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13B2desc");
+ if (!ProgramTechnicalElectiveCoopPlan13B2rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -43326,7 +43326,7 @@ $scope.ProgramTechnicalElectiveCoopPlan13BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveCoopPlan13Brflag=true
+      ProgramTechnicalElectiveCoopPlan13B2rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -43336,7 +43336,7 @@ $scope.ProgramTechnicalElectiveCoopPlan13BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveCoopPlan13Brflag=false
+      ProgramTechnicalElectiveCoopPlan13B2rflag=false
   }
 };
 $scope.WKEXP905CoopPlan13BRCListener = function () {
@@ -43500,9 +43500,9 @@ $scope.MECE460CoopPlan13BRCListener = function () {
       MECE460CoopPlan13Brflag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan13BRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13Bdesc");
- if (!ProgramTechnicalElectiveCoopPlan13Brflag) {
+$scope.ProgramTechnicalElectiveCoopPlan13B3RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13B3desc");
+ if (!ProgramTechnicalElectiveCoopPlan13B3rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -43510,7 +43510,7 @@ $scope.ProgramTechnicalElectiveCoopPlan13BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveCoopPlan13Brflag=true
+      ProgramTechnicalElectiveCoopPlan13B3rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -43520,12 +43520,12 @@ $scope.ProgramTechnicalElectiveCoopPlan13BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveCoopPlan13Brflag=false
+      ProgramTechnicalElectiveCoopPlan13B3rflag=false
   }
 };
-$scope.ITSElectiveCoopPlan13BRCListener = function () {
-  var element = document.getElementById("ITSElectiveCoopPlan13Bdesc");
- if (!ITSElectiveCoopPlan13Brflag) {
+$scope.ITSElectiveCoopPlan13B0RCListener = function () {
+  var element = document.getElementById("ITSElectiveCoopPlan13B0desc");
+ if (!ITSElectiveCoopPlan13B0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -43533,7 +43533,7 @@ $scope.ITSElectiveCoopPlan13BRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ITSElectiveCoopPlan13Brflag=true
+      ITSElectiveCoopPlan13B0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -43543,7 +43543,7 @@ $scope.ITSElectiveCoopPlan13BRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ITSElectiveCoopPlan13Brflag=false
+      ITSElectiveCoopPlan13B0rflag=false
   }
 };
   var CHEM103CoopPlan2flag = false;
@@ -46422,9 +46422,9 @@ $scope.MECE390CoopPlan2RCListener = function () {
       MECE390CoopPlan2rflag=false
   }
 };
-$scope.ComplementaryElectiveCoopPlan2RCListener = function () {
-  var element = document.getElementById("ComplementaryElectiveCoopPlan2desc");
- if (!ComplementaryElectiveCoopPlan2rflag) {
+$scope.ComplementaryElectiveCoopPlan20RCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveCoopPlan20desc");
+ if (!ComplementaryElectiveCoopPlan20rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -46432,7 +46432,7 @@ $scope.ComplementaryElectiveCoopPlan2RCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ComplementaryElectiveCoopPlan2rflag=true
+      ComplementaryElectiveCoopPlan20rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -46442,7 +46442,7 @@ $scope.ComplementaryElectiveCoopPlan2RCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ComplementaryElectiveCoopPlan2rflag=false
+      ComplementaryElectiveCoopPlan20rflag=false
   }
 };
 $scope.WKEXP904CoopPlan2RCListener = function () {
@@ -46537,9 +46537,9 @@ $scope.MECE460CoopPlan2RCListener = function () {
       MECE460CoopPlan2rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan2RCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan2desc");
- if (!ProgramTechnicalElectiveCoopPlan2rflag) {
+$scope.ProgramTechnicalElectiveCoopPlan20RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan20desc");
+ if (!ProgramTechnicalElectiveCoopPlan20rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -46547,7 +46547,7 @@ $scope.ProgramTechnicalElectiveCoopPlan2RCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveCoopPlan2rflag=true
+      ProgramTechnicalElectiveCoopPlan20rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -46557,12 +46557,12 @@ $scope.ProgramTechnicalElectiveCoopPlan2RCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveCoopPlan2rflag=false
+      ProgramTechnicalElectiveCoopPlan20rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan2RCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan2desc");
- if (!ProgramTechnicalElectiveCoopPlan2rflag) {
+$scope.ProgramTechnicalElectiveCoopPlan21RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan21desc");
+ if (!ProgramTechnicalElectiveCoopPlan21rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -46570,7 +46570,7 @@ $scope.ProgramTechnicalElectiveCoopPlan2RCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveCoopPlan2rflag=true
+      ProgramTechnicalElectiveCoopPlan21rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -46580,12 +46580,12 @@ $scope.ProgramTechnicalElectiveCoopPlan2RCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveCoopPlan2rflag=false
+      ProgramTechnicalElectiveCoopPlan21rflag=false
   }
 };
-$scope.ITSElectiveCoopPlan2RCListener = function () {
-  var element = document.getElementById("ITSElectiveCoopPlan2desc");
- if (!ITSElectiveCoopPlan2rflag) {
+$scope.ITSElectiveCoopPlan20RCListener = function () {
+  var element = document.getElementById("ITSElectiveCoopPlan20desc");
+ if (!ITSElectiveCoopPlan20rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -46593,7 +46593,7 @@ $scope.ITSElectiveCoopPlan2RCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ITSElectiveCoopPlan2rflag=true
+      ITSElectiveCoopPlan20rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -46603,7 +46603,7 @@ $scope.ITSElectiveCoopPlan2RCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ITSElectiveCoopPlan2rflag=false
+      ITSElectiveCoopPlan20rflag=false
   }
 };
 $scope.WKEXP905CoopPlan2RCListener = function () {
@@ -46790,9 +46790,9 @@ $scope.MECE463CoopPlan2RCListener = function () {
       MECE463CoopPlan2rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan2RCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan2desc");
- if (!ProgramTechnicalElectiveCoopPlan2rflag) {
+$scope.ProgramTechnicalElectiveCoopPlan22RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan22desc");
+ if (!ProgramTechnicalElectiveCoopPlan22rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -46800,7 +46800,7 @@ $scope.ProgramTechnicalElectiveCoopPlan2RCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveCoopPlan2rflag=true
+      ProgramTechnicalElectiveCoopPlan22rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -46810,12 +46810,12 @@ $scope.ProgramTechnicalElectiveCoopPlan2RCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveCoopPlan2rflag=false
+      ProgramTechnicalElectiveCoopPlan22rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan2RCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan2desc");
- if (!ProgramTechnicalElectiveCoopPlan2rflag) {
+$scope.ProgramTechnicalElectiveCoopPlan23RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan23desc");
+ if (!ProgramTechnicalElectiveCoopPlan23rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -46823,7 +46823,7 @@ $scope.ProgramTechnicalElectiveCoopPlan2RCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveCoopPlan2rflag=true
+      ProgramTechnicalElectiveCoopPlan23rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -46833,7 +46833,7 @@ $scope.ProgramTechnicalElectiveCoopPlan2RCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveCoopPlan2rflag=false
+      ProgramTechnicalElectiveCoopPlan23rflag=false
   }
 };
   var CHEM103CoopPlan3Biomedicalflag = false;
@@ -49896,9 +49896,9 @@ $scope.STAT337CoopPlan3BiomedicalRCListener = function () {
       STAT337CoopPlan3Biomedicalrflag=false
   }
 };
-$scope.ComplementaryElectiveCoopPlan3BiomedicalRCListener = function () {
-  var element = document.getElementById("ComplementaryElectiveCoopPlan3Biomedicaldesc");
- if (!ComplementaryElectiveCoopPlan3Biomedicalrflag) {
+$scope.ComplementaryElectiveCoopPlan3Biomedical0RCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveCoopPlan3Biomedical0desc");
+ if (!ComplementaryElectiveCoopPlan3Biomedical0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -49906,7 +49906,7 @@ $scope.ComplementaryElectiveCoopPlan3BiomedicalRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ComplementaryElectiveCoopPlan3Biomedicalrflag=true
+      ComplementaryElectiveCoopPlan3Biomedical0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -49916,12 +49916,12 @@ $scope.ComplementaryElectiveCoopPlan3BiomedicalRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ComplementaryElectiveCoopPlan3Biomedicalrflag=false
+      ComplementaryElectiveCoopPlan3Biomedical0rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan3BiomedicalRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedicaldesc");
- if (!ProgramTechnicalElectiveCoopPlan3Biomedicalrflag) {
+$scope.ProgramTechnicalElectiveCoopPlan3Biomedical0RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical0desc");
+ if (!ProgramTechnicalElectiveCoopPlan3Biomedical0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -49929,7 +49929,7 @@ $scope.ProgramTechnicalElectiveCoopPlan3BiomedicalRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveCoopPlan3Biomedicalrflag=true
+      ProgramTechnicalElectiveCoopPlan3Biomedical0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -49939,7 +49939,7 @@ $scope.ProgramTechnicalElectiveCoopPlan3BiomedicalRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveCoopPlan3Biomedicalrflag=false
+      ProgramTechnicalElectiveCoopPlan3Biomedical0rflag=false
   }
 };
 $scope.WKEXP904CoopPlan3BiomedicalRCListener = function () {
@@ -50034,9 +50034,9 @@ $scope.MECE463CoopPlan3BiomedicalRCListener = function () {
       MECE463CoopPlan3Biomedicalrflag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan3BiomedicalRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedicaldesc");
- if (!ProgramTechnicalElectiveCoopPlan3Biomedicalrflag) {
+$scope.ProgramTechnicalElectiveCoopPlan3Biomedical1RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical1desc");
+ if (!ProgramTechnicalElectiveCoopPlan3Biomedical1rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -50044,7 +50044,7 @@ $scope.ProgramTechnicalElectiveCoopPlan3BiomedicalRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveCoopPlan3Biomedicalrflag=true
+      ProgramTechnicalElectiveCoopPlan3Biomedical1rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -50054,12 +50054,12 @@ $scope.ProgramTechnicalElectiveCoopPlan3BiomedicalRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveCoopPlan3Biomedicalrflag=false
+      ProgramTechnicalElectiveCoopPlan3Biomedical1rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan3BiomedicalRCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedicaldesc");
- if (!ProgramTechnicalElectiveCoopPlan3Biomedicalrflag) {
+$scope.ProgramTechnicalElectiveCoopPlan3Biomedical2RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical2desc");
+ if (!ProgramTechnicalElectiveCoopPlan3Biomedical2rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -50067,7 +50067,7 @@ $scope.ProgramTechnicalElectiveCoopPlan3BiomedicalRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveCoopPlan3Biomedicalrflag=true
+      ProgramTechnicalElectiveCoopPlan3Biomedical2rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -50077,12 +50077,12 @@ $scope.ProgramTechnicalElectiveCoopPlan3BiomedicalRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveCoopPlan3Biomedicalrflag=false
+      ProgramTechnicalElectiveCoopPlan3Biomedical2rflag=false
   }
 };
-$scope.ITSElectiveCoopPlan3BiomedicalRCListener = function () {
-  var element = document.getElementById("ITSElectiveCoopPlan3Biomedicaldesc");
- if (!ITSElectiveCoopPlan3Biomedicalrflag) {
+$scope.ITSElectiveCoopPlan3Biomedical0RCListener = function () {
+  var element = document.getElementById("ITSElectiveCoopPlan3Biomedical0desc");
+ if (!ITSElectiveCoopPlan3Biomedical0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -50090,7 +50090,7 @@ $scope.ITSElectiveCoopPlan3BiomedicalRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ITSElectiveCoopPlan3Biomedicalrflag=true
+      ITSElectiveCoopPlan3Biomedical0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -50100,7 +50100,7 @@ $scope.ITSElectiveCoopPlan3BiomedicalRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ITSElectiveCoopPlan3Biomedicalrflag=false
+      ITSElectiveCoopPlan3Biomedical0rflag=false
   }
 };
 $scope.CHE448CoopPlan3BiomedicalRCListener = function () {
@@ -53140,9 +53140,9 @@ $scope.MECE390CoopPlan4RCListener = function () {
       MECE390CoopPlan4rflag=false
   }
 };
-$scope.ComplementaryElectiveCoopPlan4RCListener = function () {
-  var element = document.getElementById("ComplementaryElectiveCoopPlan4desc");
- if (!ComplementaryElectiveCoopPlan4rflag) {
+$scope.ComplementaryElectiveCoopPlan40RCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveCoopPlan40desc");
+ if (!ComplementaryElectiveCoopPlan40rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -53150,7 +53150,7 @@ $scope.ComplementaryElectiveCoopPlan4RCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ComplementaryElectiveCoopPlan4rflag=true
+      ComplementaryElectiveCoopPlan40rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -53160,7 +53160,7 @@ $scope.ComplementaryElectiveCoopPlan4RCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ComplementaryElectiveCoopPlan4rflag=false
+      ComplementaryElectiveCoopPlan40rflag=false
   }
 };
 $scope.WKEXP903CoopPlan4RCListener = function () {
@@ -53324,9 +53324,9 @@ $scope.MECE463CoopPlan4RCListener = function () {
       MECE463CoopPlan4rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan4RCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan4desc");
- if (!ProgramTechnicalElectiveCoopPlan4rflag) {
+$scope.ProgramTechnicalElectiveCoopPlan40RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan40desc");
+ if (!ProgramTechnicalElectiveCoopPlan40rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -53334,7 +53334,7 @@ $scope.ProgramTechnicalElectiveCoopPlan4RCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveCoopPlan4rflag=true
+      ProgramTechnicalElectiveCoopPlan40rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -53344,12 +53344,12 @@ $scope.ProgramTechnicalElectiveCoopPlan4RCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveCoopPlan4rflag=false
+      ProgramTechnicalElectiveCoopPlan40rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan4RCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan4desc");
- if (!ProgramTechnicalElectiveCoopPlan4rflag) {
+$scope.ProgramTechnicalElectiveCoopPlan41RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan41desc");
+ if (!ProgramTechnicalElectiveCoopPlan41rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -53357,7 +53357,7 @@ $scope.ProgramTechnicalElectiveCoopPlan4RCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveCoopPlan4rflag=true
+      ProgramTechnicalElectiveCoopPlan41rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -53367,12 +53367,12 @@ $scope.ProgramTechnicalElectiveCoopPlan4RCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveCoopPlan4rflag=false
+      ProgramTechnicalElectiveCoopPlan41rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan4RCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan4desc");
- if (!ProgramTechnicalElectiveCoopPlan4rflag) {
+$scope.ProgramTechnicalElectiveCoopPlan42RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan42desc");
+ if (!ProgramTechnicalElectiveCoopPlan42rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -53380,7 +53380,7 @@ $scope.ProgramTechnicalElectiveCoopPlan4RCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveCoopPlan4rflag=true
+      ProgramTechnicalElectiveCoopPlan42rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -53390,7 +53390,7 @@ $scope.ProgramTechnicalElectiveCoopPlan4RCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveCoopPlan4rflag=false
+      ProgramTechnicalElectiveCoopPlan42rflag=false
   }
 };
 $scope.CHE448CoopPlan4RCListener = function () {
@@ -53531,9 +53531,9 @@ $scope.MECE460CoopPlan4RCListener = function () {
       MECE460CoopPlan4rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveCoopPlan4RCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan4desc");
- if (!ProgramTechnicalElectiveCoopPlan4rflag) {
+$scope.ProgramTechnicalElectiveCoopPlan43RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan43desc");
+ if (!ProgramTechnicalElectiveCoopPlan43rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -53541,7 +53541,7 @@ $scope.ProgramTechnicalElectiveCoopPlan4RCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveCoopPlan4rflag=true
+      ProgramTechnicalElectiveCoopPlan43rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -53551,12 +53551,12 @@ $scope.ProgramTechnicalElectiveCoopPlan4RCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveCoopPlan4rflag=false
+      ProgramTechnicalElectiveCoopPlan43rflag=false
   }
 };
-$scope.ITSElectiveCoopPlan4RCListener = function () {
-  var element = document.getElementById("ITSElectiveCoopPlan4desc");
- if (!ITSElectiveCoopPlan4rflag) {
+$scope.ITSElectiveCoopPlan40RCListener = function () {
+  var element = document.getElementById("ITSElectiveCoopPlan40desc");
+ if (!ITSElectiveCoopPlan40rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -53564,7 +53564,7 @@ $scope.ITSElectiveCoopPlan4RCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ITSElectiveCoopPlan4rflag=true
+      ITSElectiveCoopPlan40rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -53574,7 +53574,7 @@ $scope.ITSElectiveCoopPlan4RCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ITSElectiveCoopPlan4rflag=false
+      ITSElectiveCoopPlan40rflag=false
   }
 };
 });

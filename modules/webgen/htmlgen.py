@@ -272,13 +272,18 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
             # Class allows formatting so words fit in course box
             courseID = courseID+str(compcounter)
             courseDiv = createCourseDiv(soup, courseID, "COMP", orCounter, orCase)
+            # id must include which number elective it is (electiveName0, electiveName1, electiveName2, ...)
+            courseDisc["id"] = courseDisc["id"][:-4] + str(compcounter) + "desc"
             compcounter += 1
+            courseDisc
             formatCourseDescriptionForElective(soup, course, courseDisc)
 
         elif course.name == "Program/Technical Elective":
             # Class allows formatting so words fit in course box
             courseID = courseID+str(progcounter)
             courseDiv = createCourseDiv(soup, courseID, "PROG", orCounter, orCase)
+            # id must include which number elective it is (electiveName0, electiveName1, electiveName2, ...)
+            courseDisc["id"] = courseDisc["id"][:-4] + str(progcounter) + "desc"
             progcounter += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
 
@@ -286,6 +291,8 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
             courseID = courseID+str(itscounter)
             # Class allows formatting so words fit in course box
             courseDiv = createCourseDiv(soup, courseID, "ITS", orCounter, orCase)
+            # id must include which number elective it is (electiveName0, electiveName1, electiveName2, ...)
+            courseDisc["id"] = courseDisc["id"][:-4] + str(itscounter) + "desc"
             itscounter += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
 
