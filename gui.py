@@ -118,7 +118,7 @@ def main():
             sequenceDict, deptName = sequenceparsing.parseSeq(seq_excel.get(), courseDict)
 
             # generating intital JS based on the number and names of plans
-            javascriptgen.intializeControllerJavaScript(controller, sequenceDict)
+            javascriptgen.intializeControllerJavaScript(sequenceDict, controller)
 
             titleTag = soup.body.find("a", class_="site-title")
       
