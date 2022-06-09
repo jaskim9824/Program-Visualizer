@@ -324,6 +324,10 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
                 controller.write("  var " + 
                          courseID +
                          "flag = false;\n")
+                controller.write("  var " + 
+                         courseID +
+                         "rflag = false;\n")
+                controller.write(" var " + courseID + "Time = new Date().getTime();\n")
                 continue
             else:
                 # the second of two options
@@ -338,6 +342,10 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
         controller.write("  var " + 
                          courseID +
                          "flag = false;\n")
+        controller.write("  var " + 
+                         courseID +
+                         "rflag = false;\n")
+        controller.write(" var " + courseID + "Time = new Date().getTime();\n")
 
     return compcounter, progcounter, itscounter
 

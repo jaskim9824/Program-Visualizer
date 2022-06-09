@@ -10648,58 +10648,168 @@ break;   default:
     }
 };
   var CHEM103TraditionalPlan2A3A4Aflag = false;
+  var CHEM103TraditionalPlan2A3A4Arflag = false;
+ var CHEM103TraditionalPlan2A3A4ATime = new Date().getTime();
   var ENGG100TraditionalPlan2A3A4Aflag = false;
+  var ENGG100TraditionalPlan2A3A4Arflag = false;
+ var ENGG100TraditionalPlan2A3A4ATime = new Date().getTime();
   var ENGG130TraditionalPlan2A3A4Aflag = false;
+  var ENGG130TraditionalPlan2A3A4Arflag = false;
+ var ENGG130TraditionalPlan2A3A4ATime = new Date().getTime();
   var ENGL199TraditionalPlan2A3A4Aflag = false;
+  var ENGL199TraditionalPlan2A3A4Arflag = false;
+ var ENGL199TraditionalPlan2A3A4ATime = new Date().getTime();
   var MATH100TraditionalPlan2A3A4Aflag = false;
+  var MATH100TraditionalPlan2A3A4Arflag = false;
+ var MATH100TraditionalPlan2A3A4ATime = new Date().getTime();
   var PHYS130TraditionalPlan2A3A4Aflag = false;
+  var PHYS130TraditionalPlan2A3A4Arflag = false;
+ var PHYS130TraditionalPlan2A3A4ATime = new Date().getTime();
   var CHEM105TraditionalPlan2A3A4Aflag = false;
+  var CHEM105TraditionalPlan2A3A4Arflag = false;
+ var CHEM105TraditionalPlan2A3A4ATime = new Date().getTime();
   var ENCMP100TraditionalPlan2A3A4Aflag = false;
+  var ENCMP100TraditionalPlan2A3A4Arflag = false;
+ var ENCMP100TraditionalPlan2A3A4ATime = new Date().getTime();
   var ENGG160TraditionalPlan2A3A4Aflag = false;
+  var ENGG160TraditionalPlan2A3A4Arflag = false;
+ var ENGG160TraditionalPlan2A3A4ATime = new Date().getTime();
   var ENPH131TraditionalPlan2A3A4Aflag = false;
+  var ENPH131TraditionalPlan2A3A4Arflag = false;
+ var ENPH131TraditionalPlan2A3A4ATime = new Date().getTime();
   var MATH101TraditionalPlan2A3A4Aflag = false;
+  var MATH101TraditionalPlan2A3A4Arflag = false;
+ var MATH101TraditionalPlan2A3A4ATime = new Date().getTime();
   var MATH102TraditionalPlan2A3A4Aflag = false;
+  var MATH102TraditionalPlan2A3A4Arflag = false;
+ var MATH102TraditionalPlan2A3A4ATime = new Date().getTime();
   var CIVE270TraditionalPlan2A3A4Aflag = false;
+  var CIVE270TraditionalPlan2A3A4Arflag = false;
+ var CIVE270TraditionalPlan2A3A4ATime = new Date().getTime();
   var MATH209TraditionalPlan2A3A4Aflag = false;
+  var MATH209TraditionalPlan2A3A4Arflag = false;
+ var MATH209TraditionalPlan2A3A4ATime = new Date().getTime();
   var STAT235TraditionalPlan2A3A4Aflag = false;
+  var STAT235TraditionalPlan2A3A4Arflag = false;
+ var STAT235TraditionalPlan2A3A4ATime = new Date().getTime();
   var CHE243TraditionalPlan2A3A4Aflag = false;
+  var CHE243TraditionalPlan2A3A4Arflag = false;
+ var CHE243TraditionalPlan2A3A4ATime = new Date().getTime();
   var MECE200TraditionalPlan2A3A4Aflag = false;
+  var MECE200TraditionalPlan2A3A4Arflag = false;
+ var MECE200TraditionalPlan2A3A4ATime = new Date().getTime();
   var MECE250TraditionalPlan2A3A4Aflag = false;
+  var MECE250TraditionalPlan2A3A4Arflag = false;
+ var MECE250TraditionalPlan2A3A4ATime = new Date().getTime();
   var ECE209TraditionalPlan2A3A4Aflag = false;
+  var ECE209TraditionalPlan2A3A4Arflag = false;
+ var ECE209TraditionalPlan2A3A4ATime = new Date().getTime();
   var MATE202TraditionalPlan2A3A4Aflag = false;
+  var MATE202TraditionalPlan2A3A4Arflag = false;
+ var MATE202TraditionalPlan2A3A4ATime = new Date().getTime();
   var MATH201TraditionalPlan2A3A4Aflag = false;
+  var MATH201TraditionalPlan2A3A4Arflag = false;
+ var MATH201TraditionalPlan2A3A4ATime = new Date().getTime();
   var MECE230TraditionalPlan2A3A4Aflag = false;
+  var MECE230TraditionalPlan2A3A4Arflag = false;
+ var MECE230TraditionalPlan2A3A4ATime = new Date().getTime();
   var MECE260TraditionalPlan2A3A4Aflag = false;
+  var MECE260TraditionalPlan2A3A4Arflag = false;
+ var MECE260TraditionalPlan2A3A4ATime = new Date().getTime();
   var MECE265TraditionalPlan2A3A4Aflag = false;
+  var MECE265TraditionalPlan2A3A4Arflag = false;
+ var MECE265TraditionalPlan2A3A4ATime = new Date().getTime();
   var MATH300TraditionalPlan2A3A4Aflag = false;
+  var MATH300TraditionalPlan2A3A4Arflag = false;
+ var MATH300TraditionalPlan2A3A4ATime = new Date().getTime();
   var MECE300TraditionalPlan2A3A4Aflag = false;
+  var MECE300TraditionalPlan2A3A4Arflag = false;
+ var MECE300TraditionalPlan2A3A4ATime = new Date().getTime();
   var MECE301TraditionalPlan2A3A4Aflag = false;
+  var MECE301TraditionalPlan2A3A4Arflag = false;
+ var MECE301TraditionalPlan2A3A4ATime = new Date().getTime();
   var MECE331TraditionalPlan2A3A4Aflag = false;
+  var MECE331TraditionalPlan2A3A4Arflag = false;
+ var MECE331TraditionalPlan2A3A4ATime = new Date().getTime();
   var MECE371TraditionalPlan2A3A4Aflag = false;
+  var MECE371TraditionalPlan2A3A4Arflag = false;
+ var MECE371TraditionalPlan2A3A4ATime = new Date().getTime();
   var MECE380TraditionalPlan2A3A4Aflag = false;
+  var MECE380TraditionalPlan2A3A4Arflag = false;
+ var MECE380TraditionalPlan2A3A4ATime = new Date().getTime();
   var ENGM310TraditionalPlan2A3A4Aflag = false;
+  var ENGM310TraditionalPlan2A3A4Arflag = false;
+ var ENGM310TraditionalPlan2A3A4ATime = new Date().getTime();
   var ENGM401TraditionalPlan2A3A4Aflag = false;
+  var ENGM401TraditionalPlan2A3A4Arflag = false;
+ var ENGM401TraditionalPlan2A3A4ATime = new Date().getTime();
   var MECE340TraditionalPlan2A3A4Aflag = false;
+  var MECE340TraditionalPlan2A3A4Arflag = false;
+ var MECE340TraditionalPlan2A3A4ATime = new Date().getTime();
   var MECE360TraditionalPlan2A3A4Aflag = false;
+  var MECE360TraditionalPlan2A3A4Arflag = false;
+ var MECE360TraditionalPlan2A3A4ATime = new Date().getTime();
   var MECE362TraditionalPlan2A3A4Aflag = false;
+  var MECE362TraditionalPlan2A3A4Arflag = false;
+ var MECE362TraditionalPlan2A3A4ATime = new Date().getTime();
   var MECE390TraditionalPlan2A3A4Aflag = false;
+  var MECE390TraditionalPlan2A3A4Arflag = false;
+ var MECE390TraditionalPlan2A3A4ATime = new Date().getTime();
   var ComplementaryElectiveTraditionalPlan2A3A4A0flag = false;
+  var ComplementaryElectiveTraditionalPlan2A3A4A0rflag = false;
+ var ComplementaryElectiveTraditionalPlan2A3A4A0Time = new Date().getTime();
   var ENGG404TraditionalPlan2A3A4Aflag = false;
+  var ENGG404TraditionalPlan2A3A4Arflag = false;
+ var ENGG404TraditionalPlan2A3A4ATime = new Date().getTime();
   var MECE430TraditionalPlan2A3A4Aflag = false;
+  var MECE430TraditionalPlan2A3A4Arflag = false;
+ var MECE430TraditionalPlan2A3A4ATime = new Date().getTime();
   var MECE480TraditionalPlan2A3A4Aflag = false;
+  var MECE480TraditionalPlan2A3A4Arflag = false;
+ var MECE480TraditionalPlan2A3A4ATime = new Date().getTime();
   var MECE463TraditionalPlan2A3A4Aflag = false;
+  var MECE463TraditionalPlan2A3A4Arflag = false;
+ var MECE463TraditionalPlan2A3A4ATime = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2A3A4A0flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2A3A4A0rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2A3A4A0Time = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2A3A4A1flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2A3A4A1rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2A3A4A1Time = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2A3A4A2flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2A3A4A2rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2A3A4A2Time = new Date().getTime();
   var CHE448TraditionalPlan2A3A4Aflag = false;
+  var CHE448TraditionalPlan2A3A4Arflag = false;
+ var CHE448TraditionalPlan2A3A4ATime = new Date().getTime();
   var MECE420TraditionalPlan2A3A4Aflag = false;
+  var MECE420TraditionalPlan2A3A4Arflag = false;
+ var MECE420TraditionalPlan2A3A4ATime = new Date().getTime();
   var ENGG400TraditionalPlan2A3A4Aflag = false;
+  var ENGG400TraditionalPlan2A3A4Arflag = false;
+ var ENGG400TraditionalPlan2A3A4ATime = new Date().getTime();
   var MECE403TraditionalPlan2A3A4Aflag = false;
+  var MECE403TraditionalPlan2A3A4Arflag = false;
+ var MECE403TraditionalPlan2A3A4ATime = new Date().getTime();
   var MECE451TraditionalPlan2A3A4Aflag = false;
+  var MECE451TraditionalPlan2A3A4Arflag = false;
+ var MECE451TraditionalPlan2A3A4ATime = new Date().getTime();
   var MECE460TraditionalPlan2A3A4Aflag = false;
+  var MECE460TraditionalPlan2A3A4Arflag = false;
+ var MECE460TraditionalPlan2A3A4ATime = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2A3A4A3flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2A3A4A3rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2A3A4A3Time = new Date().getTime();
   var ITSElectiveTraditionalPlan2A3A4A0flag = false;
+  var ITSElectiveTraditionalPlan2A3A4A0rflag = false;
+ var ITSElectiveTraditionalPlan2A3A4A0Time = new Date().getTime();
 $scope.CHEM103TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM103TraditionalPlan2A3A4ATime <= 200) { 
+        CHEM103TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+CHEM103TraditionalPlan2A3A4ATime = currentTime;
   var CHEM103TraditionalPlan2A3A4Aelement = document.getElementById("CHEM103TraditionalPlan2A3A4A");
  if (!CHEM103TraditionalPlan2A3A4Aflag) {
      if (CHEM103TraditionalPlan2A3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -10721,6 +10831,12 @@ $scope.CHEM103TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.ENGG100TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG100TraditionalPlan2A3A4ATime <= 200) { 
+        ENGG100TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+ENGG100TraditionalPlan2A3A4ATime = currentTime;
   var ENGG100TraditionalPlan2A3A4Aelement = document.getElementById("ENGG100TraditionalPlan2A3A4A");
  if (!ENGG100TraditionalPlan2A3A4Aflag) {
      if (ENGG100TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -10740,6 +10856,12 @@ $scope.ENGG100TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.ENGG130TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG130TraditionalPlan2A3A4ATime <= 200) { 
+        ENGG130TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+ENGG130TraditionalPlan2A3A4ATime = currentTime;
   var ENGG130TraditionalPlan2A3A4Aelement = document.getElementById("ENGG130TraditionalPlan2A3A4A");
  if (!ENGG130TraditionalPlan2A3A4Aflag) {
      if (ENGG130TraditionalPlan2A3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -10767,6 +10889,12 @@ $scope.ENGG130TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.ENGL199TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGL199TraditionalPlan2A3A4ATime <= 200) { 
+        ENGL199TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+ENGL199TraditionalPlan2A3A4ATime = currentTime;
   var ENGL199TraditionalPlan2A3A4Aelement = document.getElementById("ENGL199TraditionalPlan2A3A4A");
  if (!ENGL199TraditionalPlan2A3A4Aflag) {
      if (ENGL199TraditionalPlan2A3A4Aelement.classList.contains("Other-highlighted")) { 
@@ -10788,6 +10916,12 @@ $scope.ENGL199TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MATH100TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH100TraditionalPlan2A3A4ATime <= 200) { 
+        MATH100TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MATH100TraditionalPlan2A3A4ATime = currentTime;
   var MATH100TraditionalPlan2A3A4Aelement = document.getElementById("MATH100TraditionalPlan2A3A4A");
  if (!MATH100TraditionalPlan2A3A4Aflag) {
      if (MATH100TraditionalPlan2A3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -10819,6 +10953,12 @@ $scope.MATH100TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.PHYS130TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - PHYS130TraditionalPlan2A3A4ATime <= 200) { 
+        PHYS130TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+PHYS130TraditionalPlan2A3A4ATime = currentTime;
   var PHYS130TraditionalPlan2A3A4Aelement = document.getElementById("PHYS130TraditionalPlan2A3A4A");
  if (!PHYS130TraditionalPlan2A3A4Aflag) {
      if (PHYS130TraditionalPlan2A3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -10840,6 +10980,12 @@ $scope.PHYS130TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.CHEM105TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM105TraditionalPlan2A3A4ATime <= 200) { 
+        CHEM105TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+CHEM105TraditionalPlan2A3A4ATime = currentTime;
   var CHEM105TraditionalPlan2A3A4Aelement = document.getElementById("CHEM105TraditionalPlan2A3A4A");
  if (!CHEM105TraditionalPlan2A3A4Aflag) {
      if (CHEM105TraditionalPlan2A3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -10863,6 +11009,12 @@ $scope.CHEM105TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.ENCMP100TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENCMP100TraditionalPlan2A3A4ATime <= 200) { 
+        ENCMP100TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+ENCMP100TraditionalPlan2A3A4ATime = currentTime;
   var ENCMP100TraditionalPlan2A3A4Aelement = document.getElementById("ENCMP100TraditionalPlan2A3A4A");
  if (!ENCMP100TraditionalPlan2A3A4Aflag) {
      if (ENCMP100TraditionalPlan2A3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -10882,6 +11034,12 @@ $scope.ENCMP100TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.ENGG160TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG160TraditionalPlan2A3A4ATime <= 200) { 
+        ENGG160TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+ENGG160TraditionalPlan2A3A4ATime = currentTime;
   var ENGG160TraditionalPlan2A3A4Aelement = document.getElementById("ENGG160TraditionalPlan2A3A4A");
  if (!ENGG160TraditionalPlan2A3A4Aflag) {
      if (ENGG160TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -10905,6 +11063,12 @@ $scope.ENGG160TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.ENPH131TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENPH131TraditionalPlan2A3A4ATime <= 200) { 
+        ENPH131TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+ENPH131TraditionalPlan2A3A4ATime = currentTime;
   var ENPH131TraditionalPlan2A3A4Aelement = document.getElementById("ENPH131TraditionalPlan2A3A4A");
  if (!ENPH131TraditionalPlan2A3A4Aflag) {
      if (ENPH131TraditionalPlan2A3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -10934,6 +11098,12 @@ $scope.ENPH131TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MATH101TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH101TraditionalPlan2A3A4ATime <= 200) { 
+        MATH101TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MATH101TraditionalPlan2A3A4ATime = currentTime;
   var MATH101TraditionalPlan2A3A4Aelement = document.getElementById("MATH101TraditionalPlan2A3A4A");
  if (!MATH101TraditionalPlan2A3A4Aflag) {
      if (MATH101TraditionalPlan2A3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -10969,6 +11139,12 @@ $scope.MATH101TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MATH102TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH102TraditionalPlan2A3A4ATime <= 200) { 
+        MATH102TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MATH102TraditionalPlan2A3A4ATime = currentTime;
   var MATH102TraditionalPlan2A3A4Aelement = document.getElementById("MATH102TraditionalPlan2A3A4A");
  if (!MATH102TraditionalPlan2A3A4Aflag) {
      if (MATH102TraditionalPlan2A3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -10994,6 +11170,12 @@ $scope.MATH102TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.CIVE270TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CIVE270TraditionalPlan2A3A4ATime <= 200) { 
+        CIVE270TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+CIVE270TraditionalPlan2A3A4ATime = currentTime;
   var CIVE270TraditionalPlan2A3A4Aelement = document.getElementById("CIVE270TraditionalPlan2A3A4A");
  if (!CIVE270TraditionalPlan2A3A4Aflag) {
      if (CIVE270TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -11025,6 +11207,12 @@ $scope.CIVE270TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MATH209TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH209TraditionalPlan2A3A4ATime <= 200) { 
+        MATH209TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MATH209TraditionalPlan2A3A4ATime = currentTime;
   var MATH209TraditionalPlan2A3A4Aelement = document.getElementById("MATH209TraditionalPlan2A3A4A");
  if (!MATH209TraditionalPlan2A3A4Aflag) {
      if (MATH209TraditionalPlan2A3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -11056,6 +11244,12 @@ $scope.MATH209TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.STAT235TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - STAT235TraditionalPlan2A3A4ATime <= 200) { 
+        STAT235TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+STAT235TraditionalPlan2A3A4ATime = currentTime;
   var STAT235TraditionalPlan2A3A4Aelement = document.getElementById("STAT235TraditionalPlan2A3A4A");
  if (!STAT235TraditionalPlan2A3A4Aflag) {
      if (STAT235TraditionalPlan2A3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -11081,6 +11275,12 @@ $scope.STAT235TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.CHE243TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE243TraditionalPlan2A3A4ATime <= 200) { 
+        CHE243TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+CHE243TraditionalPlan2A3A4ATime = currentTime;
   var CHE243TraditionalPlan2A3A4Aelement = document.getElementById("CHE243TraditionalPlan2A3A4A");
  if (!CHE243TraditionalPlan2A3A4Aflag) {
      if (CHE243TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -11108,6 +11308,12 @@ $scope.CHE243TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MECE200TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE200TraditionalPlan2A3A4ATime <= 200) { 
+        MECE200TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MECE200TraditionalPlan2A3A4ATime = currentTime;
   var MECE200TraditionalPlan2A3A4Aelement = document.getElementById("MECE200TraditionalPlan2A3A4A");
  if (!MECE200TraditionalPlan2A3A4Aflag) {
      if (MECE200TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -11129,6 +11335,12 @@ $scope.MECE200TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MECE250TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE250TraditionalPlan2A3A4ATime <= 200) { 
+        MECE250TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MECE250TraditionalPlan2A3A4ATime = currentTime;
   var MECE250TraditionalPlan2A3A4Aelement = document.getElementById("MECE250TraditionalPlan2A3A4A");
  if (!MECE250TraditionalPlan2A3A4Aflag) {
      if (MECE250TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -11160,6 +11372,12 @@ $scope.MECE250TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.ECE209TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ECE209TraditionalPlan2A3A4ATime <= 200) { 
+        ECE209TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+ECE209TraditionalPlan2A3A4ATime = currentTime;
   var ECE209TraditionalPlan2A3A4Aelement = document.getElementById("ECE209TraditionalPlan2A3A4A");
  if (!ECE209TraditionalPlan2A3A4Aflag) {
      if (ECE209TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -11181,6 +11399,12 @@ $scope.ECE209TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MATE202TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATE202TraditionalPlan2A3A4ATime <= 200) { 
+        MATE202TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MATE202TraditionalPlan2A3A4ATime = currentTime;
   var MATE202TraditionalPlan2A3A4Aelement = document.getElementById("MATE202TraditionalPlan2A3A4A");
  if (!MATE202TraditionalPlan2A3A4Aflag) {
      if (MATE202TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -11204,6 +11428,12 @@ $scope.MATE202TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MATH201TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH201TraditionalPlan2A3A4ATime <= 200) { 
+        MATH201TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MATH201TraditionalPlan2A3A4ATime = currentTime;
   var MATH201TraditionalPlan2A3A4Aelement = document.getElementById("MATH201TraditionalPlan2A3A4A");
  if (!MATH201TraditionalPlan2A3A4Aflag) {
      if (MATH201TraditionalPlan2A3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -11231,6 +11461,12 @@ $scope.MATH201TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MECE230TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE230TraditionalPlan2A3A4ATime <= 200) { 
+        MECE230TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MECE230TraditionalPlan2A3A4ATime = currentTime;
   var MECE230TraditionalPlan2A3A4Aelement = document.getElementById("MECE230TraditionalPlan2A3A4A");
  if (!MECE230TraditionalPlan2A3A4Aflag) {
      if (MECE230TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -11258,6 +11494,12 @@ $scope.MECE230TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MECE260TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE260TraditionalPlan2A3A4ATime <= 200) { 
+        MECE260TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MECE260TraditionalPlan2A3A4ATime = currentTime;
   var MECE260TraditionalPlan2A3A4Aelement = document.getElementById("MECE260TraditionalPlan2A3A4A");
  if (!MECE260TraditionalPlan2A3A4Aflag) {
      if (MECE260TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -11285,6 +11527,12 @@ $scope.MECE260TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MECE265TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE265TraditionalPlan2A3A4ATime <= 200) { 
+        MECE265TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MECE265TraditionalPlan2A3A4ATime = currentTime;
   var MECE265TraditionalPlan2A3A4Aelement = document.getElementById("MECE265TraditionalPlan2A3A4A");
  if (!MECE265TraditionalPlan2A3A4Aflag) {
      if (MECE265TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -11308,6 +11556,12 @@ $scope.MECE265TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MATH300TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH300TraditionalPlan2A3A4ATime <= 200) { 
+        MATH300TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MATH300TraditionalPlan2A3A4ATime = currentTime;
   var MATH300TraditionalPlan2A3A4Aelement = document.getElementById("MATH300TraditionalPlan2A3A4A");
  if (!MATH300TraditionalPlan2A3A4Aflag) {
      if (MATH300TraditionalPlan2A3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -11337,6 +11591,12 @@ $scope.MATH300TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MECE300TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE300TraditionalPlan2A3A4ATime <= 200) { 
+        MECE300TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MECE300TraditionalPlan2A3A4ATime = currentTime;
   var MECE300TraditionalPlan2A3A4Aelement = document.getElementById("MECE300TraditionalPlan2A3A4A");
  if (!MECE300TraditionalPlan2A3A4Aflag) {
      if (MECE300TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -11368,6 +11628,12 @@ $scope.MECE300TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MECE301TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE301TraditionalPlan2A3A4ATime <= 200) { 
+        MECE301TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MECE301TraditionalPlan2A3A4ATime = currentTime;
   var MECE301TraditionalPlan2A3A4Aelement = document.getElementById("MECE301TraditionalPlan2A3A4A");
  if (!MECE301TraditionalPlan2A3A4Aflag) {
      if (MECE301TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -11391,6 +11657,12 @@ $scope.MECE301TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MECE331TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE331TraditionalPlan2A3A4ATime <= 200) { 
+        MECE331TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MECE331TraditionalPlan2A3A4ATime = currentTime;
   var MECE331TraditionalPlan2A3A4Aelement = document.getElementById("MECE331TraditionalPlan2A3A4A");
  if (!MECE331TraditionalPlan2A3A4Aflag) {
      if (MECE331TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -11430,6 +11702,12 @@ $scope.MECE331TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MECE371TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE371TraditionalPlan2A3A4ATime <= 200) { 
+        MECE371TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MECE371TraditionalPlan2A3A4ATime = currentTime;
   var MECE371TraditionalPlan2A3A4Aelement = document.getElementById("MECE371TraditionalPlan2A3A4A");
  if (!MECE371TraditionalPlan2A3A4Aflag) {
      if (MECE371TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -11463,6 +11741,12 @@ $scope.MECE371TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MECE380TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE380TraditionalPlan2A3A4ATime <= 200) { 
+        MECE380TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MECE380TraditionalPlan2A3A4ATime = currentTime;
   var MECE380TraditionalPlan2A3A4Aelement = document.getElementById("MECE380TraditionalPlan2A3A4A");
  if (!MECE380TraditionalPlan2A3A4Aflag) {
      if (MECE380TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -11488,6 +11772,12 @@ $scope.MECE380TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.ENGM310TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM310TraditionalPlan2A3A4ATime <= 200) { 
+        ENGM310TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+ENGM310TraditionalPlan2A3A4ATime = currentTime;
   var ENGM310TraditionalPlan2A3A4Aelement = document.getElementById("ENGM310TraditionalPlan2A3A4A");
  if (!ENGM310TraditionalPlan2A3A4Aflag) {
      if (ENGM310TraditionalPlan2A3A4Aelement.classList.contains("Other-highlighted")) { 
@@ -11509,6 +11799,12 @@ $scope.ENGM310TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.ENGM401TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM401TraditionalPlan2A3A4ATime <= 200) { 
+        ENGM401TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+ENGM401TraditionalPlan2A3A4ATime = currentTime;
   var ENGM401TraditionalPlan2A3A4Aelement = document.getElementById("ENGM401TraditionalPlan2A3A4A");
  if (!ENGM401TraditionalPlan2A3A4Aflag) {
      if (ENGM401TraditionalPlan2A3A4Aelement.classList.contains("Other-highlighted")) { 
@@ -11530,6 +11826,12 @@ $scope.ENGM401TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MECE340TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE340TraditionalPlan2A3A4ATime <= 200) { 
+        MECE340TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MECE340TraditionalPlan2A3A4ATime = currentTime;
   var MECE340TraditionalPlan2A3A4Aelement = document.getElementById("MECE340TraditionalPlan2A3A4A");
  if (!MECE340TraditionalPlan2A3A4Aflag) {
      if (MECE340TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -11557,6 +11859,12 @@ $scope.MECE340TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MECE360TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE360TraditionalPlan2A3A4ATime <= 200) { 
+        MECE360TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MECE360TraditionalPlan2A3A4ATime = currentTime;
   var MECE360TraditionalPlan2A3A4Aelement = document.getElementById("MECE360TraditionalPlan2A3A4A");
  if (!MECE360TraditionalPlan2A3A4Aflag) {
      if (MECE360TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -11592,6 +11900,12 @@ $scope.MECE360TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MECE362TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE362TraditionalPlan2A3A4ATime <= 200) { 
+        MECE362TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MECE362TraditionalPlan2A3A4ATime = currentTime;
   var MECE362TraditionalPlan2A3A4Aelement = document.getElementById("MECE362TraditionalPlan2A3A4A");
  if (!MECE362TraditionalPlan2A3A4Aflag) {
      if (MECE362TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -11617,6 +11931,12 @@ $scope.MECE362TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MECE390TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE390TraditionalPlan2A3A4ATime <= 200) { 
+        MECE390TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MECE390TraditionalPlan2A3A4ATime = currentTime;
   var MECE390TraditionalPlan2A3A4Aelement = document.getElementById("MECE390TraditionalPlan2A3A4A");
  if (!MECE390TraditionalPlan2A3A4Aflag) {
      if (MECE390TraditionalPlan2A3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -11642,6 +11962,12 @@ $scope.MECE390TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.ComplementaryElectiveTraditionalPlan2A3A4A0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ComplementaryElectiveTraditionalPlan2A3A4A0Time <= 200) { 
+        ComplementaryElectiveTraditionalPlan2A3A4A0Time = currentTime;
+        return;
+    }
+ComplementaryElectiveTraditionalPlan2A3A4A0Time = currentTime;
   var ComplementaryElectiveTraditionalPlan2A3A4A0element = document.getElementById("ComplementaryElectiveTraditionalPlan2A3A4A0");
  if (!ComplementaryElectiveTraditionalPlan2A3A4A0flag) {
      if (ComplementaryElectiveTraditionalPlan2A3A4A0element.classList.contains("COMP-highlighted")) { 
@@ -11661,6 +11987,12 @@ $scope.ComplementaryElectiveTraditionalPlan2A3A4A0Listener = function () {
   }
 };
 $scope.ENGG404TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG404TraditionalPlan2A3A4ATime <= 200) { 
+        ENGG404TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+ENGG404TraditionalPlan2A3A4ATime = currentTime;
   var ENGG404TraditionalPlan2A3A4Aelement = document.getElementById("ENGG404TraditionalPlan2A3A4A");
  if (!ENGG404TraditionalPlan2A3A4Aflag) {
      if (ENGG404TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -11680,6 +12012,12 @@ $scope.ENGG404TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MECE430TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE430TraditionalPlan2A3A4ATime <= 200) { 
+        MECE430TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MECE430TraditionalPlan2A3A4ATime = currentTime;
   var MECE430TraditionalPlan2A3A4Aelement = document.getElementById("MECE430TraditionalPlan2A3A4A");
  if (!MECE430TraditionalPlan2A3A4Aflag) {
      if (MECE430TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -11701,6 +12039,12 @@ $scope.MECE430TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MECE480TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE480TraditionalPlan2A3A4ATime <= 200) { 
+        MECE480TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MECE480TraditionalPlan2A3A4ATime = currentTime;
   var MECE480TraditionalPlan2A3A4Aelement = document.getElementById("MECE480TraditionalPlan2A3A4A");
  if (!MECE480TraditionalPlan2A3A4Aflag) {
      if (MECE480TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -11726,6 +12070,12 @@ $scope.MECE480TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MECE463TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE463TraditionalPlan2A3A4ATime <= 200) { 
+        MECE463TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MECE463TraditionalPlan2A3A4ATime = currentTime;
   var MECE463TraditionalPlan2A3A4Aelement = document.getElementById("MECE463TraditionalPlan2A3A4A");
  if (!MECE463TraditionalPlan2A3A4Aflag) {
      if (MECE463TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -11751,6 +12101,12 @@ $scope.MECE463TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2A3A4A0Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2A3A4A0Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2A3A4A0Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2A3A4A0element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4A0");
  if (!ProgramTechnicalElectiveTraditionalPlan2A3A4A0flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2A3A4A0element.classList.contains("PROG-highlighted")) { 
@@ -11770,6 +12126,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A0Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A1Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2A3A4A1Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2A3A4A1Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2A3A4A1Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2A3A4A1element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4A1");
  if (!ProgramTechnicalElectiveTraditionalPlan2A3A4A1flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2A3A4A1element.classList.contains("PROG-highlighted")) { 
@@ -11789,6 +12151,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A1Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2A3A4A2Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2A3A4A2Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2A3A4A2Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2A3A4A2element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4A2");
  if (!ProgramTechnicalElectiveTraditionalPlan2A3A4A2flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2A3A4A2element.classList.contains("PROG-highlighted")) { 
@@ -11808,6 +12176,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A2Listener = function () {
   }
 };
 $scope.CHE448TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE448TraditionalPlan2A3A4ATime <= 200) { 
+        CHE448TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+CHE448TraditionalPlan2A3A4ATime = currentTime;
   var CHE448TraditionalPlan2A3A4Aelement = document.getElementById("CHE448TraditionalPlan2A3A4A");
  if (!CHE448TraditionalPlan2A3A4Aflag) {
      if (CHE448TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -11835,6 +12209,12 @@ $scope.CHE448TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MECE420TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE420TraditionalPlan2A3A4ATime <= 200) { 
+        MECE420TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MECE420TraditionalPlan2A3A4ATime = currentTime;
   var MECE420TraditionalPlan2A3A4Aelement = document.getElementById("MECE420TraditionalPlan2A3A4A");
  if (!MECE420TraditionalPlan2A3A4Aflag) {
      if (MECE420TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -11856,6 +12236,12 @@ $scope.MECE420TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.ENGG400TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG400TraditionalPlan2A3A4ATime <= 200) { 
+        ENGG400TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+ENGG400TraditionalPlan2A3A4ATime = currentTime;
   var ENGG400TraditionalPlan2A3A4Aelement = document.getElementById("ENGG400TraditionalPlan2A3A4A");
  if (!ENGG400TraditionalPlan2A3A4Aflag) {
      if (ENGG400TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -11875,6 +12261,12 @@ $scope.ENGG400TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MECE403TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE403TraditionalPlan2A3A4ATime <= 200) { 
+        MECE403TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MECE403TraditionalPlan2A3A4ATime = currentTime;
   var MECE403TraditionalPlan2A3A4Aelement = document.getElementById("MECE403TraditionalPlan2A3A4A");
  if (!MECE403TraditionalPlan2A3A4Aflag) {
      if (MECE403TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -11902,6 +12294,12 @@ $scope.MECE403TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MECE451TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE451TraditionalPlan2A3A4ATime <= 200) { 
+        MECE451TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MECE451TraditionalPlan2A3A4ATime = currentTime;
   var MECE451TraditionalPlan2A3A4Aelement = document.getElementById("MECE451TraditionalPlan2A3A4A");
  if (!MECE451TraditionalPlan2A3A4Aflag) {
      if (MECE451TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -11925,6 +12323,12 @@ $scope.MECE451TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.MECE460TraditionalPlan2A3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE460TraditionalPlan2A3A4ATime <= 200) { 
+        MECE460TraditionalPlan2A3A4ATime = currentTime;
+        return;
+    }
+MECE460TraditionalPlan2A3A4ATime = currentTime;
   var MECE460TraditionalPlan2A3A4Aelement = document.getElementById("MECE460TraditionalPlan2A3A4A");
  if (!MECE460TraditionalPlan2A3A4Aflag) {
      if (MECE460TraditionalPlan2A3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -11962,6 +12366,12 @@ $scope.MECE460TraditionalPlan2A3A4AListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A3Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2A3A4A3Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2A3A4A3Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2A3A4A3Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2A3A4A3element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4A3");
  if (!ProgramTechnicalElectiveTraditionalPlan2A3A4A3flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2A3A4A3element.classList.contains("PROG-highlighted")) { 
@@ -11981,6 +12391,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A3Listener = function () {
   }
 };
 $scope.ITSElectiveTraditionalPlan2A3A4A0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ITSElectiveTraditionalPlan2A3A4A0Time <= 200) { 
+        ITSElectiveTraditionalPlan2A3A4A0Time = currentTime;
+        return;
+    }
+ITSElectiveTraditionalPlan2A3A4A0Time = currentTime;
   var ITSElectiveTraditionalPlan2A3A4A0element = document.getElementById("ITSElectiveTraditionalPlan2A3A4A0");
  if (!ITSElectiveTraditionalPlan2A3A4A0flag) {
      if (ITSElectiveTraditionalPlan2A3A4A0element.classList.contains("ITS-highlighted")) { 
@@ -12000,57 +12416,165 @@ $scope.ITSElectiveTraditionalPlan2A3A4A0Listener = function () {
   }
 };
   var CHEM103TraditionalPlan2A3A4Bflag = false;
+  var CHEM103TraditionalPlan2A3A4Brflag = false;
+ var CHEM103TraditionalPlan2A3A4BTime = new Date().getTime();
   var ENGG100TraditionalPlan2A3A4Bflag = false;
+  var ENGG100TraditionalPlan2A3A4Brflag = false;
+ var ENGG100TraditionalPlan2A3A4BTime = new Date().getTime();
   var ENGG130TraditionalPlan2A3A4Bflag = false;
+  var ENGG130TraditionalPlan2A3A4Brflag = false;
+ var ENGG130TraditionalPlan2A3A4BTime = new Date().getTime();
   var ENGL199TraditionalPlan2A3A4Bflag = false;
+  var ENGL199TraditionalPlan2A3A4Brflag = false;
+ var ENGL199TraditionalPlan2A3A4BTime = new Date().getTime();
   var MATH100TraditionalPlan2A3A4Bflag = false;
+  var MATH100TraditionalPlan2A3A4Brflag = false;
+ var MATH100TraditionalPlan2A3A4BTime = new Date().getTime();
   var PHYS130TraditionalPlan2A3A4Bflag = false;
+  var PHYS130TraditionalPlan2A3A4Brflag = false;
+ var PHYS130TraditionalPlan2A3A4BTime = new Date().getTime();
   var CHEM105TraditionalPlan2A3A4Bflag = false;
+  var CHEM105TraditionalPlan2A3A4Brflag = false;
+ var CHEM105TraditionalPlan2A3A4BTime = new Date().getTime();
   var ENCMP100TraditionalPlan2A3A4Bflag = false;
+  var ENCMP100TraditionalPlan2A3A4Brflag = false;
+ var ENCMP100TraditionalPlan2A3A4BTime = new Date().getTime();
   var ENGG160TraditionalPlan2A3A4Bflag = false;
+  var ENGG160TraditionalPlan2A3A4Brflag = false;
+ var ENGG160TraditionalPlan2A3A4BTime = new Date().getTime();
   var ENPH131TraditionalPlan2A3A4Bflag = false;
+  var ENPH131TraditionalPlan2A3A4Brflag = false;
+ var ENPH131TraditionalPlan2A3A4BTime = new Date().getTime();
   var MATH101TraditionalPlan2A3A4Bflag = false;
+  var MATH101TraditionalPlan2A3A4Brflag = false;
+ var MATH101TraditionalPlan2A3A4BTime = new Date().getTime();
   var MATH102TraditionalPlan2A3A4Bflag = false;
+  var MATH102TraditionalPlan2A3A4Brflag = false;
+ var MATH102TraditionalPlan2A3A4BTime = new Date().getTime();
   var CIVE270TraditionalPlan2A3A4Bflag = false;
+  var CIVE270TraditionalPlan2A3A4Brflag = false;
+ var CIVE270TraditionalPlan2A3A4BTime = new Date().getTime();
   var MATH209TraditionalPlan2A3A4Bflag = false;
+  var MATH209TraditionalPlan2A3A4Brflag = false;
+ var MATH209TraditionalPlan2A3A4BTime = new Date().getTime();
   var STAT235TraditionalPlan2A3A4Bflag = false;
+  var STAT235TraditionalPlan2A3A4Brflag = false;
+ var STAT235TraditionalPlan2A3A4BTime = new Date().getTime();
   var CHE243TraditionalPlan2A3A4Bflag = false;
+  var CHE243TraditionalPlan2A3A4Brflag = false;
+ var CHE243TraditionalPlan2A3A4BTime = new Date().getTime();
   var MECE200TraditionalPlan2A3A4Bflag = false;
+  var MECE200TraditionalPlan2A3A4Brflag = false;
+ var MECE200TraditionalPlan2A3A4BTime = new Date().getTime();
   var MECE250TraditionalPlan2A3A4Bflag = false;
+  var MECE250TraditionalPlan2A3A4Brflag = false;
+ var MECE250TraditionalPlan2A3A4BTime = new Date().getTime();
   var ECE209TraditionalPlan2A3A4Bflag = false;
+  var ECE209TraditionalPlan2A3A4Brflag = false;
+ var ECE209TraditionalPlan2A3A4BTime = new Date().getTime();
   var MATE202TraditionalPlan2A3A4Bflag = false;
+  var MATE202TraditionalPlan2A3A4Brflag = false;
+ var MATE202TraditionalPlan2A3A4BTime = new Date().getTime();
   var MATH201TraditionalPlan2A3A4Bflag = false;
+  var MATH201TraditionalPlan2A3A4Brflag = false;
+ var MATH201TraditionalPlan2A3A4BTime = new Date().getTime();
   var MECE230TraditionalPlan2A3A4Bflag = false;
+  var MECE230TraditionalPlan2A3A4Brflag = false;
+ var MECE230TraditionalPlan2A3A4BTime = new Date().getTime();
   var MECE260TraditionalPlan2A3A4Bflag = false;
+  var MECE260TraditionalPlan2A3A4Brflag = false;
+ var MECE260TraditionalPlan2A3A4BTime = new Date().getTime();
   var MECE265TraditionalPlan2A3A4Bflag = false;
+  var MECE265TraditionalPlan2A3A4Brflag = false;
+ var MECE265TraditionalPlan2A3A4BTime = new Date().getTime();
   var MATH300TraditionalPlan2A3A4Bflag = false;
+  var MATH300TraditionalPlan2A3A4Brflag = false;
+ var MATH300TraditionalPlan2A3A4BTime = new Date().getTime();
   var MECE300TraditionalPlan2A3A4Bflag = false;
+  var MECE300TraditionalPlan2A3A4Brflag = false;
+ var MECE300TraditionalPlan2A3A4BTime = new Date().getTime();
   var MECE301TraditionalPlan2A3A4Bflag = false;
+  var MECE301TraditionalPlan2A3A4Brflag = false;
+ var MECE301TraditionalPlan2A3A4BTime = new Date().getTime();
   var MECE331TraditionalPlan2A3A4Bflag = false;
+  var MECE331TraditionalPlan2A3A4Brflag = false;
+ var MECE331TraditionalPlan2A3A4BTime = new Date().getTime();
   var MECE371TraditionalPlan2A3A4Bflag = false;
+  var MECE371TraditionalPlan2A3A4Brflag = false;
+ var MECE371TraditionalPlan2A3A4BTime = new Date().getTime();
   var MECE380TraditionalPlan2A3A4Bflag = false;
+  var MECE380TraditionalPlan2A3A4Brflag = false;
+ var MECE380TraditionalPlan2A3A4BTime = new Date().getTime();
   var ENGM310TraditionalPlan2A3A4Bflag = false;
+  var ENGM310TraditionalPlan2A3A4Brflag = false;
+ var ENGM310TraditionalPlan2A3A4BTime = new Date().getTime();
   var ENGM401TraditionalPlan2A3A4Bflag = false;
+  var ENGM401TraditionalPlan2A3A4Brflag = false;
+ var ENGM401TraditionalPlan2A3A4BTime = new Date().getTime();
   var MECE340TraditionalPlan2A3A4Bflag = false;
+  var MECE340TraditionalPlan2A3A4Brflag = false;
+ var MECE340TraditionalPlan2A3A4BTime = new Date().getTime();
   var MECE360TraditionalPlan2A3A4Bflag = false;
+  var MECE360TraditionalPlan2A3A4Brflag = false;
+ var MECE360TraditionalPlan2A3A4BTime = new Date().getTime();
   var MECE362TraditionalPlan2A3A4Bflag = false;
+  var MECE362TraditionalPlan2A3A4Brflag = false;
+ var MECE362TraditionalPlan2A3A4BTime = new Date().getTime();
   var MECE390TraditionalPlan2A3A4Bflag = false;
+  var MECE390TraditionalPlan2A3A4Brflag = false;
+ var MECE390TraditionalPlan2A3A4BTime = new Date().getTime();
   var ComplementaryElectiveTraditionalPlan2A3A4B0flag = false;
+  var ComplementaryElectiveTraditionalPlan2A3A4B0rflag = false;
+ var ComplementaryElectiveTraditionalPlan2A3A4B0Time = new Date().getTime();
   var CHE448TraditionalPlan2A3A4Bflag = false;
+  var CHE448TraditionalPlan2A3A4Brflag = false;
+ var CHE448TraditionalPlan2A3A4BTime = new Date().getTime();
   var MECE420TraditionalPlan2A3A4Bflag = false;
+  var MECE420TraditionalPlan2A3A4Brflag = false;
+ var MECE420TraditionalPlan2A3A4BTime = new Date().getTime();
   var ENGG400TraditionalPlan2A3A4Bflag = false;
+  var ENGG400TraditionalPlan2A3A4Brflag = false;
+ var ENGG400TraditionalPlan2A3A4BTime = new Date().getTime();
   var MECE403TraditionalPlan2A3A4Bflag = false;
+  var MECE403TraditionalPlan2A3A4Brflag = false;
+ var MECE403TraditionalPlan2A3A4BTime = new Date().getTime();
   var MECE451TraditionalPlan2A3A4Bflag = false;
+  var MECE451TraditionalPlan2A3A4Brflag = false;
+ var MECE451TraditionalPlan2A3A4BTime = new Date().getTime();
   var MECE460TraditionalPlan2A3A4Bflag = false;
+  var MECE460TraditionalPlan2A3A4Brflag = false;
+ var MECE460TraditionalPlan2A3A4BTime = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2A3A4B0flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2A3A4B0rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2A3A4B0Time = new Date().getTime();
   var ENGG404TraditionalPlan2A3A4Bflag = false;
+  var ENGG404TraditionalPlan2A3A4Brflag = false;
+ var ENGG404TraditionalPlan2A3A4BTime = new Date().getTime();
   var MECE430TraditionalPlan2A3A4Bflag = false;
+  var MECE430TraditionalPlan2A3A4Brflag = false;
+ var MECE430TraditionalPlan2A3A4BTime = new Date().getTime();
   var MECE480TraditionalPlan2A3A4Bflag = false;
+  var MECE480TraditionalPlan2A3A4Brflag = false;
+ var MECE480TraditionalPlan2A3A4BTime = new Date().getTime();
   var MECE463TraditionalPlan2A3A4Bflag = false;
+  var MECE463TraditionalPlan2A3A4Brflag = false;
+ var MECE463TraditionalPlan2A3A4BTime = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2A3A4B1flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2A3A4B1rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2A3A4B1Time = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2A3A4B2flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2A3A4B2rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2A3A4B2Time = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2A3A4B3flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2A3A4B3rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2A3A4B3Time = new Date().getTime();
 $scope.CHEM103TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM103TraditionalPlan2A3A4BTime <= 200) { 
+        CHEM103TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+CHEM103TraditionalPlan2A3A4BTime = currentTime;
   var CHEM103TraditionalPlan2A3A4Belement = document.getElementById("CHEM103TraditionalPlan2A3A4B");
  if (!CHEM103TraditionalPlan2A3A4Bflag) {
      if (CHEM103TraditionalPlan2A3A4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -12072,6 +12596,12 @@ $scope.CHEM103TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.ENGG100TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG100TraditionalPlan2A3A4BTime <= 200) { 
+        ENGG100TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+ENGG100TraditionalPlan2A3A4BTime = currentTime;
   var ENGG100TraditionalPlan2A3A4Belement = document.getElementById("ENGG100TraditionalPlan2A3A4B");
  if (!ENGG100TraditionalPlan2A3A4Bflag) {
      if (ENGG100TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -12091,6 +12621,12 @@ $scope.ENGG100TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.ENGG130TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG130TraditionalPlan2A3A4BTime <= 200) { 
+        ENGG130TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+ENGG130TraditionalPlan2A3A4BTime = currentTime;
   var ENGG130TraditionalPlan2A3A4Belement = document.getElementById("ENGG130TraditionalPlan2A3A4B");
  if (!ENGG130TraditionalPlan2A3A4Bflag) {
      if (ENGG130TraditionalPlan2A3A4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -12118,6 +12654,12 @@ $scope.ENGG130TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.ENGL199TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGL199TraditionalPlan2A3A4BTime <= 200) { 
+        ENGL199TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+ENGL199TraditionalPlan2A3A4BTime = currentTime;
   var ENGL199TraditionalPlan2A3A4Belement = document.getElementById("ENGL199TraditionalPlan2A3A4B");
  if (!ENGL199TraditionalPlan2A3A4Bflag) {
      if (ENGL199TraditionalPlan2A3A4Belement.classList.contains("Other-highlighted")) { 
@@ -12139,6 +12681,12 @@ $scope.ENGL199TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MATH100TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH100TraditionalPlan2A3A4BTime <= 200) { 
+        MATH100TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MATH100TraditionalPlan2A3A4BTime = currentTime;
   var MATH100TraditionalPlan2A3A4Belement = document.getElementById("MATH100TraditionalPlan2A3A4B");
  if (!MATH100TraditionalPlan2A3A4Bflag) {
      if (MATH100TraditionalPlan2A3A4Belement.classList.contains("MATH-highlighted")) { 
@@ -12170,6 +12718,12 @@ $scope.MATH100TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.PHYS130TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - PHYS130TraditionalPlan2A3A4BTime <= 200) { 
+        PHYS130TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+PHYS130TraditionalPlan2A3A4BTime = currentTime;
   var PHYS130TraditionalPlan2A3A4Belement = document.getElementById("PHYS130TraditionalPlan2A3A4B");
  if (!PHYS130TraditionalPlan2A3A4Bflag) {
      if (PHYS130TraditionalPlan2A3A4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -12191,6 +12745,12 @@ $scope.PHYS130TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.CHEM105TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM105TraditionalPlan2A3A4BTime <= 200) { 
+        CHEM105TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+CHEM105TraditionalPlan2A3A4BTime = currentTime;
   var CHEM105TraditionalPlan2A3A4Belement = document.getElementById("CHEM105TraditionalPlan2A3A4B");
  if (!CHEM105TraditionalPlan2A3A4Bflag) {
      if (CHEM105TraditionalPlan2A3A4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -12214,6 +12774,12 @@ $scope.CHEM105TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.ENCMP100TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENCMP100TraditionalPlan2A3A4BTime <= 200) { 
+        ENCMP100TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+ENCMP100TraditionalPlan2A3A4BTime = currentTime;
   var ENCMP100TraditionalPlan2A3A4Belement = document.getElementById("ENCMP100TraditionalPlan2A3A4B");
  if (!ENCMP100TraditionalPlan2A3A4Bflag) {
      if (ENCMP100TraditionalPlan2A3A4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -12233,6 +12799,12 @@ $scope.ENCMP100TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.ENGG160TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG160TraditionalPlan2A3A4BTime <= 200) { 
+        ENGG160TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+ENGG160TraditionalPlan2A3A4BTime = currentTime;
   var ENGG160TraditionalPlan2A3A4Belement = document.getElementById("ENGG160TraditionalPlan2A3A4B");
  if (!ENGG160TraditionalPlan2A3A4Bflag) {
      if (ENGG160TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -12256,6 +12828,12 @@ $scope.ENGG160TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.ENPH131TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENPH131TraditionalPlan2A3A4BTime <= 200) { 
+        ENPH131TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+ENPH131TraditionalPlan2A3A4BTime = currentTime;
   var ENPH131TraditionalPlan2A3A4Belement = document.getElementById("ENPH131TraditionalPlan2A3A4B");
  if (!ENPH131TraditionalPlan2A3A4Bflag) {
      if (ENPH131TraditionalPlan2A3A4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -12285,6 +12863,12 @@ $scope.ENPH131TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MATH101TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH101TraditionalPlan2A3A4BTime <= 200) { 
+        MATH101TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MATH101TraditionalPlan2A3A4BTime = currentTime;
   var MATH101TraditionalPlan2A3A4Belement = document.getElementById("MATH101TraditionalPlan2A3A4B");
  if (!MATH101TraditionalPlan2A3A4Bflag) {
      if (MATH101TraditionalPlan2A3A4Belement.classList.contains("MATH-highlighted")) { 
@@ -12320,6 +12904,12 @@ $scope.MATH101TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MATH102TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH102TraditionalPlan2A3A4BTime <= 200) { 
+        MATH102TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MATH102TraditionalPlan2A3A4BTime = currentTime;
   var MATH102TraditionalPlan2A3A4Belement = document.getElementById("MATH102TraditionalPlan2A3A4B");
  if (!MATH102TraditionalPlan2A3A4Bflag) {
      if (MATH102TraditionalPlan2A3A4Belement.classList.contains("MATH-highlighted")) { 
@@ -12345,6 +12935,12 @@ $scope.MATH102TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.CIVE270TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CIVE270TraditionalPlan2A3A4BTime <= 200) { 
+        CIVE270TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+CIVE270TraditionalPlan2A3A4BTime = currentTime;
   var CIVE270TraditionalPlan2A3A4Belement = document.getElementById("CIVE270TraditionalPlan2A3A4B");
  if (!CIVE270TraditionalPlan2A3A4Bflag) {
      if (CIVE270TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -12376,6 +12972,12 @@ $scope.CIVE270TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MATH209TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH209TraditionalPlan2A3A4BTime <= 200) { 
+        MATH209TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MATH209TraditionalPlan2A3A4BTime = currentTime;
   var MATH209TraditionalPlan2A3A4Belement = document.getElementById("MATH209TraditionalPlan2A3A4B");
  if (!MATH209TraditionalPlan2A3A4Bflag) {
      if (MATH209TraditionalPlan2A3A4Belement.classList.contains("MATH-highlighted")) { 
@@ -12407,6 +13009,12 @@ $scope.MATH209TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.STAT235TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - STAT235TraditionalPlan2A3A4BTime <= 200) { 
+        STAT235TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+STAT235TraditionalPlan2A3A4BTime = currentTime;
   var STAT235TraditionalPlan2A3A4Belement = document.getElementById("STAT235TraditionalPlan2A3A4B");
  if (!STAT235TraditionalPlan2A3A4Bflag) {
      if (STAT235TraditionalPlan2A3A4Belement.classList.contains("MATH-highlighted")) { 
@@ -12432,6 +13040,12 @@ $scope.STAT235TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.CHE243TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE243TraditionalPlan2A3A4BTime <= 200) { 
+        CHE243TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+CHE243TraditionalPlan2A3A4BTime = currentTime;
   var CHE243TraditionalPlan2A3A4Belement = document.getElementById("CHE243TraditionalPlan2A3A4B");
  if (!CHE243TraditionalPlan2A3A4Bflag) {
      if (CHE243TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -12459,6 +13073,12 @@ $scope.CHE243TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MECE200TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE200TraditionalPlan2A3A4BTime <= 200) { 
+        MECE200TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MECE200TraditionalPlan2A3A4BTime = currentTime;
   var MECE200TraditionalPlan2A3A4Belement = document.getElementById("MECE200TraditionalPlan2A3A4B");
  if (!MECE200TraditionalPlan2A3A4Bflag) {
      if (MECE200TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -12480,6 +13100,12 @@ $scope.MECE200TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MECE250TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE250TraditionalPlan2A3A4BTime <= 200) { 
+        MECE250TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MECE250TraditionalPlan2A3A4BTime = currentTime;
   var MECE250TraditionalPlan2A3A4Belement = document.getElementById("MECE250TraditionalPlan2A3A4B");
  if (!MECE250TraditionalPlan2A3A4Bflag) {
      if (MECE250TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -12511,6 +13137,12 @@ $scope.MECE250TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.ECE209TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ECE209TraditionalPlan2A3A4BTime <= 200) { 
+        ECE209TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+ECE209TraditionalPlan2A3A4BTime = currentTime;
   var ECE209TraditionalPlan2A3A4Belement = document.getElementById("ECE209TraditionalPlan2A3A4B");
  if (!ECE209TraditionalPlan2A3A4Bflag) {
      if (ECE209TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -12532,6 +13164,12 @@ $scope.ECE209TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MATE202TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATE202TraditionalPlan2A3A4BTime <= 200) { 
+        MATE202TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MATE202TraditionalPlan2A3A4BTime = currentTime;
   var MATE202TraditionalPlan2A3A4Belement = document.getElementById("MATE202TraditionalPlan2A3A4B");
  if (!MATE202TraditionalPlan2A3A4Bflag) {
      if (MATE202TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -12555,6 +13193,12 @@ $scope.MATE202TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MATH201TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH201TraditionalPlan2A3A4BTime <= 200) { 
+        MATH201TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MATH201TraditionalPlan2A3A4BTime = currentTime;
   var MATH201TraditionalPlan2A3A4Belement = document.getElementById("MATH201TraditionalPlan2A3A4B");
  if (!MATH201TraditionalPlan2A3A4Bflag) {
      if (MATH201TraditionalPlan2A3A4Belement.classList.contains("MATH-highlighted")) { 
@@ -12582,6 +13226,12 @@ $scope.MATH201TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MECE230TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE230TraditionalPlan2A3A4BTime <= 200) { 
+        MECE230TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MECE230TraditionalPlan2A3A4BTime = currentTime;
   var MECE230TraditionalPlan2A3A4Belement = document.getElementById("MECE230TraditionalPlan2A3A4B");
  if (!MECE230TraditionalPlan2A3A4Bflag) {
      if (MECE230TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -12609,6 +13259,12 @@ $scope.MECE230TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MECE260TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE260TraditionalPlan2A3A4BTime <= 200) { 
+        MECE260TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MECE260TraditionalPlan2A3A4BTime = currentTime;
   var MECE260TraditionalPlan2A3A4Belement = document.getElementById("MECE260TraditionalPlan2A3A4B");
  if (!MECE260TraditionalPlan2A3A4Bflag) {
      if (MECE260TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -12636,6 +13292,12 @@ $scope.MECE260TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MECE265TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE265TraditionalPlan2A3A4BTime <= 200) { 
+        MECE265TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MECE265TraditionalPlan2A3A4BTime = currentTime;
   var MECE265TraditionalPlan2A3A4Belement = document.getElementById("MECE265TraditionalPlan2A3A4B");
  if (!MECE265TraditionalPlan2A3A4Bflag) {
      if (MECE265TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -12659,6 +13321,12 @@ $scope.MECE265TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MATH300TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH300TraditionalPlan2A3A4BTime <= 200) { 
+        MATH300TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MATH300TraditionalPlan2A3A4BTime = currentTime;
   var MATH300TraditionalPlan2A3A4Belement = document.getElementById("MATH300TraditionalPlan2A3A4B");
  if (!MATH300TraditionalPlan2A3A4Bflag) {
      if (MATH300TraditionalPlan2A3A4Belement.classList.contains("MATH-highlighted")) { 
@@ -12688,6 +13356,12 @@ $scope.MATH300TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MECE300TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE300TraditionalPlan2A3A4BTime <= 200) { 
+        MECE300TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MECE300TraditionalPlan2A3A4BTime = currentTime;
   var MECE300TraditionalPlan2A3A4Belement = document.getElementById("MECE300TraditionalPlan2A3A4B");
  if (!MECE300TraditionalPlan2A3A4Bflag) {
      if (MECE300TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -12719,6 +13393,12 @@ $scope.MECE300TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MECE301TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE301TraditionalPlan2A3A4BTime <= 200) { 
+        MECE301TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MECE301TraditionalPlan2A3A4BTime = currentTime;
   var MECE301TraditionalPlan2A3A4Belement = document.getElementById("MECE301TraditionalPlan2A3A4B");
  if (!MECE301TraditionalPlan2A3A4Bflag) {
      if (MECE301TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -12742,6 +13422,12 @@ $scope.MECE301TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MECE331TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE331TraditionalPlan2A3A4BTime <= 200) { 
+        MECE331TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MECE331TraditionalPlan2A3A4BTime = currentTime;
   var MECE331TraditionalPlan2A3A4Belement = document.getElementById("MECE331TraditionalPlan2A3A4B");
  if (!MECE331TraditionalPlan2A3A4Bflag) {
      if (MECE331TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -12781,6 +13467,12 @@ $scope.MECE331TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MECE371TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE371TraditionalPlan2A3A4BTime <= 200) { 
+        MECE371TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MECE371TraditionalPlan2A3A4BTime = currentTime;
   var MECE371TraditionalPlan2A3A4Belement = document.getElementById("MECE371TraditionalPlan2A3A4B");
  if (!MECE371TraditionalPlan2A3A4Bflag) {
      if (MECE371TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -12814,6 +13506,12 @@ $scope.MECE371TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MECE380TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE380TraditionalPlan2A3A4BTime <= 200) { 
+        MECE380TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MECE380TraditionalPlan2A3A4BTime = currentTime;
   var MECE380TraditionalPlan2A3A4Belement = document.getElementById("MECE380TraditionalPlan2A3A4B");
  if (!MECE380TraditionalPlan2A3A4Bflag) {
      if (MECE380TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -12839,6 +13537,12 @@ $scope.MECE380TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.ENGM310TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM310TraditionalPlan2A3A4BTime <= 200) { 
+        ENGM310TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+ENGM310TraditionalPlan2A3A4BTime = currentTime;
   var ENGM310TraditionalPlan2A3A4Belement = document.getElementById("ENGM310TraditionalPlan2A3A4B");
  if (!ENGM310TraditionalPlan2A3A4Bflag) {
      if (ENGM310TraditionalPlan2A3A4Belement.classList.contains("Other-highlighted")) { 
@@ -12860,6 +13564,12 @@ $scope.ENGM310TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.ENGM401TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM401TraditionalPlan2A3A4BTime <= 200) { 
+        ENGM401TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+ENGM401TraditionalPlan2A3A4BTime = currentTime;
   var ENGM401TraditionalPlan2A3A4Belement = document.getElementById("ENGM401TraditionalPlan2A3A4B");
  if (!ENGM401TraditionalPlan2A3A4Bflag) {
      if (ENGM401TraditionalPlan2A3A4Belement.classList.contains("Other-highlighted")) { 
@@ -12881,6 +13591,12 @@ $scope.ENGM401TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MECE340TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE340TraditionalPlan2A3A4BTime <= 200) { 
+        MECE340TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MECE340TraditionalPlan2A3A4BTime = currentTime;
   var MECE340TraditionalPlan2A3A4Belement = document.getElementById("MECE340TraditionalPlan2A3A4B");
  if (!MECE340TraditionalPlan2A3A4Bflag) {
      if (MECE340TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -12908,6 +13624,12 @@ $scope.MECE340TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MECE360TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE360TraditionalPlan2A3A4BTime <= 200) { 
+        MECE360TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MECE360TraditionalPlan2A3A4BTime = currentTime;
   var MECE360TraditionalPlan2A3A4Belement = document.getElementById("MECE360TraditionalPlan2A3A4B");
  if (!MECE360TraditionalPlan2A3A4Bflag) {
      if (MECE360TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -12943,6 +13665,12 @@ $scope.MECE360TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MECE362TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE362TraditionalPlan2A3A4BTime <= 200) { 
+        MECE362TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MECE362TraditionalPlan2A3A4BTime = currentTime;
   var MECE362TraditionalPlan2A3A4Belement = document.getElementById("MECE362TraditionalPlan2A3A4B");
  if (!MECE362TraditionalPlan2A3A4Bflag) {
      if (MECE362TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -12968,6 +13696,12 @@ $scope.MECE362TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MECE390TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE390TraditionalPlan2A3A4BTime <= 200) { 
+        MECE390TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MECE390TraditionalPlan2A3A4BTime = currentTime;
   var MECE390TraditionalPlan2A3A4Belement = document.getElementById("MECE390TraditionalPlan2A3A4B");
  if (!MECE390TraditionalPlan2A3A4Bflag) {
      if (MECE390TraditionalPlan2A3A4Belement.classList.contains("MATH-highlighted")) { 
@@ -12993,6 +13727,12 @@ $scope.MECE390TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.ComplementaryElectiveTraditionalPlan2A3A4B0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ComplementaryElectiveTraditionalPlan2A3A4B0Time <= 200) { 
+        ComplementaryElectiveTraditionalPlan2A3A4B0Time = currentTime;
+        return;
+    }
+ComplementaryElectiveTraditionalPlan2A3A4B0Time = currentTime;
   var ComplementaryElectiveTraditionalPlan2A3A4B0element = document.getElementById("ComplementaryElectiveTraditionalPlan2A3A4B0");
  if (!ComplementaryElectiveTraditionalPlan2A3A4B0flag) {
      if (ComplementaryElectiveTraditionalPlan2A3A4B0element.classList.contains("COMP-highlighted")) { 
@@ -13012,6 +13752,12 @@ $scope.ComplementaryElectiveTraditionalPlan2A3A4B0Listener = function () {
   }
 };
 $scope.CHE448TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE448TraditionalPlan2A3A4BTime <= 200) { 
+        CHE448TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+CHE448TraditionalPlan2A3A4BTime = currentTime;
   var CHE448TraditionalPlan2A3A4Belement = document.getElementById("CHE448TraditionalPlan2A3A4B");
  if (!CHE448TraditionalPlan2A3A4Bflag) {
      if (CHE448TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -13039,6 +13785,12 @@ $scope.CHE448TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MECE420TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE420TraditionalPlan2A3A4BTime <= 200) { 
+        MECE420TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MECE420TraditionalPlan2A3A4BTime = currentTime;
   var MECE420TraditionalPlan2A3A4Belement = document.getElementById("MECE420TraditionalPlan2A3A4B");
  if (!MECE420TraditionalPlan2A3A4Bflag) {
      if (MECE420TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -13060,6 +13812,12 @@ $scope.MECE420TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.ENGG400TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG400TraditionalPlan2A3A4BTime <= 200) { 
+        ENGG400TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+ENGG400TraditionalPlan2A3A4BTime = currentTime;
   var ENGG400TraditionalPlan2A3A4Belement = document.getElementById("ENGG400TraditionalPlan2A3A4B");
  if (!ENGG400TraditionalPlan2A3A4Bflag) {
      if (ENGG400TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -13079,6 +13837,12 @@ $scope.ENGG400TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MECE403TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE403TraditionalPlan2A3A4BTime <= 200) { 
+        MECE403TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MECE403TraditionalPlan2A3A4BTime = currentTime;
   var MECE403TraditionalPlan2A3A4Belement = document.getElementById("MECE403TraditionalPlan2A3A4B");
  if (!MECE403TraditionalPlan2A3A4Bflag) {
      if (MECE403TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -13106,6 +13870,12 @@ $scope.MECE403TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MECE451TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE451TraditionalPlan2A3A4BTime <= 200) { 
+        MECE451TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MECE451TraditionalPlan2A3A4BTime = currentTime;
   var MECE451TraditionalPlan2A3A4Belement = document.getElementById("MECE451TraditionalPlan2A3A4B");
  if (!MECE451TraditionalPlan2A3A4Bflag) {
      if (MECE451TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -13129,6 +13899,12 @@ $scope.MECE451TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MECE460TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE460TraditionalPlan2A3A4BTime <= 200) { 
+        MECE460TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MECE460TraditionalPlan2A3A4BTime = currentTime;
   var MECE460TraditionalPlan2A3A4Belement = document.getElementById("MECE460TraditionalPlan2A3A4B");
  if (!MECE460TraditionalPlan2A3A4Bflag) {
      if (MECE460TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -13166,6 +13942,12 @@ $scope.MECE460TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4B0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2A3A4B0Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2A3A4B0Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2A3A4B0Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2A3A4B0element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4B0");
  if (!ProgramTechnicalElectiveTraditionalPlan2A3A4B0flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2A3A4B0element.classList.contains("PROG-highlighted")) { 
@@ -13185,6 +13967,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4B0Listener = function () {
   }
 };
 $scope.ENGG404TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG404TraditionalPlan2A3A4BTime <= 200) { 
+        ENGG404TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+ENGG404TraditionalPlan2A3A4BTime = currentTime;
   var ENGG404TraditionalPlan2A3A4Belement = document.getElementById("ENGG404TraditionalPlan2A3A4B");
  if (!ENGG404TraditionalPlan2A3A4Bflag) {
      if (ENGG404TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -13204,6 +13992,12 @@ $scope.ENGG404TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MECE430TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE430TraditionalPlan2A3A4BTime <= 200) { 
+        MECE430TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MECE430TraditionalPlan2A3A4BTime = currentTime;
   var MECE430TraditionalPlan2A3A4Belement = document.getElementById("MECE430TraditionalPlan2A3A4B");
  if (!MECE430TraditionalPlan2A3A4Bflag) {
      if (MECE430TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -13225,6 +14019,12 @@ $scope.MECE430TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MECE480TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE480TraditionalPlan2A3A4BTime <= 200) { 
+        MECE480TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MECE480TraditionalPlan2A3A4BTime = currentTime;
   var MECE480TraditionalPlan2A3A4Belement = document.getElementById("MECE480TraditionalPlan2A3A4B");
  if (!MECE480TraditionalPlan2A3A4Bflag) {
      if (MECE480TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -13250,6 +14050,12 @@ $scope.MECE480TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.MECE463TraditionalPlan2A3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE463TraditionalPlan2A3A4BTime <= 200) { 
+        MECE463TraditionalPlan2A3A4BTime = currentTime;
+        return;
+    }
+MECE463TraditionalPlan2A3A4BTime = currentTime;
   var MECE463TraditionalPlan2A3A4Belement = document.getElementById("MECE463TraditionalPlan2A3A4B");
  if (!MECE463TraditionalPlan2A3A4Bflag) {
      if (MECE463TraditionalPlan2A3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -13275,6 +14081,12 @@ $scope.MECE463TraditionalPlan2A3A4BListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4B1Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2A3A4B1Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2A3A4B1Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2A3A4B1Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2A3A4B1element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4B1");
  if (!ProgramTechnicalElectiveTraditionalPlan2A3A4B1flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2A3A4B1element.classList.contains("PROG-highlighted")) { 
@@ -13294,6 +14106,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4B1Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4B2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2A3A4B2Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2A3A4B2Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2A3A4B2Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2A3A4B2element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4B2");
  if (!ProgramTechnicalElectiveTraditionalPlan2A3A4B2flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2A3A4B2element.classList.contains("PROG-highlighted")) { 
@@ -13313,6 +14131,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4B2Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4B3Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2A3A4B3Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2A3A4B3Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2A3A4B3Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2A3A4B3element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4B3");
  if (!ProgramTechnicalElectiveTraditionalPlan2A3A4B3flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2A3A4B3element.classList.contains("PROG-highlighted")) { 
@@ -13332,57 +14156,165 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4B3Listener = function () {
   }
 };
   var CHEM103TraditionalPlan2A3B4Aflag = false;
+  var CHEM103TraditionalPlan2A3B4Arflag = false;
+ var CHEM103TraditionalPlan2A3B4ATime = new Date().getTime();
   var ENGG100TraditionalPlan2A3B4Aflag = false;
+  var ENGG100TraditionalPlan2A3B4Arflag = false;
+ var ENGG100TraditionalPlan2A3B4ATime = new Date().getTime();
   var ENGG130TraditionalPlan2A3B4Aflag = false;
+  var ENGG130TraditionalPlan2A3B4Arflag = false;
+ var ENGG130TraditionalPlan2A3B4ATime = new Date().getTime();
   var ENGL199TraditionalPlan2A3B4Aflag = false;
+  var ENGL199TraditionalPlan2A3B4Arflag = false;
+ var ENGL199TraditionalPlan2A3B4ATime = new Date().getTime();
   var MATH100TraditionalPlan2A3B4Aflag = false;
+  var MATH100TraditionalPlan2A3B4Arflag = false;
+ var MATH100TraditionalPlan2A3B4ATime = new Date().getTime();
   var PHYS130TraditionalPlan2A3B4Aflag = false;
+  var PHYS130TraditionalPlan2A3B4Arflag = false;
+ var PHYS130TraditionalPlan2A3B4ATime = new Date().getTime();
   var CHEM105TraditionalPlan2A3B4Aflag = false;
+  var CHEM105TraditionalPlan2A3B4Arflag = false;
+ var CHEM105TraditionalPlan2A3B4ATime = new Date().getTime();
   var ENCMP100TraditionalPlan2A3B4Aflag = false;
+  var ENCMP100TraditionalPlan2A3B4Arflag = false;
+ var ENCMP100TraditionalPlan2A3B4ATime = new Date().getTime();
   var ENGG160TraditionalPlan2A3B4Aflag = false;
+  var ENGG160TraditionalPlan2A3B4Arflag = false;
+ var ENGG160TraditionalPlan2A3B4ATime = new Date().getTime();
   var ENPH131TraditionalPlan2A3B4Aflag = false;
+  var ENPH131TraditionalPlan2A3B4Arflag = false;
+ var ENPH131TraditionalPlan2A3B4ATime = new Date().getTime();
   var MATH101TraditionalPlan2A3B4Aflag = false;
+  var MATH101TraditionalPlan2A3B4Arflag = false;
+ var MATH101TraditionalPlan2A3B4ATime = new Date().getTime();
   var MATH102TraditionalPlan2A3B4Aflag = false;
+  var MATH102TraditionalPlan2A3B4Arflag = false;
+ var MATH102TraditionalPlan2A3B4ATime = new Date().getTime();
   var CIVE270TraditionalPlan2A3B4Aflag = false;
+  var CIVE270TraditionalPlan2A3B4Arflag = false;
+ var CIVE270TraditionalPlan2A3B4ATime = new Date().getTime();
   var MATH209TraditionalPlan2A3B4Aflag = false;
+  var MATH209TraditionalPlan2A3B4Arflag = false;
+ var MATH209TraditionalPlan2A3B4ATime = new Date().getTime();
   var STAT235TraditionalPlan2A3B4Aflag = false;
+  var STAT235TraditionalPlan2A3B4Arflag = false;
+ var STAT235TraditionalPlan2A3B4ATime = new Date().getTime();
   var CHE243TraditionalPlan2A3B4Aflag = false;
+  var CHE243TraditionalPlan2A3B4Arflag = false;
+ var CHE243TraditionalPlan2A3B4ATime = new Date().getTime();
   var MECE200TraditionalPlan2A3B4Aflag = false;
+  var MECE200TraditionalPlan2A3B4Arflag = false;
+ var MECE200TraditionalPlan2A3B4ATime = new Date().getTime();
   var MECE250TraditionalPlan2A3B4Aflag = false;
+  var MECE250TraditionalPlan2A3B4Arflag = false;
+ var MECE250TraditionalPlan2A3B4ATime = new Date().getTime();
   var ECE209TraditionalPlan2A3B4Aflag = false;
+  var ECE209TraditionalPlan2A3B4Arflag = false;
+ var ECE209TraditionalPlan2A3B4ATime = new Date().getTime();
   var MATE202TraditionalPlan2A3B4Aflag = false;
+  var MATE202TraditionalPlan2A3B4Arflag = false;
+ var MATE202TraditionalPlan2A3B4ATime = new Date().getTime();
   var MATH201TraditionalPlan2A3B4Aflag = false;
+  var MATH201TraditionalPlan2A3B4Arflag = false;
+ var MATH201TraditionalPlan2A3B4ATime = new Date().getTime();
   var MECE230TraditionalPlan2A3B4Aflag = false;
+  var MECE230TraditionalPlan2A3B4Arflag = false;
+ var MECE230TraditionalPlan2A3B4ATime = new Date().getTime();
   var MECE260TraditionalPlan2A3B4Aflag = false;
+  var MECE260TraditionalPlan2A3B4Arflag = false;
+ var MECE260TraditionalPlan2A3B4ATime = new Date().getTime();
   var MECE265TraditionalPlan2A3B4Aflag = false;
+  var MECE265TraditionalPlan2A3B4Arflag = false;
+ var MECE265TraditionalPlan2A3B4ATime = new Date().getTime();
   var ENGM310TraditionalPlan2A3B4Aflag = false;
+  var ENGM310TraditionalPlan2A3B4Arflag = false;
+ var ENGM310TraditionalPlan2A3B4ATime = new Date().getTime();
   var ENGM401TraditionalPlan2A3B4Aflag = false;
+  var ENGM401TraditionalPlan2A3B4Arflag = false;
+ var ENGM401TraditionalPlan2A3B4ATime = new Date().getTime();
   var MECE340TraditionalPlan2A3B4Aflag = false;
+  var MECE340TraditionalPlan2A3B4Arflag = false;
+ var MECE340TraditionalPlan2A3B4ATime = new Date().getTime();
   var MECE360TraditionalPlan2A3B4Aflag = false;
+  var MECE360TraditionalPlan2A3B4Arflag = false;
+ var MECE360TraditionalPlan2A3B4ATime = new Date().getTime();
   var MECE362TraditionalPlan2A3B4Aflag = false;
+  var MECE362TraditionalPlan2A3B4Arflag = false;
+ var MECE362TraditionalPlan2A3B4ATime = new Date().getTime();
   var MECE390TraditionalPlan2A3B4Aflag = false;
+  var MECE390TraditionalPlan2A3B4Arflag = false;
+ var MECE390TraditionalPlan2A3B4ATime = new Date().getTime();
   var ComplementaryElectiveTraditionalPlan2A3B4A0flag = false;
+  var ComplementaryElectiveTraditionalPlan2A3B4A0rflag = false;
+ var ComplementaryElectiveTraditionalPlan2A3B4A0Time = new Date().getTime();
   var MATH300TraditionalPlan2A3B4Aflag = false;
+  var MATH300TraditionalPlan2A3B4Arflag = false;
+ var MATH300TraditionalPlan2A3B4ATime = new Date().getTime();
   var MECE300TraditionalPlan2A3B4Aflag = false;
+  var MECE300TraditionalPlan2A3B4Arflag = false;
+ var MECE300TraditionalPlan2A3B4ATime = new Date().getTime();
   var MECE301TraditionalPlan2A3B4Aflag = false;
+  var MECE301TraditionalPlan2A3B4Arflag = false;
+ var MECE301TraditionalPlan2A3B4ATime = new Date().getTime();
   var MECE331TraditionalPlan2A3B4Aflag = false;
+  var MECE331TraditionalPlan2A3B4Arflag = false;
+ var MECE331TraditionalPlan2A3B4ATime = new Date().getTime();
   var MECE371TraditionalPlan2A3B4Aflag = false;
+  var MECE371TraditionalPlan2A3B4Arflag = false;
+ var MECE371TraditionalPlan2A3B4ATime = new Date().getTime();
   var MECE380TraditionalPlan2A3B4Aflag = false;
+  var MECE380TraditionalPlan2A3B4Arflag = false;
+ var MECE380TraditionalPlan2A3B4ATime = new Date().getTime();
   var ENGG404TraditionalPlan2A3B4Aflag = false;
+  var ENGG404TraditionalPlan2A3B4Arflag = false;
+ var ENGG404TraditionalPlan2A3B4ATime = new Date().getTime();
   var MECE430TraditionalPlan2A3B4Aflag = false;
+  var MECE430TraditionalPlan2A3B4Arflag = false;
+ var MECE430TraditionalPlan2A3B4ATime = new Date().getTime();
   var MECE480TraditionalPlan2A3B4Aflag = false;
+  var MECE480TraditionalPlan2A3B4Arflag = false;
+ var MECE480TraditionalPlan2A3B4ATime = new Date().getTime();
   var MECE463TraditionalPlan2A3B4Aflag = false;
+  var MECE463TraditionalPlan2A3B4Arflag = false;
+ var MECE463TraditionalPlan2A3B4ATime = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2A3B4A0flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2A3B4A0rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2A3B4A0Time = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2A3B4A1flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2A3B4A1rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2A3B4A1Time = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2A3B4A2flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2A3B4A2rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2A3B4A2Time = new Date().getTime();
   var CHE448TraditionalPlan2A3B4Aflag = false;
+  var CHE448TraditionalPlan2A3B4Arflag = false;
+ var CHE448TraditionalPlan2A3B4ATime = new Date().getTime();
   var MECE420TraditionalPlan2A3B4Aflag = false;
+  var MECE420TraditionalPlan2A3B4Arflag = false;
+ var MECE420TraditionalPlan2A3B4ATime = new Date().getTime();
   var ENGG400TraditionalPlan2A3B4Aflag = false;
+  var ENGG400TraditionalPlan2A3B4Arflag = false;
+ var ENGG400TraditionalPlan2A3B4ATime = new Date().getTime();
   var MECE403TraditionalPlan2A3B4Aflag = false;
+  var MECE403TraditionalPlan2A3B4Arflag = false;
+ var MECE403TraditionalPlan2A3B4ATime = new Date().getTime();
   var MECE451TraditionalPlan2A3B4Aflag = false;
+  var MECE451TraditionalPlan2A3B4Arflag = false;
+ var MECE451TraditionalPlan2A3B4ATime = new Date().getTime();
   var MECE460TraditionalPlan2A3B4Aflag = false;
+  var MECE460TraditionalPlan2A3B4Arflag = false;
+ var MECE460TraditionalPlan2A3B4ATime = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2A3B4A3flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2A3B4A3rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2A3B4A3Time = new Date().getTime();
 $scope.CHEM103TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM103TraditionalPlan2A3B4ATime <= 200) { 
+        CHEM103TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+CHEM103TraditionalPlan2A3B4ATime = currentTime;
   var CHEM103TraditionalPlan2A3B4Aelement = document.getElementById("CHEM103TraditionalPlan2A3B4A");
  if (!CHEM103TraditionalPlan2A3B4Aflag) {
      if (CHEM103TraditionalPlan2A3B4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -13404,6 +14336,12 @@ $scope.CHEM103TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.ENGG100TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG100TraditionalPlan2A3B4ATime <= 200) { 
+        ENGG100TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+ENGG100TraditionalPlan2A3B4ATime = currentTime;
   var ENGG100TraditionalPlan2A3B4Aelement = document.getElementById("ENGG100TraditionalPlan2A3B4A");
  if (!ENGG100TraditionalPlan2A3B4Aflag) {
      if (ENGG100TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -13423,6 +14361,12 @@ $scope.ENGG100TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.ENGG130TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG130TraditionalPlan2A3B4ATime <= 200) { 
+        ENGG130TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+ENGG130TraditionalPlan2A3B4ATime = currentTime;
   var ENGG130TraditionalPlan2A3B4Aelement = document.getElementById("ENGG130TraditionalPlan2A3B4A");
  if (!ENGG130TraditionalPlan2A3B4Aflag) {
      if (ENGG130TraditionalPlan2A3B4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -13450,6 +14394,12 @@ $scope.ENGG130TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.ENGL199TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGL199TraditionalPlan2A3B4ATime <= 200) { 
+        ENGL199TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+ENGL199TraditionalPlan2A3B4ATime = currentTime;
   var ENGL199TraditionalPlan2A3B4Aelement = document.getElementById("ENGL199TraditionalPlan2A3B4A");
  if (!ENGL199TraditionalPlan2A3B4Aflag) {
      if (ENGL199TraditionalPlan2A3B4Aelement.classList.contains("Other-highlighted")) { 
@@ -13471,6 +14421,12 @@ $scope.ENGL199TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MATH100TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH100TraditionalPlan2A3B4ATime <= 200) { 
+        MATH100TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MATH100TraditionalPlan2A3B4ATime = currentTime;
   var MATH100TraditionalPlan2A3B4Aelement = document.getElementById("MATH100TraditionalPlan2A3B4A");
  if (!MATH100TraditionalPlan2A3B4Aflag) {
      if (MATH100TraditionalPlan2A3B4Aelement.classList.contains("MATH-highlighted")) { 
@@ -13502,6 +14458,12 @@ $scope.MATH100TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.PHYS130TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - PHYS130TraditionalPlan2A3B4ATime <= 200) { 
+        PHYS130TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+PHYS130TraditionalPlan2A3B4ATime = currentTime;
   var PHYS130TraditionalPlan2A3B4Aelement = document.getElementById("PHYS130TraditionalPlan2A3B4A");
  if (!PHYS130TraditionalPlan2A3B4Aflag) {
      if (PHYS130TraditionalPlan2A3B4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -13523,6 +14485,12 @@ $scope.PHYS130TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.CHEM105TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM105TraditionalPlan2A3B4ATime <= 200) { 
+        CHEM105TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+CHEM105TraditionalPlan2A3B4ATime = currentTime;
   var CHEM105TraditionalPlan2A3B4Aelement = document.getElementById("CHEM105TraditionalPlan2A3B4A");
  if (!CHEM105TraditionalPlan2A3B4Aflag) {
      if (CHEM105TraditionalPlan2A3B4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -13546,6 +14514,12 @@ $scope.CHEM105TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.ENCMP100TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENCMP100TraditionalPlan2A3B4ATime <= 200) { 
+        ENCMP100TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+ENCMP100TraditionalPlan2A3B4ATime = currentTime;
   var ENCMP100TraditionalPlan2A3B4Aelement = document.getElementById("ENCMP100TraditionalPlan2A3B4A");
  if (!ENCMP100TraditionalPlan2A3B4Aflag) {
      if (ENCMP100TraditionalPlan2A3B4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -13565,6 +14539,12 @@ $scope.ENCMP100TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.ENGG160TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG160TraditionalPlan2A3B4ATime <= 200) { 
+        ENGG160TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+ENGG160TraditionalPlan2A3B4ATime = currentTime;
   var ENGG160TraditionalPlan2A3B4Aelement = document.getElementById("ENGG160TraditionalPlan2A3B4A");
  if (!ENGG160TraditionalPlan2A3B4Aflag) {
      if (ENGG160TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -13588,6 +14568,12 @@ $scope.ENGG160TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.ENPH131TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENPH131TraditionalPlan2A3B4ATime <= 200) { 
+        ENPH131TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+ENPH131TraditionalPlan2A3B4ATime = currentTime;
   var ENPH131TraditionalPlan2A3B4Aelement = document.getElementById("ENPH131TraditionalPlan2A3B4A");
  if (!ENPH131TraditionalPlan2A3B4Aflag) {
      if (ENPH131TraditionalPlan2A3B4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -13617,6 +14603,12 @@ $scope.ENPH131TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MATH101TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH101TraditionalPlan2A3B4ATime <= 200) { 
+        MATH101TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MATH101TraditionalPlan2A3B4ATime = currentTime;
   var MATH101TraditionalPlan2A3B4Aelement = document.getElementById("MATH101TraditionalPlan2A3B4A");
  if (!MATH101TraditionalPlan2A3B4Aflag) {
      if (MATH101TraditionalPlan2A3B4Aelement.classList.contains("MATH-highlighted")) { 
@@ -13652,6 +14644,12 @@ $scope.MATH101TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MATH102TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH102TraditionalPlan2A3B4ATime <= 200) { 
+        MATH102TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MATH102TraditionalPlan2A3B4ATime = currentTime;
   var MATH102TraditionalPlan2A3B4Aelement = document.getElementById("MATH102TraditionalPlan2A3B4A");
  if (!MATH102TraditionalPlan2A3B4Aflag) {
      if (MATH102TraditionalPlan2A3B4Aelement.classList.contains("MATH-highlighted")) { 
@@ -13677,6 +14675,12 @@ $scope.MATH102TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.CIVE270TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CIVE270TraditionalPlan2A3B4ATime <= 200) { 
+        CIVE270TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+CIVE270TraditionalPlan2A3B4ATime = currentTime;
   var CIVE270TraditionalPlan2A3B4Aelement = document.getElementById("CIVE270TraditionalPlan2A3B4A");
  if (!CIVE270TraditionalPlan2A3B4Aflag) {
      if (CIVE270TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -13708,6 +14712,12 @@ $scope.CIVE270TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MATH209TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH209TraditionalPlan2A3B4ATime <= 200) { 
+        MATH209TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MATH209TraditionalPlan2A3B4ATime = currentTime;
   var MATH209TraditionalPlan2A3B4Aelement = document.getElementById("MATH209TraditionalPlan2A3B4A");
  if (!MATH209TraditionalPlan2A3B4Aflag) {
      if (MATH209TraditionalPlan2A3B4Aelement.classList.contains("MATH-highlighted")) { 
@@ -13739,6 +14749,12 @@ $scope.MATH209TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.STAT235TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - STAT235TraditionalPlan2A3B4ATime <= 200) { 
+        STAT235TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+STAT235TraditionalPlan2A3B4ATime = currentTime;
   var STAT235TraditionalPlan2A3B4Aelement = document.getElementById("STAT235TraditionalPlan2A3B4A");
  if (!STAT235TraditionalPlan2A3B4Aflag) {
      if (STAT235TraditionalPlan2A3B4Aelement.classList.contains("MATH-highlighted")) { 
@@ -13764,6 +14780,12 @@ $scope.STAT235TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.CHE243TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE243TraditionalPlan2A3B4ATime <= 200) { 
+        CHE243TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+CHE243TraditionalPlan2A3B4ATime = currentTime;
   var CHE243TraditionalPlan2A3B4Aelement = document.getElementById("CHE243TraditionalPlan2A3B4A");
  if (!CHE243TraditionalPlan2A3B4Aflag) {
      if (CHE243TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -13791,6 +14813,12 @@ $scope.CHE243TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MECE200TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE200TraditionalPlan2A3B4ATime <= 200) { 
+        MECE200TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MECE200TraditionalPlan2A3B4ATime = currentTime;
   var MECE200TraditionalPlan2A3B4Aelement = document.getElementById("MECE200TraditionalPlan2A3B4A");
  if (!MECE200TraditionalPlan2A3B4Aflag) {
      if (MECE200TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -13812,6 +14840,12 @@ $scope.MECE200TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MECE250TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE250TraditionalPlan2A3B4ATime <= 200) { 
+        MECE250TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MECE250TraditionalPlan2A3B4ATime = currentTime;
   var MECE250TraditionalPlan2A3B4Aelement = document.getElementById("MECE250TraditionalPlan2A3B4A");
  if (!MECE250TraditionalPlan2A3B4Aflag) {
      if (MECE250TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -13843,6 +14877,12 @@ $scope.MECE250TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.ECE209TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ECE209TraditionalPlan2A3B4ATime <= 200) { 
+        ECE209TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+ECE209TraditionalPlan2A3B4ATime = currentTime;
   var ECE209TraditionalPlan2A3B4Aelement = document.getElementById("ECE209TraditionalPlan2A3B4A");
  if (!ECE209TraditionalPlan2A3B4Aflag) {
      if (ECE209TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -13864,6 +14904,12 @@ $scope.ECE209TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MATE202TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATE202TraditionalPlan2A3B4ATime <= 200) { 
+        MATE202TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MATE202TraditionalPlan2A3B4ATime = currentTime;
   var MATE202TraditionalPlan2A3B4Aelement = document.getElementById("MATE202TraditionalPlan2A3B4A");
  if (!MATE202TraditionalPlan2A3B4Aflag) {
      if (MATE202TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -13887,6 +14933,12 @@ $scope.MATE202TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MATH201TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH201TraditionalPlan2A3B4ATime <= 200) { 
+        MATH201TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MATH201TraditionalPlan2A3B4ATime = currentTime;
   var MATH201TraditionalPlan2A3B4Aelement = document.getElementById("MATH201TraditionalPlan2A3B4A");
  if (!MATH201TraditionalPlan2A3B4Aflag) {
      if (MATH201TraditionalPlan2A3B4Aelement.classList.contains("MATH-highlighted")) { 
@@ -13914,6 +14966,12 @@ $scope.MATH201TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MECE230TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE230TraditionalPlan2A3B4ATime <= 200) { 
+        MECE230TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MECE230TraditionalPlan2A3B4ATime = currentTime;
   var MECE230TraditionalPlan2A3B4Aelement = document.getElementById("MECE230TraditionalPlan2A3B4A");
  if (!MECE230TraditionalPlan2A3B4Aflag) {
      if (MECE230TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -13941,6 +14999,12 @@ $scope.MECE230TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MECE260TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE260TraditionalPlan2A3B4ATime <= 200) { 
+        MECE260TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MECE260TraditionalPlan2A3B4ATime = currentTime;
   var MECE260TraditionalPlan2A3B4Aelement = document.getElementById("MECE260TraditionalPlan2A3B4A");
  if (!MECE260TraditionalPlan2A3B4Aflag) {
      if (MECE260TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -13968,6 +15032,12 @@ $scope.MECE260TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MECE265TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE265TraditionalPlan2A3B4ATime <= 200) { 
+        MECE265TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MECE265TraditionalPlan2A3B4ATime = currentTime;
   var MECE265TraditionalPlan2A3B4Aelement = document.getElementById("MECE265TraditionalPlan2A3B4A");
  if (!MECE265TraditionalPlan2A3B4Aflag) {
      if (MECE265TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -13991,6 +15061,12 @@ $scope.MECE265TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.ENGM310TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM310TraditionalPlan2A3B4ATime <= 200) { 
+        ENGM310TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+ENGM310TraditionalPlan2A3B4ATime = currentTime;
   var ENGM310TraditionalPlan2A3B4Aelement = document.getElementById("ENGM310TraditionalPlan2A3B4A");
  if (!ENGM310TraditionalPlan2A3B4Aflag) {
      if (ENGM310TraditionalPlan2A3B4Aelement.classList.contains("Other-highlighted")) { 
@@ -14012,6 +15088,12 @@ $scope.ENGM310TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.ENGM401TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM401TraditionalPlan2A3B4ATime <= 200) { 
+        ENGM401TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+ENGM401TraditionalPlan2A3B4ATime = currentTime;
   var ENGM401TraditionalPlan2A3B4Aelement = document.getElementById("ENGM401TraditionalPlan2A3B4A");
  if (!ENGM401TraditionalPlan2A3B4Aflag) {
      if (ENGM401TraditionalPlan2A3B4Aelement.classList.contains("Other-highlighted")) { 
@@ -14033,6 +15115,12 @@ $scope.ENGM401TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MECE340TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE340TraditionalPlan2A3B4ATime <= 200) { 
+        MECE340TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MECE340TraditionalPlan2A3B4ATime = currentTime;
   var MECE340TraditionalPlan2A3B4Aelement = document.getElementById("MECE340TraditionalPlan2A3B4A");
  if (!MECE340TraditionalPlan2A3B4Aflag) {
      if (MECE340TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -14060,6 +15148,12 @@ $scope.MECE340TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MECE360TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE360TraditionalPlan2A3B4ATime <= 200) { 
+        MECE360TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MECE360TraditionalPlan2A3B4ATime = currentTime;
   var MECE360TraditionalPlan2A3B4Aelement = document.getElementById("MECE360TraditionalPlan2A3B4A");
  if (!MECE360TraditionalPlan2A3B4Aflag) {
      if (MECE360TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -14095,6 +15189,12 @@ $scope.MECE360TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MECE362TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE362TraditionalPlan2A3B4ATime <= 200) { 
+        MECE362TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MECE362TraditionalPlan2A3B4ATime = currentTime;
   var MECE362TraditionalPlan2A3B4Aelement = document.getElementById("MECE362TraditionalPlan2A3B4A");
  if (!MECE362TraditionalPlan2A3B4Aflag) {
      if (MECE362TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -14120,6 +15220,12 @@ $scope.MECE362TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MECE390TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE390TraditionalPlan2A3B4ATime <= 200) { 
+        MECE390TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MECE390TraditionalPlan2A3B4ATime = currentTime;
   var MECE390TraditionalPlan2A3B4Aelement = document.getElementById("MECE390TraditionalPlan2A3B4A");
  if (!MECE390TraditionalPlan2A3B4Aflag) {
      if (MECE390TraditionalPlan2A3B4Aelement.classList.contains("MATH-highlighted")) { 
@@ -14145,6 +15251,12 @@ $scope.MECE390TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.ComplementaryElectiveTraditionalPlan2A3B4A0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ComplementaryElectiveTraditionalPlan2A3B4A0Time <= 200) { 
+        ComplementaryElectiveTraditionalPlan2A3B4A0Time = currentTime;
+        return;
+    }
+ComplementaryElectiveTraditionalPlan2A3B4A0Time = currentTime;
   var ComplementaryElectiveTraditionalPlan2A3B4A0element = document.getElementById("ComplementaryElectiveTraditionalPlan2A3B4A0");
  if (!ComplementaryElectiveTraditionalPlan2A3B4A0flag) {
      if (ComplementaryElectiveTraditionalPlan2A3B4A0element.classList.contains("COMP-highlighted")) { 
@@ -14164,6 +15276,12 @@ $scope.ComplementaryElectiveTraditionalPlan2A3B4A0Listener = function () {
   }
 };
 $scope.MATH300TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH300TraditionalPlan2A3B4ATime <= 200) { 
+        MATH300TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MATH300TraditionalPlan2A3B4ATime = currentTime;
   var MATH300TraditionalPlan2A3B4Aelement = document.getElementById("MATH300TraditionalPlan2A3B4A");
  if (!MATH300TraditionalPlan2A3B4Aflag) {
      if (MATH300TraditionalPlan2A3B4Aelement.classList.contains("MATH-highlighted")) { 
@@ -14193,6 +15311,12 @@ $scope.MATH300TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MECE300TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE300TraditionalPlan2A3B4ATime <= 200) { 
+        MECE300TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MECE300TraditionalPlan2A3B4ATime = currentTime;
   var MECE300TraditionalPlan2A3B4Aelement = document.getElementById("MECE300TraditionalPlan2A3B4A");
  if (!MECE300TraditionalPlan2A3B4Aflag) {
      if (MECE300TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -14224,6 +15348,12 @@ $scope.MECE300TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MECE301TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE301TraditionalPlan2A3B4ATime <= 200) { 
+        MECE301TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MECE301TraditionalPlan2A3B4ATime = currentTime;
   var MECE301TraditionalPlan2A3B4Aelement = document.getElementById("MECE301TraditionalPlan2A3B4A");
  if (!MECE301TraditionalPlan2A3B4Aflag) {
      if (MECE301TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -14247,6 +15377,12 @@ $scope.MECE301TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MECE331TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE331TraditionalPlan2A3B4ATime <= 200) { 
+        MECE331TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MECE331TraditionalPlan2A3B4ATime = currentTime;
   var MECE331TraditionalPlan2A3B4Aelement = document.getElementById("MECE331TraditionalPlan2A3B4A");
  if (!MECE331TraditionalPlan2A3B4Aflag) {
      if (MECE331TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -14286,6 +15422,12 @@ $scope.MECE331TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MECE371TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE371TraditionalPlan2A3B4ATime <= 200) { 
+        MECE371TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MECE371TraditionalPlan2A3B4ATime = currentTime;
   var MECE371TraditionalPlan2A3B4Aelement = document.getElementById("MECE371TraditionalPlan2A3B4A");
  if (!MECE371TraditionalPlan2A3B4Aflag) {
      if (MECE371TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -14319,6 +15461,12 @@ $scope.MECE371TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MECE380TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE380TraditionalPlan2A3B4ATime <= 200) { 
+        MECE380TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MECE380TraditionalPlan2A3B4ATime = currentTime;
   var MECE380TraditionalPlan2A3B4Aelement = document.getElementById("MECE380TraditionalPlan2A3B4A");
  if (!MECE380TraditionalPlan2A3B4Aflag) {
      if (MECE380TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -14344,6 +15492,12 @@ $scope.MECE380TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.ENGG404TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG404TraditionalPlan2A3B4ATime <= 200) { 
+        ENGG404TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+ENGG404TraditionalPlan2A3B4ATime = currentTime;
   var ENGG404TraditionalPlan2A3B4Aelement = document.getElementById("ENGG404TraditionalPlan2A3B4A");
  if (!ENGG404TraditionalPlan2A3B4Aflag) {
      if (ENGG404TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -14363,6 +15517,12 @@ $scope.ENGG404TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MECE430TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE430TraditionalPlan2A3B4ATime <= 200) { 
+        MECE430TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MECE430TraditionalPlan2A3B4ATime = currentTime;
   var MECE430TraditionalPlan2A3B4Aelement = document.getElementById("MECE430TraditionalPlan2A3B4A");
  if (!MECE430TraditionalPlan2A3B4Aflag) {
      if (MECE430TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -14384,6 +15544,12 @@ $scope.MECE430TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MECE480TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE480TraditionalPlan2A3B4ATime <= 200) { 
+        MECE480TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MECE480TraditionalPlan2A3B4ATime = currentTime;
   var MECE480TraditionalPlan2A3B4Aelement = document.getElementById("MECE480TraditionalPlan2A3B4A");
  if (!MECE480TraditionalPlan2A3B4Aflag) {
      if (MECE480TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -14409,6 +15575,12 @@ $scope.MECE480TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MECE463TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE463TraditionalPlan2A3B4ATime <= 200) { 
+        MECE463TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MECE463TraditionalPlan2A3B4ATime = currentTime;
   var MECE463TraditionalPlan2A3B4Aelement = document.getElementById("MECE463TraditionalPlan2A3B4A");
  if (!MECE463TraditionalPlan2A3B4Aflag) {
      if (MECE463TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -14434,6 +15606,12 @@ $scope.MECE463TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4A0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2A3B4A0Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2A3B4A0Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2A3B4A0Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2A3B4A0element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4A0");
  if (!ProgramTechnicalElectiveTraditionalPlan2A3B4A0flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2A3B4A0element.classList.contains("PROG-highlighted")) { 
@@ -14453,6 +15631,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4A0Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4A1Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2A3B4A1Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2A3B4A1Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2A3B4A1Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2A3B4A1element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4A1");
  if (!ProgramTechnicalElectiveTraditionalPlan2A3B4A1flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2A3B4A1element.classList.contains("PROG-highlighted")) { 
@@ -14472,6 +15656,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4A1Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4A2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2A3B4A2Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2A3B4A2Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2A3B4A2Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2A3B4A2element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4A2");
  if (!ProgramTechnicalElectiveTraditionalPlan2A3B4A2flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2A3B4A2element.classList.contains("PROG-highlighted")) { 
@@ -14491,6 +15681,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4A2Listener = function () {
   }
 };
 $scope.CHE448TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE448TraditionalPlan2A3B4ATime <= 200) { 
+        CHE448TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+CHE448TraditionalPlan2A3B4ATime = currentTime;
   var CHE448TraditionalPlan2A3B4Aelement = document.getElementById("CHE448TraditionalPlan2A3B4A");
  if (!CHE448TraditionalPlan2A3B4Aflag) {
      if (CHE448TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -14518,6 +15714,12 @@ $scope.CHE448TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MECE420TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE420TraditionalPlan2A3B4ATime <= 200) { 
+        MECE420TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MECE420TraditionalPlan2A3B4ATime = currentTime;
   var MECE420TraditionalPlan2A3B4Aelement = document.getElementById("MECE420TraditionalPlan2A3B4A");
  if (!MECE420TraditionalPlan2A3B4Aflag) {
      if (MECE420TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -14539,6 +15741,12 @@ $scope.MECE420TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.ENGG400TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG400TraditionalPlan2A3B4ATime <= 200) { 
+        ENGG400TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+ENGG400TraditionalPlan2A3B4ATime = currentTime;
   var ENGG400TraditionalPlan2A3B4Aelement = document.getElementById("ENGG400TraditionalPlan2A3B4A");
  if (!ENGG400TraditionalPlan2A3B4Aflag) {
      if (ENGG400TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -14558,6 +15766,12 @@ $scope.ENGG400TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MECE403TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE403TraditionalPlan2A3B4ATime <= 200) { 
+        MECE403TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MECE403TraditionalPlan2A3B4ATime = currentTime;
   var MECE403TraditionalPlan2A3B4Aelement = document.getElementById("MECE403TraditionalPlan2A3B4A");
  if (!MECE403TraditionalPlan2A3B4Aflag) {
      if (MECE403TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -14585,6 +15799,12 @@ $scope.MECE403TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MECE451TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE451TraditionalPlan2A3B4ATime <= 200) { 
+        MECE451TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MECE451TraditionalPlan2A3B4ATime = currentTime;
   var MECE451TraditionalPlan2A3B4Aelement = document.getElementById("MECE451TraditionalPlan2A3B4A");
  if (!MECE451TraditionalPlan2A3B4Aflag) {
      if (MECE451TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -14608,6 +15828,12 @@ $scope.MECE451TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.MECE460TraditionalPlan2A3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE460TraditionalPlan2A3B4ATime <= 200) { 
+        MECE460TraditionalPlan2A3B4ATime = currentTime;
+        return;
+    }
+MECE460TraditionalPlan2A3B4ATime = currentTime;
   var MECE460TraditionalPlan2A3B4Aelement = document.getElementById("MECE460TraditionalPlan2A3B4A");
  if (!MECE460TraditionalPlan2A3B4Aflag) {
      if (MECE460TraditionalPlan2A3B4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -14645,6 +15871,12 @@ $scope.MECE460TraditionalPlan2A3B4AListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4A3Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2A3B4A3Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2A3B4A3Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2A3B4A3Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2A3B4A3element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4A3");
  if (!ProgramTechnicalElectiveTraditionalPlan2A3B4A3flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2A3B4A3element.classList.contains("PROG-highlighted")) { 
@@ -14664,57 +15896,165 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4A3Listener = function () {
   }
 };
   var CHEM103TraditionalPlan2A3B4Bflag = false;
+  var CHEM103TraditionalPlan2A3B4Brflag = false;
+ var CHEM103TraditionalPlan2A3B4BTime = new Date().getTime();
   var ENGG100TraditionalPlan2A3B4Bflag = false;
+  var ENGG100TraditionalPlan2A3B4Brflag = false;
+ var ENGG100TraditionalPlan2A3B4BTime = new Date().getTime();
   var ENGG130TraditionalPlan2A3B4Bflag = false;
+  var ENGG130TraditionalPlan2A3B4Brflag = false;
+ var ENGG130TraditionalPlan2A3B4BTime = new Date().getTime();
   var ENGL199TraditionalPlan2A3B4Bflag = false;
+  var ENGL199TraditionalPlan2A3B4Brflag = false;
+ var ENGL199TraditionalPlan2A3B4BTime = new Date().getTime();
   var MATH100TraditionalPlan2A3B4Bflag = false;
+  var MATH100TraditionalPlan2A3B4Brflag = false;
+ var MATH100TraditionalPlan2A3B4BTime = new Date().getTime();
   var PHYS130TraditionalPlan2A3B4Bflag = false;
+  var PHYS130TraditionalPlan2A3B4Brflag = false;
+ var PHYS130TraditionalPlan2A3B4BTime = new Date().getTime();
   var CHEM105TraditionalPlan2A3B4Bflag = false;
+  var CHEM105TraditionalPlan2A3B4Brflag = false;
+ var CHEM105TraditionalPlan2A3B4BTime = new Date().getTime();
   var ENCMP100TraditionalPlan2A3B4Bflag = false;
+  var ENCMP100TraditionalPlan2A3B4Brflag = false;
+ var ENCMP100TraditionalPlan2A3B4BTime = new Date().getTime();
   var ENGG160TraditionalPlan2A3B4Bflag = false;
+  var ENGG160TraditionalPlan2A3B4Brflag = false;
+ var ENGG160TraditionalPlan2A3B4BTime = new Date().getTime();
   var ENPH131TraditionalPlan2A3B4Bflag = false;
+  var ENPH131TraditionalPlan2A3B4Brflag = false;
+ var ENPH131TraditionalPlan2A3B4BTime = new Date().getTime();
   var MATH101TraditionalPlan2A3B4Bflag = false;
+  var MATH101TraditionalPlan2A3B4Brflag = false;
+ var MATH101TraditionalPlan2A3B4BTime = new Date().getTime();
   var MATH102TraditionalPlan2A3B4Bflag = false;
+  var MATH102TraditionalPlan2A3B4Brflag = false;
+ var MATH102TraditionalPlan2A3B4BTime = new Date().getTime();
   var CIVE270TraditionalPlan2A3B4Bflag = false;
+  var CIVE270TraditionalPlan2A3B4Brflag = false;
+ var CIVE270TraditionalPlan2A3B4BTime = new Date().getTime();
   var MATH209TraditionalPlan2A3B4Bflag = false;
+  var MATH209TraditionalPlan2A3B4Brflag = false;
+ var MATH209TraditionalPlan2A3B4BTime = new Date().getTime();
   var STAT235TraditionalPlan2A3B4Bflag = false;
+  var STAT235TraditionalPlan2A3B4Brflag = false;
+ var STAT235TraditionalPlan2A3B4BTime = new Date().getTime();
   var CHE243TraditionalPlan2A3B4Bflag = false;
+  var CHE243TraditionalPlan2A3B4Brflag = false;
+ var CHE243TraditionalPlan2A3B4BTime = new Date().getTime();
   var MECE200TraditionalPlan2A3B4Bflag = false;
+  var MECE200TraditionalPlan2A3B4Brflag = false;
+ var MECE200TraditionalPlan2A3B4BTime = new Date().getTime();
   var MECE250TraditionalPlan2A3B4Bflag = false;
+  var MECE250TraditionalPlan2A3B4Brflag = false;
+ var MECE250TraditionalPlan2A3B4BTime = new Date().getTime();
   var ECE209TraditionalPlan2A3B4Bflag = false;
+  var ECE209TraditionalPlan2A3B4Brflag = false;
+ var ECE209TraditionalPlan2A3B4BTime = new Date().getTime();
   var MATE202TraditionalPlan2A3B4Bflag = false;
+  var MATE202TraditionalPlan2A3B4Brflag = false;
+ var MATE202TraditionalPlan2A3B4BTime = new Date().getTime();
   var MATH201TraditionalPlan2A3B4Bflag = false;
+  var MATH201TraditionalPlan2A3B4Brflag = false;
+ var MATH201TraditionalPlan2A3B4BTime = new Date().getTime();
   var MECE230TraditionalPlan2A3B4Bflag = false;
+  var MECE230TraditionalPlan2A3B4Brflag = false;
+ var MECE230TraditionalPlan2A3B4BTime = new Date().getTime();
   var MECE260TraditionalPlan2A3B4Bflag = false;
+  var MECE260TraditionalPlan2A3B4Brflag = false;
+ var MECE260TraditionalPlan2A3B4BTime = new Date().getTime();
   var MECE265TraditionalPlan2A3B4Bflag = false;
+  var MECE265TraditionalPlan2A3B4Brflag = false;
+ var MECE265TraditionalPlan2A3B4BTime = new Date().getTime();
   var ENGM310TraditionalPlan2A3B4Bflag = false;
+  var ENGM310TraditionalPlan2A3B4Brflag = false;
+ var ENGM310TraditionalPlan2A3B4BTime = new Date().getTime();
   var ENGM401TraditionalPlan2A3B4Bflag = false;
+  var ENGM401TraditionalPlan2A3B4Brflag = false;
+ var ENGM401TraditionalPlan2A3B4BTime = new Date().getTime();
   var MECE340TraditionalPlan2A3B4Bflag = false;
+  var MECE340TraditionalPlan2A3B4Brflag = false;
+ var MECE340TraditionalPlan2A3B4BTime = new Date().getTime();
   var MECE360TraditionalPlan2A3B4Bflag = false;
+  var MECE360TraditionalPlan2A3B4Brflag = false;
+ var MECE360TraditionalPlan2A3B4BTime = new Date().getTime();
   var MECE362TraditionalPlan2A3B4Bflag = false;
+  var MECE362TraditionalPlan2A3B4Brflag = false;
+ var MECE362TraditionalPlan2A3B4BTime = new Date().getTime();
   var MECE390TraditionalPlan2A3B4Bflag = false;
+  var MECE390TraditionalPlan2A3B4Brflag = false;
+ var MECE390TraditionalPlan2A3B4BTime = new Date().getTime();
   var ComplementaryElectiveTraditionalPlan2A3B4B0flag = false;
+  var ComplementaryElectiveTraditionalPlan2A3B4B0rflag = false;
+ var ComplementaryElectiveTraditionalPlan2A3B4B0Time = new Date().getTime();
   var MATH300TraditionalPlan2A3B4Bflag = false;
+  var MATH300TraditionalPlan2A3B4Brflag = false;
+ var MATH300TraditionalPlan2A3B4BTime = new Date().getTime();
   var MECE300TraditionalPlan2A3B4Bflag = false;
+  var MECE300TraditionalPlan2A3B4Brflag = false;
+ var MECE300TraditionalPlan2A3B4BTime = new Date().getTime();
   var MECE301TraditionalPlan2A3B4Bflag = false;
+  var MECE301TraditionalPlan2A3B4Brflag = false;
+ var MECE301TraditionalPlan2A3B4BTime = new Date().getTime();
   var MECE331TraditionalPlan2A3B4Bflag = false;
+  var MECE331TraditionalPlan2A3B4Brflag = false;
+ var MECE331TraditionalPlan2A3B4BTime = new Date().getTime();
   var MECE371TraditionalPlan2A3B4Bflag = false;
+  var MECE371TraditionalPlan2A3B4Brflag = false;
+ var MECE371TraditionalPlan2A3B4BTime = new Date().getTime();
   var MECE380TraditionalPlan2A3B4Bflag = false;
+  var MECE380TraditionalPlan2A3B4Brflag = false;
+ var MECE380TraditionalPlan2A3B4BTime = new Date().getTime();
   var CHE448TraditionalPlan2A3B4Bflag = false;
+  var CHE448TraditionalPlan2A3B4Brflag = false;
+ var CHE448TraditionalPlan2A3B4BTime = new Date().getTime();
   var MECE420TraditionalPlan2A3B4Bflag = false;
+  var MECE420TraditionalPlan2A3B4Brflag = false;
+ var MECE420TraditionalPlan2A3B4BTime = new Date().getTime();
   var ENGG400TraditionalPlan2A3B4Bflag = false;
+  var ENGG400TraditionalPlan2A3B4Brflag = false;
+ var ENGG400TraditionalPlan2A3B4BTime = new Date().getTime();
   var MECE403TraditionalPlan2A3B4Bflag = false;
+  var MECE403TraditionalPlan2A3B4Brflag = false;
+ var MECE403TraditionalPlan2A3B4BTime = new Date().getTime();
   var MECE451TraditionalPlan2A3B4Bflag = false;
+  var MECE451TraditionalPlan2A3B4Brflag = false;
+ var MECE451TraditionalPlan2A3B4BTime = new Date().getTime();
   var MECE460TraditionalPlan2A3B4Bflag = false;
+  var MECE460TraditionalPlan2A3B4Brflag = false;
+ var MECE460TraditionalPlan2A3B4BTime = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2A3B4B0flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2A3B4B0rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2A3B4B0Time = new Date().getTime();
   var ENGG404TraditionalPlan2A3B4Bflag = false;
+  var ENGG404TraditionalPlan2A3B4Brflag = false;
+ var ENGG404TraditionalPlan2A3B4BTime = new Date().getTime();
   var MECE430TraditionalPlan2A3B4Bflag = false;
+  var MECE430TraditionalPlan2A3B4Brflag = false;
+ var MECE430TraditionalPlan2A3B4BTime = new Date().getTime();
   var MECE480TraditionalPlan2A3B4Bflag = false;
+  var MECE480TraditionalPlan2A3B4Brflag = false;
+ var MECE480TraditionalPlan2A3B4BTime = new Date().getTime();
   var MECE463TraditionalPlan2A3B4Bflag = false;
+  var MECE463TraditionalPlan2A3B4Brflag = false;
+ var MECE463TraditionalPlan2A3B4BTime = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2A3B4B1flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2A3B4B1rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2A3B4B1Time = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2A3B4B2flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2A3B4B2rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2A3B4B2Time = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2A3B4B3flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2A3B4B3rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2A3B4B3Time = new Date().getTime();
 $scope.CHEM103TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM103TraditionalPlan2A3B4BTime <= 200) { 
+        CHEM103TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+CHEM103TraditionalPlan2A3B4BTime = currentTime;
   var CHEM103TraditionalPlan2A3B4Belement = document.getElementById("CHEM103TraditionalPlan2A3B4B");
  if (!CHEM103TraditionalPlan2A3B4Bflag) {
      if (CHEM103TraditionalPlan2A3B4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -14736,6 +16076,12 @@ $scope.CHEM103TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.ENGG100TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG100TraditionalPlan2A3B4BTime <= 200) { 
+        ENGG100TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+ENGG100TraditionalPlan2A3B4BTime = currentTime;
   var ENGG100TraditionalPlan2A3B4Belement = document.getElementById("ENGG100TraditionalPlan2A3B4B");
  if (!ENGG100TraditionalPlan2A3B4Bflag) {
      if (ENGG100TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -14755,6 +16101,12 @@ $scope.ENGG100TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.ENGG130TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG130TraditionalPlan2A3B4BTime <= 200) { 
+        ENGG130TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+ENGG130TraditionalPlan2A3B4BTime = currentTime;
   var ENGG130TraditionalPlan2A3B4Belement = document.getElementById("ENGG130TraditionalPlan2A3B4B");
  if (!ENGG130TraditionalPlan2A3B4Bflag) {
      if (ENGG130TraditionalPlan2A3B4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -14782,6 +16134,12 @@ $scope.ENGG130TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.ENGL199TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGL199TraditionalPlan2A3B4BTime <= 200) { 
+        ENGL199TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+ENGL199TraditionalPlan2A3B4BTime = currentTime;
   var ENGL199TraditionalPlan2A3B4Belement = document.getElementById("ENGL199TraditionalPlan2A3B4B");
  if (!ENGL199TraditionalPlan2A3B4Bflag) {
      if (ENGL199TraditionalPlan2A3B4Belement.classList.contains("Other-highlighted")) { 
@@ -14803,6 +16161,12 @@ $scope.ENGL199TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MATH100TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH100TraditionalPlan2A3B4BTime <= 200) { 
+        MATH100TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MATH100TraditionalPlan2A3B4BTime = currentTime;
   var MATH100TraditionalPlan2A3B4Belement = document.getElementById("MATH100TraditionalPlan2A3B4B");
  if (!MATH100TraditionalPlan2A3B4Bflag) {
      if (MATH100TraditionalPlan2A3B4Belement.classList.contains("MATH-highlighted")) { 
@@ -14834,6 +16198,12 @@ $scope.MATH100TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.PHYS130TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - PHYS130TraditionalPlan2A3B4BTime <= 200) { 
+        PHYS130TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+PHYS130TraditionalPlan2A3B4BTime = currentTime;
   var PHYS130TraditionalPlan2A3B4Belement = document.getElementById("PHYS130TraditionalPlan2A3B4B");
  if (!PHYS130TraditionalPlan2A3B4Bflag) {
      if (PHYS130TraditionalPlan2A3B4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -14855,6 +16225,12 @@ $scope.PHYS130TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.CHEM105TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM105TraditionalPlan2A3B4BTime <= 200) { 
+        CHEM105TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+CHEM105TraditionalPlan2A3B4BTime = currentTime;
   var CHEM105TraditionalPlan2A3B4Belement = document.getElementById("CHEM105TraditionalPlan2A3B4B");
  if (!CHEM105TraditionalPlan2A3B4Bflag) {
      if (CHEM105TraditionalPlan2A3B4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -14878,6 +16254,12 @@ $scope.CHEM105TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.ENCMP100TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENCMP100TraditionalPlan2A3B4BTime <= 200) { 
+        ENCMP100TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+ENCMP100TraditionalPlan2A3B4BTime = currentTime;
   var ENCMP100TraditionalPlan2A3B4Belement = document.getElementById("ENCMP100TraditionalPlan2A3B4B");
  if (!ENCMP100TraditionalPlan2A3B4Bflag) {
      if (ENCMP100TraditionalPlan2A3B4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -14897,6 +16279,12 @@ $scope.ENCMP100TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.ENGG160TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG160TraditionalPlan2A3B4BTime <= 200) { 
+        ENGG160TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+ENGG160TraditionalPlan2A3B4BTime = currentTime;
   var ENGG160TraditionalPlan2A3B4Belement = document.getElementById("ENGG160TraditionalPlan2A3B4B");
  if (!ENGG160TraditionalPlan2A3B4Bflag) {
      if (ENGG160TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -14920,6 +16308,12 @@ $scope.ENGG160TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.ENPH131TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENPH131TraditionalPlan2A3B4BTime <= 200) { 
+        ENPH131TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+ENPH131TraditionalPlan2A3B4BTime = currentTime;
   var ENPH131TraditionalPlan2A3B4Belement = document.getElementById("ENPH131TraditionalPlan2A3B4B");
  if (!ENPH131TraditionalPlan2A3B4Bflag) {
      if (ENPH131TraditionalPlan2A3B4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -14949,6 +16343,12 @@ $scope.ENPH131TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MATH101TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH101TraditionalPlan2A3B4BTime <= 200) { 
+        MATH101TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MATH101TraditionalPlan2A3B4BTime = currentTime;
   var MATH101TraditionalPlan2A3B4Belement = document.getElementById("MATH101TraditionalPlan2A3B4B");
  if (!MATH101TraditionalPlan2A3B4Bflag) {
      if (MATH101TraditionalPlan2A3B4Belement.classList.contains("MATH-highlighted")) { 
@@ -14984,6 +16384,12 @@ $scope.MATH101TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MATH102TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH102TraditionalPlan2A3B4BTime <= 200) { 
+        MATH102TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MATH102TraditionalPlan2A3B4BTime = currentTime;
   var MATH102TraditionalPlan2A3B4Belement = document.getElementById("MATH102TraditionalPlan2A3B4B");
  if (!MATH102TraditionalPlan2A3B4Bflag) {
      if (MATH102TraditionalPlan2A3B4Belement.classList.contains("MATH-highlighted")) { 
@@ -15009,6 +16415,12 @@ $scope.MATH102TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.CIVE270TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CIVE270TraditionalPlan2A3B4BTime <= 200) { 
+        CIVE270TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+CIVE270TraditionalPlan2A3B4BTime = currentTime;
   var CIVE270TraditionalPlan2A3B4Belement = document.getElementById("CIVE270TraditionalPlan2A3B4B");
  if (!CIVE270TraditionalPlan2A3B4Bflag) {
      if (CIVE270TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -15040,6 +16452,12 @@ $scope.CIVE270TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MATH209TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH209TraditionalPlan2A3B4BTime <= 200) { 
+        MATH209TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MATH209TraditionalPlan2A3B4BTime = currentTime;
   var MATH209TraditionalPlan2A3B4Belement = document.getElementById("MATH209TraditionalPlan2A3B4B");
  if (!MATH209TraditionalPlan2A3B4Bflag) {
      if (MATH209TraditionalPlan2A3B4Belement.classList.contains("MATH-highlighted")) { 
@@ -15071,6 +16489,12 @@ $scope.MATH209TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.STAT235TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - STAT235TraditionalPlan2A3B4BTime <= 200) { 
+        STAT235TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+STAT235TraditionalPlan2A3B4BTime = currentTime;
   var STAT235TraditionalPlan2A3B4Belement = document.getElementById("STAT235TraditionalPlan2A3B4B");
  if (!STAT235TraditionalPlan2A3B4Bflag) {
      if (STAT235TraditionalPlan2A3B4Belement.classList.contains("MATH-highlighted")) { 
@@ -15096,6 +16520,12 @@ $scope.STAT235TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.CHE243TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE243TraditionalPlan2A3B4BTime <= 200) { 
+        CHE243TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+CHE243TraditionalPlan2A3B4BTime = currentTime;
   var CHE243TraditionalPlan2A3B4Belement = document.getElementById("CHE243TraditionalPlan2A3B4B");
  if (!CHE243TraditionalPlan2A3B4Bflag) {
      if (CHE243TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -15123,6 +16553,12 @@ $scope.CHE243TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MECE200TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE200TraditionalPlan2A3B4BTime <= 200) { 
+        MECE200TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MECE200TraditionalPlan2A3B4BTime = currentTime;
   var MECE200TraditionalPlan2A3B4Belement = document.getElementById("MECE200TraditionalPlan2A3B4B");
  if (!MECE200TraditionalPlan2A3B4Bflag) {
      if (MECE200TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -15144,6 +16580,12 @@ $scope.MECE200TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MECE250TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE250TraditionalPlan2A3B4BTime <= 200) { 
+        MECE250TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MECE250TraditionalPlan2A3B4BTime = currentTime;
   var MECE250TraditionalPlan2A3B4Belement = document.getElementById("MECE250TraditionalPlan2A3B4B");
  if (!MECE250TraditionalPlan2A3B4Bflag) {
      if (MECE250TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -15175,6 +16617,12 @@ $scope.MECE250TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.ECE209TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ECE209TraditionalPlan2A3B4BTime <= 200) { 
+        ECE209TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+ECE209TraditionalPlan2A3B4BTime = currentTime;
   var ECE209TraditionalPlan2A3B4Belement = document.getElementById("ECE209TraditionalPlan2A3B4B");
  if (!ECE209TraditionalPlan2A3B4Bflag) {
      if (ECE209TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -15196,6 +16644,12 @@ $scope.ECE209TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MATE202TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATE202TraditionalPlan2A3B4BTime <= 200) { 
+        MATE202TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MATE202TraditionalPlan2A3B4BTime = currentTime;
   var MATE202TraditionalPlan2A3B4Belement = document.getElementById("MATE202TraditionalPlan2A3B4B");
  if (!MATE202TraditionalPlan2A3B4Bflag) {
      if (MATE202TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -15219,6 +16673,12 @@ $scope.MATE202TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MATH201TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH201TraditionalPlan2A3B4BTime <= 200) { 
+        MATH201TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MATH201TraditionalPlan2A3B4BTime = currentTime;
   var MATH201TraditionalPlan2A3B4Belement = document.getElementById("MATH201TraditionalPlan2A3B4B");
  if (!MATH201TraditionalPlan2A3B4Bflag) {
      if (MATH201TraditionalPlan2A3B4Belement.classList.contains("MATH-highlighted")) { 
@@ -15246,6 +16706,12 @@ $scope.MATH201TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MECE230TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE230TraditionalPlan2A3B4BTime <= 200) { 
+        MECE230TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MECE230TraditionalPlan2A3B4BTime = currentTime;
   var MECE230TraditionalPlan2A3B4Belement = document.getElementById("MECE230TraditionalPlan2A3B4B");
  if (!MECE230TraditionalPlan2A3B4Bflag) {
      if (MECE230TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -15273,6 +16739,12 @@ $scope.MECE230TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MECE260TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE260TraditionalPlan2A3B4BTime <= 200) { 
+        MECE260TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MECE260TraditionalPlan2A3B4BTime = currentTime;
   var MECE260TraditionalPlan2A3B4Belement = document.getElementById("MECE260TraditionalPlan2A3B4B");
  if (!MECE260TraditionalPlan2A3B4Bflag) {
      if (MECE260TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -15300,6 +16772,12 @@ $scope.MECE260TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MECE265TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE265TraditionalPlan2A3B4BTime <= 200) { 
+        MECE265TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MECE265TraditionalPlan2A3B4BTime = currentTime;
   var MECE265TraditionalPlan2A3B4Belement = document.getElementById("MECE265TraditionalPlan2A3B4B");
  if (!MECE265TraditionalPlan2A3B4Bflag) {
      if (MECE265TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -15323,6 +16801,12 @@ $scope.MECE265TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.ENGM310TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM310TraditionalPlan2A3B4BTime <= 200) { 
+        ENGM310TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+ENGM310TraditionalPlan2A3B4BTime = currentTime;
   var ENGM310TraditionalPlan2A3B4Belement = document.getElementById("ENGM310TraditionalPlan2A3B4B");
  if (!ENGM310TraditionalPlan2A3B4Bflag) {
      if (ENGM310TraditionalPlan2A3B4Belement.classList.contains("Other-highlighted")) { 
@@ -15344,6 +16828,12 @@ $scope.ENGM310TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.ENGM401TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM401TraditionalPlan2A3B4BTime <= 200) { 
+        ENGM401TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+ENGM401TraditionalPlan2A3B4BTime = currentTime;
   var ENGM401TraditionalPlan2A3B4Belement = document.getElementById("ENGM401TraditionalPlan2A3B4B");
  if (!ENGM401TraditionalPlan2A3B4Bflag) {
      if (ENGM401TraditionalPlan2A3B4Belement.classList.contains("Other-highlighted")) { 
@@ -15365,6 +16855,12 @@ $scope.ENGM401TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MECE340TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE340TraditionalPlan2A3B4BTime <= 200) { 
+        MECE340TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MECE340TraditionalPlan2A3B4BTime = currentTime;
   var MECE340TraditionalPlan2A3B4Belement = document.getElementById("MECE340TraditionalPlan2A3B4B");
  if (!MECE340TraditionalPlan2A3B4Bflag) {
      if (MECE340TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -15392,6 +16888,12 @@ $scope.MECE340TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MECE360TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE360TraditionalPlan2A3B4BTime <= 200) { 
+        MECE360TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MECE360TraditionalPlan2A3B4BTime = currentTime;
   var MECE360TraditionalPlan2A3B4Belement = document.getElementById("MECE360TraditionalPlan2A3B4B");
  if (!MECE360TraditionalPlan2A3B4Bflag) {
      if (MECE360TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -15427,6 +16929,12 @@ $scope.MECE360TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MECE362TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE362TraditionalPlan2A3B4BTime <= 200) { 
+        MECE362TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MECE362TraditionalPlan2A3B4BTime = currentTime;
   var MECE362TraditionalPlan2A3B4Belement = document.getElementById("MECE362TraditionalPlan2A3B4B");
  if (!MECE362TraditionalPlan2A3B4Bflag) {
      if (MECE362TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -15452,6 +16960,12 @@ $scope.MECE362TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MECE390TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE390TraditionalPlan2A3B4BTime <= 200) { 
+        MECE390TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MECE390TraditionalPlan2A3B4BTime = currentTime;
   var MECE390TraditionalPlan2A3B4Belement = document.getElementById("MECE390TraditionalPlan2A3B4B");
  if (!MECE390TraditionalPlan2A3B4Bflag) {
      if (MECE390TraditionalPlan2A3B4Belement.classList.contains("MATH-highlighted")) { 
@@ -15477,6 +16991,12 @@ $scope.MECE390TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.ComplementaryElectiveTraditionalPlan2A3B4B0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ComplementaryElectiveTraditionalPlan2A3B4B0Time <= 200) { 
+        ComplementaryElectiveTraditionalPlan2A3B4B0Time = currentTime;
+        return;
+    }
+ComplementaryElectiveTraditionalPlan2A3B4B0Time = currentTime;
   var ComplementaryElectiveTraditionalPlan2A3B4B0element = document.getElementById("ComplementaryElectiveTraditionalPlan2A3B4B0");
  if (!ComplementaryElectiveTraditionalPlan2A3B4B0flag) {
      if (ComplementaryElectiveTraditionalPlan2A3B4B0element.classList.contains("COMP-highlighted")) { 
@@ -15496,6 +17016,12 @@ $scope.ComplementaryElectiveTraditionalPlan2A3B4B0Listener = function () {
   }
 };
 $scope.MATH300TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH300TraditionalPlan2A3B4BTime <= 200) { 
+        MATH300TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MATH300TraditionalPlan2A3B4BTime = currentTime;
   var MATH300TraditionalPlan2A3B4Belement = document.getElementById("MATH300TraditionalPlan2A3B4B");
  if (!MATH300TraditionalPlan2A3B4Bflag) {
      if (MATH300TraditionalPlan2A3B4Belement.classList.contains("MATH-highlighted")) { 
@@ -15525,6 +17051,12 @@ $scope.MATH300TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MECE300TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE300TraditionalPlan2A3B4BTime <= 200) { 
+        MECE300TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MECE300TraditionalPlan2A3B4BTime = currentTime;
   var MECE300TraditionalPlan2A3B4Belement = document.getElementById("MECE300TraditionalPlan2A3B4B");
  if (!MECE300TraditionalPlan2A3B4Bflag) {
      if (MECE300TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -15556,6 +17088,12 @@ $scope.MECE300TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MECE301TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE301TraditionalPlan2A3B4BTime <= 200) { 
+        MECE301TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MECE301TraditionalPlan2A3B4BTime = currentTime;
   var MECE301TraditionalPlan2A3B4Belement = document.getElementById("MECE301TraditionalPlan2A3B4B");
  if (!MECE301TraditionalPlan2A3B4Bflag) {
      if (MECE301TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -15579,6 +17117,12 @@ $scope.MECE301TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MECE331TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE331TraditionalPlan2A3B4BTime <= 200) { 
+        MECE331TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MECE331TraditionalPlan2A3B4BTime = currentTime;
   var MECE331TraditionalPlan2A3B4Belement = document.getElementById("MECE331TraditionalPlan2A3B4B");
  if (!MECE331TraditionalPlan2A3B4Bflag) {
      if (MECE331TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -15618,6 +17162,12 @@ $scope.MECE331TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MECE371TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE371TraditionalPlan2A3B4BTime <= 200) { 
+        MECE371TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MECE371TraditionalPlan2A3B4BTime = currentTime;
   var MECE371TraditionalPlan2A3B4Belement = document.getElementById("MECE371TraditionalPlan2A3B4B");
  if (!MECE371TraditionalPlan2A3B4Bflag) {
      if (MECE371TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -15651,6 +17201,12 @@ $scope.MECE371TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MECE380TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE380TraditionalPlan2A3B4BTime <= 200) { 
+        MECE380TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MECE380TraditionalPlan2A3B4BTime = currentTime;
   var MECE380TraditionalPlan2A3B4Belement = document.getElementById("MECE380TraditionalPlan2A3B4B");
  if (!MECE380TraditionalPlan2A3B4Bflag) {
      if (MECE380TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -15676,6 +17232,12 @@ $scope.MECE380TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.CHE448TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE448TraditionalPlan2A3B4BTime <= 200) { 
+        CHE448TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+CHE448TraditionalPlan2A3B4BTime = currentTime;
   var CHE448TraditionalPlan2A3B4Belement = document.getElementById("CHE448TraditionalPlan2A3B4B");
  if (!CHE448TraditionalPlan2A3B4Bflag) {
      if (CHE448TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -15703,6 +17265,12 @@ $scope.CHE448TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MECE420TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE420TraditionalPlan2A3B4BTime <= 200) { 
+        MECE420TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MECE420TraditionalPlan2A3B4BTime = currentTime;
   var MECE420TraditionalPlan2A3B4Belement = document.getElementById("MECE420TraditionalPlan2A3B4B");
  if (!MECE420TraditionalPlan2A3B4Bflag) {
      if (MECE420TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -15724,6 +17292,12 @@ $scope.MECE420TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.ENGG400TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG400TraditionalPlan2A3B4BTime <= 200) { 
+        ENGG400TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+ENGG400TraditionalPlan2A3B4BTime = currentTime;
   var ENGG400TraditionalPlan2A3B4Belement = document.getElementById("ENGG400TraditionalPlan2A3B4B");
  if (!ENGG400TraditionalPlan2A3B4Bflag) {
      if (ENGG400TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -15743,6 +17317,12 @@ $scope.ENGG400TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MECE403TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE403TraditionalPlan2A3B4BTime <= 200) { 
+        MECE403TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MECE403TraditionalPlan2A3B4BTime = currentTime;
   var MECE403TraditionalPlan2A3B4Belement = document.getElementById("MECE403TraditionalPlan2A3B4B");
  if (!MECE403TraditionalPlan2A3B4Bflag) {
      if (MECE403TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -15770,6 +17350,12 @@ $scope.MECE403TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MECE451TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE451TraditionalPlan2A3B4BTime <= 200) { 
+        MECE451TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MECE451TraditionalPlan2A3B4BTime = currentTime;
   var MECE451TraditionalPlan2A3B4Belement = document.getElementById("MECE451TraditionalPlan2A3B4B");
  if (!MECE451TraditionalPlan2A3B4Bflag) {
      if (MECE451TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -15793,6 +17379,12 @@ $scope.MECE451TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MECE460TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE460TraditionalPlan2A3B4BTime <= 200) { 
+        MECE460TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MECE460TraditionalPlan2A3B4BTime = currentTime;
   var MECE460TraditionalPlan2A3B4Belement = document.getElementById("MECE460TraditionalPlan2A3B4B");
  if (!MECE460TraditionalPlan2A3B4Bflag) {
      if (MECE460TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -15830,6 +17422,12 @@ $scope.MECE460TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4B0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2A3B4B0Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2A3B4B0Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2A3B4B0Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2A3B4B0element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4B0");
  if (!ProgramTechnicalElectiveTraditionalPlan2A3B4B0flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2A3B4B0element.classList.contains("PROG-highlighted")) { 
@@ -15849,6 +17447,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4B0Listener = function () {
   }
 };
 $scope.ENGG404TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG404TraditionalPlan2A3B4BTime <= 200) { 
+        ENGG404TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+ENGG404TraditionalPlan2A3B4BTime = currentTime;
   var ENGG404TraditionalPlan2A3B4Belement = document.getElementById("ENGG404TraditionalPlan2A3B4B");
  if (!ENGG404TraditionalPlan2A3B4Bflag) {
      if (ENGG404TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -15868,6 +17472,12 @@ $scope.ENGG404TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MECE430TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE430TraditionalPlan2A3B4BTime <= 200) { 
+        MECE430TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MECE430TraditionalPlan2A3B4BTime = currentTime;
   var MECE430TraditionalPlan2A3B4Belement = document.getElementById("MECE430TraditionalPlan2A3B4B");
  if (!MECE430TraditionalPlan2A3B4Bflag) {
      if (MECE430TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -15889,6 +17499,12 @@ $scope.MECE430TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MECE480TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE480TraditionalPlan2A3B4BTime <= 200) { 
+        MECE480TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MECE480TraditionalPlan2A3B4BTime = currentTime;
   var MECE480TraditionalPlan2A3B4Belement = document.getElementById("MECE480TraditionalPlan2A3B4B");
  if (!MECE480TraditionalPlan2A3B4Bflag) {
      if (MECE480TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -15914,6 +17530,12 @@ $scope.MECE480TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.MECE463TraditionalPlan2A3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE463TraditionalPlan2A3B4BTime <= 200) { 
+        MECE463TraditionalPlan2A3B4BTime = currentTime;
+        return;
+    }
+MECE463TraditionalPlan2A3B4BTime = currentTime;
   var MECE463TraditionalPlan2A3B4Belement = document.getElementById("MECE463TraditionalPlan2A3B4B");
  if (!MECE463TraditionalPlan2A3B4Bflag) {
      if (MECE463TraditionalPlan2A3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -15939,6 +17561,12 @@ $scope.MECE463TraditionalPlan2A3B4BListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4B1Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2A3B4B1Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2A3B4B1Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2A3B4B1Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2A3B4B1element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4B1");
  if (!ProgramTechnicalElectiveTraditionalPlan2A3B4B1flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2A3B4B1element.classList.contains("PROG-highlighted")) { 
@@ -15958,6 +17586,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4B1Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4B2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2A3B4B2Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2A3B4B2Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2A3B4B2Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2A3B4B2element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4B2");
  if (!ProgramTechnicalElectiveTraditionalPlan2A3B4B2flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2A3B4B2element.classList.contains("PROG-highlighted")) { 
@@ -15977,6 +17611,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4B2Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4B3Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2A3B4B3Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2A3B4B3Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2A3B4B3Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2A3B4B3element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4B3");
  if (!ProgramTechnicalElectiveTraditionalPlan2A3B4B3flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2A3B4B3element.classList.contains("PROG-highlighted")) { 
@@ -15996,57 +17636,165 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2A3B4B3Listener = function () {
   }
 };
   var CHEM103TraditionalPlan2B3A4Aflag = false;
+  var CHEM103TraditionalPlan2B3A4Arflag = false;
+ var CHEM103TraditionalPlan2B3A4ATime = new Date().getTime();
   var ENGG100TraditionalPlan2B3A4Aflag = false;
+  var ENGG100TraditionalPlan2B3A4Arflag = false;
+ var ENGG100TraditionalPlan2B3A4ATime = new Date().getTime();
   var ENGG130TraditionalPlan2B3A4Aflag = false;
+  var ENGG130TraditionalPlan2B3A4Arflag = false;
+ var ENGG130TraditionalPlan2B3A4ATime = new Date().getTime();
   var ENGL199TraditionalPlan2B3A4Aflag = false;
+  var ENGL199TraditionalPlan2B3A4Arflag = false;
+ var ENGL199TraditionalPlan2B3A4ATime = new Date().getTime();
   var MATH100TraditionalPlan2B3A4Aflag = false;
+  var MATH100TraditionalPlan2B3A4Arflag = false;
+ var MATH100TraditionalPlan2B3A4ATime = new Date().getTime();
   var PHYS130TraditionalPlan2B3A4Aflag = false;
+  var PHYS130TraditionalPlan2B3A4Arflag = false;
+ var PHYS130TraditionalPlan2B3A4ATime = new Date().getTime();
   var CHEM105TraditionalPlan2B3A4Aflag = false;
+  var CHEM105TraditionalPlan2B3A4Arflag = false;
+ var CHEM105TraditionalPlan2B3A4ATime = new Date().getTime();
   var ENCMP100TraditionalPlan2B3A4Aflag = false;
+  var ENCMP100TraditionalPlan2B3A4Arflag = false;
+ var ENCMP100TraditionalPlan2B3A4ATime = new Date().getTime();
   var ENGG160TraditionalPlan2B3A4Aflag = false;
+  var ENGG160TraditionalPlan2B3A4Arflag = false;
+ var ENGG160TraditionalPlan2B3A4ATime = new Date().getTime();
   var ENPH131TraditionalPlan2B3A4Aflag = false;
+  var ENPH131TraditionalPlan2B3A4Arflag = false;
+ var ENPH131TraditionalPlan2B3A4ATime = new Date().getTime();
   var MATH101TraditionalPlan2B3A4Aflag = false;
+  var MATH101TraditionalPlan2B3A4Arflag = false;
+ var MATH101TraditionalPlan2B3A4ATime = new Date().getTime();
   var MATH102TraditionalPlan2B3A4Aflag = false;
+  var MATH102TraditionalPlan2B3A4Arflag = false;
+ var MATH102TraditionalPlan2B3A4ATime = new Date().getTime();
   var ECE209TraditionalPlan2B3A4Aflag = false;
+  var ECE209TraditionalPlan2B3A4Arflag = false;
+ var ECE209TraditionalPlan2B3A4ATime = new Date().getTime();
   var MATE202TraditionalPlan2B3A4Aflag = false;
+  var MATE202TraditionalPlan2B3A4Arflag = false;
+ var MATE202TraditionalPlan2B3A4ATime = new Date().getTime();
   var MATH201TraditionalPlan2B3A4Aflag = false;
+  var MATH201TraditionalPlan2B3A4Arflag = false;
+ var MATH201TraditionalPlan2B3A4ATime = new Date().getTime();
   var MECE230TraditionalPlan2B3A4Aflag = false;
+  var MECE230TraditionalPlan2B3A4Arflag = false;
+ var MECE230TraditionalPlan2B3A4ATime = new Date().getTime();
   var MECE260TraditionalPlan2B3A4Aflag = false;
+  var MECE260TraditionalPlan2B3A4Arflag = false;
+ var MECE260TraditionalPlan2B3A4ATime = new Date().getTime();
   var MECE265TraditionalPlan2B3A4Aflag = false;
+  var MECE265TraditionalPlan2B3A4Arflag = false;
+ var MECE265TraditionalPlan2B3A4ATime = new Date().getTime();
   var CIVE270TraditionalPlan2B3A4Aflag = false;
+  var CIVE270TraditionalPlan2B3A4Arflag = false;
+ var CIVE270TraditionalPlan2B3A4ATime = new Date().getTime();
   var MATH209TraditionalPlan2B3A4Aflag = false;
+  var MATH209TraditionalPlan2B3A4Arflag = false;
+ var MATH209TraditionalPlan2B3A4ATime = new Date().getTime();
   var STAT235TraditionalPlan2B3A4Aflag = false;
+  var STAT235TraditionalPlan2B3A4Arflag = false;
+ var STAT235TraditionalPlan2B3A4ATime = new Date().getTime();
   var CHE243TraditionalPlan2B3A4Aflag = false;
+  var CHE243TraditionalPlan2B3A4Arflag = false;
+ var CHE243TraditionalPlan2B3A4ATime = new Date().getTime();
   var MECE200TraditionalPlan2B3A4Aflag = false;
+  var MECE200TraditionalPlan2B3A4Arflag = false;
+ var MECE200TraditionalPlan2B3A4ATime = new Date().getTime();
   var MECE250TraditionalPlan2B3A4Aflag = false;
+  var MECE250TraditionalPlan2B3A4Arflag = false;
+ var MECE250TraditionalPlan2B3A4ATime = new Date().getTime();
   var MATH300TraditionalPlan2B3A4Aflag = false;
+  var MATH300TraditionalPlan2B3A4Arflag = false;
+ var MATH300TraditionalPlan2B3A4ATime = new Date().getTime();
   var MECE300TraditionalPlan2B3A4Aflag = false;
+  var MECE300TraditionalPlan2B3A4Arflag = false;
+ var MECE300TraditionalPlan2B3A4ATime = new Date().getTime();
   var MECE301TraditionalPlan2B3A4Aflag = false;
+  var MECE301TraditionalPlan2B3A4Arflag = false;
+ var MECE301TraditionalPlan2B3A4ATime = new Date().getTime();
   var MECE331TraditionalPlan2B3A4Aflag = false;
+  var MECE331TraditionalPlan2B3A4Arflag = false;
+ var MECE331TraditionalPlan2B3A4ATime = new Date().getTime();
   var MECE371TraditionalPlan2B3A4Aflag = false;
+  var MECE371TraditionalPlan2B3A4Arflag = false;
+ var MECE371TraditionalPlan2B3A4ATime = new Date().getTime();
   var MECE380TraditionalPlan2B3A4Aflag = false;
+  var MECE380TraditionalPlan2B3A4Arflag = false;
+ var MECE380TraditionalPlan2B3A4ATime = new Date().getTime();
   var ENGM310TraditionalPlan2B3A4Aflag = false;
+  var ENGM310TraditionalPlan2B3A4Arflag = false;
+ var ENGM310TraditionalPlan2B3A4ATime = new Date().getTime();
   var ENGM401TraditionalPlan2B3A4Aflag = false;
+  var ENGM401TraditionalPlan2B3A4Arflag = false;
+ var ENGM401TraditionalPlan2B3A4ATime = new Date().getTime();
   var MECE340TraditionalPlan2B3A4Aflag = false;
+  var MECE340TraditionalPlan2B3A4Arflag = false;
+ var MECE340TraditionalPlan2B3A4ATime = new Date().getTime();
   var MECE360TraditionalPlan2B3A4Aflag = false;
+  var MECE360TraditionalPlan2B3A4Arflag = false;
+ var MECE360TraditionalPlan2B3A4ATime = new Date().getTime();
   var MECE362TraditionalPlan2B3A4Aflag = false;
+  var MECE362TraditionalPlan2B3A4Arflag = false;
+ var MECE362TraditionalPlan2B3A4ATime = new Date().getTime();
   var MECE390TraditionalPlan2B3A4Aflag = false;
+  var MECE390TraditionalPlan2B3A4Arflag = false;
+ var MECE390TraditionalPlan2B3A4ATime = new Date().getTime();
   var ComplementaryElectiveTraditionalPlan2B3A4A0flag = false;
+  var ComplementaryElectiveTraditionalPlan2B3A4A0rflag = false;
+ var ComplementaryElectiveTraditionalPlan2B3A4A0Time = new Date().getTime();
   var ENGG404TraditionalPlan2B3A4Aflag = false;
+  var ENGG404TraditionalPlan2B3A4Arflag = false;
+ var ENGG404TraditionalPlan2B3A4ATime = new Date().getTime();
   var MECE430TraditionalPlan2B3A4Aflag = false;
+  var MECE430TraditionalPlan2B3A4Arflag = false;
+ var MECE430TraditionalPlan2B3A4ATime = new Date().getTime();
   var MECE480TraditionalPlan2B3A4Aflag = false;
+  var MECE480TraditionalPlan2B3A4Arflag = false;
+ var MECE480TraditionalPlan2B3A4ATime = new Date().getTime();
   var MECE463TraditionalPlan2B3A4Aflag = false;
+  var MECE463TraditionalPlan2B3A4Arflag = false;
+ var MECE463TraditionalPlan2B3A4ATime = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2B3A4A0flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2B3A4A0rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2B3A4A0Time = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2B3A4A1flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2B3A4A1rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2B3A4A1Time = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2B3A4A2flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2B3A4A2rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2B3A4A2Time = new Date().getTime();
   var CHE448TraditionalPlan2B3A4Aflag = false;
+  var CHE448TraditionalPlan2B3A4Arflag = false;
+ var CHE448TraditionalPlan2B3A4ATime = new Date().getTime();
   var MECE420TraditionalPlan2B3A4Aflag = false;
+  var MECE420TraditionalPlan2B3A4Arflag = false;
+ var MECE420TraditionalPlan2B3A4ATime = new Date().getTime();
   var ENGG400TraditionalPlan2B3A4Aflag = false;
+  var ENGG400TraditionalPlan2B3A4Arflag = false;
+ var ENGG400TraditionalPlan2B3A4ATime = new Date().getTime();
   var MECE403TraditionalPlan2B3A4Aflag = false;
+  var MECE403TraditionalPlan2B3A4Arflag = false;
+ var MECE403TraditionalPlan2B3A4ATime = new Date().getTime();
   var MECE451TraditionalPlan2B3A4Aflag = false;
+  var MECE451TraditionalPlan2B3A4Arflag = false;
+ var MECE451TraditionalPlan2B3A4ATime = new Date().getTime();
   var MECE460TraditionalPlan2B3A4Aflag = false;
+  var MECE460TraditionalPlan2B3A4Arflag = false;
+ var MECE460TraditionalPlan2B3A4ATime = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2B3A4A3flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2B3A4A3rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2B3A4A3Time = new Date().getTime();
 $scope.CHEM103TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM103TraditionalPlan2B3A4ATime <= 200) { 
+        CHEM103TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+CHEM103TraditionalPlan2B3A4ATime = currentTime;
   var CHEM103TraditionalPlan2B3A4Aelement = document.getElementById("CHEM103TraditionalPlan2B3A4A");
  if (!CHEM103TraditionalPlan2B3A4Aflag) {
      if (CHEM103TraditionalPlan2B3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -16068,6 +17816,12 @@ $scope.CHEM103TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.ENGG100TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG100TraditionalPlan2B3A4ATime <= 200) { 
+        ENGG100TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+ENGG100TraditionalPlan2B3A4ATime = currentTime;
   var ENGG100TraditionalPlan2B3A4Aelement = document.getElementById("ENGG100TraditionalPlan2B3A4A");
  if (!ENGG100TraditionalPlan2B3A4Aflag) {
      if (ENGG100TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -16087,6 +17841,12 @@ $scope.ENGG100TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.ENGG130TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG130TraditionalPlan2B3A4ATime <= 200) { 
+        ENGG130TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+ENGG130TraditionalPlan2B3A4ATime = currentTime;
   var ENGG130TraditionalPlan2B3A4Aelement = document.getElementById("ENGG130TraditionalPlan2B3A4A");
  if (!ENGG130TraditionalPlan2B3A4Aflag) {
      if (ENGG130TraditionalPlan2B3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -16114,6 +17874,12 @@ $scope.ENGG130TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.ENGL199TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGL199TraditionalPlan2B3A4ATime <= 200) { 
+        ENGL199TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+ENGL199TraditionalPlan2B3A4ATime = currentTime;
   var ENGL199TraditionalPlan2B3A4Aelement = document.getElementById("ENGL199TraditionalPlan2B3A4A");
  if (!ENGL199TraditionalPlan2B3A4Aflag) {
      if (ENGL199TraditionalPlan2B3A4Aelement.classList.contains("Other-highlighted")) { 
@@ -16135,6 +17901,12 @@ $scope.ENGL199TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MATH100TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH100TraditionalPlan2B3A4ATime <= 200) { 
+        MATH100TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MATH100TraditionalPlan2B3A4ATime = currentTime;
   var MATH100TraditionalPlan2B3A4Aelement = document.getElementById("MATH100TraditionalPlan2B3A4A");
  if (!MATH100TraditionalPlan2B3A4Aflag) {
      if (MATH100TraditionalPlan2B3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -16166,6 +17938,12 @@ $scope.MATH100TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.PHYS130TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - PHYS130TraditionalPlan2B3A4ATime <= 200) { 
+        PHYS130TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+PHYS130TraditionalPlan2B3A4ATime = currentTime;
   var PHYS130TraditionalPlan2B3A4Aelement = document.getElementById("PHYS130TraditionalPlan2B3A4A");
  if (!PHYS130TraditionalPlan2B3A4Aflag) {
      if (PHYS130TraditionalPlan2B3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -16187,6 +17965,12 @@ $scope.PHYS130TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.CHEM105TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM105TraditionalPlan2B3A4ATime <= 200) { 
+        CHEM105TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+CHEM105TraditionalPlan2B3A4ATime = currentTime;
   var CHEM105TraditionalPlan2B3A4Aelement = document.getElementById("CHEM105TraditionalPlan2B3A4A");
  if (!CHEM105TraditionalPlan2B3A4Aflag) {
      if (CHEM105TraditionalPlan2B3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -16210,6 +17994,12 @@ $scope.CHEM105TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.ENCMP100TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENCMP100TraditionalPlan2B3A4ATime <= 200) { 
+        ENCMP100TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+ENCMP100TraditionalPlan2B3A4ATime = currentTime;
   var ENCMP100TraditionalPlan2B3A4Aelement = document.getElementById("ENCMP100TraditionalPlan2B3A4A");
  if (!ENCMP100TraditionalPlan2B3A4Aflag) {
      if (ENCMP100TraditionalPlan2B3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -16229,6 +18019,12 @@ $scope.ENCMP100TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.ENGG160TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG160TraditionalPlan2B3A4ATime <= 200) { 
+        ENGG160TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+ENGG160TraditionalPlan2B3A4ATime = currentTime;
   var ENGG160TraditionalPlan2B3A4Aelement = document.getElementById("ENGG160TraditionalPlan2B3A4A");
  if (!ENGG160TraditionalPlan2B3A4Aflag) {
      if (ENGG160TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -16252,6 +18048,12 @@ $scope.ENGG160TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.ENPH131TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENPH131TraditionalPlan2B3A4ATime <= 200) { 
+        ENPH131TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+ENPH131TraditionalPlan2B3A4ATime = currentTime;
   var ENPH131TraditionalPlan2B3A4Aelement = document.getElementById("ENPH131TraditionalPlan2B3A4A");
  if (!ENPH131TraditionalPlan2B3A4Aflag) {
      if (ENPH131TraditionalPlan2B3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -16281,6 +18083,12 @@ $scope.ENPH131TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MATH101TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH101TraditionalPlan2B3A4ATime <= 200) { 
+        MATH101TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MATH101TraditionalPlan2B3A4ATime = currentTime;
   var MATH101TraditionalPlan2B3A4Aelement = document.getElementById("MATH101TraditionalPlan2B3A4A");
  if (!MATH101TraditionalPlan2B3A4Aflag) {
      if (MATH101TraditionalPlan2B3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -16316,6 +18124,12 @@ $scope.MATH101TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MATH102TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH102TraditionalPlan2B3A4ATime <= 200) { 
+        MATH102TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MATH102TraditionalPlan2B3A4ATime = currentTime;
   var MATH102TraditionalPlan2B3A4Aelement = document.getElementById("MATH102TraditionalPlan2B3A4A");
  if (!MATH102TraditionalPlan2B3A4Aflag) {
      if (MATH102TraditionalPlan2B3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -16341,6 +18155,12 @@ $scope.MATH102TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.ECE209TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ECE209TraditionalPlan2B3A4ATime <= 200) { 
+        ECE209TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+ECE209TraditionalPlan2B3A4ATime = currentTime;
   var ECE209TraditionalPlan2B3A4Aelement = document.getElementById("ECE209TraditionalPlan2B3A4A");
  if (!ECE209TraditionalPlan2B3A4Aflag) {
      if (ECE209TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -16362,6 +18182,12 @@ $scope.ECE209TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MATE202TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATE202TraditionalPlan2B3A4ATime <= 200) { 
+        MATE202TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MATE202TraditionalPlan2B3A4ATime = currentTime;
   var MATE202TraditionalPlan2B3A4Aelement = document.getElementById("MATE202TraditionalPlan2B3A4A");
  if (!MATE202TraditionalPlan2B3A4Aflag) {
      if (MATE202TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -16385,6 +18211,12 @@ $scope.MATE202TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MATH201TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH201TraditionalPlan2B3A4ATime <= 200) { 
+        MATH201TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MATH201TraditionalPlan2B3A4ATime = currentTime;
   var MATH201TraditionalPlan2B3A4Aelement = document.getElementById("MATH201TraditionalPlan2B3A4A");
  if (!MATH201TraditionalPlan2B3A4Aflag) {
      if (MATH201TraditionalPlan2B3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -16412,6 +18244,12 @@ $scope.MATH201TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MECE230TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE230TraditionalPlan2B3A4ATime <= 200) { 
+        MECE230TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MECE230TraditionalPlan2B3A4ATime = currentTime;
   var MECE230TraditionalPlan2B3A4Aelement = document.getElementById("MECE230TraditionalPlan2B3A4A");
  if (!MECE230TraditionalPlan2B3A4Aflag) {
      if (MECE230TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -16439,6 +18277,12 @@ $scope.MECE230TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MECE260TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE260TraditionalPlan2B3A4ATime <= 200) { 
+        MECE260TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MECE260TraditionalPlan2B3A4ATime = currentTime;
   var MECE260TraditionalPlan2B3A4Aelement = document.getElementById("MECE260TraditionalPlan2B3A4A");
  if (!MECE260TraditionalPlan2B3A4Aflag) {
      if (MECE260TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -16466,6 +18310,12 @@ $scope.MECE260TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MECE265TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE265TraditionalPlan2B3A4ATime <= 200) { 
+        MECE265TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MECE265TraditionalPlan2B3A4ATime = currentTime;
   var MECE265TraditionalPlan2B3A4Aelement = document.getElementById("MECE265TraditionalPlan2B3A4A");
  if (!MECE265TraditionalPlan2B3A4Aflag) {
      if (MECE265TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -16489,6 +18339,12 @@ $scope.MECE265TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.CIVE270TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CIVE270TraditionalPlan2B3A4ATime <= 200) { 
+        CIVE270TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+CIVE270TraditionalPlan2B3A4ATime = currentTime;
   var CIVE270TraditionalPlan2B3A4Aelement = document.getElementById("CIVE270TraditionalPlan2B3A4A");
  if (!CIVE270TraditionalPlan2B3A4Aflag) {
      if (CIVE270TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -16520,6 +18376,12 @@ $scope.CIVE270TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MATH209TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH209TraditionalPlan2B3A4ATime <= 200) { 
+        MATH209TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MATH209TraditionalPlan2B3A4ATime = currentTime;
   var MATH209TraditionalPlan2B3A4Aelement = document.getElementById("MATH209TraditionalPlan2B3A4A");
  if (!MATH209TraditionalPlan2B3A4Aflag) {
      if (MATH209TraditionalPlan2B3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -16551,6 +18413,12 @@ $scope.MATH209TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.STAT235TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - STAT235TraditionalPlan2B3A4ATime <= 200) { 
+        STAT235TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+STAT235TraditionalPlan2B3A4ATime = currentTime;
   var STAT235TraditionalPlan2B3A4Aelement = document.getElementById("STAT235TraditionalPlan2B3A4A");
  if (!STAT235TraditionalPlan2B3A4Aflag) {
      if (STAT235TraditionalPlan2B3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -16576,6 +18444,12 @@ $scope.STAT235TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.CHE243TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE243TraditionalPlan2B3A4ATime <= 200) { 
+        CHE243TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+CHE243TraditionalPlan2B3A4ATime = currentTime;
   var CHE243TraditionalPlan2B3A4Aelement = document.getElementById("CHE243TraditionalPlan2B3A4A");
  if (!CHE243TraditionalPlan2B3A4Aflag) {
      if (CHE243TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -16603,6 +18477,12 @@ $scope.CHE243TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MECE200TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE200TraditionalPlan2B3A4ATime <= 200) { 
+        MECE200TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MECE200TraditionalPlan2B3A4ATime = currentTime;
   var MECE200TraditionalPlan2B3A4Aelement = document.getElementById("MECE200TraditionalPlan2B3A4A");
  if (!MECE200TraditionalPlan2B3A4Aflag) {
      if (MECE200TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -16624,6 +18504,12 @@ $scope.MECE200TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MECE250TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE250TraditionalPlan2B3A4ATime <= 200) { 
+        MECE250TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MECE250TraditionalPlan2B3A4ATime = currentTime;
   var MECE250TraditionalPlan2B3A4Aelement = document.getElementById("MECE250TraditionalPlan2B3A4A");
  if (!MECE250TraditionalPlan2B3A4Aflag) {
      if (MECE250TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -16655,6 +18541,12 @@ $scope.MECE250TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MATH300TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH300TraditionalPlan2B3A4ATime <= 200) { 
+        MATH300TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MATH300TraditionalPlan2B3A4ATime = currentTime;
   var MATH300TraditionalPlan2B3A4Aelement = document.getElementById("MATH300TraditionalPlan2B3A4A");
  if (!MATH300TraditionalPlan2B3A4Aflag) {
      if (MATH300TraditionalPlan2B3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -16684,6 +18576,12 @@ $scope.MATH300TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MECE300TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE300TraditionalPlan2B3A4ATime <= 200) { 
+        MECE300TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MECE300TraditionalPlan2B3A4ATime = currentTime;
   var MECE300TraditionalPlan2B3A4Aelement = document.getElementById("MECE300TraditionalPlan2B3A4A");
  if (!MECE300TraditionalPlan2B3A4Aflag) {
      if (MECE300TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -16715,6 +18613,12 @@ $scope.MECE300TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MECE301TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE301TraditionalPlan2B3A4ATime <= 200) { 
+        MECE301TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MECE301TraditionalPlan2B3A4ATime = currentTime;
   var MECE301TraditionalPlan2B3A4Aelement = document.getElementById("MECE301TraditionalPlan2B3A4A");
  if (!MECE301TraditionalPlan2B3A4Aflag) {
      if (MECE301TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -16738,6 +18642,12 @@ $scope.MECE301TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MECE331TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE331TraditionalPlan2B3A4ATime <= 200) { 
+        MECE331TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MECE331TraditionalPlan2B3A4ATime = currentTime;
   var MECE331TraditionalPlan2B3A4Aelement = document.getElementById("MECE331TraditionalPlan2B3A4A");
  if (!MECE331TraditionalPlan2B3A4Aflag) {
      if (MECE331TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -16777,6 +18687,12 @@ $scope.MECE331TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MECE371TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE371TraditionalPlan2B3A4ATime <= 200) { 
+        MECE371TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MECE371TraditionalPlan2B3A4ATime = currentTime;
   var MECE371TraditionalPlan2B3A4Aelement = document.getElementById("MECE371TraditionalPlan2B3A4A");
  if (!MECE371TraditionalPlan2B3A4Aflag) {
      if (MECE371TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -16810,6 +18726,12 @@ $scope.MECE371TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MECE380TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE380TraditionalPlan2B3A4ATime <= 200) { 
+        MECE380TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MECE380TraditionalPlan2B3A4ATime = currentTime;
   var MECE380TraditionalPlan2B3A4Aelement = document.getElementById("MECE380TraditionalPlan2B3A4A");
  if (!MECE380TraditionalPlan2B3A4Aflag) {
      if (MECE380TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -16835,6 +18757,12 @@ $scope.MECE380TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.ENGM310TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM310TraditionalPlan2B3A4ATime <= 200) { 
+        ENGM310TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+ENGM310TraditionalPlan2B3A4ATime = currentTime;
   var ENGM310TraditionalPlan2B3A4Aelement = document.getElementById("ENGM310TraditionalPlan2B3A4A");
  if (!ENGM310TraditionalPlan2B3A4Aflag) {
      if (ENGM310TraditionalPlan2B3A4Aelement.classList.contains("Other-highlighted")) { 
@@ -16856,6 +18784,12 @@ $scope.ENGM310TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.ENGM401TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM401TraditionalPlan2B3A4ATime <= 200) { 
+        ENGM401TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+ENGM401TraditionalPlan2B3A4ATime = currentTime;
   var ENGM401TraditionalPlan2B3A4Aelement = document.getElementById("ENGM401TraditionalPlan2B3A4A");
  if (!ENGM401TraditionalPlan2B3A4Aflag) {
      if (ENGM401TraditionalPlan2B3A4Aelement.classList.contains("Other-highlighted")) { 
@@ -16877,6 +18811,12 @@ $scope.ENGM401TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MECE340TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE340TraditionalPlan2B3A4ATime <= 200) { 
+        MECE340TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MECE340TraditionalPlan2B3A4ATime = currentTime;
   var MECE340TraditionalPlan2B3A4Aelement = document.getElementById("MECE340TraditionalPlan2B3A4A");
  if (!MECE340TraditionalPlan2B3A4Aflag) {
      if (MECE340TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -16904,6 +18844,12 @@ $scope.MECE340TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MECE360TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE360TraditionalPlan2B3A4ATime <= 200) { 
+        MECE360TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MECE360TraditionalPlan2B3A4ATime = currentTime;
   var MECE360TraditionalPlan2B3A4Aelement = document.getElementById("MECE360TraditionalPlan2B3A4A");
  if (!MECE360TraditionalPlan2B3A4Aflag) {
      if (MECE360TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -16939,6 +18885,12 @@ $scope.MECE360TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MECE362TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE362TraditionalPlan2B3A4ATime <= 200) { 
+        MECE362TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MECE362TraditionalPlan2B3A4ATime = currentTime;
   var MECE362TraditionalPlan2B3A4Aelement = document.getElementById("MECE362TraditionalPlan2B3A4A");
  if (!MECE362TraditionalPlan2B3A4Aflag) {
      if (MECE362TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -16964,6 +18916,12 @@ $scope.MECE362TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MECE390TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE390TraditionalPlan2B3A4ATime <= 200) { 
+        MECE390TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MECE390TraditionalPlan2B3A4ATime = currentTime;
   var MECE390TraditionalPlan2B3A4Aelement = document.getElementById("MECE390TraditionalPlan2B3A4A");
  if (!MECE390TraditionalPlan2B3A4Aflag) {
      if (MECE390TraditionalPlan2B3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -16989,6 +18947,12 @@ $scope.MECE390TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.ComplementaryElectiveTraditionalPlan2B3A4A0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ComplementaryElectiveTraditionalPlan2B3A4A0Time <= 200) { 
+        ComplementaryElectiveTraditionalPlan2B3A4A0Time = currentTime;
+        return;
+    }
+ComplementaryElectiveTraditionalPlan2B3A4A0Time = currentTime;
   var ComplementaryElectiveTraditionalPlan2B3A4A0element = document.getElementById("ComplementaryElectiveTraditionalPlan2B3A4A0");
  if (!ComplementaryElectiveTraditionalPlan2B3A4A0flag) {
      if (ComplementaryElectiveTraditionalPlan2B3A4A0element.classList.contains("COMP-highlighted")) { 
@@ -17008,6 +18972,12 @@ $scope.ComplementaryElectiveTraditionalPlan2B3A4A0Listener = function () {
   }
 };
 $scope.ENGG404TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG404TraditionalPlan2B3A4ATime <= 200) { 
+        ENGG404TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+ENGG404TraditionalPlan2B3A4ATime = currentTime;
   var ENGG404TraditionalPlan2B3A4Aelement = document.getElementById("ENGG404TraditionalPlan2B3A4A");
  if (!ENGG404TraditionalPlan2B3A4Aflag) {
      if (ENGG404TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -17027,6 +18997,12 @@ $scope.ENGG404TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MECE430TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE430TraditionalPlan2B3A4ATime <= 200) { 
+        MECE430TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MECE430TraditionalPlan2B3A4ATime = currentTime;
   var MECE430TraditionalPlan2B3A4Aelement = document.getElementById("MECE430TraditionalPlan2B3A4A");
  if (!MECE430TraditionalPlan2B3A4Aflag) {
      if (MECE430TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -17048,6 +19024,12 @@ $scope.MECE430TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MECE480TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE480TraditionalPlan2B3A4ATime <= 200) { 
+        MECE480TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MECE480TraditionalPlan2B3A4ATime = currentTime;
   var MECE480TraditionalPlan2B3A4Aelement = document.getElementById("MECE480TraditionalPlan2B3A4A");
  if (!MECE480TraditionalPlan2B3A4Aflag) {
      if (MECE480TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -17073,6 +19055,12 @@ $scope.MECE480TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MECE463TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE463TraditionalPlan2B3A4ATime <= 200) { 
+        MECE463TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MECE463TraditionalPlan2B3A4ATime = currentTime;
   var MECE463TraditionalPlan2B3A4Aelement = document.getElementById("MECE463TraditionalPlan2B3A4A");
  if (!MECE463TraditionalPlan2B3A4Aflag) {
      if (MECE463TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -17098,6 +19086,12 @@ $scope.MECE463TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4A0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2B3A4A0Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2B3A4A0Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2B3A4A0Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2B3A4A0element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4A0");
  if (!ProgramTechnicalElectiveTraditionalPlan2B3A4A0flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2B3A4A0element.classList.contains("PROG-highlighted")) { 
@@ -17117,6 +19111,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4A0Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4A1Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2B3A4A1Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2B3A4A1Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2B3A4A1Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2B3A4A1element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4A1");
  if (!ProgramTechnicalElectiveTraditionalPlan2B3A4A1flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2B3A4A1element.classList.contains("PROG-highlighted")) { 
@@ -17136,6 +19136,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4A1Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4A2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2B3A4A2Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2B3A4A2Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2B3A4A2Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2B3A4A2element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4A2");
  if (!ProgramTechnicalElectiveTraditionalPlan2B3A4A2flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2B3A4A2element.classList.contains("PROG-highlighted")) { 
@@ -17155,6 +19161,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4A2Listener = function () {
   }
 };
 $scope.CHE448TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE448TraditionalPlan2B3A4ATime <= 200) { 
+        CHE448TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+CHE448TraditionalPlan2B3A4ATime = currentTime;
   var CHE448TraditionalPlan2B3A4Aelement = document.getElementById("CHE448TraditionalPlan2B3A4A");
  if (!CHE448TraditionalPlan2B3A4Aflag) {
      if (CHE448TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -17182,6 +19194,12 @@ $scope.CHE448TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MECE420TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE420TraditionalPlan2B3A4ATime <= 200) { 
+        MECE420TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MECE420TraditionalPlan2B3A4ATime = currentTime;
   var MECE420TraditionalPlan2B3A4Aelement = document.getElementById("MECE420TraditionalPlan2B3A4A");
  if (!MECE420TraditionalPlan2B3A4Aflag) {
      if (MECE420TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -17203,6 +19221,12 @@ $scope.MECE420TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.ENGG400TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG400TraditionalPlan2B3A4ATime <= 200) { 
+        ENGG400TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+ENGG400TraditionalPlan2B3A4ATime = currentTime;
   var ENGG400TraditionalPlan2B3A4Aelement = document.getElementById("ENGG400TraditionalPlan2B3A4A");
  if (!ENGG400TraditionalPlan2B3A4Aflag) {
      if (ENGG400TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -17222,6 +19246,12 @@ $scope.ENGG400TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MECE403TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE403TraditionalPlan2B3A4ATime <= 200) { 
+        MECE403TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MECE403TraditionalPlan2B3A4ATime = currentTime;
   var MECE403TraditionalPlan2B3A4Aelement = document.getElementById("MECE403TraditionalPlan2B3A4A");
  if (!MECE403TraditionalPlan2B3A4Aflag) {
      if (MECE403TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -17249,6 +19279,12 @@ $scope.MECE403TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MECE451TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE451TraditionalPlan2B3A4ATime <= 200) { 
+        MECE451TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MECE451TraditionalPlan2B3A4ATime = currentTime;
   var MECE451TraditionalPlan2B3A4Aelement = document.getElementById("MECE451TraditionalPlan2B3A4A");
  if (!MECE451TraditionalPlan2B3A4Aflag) {
      if (MECE451TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -17272,6 +19308,12 @@ $scope.MECE451TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.MECE460TraditionalPlan2B3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE460TraditionalPlan2B3A4ATime <= 200) { 
+        MECE460TraditionalPlan2B3A4ATime = currentTime;
+        return;
+    }
+MECE460TraditionalPlan2B3A4ATime = currentTime;
   var MECE460TraditionalPlan2B3A4Aelement = document.getElementById("MECE460TraditionalPlan2B3A4A");
  if (!MECE460TraditionalPlan2B3A4Aflag) {
      if (MECE460TraditionalPlan2B3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -17309,6 +19351,12 @@ $scope.MECE460TraditionalPlan2B3A4AListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4A3Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2B3A4A3Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2B3A4A3Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2B3A4A3Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2B3A4A3element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4A3");
  if (!ProgramTechnicalElectiveTraditionalPlan2B3A4A3flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2B3A4A3element.classList.contains("PROG-highlighted")) { 
@@ -17328,57 +19376,165 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4A3Listener = function () {
   }
 };
   var CHEM103TraditionalPlan2B3A4Bflag = false;
+  var CHEM103TraditionalPlan2B3A4Brflag = false;
+ var CHEM103TraditionalPlan2B3A4BTime = new Date().getTime();
   var ENGG100TraditionalPlan2B3A4Bflag = false;
+  var ENGG100TraditionalPlan2B3A4Brflag = false;
+ var ENGG100TraditionalPlan2B3A4BTime = new Date().getTime();
   var ENGG130TraditionalPlan2B3A4Bflag = false;
+  var ENGG130TraditionalPlan2B3A4Brflag = false;
+ var ENGG130TraditionalPlan2B3A4BTime = new Date().getTime();
   var ENGL199TraditionalPlan2B3A4Bflag = false;
+  var ENGL199TraditionalPlan2B3A4Brflag = false;
+ var ENGL199TraditionalPlan2B3A4BTime = new Date().getTime();
   var MATH100TraditionalPlan2B3A4Bflag = false;
+  var MATH100TraditionalPlan2B3A4Brflag = false;
+ var MATH100TraditionalPlan2B3A4BTime = new Date().getTime();
   var PHYS130TraditionalPlan2B3A4Bflag = false;
+  var PHYS130TraditionalPlan2B3A4Brflag = false;
+ var PHYS130TraditionalPlan2B3A4BTime = new Date().getTime();
   var CHEM105TraditionalPlan2B3A4Bflag = false;
+  var CHEM105TraditionalPlan2B3A4Brflag = false;
+ var CHEM105TraditionalPlan2B3A4BTime = new Date().getTime();
   var ENCMP100TraditionalPlan2B3A4Bflag = false;
+  var ENCMP100TraditionalPlan2B3A4Brflag = false;
+ var ENCMP100TraditionalPlan2B3A4BTime = new Date().getTime();
   var ENGG160TraditionalPlan2B3A4Bflag = false;
+  var ENGG160TraditionalPlan2B3A4Brflag = false;
+ var ENGG160TraditionalPlan2B3A4BTime = new Date().getTime();
   var ENPH131TraditionalPlan2B3A4Bflag = false;
+  var ENPH131TraditionalPlan2B3A4Brflag = false;
+ var ENPH131TraditionalPlan2B3A4BTime = new Date().getTime();
   var MATH101TraditionalPlan2B3A4Bflag = false;
+  var MATH101TraditionalPlan2B3A4Brflag = false;
+ var MATH101TraditionalPlan2B3A4BTime = new Date().getTime();
   var MATH102TraditionalPlan2B3A4Bflag = false;
+  var MATH102TraditionalPlan2B3A4Brflag = false;
+ var MATH102TraditionalPlan2B3A4BTime = new Date().getTime();
   var ECE209TraditionalPlan2B3A4Bflag = false;
+  var ECE209TraditionalPlan2B3A4Brflag = false;
+ var ECE209TraditionalPlan2B3A4BTime = new Date().getTime();
   var MATE202TraditionalPlan2B3A4Bflag = false;
+  var MATE202TraditionalPlan2B3A4Brflag = false;
+ var MATE202TraditionalPlan2B3A4BTime = new Date().getTime();
   var MATH201TraditionalPlan2B3A4Bflag = false;
+  var MATH201TraditionalPlan2B3A4Brflag = false;
+ var MATH201TraditionalPlan2B3A4BTime = new Date().getTime();
   var MECE230TraditionalPlan2B3A4Bflag = false;
+  var MECE230TraditionalPlan2B3A4Brflag = false;
+ var MECE230TraditionalPlan2B3A4BTime = new Date().getTime();
   var MECE260TraditionalPlan2B3A4Bflag = false;
+  var MECE260TraditionalPlan2B3A4Brflag = false;
+ var MECE260TraditionalPlan2B3A4BTime = new Date().getTime();
   var MECE265TraditionalPlan2B3A4Bflag = false;
+  var MECE265TraditionalPlan2B3A4Brflag = false;
+ var MECE265TraditionalPlan2B3A4BTime = new Date().getTime();
   var CIVE270TraditionalPlan2B3A4Bflag = false;
+  var CIVE270TraditionalPlan2B3A4Brflag = false;
+ var CIVE270TraditionalPlan2B3A4BTime = new Date().getTime();
   var MATH209TraditionalPlan2B3A4Bflag = false;
+  var MATH209TraditionalPlan2B3A4Brflag = false;
+ var MATH209TraditionalPlan2B3A4BTime = new Date().getTime();
   var STAT235TraditionalPlan2B3A4Bflag = false;
+  var STAT235TraditionalPlan2B3A4Brflag = false;
+ var STAT235TraditionalPlan2B3A4BTime = new Date().getTime();
   var CHE243TraditionalPlan2B3A4Bflag = false;
+  var CHE243TraditionalPlan2B3A4Brflag = false;
+ var CHE243TraditionalPlan2B3A4BTime = new Date().getTime();
   var MECE200TraditionalPlan2B3A4Bflag = false;
+  var MECE200TraditionalPlan2B3A4Brflag = false;
+ var MECE200TraditionalPlan2B3A4BTime = new Date().getTime();
   var MECE250TraditionalPlan2B3A4Bflag = false;
+  var MECE250TraditionalPlan2B3A4Brflag = false;
+ var MECE250TraditionalPlan2B3A4BTime = new Date().getTime();
   var MATH300TraditionalPlan2B3A4Bflag = false;
+  var MATH300TraditionalPlan2B3A4Brflag = false;
+ var MATH300TraditionalPlan2B3A4BTime = new Date().getTime();
   var MECE300TraditionalPlan2B3A4Bflag = false;
+  var MECE300TraditionalPlan2B3A4Brflag = false;
+ var MECE300TraditionalPlan2B3A4BTime = new Date().getTime();
   var MECE301TraditionalPlan2B3A4Bflag = false;
+  var MECE301TraditionalPlan2B3A4Brflag = false;
+ var MECE301TraditionalPlan2B3A4BTime = new Date().getTime();
   var MECE331TraditionalPlan2B3A4Bflag = false;
+  var MECE331TraditionalPlan2B3A4Brflag = false;
+ var MECE331TraditionalPlan2B3A4BTime = new Date().getTime();
   var MECE371TraditionalPlan2B3A4Bflag = false;
+  var MECE371TraditionalPlan2B3A4Brflag = false;
+ var MECE371TraditionalPlan2B3A4BTime = new Date().getTime();
   var MECE380TraditionalPlan2B3A4Bflag = false;
+  var MECE380TraditionalPlan2B3A4Brflag = false;
+ var MECE380TraditionalPlan2B3A4BTime = new Date().getTime();
   var ENGM310TraditionalPlan2B3A4Bflag = false;
+  var ENGM310TraditionalPlan2B3A4Brflag = false;
+ var ENGM310TraditionalPlan2B3A4BTime = new Date().getTime();
   var ENGM401TraditionalPlan2B3A4Bflag = false;
+  var ENGM401TraditionalPlan2B3A4Brflag = false;
+ var ENGM401TraditionalPlan2B3A4BTime = new Date().getTime();
   var MECE340TraditionalPlan2B3A4Bflag = false;
+  var MECE340TraditionalPlan2B3A4Brflag = false;
+ var MECE340TraditionalPlan2B3A4BTime = new Date().getTime();
   var MECE360TraditionalPlan2B3A4Bflag = false;
+  var MECE360TraditionalPlan2B3A4Brflag = false;
+ var MECE360TraditionalPlan2B3A4BTime = new Date().getTime();
   var MECE362TraditionalPlan2B3A4Bflag = false;
+  var MECE362TraditionalPlan2B3A4Brflag = false;
+ var MECE362TraditionalPlan2B3A4BTime = new Date().getTime();
   var MECE390TraditionalPlan2B3A4Bflag = false;
+  var MECE390TraditionalPlan2B3A4Brflag = false;
+ var MECE390TraditionalPlan2B3A4BTime = new Date().getTime();
   var ComplementaryElectiveTraditionalPlan2B3A4B0flag = false;
+  var ComplementaryElectiveTraditionalPlan2B3A4B0rflag = false;
+ var ComplementaryElectiveTraditionalPlan2B3A4B0Time = new Date().getTime();
   var CHE448TraditionalPlan2B3A4Bflag = false;
+  var CHE448TraditionalPlan2B3A4Brflag = false;
+ var CHE448TraditionalPlan2B3A4BTime = new Date().getTime();
   var MECE420TraditionalPlan2B3A4Bflag = false;
+  var MECE420TraditionalPlan2B3A4Brflag = false;
+ var MECE420TraditionalPlan2B3A4BTime = new Date().getTime();
   var ENGG400TraditionalPlan2B3A4Bflag = false;
+  var ENGG400TraditionalPlan2B3A4Brflag = false;
+ var ENGG400TraditionalPlan2B3A4BTime = new Date().getTime();
   var MECE403TraditionalPlan2B3A4Bflag = false;
+  var MECE403TraditionalPlan2B3A4Brflag = false;
+ var MECE403TraditionalPlan2B3A4BTime = new Date().getTime();
   var MECE451TraditionalPlan2B3A4Bflag = false;
+  var MECE451TraditionalPlan2B3A4Brflag = false;
+ var MECE451TraditionalPlan2B3A4BTime = new Date().getTime();
   var MECE460TraditionalPlan2B3A4Bflag = false;
+  var MECE460TraditionalPlan2B3A4Brflag = false;
+ var MECE460TraditionalPlan2B3A4BTime = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2B3A4B0flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2B3A4B0rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2B3A4B0Time = new Date().getTime();
   var ENGG404TraditionalPlan2B3A4Bflag = false;
+  var ENGG404TraditionalPlan2B3A4Brflag = false;
+ var ENGG404TraditionalPlan2B3A4BTime = new Date().getTime();
   var MECE430TraditionalPlan2B3A4Bflag = false;
+  var MECE430TraditionalPlan2B3A4Brflag = false;
+ var MECE430TraditionalPlan2B3A4BTime = new Date().getTime();
   var MECE480TraditionalPlan2B3A4Bflag = false;
+  var MECE480TraditionalPlan2B3A4Brflag = false;
+ var MECE480TraditionalPlan2B3A4BTime = new Date().getTime();
   var MECE463TraditionalPlan2B3A4Bflag = false;
+  var MECE463TraditionalPlan2B3A4Brflag = false;
+ var MECE463TraditionalPlan2B3A4BTime = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2B3A4B1flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2B3A4B1rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2B3A4B1Time = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2B3A4B2flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2B3A4B2rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2B3A4B2Time = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2B3A4B3flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2B3A4B3rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2B3A4B3Time = new Date().getTime();
 $scope.CHEM103TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM103TraditionalPlan2B3A4BTime <= 200) { 
+        CHEM103TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+CHEM103TraditionalPlan2B3A4BTime = currentTime;
   var CHEM103TraditionalPlan2B3A4Belement = document.getElementById("CHEM103TraditionalPlan2B3A4B");
  if (!CHEM103TraditionalPlan2B3A4Bflag) {
      if (CHEM103TraditionalPlan2B3A4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -17400,6 +19556,12 @@ $scope.CHEM103TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.ENGG100TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG100TraditionalPlan2B3A4BTime <= 200) { 
+        ENGG100TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+ENGG100TraditionalPlan2B3A4BTime = currentTime;
   var ENGG100TraditionalPlan2B3A4Belement = document.getElementById("ENGG100TraditionalPlan2B3A4B");
  if (!ENGG100TraditionalPlan2B3A4Bflag) {
      if (ENGG100TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -17419,6 +19581,12 @@ $scope.ENGG100TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.ENGG130TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG130TraditionalPlan2B3A4BTime <= 200) { 
+        ENGG130TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+ENGG130TraditionalPlan2B3A4BTime = currentTime;
   var ENGG130TraditionalPlan2B3A4Belement = document.getElementById("ENGG130TraditionalPlan2B3A4B");
  if (!ENGG130TraditionalPlan2B3A4Bflag) {
      if (ENGG130TraditionalPlan2B3A4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -17446,6 +19614,12 @@ $scope.ENGG130TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.ENGL199TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGL199TraditionalPlan2B3A4BTime <= 200) { 
+        ENGL199TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+ENGL199TraditionalPlan2B3A4BTime = currentTime;
   var ENGL199TraditionalPlan2B3A4Belement = document.getElementById("ENGL199TraditionalPlan2B3A4B");
  if (!ENGL199TraditionalPlan2B3A4Bflag) {
      if (ENGL199TraditionalPlan2B3A4Belement.classList.contains("Other-highlighted")) { 
@@ -17467,6 +19641,12 @@ $scope.ENGL199TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MATH100TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH100TraditionalPlan2B3A4BTime <= 200) { 
+        MATH100TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MATH100TraditionalPlan2B3A4BTime = currentTime;
   var MATH100TraditionalPlan2B3A4Belement = document.getElementById("MATH100TraditionalPlan2B3A4B");
  if (!MATH100TraditionalPlan2B3A4Bflag) {
      if (MATH100TraditionalPlan2B3A4Belement.classList.contains("MATH-highlighted")) { 
@@ -17498,6 +19678,12 @@ $scope.MATH100TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.PHYS130TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - PHYS130TraditionalPlan2B3A4BTime <= 200) { 
+        PHYS130TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+PHYS130TraditionalPlan2B3A4BTime = currentTime;
   var PHYS130TraditionalPlan2B3A4Belement = document.getElementById("PHYS130TraditionalPlan2B3A4B");
  if (!PHYS130TraditionalPlan2B3A4Bflag) {
      if (PHYS130TraditionalPlan2B3A4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -17519,6 +19705,12 @@ $scope.PHYS130TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.CHEM105TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM105TraditionalPlan2B3A4BTime <= 200) { 
+        CHEM105TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+CHEM105TraditionalPlan2B3A4BTime = currentTime;
   var CHEM105TraditionalPlan2B3A4Belement = document.getElementById("CHEM105TraditionalPlan2B3A4B");
  if (!CHEM105TraditionalPlan2B3A4Bflag) {
      if (CHEM105TraditionalPlan2B3A4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -17542,6 +19734,12 @@ $scope.CHEM105TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.ENCMP100TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENCMP100TraditionalPlan2B3A4BTime <= 200) { 
+        ENCMP100TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+ENCMP100TraditionalPlan2B3A4BTime = currentTime;
   var ENCMP100TraditionalPlan2B3A4Belement = document.getElementById("ENCMP100TraditionalPlan2B3A4B");
  if (!ENCMP100TraditionalPlan2B3A4Bflag) {
      if (ENCMP100TraditionalPlan2B3A4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -17561,6 +19759,12 @@ $scope.ENCMP100TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.ENGG160TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG160TraditionalPlan2B3A4BTime <= 200) { 
+        ENGG160TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+ENGG160TraditionalPlan2B3A4BTime = currentTime;
   var ENGG160TraditionalPlan2B3A4Belement = document.getElementById("ENGG160TraditionalPlan2B3A4B");
  if (!ENGG160TraditionalPlan2B3A4Bflag) {
      if (ENGG160TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -17584,6 +19788,12 @@ $scope.ENGG160TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.ENPH131TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENPH131TraditionalPlan2B3A4BTime <= 200) { 
+        ENPH131TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+ENPH131TraditionalPlan2B3A4BTime = currentTime;
   var ENPH131TraditionalPlan2B3A4Belement = document.getElementById("ENPH131TraditionalPlan2B3A4B");
  if (!ENPH131TraditionalPlan2B3A4Bflag) {
      if (ENPH131TraditionalPlan2B3A4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -17613,6 +19823,12 @@ $scope.ENPH131TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MATH101TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH101TraditionalPlan2B3A4BTime <= 200) { 
+        MATH101TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MATH101TraditionalPlan2B3A4BTime = currentTime;
   var MATH101TraditionalPlan2B3A4Belement = document.getElementById("MATH101TraditionalPlan2B3A4B");
  if (!MATH101TraditionalPlan2B3A4Bflag) {
      if (MATH101TraditionalPlan2B3A4Belement.classList.contains("MATH-highlighted")) { 
@@ -17648,6 +19864,12 @@ $scope.MATH101TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MATH102TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH102TraditionalPlan2B3A4BTime <= 200) { 
+        MATH102TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MATH102TraditionalPlan2B3A4BTime = currentTime;
   var MATH102TraditionalPlan2B3A4Belement = document.getElementById("MATH102TraditionalPlan2B3A4B");
  if (!MATH102TraditionalPlan2B3A4Bflag) {
      if (MATH102TraditionalPlan2B3A4Belement.classList.contains("MATH-highlighted")) { 
@@ -17673,6 +19895,12 @@ $scope.MATH102TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.ECE209TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ECE209TraditionalPlan2B3A4BTime <= 200) { 
+        ECE209TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+ECE209TraditionalPlan2B3A4BTime = currentTime;
   var ECE209TraditionalPlan2B3A4Belement = document.getElementById("ECE209TraditionalPlan2B3A4B");
  if (!ECE209TraditionalPlan2B3A4Bflag) {
      if (ECE209TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -17694,6 +19922,12 @@ $scope.ECE209TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MATE202TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATE202TraditionalPlan2B3A4BTime <= 200) { 
+        MATE202TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MATE202TraditionalPlan2B3A4BTime = currentTime;
   var MATE202TraditionalPlan2B3A4Belement = document.getElementById("MATE202TraditionalPlan2B3A4B");
  if (!MATE202TraditionalPlan2B3A4Bflag) {
      if (MATE202TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -17717,6 +19951,12 @@ $scope.MATE202TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MATH201TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH201TraditionalPlan2B3A4BTime <= 200) { 
+        MATH201TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MATH201TraditionalPlan2B3A4BTime = currentTime;
   var MATH201TraditionalPlan2B3A4Belement = document.getElementById("MATH201TraditionalPlan2B3A4B");
  if (!MATH201TraditionalPlan2B3A4Bflag) {
      if (MATH201TraditionalPlan2B3A4Belement.classList.contains("MATH-highlighted")) { 
@@ -17744,6 +19984,12 @@ $scope.MATH201TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MECE230TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE230TraditionalPlan2B3A4BTime <= 200) { 
+        MECE230TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MECE230TraditionalPlan2B3A4BTime = currentTime;
   var MECE230TraditionalPlan2B3A4Belement = document.getElementById("MECE230TraditionalPlan2B3A4B");
  if (!MECE230TraditionalPlan2B3A4Bflag) {
      if (MECE230TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -17771,6 +20017,12 @@ $scope.MECE230TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MECE260TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE260TraditionalPlan2B3A4BTime <= 200) { 
+        MECE260TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MECE260TraditionalPlan2B3A4BTime = currentTime;
   var MECE260TraditionalPlan2B3A4Belement = document.getElementById("MECE260TraditionalPlan2B3A4B");
  if (!MECE260TraditionalPlan2B3A4Bflag) {
      if (MECE260TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -17798,6 +20050,12 @@ $scope.MECE260TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MECE265TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE265TraditionalPlan2B3A4BTime <= 200) { 
+        MECE265TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MECE265TraditionalPlan2B3A4BTime = currentTime;
   var MECE265TraditionalPlan2B3A4Belement = document.getElementById("MECE265TraditionalPlan2B3A4B");
  if (!MECE265TraditionalPlan2B3A4Bflag) {
      if (MECE265TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -17821,6 +20079,12 @@ $scope.MECE265TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.CIVE270TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CIVE270TraditionalPlan2B3A4BTime <= 200) { 
+        CIVE270TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+CIVE270TraditionalPlan2B3A4BTime = currentTime;
   var CIVE270TraditionalPlan2B3A4Belement = document.getElementById("CIVE270TraditionalPlan2B3A4B");
  if (!CIVE270TraditionalPlan2B3A4Bflag) {
      if (CIVE270TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -17852,6 +20116,12 @@ $scope.CIVE270TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MATH209TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH209TraditionalPlan2B3A4BTime <= 200) { 
+        MATH209TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MATH209TraditionalPlan2B3A4BTime = currentTime;
   var MATH209TraditionalPlan2B3A4Belement = document.getElementById("MATH209TraditionalPlan2B3A4B");
  if (!MATH209TraditionalPlan2B3A4Bflag) {
      if (MATH209TraditionalPlan2B3A4Belement.classList.contains("MATH-highlighted")) { 
@@ -17883,6 +20153,12 @@ $scope.MATH209TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.STAT235TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - STAT235TraditionalPlan2B3A4BTime <= 200) { 
+        STAT235TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+STAT235TraditionalPlan2B3A4BTime = currentTime;
   var STAT235TraditionalPlan2B3A4Belement = document.getElementById("STAT235TraditionalPlan2B3A4B");
  if (!STAT235TraditionalPlan2B3A4Bflag) {
      if (STAT235TraditionalPlan2B3A4Belement.classList.contains("MATH-highlighted")) { 
@@ -17908,6 +20184,12 @@ $scope.STAT235TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.CHE243TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE243TraditionalPlan2B3A4BTime <= 200) { 
+        CHE243TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+CHE243TraditionalPlan2B3A4BTime = currentTime;
   var CHE243TraditionalPlan2B3A4Belement = document.getElementById("CHE243TraditionalPlan2B3A4B");
  if (!CHE243TraditionalPlan2B3A4Bflag) {
      if (CHE243TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -17935,6 +20217,12 @@ $scope.CHE243TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MECE200TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE200TraditionalPlan2B3A4BTime <= 200) { 
+        MECE200TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MECE200TraditionalPlan2B3A4BTime = currentTime;
   var MECE200TraditionalPlan2B3A4Belement = document.getElementById("MECE200TraditionalPlan2B3A4B");
  if (!MECE200TraditionalPlan2B3A4Bflag) {
      if (MECE200TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -17956,6 +20244,12 @@ $scope.MECE200TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MECE250TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE250TraditionalPlan2B3A4BTime <= 200) { 
+        MECE250TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MECE250TraditionalPlan2B3A4BTime = currentTime;
   var MECE250TraditionalPlan2B3A4Belement = document.getElementById("MECE250TraditionalPlan2B3A4B");
  if (!MECE250TraditionalPlan2B3A4Bflag) {
      if (MECE250TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -17987,6 +20281,12 @@ $scope.MECE250TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MATH300TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH300TraditionalPlan2B3A4BTime <= 200) { 
+        MATH300TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MATH300TraditionalPlan2B3A4BTime = currentTime;
   var MATH300TraditionalPlan2B3A4Belement = document.getElementById("MATH300TraditionalPlan2B3A4B");
  if (!MATH300TraditionalPlan2B3A4Bflag) {
      if (MATH300TraditionalPlan2B3A4Belement.classList.contains("MATH-highlighted")) { 
@@ -18016,6 +20316,12 @@ $scope.MATH300TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MECE300TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE300TraditionalPlan2B3A4BTime <= 200) { 
+        MECE300TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MECE300TraditionalPlan2B3A4BTime = currentTime;
   var MECE300TraditionalPlan2B3A4Belement = document.getElementById("MECE300TraditionalPlan2B3A4B");
  if (!MECE300TraditionalPlan2B3A4Bflag) {
      if (MECE300TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -18047,6 +20353,12 @@ $scope.MECE300TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MECE301TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE301TraditionalPlan2B3A4BTime <= 200) { 
+        MECE301TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MECE301TraditionalPlan2B3A4BTime = currentTime;
   var MECE301TraditionalPlan2B3A4Belement = document.getElementById("MECE301TraditionalPlan2B3A4B");
  if (!MECE301TraditionalPlan2B3A4Bflag) {
      if (MECE301TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -18070,6 +20382,12 @@ $scope.MECE301TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MECE331TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE331TraditionalPlan2B3A4BTime <= 200) { 
+        MECE331TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MECE331TraditionalPlan2B3A4BTime = currentTime;
   var MECE331TraditionalPlan2B3A4Belement = document.getElementById("MECE331TraditionalPlan2B3A4B");
  if (!MECE331TraditionalPlan2B3A4Bflag) {
      if (MECE331TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -18109,6 +20427,12 @@ $scope.MECE331TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MECE371TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE371TraditionalPlan2B3A4BTime <= 200) { 
+        MECE371TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MECE371TraditionalPlan2B3A4BTime = currentTime;
   var MECE371TraditionalPlan2B3A4Belement = document.getElementById("MECE371TraditionalPlan2B3A4B");
  if (!MECE371TraditionalPlan2B3A4Bflag) {
      if (MECE371TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -18142,6 +20466,12 @@ $scope.MECE371TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MECE380TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE380TraditionalPlan2B3A4BTime <= 200) { 
+        MECE380TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MECE380TraditionalPlan2B3A4BTime = currentTime;
   var MECE380TraditionalPlan2B3A4Belement = document.getElementById("MECE380TraditionalPlan2B3A4B");
  if (!MECE380TraditionalPlan2B3A4Bflag) {
      if (MECE380TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -18167,6 +20497,12 @@ $scope.MECE380TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.ENGM310TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM310TraditionalPlan2B3A4BTime <= 200) { 
+        ENGM310TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+ENGM310TraditionalPlan2B3A4BTime = currentTime;
   var ENGM310TraditionalPlan2B3A4Belement = document.getElementById("ENGM310TraditionalPlan2B3A4B");
  if (!ENGM310TraditionalPlan2B3A4Bflag) {
      if (ENGM310TraditionalPlan2B3A4Belement.classList.contains("Other-highlighted")) { 
@@ -18188,6 +20524,12 @@ $scope.ENGM310TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.ENGM401TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM401TraditionalPlan2B3A4BTime <= 200) { 
+        ENGM401TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+ENGM401TraditionalPlan2B3A4BTime = currentTime;
   var ENGM401TraditionalPlan2B3A4Belement = document.getElementById("ENGM401TraditionalPlan2B3A4B");
  if (!ENGM401TraditionalPlan2B3A4Bflag) {
      if (ENGM401TraditionalPlan2B3A4Belement.classList.contains("Other-highlighted")) { 
@@ -18209,6 +20551,12 @@ $scope.ENGM401TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MECE340TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE340TraditionalPlan2B3A4BTime <= 200) { 
+        MECE340TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MECE340TraditionalPlan2B3A4BTime = currentTime;
   var MECE340TraditionalPlan2B3A4Belement = document.getElementById("MECE340TraditionalPlan2B3A4B");
  if (!MECE340TraditionalPlan2B3A4Bflag) {
      if (MECE340TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -18236,6 +20584,12 @@ $scope.MECE340TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MECE360TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE360TraditionalPlan2B3A4BTime <= 200) { 
+        MECE360TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MECE360TraditionalPlan2B3A4BTime = currentTime;
   var MECE360TraditionalPlan2B3A4Belement = document.getElementById("MECE360TraditionalPlan2B3A4B");
  if (!MECE360TraditionalPlan2B3A4Bflag) {
      if (MECE360TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -18271,6 +20625,12 @@ $scope.MECE360TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MECE362TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE362TraditionalPlan2B3A4BTime <= 200) { 
+        MECE362TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MECE362TraditionalPlan2B3A4BTime = currentTime;
   var MECE362TraditionalPlan2B3A4Belement = document.getElementById("MECE362TraditionalPlan2B3A4B");
  if (!MECE362TraditionalPlan2B3A4Bflag) {
      if (MECE362TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -18296,6 +20656,12 @@ $scope.MECE362TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MECE390TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE390TraditionalPlan2B3A4BTime <= 200) { 
+        MECE390TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MECE390TraditionalPlan2B3A4BTime = currentTime;
   var MECE390TraditionalPlan2B3A4Belement = document.getElementById("MECE390TraditionalPlan2B3A4B");
  if (!MECE390TraditionalPlan2B3A4Bflag) {
      if (MECE390TraditionalPlan2B3A4Belement.classList.contains("MATH-highlighted")) { 
@@ -18321,6 +20687,12 @@ $scope.MECE390TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.ComplementaryElectiveTraditionalPlan2B3A4B0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ComplementaryElectiveTraditionalPlan2B3A4B0Time <= 200) { 
+        ComplementaryElectiveTraditionalPlan2B3A4B0Time = currentTime;
+        return;
+    }
+ComplementaryElectiveTraditionalPlan2B3A4B0Time = currentTime;
   var ComplementaryElectiveTraditionalPlan2B3A4B0element = document.getElementById("ComplementaryElectiveTraditionalPlan2B3A4B0");
  if (!ComplementaryElectiveTraditionalPlan2B3A4B0flag) {
      if (ComplementaryElectiveTraditionalPlan2B3A4B0element.classList.contains("COMP-highlighted")) { 
@@ -18340,6 +20712,12 @@ $scope.ComplementaryElectiveTraditionalPlan2B3A4B0Listener = function () {
   }
 };
 $scope.CHE448TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE448TraditionalPlan2B3A4BTime <= 200) { 
+        CHE448TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+CHE448TraditionalPlan2B3A4BTime = currentTime;
   var CHE448TraditionalPlan2B3A4Belement = document.getElementById("CHE448TraditionalPlan2B3A4B");
  if (!CHE448TraditionalPlan2B3A4Bflag) {
      if (CHE448TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -18367,6 +20745,12 @@ $scope.CHE448TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MECE420TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE420TraditionalPlan2B3A4BTime <= 200) { 
+        MECE420TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MECE420TraditionalPlan2B3A4BTime = currentTime;
   var MECE420TraditionalPlan2B3A4Belement = document.getElementById("MECE420TraditionalPlan2B3A4B");
  if (!MECE420TraditionalPlan2B3A4Bflag) {
      if (MECE420TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -18388,6 +20772,12 @@ $scope.MECE420TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.ENGG400TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG400TraditionalPlan2B3A4BTime <= 200) { 
+        ENGG400TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+ENGG400TraditionalPlan2B3A4BTime = currentTime;
   var ENGG400TraditionalPlan2B3A4Belement = document.getElementById("ENGG400TraditionalPlan2B3A4B");
  if (!ENGG400TraditionalPlan2B3A4Bflag) {
      if (ENGG400TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -18407,6 +20797,12 @@ $scope.ENGG400TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MECE403TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE403TraditionalPlan2B3A4BTime <= 200) { 
+        MECE403TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MECE403TraditionalPlan2B3A4BTime = currentTime;
   var MECE403TraditionalPlan2B3A4Belement = document.getElementById("MECE403TraditionalPlan2B3A4B");
  if (!MECE403TraditionalPlan2B3A4Bflag) {
      if (MECE403TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -18434,6 +20830,12 @@ $scope.MECE403TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MECE451TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE451TraditionalPlan2B3A4BTime <= 200) { 
+        MECE451TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MECE451TraditionalPlan2B3A4BTime = currentTime;
   var MECE451TraditionalPlan2B3A4Belement = document.getElementById("MECE451TraditionalPlan2B3A4B");
  if (!MECE451TraditionalPlan2B3A4Bflag) {
      if (MECE451TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -18457,6 +20859,12 @@ $scope.MECE451TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MECE460TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE460TraditionalPlan2B3A4BTime <= 200) { 
+        MECE460TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MECE460TraditionalPlan2B3A4BTime = currentTime;
   var MECE460TraditionalPlan2B3A4Belement = document.getElementById("MECE460TraditionalPlan2B3A4B");
  if (!MECE460TraditionalPlan2B3A4Bflag) {
      if (MECE460TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -18494,6 +20902,12 @@ $scope.MECE460TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4B0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2B3A4B0Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2B3A4B0Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2B3A4B0Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2B3A4B0element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4B0");
  if (!ProgramTechnicalElectiveTraditionalPlan2B3A4B0flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2B3A4B0element.classList.contains("PROG-highlighted")) { 
@@ -18513,6 +20927,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4B0Listener = function () {
   }
 };
 $scope.ENGG404TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG404TraditionalPlan2B3A4BTime <= 200) { 
+        ENGG404TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+ENGG404TraditionalPlan2B3A4BTime = currentTime;
   var ENGG404TraditionalPlan2B3A4Belement = document.getElementById("ENGG404TraditionalPlan2B3A4B");
  if (!ENGG404TraditionalPlan2B3A4Bflag) {
      if (ENGG404TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -18532,6 +20952,12 @@ $scope.ENGG404TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MECE430TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE430TraditionalPlan2B3A4BTime <= 200) { 
+        MECE430TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MECE430TraditionalPlan2B3A4BTime = currentTime;
   var MECE430TraditionalPlan2B3A4Belement = document.getElementById("MECE430TraditionalPlan2B3A4B");
  if (!MECE430TraditionalPlan2B3A4Bflag) {
      if (MECE430TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -18553,6 +20979,12 @@ $scope.MECE430TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MECE480TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE480TraditionalPlan2B3A4BTime <= 200) { 
+        MECE480TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MECE480TraditionalPlan2B3A4BTime = currentTime;
   var MECE480TraditionalPlan2B3A4Belement = document.getElementById("MECE480TraditionalPlan2B3A4B");
  if (!MECE480TraditionalPlan2B3A4Bflag) {
      if (MECE480TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -18578,6 +21010,12 @@ $scope.MECE480TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.MECE463TraditionalPlan2B3A4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE463TraditionalPlan2B3A4BTime <= 200) { 
+        MECE463TraditionalPlan2B3A4BTime = currentTime;
+        return;
+    }
+MECE463TraditionalPlan2B3A4BTime = currentTime;
   var MECE463TraditionalPlan2B3A4Belement = document.getElementById("MECE463TraditionalPlan2B3A4B");
  if (!MECE463TraditionalPlan2B3A4Bflag) {
      if (MECE463TraditionalPlan2B3A4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -18603,6 +21041,12 @@ $scope.MECE463TraditionalPlan2B3A4BListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4B1Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2B3A4B1Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2B3A4B1Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2B3A4B1Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2B3A4B1element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4B1");
  if (!ProgramTechnicalElectiveTraditionalPlan2B3A4B1flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2B3A4B1element.classList.contains("PROG-highlighted")) { 
@@ -18622,6 +21066,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4B1Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4B2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2B3A4B2Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2B3A4B2Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2B3A4B2Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2B3A4B2element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4B2");
  if (!ProgramTechnicalElectiveTraditionalPlan2B3A4B2flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2B3A4B2element.classList.contains("PROG-highlighted")) { 
@@ -18641,6 +21091,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4B2Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4B3Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2B3A4B3Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2B3A4B3Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2B3A4B3Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2B3A4B3element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4B3");
  if (!ProgramTechnicalElectiveTraditionalPlan2B3A4B3flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2B3A4B3element.classList.contains("PROG-highlighted")) { 
@@ -18660,57 +21116,165 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3A4B3Listener = function () {
   }
 };
   var CHEM103TraditionalPlan2B3B4Aflag = false;
+  var CHEM103TraditionalPlan2B3B4Arflag = false;
+ var CHEM103TraditionalPlan2B3B4ATime = new Date().getTime();
   var ENGG100TraditionalPlan2B3B4Aflag = false;
+  var ENGG100TraditionalPlan2B3B4Arflag = false;
+ var ENGG100TraditionalPlan2B3B4ATime = new Date().getTime();
   var ENGG130TraditionalPlan2B3B4Aflag = false;
+  var ENGG130TraditionalPlan2B3B4Arflag = false;
+ var ENGG130TraditionalPlan2B3B4ATime = new Date().getTime();
   var ENGL199TraditionalPlan2B3B4Aflag = false;
+  var ENGL199TraditionalPlan2B3B4Arflag = false;
+ var ENGL199TraditionalPlan2B3B4ATime = new Date().getTime();
   var MATH100TraditionalPlan2B3B4Aflag = false;
+  var MATH100TraditionalPlan2B3B4Arflag = false;
+ var MATH100TraditionalPlan2B3B4ATime = new Date().getTime();
   var PHYS130TraditionalPlan2B3B4Aflag = false;
+  var PHYS130TraditionalPlan2B3B4Arflag = false;
+ var PHYS130TraditionalPlan2B3B4ATime = new Date().getTime();
   var CHEM105TraditionalPlan2B3B4Aflag = false;
+  var CHEM105TraditionalPlan2B3B4Arflag = false;
+ var CHEM105TraditionalPlan2B3B4ATime = new Date().getTime();
   var ENCMP100TraditionalPlan2B3B4Aflag = false;
+  var ENCMP100TraditionalPlan2B3B4Arflag = false;
+ var ENCMP100TraditionalPlan2B3B4ATime = new Date().getTime();
   var ENGG160TraditionalPlan2B3B4Aflag = false;
+  var ENGG160TraditionalPlan2B3B4Arflag = false;
+ var ENGG160TraditionalPlan2B3B4ATime = new Date().getTime();
   var ENPH131TraditionalPlan2B3B4Aflag = false;
+  var ENPH131TraditionalPlan2B3B4Arflag = false;
+ var ENPH131TraditionalPlan2B3B4ATime = new Date().getTime();
   var MATH101TraditionalPlan2B3B4Aflag = false;
+  var MATH101TraditionalPlan2B3B4Arflag = false;
+ var MATH101TraditionalPlan2B3B4ATime = new Date().getTime();
   var MATH102TraditionalPlan2B3B4Aflag = false;
+  var MATH102TraditionalPlan2B3B4Arflag = false;
+ var MATH102TraditionalPlan2B3B4ATime = new Date().getTime();
   var ECE209TraditionalPlan2B3B4Aflag = false;
+  var ECE209TraditionalPlan2B3B4Arflag = false;
+ var ECE209TraditionalPlan2B3B4ATime = new Date().getTime();
   var MATE202TraditionalPlan2B3B4Aflag = false;
+  var MATE202TraditionalPlan2B3B4Arflag = false;
+ var MATE202TraditionalPlan2B3B4ATime = new Date().getTime();
   var MATH201TraditionalPlan2B3B4Aflag = false;
+  var MATH201TraditionalPlan2B3B4Arflag = false;
+ var MATH201TraditionalPlan2B3B4ATime = new Date().getTime();
   var MECE230TraditionalPlan2B3B4Aflag = false;
+  var MECE230TraditionalPlan2B3B4Arflag = false;
+ var MECE230TraditionalPlan2B3B4ATime = new Date().getTime();
   var MECE260TraditionalPlan2B3B4Aflag = false;
+  var MECE260TraditionalPlan2B3B4Arflag = false;
+ var MECE260TraditionalPlan2B3B4ATime = new Date().getTime();
   var MECE265TraditionalPlan2B3B4Aflag = false;
+  var MECE265TraditionalPlan2B3B4Arflag = false;
+ var MECE265TraditionalPlan2B3B4ATime = new Date().getTime();
   var CIVE270TraditionalPlan2B3B4Aflag = false;
+  var CIVE270TraditionalPlan2B3B4Arflag = false;
+ var CIVE270TraditionalPlan2B3B4ATime = new Date().getTime();
   var MATH209TraditionalPlan2B3B4Aflag = false;
+  var MATH209TraditionalPlan2B3B4Arflag = false;
+ var MATH209TraditionalPlan2B3B4ATime = new Date().getTime();
   var STAT235TraditionalPlan2B3B4Aflag = false;
+  var STAT235TraditionalPlan2B3B4Arflag = false;
+ var STAT235TraditionalPlan2B3B4ATime = new Date().getTime();
   var CHE243TraditionalPlan2B3B4Aflag = false;
+  var CHE243TraditionalPlan2B3B4Arflag = false;
+ var CHE243TraditionalPlan2B3B4ATime = new Date().getTime();
   var MECE200TraditionalPlan2B3B4Aflag = false;
+  var MECE200TraditionalPlan2B3B4Arflag = false;
+ var MECE200TraditionalPlan2B3B4ATime = new Date().getTime();
   var MECE250TraditionalPlan2B3B4Aflag = false;
+  var MECE250TraditionalPlan2B3B4Arflag = false;
+ var MECE250TraditionalPlan2B3B4ATime = new Date().getTime();
   var ENGM310TraditionalPlan2B3B4Aflag = false;
+  var ENGM310TraditionalPlan2B3B4Arflag = false;
+ var ENGM310TraditionalPlan2B3B4ATime = new Date().getTime();
   var ENGM401TraditionalPlan2B3B4Aflag = false;
+  var ENGM401TraditionalPlan2B3B4Arflag = false;
+ var ENGM401TraditionalPlan2B3B4ATime = new Date().getTime();
   var MECE340TraditionalPlan2B3B4Aflag = false;
+  var MECE340TraditionalPlan2B3B4Arflag = false;
+ var MECE340TraditionalPlan2B3B4ATime = new Date().getTime();
   var MECE360TraditionalPlan2B3B4Aflag = false;
+  var MECE360TraditionalPlan2B3B4Arflag = false;
+ var MECE360TraditionalPlan2B3B4ATime = new Date().getTime();
   var MECE362TraditionalPlan2B3B4Aflag = false;
+  var MECE362TraditionalPlan2B3B4Arflag = false;
+ var MECE362TraditionalPlan2B3B4ATime = new Date().getTime();
   var MECE390TraditionalPlan2B3B4Aflag = false;
+  var MECE390TraditionalPlan2B3B4Arflag = false;
+ var MECE390TraditionalPlan2B3B4ATime = new Date().getTime();
   var ComplementaryElectiveTraditionalPlan2B3B4A0flag = false;
+  var ComplementaryElectiveTraditionalPlan2B3B4A0rflag = false;
+ var ComplementaryElectiveTraditionalPlan2B3B4A0Time = new Date().getTime();
   var MATH300TraditionalPlan2B3B4Aflag = false;
+  var MATH300TraditionalPlan2B3B4Arflag = false;
+ var MATH300TraditionalPlan2B3B4ATime = new Date().getTime();
   var MECE300TraditionalPlan2B3B4Aflag = false;
+  var MECE300TraditionalPlan2B3B4Arflag = false;
+ var MECE300TraditionalPlan2B3B4ATime = new Date().getTime();
   var MECE301TraditionalPlan2B3B4Aflag = false;
+  var MECE301TraditionalPlan2B3B4Arflag = false;
+ var MECE301TraditionalPlan2B3B4ATime = new Date().getTime();
   var MECE331TraditionalPlan2B3B4Aflag = false;
+  var MECE331TraditionalPlan2B3B4Arflag = false;
+ var MECE331TraditionalPlan2B3B4ATime = new Date().getTime();
   var MECE371TraditionalPlan2B3B4Aflag = false;
+  var MECE371TraditionalPlan2B3B4Arflag = false;
+ var MECE371TraditionalPlan2B3B4ATime = new Date().getTime();
   var MECE380TraditionalPlan2B3B4Aflag = false;
+  var MECE380TraditionalPlan2B3B4Arflag = false;
+ var MECE380TraditionalPlan2B3B4ATime = new Date().getTime();
   var ENGG404TraditionalPlan2B3B4Aflag = false;
+  var ENGG404TraditionalPlan2B3B4Arflag = false;
+ var ENGG404TraditionalPlan2B3B4ATime = new Date().getTime();
   var MECE430TraditionalPlan2B3B4Aflag = false;
+  var MECE430TraditionalPlan2B3B4Arflag = false;
+ var MECE430TraditionalPlan2B3B4ATime = new Date().getTime();
   var MECE480TraditionalPlan2B3B4Aflag = false;
+  var MECE480TraditionalPlan2B3B4Arflag = false;
+ var MECE480TraditionalPlan2B3B4ATime = new Date().getTime();
   var MECE463TraditionalPlan2B3B4Aflag = false;
+  var MECE463TraditionalPlan2B3B4Arflag = false;
+ var MECE463TraditionalPlan2B3B4ATime = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2B3B4A0flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2B3B4A0rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2B3B4A0Time = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2B3B4A1flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2B3B4A1rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2B3B4A1Time = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2B3B4A2flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2B3B4A2rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2B3B4A2Time = new Date().getTime();
   var CHE448TraditionalPlan2B3B4Aflag = false;
+  var CHE448TraditionalPlan2B3B4Arflag = false;
+ var CHE448TraditionalPlan2B3B4ATime = new Date().getTime();
   var MECE420TraditionalPlan2B3B4Aflag = false;
+  var MECE420TraditionalPlan2B3B4Arflag = false;
+ var MECE420TraditionalPlan2B3B4ATime = new Date().getTime();
   var ENGG400TraditionalPlan2B3B4Aflag = false;
+  var ENGG400TraditionalPlan2B3B4Arflag = false;
+ var ENGG400TraditionalPlan2B3B4ATime = new Date().getTime();
   var MECE403TraditionalPlan2B3B4Aflag = false;
+  var MECE403TraditionalPlan2B3B4Arflag = false;
+ var MECE403TraditionalPlan2B3B4ATime = new Date().getTime();
   var MECE451TraditionalPlan2B3B4Aflag = false;
+  var MECE451TraditionalPlan2B3B4Arflag = false;
+ var MECE451TraditionalPlan2B3B4ATime = new Date().getTime();
   var MECE460TraditionalPlan2B3B4Aflag = false;
+  var MECE460TraditionalPlan2B3B4Arflag = false;
+ var MECE460TraditionalPlan2B3B4ATime = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2B3B4A3flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2B3B4A3rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2B3B4A3Time = new Date().getTime();
 $scope.CHEM103TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM103TraditionalPlan2B3B4ATime <= 200) { 
+        CHEM103TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+CHEM103TraditionalPlan2B3B4ATime = currentTime;
   var CHEM103TraditionalPlan2B3B4Aelement = document.getElementById("CHEM103TraditionalPlan2B3B4A");
  if (!CHEM103TraditionalPlan2B3B4Aflag) {
      if (CHEM103TraditionalPlan2B3B4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -18732,6 +21296,12 @@ $scope.CHEM103TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.ENGG100TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG100TraditionalPlan2B3B4ATime <= 200) { 
+        ENGG100TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+ENGG100TraditionalPlan2B3B4ATime = currentTime;
   var ENGG100TraditionalPlan2B3B4Aelement = document.getElementById("ENGG100TraditionalPlan2B3B4A");
  if (!ENGG100TraditionalPlan2B3B4Aflag) {
      if (ENGG100TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -18751,6 +21321,12 @@ $scope.ENGG100TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.ENGG130TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG130TraditionalPlan2B3B4ATime <= 200) { 
+        ENGG130TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+ENGG130TraditionalPlan2B3B4ATime = currentTime;
   var ENGG130TraditionalPlan2B3B4Aelement = document.getElementById("ENGG130TraditionalPlan2B3B4A");
  if (!ENGG130TraditionalPlan2B3B4Aflag) {
      if (ENGG130TraditionalPlan2B3B4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -18778,6 +21354,12 @@ $scope.ENGG130TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.ENGL199TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGL199TraditionalPlan2B3B4ATime <= 200) { 
+        ENGL199TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+ENGL199TraditionalPlan2B3B4ATime = currentTime;
   var ENGL199TraditionalPlan2B3B4Aelement = document.getElementById("ENGL199TraditionalPlan2B3B4A");
  if (!ENGL199TraditionalPlan2B3B4Aflag) {
      if (ENGL199TraditionalPlan2B3B4Aelement.classList.contains("Other-highlighted")) { 
@@ -18799,6 +21381,12 @@ $scope.ENGL199TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MATH100TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH100TraditionalPlan2B3B4ATime <= 200) { 
+        MATH100TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MATH100TraditionalPlan2B3B4ATime = currentTime;
   var MATH100TraditionalPlan2B3B4Aelement = document.getElementById("MATH100TraditionalPlan2B3B4A");
  if (!MATH100TraditionalPlan2B3B4Aflag) {
      if (MATH100TraditionalPlan2B3B4Aelement.classList.contains("MATH-highlighted")) { 
@@ -18830,6 +21418,12 @@ $scope.MATH100TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.PHYS130TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - PHYS130TraditionalPlan2B3B4ATime <= 200) { 
+        PHYS130TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+PHYS130TraditionalPlan2B3B4ATime = currentTime;
   var PHYS130TraditionalPlan2B3B4Aelement = document.getElementById("PHYS130TraditionalPlan2B3B4A");
  if (!PHYS130TraditionalPlan2B3B4Aflag) {
      if (PHYS130TraditionalPlan2B3B4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -18851,6 +21445,12 @@ $scope.PHYS130TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.CHEM105TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM105TraditionalPlan2B3B4ATime <= 200) { 
+        CHEM105TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+CHEM105TraditionalPlan2B3B4ATime = currentTime;
   var CHEM105TraditionalPlan2B3B4Aelement = document.getElementById("CHEM105TraditionalPlan2B3B4A");
  if (!CHEM105TraditionalPlan2B3B4Aflag) {
      if (CHEM105TraditionalPlan2B3B4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -18874,6 +21474,12 @@ $scope.CHEM105TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.ENCMP100TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENCMP100TraditionalPlan2B3B4ATime <= 200) { 
+        ENCMP100TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+ENCMP100TraditionalPlan2B3B4ATime = currentTime;
   var ENCMP100TraditionalPlan2B3B4Aelement = document.getElementById("ENCMP100TraditionalPlan2B3B4A");
  if (!ENCMP100TraditionalPlan2B3B4Aflag) {
      if (ENCMP100TraditionalPlan2B3B4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -18893,6 +21499,12 @@ $scope.ENCMP100TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.ENGG160TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG160TraditionalPlan2B3B4ATime <= 200) { 
+        ENGG160TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+ENGG160TraditionalPlan2B3B4ATime = currentTime;
   var ENGG160TraditionalPlan2B3B4Aelement = document.getElementById("ENGG160TraditionalPlan2B3B4A");
  if (!ENGG160TraditionalPlan2B3B4Aflag) {
      if (ENGG160TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -18916,6 +21528,12 @@ $scope.ENGG160TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.ENPH131TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENPH131TraditionalPlan2B3B4ATime <= 200) { 
+        ENPH131TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+ENPH131TraditionalPlan2B3B4ATime = currentTime;
   var ENPH131TraditionalPlan2B3B4Aelement = document.getElementById("ENPH131TraditionalPlan2B3B4A");
  if (!ENPH131TraditionalPlan2B3B4Aflag) {
      if (ENPH131TraditionalPlan2B3B4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -18945,6 +21563,12 @@ $scope.ENPH131TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MATH101TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH101TraditionalPlan2B3B4ATime <= 200) { 
+        MATH101TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MATH101TraditionalPlan2B3B4ATime = currentTime;
   var MATH101TraditionalPlan2B3B4Aelement = document.getElementById("MATH101TraditionalPlan2B3B4A");
  if (!MATH101TraditionalPlan2B3B4Aflag) {
      if (MATH101TraditionalPlan2B3B4Aelement.classList.contains("MATH-highlighted")) { 
@@ -18980,6 +21604,12 @@ $scope.MATH101TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MATH102TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH102TraditionalPlan2B3B4ATime <= 200) { 
+        MATH102TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MATH102TraditionalPlan2B3B4ATime = currentTime;
   var MATH102TraditionalPlan2B3B4Aelement = document.getElementById("MATH102TraditionalPlan2B3B4A");
  if (!MATH102TraditionalPlan2B3B4Aflag) {
      if (MATH102TraditionalPlan2B3B4Aelement.classList.contains("MATH-highlighted")) { 
@@ -19005,6 +21635,12 @@ $scope.MATH102TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.ECE209TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ECE209TraditionalPlan2B3B4ATime <= 200) { 
+        ECE209TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+ECE209TraditionalPlan2B3B4ATime = currentTime;
   var ECE209TraditionalPlan2B3B4Aelement = document.getElementById("ECE209TraditionalPlan2B3B4A");
  if (!ECE209TraditionalPlan2B3B4Aflag) {
      if (ECE209TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -19026,6 +21662,12 @@ $scope.ECE209TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MATE202TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATE202TraditionalPlan2B3B4ATime <= 200) { 
+        MATE202TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MATE202TraditionalPlan2B3B4ATime = currentTime;
   var MATE202TraditionalPlan2B3B4Aelement = document.getElementById("MATE202TraditionalPlan2B3B4A");
  if (!MATE202TraditionalPlan2B3B4Aflag) {
      if (MATE202TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -19049,6 +21691,12 @@ $scope.MATE202TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MATH201TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH201TraditionalPlan2B3B4ATime <= 200) { 
+        MATH201TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MATH201TraditionalPlan2B3B4ATime = currentTime;
   var MATH201TraditionalPlan2B3B4Aelement = document.getElementById("MATH201TraditionalPlan2B3B4A");
  if (!MATH201TraditionalPlan2B3B4Aflag) {
      if (MATH201TraditionalPlan2B3B4Aelement.classList.contains("MATH-highlighted")) { 
@@ -19076,6 +21724,12 @@ $scope.MATH201TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MECE230TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE230TraditionalPlan2B3B4ATime <= 200) { 
+        MECE230TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MECE230TraditionalPlan2B3B4ATime = currentTime;
   var MECE230TraditionalPlan2B3B4Aelement = document.getElementById("MECE230TraditionalPlan2B3B4A");
  if (!MECE230TraditionalPlan2B3B4Aflag) {
      if (MECE230TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -19103,6 +21757,12 @@ $scope.MECE230TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MECE260TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE260TraditionalPlan2B3B4ATime <= 200) { 
+        MECE260TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MECE260TraditionalPlan2B3B4ATime = currentTime;
   var MECE260TraditionalPlan2B3B4Aelement = document.getElementById("MECE260TraditionalPlan2B3B4A");
  if (!MECE260TraditionalPlan2B3B4Aflag) {
      if (MECE260TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -19130,6 +21790,12 @@ $scope.MECE260TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MECE265TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE265TraditionalPlan2B3B4ATime <= 200) { 
+        MECE265TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MECE265TraditionalPlan2B3B4ATime = currentTime;
   var MECE265TraditionalPlan2B3B4Aelement = document.getElementById("MECE265TraditionalPlan2B3B4A");
  if (!MECE265TraditionalPlan2B3B4Aflag) {
      if (MECE265TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -19153,6 +21819,12 @@ $scope.MECE265TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.CIVE270TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CIVE270TraditionalPlan2B3B4ATime <= 200) { 
+        CIVE270TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+CIVE270TraditionalPlan2B3B4ATime = currentTime;
   var CIVE270TraditionalPlan2B3B4Aelement = document.getElementById("CIVE270TraditionalPlan2B3B4A");
  if (!CIVE270TraditionalPlan2B3B4Aflag) {
      if (CIVE270TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -19184,6 +21856,12 @@ $scope.CIVE270TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MATH209TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH209TraditionalPlan2B3B4ATime <= 200) { 
+        MATH209TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MATH209TraditionalPlan2B3B4ATime = currentTime;
   var MATH209TraditionalPlan2B3B4Aelement = document.getElementById("MATH209TraditionalPlan2B3B4A");
  if (!MATH209TraditionalPlan2B3B4Aflag) {
      if (MATH209TraditionalPlan2B3B4Aelement.classList.contains("MATH-highlighted")) { 
@@ -19215,6 +21893,12 @@ $scope.MATH209TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.STAT235TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - STAT235TraditionalPlan2B3B4ATime <= 200) { 
+        STAT235TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+STAT235TraditionalPlan2B3B4ATime = currentTime;
   var STAT235TraditionalPlan2B3B4Aelement = document.getElementById("STAT235TraditionalPlan2B3B4A");
  if (!STAT235TraditionalPlan2B3B4Aflag) {
      if (STAT235TraditionalPlan2B3B4Aelement.classList.contains("MATH-highlighted")) { 
@@ -19240,6 +21924,12 @@ $scope.STAT235TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.CHE243TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE243TraditionalPlan2B3B4ATime <= 200) { 
+        CHE243TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+CHE243TraditionalPlan2B3B4ATime = currentTime;
   var CHE243TraditionalPlan2B3B4Aelement = document.getElementById("CHE243TraditionalPlan2B3B4A");
  if (!CHE243TraditionalPlan2B3B4Aflag) {
      if (CHE243TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -19267,6 +21957,12 @@ $scope.CHE243TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MECE200TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE200TraditionalPlan2B3B4ATime <= 200) { 
+        MECE200TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MECE200TraditionalPlan2B3B4ATime = currentTime;
   var MECE200TraditionalPlan2B3B4Aelement = document.getElementById("MECE200TraditionalPlan2B3B4A");
  if (!MECE200TraditionalPlan2B3B4Aflag) {
      if (MECE200TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -19288,6 +21984,12 @@ $scope.MECE200TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MECE250TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE250TraditionalPlan2B3B4ATime <= 200) { 
+        MECE250TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MECE250TraditionalPlan2B3B4ATime = currentTime;
   var MECE250TraditionalPlan2B3B4Aelement = document.getElementById("MECE250TraditionalPlan2B3B4A");
  if (!MECE250TraditionalPlan2B3B4Aflag) {
      if (MECE250TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -19319,6 +22021,12 @@ $scope.MECE250TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.ENGM310TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM310TraditionalPlan2B3B4ATime <= 200) { 
+        ENGM310TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+ENGM310TraditionalPlan2B3B4ATime = currentTime;
   var ENGM310TraditionalPlan2B3B4Aelement = document.getElementById("ENGM310TraditionalPlan2B3B4A");
  if (!ENGM310TraditionalPlan2B3B4Aflag) {
      if (ENGM310TraditionalPlan2B3B4Aelement.classList.contains("Other-highlighted")) { 
@@ -19340,6 +22048,12 @@ $scope.ENGM310TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.ENGM401TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM401TraditionalPlan2B3B4ATime <= 200) { 
+        ENGM401TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+ENGM401TraditionalPlan2B3B4ATime = currentTime;
   var ENGM401TraditionalPlan2B3B4Aelement = document.getElementById("ENGM401TraditionalPlan2B3B4A");
  if (!ENGM401TraditionalPlan2B3B4Aflag) {
      if (ENGM401TraditionalPlan2B3B4Aelement.classList.contains("Other-highlighted")) { 
@@ -19361,6 +22075,12 @@ $scope.ENGM401TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MECE340TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE340TraditionalPlan2B3B4ATime <= 200) { 
+        MECE340TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MECE340TraditionalPlan2B3B4ATime = currentTime;
   var MECE340TraditionalPlan2B3B4Aelement = document.getElementById("MECE340TraditionalPlan2B3B4A");
  if (!MECE340TraditionalPlan2B3B4Aflag) {
      if (MECE340TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -19388,6 +22108,12 @@ $scope.MECE340TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MECE360TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE360TraditionalPlan2B3B4ATime <= 200) { 
+        MECE360TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MECE360TraditionalPlan2B3B4ATime = currentTime;
   var MECE360TraditionalPlan2B3B4Aelement = document.getElementById("MECE360TraditionalPlan2B3B4A");
  if (!MECE360TraditionalPlan2B3B4Aflag) {
      if (MECE360TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -19423,6 +22149,12 @@ $scope.MECE360TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MECE362TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE362TraditionalPlan2B3B4ATime <= 200) { 
+        MECE362TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MECE362TraditionalPlan2B3B4ATime = currentTime;
   var MECE362TraditionalPlan2B3B4Aelement = document.getElementById("MECE362TraditionalPlan2B3B4A");
  if (!MECE362TraditionalPlan2B3B4Aflag) {
      if (MECE362TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -19448,6 +22180,12 @@ $scope.MECE362TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MECE390TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE390TraditionalPlan2B3B4ATime <= 200) { 
+        MECE390TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MECE390TraditionalPlan2B3B4ATime = currentTime;
   var MECE390TraditionalPlan2B3B4Aelement = document.getElementById("MECE390TraditionalPlan2B3B4A");
  if (!MECE390TraditionalPlan2B3B4Aflag) {
      if (MECE390TraditionalPlan2B3B4Aelement.classList.contains("MATH-highlighted")) { 
@@ -19473,6 +22211,12 @@ $scope.MECE390TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.ComplementaryElectiveTraditionalPlan2B3B4A0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ComplementaryElectiveTraditionalPlan2B3B4A0Time <= 200) { 
+        ComplementaryElectiveTraditionalPlan2B3B4A0Time = currentTime;
+        return;
+    }
+ComplementaryElectiveTraditionalPlan2B3B4A0Time = currentTime;
   var ComplementaryElectiveTraditionalPlan2B3B4A0element = document.getElementById("ComplementaryElectiveTraditionalPlan2B3B4A0");
  if (!ComplementaryElectiveTraditionalPlan2B3B4A0flag) {
      if (ComplementaryElectiveTraditionalPlan2B3B4A0element.classList.contains("COMP-highlighted")) { 
@@ -19492,6 +22236,12 @@ $scope.ComplementaryElectiveTraditionalPlan2B3B4A0Listener = function () {
   }
 };
 $scope.MATH300TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH300TraditionalPlan2B3B4ATime <= 200) { 
+        MATH300TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MATH300TraditionalPlan2B3B4ATime = currentTime;
   var MATH300TraditionalPlan2B3B4Aelement = document.getElementById("MATH300TraditionalPlan2B3B4A");
  if (!MATH300TraditionalPlan2B3B4Aflag) {
      if (MATH300TraditionalPlan2B3B4Aelement.classList.contains("MATH-highlighted")) { 
@@ -19521,6 +22271,12 @@ $scope.MATH300TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MECE300TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE300TraditionalPlan2B3B4ATime <= 200) { 
+        MECE300TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MECE300TraditionalPlan2B3B4ATime = currentTime;
   var MECE300TraditionalPlan2B3B4Aelement = document.getElementById("MECE300TraditionalPlan2B3B4A");
  if (!MECE300TraditionalPlan2B3B4Aflag) {
      if (MECE300TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -19552,6 +22308,12 @@ $scope.MECE300TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MECE301TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE301TraditionalPlan2B3B4ATime <= 200) { 
+        MECE301TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MECE301TraditionalPlan2B3B4ATime = currentTime;
   var MECE301TraditionalPlan2B3B4Aelement = document.getElementById("MECE301TraditionalPlan2B3B4A");
  if (!MECE301TraditionalPlan2B3B4Aflag) {
      if (MECE301TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -19575,6 +22337,12 @@ $scope.MECE301TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MECE331TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE331TraditionalPlan2B3B4ATime <= 200) { 
+        MECE331TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MECE331TraditionalPlan2B3B4ATime = currentTime;
   var MECE331TraditionalPlan2B3B4Aelement = document.getElementById("MECE331TraditionalPlan2B3B4A");
  if (!MECE331TraditionalPlan2B3B4Aflag) {
      if (MECE331TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -19614,6 +22382,12 @@ $scope.MECE331TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MECE371TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE371TraditionalPlan2B3B4ATime <= 200) { 
+        MECE371TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MECE371TraditionalPlan2B3B4ATime = currentTime;
   var MECE371TraditionalPlan2B3B4Aelement = document.getElementById("MECE371TraditionalPlan2B3B4A");
  if (!MECE371TraditionalPlan2B3B4Aflag) {
      if (MECE371TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -19647,6 +22421,12 @@ $scope.MECE371TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MECE380TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE380TraditionalPlan2B3B4ATime <= 200) { 
+        MECE380TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MECE380TraditionalPlan2B3B4ATime = currentTime;
   var MECE380TraditionalPlan2B3B4Aelement = document.getElementById("MECE380TraditionalPlan2B3B4A");
  if (!MECE380TraditionalPlan2B3B4Aflag) {
      if (MECE380TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -19672,6 +22452,12 @@ $scope.MECE380TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.ENGG404TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG404TraditionalPlan2B3B4ATime <= 200) { 
+        ENGG404TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+ENGG404TraditionalPlan2B3B4ATime = currentTime;
   var ENGG404TraditionalPlan2B3B4Aelement = document.getElementById("ENGG404TraditionalPlan2B3B4A");
  if (!ENGG404TraditionalPlan2B3B4Aflag) {
      if (ENGG404TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -19691,6 +22477,12 @@ $scope.ENGG404TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MECE430TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE430TraditionalPlan2B3B4ATime <= 200) { 
+        MECE430TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MECE430TraditionalPlan2B3B4ATime = currentTime;
   var MECE430TraditionalPlan2B3B4Aelement = document.getElementById("MECE430TraditionalPlan2B3B4A");
  if (!MECE430TraditionalPlan2B3B4Aflag) {
      if (MECE430TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -19712,6 +22504,12 @@ $scope.MECE430TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MECE480TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE480TraditionalPlan2B3B4ATime <= 200) { 
+        MECE480TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MECE480TraditionalPlan2B3B4ATime = currentTime;
   var MECE480TraditionalPlan2B3B4Aelement = document.getElementById("MECE480TraditionalPlan2B3B4A");
  if (!MECE480TraditionalPlan2B3B4Aflag) {
      if (MECE480TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -19737,6 +22535,12 @@ $scope.MECE480TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MECE463TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE463TraditionalPlan2B3B4ATime <= 200) { 
+        MECE463TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MECE463TraditionalPlan2B3B4ATime = currentTime;
   var MECE463TraditionalPlan2B3B4Aelement = document.getElementById("MECE463TraditionalPlan2B3B4A");
  if (!MECE463TraditionalPlan2B3B4Aflag) {
      if (MECE463TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -19762,6 +22566,12 @@ $scope.MECE463TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4A0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2B3B4A0Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2B3B4A0Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2B3B4A0Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2B3B4A0element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4A0");
  if (!ProgramTechnicalElectiveTraditionalPlan2B3B4A0flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2B3B4A0element.classList.contains("PROG-highlighted")) { 
@@ -19781,6 +22591,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4A0Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4A1Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2B3B4A1Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2B3B4A1Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2B3B4A1Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2B3B4A1element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4A1");
  if (!ProgramTechnicalElectiveTraditionalPlan2B3B4A1flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2B3B4A1element.classList.contains("PROG-highlighted")) { 
@@ -19800,6 +22616,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4A1Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4A2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2B3B4A2Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2B3B4A2Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2B3B4A2Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2B3B4A2element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4A2");
  if (!ProgramTechnicalElectiveTraditionalPlan2B3B4A2flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2B3B4A2element.classList.contains("PROG-highlighted")) { 
@@ -19819,6 +22641,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4A2Listener = function () {
   }
 };
 $scope.CHE448TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE448TraditionalPlan2B3B4ATime <= 200) { 
+        CHE448TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+CHE448TraditionalPlan2B3B4ATime = currentTime;
   var CHE448TraditionalPlan2B3B4Aelement = document.getElementById("CHE448TraditionalPlan2B3B4A");
  if (!CHE448TraditionalPlan2B3B4Aflag) {
      if (CHE448TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -19846,6 +22674,12 @@ $scope.CHE448TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MECE420TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE420TraditionalPlan2B3B4ATime <= 200) { 
+        MECE420TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MECE420TraditionalPlan2B3B4ATime = currentTime;
   var MECE420TraditionalPlan2B3B4Aelement = document.getElementById("MECE420TraditionalPlan2B3B4A");
  if (!MECE420TraditionalPlan2B3B4Aflag) {
      if (MECE420TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -19867,6 +22701,12 @@ $scope.MECE420TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.ENGG400TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG400TraditionalPlan2B3B4ATime <= 200) { 
+        ENGG400TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+ENGG400TraditionalPlan2B3B4ATime = currentTime;
   var ENGG400TraditionalPlan2B3B4Aelement = document.getElementById("ENGG400TraditionalPlan2B3B4A");
  if (!ENGG400TraditionalPlan2B3B4Aflag) {
      if (ENGG400TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -19886,6 +22726,12 @@ $scope.ENGG400TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MECE403TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE403TraditionalPlan2B3B4ATime <= 200) { 
+        MECE403TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MECE403TraditionalPlan2B3B4ATime = currentTime;
   var MECE403TraditionalPlan2B3B4Aelement = document.getElementById("MECE403TraditionalPlan2B3B4A");
  if (!MECE403TraditionalPlan2B3B4Aflag) {
      if (MECE403TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -19913,6 +22759,12 @@ $scope.MECE403TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MECE451TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE451TraditionalPlan2B3B4ATime <= 200) { 
+        MECE451TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MECE451TraditionalPlan2B3B4ATime = currentTime;
   var MECE451TraditionalPlan2B3B4Aelement = document.getElementById("MECE451TraditionalPlan2B3B4A");
  if (!MECE451TraditionalPlan2B3B4Aflag) {
      if (MECE451TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -19936,6 +22788,12 @@ $scope.MECE451TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.MECE460TraditionalPlan2B3B4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE460TraditionalPlan2B3B4ATime <= 200) { 
+        MECE460TraditionalPlan2B3B4ATime = currentTime;
+        return;
+    }
+MECE460TraditionalPlan2B3B4ATime = currentTime;
   var MECE460TraditionalPlan2B3B4Aelement = document.getElementById("MECE460TraditionalPlan2B3B4A");
  if (!MECE460TraditionalPlan2B3B4Aflag) {
      if (MECE460TraditionalPlan2B3B4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -19973,6 +22831,12 @@ $scope.MECE460TraditionalPlan2B3B4AListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4A3Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2B3B4A3Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2B3B4A3Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2B3B4A3Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2B3B4A3element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4A3");
  if (!ProgramTechnicalElectiveTraditionalPlan2B3B4A3flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2B3B4A3element.classList.contains("PROG-highlighted")) { 
@@ -19992,57 +22856,165 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4A3Listener = function () {
   }
 };
   var CHEM103TraditionalPlan2B3B4Bflag = false;
+  var CHEM103TraditionalPlan2B3B4Brflag = false;
+ var CHEM103TraditionalPlan2B3B4BTime = new Date().getTime();
   var ENGG100TraditionalPlan2B3B4Bflag = false;
+  var ENGG100TraditionalPlan2B3B4Brflag = false;
+ var ENGG100TraditionalPlan2B3B4BTime = new Date().getTime();
   var ENGG130TraditionalPlan2B3B4Bflag = false;
+  var ENGG130TraditionalPlan2B3B4Brflag = false;
+ var ENGG130TraditionalPlan2B3B4BTime = new Date().getTime();
   var ENGL199TraditionalPlan2B3B4Bflag = false;
+  var ENGL199TraditionalPlan2B3B4Brflag = false;
+ var ENGL199TraditionalPlan2B3B4BTime = new Date().getTime();
   var MATH100TraditionalPlan2B3B4Bflag = false;
+  var MATH100TraditionalPlan2B3B4Brflag = false;
+ var MATH100TraditionalPlan2B3B4BTime = new Date().getTime();
   var PHYS130TraditionalPlan2B3B4Bflag = false;
+  var PHYS130TraditionalPlan2B3B4Brflag = false;
+ var PHYS130TraditionalPlan2B3B4BTime = new Date().getTime();
   var CHEM105TraditionalPlan2B3B4Bflag = false;
+  var CHEM105TraditionalPlan2B3B4Brflag = false;
+ var CHEM105TraditionalPlan2B3B4BTime = new Date().getTime();
   var ENCMP100TraditionalPlan2B3B4Bflag = false;
+  var ENCMP100TraditionalPlan2B3B4Brflag = false;
+ var ENCMP100TraditionalPlan2B3B4BTime = new Date().getTime();
   var ENGG160TraditionalPlan2B3B4Bflag = false;
+  var ENGG160TraditionalPlan2B3B4Brflag = false;
+ var ENGG160TraditionalPlan2B3B4BTime = new Date().getTime();
   var ENPH131TraditionalPlan2B3B4Bflag = false;
+  var ENPH131TraditionalPlan2B3B4Brflag = false;
+ var ENPH131TraditionalPlan2B3B4BTime = new Date().getTime();
   var MATH101TraditionalPlan2B3B4Bflag = false;
+  var MATH101TraditionalPlan2B3B4Brflag = false;
+ var MATH101TraditionalPlan2B3B4BTime = new Date().getTime();
   var MATH102TraditionalPlan2B3B4Bflag = false;
+  var MATH102TraditionalPlan2B3B4Brflag = false;
+ var MATH102TraditionalPlan2B3B4BTime = new Date().getTime();
   var ECE209TraditionalPlan2B3B4Bflag = false;
+  var ECE209TraditionalPlan2B3B4Brflag = false;
+ var ECE209TraditionalPlan2B3B4BTime = new Date().getTime();
   var MATE202TraditionalPlan2B3B4Bflag = false;
+  var MATE202TraditionalPlan2B3B4Brflag = false;
+ var MATE202TraditionalPlan2B3B4BTime = new Date().getTime();
   var MATH201TraditionalPlan2B3B4Bflag = false;
+  var MATH201TraditionalPlan2B3B4Brflag = false;
+ var MATH201TraditionalPlan2B3B4BTime = new Date().getTime();
   var MECE230TraditionalPlan2B3B4Bflag = false;
+  var MECE230TraditionalPlan2B3B4Brflag = false;
+ var MECE230TraditionalPlan2B3B4BTime = new Date().getTime();
   var MECE260TraditionalPlan2B3B4Bflag = false;
+  var MECE260TraditionalPlan2B3B4Brflag = false;
+ var MECE260TraditionalPlan2B3B4BTime = new Date().getTime();
   var MECE265TraditionalPlan2B3B4Bflag = false;
+  var MECE265TraditionalPlan2B3B4Brflag = false;
+ var MECE265TraditionalPlan2B3B4BTime = new Date().getTime();
   var CIVE270TraditionalPlan2B3B4Bflag = false;
+  var CIVE270TraditionalPlan2B3B4Brflag = false;
+ var CIVE270TraditionalPlan2B3B4BTime = new Date().getTime();
   var MATH209TraditionalPlan2B3B4Bflag = false;
+  var MATH209TraditionalPlan2B3B4Brflag = false;
+ var MATH209TraditionalPlan2B3B4BTime = new Date().getTime();
   var STAT235TraditionalPlan2B3B4Bflag = false;
+  var STAT235TraditionalPlan2B3B4Brflag = false;
+ var STAT235TraditionalPlan2B3B4BTime = new Date().getTime();
   var CHE243TraditionalPlan2B3B4Bflag = false;
+  var CHE243TraditionalPlan2B3B4Brflag = false;
+ var CHE243TraditionalPlan2B3B4BTime = new Date().getTime();
   var MECE200TraditionalPlan2B3B4Bflag = false;
+  var MECE200TraditionalPlan2B3B4Brflag = false;
+ var MECE200TraditionalPlan2B3B4BTime = new Date().getTime();
   var MECE250TraditionalPlan2B3B4Bflag = false;
+  var MECE250TraditionalPlan2B3B4Brflag = false;
+ var MECE250TraditionalPlan2B3B4BTime = new Date().getTime();
   var ENGM310TraditionalPlan2B3B4Bflag = false;
+  var ENGM310TraditionalPlan2B3B4Brflag = false;
+ var ENGM310TraditionalPlan2B3B4BTime = new Date().getTime();
   var ENGM401TraditionalPlan2B3B4Bflag = false;
+  var ENGM401TraditionalPlan2B3B4Brflag = false;
+ var ENGM401TraditionalPlan2B3B4BTime = new Date().getTime();
   var MECE340TraditionalPlan2B3B4Bflag = false;
+  var MECE340TraditionalPlan2B3B4Brflag = false;
+ var MECE340TraditionalPlan2B3B4BTime = new Date().getTime();
   var MECE360TraditionalPlan2B3B4Bflag = false;
+  var MECE360TraditionalPlan2B3B4Brflag = false;
+ var MECE360TraditionalPlan2B3B4BTime = new Date().getTime();
   var MECE362TraditionalPlan2B3B4Bflag = false;
+  var MECE362TraditionalPlan2B3B4Brflag = false;
+ var MECE362TraditionalPlan2B3B4BTime = new Date().getTime();
   var MECE390TraditionalPlan2B3B4Bflag = false;
+  var MECE390TraditionalPlan2B3B4Brflag = false;
+ var MECE390TraditionalPlan2B3B4BTime = new Date().getTime();
   var ComplementaryElectiveTraditionalPlan2B3B4B0flag = false;
+  var ComplementaryElectiveTraditionalPlan2B3B4B0rflag = false;
+ var ComplementaryElectiveTraditionalPlan2B3B4B0Time = new Date().getTime();
   var MATH300TraditionalPlan2B3B4Bflag = false;
+  var MATH300TraditionalPlan2B3B4Brflag = false;
+ var MATH300TraditionalPlan2B3B4BTime = new Date().getTime();
   var MECE300TraditionalPlan2B3B4Bflag = false;
+  var MECE300TraditionalPlan2B3B4Brflag = false;
+ var MECE300TraditionalPlan2B3B4BTime = new Date().getTime();
   var MECE301TraditionalPlan2B3B4Bflag = false;
+  var MECE301TraditionalPlan2B3B4Brflag = false;
+ var MECE301TraditionalPlan2B3B4BTime = new Date().getTime();
   var MECE331TraditionalPlan2B3B4Bflag = false;
+  var MECE331TraditionalPlan2B3B4Brflag = false;
+ var MECE331TraditionalPlan2B3B4BTime = new Date().getTime();
   var MECE371TraditionalPlan2B3B4Bflag = false;
+  var MECE371TraditionalPlan2B3B4Brflag = false;
+ var MECE371TraditionalPlan2B3B4BTime = new Date().getTime();
   var MECE380TraditionalPlan2B3B4Bflag = false;
+  var MECE380TraditionalPlan2B3B4Brflag = false;
+ var MECE380TraditionalPlan2B3B4BTime = new Date().getTime();
   var CHE448TraditionalPlan2B3B4Bflag = false;
+  var CHE448TraditionalPlan2B3B4Brflag = false;
+ var CHE448TraditionalPlan2B3B4BTime = new Date().getTime();
   var MECE420TraditionalPlan2B3B4Bflag = false;
+  var MECE420TraditionalPlan2B3B4Brflag = false;
+ var MECE420TraditionalPlan2B3B4BTime = new Date().getTime();
   var ENGG400TraditionalPlan2B3B4Bflag = false;
+  var ENGG400TraditionalPlan2B3B4Brflag = false;
+ var ENGG400TraditionalPlan2B3B4BTime = new Date().getTime();
   var MECE403TraditionalPlan2B3B4Bflag = false;
+  var MECE403TraditionalPlan2B3B4Brflag = false;
+ var MECE403TraditionalPlan2B3B4BTime = new Date().getTime();
   var MECE451TraditionalPlan2B3B4Bflag = false;
+  var MECE451TraditionalPlan2B3B4Brflag = false;
+ var MECE451TraditionalPlan2B3B4BTime = new Date().getTime();
   var MECE460TraditionalPlan2B3B4Bflag = false;
+  var MECE460TraditionalPlan2B3B4Brflag = false;
+ var MECE460TraditionalPlan2B3B4BTime = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2B3B4B0flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2B3B4B0rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2B3B4B0Time = new Date().getTime();
   var ENGG404TraditionalPlan2B3B4Bflag = false;
+  var ENGG404TraditionalPlan2B3B4Brflag = false;
+ var ENGG404TraditionalPlan2B3B4BTime = new Date().getTime();
   var MECE430TraditionalPlan2B3B4Bflag = false;
+  var MECE430TraditionalPlan2B3B4Brflag = false;
+ var MECE430TraditionalPlan2B3B4BTime = new Date().getTime();
   var MECE480TraditionalPlan2B3B4Bflag = false;
+  var MECE480TraditionalPlan2B3B4Brflag = false;
+ var MECE480TraditionalPlan2B3B4BTime = new Date().getTime();
   var MECE463TraditionalPlan2B3B4Bflag = false;
+  var MECE463TraditionalPlan2B3B4Brflag = false;
+ var MECE463TraditionalPlan2B3B4BTime = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2B3B4B1flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2B3B4B1rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2B3B4B1Time = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2B3B4B2flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2B3B4B2rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2B3B4B2Time = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2B3B4B3flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2B3B4B3rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2B3B4B3Time = new Date().getTime();
 $scope.CHEM103TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM103TraditionalPlan2B3B4BTime <= 200) { 
+        CHEM103TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+CHEM103TraditionalPlan2B3B4BTime = currentTime;
   var CHEM103TraditionalPlan2B3B4Belement = document.getElementById("CHEM103TraditionalPlan2B3B4B");
  if (!CHEM103TraditionalPlan2B3B4Bflag) {
      if (CHEM103TraditionalPlan2B3B4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -20064,6 +23036,12 @@ $scope.CHEM103TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.ENGG100TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG100TraditionalPlan2B3B4BTime <= 200) { 
+        ENGG100TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+ENGG100TraditionalPlan2B3B4BTime = currentTime;
   var ENGG100TraditionalPlan2B3B4Belement = document.getElementById("ENGG100TraditionalPlan2B3B4B");
  if (!ENGG100TraditionalPlan2B3B4Bflag) {
      if (ENGG100TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -20083,6 +23061,12 @@ $scope.ENGG100TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.ENGG130TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG130TraditionalPlan2B3B4BTime <= 200) { 
+        ENGG130TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+ENGG130TraditionalPlan2B3B4BTime = currentTime;
   var ENGG130TraditionalPlan2B3B4Belement = document.getElementById("ENGG130TraditionalPlan2B3B4B");
  if (!ENGG130TraditionalPlan2B3B4Bflag) {
      if (ENGG130TraditionalPlan2B3B4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -20110,6 +23094,12 @@ $scope.ENGG130TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.ENGL199TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGL199TraditionalPlan2B3B4BTime <= 200) { 
+        ENGL199TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+ENGL199TraditionalPlan2B3B4BTime = currentTime;
   var ENGL199TraditionalPlan2B3B4Belement = document.getElementById("ENGL199TraditionalPlan2B3B4B");
  if (!ENGL199TraditionalPlan2B3B4Bflag) {
      if (ENGL199TraditionalPlan2B3B4Belement.classList.contains("Other-highlighted")) { 
@@ -20131,6 +23121,12 @@ $scope.ENGL199TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MATH100TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH100TraditionalPlan2B3B4BTime <= 200) { 
+        MATH100TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MATH100TraditionalPlan2B3B4BTime = currentTime;
   var MATH100TraditionalPlan2B3B4Belement = document.getElementById("MATH100TraditionalPlan2B3B4B");
  if (!MATH100TraditionalPlan2B3B4Bflag) {
      if (MATH100TraditionalPlan2B3B4Belement.classList.contains("MATH-highlighted")) { 
@@ -20162,6 +23158,12 @@ $scope.MATH100TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.PHYS130TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - PHYS130TraditionalPlan2B3B4BTime <= 200) { 
+        PHYS130TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+PHYS130TraditionalPlan2B3B4BTime = currentTime;
   var PHYS130TraditionalPlan2B3B4Belement = document.getElementById("PHYS130TraditionalPlan2B3B4B");
  if (!PHYS130TraditionalPlan2B3B4Bflag) {
      if (PHYS130TraditionalPlan2B3B4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -20183,6 +23185,12 @@ $scope.PHYS130TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.CHEM105TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM105TraditionalPlan2B3B4BTime <= 200) { 
+        CHEM105TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+CHEM105TraditionalPlan2B3B4BTime = currentTime;
   var CHEM105TraditionalPlan2B3B4Belement = document.getElementById("CHEM105TraditionalPlan2B3B4B");
  if (!CHEM105TraditionalPlan2B3B4Bflag) {
      if (CHEM105TraditionalPlan2B3B4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -20206,6 +23214,12 @@ $scope.CHEM105TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.ENCMP100TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENCMP100TraditionalPlan2B3B4BTime <= 200) { 
+        ENCMP100TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+ENCMP100TraditionalPlan2B3B4BTime = currentTime;
   var ENCMP100TraditionalPlan2B3B4Belement = document.getElementById("ENCMP100TraditionalPlan2B3B4B");
  if (!ENCMP100TraditionalPlan2B3B4Bflag) {
      if (ENCMP100TraditionalPlan2B3B4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -20225,6 +23239,12 @@ $scope.ENCMP100TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.ENGG160TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG160TraditionalPlan2B3B4BTime <= 200) { 
+        ENGG160TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+ENGG160TraditionalPlan2B3B4BTime = currentTime;
   var ENGG160TraditionalPlan2B3B4Belement = document.getElementById("ENGG160TraditionalPlan2B3B4B");
  if (!ENGG160TraditionalPlan2B3B4Bflag) {
      if (ENGG160TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -20248,6 +23268,12 @@ $scope.ENGG160TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.ENPH131TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENPH131TraditionalPlan2B3B4BTime <= 200) { 
+        ENPH131TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+ENPH131TraditionalPlan2B3B4BTime = currentTime;
   var ENPH131TraditionalPlan2B3B4Belement = document.getElementById("ENPH131TraditionalPlan2B3B4B");
  if (!ENPH131TraditionalPlan2B3B4Bflag) {
      if (ENPH131TraditionalPlan2B3B4Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -20277,6 +23303,12 @@ $scope.ENPH131TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MATH101TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH101TraditionalPlan2B3B4BTime <= 200) { 
+        MATH101TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MATH101TraditionalPlan2B3B4BTime = currentTime;
   var MATH101TraditionalPlan2B3B4Belement = document.getElementById("MATH101TraditionalPlan2B3B4B");
  if (!MATH101TraditionalPlan2B3B4Bflag) {
      if (MATH101TraditionalPlan2B3B4Belement.classList.contains("MATH-highlighted")) { 
@@ -20312,6 +23344,12 @@ $scope.MATH101TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MATH102TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH102TraditionalPlan2B3B4BTime <= 200) { 
+        MATH102TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MATH102TraditionalPlan2B3B4BTime = currentTime;
   var MATH102TraditionalPlan2B3B4Belement = document.getElementById("MATH102TraditionalPlan2B3B4B");
  if (!MATH102TraditionalPlan2B3B4Bflag) {
      if (MATH102TraditionalPlan2B3B4Belement.classList.contains("MATH-highlighted")) { 
@@ -20337,6 +23375,12 @@ $scope.MATH102TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.ECE209TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ECE209TraditionalPlan2B3B4BTime <= 200) { 
+        ECE209TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+ECE209TraditionalPlan2B3B4BTime = currentTime;
   var ECE209TraditionalPlan2B3B4Belement = document.getElementById("ECE209TraditionalPlan2B3B4B");
  if (!ECE209TraditionalPlan2B3B4Bflag) {
      if (ECE209TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -20358,6 +23402,12 @@ $scope.ECE209TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MATE202TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATE202TraditionalPlan2B3B4BTime <= 200) { 
+        MATE202TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MATE202TraditionalPlan2B3B4BTime = currentTime;
   var MATE202TraditionalPlan2B3B4Belement = document.getElementById("MATE202TraditionalPlan2B3B4B");
  if (!MATE202TraditionalPlan2B3B4Bflag) {
      if (MATE202TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -20381,6 +23431,12 @@ $scope.MATE202TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MATH201TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH201TraditionalPlan2B3B4BTime <= 200) { 
+        MATH201TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MATH201TraditionalPlan2B3B4BTime = currentTime;
   var MATH201TraditionalPlan2B3B4Belement = document.getElementById("MATH201TraditionalPlan2B3B4B");
  if (!MATH201TraditionalPlan2B3B4Bflag) {
      if (MATH201TraditionalPlan2B3B4Belement.classList.contains("MATH-highlighted")) { 
@@ -20408,6 +23464,12 @@ $scope.MATH201TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MECE230TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE230TraditionalPlan2B3B4BTime <= 200) { 
+        MECE230TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MECE230TraditionalPlan2B3B4BTime = currentTime;
   var MECE230TraditionalPlan2B3B4Belement = document.getElementById("MECE230TraditionalPlan2B3B4B");
  if (!MECE230TraditionalPlan2B3B4Bflag) {
      if (MECE230TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -20435,6 +23497,12 @@ $scope.MECE230TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MECE260TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE260TraditionalPlan2B3B4BTime <= 200) { 
+        MECE260TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MECE260TraditionalPlan2B3B4BTime = currentTime;
   var MECE260TraditionalPlan2B3B4Belement = document.getElementById("MECE260TraditionalPlan2B3B4B");
  if (!MECE260TraditionalPlan2B3B4Bflag) {
      if (MECE260TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -20462,6 +23530,12 @@ $scope.MECE260TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MECE265TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE265TraditionalPlan2B3B4BTime <= 200) { 
+        MECE265TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MECE265TraditionalPlan2B3B4BTime = currentTime;
   var MECE265TraditionalPlan2B3B4Belement = document.getElementById("MECE265TraditionalPlan2B3B4B");
  if (!MECE265TraditionalPlan2B3B4Bflag) {
      if (MECE265TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -20485,6 +23559,12 @@ $scope.MECE265TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.CIVE270TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CIVE270TraditionalPlan2B3B4BTime <= 200) { 
+        CIVE270TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+CIVE270TraditionalPlan2B3B4BTime = currentTime;
   var CIVE270TraditionalPlan2B3B4Belement = document.getElementById("CIVE270TraditionalPlan2B3B4B");
  if (!CIVE270TraditionalPlan2B3B4Bflag) {
      if (CIVE270TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -20516,6 +23596,12 @@ $scope.CIVE270TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MATH209TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH209TraditionalPlan2B3B4BTime <= 200) { 
+        MATH209TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MATH209TraditionalPlan2B3B4BTime = currentTime;
   var MATH209TraditionalPlan2B3B4Belement = document.getElementById("MATH209TraditionalPlan2B3B4B");
  if (!MATH209TraditionalPlan2B3B4Bflag) {
      if (MATH209TraditionalPlan2B3B4Belement.classList.contains("MATH-highlighted")) { 
@@ -20547,6 +23633,12 @@ $scope.MATH209TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.STAT235TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - STAT235TraditionalPlan2B3B4BTime <= 200) { 
+        STAT235TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+STAT235TraditionalPlan2B3B4BTime = currentTime;
   var STAT235TraditionalPlan2B3B4Belement = document.getElementById("STAT235TraditionalPlan2B3B4B");
  if (!STAT235TraditionalPlan2B3B4Bflag) {
      if (STAT235TraditionalPlan2B3B4Belement.classList.contains("MATH-highlighted")) { 
@@ -20572,6 +23664,12 @@ $scope.STAT235TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.CHE243TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE243TraditionalPlan2B3B4BTime <= 200) { 
+        CHE243TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+CHE243TraditionalPlan2B3B4BTime = currentTime;
   var CHE243TraditionalPlan2B3B4Belement = document.getElementById("CHE243TraditionalPlan2B3B4B");
  if (!CHE243TraditionalPlan2B3B4Bflag) {
      if (CHE243TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -20599,6 +23697,12 @@ $scope.CHE243TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MECE200TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE200TraditionalPlan2B3B4BTime <= 200) { 
+        MECE200TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MECE200TraditionalPlan2B3B4BTime = currentTime;
   var MECE200TraditionalPlan2B3B4Belement = document.getElementById("MECE200TraditionalPlan2B3B4B");
  if (!MECE200TraditionalPlan2B3B4Bflag) {
      if (MECE200TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -20620,6 +23724,12 @@ $scope.MECE200TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MECE250TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE250TraditionalPlan2B3B4BTime <= 200) { 
+        MECE250TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MECE250TraditionalPlan2B3B4BTime = currentTime;
   var MECE250TraditionalPlan2B3B4Belement = document.getElementById("MECE250TraditionalPlan2B3B4B");
  if (!MECE250TraditionalPlan2B3B4Bflag) {
      if (MECE250TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -20651,6 +23761,12 @@ $scope.MECE250TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.ENGM310TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM310TraditionalPlan2B3B4BTime <= 200) { 
+        ENGM310TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+ENGM310TraditionalPlan2B3B4BTime = currentTime;
   var ENGM310TraditionalPlan2B3B4Belement = document.getElementById("ENGM310TraditionalPlan2B3B4B");
  if (!ENGM310TraditionalPlan2B3B4Bflag) {
      if (ENGM310TraditionalPlan2B3B4Belement.classList.contains("Other-highlighted")) { 
@@ -20672,6 +23788,12 @@ $scope.ENGM310TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.ENGM401TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM401TraditionalPlan2B3B4BTime <= 200) { 
+        ENGM401TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+ENGM401TraditionalPlan2B3B4BTime = currentTime;
   var ENGM401TraditionalPlan2B3B4Belement = document.getElementById("ENGM401TraditionalPlan2B3B4B");
  if (!ENGM401TraditionalPlan2B3B4Bflag) {
      if (ENGM401TraditionalPlan2B3B4Belement.classList.contains("Other-highlighted")) { 
@@ -20693,6 +23815,12 @@ $scope.ENGM401TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MECE340TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE340TraditionalPlan2B3B4BTime <= 200) { 
+        MECE340TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MECE340TraditionalPlan2B3B4BTime = currentTime;
   var MECE340TraditionalPlan2B3B4Belement = document.getElementById("MECE340TraditionalPlan2B3B4B");
  if (!MECE340TraditionalPlan2B3B4Bflag) {
      if (MECE340TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -20720,6 +23848,12 @@ $scope.MECE340TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MECE360TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE360TraditionalPlan2B3B4BTime <= 200) { 
+        MECE360TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MECE360TraditionalPlan2B3B4BTime = currentTime;
   var MECE360TraditionalPlan2B3B4Belement = document.getElementById("MECE360TraditionalPlan2B3B4B");
  if (!MECE360TraditionalPlan2B3B4Bflag) {
      if (MECE360TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -20755,6 +23889,12 @@ $scope.MECE360TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MECE362TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE362TraditionalPlan2B3B4BTime <= 200) { 
+        MECE362TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MECE362TraditionalPlan2B3B4BTime = currentTime;
   var MECE362TraditionalPlan2B3B4Belement = document.getElementById("MECE362TraditionalPlan2B3B4B");
  if (!MECE362TraditionalPlan2B3B4Bflag) {
      if (MECE362TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -20780,6 +23920,12 @@ $scope.MECE362TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MECE390TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE390TraditionalPlan2B3B4BTime <= 200) { 
+        MECE390TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MECE390TraditionalPlan2B3B4BTime = currentTime;
   var MECE390TraditionalPlan2B3B4Belement = document.getElementById("MECE390TraditionalPlan2B3B4B");
  if (!MECE390TraditionalPlan2B3B4Bflag) {
      if (MECE390TraditionalPlan2B3B4Belement.classList.contains("MATH-highlighted")) { 
@@ -20805,6 +23951,12 @@ $scope.MECE390TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.ComplementaryElectiveTraditionalPlan2B3B4B0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ComplementaryElectiveTraditionalPlan2B3B4B0Time <= 200) { 
+        ComplementaryElectiveTraditionalPlan2B3B4B0Time = currentTime;
+        return;
+    }
+ComplementaryElectiveTraditionalPlan2B3B4B0Time = currentTime;
   var ComplementaryElectiveTraditionalPlan2B3B4B0element = document.getElementById("ComplementaryElectiveTraditionalPlan2B3B4B0");
  if (!ComplementaryElectiveTraditionalPlan2B3B4B0flag) {
      if (ComplementaryElectiveTraditionalPlan2B3B4B0element.classList.contains("COMP-highlighted")) { 
@@ -20824,6 +23976,12 @@ $scope.ComplementaryElectiveTraditionalPlan2B3B4B0Listener = function () {
   }
 };
 $scope.MATH300TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH300TraditionalPlan2B3B4BTime <= 200) { 
+        MATH300TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MATH300TraditionalPlan2B3B4BTime = currentTime;
   var MATH300TraditionalPlan2B3B4Belement = document.getElementById("MATH300TraditionalPlan2B3B4B");
  if (!MATH300TraditionalPlan2B3B4Bflag) {
      if (MATH300TraditionalPlan2B3B4Belement.classList.contains("MATH-highlighted")) { 
@@ -20853,6 +24011,12 @@ $scope.MATH300TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MECE300TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE300TraditionalPlan2B3B4BTime <= 200) { 
+        MECE300TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MECE300TraditionalPlan2B3B4BTime = currentTime;
   var MECE300TraditionalPlan2B3B4Belement = document.getElementById("MECE300TraditionalPlan2B3B4B");
  if (!MECE300TraditionalPlan2B3B4Bflag) {
      if (MECE300TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -20884,6 +24048,12 @@ $scope.MECE300TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MECE301TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE301TraditionalPlan2B3B4BTime <= 200) { 
+        MECE301TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MECE301TraditionalPlan2B3B4BTime = currentTime;
   var MECE301TraditionalPlan2B3B4Belement = document.getElementById("MECE301TraditionalPlan2B3B4B");
  if (!MECE301TraditionalPlan2B3B4Bflag) {
      if (MECE301TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -20907,6 +24077,12 @@ $scope.MECE301TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MECE331TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE331TraditionalPlan2B3B4BTime <= 200) { 
+        MECE331TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MECE331TraditionalPlan2B3B4BTime = currentTime;
   var MECE331TraditionalPlan2B3B4Belement = document.getElementById("MECE331TraditionalPlan2B3B4B");
  if (!MECE331TraditionalPlan2B3B4Bflag) {
      if (MECE331TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -20946,6 +24122,12 @@ $scope.MECE331TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MECE371TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE371TraditionalPlan2B3B4BTime <= 200) { 
+        MECE371TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MECE371TraditionalPlan2B3B4BTime = currentTime;
   var MECE371TraditionalPlan2B3B4Belement = document.getElementById("MECE371TraditionalPlan2B3B4B");
  if (!MECE371TraditionalPlan2B3B4Bflag) {
      if (MECE371TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -20979,6 +24161,12 @@ $scope.MECE371TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MECE380TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE380TraditionalPlan2B3B4BTime <= 200) { 
+        MECE380TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MECE380TraditionalPlan2B3B4BTime = currentTime;
   var MECE380TraditionalPlan2B3B4Belement = document.getElementById("MECE380TraditionalPlan2B3B4B");
  if (!MECE380TraditionalPlan2B3B4Bflag) {
      if (MECE380TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -21004,6 +24192,12 @@ $scope.MECE380TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.CHE448TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE448TraditionalPlan2B3B4BTime <= 200) { 
+        CHE448TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+CHE448TraditionalPlan2B3B4BTime = currentTime;
   var CHE448TraditionalPlan2B3B4Belement = document.getElementById("CHE448TraditionalPlan2B3B4B");
  if (!CHE448TraditionalPlan2B3B4Bflag) {
      if (CHE448TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -21031,6 +24225,12 @@ $scope.CHE448TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MECE420TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE420TraditionalPlan2B3B4BTime <= 200) { 
+        MECE420TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MECE420TraditionalPlan2B3B4BTime = currentTime;
   var MECE420TraditionalPlan2B3B4Belement = document.getElementById("MECE420TraditionalPlan2B3B4B");
  if (!MECE420TraditionalPlan2B3B4Bflag) {
      if (MECE420TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -21052,6 +24252,12 @@ $scope.MECE420TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.ENGG400TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG400TraditionalPlan2B3B4BTime <= 200) { 
+        ENGG400TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+ENGG400TraditionalPlan2B3B4BTime = currentTime;
   var ENGG400TraditionalPlan2B3B4Belement = document.getElementById("ENGG400TraditionalPlan2B3B4B");
  if (!ENGG400TraditionalPlan2B3B4Bflag) {
      if (ENGG400TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -21071,6 +24277,12 @@ $scope.ENGG400TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MECE403TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE403TraditionalPlan2B3B4BTime <= 200) { 
+        MECE403TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MECE403TraditionalPlan2B3B4BTime = currentTime;
   var MECE403TraditionalPlan2B3B4Belement = document.getElementById("MECE403TraditionalPlan2B3B4B");
  if (!MECE403TraditionalPlan2B3B4Bflag) {
      if (MECE403TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -21098,6 +24310,12 @@ $scope.MECE403TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MECE451TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE451TraditionalPlan2B3B4BTime <= 200) { 
+        MECE451TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MECE451TraditionalPlan2B3B4BTime = currentTime;
   var MECE451TraditionalPlan2B3B4Belement = document.getElementById("MECE451TraditionalPlan2B3B4B");
  if (!MECE451TraditionalPlan2B3B4Bflag) {
      if (MECE451TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -21121,6 +24339,12 @@ $scope.MECE451TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MECE460TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE460TraditionalPlan2B3B4BTime <= 200) { 
+        MECE460TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MECE460TraditionalPlan2B3B4BTime = currentTime;
   var MECE460TraditionalPlan2B3B4Belement = document.getElementById("MECE460TraditionalPlan2B3B4B");
  if (!MECE460TraditionalPlan2B3B4Bflag) {
      if (MECE460TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -21158,6 +24382,12 @@ $scope.MECE460TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4B0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2B3B4B0Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2B3B4B0Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2B3B4B0Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2B3B4B0element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4B0");
  if (!ProgramTechnicalElectiveTraditionalPlan2B3B4B0flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2B3B4B0element.classList.contains("PROG-highlighted")) { 
@@ -21177,6 +24407,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4B0Listener = function () {
   }
 };
 $scope.ENGG404TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG404TraditionalPlan2B3B4BTime <= 200) { 
+        ENGG404TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+ENGG404TraditionalPlan2B3B4BTime = currentTime;
   var ENGG404TraditionalPlan2B3B4Belement = document.getElementById("ENGG404TraditionalPlan2B3B4B");
  if (!ENGG404TraditionalPlan2B3B4Bflag) {
      if (ENGG404TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -21196,6 +24432,12 @@ $scope.ENGG404TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MECE430TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE430TraditionalPlan2B3B4BTime <= 200) { 
+        MECE430TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MECE430TraditionalPlan2B3B4BTime = currentTime;
   var MECE430TraditionalPlan2B3B4Belement = document.getElementById("MECE430TraditionalPlan2B3B4B");
  if (!MECE430TraditionalPlan2B3B4Bflag) {
      if (MECE430TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -21217,6 +24459,12 @@ $scope.MECE430TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MECE480TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE480TraditionalPlan2B3B4BTime <= 200) { 
+        MECE480TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MECE480TraditionalPlan2B3B4BTime = currentTime;
   var MECE480TraditionalPlan2B3B4Belement = document.getElementById("MECE480TraditionalPlan2B3B4B");
  if (!MECE480TraditionalPlan2B3B4Bflag) {
      if (MECE480TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -21242,6 +24490,12 @@ $scope.MECE480TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.MECE463TraditionalPlan2B3B4BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE463TraditionalPlan2B3B4BTime <= 200) { 
+        MECE463TraditionalPlan2B3B4BTime = currentTime;
+        return;
+    }
+MECE463TraditionalPlan2B3B4BTime = currentTime;
   var MECE463TraditionalPlan2B3B4Belement = document.getElementById("MECE463TraditionalPlan2B3B4B");
  if (!MECE463TraditionalPlan2B3B4Bflag) {
      if (MECE463TraditionalPlan2B3B4Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -21267,6 +24521,12 @@ $scope.MECE463TraditionalPlan2B3B4BListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4B1Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2B3B4B1Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2B3B4B1Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2B3B4B1Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2B3B4B1element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4B1");
  if (!ProgramTechnicalElectiveTraditionalPlan2B3B4B1flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2B3B4B1element.classList.contains("PROG-highlighted")) { 
@@ -21286,6 +24546,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4B1Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4B2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2B3B4B2Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2B3B4B2Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2B3B4B2Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2B3B4B2element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4B2");
  if (!ProgramTechnicalElectiveTraditionalPlan2B3B4B2flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2B3B4B2element.classList.contains("PROG-highlighted")) { 
@@ -21305,6 +24571,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4B2Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4B3Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2B3B4B3Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2B3B4B3Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2B3B4B3Time = currentTime;
   var ProgramTechnicalElectiveTraditionalPlan2B3B4B3element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4B3");
  if (!ProgramTechnicalElectiveTraditionalPlan2B3B4B3flag) {
      if (ProgramTechnicalElectiveTraditionalPlan2B3B4B3element.classList.contains("PROG-highlighted")) { 
@@ -21324,58 +24596,168 @@ $scope.ProgramTechnicalElectiveTraditionalPlan2B3B4B3Listener = function () {
   }
 };
   var CHEM103AlternatePlan3A4Aflag = false;
+  var CHEM103AlternatePlan3A4Arflag = false;
+ var CHEM103AlternatePlan3A4ATime = new Date().getTime();
   var ENGG100AlternatePlan3A4Aflag = false;
+  var ENGG100AlternatePlan3A4Arflag = false;
+ var ENGG100AlternatePlan3A4ATime = new Date().getTime();
   var ENGG130AlternatePlan3A4Aflag = false;
+  var ENGG130AlternatePlan3A4Arflag = false;
+ var ENGG130AlternatePlan3A4ATime = new Date().getTime();
   var ENGL199AlternatePlan3A4Aflag = false;
+  var ENGL199AlternatePlan3A4Arflag = false;
+ var ENGL199AlternatePlan3A4ATime = new Date().getTime();
   var MATH100AlternatePlan3A4Aflag = false;
+  var MATH100AlternatePlan3A4Arflag = false;
+ var MATH100AlternatePlan3A4ATime = new Date().getTime();
   var PHYS130AlternatePlan3A4Aflag = false;
+  var PHYS130AlternatePlan3A4Arflag = false;
+ var PHYS130AlternatePlan3A4ATime = new Date().getTime();
   var CHEM105AlternatePlan3A4Aflag = false;
+  var CHEM105AlternatePlan3A4Arflag = false;
+ var CHEM105AlternatePlan3A4ATime = new Date().getTime();
   var ENCMP100AlternatePlan3A4Aflag = false;
+  var ENCMP100AlternatePlan3A4Arflag = false;
+ var ENCMP100AlternatePlan3A4ATime = new Date().getTime();
   var ENGG160AlternatePlan3A4Aflag = false;
+  var ENGG160AlternatePlan3A4Arflag = false;
+ var ENGG160AlternatePlan3A4ATime = new Date().getTime();
   var ENPH131AlternatePlan3A4Aflag = false;
+  var ENPH131AlternatePlan3A4Arflag = false;
+ var ENPH131AlternatePlan3A4ATime = new Date().getTime();
   var MATH101AlternatePlan3A4Aflag = false;
+  var MATH101AlternatePlan3A4Arflag = false;
+ var MATH101AlternatePlan3A4ATime = new Date().getTime();
   var MATH102AlternatePlan3A4Aflag = false;
+  var MATH102AlternatePlan3A4Arflag = false;
+ var MATH102AlternatePlan3A4ATime = new Date().getTime();
   var ENGM310AlternatePlan3A4Aflag = false;
+  var ENGM310AlternatePlan3A4Arflag = false;
+ var ENGM310AlternatePlan3A4ATime = new Date().getTime();
   var ENGM401AlternatePlan3A4Aflag = false;
+  var ENGM401AlternatePlan3A4Arflag = false;
+ var ENGM401AlternatePlan3A4ATime = new Date().getTime();
   var ENGG404AlternatePlan3A4Aflag = false;
+  var ENGG404AlternatePlan3A4Arflag = false;
+ var ENGG404AlternatePlan3A4ATime = new Date().getTime();
   var MATH201AlternatePlan3A4Aflag = false;
+  var MATH201AlternatePlan3A4Arflag = false;
+ var MATH201AlternatePlan3A4ATime = new Date().getTime();
   var MATH209AlternatePlan3A4Aflag = false;
+  var MATH209AlternatePlan3A4Arflag = false;
+ var MATH209AlternatePlan3A4ATime = new Date().getTime();
   var ComplementaryElectiveAlternatePlan3A4A0flag = false;
+  var ComplementaryElectiveAlternatePlan3A4A0rflag = false;
+ var ComplementaryElectiveAlternatePlan3A4A0Time = new Date().getTime();
   var ITSElectiveAlternatePlan3A4A0flag = false;
+  var ITSElectiveAlternatePlan3A4A0rflag = false;
+ var ITSElectiveAlternatePlan3A4A0Time = new Date().getTime();
   var CIVE270AlternatePlan3A4Aflag = false;
+  var CIVE270AlternatePlan3A4Arflag = false;
+ var CIVE270AlternatePlan3A4ATime = new Date().getTime();
   var MECE230AlternatePlan3A4Aflag = false;
+  var MECE230AlternatePlan3A4Arflag = false;
+ var MECE230AlternatePlan3A4ATime = new Date().getTime();
   var MECE260AlternatePlan3A4Aflag = false;
+  var MECE260AlternatePlan3A4Arflag = false;
+ var MECE260AlternatePlan3A4ATime = new Date().getTime();
   var MECE265AlternatePlan3A4Aflag = false;
+  var MECE265AlternatePlan3A4Arflag = false;
+ var MECE265AlternatePlan3A4ATime = new Date().getTime();
   var STAT235AlternatePlan3A4Aflag = false;
+  var STAT235AlternatePlan3A4Arflag = false;
+ var STAT235AlternatePlan3A4ATime = new Date().getTime();
   var CHE243AlternatePlan3A4Aflag = false;
+  var CHE243AlternatePlan3A4Arflag = false;
+ var CHE243AlternatePlan3A4ATime = new Date().getTime();
   var ECE209AlternatePlan3A4Aflag = false;
+  var ECE209AlternatePlan3A4Arflag = false;
+ var ECE209AlternatePlan3A4ATime = new Date().getTime();
   var MATE202AlternatePlan3A4Aflag = false;
+  var MATE202AlternatePlan3A4Arflag = false;
+ var MATE202AlternatePlan3A4ATime = new Date().getTime();
   var MECE200AlternatePlan3A4Aflag = false;
+  var MECE200AlternatePlan3A4Arflag = false;
+ var MECE200AlternatePlan3A4ATime = new Date().getTime();
   var MECE250AlternatePlan3A4Aflag = false;
+  var MECE250AlternatePlan3A4Arflag = false;
+ var MECE250AlternatePlan3A4ATime = new Date().getTime();
   var MATH300AlternatePlan3A4Aflag = false;
+  var MATH300AlternatePlan3A4Arflag = false;
+ var MATH300AlternatePlan3A4ATime = new Date().getTime();
   var MECE300AlternatePlan3A4Aflag = false;
+  var MECE300AlternatePlan3A4Arflag = false;
+ var MECE300AlternatePlan3A4ATime = new Date().getTime();
   var MECE301AlternatePlan3A4Aflag = false;
+  var MECE301AlternatePlan3A4Arflag = false;
+ var MECE301AlternatePlan3A4ATime = new Date().getTime();
   var MECE331AlternatePlan3A4Aflag = false;
+  var MECE331AlternatePlan3A4Arflag = false;
+ var MECE331AlternatePlan3A4ATime = new Date().getTime();
   var MECE371AlternatePlan3A4Aflag = false;
+  var MECE371AlternatePlan3A4Arflag = false;
+ var MECE371AlternatePlan3A4ATime = new Date().getTime();
   var MECE380AlternatePlan3A4Aflag = false;
+  var MECE380AlternatePlan3A4Arflag = false;
+ var MECE380AlternatePlan3A4ATime = new Date().getTime();
   var MECE340AlternatePlan3A4Aflag = false;
+  var MECE340AlternatePlan3A4Arflag = false;
+ var MECE340AlternatePlan3A4ATime = new Date().getTime();
   var MECE360AlternatePlan3A4Aflag = false;
+  var MECE360AlternatePlan3A4Arflag = false;
+ var MECE360AlternatePlan3A4ATime = new Date().getTime();
   var MECE362AlternatePlan3A4Aflag = false;
+  var MECE362AlternatePlan3A4Arflag = false;
+ var MECE362AlternatePlan3A4ATime = new Date().getTime();
   var MECE390AlternatePlan3A4Aflag = false;
+  var MECE390AlternatePlan3A4Arflag = false;
+ var MECE390AlternatePlan3A4ATime = new Date().getTime();
   var ProgramTechnicalElectiveAlternatePlan3A4A0flag = false;
+  var ProgramTechnicalElectiveAlternatePlan3A4A0rflag = false;
+ var ProgramTechnicalElectiveAlternatePlan3A4A0Time = new Date().getTime();
   var MECE430AlternatePlan3A4Aflag = false;
+  var MECE430AlternatePlan3A4Arflag = false;
+ var MECE430AlternatePlan3A4ATime = new Date().getTime();
   var MECE480AlternatePlan3A4Aflag = false;
+  var MECE480AlternatePlan3A4Arflag = false;
+ var MECE480AlternatePlan3A4ATime = new Date().getTime();
   var MECE463AlternatePlan3A4Aflag = false;
+  var MECE463AlternatePlan3A4Arflag = false;
+ var MECE463AlternatePlan3A4ATime = new Date().getTime();
   var ProgramTechnicalElectiveAlternatePlan3A4A1flag = false;
+  var ProgramTechnicalElectiveAlternatePlan3A4A1rflag = false;
+ var ProgramTechnicalElectiveAlternatePlan3A4A1Time = new Date().getTime();
   var ProgramTechnicalElectiveAlternatePlan3A4A2flag = false;
+  var ProgramTechnicalElectiveAlternatePlan3A4A2rflag = false;
+ var ProgramTechnicalElectiveAlternatePlan3A4A2Time = new Date().getTime();
   var ProgramTechnicalElectiveAlternatePlan3A4A3flag = false;
+  var ProgramTechnicalElectiveAlternatePlan3A4A3rflag = false;
+ var ProgramTechnicalElectiveAlternatePlan3A4A3Time = new Date().getTime();
   var CHE448AlternatePlan3A4Aflag = false;
+  var CHE448AlternatePlan3A4Arflag = false;
+ var CHE448AlternatePlan3A4ATime = new Date().getTime();
   var MECE420AlternatePlan3A4Aflag = false;
+  var MECE420AlternatePlan3A4Arflag = false;
+ var MECE420AlternatePlan3A4ATime = new Date().getTime();
   var ENGG400AlternatePlan3A4Aflag = false;
+  var ENGG400AlternatePlan3A4Arflag = false;
+ var ENGG400AlternatePlan3A4ATime = new Date().getTime();
   var MECE403AlternatePlan3A4Aflag = false;
+  var MECE403AlternatePlan3A4Arflag = false;
+ var MECE403AlternatePlan3A4ATime = new Date().getTime();
   var MECE451AlternatePlan3A4Aflag = false;
+  var MECE451AlternatePlan3A4Arflag = false;
+ var MECE451AlternatePlan3A4ATime = new Date().getTime();
   var MECE460AlternatePlan3A4Aflag = false;
+  var MECE460AlternatePlan3A4Arflag = false;
+ var MECE460AlternatePlan3A4ATime = new Date().getTime();
 $scope.CHEM103AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM103AlternatePlan3A4ATime <= 200) { 
+        CHEM103AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+CHEM103AlternatePlan3A4ATime = currentTime;
   var CHEM103AlternatePlan3A4Aelement = document.getElementById("CHEM103AlternatePlan3A4A");
  if (!CHEM103AlternatePlan3A4Aflag) {
      if (CHEM103AlternatePlan3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -21397,6 +24779,12 @@ $scope.CHEM103AlternatePlan3A4AListener = function () {
   }
 };
 $scope.ENGG100AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG100AlternatePlan3A4ATime <= 200) { 
+        ENGG100AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+ENGG100AlternatePlan3A4ATime = currentTime;
   var ENGG100AlternatePlan3A4Aelement = document.getElementById("ENGG100AlternatePlan3A4A");
  if (!ENGG100AlternatePlan3A4Aflag) {
      if (ENGG100AlternatePlan3A4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -21416,6 +24804,12 @@ $scope.ENGG100AlternatePlan3A4AListener = function () {
   }
 };
 $scope.ENGG130AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG130AlternatePlan3A4ATime <= 200) { 
+        ENGG130AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+ENGG130AlternatePlan3A4ATime = currentTime;
   var ENGG130AlternatePlan3A4Aelement = document.getElementById("ENGG130AlternatePlan3A4A");
  if (!ENGG130AlternatePlan3A4Aflag) {
      if (ENGG130AlternatePlan3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -21443,6 +24837,12 @@ $scope.ENGG130AlternatePlan3A4AListener = function () {
   }
 };
 $scope.ENGL199AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGL199AlternatePlan3A4ATime <= 200) { 
+        ENGL199AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+ENGL199AlternatePlan3A4ATime = currentTime;
   var ENGL199AlternatePlan3A4Aelement = document.getElementById("ENGL199AlternatePlan3A4A");
  if (!ENGL199AlternatePlan3A4Aflag) {
      if (ENGL199AlternatePlan3A4Aelement.classList.contains("Other-highlighted")) { 
@@ -21464,6 +24864,12 @@ $scope.ENGL199AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MATH100AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH100AlternatePlan3A4ATime <= 200) { 
+        MATH100AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MATH100AlternatePlan3A4ATime = currentTime;
   var MATH100AlternatePlan3A4Aelement = document.getElementById("MATH100AlternatePlan3A4A");
  if (!MATH100AlternatePlan3A4Aflag) {
      if (MATH100AlternatePlan3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -21495,6 +24901,12 @@ $scope.MATH100AlternatePlan3A4AListener = function () {
   }
 };
 $scope.PHYS130AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - PHYS130AlternatePlan3A4ATime <= 200) { 
+        PHYS130AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+PHYS130AlternatePlan3A4ATime = currentTime;
   var PHYS130AlternatePlan3A4Aelement = document.getElementById("PHYS130AlternatePlan3A4A");
  if (!PHYS130AlternatePlan3A4Aflag) {
      if (PHYS130AlternatePlan3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -21516,6 +24928,12 @@ $scope.PHYS130AlternatePlan3A4AListener = function () {
   }
 };
 $scope.CHEM105AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM105AlternatePlan3A4ATime <= 200) { 
+        CHEM105AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+CHEM105AlternatePlan3A4ATime = currentTime;
   var CHEM105AlternatePlan3A4Aelement = document.getElementById("CHEM105AlternatePlan3A4A");
  if (!CHEM105AlternatePlan3A4Aflag) {
      if (CHEM105AlternatePlan3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -21539,6 +24957,12 @@ $scope.CHEM105AlternatePlan3A4AListener = function () {
   }
 };
 $scope.ENCMP100AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENCMP100AlternatePlan3A4ATime <= 200) { 
+        ENCMP100AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+ENCMP100AlternatePlan3A4ATime = currentTime;
   var ENCMP100AlternatePlan3A4Aelement = document.getElementById("ENCMP100AlternatePlan3A4A");
  if (!ENCMP100AlternatePlan3A4Aflag) {
      if (ENCMP100AlternatePlan3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -21558,6 +24982,12 @@ $scope.ENCMP100AlternatePlan3A4AListener = function () {
   }
 };
 $scope.ENGG160AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG160AlternatePlan3A4ATime <= 200) { 
+        ENGG160AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+ENGG160AlternatePlan3A4ATime = currentTime;
   var ENGG160AlternatePlan3A4Aelement = document.getElementById("ENGG160AlternatePlan3A4A");
  if (!ENGG160AlternatePlan3A4Aflag) {
      if (ENGG160AlternatePlan3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -21581,6 +25011,12 @@ $scope.ENGG160AlternatePlan3A4AListener = function () {
   }
 };
 $scope.ENPH131AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENPH131AlternatePlan3A4ATime <= 200) { 
+        ENPH131AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+ENPH131AlternatePlan3A4ATime = currentTime;
   var ENPH131AlternatePlan3A4Aelement = document.getElementById("ENPH131AlternatePlan3A4A");
  if (!ENPH131AlternatePlan3A4Aflag) {
      if (ENPH131AlternatePlan3A4Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -21610,6 +25046,12 @@ $scope.ENPH131AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MATH101AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH101AlternatePlan3A4ATime <= 200) { 
+        MATH101AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MATH101AlternatePlan3A4ATime = currentTime;
   var MATH101AlternatePlan3A4Aelement = document.getElementById("MATH101AlternatePlan3A4A");
  if (!MATH101AlternatePlan3A4Aflag) {
      if (MATH101AlternatePlan3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -21645,6 +25087,12 @@ $scope.MATH101AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MATH102AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH102AlternatePlan3A4ATime <= 200) { 
+        MATH102AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MATH102AlternatePlan3A4ATime = currentTime;
   var MATH102AlternatePlan3A4Aelement = document.getElementById("MATH102AlternatePlan3A4A");
  if (!MATH102AlternatePlan3A4Aflag) {
      if (MATH102AlternatePlan3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -21670,6 +25118,12 @@ $scope.MATH102AlternatePlan3A4AListener = function () {
   }
 };
 $scope.ENGM310AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM310AlternatePlan3A4ATime <= 200) { 
+        ENGM310AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+ENGM310AlternatePlan3A4ATime = currentTime;
   var ENGM310AlternatePlan3A4Aelement = document.getElementById("ENGM310AlternatePlan3A4A");
  if (!ENGM310AlternatePlan3A4Aflag) {
      if (ENGM310AlternatePlan3A4Aelement.classList.contains("Other-highlighted")) { 
@@ -21691,6 +25145,12 @@ $scope.ENGM310AlternatePlan3A4AListener = function () {
   }
 };
 $scope.ENGM401AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM401AlternatePlan3A4ATime <= 200) { 
+        ENGM401AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+ENGM401AlternatePlan3A4ATime = currentTime;
   var ENGM401AlternatePlan3A4Aelement = document.getElementById("ENGM401AlternatePlan3A4A");
  if (!ENGM401AlternatePlan3A4Aflag) {
      if (ENGM401AlternatePlan3A4Aelement.classList.contains("Other-highlighted")) { 
@@ -21712,6 +25172,12 @@ $scope.ENGM401AlternatePlan3A4AListener = function () {
   }
 };
 $scope.ENGG404AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG404AlternatePlan3A4ATime <= 200) { 
+        ENGG404AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+ENGG404AlternatePlan3A4ATime = currentTime;
   var ENGG404AlternatePlan3A4Aelement = document.getElementById("ENGG404AlternatePlan3A4A");
  if (!ENGG404AlternatePlan3A4Aflag) {
      if (ENGG404AlternatePlan3A4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -21731,6 +25197,12 @@ $scope.ENGG404AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MATH201AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH201AlternatePlan3A4ATime <= 200) { 
+        MATH201AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MATH201AlternatePlan3A4ATime = currentTime;
   var MATH201AlternatePlan3A4Aelement = document.getElementById("MATH201AlternatePlan3A4A");
  if (!MATH201AlternatePlan3A4Aflag) {
      if (MATH201AlternatePlan3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -21758,6 +25230,12 @@ $scope.MATH201AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MATH209AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH209AlternatePlan3A4ATime <= 200) { 
+        MATH209AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MATH209AlternatePlan3A4ATime = currentTime;
   var MATH209AlternatePlan3A4Aelement = document.getElementById("MATH209AlternatePlan3A4A");
  if (!MATH209AlternatePlan3A4Aflag) {
      if (MATH209AlternatePlan3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -21789,6 +25267,12 @@ $scope.MATH209AlternatePlan3A4AListener = function () {
   }
 };
 $scope.ComplementaryElectiveAlternatePlan3A4A0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ComplementaryElectiveAlternatePlan3A4A0Time <= 200) { 
+        ComplementaryElectiveAlternatePlan3A4A0Time = currentTime;
+        return;
+    }
+ComplementaryElectiveAlternatePlan3A4A0Time = currentTime;
   var ComplementaryElectiveAlternatePlan3A4A0element = document.getElementById("ComplementaryElectiveAlternatePlan3A4A0");
  if (!ComplementaryElectiveAlternatePlan3A4A0flag) {
      if (ComplementaryElectiveAlternatePlan3A4A0element.classList.contains("COMP-highlighted")) { 
@@ -21808,6 +25292,12 @@ $scope.ComplementaryElectiveAlternatePlan3A4A0Listener = function () {
   }
 };
 $scope.ITSElectiveAlternatePlan3A4A0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ITSElectiveAlternatePlan3A4A0Time <= 200) { 
+        ITSElectiveAlternatePlan3A4A0Time = currentTime;
+        return;
+    }
+ITSElectiveAlternatePlan3A4A0Time = currentTime;
   var ITSElectiveAlternatePlan3A4A0element = document.getElementById("ITSElectiveAlternatePlan3A4A0");
  if (!ITSElectiveAlternatePlan3A4A0flag) {
      if (ITSElectiveAlternatePlan3A4A0element.classList.contains("ITS-highlighted")) { 
@@ -21827,6 +25317,12 @@ $scope.ITSElectiveAlternatePlan3A4A0Listener = function () {
   }
 };
 $scope.CIVE270AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CIVE270AlternatePlan3A4ATime <= 200) { 
+        CIVE270AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+CIVE270AlternatePlan3A4ATime = currentTime;
   var CIVE270AlternatePlan3A4Aelement = document.getElementById("CIVE270AlternatePlan3A4A");
  if (!CIVE270AlternatePlan3A4Aflag) {
      if (CIVE270AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -21858,6 +25354,12 @@ $scope.CIVE270AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MECE230AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE230AlternatePlan3A4ATime <= 200) { 
+        MECE230AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MECE230AlternatePlan3A4ATime = currentTime;
   var MECE230AlternatePlan3A4Aelement = document.getElementById("MECE230AlternatePlan3A4A");
  if (!MECE230AlternatePlan3A4Aflag) {
      if (MECE230AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -21885,6 +25387,12 @@ $scope.MECE230AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MECE260AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE260AlternatePlan3A4ATime <= 200) { 
+        MECE260AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MECE260AlternatePlan3A4ATime = currentTime;
   var MECE260AlternatePlan3A4Aelement = document.getElementById("MECE260AlternatePlan3A4A");
  if (!MECE260AlternatePlan3A4Aflag) {
      if (MECE260AlternatePlan3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -21912,6 +25420,12 @@ $scope.MECE260AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MECE265AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE265AlternatePlan3A4ATime <= 200) { 
+        MECE265AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MECE265AlternatePlan3A4ATime = currentTime;
   var MECE265AlternatePlan3A4Aelement = document.getElementById("MECE265AlternatePlan3A4A");
  if (!MECE265AlternatePlan3A4Aflag) {
      if (MECE265AlternatePlan3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -21935,6 +25449,12 @@ $scope.MECE265AlternatePlan3A4AListener = function () {
   }
 };
 $scope.STAT235AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - STAT235AlternatePlan3A4ATime <= 200) { 
+        STAT235AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+STAT235AlternatePlan3A4ATime = currentTime;
   var STAT235AlternatePlan3A4Aelement = document.getElementById("STAT235AlternatePlan3A4A");
  if (!STAT235AlternatePlan3A4Aflag) {
      if (STAT235AlternatePlan3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -21960,6 +25480,12 @@ $scope.STAT235AlternatePlan3A4AListener = function () {
   }
 };
 $scope.CHE243AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE243AlternatePlan3A4ATime <= 200) { 
+        CHE243AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+CHE243AlternatePlan3A4ATime = currentTime;
   var CHE243AlternatePlan3A4Aelement = document.getElementById("CHE243AlternatePlan3A4A");
  if (!CHE243AlternatePlan3A4Aflag) {
      if (CHE243AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -21987,6 +25513,12 @@ $scope.CHE243AlternatePlan3A4AListener = function () {
   }
 };
 $scope.ECE209AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ECE209AlternatePlan3A4ATime <= 200) { 
+        ECE209AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+ECE209AlternatePlan3A4ATime = currentTime;
   var ECE209AlternatePlan3A4Aelement = document.getElementById("ECE209AlternatePlan3A4A");
  if (!ECE209AlternatePlan3A4Aflag) {
      if (ECE209AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -22008,6 +25540,12 @@ $scope.ECE209AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MATE202AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATE202AlternatePlan3A4ATime <= 200) { 
+        MATE202AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MATE202AlternatePlan3A4ATime = currentTime;
   var MATE202AlternatePlan3A4Aelement = document.getElementById("MATE202AlternatePlan3A4A");
  if (!MATE202AlternatePlan3A4Aflag) {
      if (MATE202AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -22031,6 +25569,12 @@ $scope.MATE202AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MECE200AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE200AlternatePlan3A4ATime <= 200) { 
+        MECE200AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MECE200AlternatePlan3A4ATime = currentTime;
   var MECE200AlternatePlan3A4Aelement = document.getElementById("MECE200AlternatePlan3A4A");
  if (!MECE200AlternatePlan3A4Aflag) {
      if (MECE200AlternatePlan3A4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -22052,6 +25596,12 @@ $scope.MECE200AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MECE250AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE250AlternatePlan3A4ATime <= 200) { 
+        MECE250AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MECE250AlternatePlan3A4ATime = currentTime;
   var MECE250AlternatePlan3A4Aelement = document.getElementById("MECE250AlternatePlan3A4A");
  if (!MECE250AlternatePlan3A4Aflag) {
      if (MECE250AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -22083,6 +25633,12 @@ $scope.MECE250AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MATH300AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH300AlternatePlan3A4ATime <= 200) { 
+        MATH300AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MATH300AlternatePlan3A4ATime = currentTime;
   var MATH300AlternatePlan3A4Aelement = document.getElementById("MATH300AlternatePlan3A4A");
  if (!MATH300AlternatePlan3A4Aflag) {
      if (MATH300AlternatePlan3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -22112,6 +25668,12 @@ $scope.MATH300AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MECE300AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE300AlternatePlan3A4ATime <= 200) { 
+        MECE300AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MECE300AlternatePlan3A4ATime = currentTime;
   var MECE300AlternatePlan3A4Aelement = document.getElementById("MECE300AlternatePlan3A4A");
  if (!MECE300AlternatePlan3A4Aflag) {
      if (MECE300AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -22143,6 +25705,12 @@ $scope.MECE300AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MECE301AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE301AlternatePlan3A4ATime <= 200) { 
+        MECE301AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MECE301AlternatePlan3A4ATime = currentTime;
   var MECE301AlternatePlan3A4Aelement = document.getElementById("MECE301AlternatePlan3A4A");
  if (!MECE301AlternatePlan3A4Aflag) {
      if (MECE301AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -22166,6 +25734,12 @@ $scope.MECE301AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MECE331AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE331AlternatePlan3A4ATime <= 200) { 
+        MECE331AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MECE331AlternatePlan3A4ATime = currentTime;
   var MECE331AlternatePlan3A4Aelement = document.getElementById("MECE331AlternatePlan3A4A");
  if (!MECE331AlternatePlan3A4Aflag) {
      if (MECE331AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -22205,6 +25779,12 @@ $scope.MECE331AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MECE371AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE371AlternatePlan3A4ATime <= 200) { 
+        MECE371AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MECE371AlternatePlan3A4ATime = currentTime;
   var MECE371AlternatePlan3A4Aelement = document.getElementById("MECE371AlternatePlan3A4A");
  if (!MECE371AlternatePlan3A4Aflag) {
      if (MECE371AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -22238,6 +25818,12 @@ $scope.MECE371AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MECE380AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE380AlternatePlan3A4ATime <= 200) { 
+        MECE380AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MECE380AlternatePlan3A4ATime = currentTime;
   var MECE380AlternatePlan3A4Aelement = document.getElementById("MECE380AlternatePlan3A4A");
  if (!MECE380AlternatePlan3A4Aflag) {
      if (MECE380AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -22263,6 +25849,12 @@ $scope.MECE380AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MECE340AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE340AlternatePlan3A4ATime <= 200) { 
+        MECE340AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MECE340AlternatePlan3A4ATime = currentTime;
   var MECE340AlternatePlan3A4Aelement = document.getElementById("MECE340AlternatePlan3A4A");
  if (!MECE340AlternatePlan3A4Aflag) {
      if (MECE340AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -22290,6 +25882,12 @@ $scope.MECE340AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MECE360AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE360AlternatePlan3A4ATime <= 200) { 
+        MECE360AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MECE360AlternatePlan3A4ATime = currentTime;
   var MECE360AlternatePlan3A4Aelement = document.getElementById("MECE360AlternatePlan3A4A");
  if (!MECE360AlternatePlan3A4Aflag) {
      if (MECE360AlternatePlan3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -22325,6 +25923,12 @@ $scope.MECE360AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MECE362AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE362AlternatePlan3A4ATime <= 200) { 
+        MECE362AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MECE362AlternatePlan3A4ATime = currentTime;
   var MECE362AlternatePlan3A4Aelement = document.getElementById("MECE362AlternatePlan3A4A");
  if (!MECE362AlternatePlan3A4Aflag) {
      if (MECE362AlternatePlan3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -22350,6 +25954,12 @@ $scope.MECE362AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MECE390AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE390AlternatePlan3A4ATime <= 200) { 
+        MECE390AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MECE390AlternatePlan3A4ATime = currentTime;
   var MECE390AlternatePlan3A4Aelement = document.getElementById("MECE390AlternatePlan3A4A");
  if (!MECE390AlternatePlan3A4Aflag) {
      if (MECE390AlternatePlan3A4Aelement.classList.contains("MATH-highlighted")) { 
@@ -22375,6 +25985,12 @@ $scope.MECE390AlternatePlan3A4AListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveAlternatePlan3A4A0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveAlternatePlan3A4A0Time <= 200) { 
+        ProgramTechnicalElectiveAlternatePlan3A4A0Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveAlternatePlan3A4A0Time = currentTime;
   var ProgramTechnicalElectiveAlternatePlan3A4A0element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3A4A0");
  if (!ProgramTechnicalElectiveAlternatePlan3A4A0flag) {
      if (ProgramTechnicalElectiveAlternatePlan3A4A0element.classList.contains("PROG-highlighted")) { 
@@ -22394,6 +26010,12 @@ $scope.ProgramTechnicalElectiveAlternatePlan3A4A0Listener = function () {
   }
 };
 $scope.MECE430AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE430AlternatePlan3A4ATime <= 200) { 
+        MECE430AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MECE430AlternatePlan3A4ATime = currentTime;
   var MECE430AlternatePlan3A4Aelement = document.getElementById("MECE430AlternatePlan3A4A");
  if (!MECE430AlternatePlan3A4Aflag) {
      if (MECE430AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -22415,6 +26037,12 @@ $scope.MECE430AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MECE480AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE480AlternatePlan3A4ATime <= 200) { 
+        MECE480AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MECE480AlternatePlan3A4ATime = currentTime;
   var MECE480AlternatePlan3A4Aelement = document.getElementById("MECE480AlternatePlan3A4A");
  if (!MECE480AlternatePlan3A4Aflag) {
      if (MECE480AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -22440,6 +26068,12 @@ $scope.MECE480AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MECE463AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE463AlternatePlan3A4ATime <= 200) { 
+        MECE463AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MECE463AlternatePlan3A4ATime = currentTime;
   var MECE463AlternatePlan3A4Aelement = document.getElementById("MECE463AlternatePlan3A4A");
  if (!MECE463AlternatePlan3A4Aflag) {
      if (MECE463AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -22465,6 +26099,12 @@ $scope.MECE463AlternatePlan3A4AListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveAlternatePlan3A4A1Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveAlternatePlan3A4A1Time <= 200) { 
+        ProgramTechnicalElectiveAlternatePlan3A4A1Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveAlternatePlan3A4A1Time = currentTime;
   var ProgramTechnicalElectiveAlternatePlan3A4A1element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3A4A1");
  if (!ProgramTechnicalElectiveAlternatePlan3A4A1flag) {
      if (ProgramTechnicalElectiveAlternatePlan3A4A1element.classList.contains("PROG-highlighted")) { 
@@ -22484,6 +26124,12 @@ $scope.ProgramTechnicalElectiveAlternatePlan3A4A1Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveAlternatePlan3A4A2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveAlternatePlan3A4A2Time <= 200) { 
+        ProgramTechnicalElectiveAlternatePlan3A4A2Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveAlternatePlan3A4A2Time = currentTime;
   var ProgramTechnicalElectiveAlternatePlan3A4A2element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3A4A2");
  if (!ProgramTechnicalElectiveAlternatePlan3A4A2flag) {
      if (ProgramTechnicalElectiveAlternatePlan3A4A2element.classList.contains("PROG-highlighted")) { 
@@ -22503,6 +26149,12 @@ $scope.ProgramTechnicalElectiveAlternatePlan3A4A2Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveAlternatePlan3A4A3Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveAlternatePlan3A4A3Time <= 200) { 
+        ProgramTechnicalElectiveAlternatePlan3A4A3Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveAlternatePlan3A4A3Time = currentTime;
   var ProgramTechnicalElectiveAlternatePlan3A4A3element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3A4A3");
  if (!ProgramTechnicalElectiveAlternatePlan3A4A3flag) {
      if (ProgramTechnicalElectiveAlternatePlan3A4A3element.classList.contains("PROG-highlighted")) { 
@@ -22522,6 +26174,12 @@ $scope.ProgramTechnicalElectiveAlternatePlan3A4A3Listener = function () {
   }
 };
 $scope.CHE448AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE448AlternatePlan3A4ATime <= 200) { 
+        CHE448AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+CHE448AlternatePlan3A4ATime = currentTime;
   var CHE448AlternatePlan3A4Aelement = document.getElementById("CHE448AlternatePlan3A4A");
  if (!CHE448AlternatePlan3A4Aflag) {
      if (CHE448AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -22549,6 +26207,12 @@ $scope.CHE448AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MECE420AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE420AlternatePlan3A4ATime <= 200) { 
+        MECE420AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MECE420AlternatePlan3A4ATime = currentTime;
   var MECE420AlternatePlan3A4Aelement = document.getElementById("MECE420AlternatePlan3A4A");
  if (!MECE420AlternatePlan3A4Aflag) {
      if (MECE420AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -22570,6 +26234,12 @@ $scope.MECE420AlternatePlan3A4AListener = function () {
   }
 };
 $scope.ENGG400AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG400AlternatePlan3A4ATime <= 200) { 
+        ENGG400AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+ENGG400AlternatePlan3A4ATime = currentTime;
   var ENGG400AlternatePlan3A4Aelement = document.getElementById("ENGG400AlternatePlan3A4A");
  if (!ENGG400AlternatePlan3A4Aflag) {
      if (ENGG400AlternatePlan3A4Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -22589,6 +26259,12 @@ $scope.ENGG400AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MECE403AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE403AlternatePlan3A4ATime <= 200) { 
+        MECE403AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MECE403AlternatePlan3A4ATime = currentTime;
   var MECE403AlternatePlan3A4Aelement = document.getElementById("MECE403AlternatePlan3A4A");
  if (!MECE403AlternatePlan3A4Aflag) {
      if (MECE403AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -22616,6 +26292,12 @@ $scope.MECE403AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MECE451AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE451AlternatePlan3A4ATime <= 200) { 
+        MECE451AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MECE451AlternatePlan3A4ATime = currentTime;
   var MECE451AlternatePlan3A4Aelement = document.getElementById("MECE451AlternatePlan3A4A");
  if (!MECE451AlternatePlan3A4Aflag) {
      if (MECE451AlternatePlan3A4Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -22639,6 +26321,12 @@ $scope.MECE451AlternatePlan3A4AListener = function () {
   }
 };
 $scope.MECE460AlternatePlan3A4AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE460AlternatePlan3A4ATime <= 200) { 
+        MECE460AlternatePlan3A4ATime = currentTime;
+        return;
+    }
+MECE460AlternatePlan3A4ATime = currentTime;
   var MECE460AlternatePlan3A4Aelement = document.getElementById("MECE460AlternatePlan3A4A");
  if (!MECE460AlternatePlan3A4Aflag) {
      if (MECE460AlternatePlan3A4Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -22676,64 +26364,186 @@ $scope.MECE460AlternatePlan3A4AListener = function () {
   }
 };
   var CHEM103CoopPlan13Aflag = false;
+  var CHEM103CoopPlan13Arflag = false;
+ var CHEM103CoopPlan13ATime = new Date().getTime();
   var ENGG100CoopPlan13Aflag = false;
+  var ENGG100CoopPlan13Arflag = false;
+ var ENGG100CoopPlan13ATime = new Date().getTime();
   var ENGG130CoopPlan13Aflag = false;
+  var ENGG130CoopPlan13Arflag = false;
+ var ENGG130CoopPlan13ATime = new Date().getTime();
   var ENGL199CoopPlan13Aflag = false;
+  var ENGL199CoopPlan13Arflag = false;
+ var ENGL199CoopPlan13ATime = new Date().getTime();
   var MATH100CoopPlan13Aflag = false;
+  var MATH100CoopPlan13Arflag = false;
+ var MATH100CoopPlan13ATime = new Date().getTime();
   var PHYS130CoopPlan13Aflag = false;
+  var PHYS130CoopPlan13Arflag = false;
+ var PHYS130CoopPlan13ATime = new Date().getTime();
   var CHEM105CoopPlan13Aflag = false;
+  var CHEM105CoopPlan13Arflag = false;
+ var CHEM105CoopPlan13ATime = new Date().getTime();
   var ENCMP100CoopPlan13Aflag = false;
+  var ENCMP100CoopPlan13Arflag = false;
+ var ENCMP100CoopPlan13ATime = new Date().getTime();
   var ENGG160CoopPlan13Aflag = false;
+  var ENGG160CoopPlan13Arflag = false;
+ var ENGG160CoopPlan13ATime = new Date().getTime();
   var ENPH131CoopPlan13Aflag = false;
+  var ENPH131CoopPlan13Arflag = false;
+ var ENPH131CoopPlan13ATime = new Date().getTime();
   var MATH101CoopPlan13Aflag = false;
+  var MATH101CoopPlan13Arflag = false;
+ var MATH101CoopPlan13ATime = new Date().getTime();
   var MATH102CoopPlan13Aflag = false;
+  var MATH102CoopPlan13Arflag = false;
+ var MATH102CoopPlan13ATime = new Date().getTime();
   var CIVE270CoopPlan13Aflag = false;
+  var CIVE270CoopPlan13Arflag = false;
+ var CIVE270CoopPlan13ATime = new Date().getTime();
   var ENGG299CoopPlan13Aflag = false;
+  var ENGG299CoopPlan13Arflag = false;
+ var ENGG299CoopPlan13ATime = new Date().getTime();
   var MATH209CoopPlan13Aflag = false;
+  var MATH209CoopPlan13Arflag = false;
+ var MATH209CoopPlan13ATime = new Date().getTime();
   var MECE230CoopPlan13Aflag = false;
+  var MECE230CoopPlan13Arflag = false;
+ var MECE230CoopPlan13ATime = new Date().getTime();
   var MECE260CoopPlan13Aflag = false;
+  var MECE260CoopPlan13Arflag = false;
+ var MECE260CoopPlan13ATime = new Date().getTime();
   var MECE265CoopPlan13Aflag = false;
+  var MECE265CoopPlan13Arflag = false;
+ var MECE265CoopPlan13ATime = new Date().getTime();
   var STAT235CoopPlan13Aflag = false;
+  var STAT235CoopPlan13Arflag = false;
+ var STAT235CoopPlan13ATime = new Date().getTime();
   var CHE243CoopPlan13Aflag = false;
+  var CHE243CoopPlan13Arflag = false;
+ var CHE243CoopPlan13ATime = new Date().getTime();
   var ECE209CoopPlan13Aflag = false;
+  var ECE209CoopPlan13Arflag = false;
+ var ECE209CoopPlan13ATime = new Date().getTime();
   var MATE202CoopPlan13Aflag = false;
+  var MATE202CoopPlan13Arflag = false;
+ var MATE202CoopPlan13ATime = new Date().getTime();
   var MATH201CoopPlan13Aflag = false;
+  var MATH201CoopPlan13Arflag = false;
+ var MATH201CoopPlan13ATime = new Date().getTime();
   var MECE200CoopPlan13Aflag = false;
+  var MECE200CoopPlan13Arflag = false;
+ var MECE200CoopPlan13ATime = new Date().getTime();
   var MECE250CoopPlan13Aflag = false;
+  var MECE250CoopPlan13Arflag = false;
+ var MECE250CoopPlan13ATime = new Date().getTime();
   var WKEXP901CoopPlan13Aflag = false;
+  var WKEXP901CoopPlan13Arflag = false;
+ var WKEXP901CoopPlan13ATime = new Date().getTime();
   var WKEXP902CoopPlan13Aflag = false;
+  var WKEXP902CoopPlan13Arflag = false;
+ var WKEXP902CoopPlan13ATime = new Date().getTime();
   var MATH300CoopPlan13Aflag = false;
+  var MATH300CoopPlan13Arflag = false;
+ var MATH300CoopPlan13ATime = new Date().getTime();
   var MECE300CoopPlan13Aflag = false;
+  var MECE300CoopPlan13Arflag = false;
+ var MECE300CoopPlan13ATime = new Date().getTime();
   var MECE301CoopPlan13Aflag = false;
+  var MECE301CoopPlan13Arflag = false;
+ var MECE301CoopPlan13ATime = new Date().getTime();
   var MECE331CoopPlan13Aflag = false;
+  var MECE331CoopPlan13Arflag = false;
+ var MECE331CoopPlan13ATime = new Date().getTime();
   var MECE371CoopPlan13Aflag = false;
+  var MECE371CoopPlan13Arflag = false;
+ var MECE371CoopPlan13ATime = new Date().getTime();
   var MECE380CoopPlan13Aflag = false;
+  var MECE380CoopPlan13Arflag = false;
+ var MECE380CoopPlan13ATime = new Date().getTime();
   var WKEXP903CoopPlan13Aflag = false;
+  var WKEXP903CoopPlan13Arflag = false;
+ var WKEXP903CoopPlan13ATime = new Date().getTime();
   var WKEXP904CoopPlan13Aflag = false;
+  var WKEXP904CoopPlan13Arflag = false;
+ var WKEXP904CoopPlan13ATime = new Date().getTime();
   var ENGM310CoopPlan13Aflag = false;
+  var ENGM310CoopPlan13Arflag = false;
+ var ENGM310CoopPlan13ATime = new Date().getTime();
   var ENGM401CoopPlan13Aflag = false;
+  var ENGM401CoopPlan13Arflag = false;
+ var ENGM401CoopPlan13ATime = new Date().getTime();
   var MECE340CoopPlan13Aflag = false;
+  var MECE340CoopPlan13Arflag = false;
+ var MECE340CoopPlan13ATime = new Date().getTime();
   var MECE360CoopPlan13Aflag = false;
+  var MECE360CoopPlan13Arflag = false;
+ var MECE360CoopPlan13ATime = new Date().getTime();
   var MECE362CoopPlan13Aflag = false;
+  var MECE362CoopPlan13Arflag = false;
+ var MECE362CoopPlan13ATime = new Date().getTime();
   var MECE390CoopPlan13Aflag = false;
+  var MECE390CoopPlan13Arflag = false;
+ var MECE390CoopPlan13ATime = new Date().getTime();
   var ComplementaryElectiveCoopPlan13A0flag = false;
+  var ComplementaryElectiveCoopPlan13A0rflag = false;
+ var ComplementaryElectiveCoopPlan13A0Time = new Date().getTime();
   var ENGG404CoopPlan13Aflag = false;
+  var ENGG404CoopPlan13Arflag = false;
+ var ENGG404CoopPlan13ATime = new Date().getTime();
   var MECE430CoopPlan13Aflag = false;
+  var MECE430CoopPlan13Arflag = false;
+ var MECE430CoopPlan13ATime = new Date().getTime();
   var MECE480CoopPlan13Aflag = false;
+  var MECE480CoopPlan13Arflag = false;
+ var MECE480CoopPlan13ATime = new Date().getTime();
   var MECE463CoopPlan13Aflag = false;
+  var MECE463CoopPlan13Arflag = false;
+ var MECE463CoopPlan13ATime = new Date().getTime();
   var ProgramTechnicalElectiveCoopPlan13A0flag = false;
+  var ProgramTechnicalElectiveCoopPlan13A0rflag = false;
+ var ProgramTechnicalElectiveCoopPlan13A0Time = new Date().getTime();
   var ProgramTechnicalElectiveCoopPlan13A1flag = false;
+  var ProgramTechnicalElectiveCoopPlan13A1rflag = false;
+ var ProgramTechnicalElectiveCoopPlan13A1Time = new Date().getTime();
   var ProgramTechnicalElectiveCoopPlan13A2flag = false;
+  var ProgramTechnicalElectiveCoopPlan13A2rflag = false;
+ var ProgramTechnicalElectiveCoopPlan13A2Time = new Date().getTime();
   var WKEXP905CoopPlan13Aflag = false;
+  var WKEXP905CoopPlan13Arflag = false;
+ var WKEXP905CoopPlan13ATime = new Date().getTime();
   var CHE448CoopPlan13Aflag = false;
+  var CHE448CoopPlan13Arflag = false;
+ var CHE448CoopPlan13ATime = new Date().getTime();
   var MECE420CoopPlan13Aflag = false;
+  var MECE420CoopPlan13Arflag = false;
+ var MECE420CoopPlan13ATime = new Date().getTime();
   var ENGG400CoopPlan13Aflag = false;
+  var ENGG400CoopPlan13Arflag = false;
+ var ENGG400CoopPlan13ATime = new Date().getTime();
   var MECE403CoopPlan13Aflag = false;
+  var MECE403CoopPlan13Arflag = false;
+ var MECE403CoopPlan13ATime = new Date().getTime();
   var MECE451CoopPlan13Aflag = false;
+  var MECE451CoopPlan13Arflag = false;
+ var MECE451CoopPlan13ATime = new Date().getTime();
   var MECE460CoopPlan13Aflag = false;
+  var MECE460CoopPlan13Arflag = false;
+ var MECE460CoopPlan13ATime = new Date().getTime();
   var ProgramTechnicalElectiveCoopPlan13A3flag = false;
+  var ProgramTechnicalElectiveCoopPlan13A3rflag = false;
+ var ProgramTechnicalElectiveCoopPlan13A3Time = new Date().getTime();
   var ITSElectiveCoopPlan13A0flag = false;
+  var ITSElectiveCoopPlan13A0rflag = false;
+ var ITSElectiveCoopPlan13A0Time = new Date().getTime();
 $scope.CHEM103CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM103CoopPlan13ATime <= 200) { 
+        CHEM103CoopPlan13ATime = currentTime;
+        return;
+    }
+CHEM103CoopPlan13ATime = currentTime;
   var CHEM103CoopPlan13Aelement = document.getElementById("CHEM103CoopPlan13A");
  if (!CHEM103CoopPlan13Aflag) {
      if (CHEM103CoopPlan13Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -22755,6 +26565,12 @@ $scope.CHEM103CoopPlan13AListener = function () {
   }
 };
 $scope.ENGG100CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG100CoopPlan13ATime <= 200) { 
+        ENGG100CoopPlan13ATime = currentTime;
+        return;
+    }
+ENGG100CoopPlan13ATime = currentTime;
   var ENGG100CoopPlan13Aelement = document.getElementById("ENGG100CoopPlan13A");
  if (!ENGG100CoopPlan13Aflag) {
      if (ENGG100CoopPlan13Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -22774,6 +26590,12 @@ $scope.ENGG100CoopPlan13AListener = function () {
   }
 };
 $scope.ENGG130CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG130CoopPlan13ATime <= 200) { 
+        ENGG130CoopPlan13ATime = currentTime;
+        return;
+    }
+ENGG130CoopPlan13ATime = currentTime;
   var ENGG130CoopPlan13Aelement = document.getElementById("ENGG130CoopPlan13A");
  if (!ENGG130CoopPlan13Aflag) {
      if (ENGG130CoopPlan13Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -22801,6 +26623,12 @@ $scope.ENGG130CoopPlan13AListener = function () {
   }
 };
 $scope.ENGL199CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGL199CoopPlan13ATime <= 200) { 
+        ENGL199CoopPlan13ATime = currentTime;
+        return;
+    }
+ENGL199CoopPlan13ATime = currentTime;
   var ENGL199CoopPlan13Aelement = document.getElementById("ENGL199CoopPlan13A");
  if (!ENGL199CoopPlan13Aflag) {
      if (ENGL199CoopPlan13Aelement.classList.contains("Other-highlighted")) { 
@@ -22822,6 +26650,12 @@ $scope.ENGL199CoopPlan13AListener = function () {
   }
 };
 $scope.MATH100CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH100CoopPlan13ATime <= 200) { 
+        MATH100CoopPlan13ATime = currentTime;
+        return;
+    }
+MATH100CoopPlan13ATime = currentTime;
   var MATH100CoopPlan13Aelement = document.getElementById("MATH100CoopPlan13A");
  if (!MATH100CoopPlan13Aflag) {
      if (MATH100CoopPlan13Aelement.classList.contains("MATH-highlighted")) { 
@@ -22853,6 +26687,12 @@ $scope.MATH100CoopPlan13AListener = function () {
   }
 };
 $scope.PHYS130CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - PHYS130CoopPlan13ATime <= 200) { 
+        PHYS130CoopPlan13ATime = currentTime;
+        return;
+    }
+PHYS130CoopPlan13ATime = currentTime;
   var PHYS130CoopPlan13Aelement = document.getElementById("PHYS130CoopPlan13A");
  if (!PHYS130CoopPlan13Aflag) {
      if (PHYS130CoopPlan13Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -22874,6 +26714,12 @@ $scope.PHYS130CoopPlan13AListener = function () {
   }
 };
 $scope.CHEM105CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM105CoopPlan13ATime <= 200) { 
+        CHEM105CoopPlan13ATime = currentTime;
+        return;
+    }
+CHEM105CoopPlan13ATime = currentTime;
   var CHEM105CoopPlan13Aelement = document.getElementById("CHEM105CoopPlan13A");
  if (!CHEM105CoopPlan13Aflag) {
      if (CHEM105CoopPlan13Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -22897,6 +26743,12 @@ $scope.CHEM105CoopPlan13AListener = function () {
   }
 };
 $scope.ENCMP100CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENCMP100CoopPlan13ATime <= 200) { 
+        ENCMP100CoopPlan13ATime = currentTime;
+        return;
+    }
+ENCMP100CoopPlan13ATime = currentTime;
   var ENCMP100CoopPlan13Aelement = document.getElementById("ENCMP100CoopPlan13A");
  if (!ENCMP100CoopPlan13Aflag) {
      if (ENCMP100CoopPlan13Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -22916,6 +26768,12 @@ $scope.ENCMP100CoopPlan13AListener = function () {
   }
 };
 $scope.ENGG160CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG160CoopPlan13ATime <= 200) { 
+        ENGG160CoopPlan13ATime = currentTime;
+        return;
+    }
+ENGG160CoopPlan13ATime = currentTime;
   var ENGG160CoopPlan13Aelement = document.getElementById("ENGG160CoopPlan13A");
  if (!ENGG160CoopPlan13Aflag) {
      if (ENGG160CoopPlan13Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -22939,6 +26797,12 @@ $scope.ENGG160CoopPlan13AListener = function () {
   }
 };
 $scope.ENPH131CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENPH131CoopPlan13ATime <= 200) { 
+        ENPH131CoopPlan13ATime = currentTime;
+        return;
+    }
+ENPH131CoopPlan13ATime = currentTime;
   var ENPH131CoopPlan13Aelement = document.getElementById("ENPH131CoopPlan13A");
  if (!ENPH131CoopPlan13Aflag) {
      if (ENPH131CoopPlan13Aelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -22968,6 +26832,12 @@ $scope.ENPH131CoopPlan13AListener = function () {
   }
 };
 $scope.MATH101CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH101CoopPlan13ATime <= 200) { 
+        MATH101CoopPlan13ATime = currentTime;
+        return;
+    }
+MATH101CoopPlan13ATime = currentTime;
   var MATH101CoopPlan13Aelement = document.getElementById("MATH101CoopPlan13A");
  if (!MATH101CoopPlan13Aflag) {
      if (MATH101CoopPlan13Aelement.classList.contains("MATH-highlighted")) { 
@@ -23003,6 +26873,12 @@ $scope.MATH101CoopPlan13AListener = function () {
   }
 };
 $scope.MATH102CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH102CoopPlan13ATime <= 200) { 
+        MATH102CoopPlan13ATime = currentTime;
+        return;
+    }
+MATH102CoopPlan13ATime = currentTime;
   var MATH102CoopPlan13Aelement = document.getElementById("MATH102CoopPlan13A");
  if (!MATH102CoopPlan13Aflag) {
      if (MATH102CoopPlan13Aelement.classList.contains("MATH-highlighted")) { 
@@ -23028,6 +26904,12 @@ $scope.MATH102CoopPlan13AListener = function () {
   }
 };
 $scope.CIVE270CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CIVE270CoopPlan13ATime <= 200) { 
+        CIVE270CoopPlan13ATime = currentTime;
+        return;
+    }
+CIVE270CoopPlan13ATime = currentTime;
   var CIVE270CoopPlan13Aelement = document.getElementById("CIVE270CoopPlan13A");
  if (!CIVE270CoopPlan13Aflag) {
      if (CIVE270CoopPlan13Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -23059,6 +26941,12 @@ $scope.CIVE270CoopPlan13AListener = function () {
   }
 };
 $scope.ENGG299CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG299CoopPlan13ATime <= 200) { 
+        ENGG299CoopPlan13ATime = currentTime;
+        return;
+    }
+ENGG299CoopPlan13ATime = currentTime;
   var ENGG299CoopPlan13Aelement = document.getElementById("ENGG299CoopPlan13A");
  if (!ENGG299CoopPlan13Aflag) {
      if (ENGG299CoopPlan13Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -23080,6 +26968,12 @@ $scope.ENGG299CoopPlan13AListener = function () {
   }
 };
 $scope.MATH209CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH209CoopPlan13ATime <= 200) { 
+        MATH209CoopPlan13ATime = currentTime;
+        return;
+    }
+MATH209CoopPlan13ATime = currentTime;
   var MATH209CoopPlan13Aelement = document.getElementById("MATH209CoopPlan13A");
  if (!MATH209CoopPlan13Aflag) {
      if (MATH209CoopPlan13Aelement.classList.contains("MATH-highlighted")) { 
@@ -23111,6 +27005,12 @@ $scope.MATH209CoopPlan13AListener = function () {
   }
 };
 $scope.MECE230CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE230CoopPlan13ATime <= 200) { 
+        MECE230CoopPlan13ATime = currentTime;
+        return;
+    }
+MECE230CoopPlan13ATime = currentTime;
   var MECE230CoopPlan13Aelement = document.getElementById("MECE230CoopPlan13A");
  if (!MECE230CoopPlan13Aflag) {
      if (MECE230CoopPlan13Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -23138,6 +27038,12 @@ $scope.MECE230CoopPlan13AListener = function () {
   }
 };
 $scope.MECE260CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE260CoopPlan13ATime <= 200) { 
+        MECE260CoopPlan13ATime = currentTime;
+        return;
+    }
+MECE260CoopPlan13ATime = currentTime;
   var MECE260CoopPlan13Aelement = document.getElementById("MECE260CoopPlan13A");
  if (!MECE260CoopPlan13Aflag) {
      if (MECE260CoopPlan13Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -23165,6 +27071,12 @@ $scope.MECE260CoopPlan13AListener = function () {
   }
 };
 $scope.MECE265CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE265CoopPlan13ATime <= 200) { 
+        MECE265CoopPlan13ATime = currentTime;
+        return;
+    }
+MECE265CoopPlan13ATime = currentTime;
   var MECE265CoopPlan13Aelement = document.getElementById("MECE265CoopPlan13A");
  if (!MECE265CoopPlan13Aflag) {
      if (MECE265CoopPlan13Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -23188,6 +27100,12 @@ $scope.MECE265CoopPlan13AListener = function () {
   }
 };
 $scope.STAT235CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - STAT235CoopPlan13ATime <= 200) { 
+        STAT235CoopPlan13ATime = currentTime;
+        return;
+    }
+STAT235CoopPlan13ATime = currentTime;
   var STAT235CoopPlan13Aelement = document.getElementById("STAT235CoopPlan13A");
  if (!STAT235CoopPlan13Aflag) {
      if (STAT235CoopPlan13Aelement.classList.contains("MATH-highlighted")) { 
@@ -23213,6 +27131,12 @@ $scope.STAT235CoopPlan13AListener = function () {
   }
 };
 $scope.CHE243CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE243CoopPlan13ATime <= 200) { 
+        CHE243CoopPlan13ATime = currentTime;
+        return;
+    }
+CHE243CoopPlan13ATime = currentTime;
   var CHE243CoopPlan13Aelement = document.getElementById("CHE243CoopPlan13A");
  if (!CHE243CoopPlan13Aflag) {
      if (CHE243CoopPlan13Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -23240,6 +27164,12 @@ $scope.CHE243CoopPlan13AListener = function () {
   }
 };
 $scope.ECE209CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ECE209CoopPlan13ATime <= 200) { 
+        ECE209CoopPlan13ATime = currentTime;
+        return;
+    }
+ECE209CoopPlan13ATime = currentTime;
   var ECE209CoopPlan13Aelement = document.getElementById("ECE209CoopPlan13A");
  if (!ECE209CoopPlan13Aflag) {
      if (ECE209CoopPlan13Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -23261,6 +27191,12 @@ $scope.ECE209CoopPlan13AListener = function () {
   }
 };
 $scope.MATE202CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATE202CoopPlan13ATime <= 200) { 
+        MATE202CoopPlan13ATime = currentTime;
+        return;
+    }
+MATE202CoopPlan13ATime = currentTime;
   var MATE202CoopPlan13Aelement = document.getElementById("MATE202CoopPlan13A");
  if (!MATE202CoopPlan13Aflag) {
      if (MATE202CoopPlan13Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -23284,6 +27220,12 @@ $scope.MATE202CoopPlan13AListener = function () {
   }
 };
 $scope.MATH201CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH201CoopPlan13ATime <= 200) { 
+        MATH201CoopPlan13ATime = currentTime;
+        return;
+    }
+MATH201CoopPlan13ATime = currentTime;
   var MATH201CoopPlan13Aelement = document.getElementById("MATH201CoopPlan13A");
  if (!MATH201CoopPlan13Aflag) {
      if (MATH201CoopPlan13Aelement.classList.contains("MATH-highlighted")) { 
@@ -23311,6 +27253,12 @@ $scope.MATH201CoopPlan13AListener = function () {
   }
 };
 $scope.MECE200CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE200CoopPlan13ATime <= 200) { 
+        MECE200CoopPlan13ATime = currentTime;
+        return;
+    }
+MECE200CoopPlan13ATime = currentTime;
   var MECE200CoopPlan13Aelement = document.getElementById("MECE200CoopPlan13A");
  if (!MECE200CoopPlan13Aflag) {
      if (MECE200CoopPlan13Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -23332,6 +27280,12 @@ $scope.MECE200CoopPlan13AListener = function () {
   }
 };
 $scope.MECE250CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE250CoopPlan13ATime <= 200) { 
+        MECE250CoopPlan13ATime = currentTime;
+        return;
+    }
+MECE250CoopPlan13ATime = currentTime;
   var MECE250CoopPlan13Aelement = document.getElementById("MECE250CoopPlan13A");
  if (!MECE250CoopPlan13Aflag) {
      if (MECE250CoopPlan13Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -23363,6 +27317,12 @@ $scope.MECE250CoopPlan13AListener = function () {
   }
 };
 $scope.WKEXP901CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP901CoopPlan13ATime <= 200) { 
+        WKEXP901CoopPlan13ATime = currentTime;
+        return;
+    }
+WKEXP901CoopPlan13ATime = currentTime;
   var WKEXP901CoopPlan13Aelement = document.getElementById("WKEXP901CoopPlan13A");
  if (!WKEXP901CoopPlan13Aflag) {
      if (WKEXP901CoopPlan13Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -23386,6 +27346,12 @@ $scope.WKEXP901CoopPlan13AListener = function () {
   }
 };
 $scope.WKEXP902CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP902CoopPlan13ATime <= 200) { 
+        WKEXP902CoopPlan13ATime = currentTime;
+        return;
+    }
+WKEXP902CoopPlan13ATime = currentTime;
   var WKEXP902CoopPlan13Aelement = document.getElementById("WKEXP902CoopPlan13A");
  if (!WKEXP902CoopPlan13Aflag) {
      if (WKEXP902CoopPlan13Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -23409,6 +27375,12 @@ $scope.WKEXP902CoopPlan13AListener = function () {
   }
 };
 $scope.MATH300CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH300CoopPlan13ATime <= 200) { 
+        MATH300CoopPlan13ATime = currentTime;
+        return;
+    }
+MATH300CoopPlan13ATime = currentTime;
   var MATH300CoopPlan13Aelement = document.getElementById("MATH300CoopPlan13A");
  if (!MATH300CoopPlan13Aflag) {
      if (MATH300CoopPlan13Aelement.classList.contains("MATH-highlighted")) { 
@@ -23438,6 +27410,12 @@ $scope.MATH300CoopPlan13AListener = function () {
   }
 };
 $scope.MECE300CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE300CoopPlan13ATime <= 200) { 
+        MECE300CoopPlan13ATime = currentTime;
+        return;
+    }
+MECE300CoopPlan13ATime = currentTime;
   var MECE300CoopPlan13Aelement = document.getElementById("MECE300CoopPlan13A");
  if (!MECE300CoopPlan13Aflag) {
      if (MECE300CoopPlan13Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -23469,6 +27447,12 @@ $scope.MECE300CoopPlan13AListener = function () {
   }
 };
 $scope.MECE301CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE301CoopPlan13ATime <= 200) { 
+        MECE301CoopPlan13ATime = currentTime;
+        return;
+    }
+MECE301CoopPlan13ATime = currentTime;
   var MECE301CoopPlan13Aelement = document.getElementById("MECE301CoopPlan13A");
  if (!MECE301CoopPlan13Aflag) {
      if (MECE301CoopPlan13Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -23492,6 +27476,12 @@ $scope.MECE301CoopPlan13AListener = function () {
   }
 };
 $scope.MECE331CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE331CoopPlan13ATime <= 200) { 
+        MECE331CoopPlan13ATime = currentTime;
+        return;
+    }
+MECE331CoopPlan13ATime = currentTime;
   var MECE331CoopPlan13Aelement = document.getElementById("MECE331CoopPlan13A");
  if (!MECE331CoopPlan13Aflag) {
      if (MECE331CoopPlan13Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -23531,6 +27521,12 @@ $scope.MECE331CoopPlan13AListener = function () {
   }
 };
 $scope.MECE371CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE371CoopPlan13ATime <= 200) { 
+        MECE371CoopPlan13ATime = currentTime;
+        return;
+    }
+MECE371CoopPlan13ATime = currentTime;
   var MECE371CoopPlan13Aelement = document.getElementById("MECE371CoopPlan13A");
  if (!MECE371CoopPlan13Aflag) {
      if (MECE371CoopPlan13Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -23564,6 +27560,12 @@ $scope.MECE371CoopPlan13AListener = function () {
   }
 };
 $scope.MECE380CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE380CoopPlan13ATime <= 200) { 
+        MECE380CoopPlan13ATime = currentTime;
+        return;
+    }
+MECE380CoopPlan13ATime = currentTime;
   var MECE380CoopPlan13Aelement = document.getElementById("MECE380CoopPlan13A");
  if (!MECE380CoopPlan13Aflag) {
      if (MECE380CoopPlan13Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -23589,6 +27591,12 @@ $scope.MECE380CoopPlan13AListener = function () {
   }
 };
 $scope.WKEXP903CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP903CoopPlan13ATime <= 200) { 
+        WKEXP903CoopPlan13ATime = currentTime;
+        return;
+    }
+WKEXP903CoopPlan13ATime = currentTime;
   var WKEXP903CoopPlan13Aelement = document.getElementById("WKEXP903CoopPlan13A");
  if (!WKEXP903CoopPlan13Aflag) {
      if (WKEXP903CoopPlan13Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -23612,6 +27620,12 @@ $scope.WKEXP903CoopPlan13AListener = function () {
   }
 };
 $scope.WKEXP904CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP904CoopPlan13ATime <= 200) { 
+        WKEXP904CoopPlan13ATime = currentTime;
+        return;
+    }
+WKEXP904CoopPlan13ATime = currentTime;
   var WKEXP904CoopPlan13Aelement = document.getElementById("WKEXP904CoopPlan13A");
  if (!WKEXP904CoopPlan13Aflag) {
      if (WKEXP904CoopPlan13Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -23635,6 +27649,12 @@ $scope.WKEXP904CoopPlan13AListener = function () {
   }
 };
 $scope.ENGM310CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM310CoopPlan13ATime <= 200) { 
+        ENGM310CoopPlan13ATime = currentTime;
+        return;
+    }
+ENGM310CoopPlan13ATime = currentTime;
   var ENGM310CoopPlan13Aelement = document.getElementById("ENGM310CoopPlan13A");
  if (!ENGM310CoopPlan13Aflag) {
      if (ENGM310CoopPlan13Aelement.classList.contains("Other-highlighted")) { 
@@ -23656,6 +27676,12 @@ $scope.ENGM310CoopPlan13AListener = function () {
   }
 };
 $scope.ENGM401CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM401CoopPlan13ATime <= 200) { 
+        ENGM401CoopPlan13ATime = currentTime;
+        return;
+    }
+ENGM401CoopPlan13ATime = currentTime;
   var ENGM401CoopPlan13Aelement = document.getElementById("ENGM401CoopPlan13A");
  if (!ENGM401CoopPlan13Aflag) {
      if (ENGM401CoopPlan13Aelement.classList.contains("Other-highlighted")) { 
@@ -23677,6 +27703,12 @@ $scope.ENGM401CoopPlan13AListener = function () {
   }
 };
 $scope.MECE340CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE340CoopPlan13ATime <= 200) { 
+        MECE340CoopPlan13ATime = currentTime;
+        return;
+    }
+MECE340CoopPlan13ATime = currentTime;
   var MECE340CoopPlan13Aelement = document.getElementById("MECE340CoopPlan13A");
  if (!MECE340CoopPlan13Aflag) {
      if (MECE340CoopPlan13Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -23704,6 +27736,12 @@ $scope.MECE340CoopPlan13AListener = function () {
   }
 };
 $scope.MECE360CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE360CoopPlan13ATime <= 200) { 
+        MECE360CoopPlan13ATime = currentTime;
+        return;
+    }
+MECE360CoopPlan13ATime = currentTime;
   var MECE360CoopPlan13Aelement = document.getElementById("MECE360CoopPlan13A");
  if (!MECE360CoopPlan13Aflag) {
      if (MECE360CoopPlan13Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -23739,6 +27777,12 @@ $scope.MECE360CoopPlan13AListener = function () {
   }
 };
 $scope.MECE362CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE362CoopPlan13ATime <= 200) { 
+        MECE362CoopPlan13ATime = currentTime;
+        return;
+    }
+MECE362CoopPlan13ATime = currentTime;
   var MECE362CoopPlan13Aelement = document.getElementById("MECE362CoopPlan13A");
  if (!MECE362CoopPlan13Aflag) {
      if (MECE362CoopPlan13Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -23764,6 +27808,12 @@ $scope.MECE362CoopPlan13AListener = function () {
   }
 };
 $scope.MECE390CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE390CoopPlan13ATime <= 200) { 
+        MECE390CoopPlan13ATime = currentTime;
+        return;
+    }
+MECE390CoopPlan13ATime = currentTime;
   var MECE390CoopPlan13Aelement = document.getElementById("MECE390CoopPlan13A");
  if (!MECE390CoopPlan13Aflag) {
      if (MECE390CoopPlan13Aelement.classList.contains("MATH-highlighted")) { 
@@ -23789,6 +27839,12 @@ $scope.MECE390CoopPlan13AListener = function () {
   }
 };
 $scope.ComplementaryElectiveCoopPlan13A0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ComplementaryElectiveCoopPlan13A0Time <= 200) { 
+        ComplementaryElectiveCoopPlan13A0Time = currentTime;
+        return;
+    }
+ComplementaryElectiveCoopPlan13A0Time = currentTime;
   var ComplementaryElectiveCoopPlan13A0element = document.getElementById("ComplementaryElectiveCoopPlan13A0");
  if (!ComplementaryElectiveCoopPlan13A0flag) {
      if (ComplementaryElectiveCoopPlan13A0element.classList.contains("COMP-highlighted")) { 
@@ -23808,6 +27864,12 @@ $scope.ComplementaryElectiveCoopPlan13A0Listener = function () {
   }
 };
 $scope.ENGG404CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG404CoopPlan13ATime <= 200) { 
+        ENGG404CoopPlan13ATime = currentTime;
+        return;
+    }
+ENGG404CoopPlan13ATime = currentTime;
   var ENGG404CoopPlan13Aelement = document.getElementById("ENGG404CoopPlan13A");
  if (!ENGG404CoopPlan13Aflag) {
      if (ENGG404CoopPlan13Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -23827,6 +27889,12 @@ $scope.ENGG404CoopPlan13AListener = function () {
   }
 };
 $scope.MECE430CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE430CoopPlan13ATime <= 200) { 
+        MECE430CoopPlan13ATime = currentTime;
+        return;
+    }
+MECE430CoopPlan13ATime = currentTime;
   var MECE430CoopPlan13Aelement = document.getElementById("MECE430CoopPlan13A");
  if (!MECE430CoopPlan13Aflag) {
      if (MECE430CoopPlan13Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -23848,6 +27916,12 @@ $scope.MECE430CoopPlan13AListener = function () {
   }
 };
 $scope.MECE480CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE480CoopPlan13ATime <= 200) { 
+        MECE480CoopPlan13ATime = currentTime;
+        return;
+    }
+MECE480CoopPlan13ATime = currentTime;
   var MECE480CoopPlan13Aelement = document.getElementById("MECE480CoopPlan13A");
  if (!MECE480CoopPlan13Aflag) {
      if (MECE480CoopPlan13Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -23873,6 +27947,12 @@ $scope.MECE480CoopPlan13AListener = function () {
   }
 };
 $scope.MECE463CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE463CoopPlan13ATime <= 200) { 
+        MECE463CoopPlan13ATime = currentTime;
+        return;
+    }
+MECE463CoopPlan13ATime = currentTime;
   var MECE463CoopPlan13Aelement = document.getElementById("MECE463CoopPlan13A");
  if (!MECE463CoopPlan13Aflag) {
      if (MECE463CoopPlan13Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -23898,6 +27978,12 @@ $scope.MECE463CoopPlan13AListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveCoopPlan13A0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveCoopPlan13A0Time <= 200) { 
+        ProgramTechnicalElectiveCoopPlan13A0Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveCoopPlan13A0Time = currentTime;
   var ProgramTechnicalElectiveCoopPlan13A0element = document.getElementById("ProgramTechnicalElectiveCoopPlan13A0");
  if (!ProgramTechnicalElectiveCoopPlan13A0flag) {
      if (ProgramTechnicalElectiveCoopPlan13A0element.classList.contains("PROG-highlighted")) { 
@@ -23917,6 +28003,12 @@ $scope.ProgramTechnicalElectiveCoopPlan13A0Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveCoopPlan13A1Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveCoopPlan13A1Time <= 200) { 
+        ProgramTechnicalElectiveCoopPlan13A1Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveCoopPlan13A1Time = currentTime;
   var ProgramTechnicalElectiveCoopPlan13A1element = document.getElementById("ProgramTechnicalElectiveCoopPlan13A1");
  if (!ProgramTechnicalElectiveCoopPlan13A1flag) {
      if (ProgramTechnicalElectiveCoopPlan13A1element.classList.contains("PROG-highlighted")) { 
@@ -23936,6 +28028,12 @@ $scope.ProgramTechnicalElectiveCoopPlan13A1Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveCoopPlan13A2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveCoopPlan13A2Time <= 200) { 
+        ProgramTechnicalElectiveCoopPlan13A2Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveCoopPlan13A2Time = currentTime;
   var ProgramTechnicalElectiveCoopPlan13A2element = document.getElementById("ProgramTechnicalElectiveCoopPlan13A2");
  if (!ProgramTechnicalElectiveCoopPlan13A2flag) {
      if (ProgramTechnicalElectiveCoopPlan13A2element.classList.contains("PROG-highlighted")) { 
@@ -23955,6 +28053,12 @@ $scope.ProgramTechnicalElectiveCoopPlan13A2Listener = function () {
   }
 };
 $scope.WKEXP905CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP905CoopPlan13ATime <= 200) { 
+        WKEXP905CoopPlan13ATime = currentTime;
+        return;
+    }
+WKEXP905CoopPlan13ATime = currentTime;
   var WKEXP905CoopPlan13Aelement = document.getElementById("WKEXP905CoopPlan13A");
  if (!WKEXP905CoopPlan13Aflag) {
      if (WKEXP905CoopPlan13Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -23976,6 +28080,12 @@ $scope.WKEXP905CoopPlan13AListener = function () {
   }
 };
 $scope.CHE448CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE448CoopPlan13ATime <= 200) { 
+        CHE448CoopPlan13ATime = currentTime;
+        return;
+    }
+CHE448CoopPlan13ATime = currentTime;
   var CHE448CoopPlan13Aelement = document.getElementById("CHE448CoopPlan13A");
  if (!CHE448CoopPlan13Aflag) {
      if (CHE448CoopPlan13Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -24003,6 +28113,12 @@ $scope.CHE448CoopPlan13AListener = function () {
   }
 };
 $scope.MECE420CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE420CoopPlan13ATime <= 200) { 
+        MECE420CoopPlan13ATime = currentTime;
+        return;
+    }
+MECE420CoopPlan13ATime = currentTime;
   var MECE420CoopPlan13Aelement = document.getElementById("MECE420CoopPlan13A");
  if (!MECE420CoopPlan13Aflag) {
      if (MECE420CoopPlan13Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -24024,6 +28140,12 @@ $scope.MECE420CoopPlan13AListener = function () {
   }
 };
 $scope.ENGG400CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG400CoopPlan13ATime <= 200) { 
+        ENGG400CoopPlan13ATime = currentTime;
+        return;
+    }
+ENGG400CoopPlan13ATime = currentTime;
   var ENGG400CoopPlan13Aelement = document.getElementById("ENGG400CoopPlan13A");
  if (!ENGG400CoopPlan13Aflag) {
      if (ENGG400CoopPlan13Aelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -24043,6 +28165,12 @@ $scope.ENGG400CoopPlan13AListener = function () {
   }
 };
 $scope.MECE403CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE403CoopPlan13ATime <= 200) { 
+        MECE403CoopPlan13ATime = currentTime;
+        return;
+    }
+MECE403CoopPlan13ATime = currentTime;
   var MECE403CoopPlan13Aelement = document.getElementById("MECE403CoopPlan13A");
  if (!MECE403CoopPlan13Aflag) {
      if (MECE403CoopPlan13Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -24070,6 +28198,12 @@ $scope.MECE403CoopPlan13AListener = function () {
   }
 };
 $scope.MECE451CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE451CoopPlan13ATime <= 200) { 
+        MECE451CoopPlan13ATime = currentTime;
+        return;
+    }
+MECE451CoopPlan13ATime = currentTime;
   var MECE451CoopPlan13Aelement = document.getElementById("MECE451CoopPlan13A");
  if (!MECE451CoopPlan13Aflag) {
      if (MECE451CoopPlan13Aelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -24093,6 +28227,12 @@ $scope.MECE451CoopPlan13AListener = function () {
   }
 };
 $scope.MECE460CoopPlan13AListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE460CoopPlan13ATime <= 200) { 
+        MECE460CoopPlan13ATime = currentTime;
+        return;
+    }
+MECE460CoopPlan13ATime = currentTime;
   var MECE460CoopPlan13Aelement = document.getElementById("MECE460CoopPlan13A");
  if (!MECE460CoopPlan13Aflag) {
      if (MECE460CoopPlan13Aelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -24130,6 +28270,12 @@ $scope.MECE460CoopPlan13AListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveCoopPlan13A3Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveCoopPlan13A3Time <= 200) { 
+        ProgramTechnicalElectiveCoopPlan13A3Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveCoopPlan13A3Time = currentTime;
   var ProgramTechnicalElectiveCoopPlan13A3element = document.getElementById("ProgramTechnicalElectiveCoopPlan13A3");
  if (!ProgramTechnicalElectiveCoopPlan13A3flag) {
      if (ProgramTechnicalElectiveCoopPlan13A3element.classList.contains("PROG-highlighted")) { 
@@ -24149,6 +28295,12 @@ $scope.ProgramTechnicalElectiveCoopPlan13A3Listener = function () {
   }
 };
 $scope.ITSElectiveCoopPlan13A0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ITSElectiveCoopPlan13A0Time <= 200) { 
+        ITSElectiveCoopPlan13A0Time = currentTime;
+        return;
+    }
+ITSElectiveCoopPlan13A0Time = currentTime;
   var ITSElectiveCoopPlan13A0element = document.getElementById("ITSElectiveCoopPlan13A0");
  if (!ITSElectiveCoopPlan13A0flag) {
      if (ITSElectiveCoopPlan13A0element.classList.contains("ITS-highlighted")) { 
@@ -24168,64 +28320,186 @@ $scope.ITSElectiveCoopPlan13A0Listener = function () {
   }
 };
   var CHEM103CoopPlan13Bflag = false;
+  var CHEM103CoopPlan13Brflag = false;
+ var CHEM103CoopPlan13BTime = new Date().getTime();
   var ENGG100CoopPlan13Bflag = false;
+  var ENGG100CoopPlan13Brflag = false;
+ var ENGG100CoopPlan13BTime = new Date().getTime();
   var ENGG130CoopPlan13Bflag = false;
+  var ENGG130CoopPlan13Brflag = false;
+ var ENGG130CoopPlan13BTime = new Date().getTime();
   var ENGL199CoopPlan13Bflag = false;
+  var ENGL199CoopPlan13Brflag = false;
+ var ENGL199CoopPlan13BTime = new Date().getTime();
   var MATH100CoopPlan13Bflag = false;
+  var MATH100CoopPlan13Brflag = false;
+ var MATH100CoopPlan13BTime = new Date().getTime();
   var PHYS130CoopPlan13Bflag = false;
+  var PHYS130CoopPlan13Brflag = false;
+ var PHYS130CoopPlan13BTime = new Date().getTime();
   var CHEM105CoopPlan13Bflag = false;
+  var CHEM105CoopPlan13Brflag = false;
+ var CHEM105CoopPlan13BTime = new Date().getTime();
   var ENCMP100CoopPlan13Bflag = false;
+  var ENCMP100CoopPlan13Brflag = false;
+ var ENCMP100CoopPlan13BTime = new Date().getTime();
   var ENGG160CoopPlan13Bflag = false;
+  var ENGG160CoopPlan13Brflag = false;
+ var ENGG160CoopPlan13BTime = new Date().getTime();
   var ENPH131CoopPlan13Bflag = false;
+  var ENPH131CoopPlan13Brflag = false;
+ var ENPH131CoopPlan13BTime = new Date().getTime();
   var MATH101CoopPlan13Bflag = false;
+  var MATH101CoopPlan13Brflag = false;
+ var MATH101CoopPlan13BTime = new Date().getTime();
   var MATH102CoopPlan13Bflag = false;
+  var MATH102CoopPlan13Brflag = false;
+ var MATH102CoopPlan13BTime = new Date().getTime();
   var CIVE270CoopPlan13Bflag = false;
+  var CIVE270CoopPlan13Brflag = false;
+ var CIVE270CoopPlan13BTime = new Date().getTime();
   var ENGG299CoopPlan13Bflag = false;
+  var ENGG299CoopPlan13Brflag = false;
+ var ENGG299CoopPlan13BTime = new Date().getTime();
   var MATH209CoopPlan13Bflag = false;
+  var MATH209CoopPlan13Brflag = false;
+ var MATH209CoopPlan13BTime = new Date().getTime();
   var MECE230CoopPlan13Bflag = false;
+  var MECE230CoopPlan13Brflag = false;
+ var MECE230CoopPlan13BTime = new Date().getTime();
   var MECE260CoopPlan13Bflag = false;
+  var MECE260CoopPlan13Brflag = false;
+ var MECE260CoopPlan13BTime = new Date().getTime();
   var MECE265CoopPlan13Bflag = false;
+  var MECE265CoopPlan13Brflag = false;
+ var MECE265CoopPlan13BTime = new Date().getTime();
   var STAT235CoopPlan13Bflag = false;
+  var STAT235CoopPlan13Brflag = false;
+ var STAT235CoopPlan13BTime = new Date().getTime();
   var CHE243CoopPlan13Bflag = false;
+  var CHE243CoopPlan13Brflag = false;
+ var CHE243CoopPlan13BTime = new Date().getTime();
   var ECE209CoopPlan13Bflag = false;
+  var ECE209CoopPlan13Brflag = false;
+ var ECE209CoopPlan13BTime = new Date().getTime();
   var MATE202CoopPlan13Bflag = false;
+  var MATE202CoopPlan13Brflag = false;
+ var MATE202CoopPlan13BTime = new Date().getTime();
   var MATH201CoopPlan13Bflag = false;
+  var MATH201CoopPlan13Brflag = false;
+ var MATH201CoopPlan13BTime = new Date().getTime();
   var MECE200CoopPlan13Bflag = false;
+  var MECE200CoopPlan13Brflag = false;
+ var MECE200CoopPlan13BTime = new Date().getTime();
   var MECE250CoopPlan13Bflag = false;
+  var MECE250CoopPlan13Brflag = false;
+ var MECE250CoopPlan13BTime = new Date().getTime();
   var WKEXP901CoopPlan13Bflag = false;
+  var WKEXP901CoopPlan13Brflag = false;
+ var WKEXP901CoopPlan13BTime = new Date().getTime();
   var WKEXP902CoopPlan13Bflag = false;
+  var WKEXP902CoopPlan13Brflag = false;
+ var WKEXP902CoopPlan13BTime = new Date().getTime();
   var ENGM310CoopPlan13Bflag = false;
+  var ENGM310CoopPlan13Brflag = false;
+ var ENGM310CoopPlan13BTime = new Date().getTime();
   var ENGM401CoopPlan13Bflag = false;
+  var ENGM401CoopPlan13Brflag = false;
+ var ENGM401CoopPlan13BTime = new Date().getTime();
   var MECE340CoopPlan13Bflag = false;
+  var MECE340CoopPlan13Brflag = false;
+ var MECE340CoopPlan13BTime = new Date().getTime();
   var MECE360CoopPlan13Bflag = false;
+  var MECE360CoopPlan13Brflag = false;
+ var MECE360CoopPlan13BTime = new Date().getTime();
   var MECE362CoopPlan13Bflag = false;
+  var MECE362CoopPlan13Brflag = false;
+ var MECE362CoopPlan13BTime = new Date().getTime();
   var MECE390CoopPlan13Bflag = false;
+  var MECE390CoopPlan13Brflag = false;
+ var MECE390CoopPlan13BTime = new Date().getTime();
   var ComplementaryElectiveCoopPlan13B0flag = false;
+  var ComplementaryElectiveCoopPlan13B0rflag = false;
+ var ComplementaryElectiveCoopPlan13B0Time = new Date().getTime();
   var WKEXP903CoopPlan13Bflag = false;
+  var WKEXP903CoopPlan13Brflag = false;
+ var WKEXP903CoopPlan13BTime = new Date().getTime();
   var WKEXP904CoopPlan13Bflag = false;
+  var WKEXP904CoopPlan13Brflag = false;
+ var WKEXP904CoopPlan13BTime = new Date().getTime();
   var MATH300CoopPlan13Bflag = false;
+  var MATH300CoopPlan13Brflag = false;
+ var MATH300CoopPlan13BTime = new Date().getTime();
   var MECE300CoopPlan13Bflag = false;
+  var MECE300CoopPlan13Brflag = false;
+ var MECE300CoopPlan13BTime = new Date().getTime();
   var MECE301CoopPlan13Bflag = false;
+  var MECE301CoopPlan13Brflag = false;
+ var MECE301CoopPlan13BTime = new Date().getTime();
   var MECE331CoopPlan13Bflag = false;
+  var MECE331CoopPlan13Brflag = false;
+ var MECE331CoopPlan13BTime = new Date().getTime();
   var MECE371CoopPlan13Bflag = false;
+  var MECE371CoopPlan13Brflag = false;
+ var MECE371CoopPlan13BTime = new Date().getTime();
   var MECE380CoopPlan13Bflag = false;
+  var MECE380CoopPlan13Brflag = false;
+ var MECE380CoopPlan13BTime = new Date().getTime();
   var ENGG404CoopPlan13Bflag = false;
+  var ENGG404CoopPlan13Brflag = false;
+ var ENGG404CoopPlan13BTime = new Date().getTime();
   var MECE430CoopPlan13Bflag = false;
+  var MECE430CoopPlan13Brflag = false;
+ var MECE430CoopPlan13BTime = new Date().getTime();
   var MECE480CoopPlan13Bflag = false;
+  var MECE480CoopPlan13Brflag = false;
+ var MECE480CoopPlan13BTime = new Date().getTime();
   var MECE463CoopPlan13Bflag = false;
+  var MECE463CoopPlan13Brflag = false;
+ var MECE463CoopPlan13BTime = new Date().getTime();
   var ProgramTechnicalElectiveCoopPlan13B0flag = false;
+  var ProgramTechnicalElectiveCoopPlan13B0rflag = false;
+ var ProgramTechnicalElectiveCoopPlan13B0Time = new Date().getTime();
   var ProgramTechnicalElectiveCoopPlan13B1flag = false;
+  var ProgramTechnicalElectiveCoopPlan13B1rflag = false;
+ var ProgramTechnicalElectiveCoopPlan13B1Time = new Date().getTime();
   var ProgramTechnicalElectiveCoopPlan13B2flag = false;
+  var ProgramTechnicalElectiveCoopPlan13B2rflag = false;
+ var ProgramTechnicalElectiveCoopPlan13B2Time = new Date().getTime();
   var WKEXP905CoopPlan13Bflag = false;
+  var WKEXP905CoopPlan13Brflag = false;
+ var WKEXP905CoopPlan13BTime = new Date().getTime();
   var CHE448CoopPlan13Bflag = false;
+  var CHE448CoopPlan13Brflag = false;
+ var CHE448CoopPlan13BTime = new Date().getTime();
   var MECE420CoopPlan13Bflag = false;
+  var MECE420CoopPlan13Brflag = false;
+ var MECE420CoopPlan13BTime = new Date().getTime();
   var ENGG400CoopPlan13Bflag = false;
+  var ENGG400CoopPlan13Brflag = false;
+ var ENGG400CoopPlan13BTime = new Date().getTime();
   var MECE403CoopPlan13Bflag = false;
+  var MECE403CoopPlan13Brflag = false;
+ var MECE403CoopPlan13BTime = new Date().getTime();
   var MECE451CoopPlan13Bflag = false;
+  var MECE451CoopPlan13Brflag = false;
+ var MECE451CoopPlan13BTime = new Date().getTime();
   var MECE460CoopPlan13Bflag = false;
+  var MECE460CoopPlan13Brflag = false;
+ var MECE460CoopPlan13BTime = new Date().getTime();
   var ProgramTechnicalElectiveCoopPlan13B3flag = false;
+  var ProgramTechnicalElectiveCoopPlan13B3rflag = false;
+ var ProgramTechnicalElectiveCoopPlan13B3Time = new Date().getTime();
   var ITSElectiveCoopPlan13B0flag = false;
+  var ITSElectiveCoopPlan13B0rflag = false;
+ var ITSElectiveCoopPlan13B0Time = new Date().getTime();
 $scope.CHEM103CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM103CoopPlan13BTime <= 200) { 
+        CHEM103CoopPlan13BTime = currentTime;
+        return;
+    }
+CHEM103CoopPlan13BTime = currentTime;
   var CHEM103CoopPlan13Belement = document.getElementById("CHEM103CoopPlan13B");
  if (!CHEM103CoopPlan13Bflag) {
      if (CHEM103CoopPlan13Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -24247,6 +28521,12 @@ $scope.CHEM103CoopPlan13BListener = function () {
   }
 };
 $scope.ENGG100CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG100CoopPlan13BTime <= 200) { 
+        ENGG100CoopPlan13BTime = currentTime;
+        return;
+    }
+ENGG100CoopPlan13BTime = currentTime;
   var ENGG100CoopPlan13Belement = document.getElementById("ENGG100CoopPlan13B");
  if (!ENGG100CoopPlan13Bflag) {
      if (ENGG100CoopPlan13Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -24266,6 +28546,12 @@ $scope.ENGG100CoopPlan13BListener = function () {
   }
 };
 $scope.ENGG130CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG130CoopPlan13BTime <= 200) { 
+        ENGG130CoopPlan13BTime = currentTime;
+        return;
+    }
+ENGG130CoopPlan13BTime = currentTime;
   var ENGG130CoopPlan13Belement = document.getElementById("ENGG130CoopPlan13B");
  if (!ENGG130CoopPlan13Bflag) {
      if (ENGG130CoopPlan13Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -24293,6 +28579,12 @@ $scope.ENGG130CoopPlan13BListener = function () {
   }
 };
 $scope.ENGL199CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGL199CoopPlan13BTime <= 200) { 
+        ENGL199CoopPlan13BTime = currentTime;
+        return;
+    }
+ENGL199CoopPlan13BTime = currentTime;
   var ENGL199CoopPlan13Belement = document.getElementById("ENGL199CoopPlan13B");
  if (!ENGL199CoopPlan13Bflag) {
      if (ENGL199CoopPlan13Belement.classList.contains("Other-highlighted")) { 
@@ -24314,6 +28606,12 @@ $scope.ENGL199CoopPlan13BListener = function () {
   }
 };
 $scope.MATH100CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH100CoopPlan13BTime <= 200) { 
+        MATH100CoopPlan13BTime = currentTime;
+        return;
+    }
+MATH100CoopPlan13BTime = currentTime;
   var MATH100CoopPlan13Belement = document.getElementById("MATH100CoopPlan13B");
  if (!MATH100CoopPlan13Bflag) {
      if (MATH100CoopPlan13Belement.classList.contains("MATH-highlighted")) { 
@@ -24345,6 +28643,12 @@ $scope.MATH100CoopPlan13BListener = function () {
   }
 };
 $scope.PHYS130CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - PHYS130CoopPlan13BTime <= 200) { 
+        PHYS130CoopPlan13BTime = currentTime;
+        return;
+    }
+PHYS130CoopPlan13BTime = currentTime;
   var PHYS130CoopPlan13Belement = document.getElementById("PHYS130CoopPlan13B");
  if (!PHYS130CoopPlan13Bflag) {
      if (PHYS130CoopPlan13Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -24366,6 +28670,12 @@ $scope.PHYS130CoopPlan13BListener = function () {
   }
 };
 $scope.CHEM105CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM105CoopPlan13BTime <= 200) { 
+        CHEM105CoopPlan13BTime = currentTime;
+        return;
+    }
+CHEM105CoopPlan13BTime = currentTime;
   var CHEM105CoopPlan13Belement = document.getElementById("CHEM105CoopPlan13B");
  if (!CHEM105CoopPlan13Bflag) {
      if (CHEM105CoopPlan13Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -24389,6 +28699,12 @@ $scope.CHEM105CoopPlan13BListener = function () {
   }
 };
 $scope.ENCMP100CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENCMP100CoopPlan13BTime <= 200) { 
+        ENCMP100CoopPlan13BTime = currentTime;
+        return;
+    }
+ENCMP100CoopPlan13BTime = currentTime;
   var ENCMP100CoopPlan13Belement = document.getElementById("ENCMP100CoopPlan13B");
  if (!ENCMP100CoopPlan13Bflag) {
      if (ENCMP100CoopPlan13Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -24408,6 +28724,12 @@ $scope.ENCMP100CoopPlan13BListener = function () {
   }
 };
 $scope.ENGG160CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG160CoopPlan13BTime <= 200) { 
+        ENGG160CoopPlan13BTime = currentTime;
+        return;
+    }
+ENGG160CoopPlan13BTime = currentTime;
   var ENGG160CoopPlan13Belement = document.getElementById("ENGG160CoopPlan13B");
  if (!ENGG160CoopPlan13Bflag) {
      if (ENGG160CoopPlan13Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -24431,6 +28753,12 @@ $scope.ENGG160CoopPlan13BListener = function () {
   }
 };
 $scope.ENPH131CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENPH131CoopPlan13BTime <= 200) { 
+        ENPH131CoopPlan13BTime = currentTime;
+        return;
+    }
+ENPH131CoopPlan13BTime = currentTime;
   var ENPH131CoopPlan13Belement = document.getElementById("ENPH131CoopPlan13B");
  if (!ENPH131CoopPlan13Bflag) {
      if (ENPH131CoopPlan13Belement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -24460,6 +28788,12 @@ $scope.ENPH131CoopPlan13BListener = function () {
   }
 };
 $scope.MATH101CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH101CoopPlan13BTime <= 200) { 
+        MATH101CoopPlan13BTime = currentTime;
+        return;
+    }
+MATH101CoopPlan13BTime = currentTime;
   var MATH101CoopPlan13Belement = document.getElementById("MATH101CoopPlan13B");
  if (!MATH101CoopPlan13Bflag) {
      if (MATH101CoopPlan13Belement.classList.contains("MATH-highlighted")) { 
@@ -24495,6 +28829,12 @@ $scope.MATH101CoopPlan13BListener = function () {
   }
 };
 $scope.MATH102CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH102CoopPlan13BTime <= 200) { 
+        MATH102CoopPlan13BTime = currentTime;
+        return;
+    }
+MATH102CoopPlan13BTime = currentTime;
   var MATH102CoopPlan13Belement = document.getElementById("MATH102CoopPlan13B");
  if (!MATH102CoopPlan13Bflag) {
      if (MATH102CoopPlan13Belement.classList.contains("MATH-highlighted")) { 
@@ -24520,6 +28860,12 @@ $scope.MATH102CoopPlan13BListener = function () {
   }
 };
 $scope.CIVE270CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CIVE270CoopPlan13BTime <= 200) { 
+        CIVE270CoopPlan13BTime = currentTime;
+        return;
+    }
+CIVE270CoopPlan13BTime = currentTime;
   var CIVE270CoopPlan13Belement = document.getElementById("CIVE270CoopPlan13B");
  if (!CIVE270CoopPlan13Bflag) {
      if (CIVE270CoopPlan13Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -24551,6 +28897,12 @@ $scope.CIVE270CoopPlan13BListener = function () {
   }
 };
 $scope.ENGG299CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG299CoopPlan13BTime <= 200) { 
+        ENGG299CoopPlan13BTime = currentTime;
+        return;
+    }
+ENGG299CoopPlan13BTime = currentTime;
   var ENGG299CoopPlan13Belement = document.getElementById("ENGG299CoopPlan13B");
  if (!ENGG299CoopPlan13Bflag) {
      if (ENGG299CoopPlan13Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -24572,6 +28924,12 @@ $scope.ENGG299CoopPlan13BListener = function () {
   }
 };
 $scope.MATH209CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH209CoopPlan13BTime <= 200) { 
+        MATH209CoopPlan13BTime = currentTime;
+        return;
+    }
+MATH209CoopPlan13BTime = currentTime;
   var MATH209CoopPlan13Belement = document.getElementById("MATH209CoopPlan13B");
  if (!MATH209CoopPlan13Bflag) {
      if (MATH209CoopPlan13Belement.classList.contains("MATH-highlighted")) { 
@@ -24603,6 +28961,12 @@ $scope.MATH209CoopPlan13BListener = function () {
   }
 };
 $scope.MECE230CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE230CoopPlan13BTime <= 200) { 
+        MECE230CoopPlan13BTime = currentTime;
+        return;
+    }
+MECE230CoopPlan13BTime = currentTime;
   var MECE230CoopPlan13Belement = document.getElementById("MECE230CoopPlan13B");
  if (!MECE230CoopPlan13Bflag) {
      if (MECE230CoopPlan13Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -24630,6 +28994,12 @@ $scope.MECE230CoopPlan13BListener = function () {
   }
 };
 $scope.MECE260CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE260CoopPlan13BTime <= 200) { 
+        MECE260CoopPlan13BTime = currentTime;
+        return;
+    }
+MECE260CoopPlan13BTime = currentTime;
   var MECE260CoopPlan13Belement = document.getElementById("MECE260CoopPlan13B");
  if (!MECE260CoopPlan13Bflag) {
      if (MECE260CoopPlan13Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -24657,6 +29027,12 @@ $scope.MECE260CoopPlan13BListener = function () {
   }
 };
 $scope.MECE265CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE265CoopPlan13BTime <= 200) { 
+        MECE265CoopPlan13BTime = currentTime;
+        return;
+    }
+MECE265CoopPlan13BTime = currentTime;
   var MECE265CoopPlan13Belement = document.getElementById("MECE265CoopPlan13B");
  if (!MECE265CoopPlan13Bflag) {
      if (MECE265CoopPlan13Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -24680,6 +29056,12 @@ $scope.MECE265CoopPlan13BListener = function () {
   }
 };
 $scope.STAT235CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - STAT235CoopPlan13BTime <= 200) { 
+        STAT235CoopPlan13BTime = currentTime;
+        return;
+    }
+STAT235CoopPlan13BTime = currentTime;
   var STAT235CoopPlan13Belement = document.getElementById("STAT235CoopPlan13B");
  if (!STAT235CoopPlan13Bflag) {
      if (STAT235CoopPlan13Belement.classList.contains("MATH-highlighted")) { 
@@ -24705,6 +29087,12 @@ $scope.STAT235CoopPlan13BListener = function () {
   }
 };
 $scope.CHE243CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE243CoopPlan13BTime <= 200) { 
+        CHE243CoopPlan13BTime = currentTime;
+        return;
+    }
+CHE243CoopPlan13BTime = currentTime;
   var CHE243CoopPlan13Belement = document.getElementById("CHE243CoopPlan13B");
  if (!CHE243CoopPlan13Bflag) {
      if (CHE243CoopPlan13Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -24732,6 +29120,12 @@ $scope.CHE243CoopPlan13BListener = function () {
   }
 };
 $scope.ECE209CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ECE209CoopPlan13BTime <= 200) { 
+        ECE209CoopPlan13BTime = currentTime;
+        return;
+    }
+ECE209CoopPlan13BTime = currentTime;
   var ECE209CoopPlan13Belement = document.getElementById("ECE209CoopPlan13B");
  if (!ECE209CoopPlan13Bflag) {
      if (ECE209CoopPlan13Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -24753,6 +29147,12 @@ $scope.ECE209CoopPlan13BListener = function () {
   }
 };
 $scope.MATE202CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATE202CoopPlan13BTime <= 200) { 
+        MATE202CoopPlan13BTime = currentTime;
+        return;
+    }
+MATE202CoopPlan13BTime = currentTime;
   var MATE202CoopPlan13Belement = document.getElementById("MATE202CoopPlan13B");
  if (!MATE202CoopPlan13Bflag) {
      if (MATE202CoopPlan13Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -24776,6 +29176,12 @@ $scope.MATE202CoopPlan13BListener = function () {
   }
 };
 $scope.MATH201CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH201CoopPlan13BTime <= 200) { 
+        MATH201CoopPlan13BTime = currentTime;
+        return;
+    }
+MATH201CoopPlan13BTime = currentTime;
   var MATH201CoopPlan13Belement = document.getElementById("MATH201CoopPlan13B");
  if (!MATH201CoopPlan13Bflag) {
      if (MATH201CoopPlan13Belement.classList.contains("MATH-highlighted")) { 
@@ -24803,6 +29209,12 @@ $scope.MATH201CoopPlan13BListener = function () {
   }
 };
 $scope.MECE200CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE200CoopPlan13BTime <= 200) { 
+        MECE200CoopPlan13BTime = currentTime;
+        return;
+    }
+MECE200CoopPlan13BTime = currentTime;
   var MECE200CoopPlan13Belement = document.getElementById("MECE200CoopPlan13B");
  if (!MECE200CoopPlan13Bflag) {
      if (MECE200CoopPlan13Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -24824,6 +29236,12 @@ $scope.MECE200CoopPlan13BListener = function () {
   }
 };
 $scope.MECE250CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE250CoopPlan13BTime <= 200) { 
+        MECE250CoopPlan13BTime = currentTime;
+        return;
+    }
+MECE250CoopPlan13BTime = currentTime;
   var MECE250CoopPlan13Belement = document.getElementById("MECE250CoopPlan13B");
  if (!MECE250CoopPlan13Bflag) {
      if (MECE250CoopPlan13Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -24855,6 +29273,12 @@ $scope.MECE250CoopPlan13BListener = function () {
   }
 };
 $scope.WKEXP901CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP901CoopPlan13BTime <= 200) { 
+        WKEXP901CoopPlan13BTime = currentTime;
+        return;
+    }
+WKEXP901CoopPlan13BTime = currentTime;
   var WKEXP901CoopPlan13Belement = document.getElementById("WKEXP901CoopPlan13B");
  if (!WKEXP901CoopPlan13Bflag) {
      if (WKEXP901CoopPlan13Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -24878,6 +29302,12 @@ $scope.WKEXP901CoopPlan13BListener = function () {
   }
 };
 $scope.WKEXP902CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP902CoopPlan13BTime <= 200) { 
+        WKEXP902CoopPlan13BTime = currentTime;
+        return;
+    }
+WKEXP902CoopPlan13BTime = currentTime;
   var WKEXP902CoopPlan13Belement = document.getElementById("WKEXP902CoopPlan13B");
  if (!WKEXP902CoopPlan13Bflag) {
      if (WKEXP902CoopPlan13Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -24901,6 +29331,12 @@ $scope.WKEXP902CoopPlan13BListener = function () {
   }
 };
 $scope.ENGM310CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM310CoopPlan13BTime <= 200) { 
+        ENGM310CoopPlan13BTime = currentTime;
+        return;
+    }
+ENGM310CoopPlan13BTime = currentTime;
   var ENGM310CoopPlan13Belement = document.getElementById("ENGM310CoopPlan13B");
  if (!ENGM310CoopPlan13Bflag) {
      if (ENGM310CoopPlan13Belement.classList.contains("Other-highlighted")) { 
@@ -24922,6 +29358,12 @@ $scope.ENGM310CoopPlan13BListener = function () {
   }
 };
 $scope.ENGM401CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM401CoopPlan13BTime <= 200) { 
+        ENGM401CoopPlan13BTime = currentTime;
+        return;
+    }
+ENGM401CoopPlan13BTime = currentTime;
   var ENGM401CoopPlan13Belement = document.getElementById("ENGM401CoopPlan13B");
  if (!ENGM401CoopPlan13Bflag) {
      if (ENGM401CoopPlan13Belement.classList.contains("Other-highlighted")) { 
@@ -24943,6 +29385,12 @@ $scope.ENGM401CoopPlan13BListener = function () {
   }
 };
 $scope.MECE340CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE340CoopPlan13BTime <= 200) { 
+        MECE340CoopPlan13BTime = currentTime;
+        return;
+    }
+MECE340CoopPlan13BTime = currentTime;
   var MECE340CoopPlan13Belement = document.getElementById("MECE340CoopPlan13B");
  if (!MECE340CoopPlan13Bflag) {
      if (MECE340CoopPlan13Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -24970,6 +29418,12 @@ $scope.MECE340CoopPlan13BListener = function () {
   }
 };
 $scope.MECE360CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE360CoopPlan13BTime <= 200) { 
+        MECE360CoopPlan13BTime = currentTime;
+        return;
+    }
+MECE360CoopPlan13BTime = currentTime;
   var MECE360CoopPlan13Belement = document.getElementById("MECE360CoopPlan13B");
  if (!MECE360CoopPlan13Bflag) {
      if (MECE360CoopPlan13Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -25005,6 +29459,12 @@ $scope.MECE360CoopPlan13BListener = function () {
   }
 };
 $scope.MECE362CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE362CoopPlan13BTime <= 200) { 
+        MECE362CoopPlan13BTime = currentTime;
+        return;
+    }
+MECE362CoopPlan13BTime = currentTime;
   var MECE362CoopPlan13Belement = document.getElementById("MECE362CoopPlan13B");
  if (!MECE362CoopPlan13Bflag) {
      if (MECE362CoopPlan13Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -25030,6 +29490,12 @@ $scope.MECE362CoopPlan13BListener = function () {
   }
 };
 $scope.MECE390CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE390CoopPlan13BTime <= 200) { 
+        MECE390CoopPlan13BTime = currentTime;
+        return;
+    }
+MECE390CoopPlan13BTime = currentTime;
   var MECE390CoopPlan13Belement = document.getElementById("MECE390CoopPlan13B");
  if (!MECE390CoopPlan13Bflag) {
      if (MECE390CoopPlan13Belement.classList.contains("MATH-highlighted")) { 
@@ -25055,6 +29521,12 @@ $scope.MECE390CoopPlan13BListener = function () {
   }
 };
 $scope.ComplementaryElectiveCoopPlan13B0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ComplementaryElectiveCoopPlan13B0Time <= 200) { 
+        ComplementaryElectiveCoopPlan13B0Time = currentTime;
+        return;
+    }
+ComplementaryElectiveCoopPlan13B0Time = currentTime;
   var ComplementaryElectiveCoopPlan13B0element = document.getElementById("ComplementaryElectiveCoopPlan13B0");
  if (!ComplementaryElectiveCoopPlan13B0flag) {
      if (ComplementaryElectiveCoopPlan13B0element.classList.contains("COMP-highlighted")) { 
@@ -25074,6 +29546,12 @@ $scope.ComplementaryElectiveCoopPlan13B0Listener = function () {
   }
 };
 $scope.WKEXP903CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP903CoopPlan13BTime <= 200) { 
+        WKEXP903CoopPlan13BTime = currentTime;
+        return;
+    }
+WKEXP903CoopPlan13BTime = currentTime;
   var WKEXP903CoopPlan13Belement = document.getElementById("WKEXP903CoopPlan13B");
  if (!WKEXP903CoopPlan13Bflag) {
      if (WKEXP903CoopPlan13Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -25097,6 +29575,12 @@ $scope.WKEXP903CoopPlan13BListener = function () {
   }
 };
 $scope.WKEXP904CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP904CoopPlan13BTime <= 200) { 
+        WKEXP904CoopPlan13BTime = currentTime;
+        return;
+    }
+WKEXP904CoopPlan13BTime = currentTime;
   var WKEXP904CoopPlan13Belement = document.getElementById("WKEXP904CoopPlan13B");
  if (!WKEXP904CoopPlan13Bflag) {
      if (WKEXP904CoopPlan13Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -25120,6 +29604,12 @@ $scope.WKEXP904CoopPlan13BListener = function () {
   }
 };
 $scope.MATH300CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH300CoopPlan13BTime <= 200) { 
+        MATH300CoopPlan13BTime = currentTime;
+        return;
+    }
+MATH300CoopPlan13BTime = currentTime;
   var MATH300CoopPlan13Belement = document.getElementById("MATH300CoopPlan13B");
  if (!MATH300CoopPlan13Bflag) {
      if (MATH300CoopPlan13Belement.classList.contains("MATH-highlighted")) { 
@@ -25149,6 +29639,12 @@ $scope.MATH300CoopPlan13BListener = function () {
   }
 };
 $scope.MECE300CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE300CoopPlan13BTime <= 200) { 
+        MECE300CoopPlan13BTime = currentTime;
+        return;
+    }
+MECE300CoopPlan13BTime = currentTime;
   var MECE300CoopPlan13Belement = document.getElementById("MECE300CoopPlan13B");
  if (!MECE300CoopPlan13Bflag) {
      if (MECE300CoopPlan13Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -25180,6 +29676,12 @@ $scope.MECE300CoopPlan13BListener = function () {
   }
 };
 $scope.MECE301CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE301CoopPlan13BTime <= 200) { 
+        MECE301CoopPlan13BTime = currentTime;
+        return;
+    }
+MECE301CoopPlan13BTime = currentTime;
   var MECE301CoopPlan13Belement = document.getElementById("MECE301CoopPlan13B");
  if (!MECE301CoopPlan13Bflag) {
      if (MECE301CoopPlan13Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -25203,6 +29705,12 @@ $scope.MECE301CoopPlan13BListener = function () {
   }
 };
 $scope.MECE331CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE331CoopPlan13BTime <= 200) { 
+        MECE331CoopPlan13BTime = currentTime;
+        return;
+    }
+MECE331CoopPlan13BTime = currentTime;
   var MECE331CoopPlan13Belement = document.getElementById("MECE331CoopPlan13B");
  if (!MECE331CoopPlan13Bflag) {
      if (MECE331CoopPlan13Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -25242,6 +29750,12 @@ $scope.MECE331CoopPlan13BListener = function () {
   }
 };
 $scope.MECE371CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE371CoopPlan13BTime <= 200) { 
+        MECE371CoopPlan13BTime = currentTime;
+        return;
+    }
+MECE371CoopPlan13BTime = currentTime;
   var MECE371CoopPlan13Belement = document.getElementById("MECE371CoopPlan13B");
  if (!MECE371CoopPlan13Bflag) {
      if (MECE371CoopPlan13Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -25275,6 +29789,12 @@ $scope.MECE371CoopPlan13BListener = function () {
   }
 };
 $scope.MECE380CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE380CoopPlan13BTime <= 200) { 
+        MECE380CoopPlan13BTime = currentTime;
+        return;
+    }
+MECE380CoopPlan13BTime = currentTime;
   var MECE380CoopPlan13Belement = document.getElementById("MECE380CoopPlan13B");
  if (!MECE380CoopPlan13Bflag) {
      if (MECE380CoopPlan13Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -25300,6 +29820,12 @@ $scope.MECE380CoopPlan13BListener = function () {
   }
 };
 $scope.ENGG404CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG404CoopPlan13BTime <= 200) { 
+        ENGG404CoopPlan13BTime = currentTime;
+        return;
+    }
+ENGG404CoopPlan13BTime = currentTime;
   var ENGG404CoopPlan13Belement = document.getElementById("ENGG404CoopPlan13B");
  if (!ENGG404CoopPlan13Bflag) {
      if (ENGG404CoopPlan13Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -25319,6 +29845,12 @@ $scope.ENGG404CoopPlan13BListener = function () {
   }
 };
 $scope.MECE430CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE430CoopPlan13BTime <= 200) { 
+        MECE430CoopPlan13BTime = currentTime;
+        return;
+    }
+MECE430CoopPlan13BTime = currentTime;
   var MECE430CoopPlan13Belement = document.getElementById("MECE430CoopPlan13B");
  if (!MECE430CoopPlan13Bflag) {
      if (MECE430CoopPlan13Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -25340,6 +29872,12 @@ $scope.MECE430CoopPlan13BListener = function () {
   }
 };
 $scope.MECE480CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE480CoopPlan13BTime <= 200) { 
+        MECE480CoopPlan13BTime = currentTime;
+        return;
+    }
+MECE480CoopPlan13BTime = currentTime;
   var MECE480CoopPlan13Belement = document.getElementById("MECE480CoopPlan13B");
  if (!MECE480CoopPlan13Bflag) {
      if (MECE480CoopPlan13Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -25365,6 +29903,12 @@ $scope.MECE480CoopPlan13BListener = function () {
   }
 };
 $scope.MECE463CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE463CoopPlan13BTime <= 200) { 
+        MECE463CoopPlan13BTime = currentTime;
+        return;
+    }
+MECE463CoopPlan13BTime = currentTime;
   var MECE463CoopPlan13Belement = document.getElementById("MECE463CoopPlan13B");
  if (!MECE463CoopPlan13Bflag) {
      if (MECE463CoopPlan13Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -25390,6 +29934,12 @@ $scope.MECE463CoopPlan13BListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveCoopPlan13B0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveCoopPlan13B0Time <= 200) { 
+        ProgramTechnicalElectiveCoopPlan13B0Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveCoopPlan13B0Time = currentTime;
   var ProgramTechnicalElectiveCoopPlan13B0element = document.getElementById("ProgramTechnicalElectiveCoopPlan13B0");
  if (!ProgramTechnicalElectiveCoopPlan13B0flag) {
      if (ProgramTechnicalElectiveCoopPlan13B0element.classList.contains("PROG-highlighted")) { 
@@ -25409,6 +29959,12 @@ $scope.ProgramTechnicalElectiveCoopPlan13B0Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveCoopPlan13B1Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveCoopPlan13B1Time <= 200) { 
+        ProgramTechnicalElectiveCoopPlan13B1Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveCoopPlan13B1Time = currentTime;
   var ProgramTechnicalElectiveCoopPlan13B1element = document.getElementById("ProgramTechnicalElectiveCoopPlan13B1");
  if (!ProgramTechnicalElectiveCoopPlan13B1flag) {
      if (ProgramTechnicalElectiveCoopPlan13B1element.classList.contains("PROG-highlighted")) { 
@@ -25428,6 +29984,12 @@ $scope.ProgramTechnicalElectiveCoopPlan13B1Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveCoopPlan13B2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveCoopPlan13B2Time <= 200) { 
+        ProgramTechnicalElectiveCoopPlan13B2Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveCoopPlan13B2Time = currentTime;
   var ProgramTechnicalElectiveCoopPlan13B2element = document.getElementById("ProgramTechnicalElectiveCoopPlan13B2");
  if (!ProgramTechnicalElectiveCoopPlan13B2flag) {
      if (ProgramTechnicalElectiveCoopPlan13B2element.classList.contains("PROG-highlighted")) { 
@@ -25447,6 +30009,12 @@ $scope.ProgramTechnicalElectiveCoopPlan13B2Listener = function () {
   }
 };
 $scope.WKEXP905CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP905CoopPlan13BTime <= 200) { 
+        WKEXP905CoopPlan13BTime = currentTime;
+        return;
+    }
+WKEXP905CoopPlan13BTime = currentTime;
   var WKEXP905CoopPlan13Belement = document.getElementById("WKEXP905CoopPlan13B");
  if (!WKEXP905CoopPlan13Bflag) {
      if (WKEXP905CoopPlan13Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -25468,6 +30036,12 @@ $scope.WKEXP905CoopPlan13BListener = function () {
   }
 };
 $scope.CHE448CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE448CoopPlan13BTime <= 200) { 
+        CHE448CoopPlan13BTime = currentTime;
+        return;
+    }
+CHE448CoopPlan13BTime = currentTime;
   var CHE448CoopPlan13Belement = document.getElementById("CHE448CoopPlan13B");
  if (!CHE448CoopPlan13Bflag) {
      if (CHE448CoopPlan13Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -25495,6 +30069,12 @@ $scope.CHE448CoopPlan13BListener = function () {
   }
 };
 $scope.MECE420CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE420CoopPlan13BTime <= 200) { 
+        MECE420CoopPlan13BTime = currentTime;
+        return;
+    }
+MECE420CoopPlan13BTime = currentTime;
   var MECE420CoopPlan13Belement = document.getElementById("MECE420CoopPlan13B");
  if (!MECE420CoopPlan13Bflag) {
      if (MECE420CoopPlan13Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -25516,6 +30096,12 @@ $scope.MECE420CoopPlan13BListener = function () {
   }
 };
 $scope.ENGG400CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG400CoopPlan13BTime <= 200) { 
+        ENGG400CoopPlan13BTime = currentTime;
+        return;
+    }
+ENGG400CoopPlan13BTime = currentTime;
   var ENGG400CoopPlan13Belement = document.getElementById("ENGG400CoopPlan13B");
  if (!ENGG400CoopPlan13Bflag) {
      if (ENGG400CoopPlan13Belement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -25535,6 +30121,12 @@ $scope.ENGG400CoopPlan13BListener = function () {
   }
 };
 $scope.MECE403CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE403CoopPlan13BTime <= 200) { 
+        MECE403CoopPlan13BTime = currentTime;
+        return;
+    }
+MECE403CoopPlan13BTime = currentTime;
   var MECE403CoopPlan13Belement = document.getElementById("MECE403CoopPlan13B");
  if (!MECE403CoopPlan13Bflag) {
      if (MECE403CoopPlan13Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -25562,6 +30154,12 @@ $scope.MECE403CoopPlan13BListener = function () {
   }
 };
 $scope.MECE451CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE451CoopPlan13BTime <= 200) { 
+        MECE451CoopPlan13BTime = currentTime;
+        return;
+    }
+MECE451CoopPlan13BTime = currentTime;
   var MECE451CoopPlan13Belement = document.getElementById("MECE451CoopPlan13B");
  if (!MECE451CoopPlan13Bflag) {
      if (MECE451CoopPlan13Belement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -25585,6 +30183,12 @@ $scope.MECE451CoopPlan13BListener = function () {
   }
 };
 $scope.MECE460CoopPlan13BListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE460CoopPlan13BTime <= 200) { 
+        MECE460CoopPlan13BTime = currentTime;
+        return;
+    }
+MECE460CoopPlan13BTime = currentTime;
   var MECE460CoopPlan13Belement = document.getElementById("MECE460CoopPlan13B");
  if (!MECE460CoopPlan13Bflag) {
      if (MECE460CoopPlan13Belement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -25622,6 +30226,12 @@ $scope.MECE460CoopPlan13BListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveCoopPlan13B3Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveCoopPlan13B3Time <= 200) { 
+        ProgramTechnicalElectiveCoopPlan13B3Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveCoopPlan13B3Time = currentTime;
   var ProgramTechnicalElectiveCoopPlan13B3element = document.getElementById("ProgramTechnicalElectiveCoopPlan13B3");
  if (!ProgramTechnicalElectiveCoopPlan13B3flag) {
      if (ProgramTechnicalElectiveCoopPlan13B3element.classList.contains("PROG-highlighted")) { 
@@ -25641,6 +30251,12 @@ $scope.ProgramTechnicalElectiveCoopPlan13B3Listener = function () {
   }
 };
 $scope.ITSElectiveCoopPlan13B0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ITSElectiveCoopPlan13B0Time <= 200) { 
+        ITSElectiveCoopPlan13B0Time = currentTime;
+        return;
+    }
+ITSElectiveCoopPlan13B0Time = currentTime;
   var ITSElectiveCoopPlan13B0element = document.getElementById("ITSElectiveCoopPlan13B0");
  if (!ITSElectiveCoopPlan13B0flag) {
      if (ITSElectiveCoopPlan13B0element.classList.contains("ITS-highlighted")) { 
@@ -25660,64 +30276,186 @@ $scope.ITSElectiveCoopPlan13B0Listener = function () {
   }
 };
   var CHEM103CoopPlan2flag = false;
+  var CHEM103CoopPlan2rflag = false;
+ var CHEM103CoopPlan2Time = new Date().getTime();
   var ENGG100CoopPlan2flag = false;
+  var ENGG100CoopPlan2rflag = false;
+ var ENGG100CoopPlan2Time = new Date().getTime();
   var ENGG130CoopPlan2flag = false;
+  var ENGG130CoopPlan2rflag = false;
+ var ENGG130CoopPlan2Time = new Date().getTime();
   var ENGL199CoopPlan2flag = false;
+  var ENGL199CoopPlan2rflag = false;
+ var ENGL199CoopPlan2Time = new Date().getTime();
   var MATH100CoopPlan2flag = false;
+  var MATH100CoopPlan2rflag = false;
+ var MATH100CoopPlan2Time = new Date().getTime();
   var PHYS130CoopPlan2flag = false;
+  var PHYS130CoopPlan2rflag = false;
+ var PHYS130CoopPlan2Time = new Date().getTime();
   var CHEM105CoopPlan2flag = false;
+  var CHEM105CoopPlan2rflag = false;
+ var CHEM105CoopPlan2Time = new Date().getTime();
   var ENCMP100CoopPlan2flag = false;
+  var ENCMP100CoopPlan2rflag = false;
+ var ENCMP100CoopPlan2Time = new Date().getTime();
   var ENGG160CoopPlan2flag = false;
+  var ENGG160CoopPlan2rflag = false;
+ var ENGG160CoopPlan2Time = new Date().getTime();
   var ENPH131CoopPlan2flag = false;
+  var ENPH131CoopPlan2rflag = false;
+ var ENPH131CoopPlan2Time = new Date().getTime();
   var MATH101CoopPlan2flag = false;
+  var MATH101CoopPlan2rflag = false;
+ var MATH101CoopPlan2Time = new Date().getTime();
   var MATH102CoopPlan2flag = false;
+  var MATH102CoopPlan2rflag = false;
+ var MATH102CoopPlan2Time = new Date().getTime();
   var CHE243CoopPlan2flag = false;
+  var CHE243CoopPlan2rflag = false;
+ var CHE243CoopPlan2Time = new Date().getTime();
   var CIVE270CoopPlan2flag = false;
+  var CIVE270CoopPlan2rflag = false;
+ var CIVE270CoopPlan2Time = new Date().getTime();
   var ENGG299CoopPlan2flag = false;
+  var ENGG299CoopPlan2rflag = false;
+ var ENGG299CoopPlan2Time = new Date().getTime();
   var MATH209CoopPlan2flag = false;
+  var MATH209CoopPlan2rflag = false;
+ var MATH209CoopPlan2Time = new Date().getTime();
   var MECE200CoopPlan2flag = false;
+  var MECE200CoopPlan2rflag = false;
+ var MECE200CoopPlan2Time = new Date().getTime();
   var MECE250CoopPlan2flag = false;
+  var MECE250CoopPlan2rflag = false;
+ var MECE250CoopPlan2Time = new Date().getTime();
   var STAT235CoopPlan2flag = false;
+  var STAT235CoopPlan2rflag = false;
+ var STAT235CoopPlan2Time = new Date().getTime();
   var WKEXP901CoopPlan2flag = false;
+  var WKEXP901CoopPlan2rflag = false;
+ var WKEXP901CoopPlan2Time = new Date().getTime();
   var ECE209CoopPlan2flag = false;
+  var ECE209CoopPlan2rflag = false;
+ var ECE209CoopPlan2Time = new Date().getTime();
   var MATE202CoopPlan2flag = false;
+  var MATE202CoopPlan2rflag = false;
+ var MATE202CoopPlan2Time = new Date().getTime();
   var MATH201CoopPlan2flag = false;
+  var MATH201CoopPlan2rflag = false;
+ var MATH201CoopPlan2Time = new Date().getTime();
   var MECE230CoopPlan2flag = false;
+  var MECE230CoopPlan2rflag = false;
+ var MECE230CoopPlan2Time = new Date().getTime();
   var MECE260CoopPlan2flag = false;
+  var MECE260CoopPlan2rflag = false;
+ var MECE260CoopPlan2Time = new Date().getTime();
   var MECE265CoopPlan2flag = false;
+  var MECE265CoopPlan2rflag = false;
+ var MECE265CoopPlan2Time = new Date().getTime();
   var MATH300CoopPlan2flag = false;
+  var MATH300CoopPlan2rflag = false;
+ var MATH300CoopPlan2Time = new Date().getTime();
   var MECE300CoopPlan2flag = false;
+  var MECE300CoopPlan2rflag = false;
+ var MECE300CoopPlan2Time = new Date().getTime();
   var MECE301CoopPlan2flag = false;
+  var MECE301CoopPlan2rflag = false;
+ var MECE301CoopPlan2Time = new Date().getTime();
   var MECE331CoopPlan2flag = false;
+  var MECE331CoopPlan2rflag = false;
+ var MECE331CoopPlan2Time = new Date().getTime();
   var MECE371CoopPlan2flag = false;
+  var MECE371CoopPlan2rflag = false;
+ var MECE371CoopPlan2Time = new Date().getTime();
   var MECE380CoopPlan2flag = false;
+  var MECE380CoopPlan2rflag = false;
+ var MECE380CoopPlan2Time = new Date().getTime();
   var WKEXP902CoopPlan2flag = false;
+  var WKEXP902CoopPlan2rflag = false;
+ var WKEXP902CoopPlan2Time = new Date().getTime();
   var WKEXP903CoopPlan2flag = false;
+  var WKEXP903CoopPlan2rflag = false;
+ var WKEXP903CoopPlan2Time = new Date().getTime();
   var ENGM310CoopPlan2flag = false;
+  var ENGM310CoopPlan2rflag = false;
+ var ENGM310CoopPlan2Time = new Date().getTime();
   var ENGM401CoopPlan2flag = false;
+  var ENGM401CoopPlan2rflag = false;
+ var ENGM401CoopPlan2Time = new Date().getTime();
   var MECE340CoopPlan2flag = false;
+  var MECE340CoopPlan2rflag = false;
+ var MECE340CoopPlan2Time = new Date().getTime();
   var MECE360CoopPlan2flag = false;
+  var MECE360CoopPlan2rflag = false;
+ var MECE360CoopPlan2Time = new Date().getTime();
   var MECE362CoopPlan2flag = false;
+  var MECE362CoopPlan2rflag = false;
+ var MECE362CoopPlan2Time = new Date().getTime();
   var MECE390CoopPlan2flag = false;
+  var MECE390CoopPlan2rflag = false;
+ var MECE390CoopPlan2Time = new Date().getTime();
   var ComplementaryElectiveCoopPlan20flag = false;
+  var ComplementaryElectiveCoopPlan20rflag = false;
+ var ComplementaryElectiveCoopPlan20Time = new Date().getTime();
   var WKEXP904CoopPlan2flag = false;
+  var WKEXP904CoopPlan2rflag = false;
+ var WKEXP904CoopPlan2Time = new Date().getTime();
   var MECE403CoopPlan2flag = false;
+  var MECE403CoopPlan2rflag = false;
+ var MECE403CoopPlan2Time = new Date().getTime();
   var MECE451CoopPlan2flag = false;
+  var MECE451CoopPlan2rflag = false;
+ var MECE451CoopPlan2Time = new Date().getTime();
   var MECE460CoopPlan2flag = false;
+  var MECE460CoopPlan2rflag = false;
+ var MECE460CoopPlan2Time = new Date().getTime();
   var ProgramTechnicalElectiveCoopPlan20flag = false;
+  var ProgramTechnicalElectiveCoopPlan20rflag = false;
+ var ProgramTechnicalElectiveCoopPlan20Time = new Date().getTime();
   var ProgramTechnicalElectiveCoopPlan21flag = false;
+  var ProgramTechnicalElectiveCoopPlan21rflag = false;
+ var ProgramTechnicalElectiveCoopPlan21Time = new Date().getTime();
   var ITSElectiveCoopPlan20flag = false;
+  var ITSElectiveCoopPlan20rflag = false;
+ var ITSElectiveCoopPlan20Time = new Date().getTime();
   var WKEXP905CoopPlan2flag = false;
+  var WKEXP905CoopPlan2rflag = false;
+ var WKEXP905CoopPlan2Time = new Date().getTime();
   var CHE448CoopPlan2flag = false;
+  var CHE448CoopPlan2rflag = false;
+ var CHE448CoopPlan2Time = new Date().getTime();
   var MECE420CoopPlan2flag = false;
+  var MECE420CoopPlan2rflag = false;
+ var MECE420CoopPlan2Time = new Date().getTime();
   var ENGG400CoopPlan2flag = false;
+  var ENGG400CoopPlan2rflag = false;
+ var ENGG400CoopPlan2Time = new Date().getTime();
   var ENGG404CoopPlan2flag = false;
+  var ENGG404CoopPlan2rflag = false;
+ var ENGG404CoopPlan2Time = new Date().getTime();
   var MECE430CoopPlan2flag = false;
+  var MECE430CoopPlan2rflag = false;
+ var MECE430CoopPlan2Time = new Date().getTime();
   var MECE480CoopPlan2flag = false;
+  var MECE480CoopPlan2rflag = false;
+ var MECE480CoopPlan2Time = new Date().getTime();
   var MECE463CoopPlan2flag = false;
+  var MECE463CoopPlan2rflag = false;
+ var MECE463CoopPlan2Time = new Date().getTime();
   var ProgramTechnicalElectiveCoopPlan22flag = false;
+  var ProgramTechnicalElectiveCoopPlan22rflag = false;
+ var ProgramTechnicalElectiveCoopPlan22Time = new Date().getTime();
   var ProgramTechnicalElectiveCoopPlan23flag = false;
+  var ProgramTechnicalElectiveCoopPlan23rflag = false;
+ var ProgramTechnicalElectiveCoopPlan23Time = new Date().getTime();
 $scope.CHEM103CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM103CoopPlan2Time <= 200) { 
+        CHEM103CoopPlan2Time = currentTime;
+        return;
+    }
+CHEM103CoopPlan2Time = currentTime;
   var CHEM103CoopPlan2element = document.getElementById("CHEM103CoopPlan2");
  if (!CHEM103CoopPlan2flag) {
      if (CHEM103CoopPlan2element.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -25739,6 +30477,12 @@ $scope.CHEM103CoopPlan2Listener = function () {
   }
 };
 $scope.ENGG100CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG100CoopPlan2Time <= 200) { 
+        ENGG100CoopPlan2Time = currentTime;
+        return;
+    }
+ENGG100CoopPlan2Time = currentTime;
   var ENGG100CoopPlan2element = document.getElementById("ENGG100CoopPlan2");
  if (!ENGG100CoopPlan2flag) {
      if (ENGG100CoopPlan2element.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -25758,6 +30502,12 @@ $scope.ENGG100CoopPlan2Listener = function () {
   }
 };
 $scope.ENGG130CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG130CoopPlan2Time <= 200) { 
+        ENGG130CoopPlan2Time = currentTime;
+        return;
+    }
+ENGG130CoopPlan2Time = currentTime;
   var ENGG130CoopPlan2element = document.getElementById("ENGG130CoopPlan2");
  if (!ENGG130CoopPlan2flag) {
      if (ENGG130CoopPlan2element.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -25785,6 +30535,12 @@ $scope.ENGG130CoopPlan2Listener = function () {
   }
 };
 $scope.ENGL199CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGL199CoopPlan2Time <= 200) { 
+        ENGL199CoopPlan2Time = currentTime;
+        return;
+    }
+ENGL199CoopPlan2Time = currentTime;
   var ENGL199CoopPlan2element = document.getElementById("ENGL199CoopPlan2");
  if (!ENGL199CoopPlan2flag) {
      if (ENGL199CoopPlan2element.classList.contains("Other-highlighted")) { 
@@ -25806,6 +30562,12 @@ $scope.ENGL199CoopPlan2Listener = function () {
   }
 };
 $scope.MATH100CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH100CoopPlan2Time <= 200) { 
+        MATH100CoopPlan2Time = currentTime;
+        return;
+    }
+MATH100CoopPlan2Time = currentTime;
   var MATH100CoopPlan2element = document.getElementById("MATH100CoopPlan2");
  if (!MATH100CoopPlan2flag) {
      if (MATH100CoopPlan2element.classList.contains("MATH-highlighted")) { 
@@ -25837,6 +30599,12 @@ $scope.MATH100CoopPlan2Listener = function () {
   }
 };
 $scope.PHYS130CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - PHYS130CoopPlan2Time <= 200) { 
+        PHYS130CoopPlan2Time = currentTime;
+        return;
+    }
+PHYS130CoopPlan2Time = currentTime;
   var PHYS130CoopPlan2element = document.getElementById("PHYS130CoopPlan2");
  if (!PHYS130CoopPlan2flag) {
      if (PHYS130CoopPlan2element.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -25858,6 +30626,12 @@ $scope.PHYS130CoopPlan2Listener = function () {
   }
 };
 $scope.CHEM105CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM105CoopPlan2Time <= 200) { 
+        CHEM105CoopPlan2Time = currentTime;
+        return;
+    }
+CHEM105CoopPlan2Time = currentTime;
   var CHEM105CoopPlan2element = document.getElementById("CHEM105CoopPlan2");
  if (!CHEM105CoopPlan2flag) {
      if (CHEM105CoopPlan2element.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -25881,6 +30655,12 @@ $scope.CHEM105CoopPlan2Listener = function () {
   }
 };
 $scope.ENCMP100CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENCMP100CoopPlan2Time <= 200) { 
+        ENCMP100CoopPlan2Time = currentTime;
+        return;
+    }
+ENCMP100CoopPlan2Time = currentTime;
   var ENCMP100CoopPlan2element = document.getElementById("ENCMP100CoopPlan2");
  if (!ENCMP100CoopPlan2flag) {
      if (ENCMP100CoopPlan2element.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -25900,6 +30680,12 @@ $scope.ENCMP100CoopPlan2Listener = function () {
   }
 };
 $scope.ENGG160CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG160CoopPlan2Time <= 200) { 
+        ENGG160CoopPlan2Time = currentTime;
+        return;
+    }
+ENGG160CoopPlan2Time = currentTime;
   var ENGG160CoopPlan2element = document.getElementById("ENGG160CoopPlan2");
  if (!ENGG160CoopPlan2flag) {
      if (ENGG160CoopPlan2element.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -25923,6 +30709,12 @@ $scope.ENGG160CoopPlan2Listener = function () {
   }
 };
 $scope.ENPH131CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENPH131CoopPlan2Time <= 200) { 
+        ENPH131CoopPlan2Time = currentTime;
+        return;
+    }
+ENPH131CoopPlan2Time = currentTime;
   var ENPH131CoopPlan2element = document.getElementById("ENPH131CoopPlan2");
  if (!ENPH131CoopPlan2flag) {
      if (ENPH131CoopPlan2element.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -25952,6 +30744,12 @@ $scope.ENPH131CoopPlan2Listener = function () {
   }
 };
 $scope.MATH101CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH101CoopPlan2Time <= 200) { 
+        MATH101CoopPlan2Time = currentTime;
+        return;
+    }
+MATH101CoopPlan2Time = currentTime;
   var MATH101CoopPlan2element = document.getElementById("MATH101CoopPlan2");
  if (!MATH101CoopPlan2flag) {
      if (MATH101CoopPlan2element.classList.contains("MATH-highlighted")) { 
@@ -25987,6 +30785,12 @@ $scope.MATH101CoopPlan2Listener = function () {
   }
 };
 $scope.MATH102CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH102CoopPlan2Time <= 200) { 
+        MATH102CoopPlan2Time = currentTime;
+        return;
+    }
+MATH102CoopPlan2Time = currentTime;
   var MATH102CoopPlan2element = document.getElementById("MATH102CoopPlan2");
  if (!MATH102CoopPlan2flag) {
      if (MATH102CoopPlan2element.classList.contains("MATH-highlighted")) { 
@@ -26012,6 +30816,12 @@ $scope.MATH102CoopPlan2Listener = function () {
   }
 };
 $scope.CHE243CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE243CoopPlan2Time <= 200) { 
+        CHE243CoopPlan2Time = currentTime;
+        return;
+    }
+CHE243CoopPlan2Time = currentTime;
   var CHE243CoopPlan2element = document.getElementById("CHE243CoopPlan2");
  if (!CHE243CoopPlan2flag) {
      if (CHE243CoopPlan2element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -26039,6 +30849,12 @@ $scope.CHE243CoopPlan2Listener = function () {
   }
 };
 $scope.CIVE270CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CIVE270CoopPlan2Time <= 200) { 
+        CIVE270CoopPlan2Time = currentTime;
+        return;
+    }
+CIVE270CoopPlan2Time = currentTime;
   var CIVE270CoopPlan2element = document.getElementById("CIVE270CoopPlan2");
  if (!CIVE270CoopPlan2flag) {
      if (CIVE270CoopPlan2element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -26070,6 +30886,12 @@ $scope.CIVE270CoopPlan2Listener = function () {
   }
 };
 $scope.ENGG299CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG299CoopPlan2Time <= 200) { 
+        ENGG299CoopPlan2Time = currentTime;
+        return;
+    }
+ENGG299CoopPlan2Time = currentTime;
   var ENGG299CoopPlan2element = document.getElementById("ENGG299CoopPlan2");
  if (!ENGG299CoopPlan2flag) {
      if (ENGG299CoopPlan2element.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -26091,6 +30913,12 @@ $scope.ENGG299CoopPlan2Listener = function () {
   }
 };
 $scope.MATH209CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH209CoopPlan2Time <= 200) { 
+        MATH209CoopPlan2Time = currentTime;
+        return;
+    }
+MATH209CoopPlan2Time = currentTime;
   var MATH209CoopPlan2element = document.getElementById("MATH209CoopPlan2");
  if (!MATH209CoopPlan2flag) {
      if (MATH209CoopPlan2element.classList.contains("MATH-highlighted")) { 
@@ -26122,6 +30950,12 @@ $scope.MATH209CoopPlan2Listener = function () {
   }
 };
 $scope.MECE200CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE200CoopPlan2Time <= 200) { 
+        MECE200CoopPlan2Time = currentTime;
+        return;
+    }
+MECE200CoopPlan2Time = currentTime;
   var MECE200CoopPlan2element = document.getElementById("MECE200CoopPlan2");
  if (!MECE200CoopPlan2flag) {
      if (MECE200CoopPlan2element.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -26143,6 +30977,12 @@ $scope.MECE200CoopPlan2Listener = function () {
   }
 };
 $scope.MECE250CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE250CoopPlan2Time <= 200) { 
+        MECE250CoopPlan2Time = currentTime;
+        return;
+    }
+MECE250CoopPlan2Time = currentTime;
   var MECE250CoopPlan2element = document.getElementById("MECE250CoopPlan2");
  if (!MECE250CoopPlan2flag) {
      if (MECE250CoopPlan2element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -26174,6 +31014,12 @@ $scope.MECE250CoopPlan2Listener = function () {
   }
 };
 $scope.STAT235CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - STAT235CoopPlan2Time <= 200) { 
+        STAT235CoopPlan2Time = currentTime;
+        return;
+    }
+STAT235CoopPlan2Time = currentTime;
   var STAT235CoopPlan2element = document.getElementById("STAT235CoopPlan2");
  if (!STAT235CoopPlan2flag) {
      if (STAT235CoopPlan2element.classList.contains("MATH-highlighted")) { 
@@ -26199,6 +31045,12 @@ $scope.STAT235CoopPlan2Listener = function () {
   }
 };
 $scope.WKEXP901CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP901CoopPlan2Time <= 200) { 
+        WKEXP901CoopPlan2Time = currentTime;
+        return;
+    }
+WKEXP901CoopPlan2Time = currentTime;
   var WKEXP901CoopPlan2element = document.getElementById("WKEXP901CoopPlan2");
  if (!WKEXP901CoopPlan2flag) {
      if (WKEXP901CoopPlan2element.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -26222,6 +31074,12 @@ $scope.WKEXP901CoopPlan2Listener = function () {
   }
 };
 $scope.ECE209CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ECE209CoopPlan2Time <= 200) { 
+        ECE209CoopPlan2Time = currentTime;
+        return;
+    }
+ECE209CoopPlan2Time = currentTime;
   var ECE209CoopPlan2element = document.getElementById("ECE209CoopPlan2");
  if (!ECE209CoopPlan2flag) {
      if (ECE209CoopPlan2element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -26243,6 +31101,12 @@ $scope.ECE209CoopPlan2Listener = function () {
   }
 };
 $scope.MATE202CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATE202CoopPlan2Time <= 200) { 
+        MATE202CoopPlan2Time = currentTime;
+        return;
+    }
+MATE202CoopPlan2Time = currentTime;
   var MATE202CoopPlan2element = document.getElementById("MATE202CoopPlan2");
  if (!MATE202CoopPlan2flag) {
      if (MATE202CoopPlan2element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -26266,6 +31130,12 @@ $scope.MATE202CoopPlan2Listener = function () {
   }
 };
 $scope.MATH201CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH201CoopPlan2Time <= 200) { 
+        MATH201CoopPlan2Time = currentTime;
+        return;
+    }
+MATH201CoopPlan2Time = currentTime;
   var MATH201CoopPlan2element = document.getElementById("MATH201CoopPlan2");
  if (!MATH201CoopPlan2flag) {
      if (MATH201CoopPlan2element.classList.contains("MATH-highlighted")) { 
@@ -26293,6 +31163,12 @@ $scope.MATH201CoopPlan2Listener = function () {
   }
 };
 $scope.MECE230CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE230CoopPlan2Time <= 200) { 
+        MECE230CoopPlan2Time = currentTime;
+        return;
+    }
+MECE230CoopPlan2Time = currentTime;
   var MECE230CoopPlan2element = document.getElementById("MECE230CoopPlan2");
  if (!MECE230CoopPlan2flag) {
      if (MECE230CoopPlan2element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -26320,6 +31196,12 @@ $scope.MECE230CoopPlan2Listener = function () {
   }
 };
 $scope.MECE260CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE260CoopPlan2Time <= 200) { 
+        MECE260CoopPlan2Time = currentTime;
+        return;
+    }
+MECE260CoopPlan2Time = currentTime;
   var MECE260CoopPlan2element = document.getElementById("MECE260CoopPlan2");
  if (!MECE260CoopPlan2flag) {
      if (MECE260CoopPlan2element.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -26347,6 +31229,12 @@ $scope.MECE260CoopPlan2Listener = function () {
   }
 };
 $scope.MECE265CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE265CoopPlan2Time <= 200) { 
+        MECE265CoopPlan2Time = currentTime;
+        return;
+    }
+MECE265CoopPlan2Time = currentTime;
   var MECE265CoopPlan2element = document.getElementById("MECE265CoopPlan2");
  if (!MECE265CoopPlan2flag) {
      if (MECE265CoopPlan2element.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -26370,6 +31258,12 @@ $scope.MECE265CoopPlan2Listener = function () {
   }
 };
 $scope.MATH300CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH300CoopPlan2Time <= 200) { 
+        MATH300CoopPlan2Time = currentTime;
+        return;
+    }
+MATH300CoopPlan2Time = currentTime;
   var MATH300CoopPlan2element = document.getElementById("MATH300CoopPlan2");
  if (!MATH300CoopPlan2flag) {
      if (MATH300CoopPlan2element.classList.contains("MATH-highlighted")) { 
@@ -26399,6 +31293,12 @@ $scope.MATH300CoopPlan2Listener = function () {
   }
 };
 $scope.MECE300CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE300CoopPlan2Time <= 200) { 
+        MECE300CoopPlan2Time = currentTime;
+        return;
+    }
+MECE300CoopPlan2Time = currentTime;
   var MECE300CoopPlan2element = document.getElementById("MECE300CoopPlan2");
  if (!MECE300CoopPlan2flag) {
      if (MECE300CoopPlan2element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -26430,6 +31330,12 @@ $scope.MECE300CoopPlan2Listener = function () {
   }
 };
 $scope.MECE301CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE301CoopPlan2Time <= 200) { 
+        MECE301CoopPlan2Time = currentTime;
+        return;
+    }
+MECE301CoopPlan2Time = currentTime;
   var MECE301CoopPlan2element = document.getElementById("MECE301CoopPlan2");
  if (!MECE301CoopPlan2flag) {
      if (MECE301CoopPlan2element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -26453,6 +31359,12 @@ $scope.MECE301CoopPlan2Listener = function () {
   }
 };
 $scope.MECE331CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE331CoopPlan2Time <= 200) { 
+        MECE331CoopPlan2Time = currentTime;
+        return;
+    }
+MECE331CoopPlan2Time = currentTime;
   var MECE331CoopPlan2element = document.getElementById("MECE331CoopPlan2");
  if (!MECE331CoopPlan2flag) {
      if (MECE331CoopPlan2element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -26492,6 +31404,12 @@ $scope.MECE331CoopPlan2Listener = function () {
   }
 };
 $scope.MECE371CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE371CoopPlan2Time <= 200) { 
+        MECE371CoopPlan2Time = currentTime;
+        return;
+    }
+MECE371CoopPlan2Time = currentTime;
   var MECE371CoopPlan2element = document.getElementById("MECE371CoopPlan2");
  if (!MECE371CoopPlan2flag) {
      if (MECE371CoopPlan2element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -26525,6 +31443,12 @@ $scope.MECE371CoopPlan2Listener = function () {
   }
 };
 $scope.MECE380CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE380CoopPlan2Time <= 200) { 
+        MECE380CoopPlan2Time = currentTime;
+        return;
+    }
+MECE380CoopPlan2Time = currentTime;
   var MECE380CoopPlan2element = document.getElementById("MECE380CoopPlan2");
  if (!MECE380CoopPlan2flag) {
      if (MECE380CoopPlan2element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -26550,6 +31474,12 @@ $scope.MECE380CoopPlan2Listener = function () {
   }
 };
 $scope.WKEXP902CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP902CoopPlan2Time <= 200) { 
+        WKEXP902CoopPlan2Time = currentTime;
+        return;
+    }
+WKEXP902CoopPlan2Time = currentTime;
   var WKEXP902CoopPlan2element = document.getElementById("WKEXP902CoopPlan2");
  if (!WKEXP902CoopPlan2flag) {
      if (WKEXP902CoopPlan2element.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -26573,6 +31503,12 @@ $scope.WKEXP902CoopPlan2Listener = function () {
   }
 };
 $scope.WKEXP903CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP903CoopPlan2Time <= 200) { 
+        WKEXP903CoopPlan2Time = currentTime;
+        return;
+    }
+WKEXP903CoopPlan2Time = currentTime;
   var WKEXP903CoopPlan2element = document.getElementById("WKEXP903CoopPlan2");
  if (!WKEXP903CoopPlan2flag) {
      if (WKEXP903CoopPlan2element.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -26596,6 +31532,12 @@ $scope.WKEXP903CoopPlan2Listener = function () {
   }
 };
 $scope.ENGM310CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM310CoopPlan2Time <= 200) { 
+        ENGM310CoopPlan2Time = currentTime;
+        return;
+    }
+ENGM310CoopPlan2Time = currentTime;
   var ENGM310CoopPlan2element = document.getElementById("ENGM310CoopPlan2");
  if (!ENGM310CoopPlan2flag) {
      if (ENGM310CoopPlan2element.classList.contains("Other-highlighted")) { 
@@ -26617,6 +31559,12 @@ $scope.ENGM310CoopPlan2Listener = function () {
   }
 };
 $scope.ENGM401CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM401CoopPlan2Time <= 200) { 
+        ENGM401CoopPlan2Time = currentTime;
+        return;
+    }
+ENGM401CoopPlan2Time = currentTime;
   var ENGM401CoopPlan2element = document.getElementById("ENGM401CoopPlan2");
  if (!ENGM401CoopPlan2flag) {
      if (ENGM401CoopPlan2element.classList.contains("Other-highlighted")) { 
@@ -26638,6 +31586,12 @@ $scope.ENGM401CoopPlan2Listener = function () {
   }
 };
 $scope.MECE340CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE340CoopPlan2Time <= 200) { 
+        MECE340CoopPlan2Time = currentTime;
+        return;
+    }
+MECE340CoopPlan2Time = currentTime;
   var MECE340CoopPlan2element = document.getElementById("MECE340CoopPlan2");
  if (!MECE340CoopPlan2flag) {
      if (MECE340CoopPlan2element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -26665,6 +31619,12 @@ $scope.MECE340CoopPlan2Listener = function () {
   }
 };
 $scope.MECE360CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE360CoopPlan2Time <= 200) { 
+        MECE360CoopPlan2Time = currentTime;
+        return;
+    }
+MECE360CoopPlan2Time = currentTime;
   var MECE360CoopPlan2element = document.getElementById("MECE360CoopPlan2");
  if (!MECE360CoopPlan2flag) {
      if (MECE360CoopPlan2element.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -26700,6 +31660,12 @@ $scope.MECE360CoopPlan2Listener = function () {
   }
 };
 $scope.MECE362CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE362CoopPlan2Time <= 200) { 
+        MECE362CoopPlan2Time = currentTime;
+        return;
+    }
+MECE362CoopPlan2Time = currentTime;
   var MECE362CoopPlan2element = document.getElementById("MECE362CoopPlan2");
  if (!MECE362CoopPlan2flag) {
      if (MECE362CoopPlan2element.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -26725,6 +31691,12 @@ $scope.MECE362CoopPlan2Listener = function () {
   }
 };
 $scope.MECE390CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE390CoopPlan2Time <= 200) { 
+        MECE390CoopPlan2Time = currentTime;
+        return;
+    }
+MECE390CoopPlan2Time = currentTime;
   var MECE390CoopPlan2element = document.getElementById("MECE390CoopPlan2");
  if (!MECE390CoopPlan2flag) {
      if (MECE390CoopPlan2element.classList.contains("MATH-highlighted")) { 
@@ -26750,6 +31722,12 @@ $scope.MECE390CoopPlan2Listener = function () {
   }
 };
 $scope.ComplementaryElectiveCoopPlan20Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ComplementaryElectiveCoopPlan20Time <= 200) { 
+        ComplementaryElectiveCoopPlan20Time = currentTime;
+        return;
+    }
+ComplementaryElectiveCoopPlan20Time = currentTime;
   var ComplementaryElectiveCoopPlan20element = document.getElementById("ComplementaryElectiveCoopPlan20");
  if (!ComplementaryElectiveCoopPlan20flag) {
      if (ComplementaryElectiveCoopPlan20element.classList.contains("COMP-highlighted")) { 
@@ -26769,6 +31747,12 @@ $scope.ComplementaryElectiveCoopPlan20Listener = function () {
   }
 };
 $scope.WKEXP904CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP904CoopPlan2Time <= 200) { 
+        WKEXP904CoopPlan2Time = currentTime;
+        return;
+    }
+WKEXP904CoopPlan2Time = currentTime;
   var WKEXP904CoopPlan2element = document.getElementById("WKEXP904CoopPlan2");
  if (!WKEXP904CoopPlan2flag) {
      if (WKEXP904CoopPlan2element.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -26792,6 +31776,12 @@ $scope.WKEXP904CoopPlan2Listener = function () {
   }
 };
 $scope.MECE403CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE403CoopPlan2Time <= 200) { 
+        MECE403CoopPlan2Time = currentTime;
+        return;
+    }
+MECE403CoopPlan2Time = currentTime;
   var MECE403CoopPlan2element = document.getElementById("MECE403CoopPlan2");
  if (!MECE403CoopPlan2flag) {
      if (MECE403CoopPlan2element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -26819,6 +31809,12 @@ $scope.MECE403CoopPlan2Listener = function () {
   }
 };
 $scope.MECE451CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE451CoopPlan2Time <= 200) { 
+        MECE451CoopPlan2Time = currentTime;
+        return;
+    }
+MECE451CoopPlan2Time = currentTime;
   var MECE451CoopPlan2element = document.getElementById("MECE451CoopPlan2");
  if (!MECE451CoopPlan2flag) {
      if (MECE451CoopPlan2element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -26842,6 +31838,12 @@ $scope.MECE451CoopPlan2Listener = function () {
   }
 };
 $scope.MECE460CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE460CoopPlan2Time <= 200) { 
+        MECE460CoopPlan2Time = currentTime;
+        return;
+    }
+MECE460CoopPlan2Time = currentTime;
   var MECE460CoopPlan2element = document.getElementById("MECE460CoopPlan2");
  if (!MECE460CoopPlan2flag) {
      if (MECE460CoopPlan2element.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -26879,6 +31881,12 @@ $scope.MECE460CoopPlan2Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveCoopPlan20Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveCoopPlan20Time <= 200) { 
+        ProgramTechnicalElectiveCoopPlan20Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveCoopPlan20Time = currentTime;
   var ProgramTechnicalElectiveCoopPlan20element = document.getElementById("ProgramTechnicalElectiveCoopPlan20");
  if (!ProgramTechnicalElectiveCoopPlan20flag) {
      if (ProgramTechnicalElectiveCoopPlan20element.classList.contains("PROG-highlighted")) { 
@@ -26898,6 +31906,12 @@ $scope.ProgramTechnicalElectiveCoopPlan20Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveCoopPlan21Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveCoopPlan21Time <= 200) { 
+        ProgramTechnicalElectiveCoopPlan21Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveCoopPlan21Time = currentTime;
   var ProgramTechnicalElectiveCoopPlan21element = document.getElementById("ProgramTechnicalElectiveCoopPlan21");
  if (!ProgramTechnicalElectiveCoopPlan21flag) {
      if (ProgramTechnicalElectiveCoopPlan21element.classList.contains("PROG-highlighted")) { 
@@ -26917,6 +31931,12 @@ $scope.ProgramTechnicalElectiveCoopPlan21Listener = function () {
   }
 };
 $scope.ITSElectiveCoopPlan20Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ITSElectiveCoopPlan20Time <= 200) { 
+        ITSElectiveCoopPlan20Time = currentTime;
+        return;
+    }
+ITSElectiveCoopPlan20Time = currentTime;
   var ITSElectiveCoopPlan20element = document.getElementById("ITSElectiveCoopPlan20");
  if (!ITSElectiveCoopPlan20flag) {
      if (ITSElectiveCoopPlan20element.classList.contains("ITS-highlighted")) { 
@@ -26936,6 +31956,12 @@ $scope.ITSElectiveCoopPlan20Listener = function () {
   }
 };
 $scope.WKEXP905CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP905CoopPlan2Time <= 200) { 
+        WKEXP905CoopPlan2Time = currentTime;
+        return;
+    }
+WKEXP905CoopPlan2Time = currentTime;
   var WKEXP905CoopPlan2element = document.getElementById("WKEXP905CoopPlan2");
  if (!WKEXP905CoopPlan2flag) {
      if (WKEXP905CoopPlan2element.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -26957,6 +31983,12 @@ $scope.WKEXP905CoopPlan2Listener = function () {
   }
 };
 $scope.CHE448CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE448CoopPlan2Time <= 200) { 
+        CHE448CoopPlan2Time = currentTime;
+        return;
+    }
+CHE448CoopPlan2Time = currentTime;
   var CHE448CoopPlan2element = document.getElementById("CHE448CoopPlan2");
  if (!CHE448CoopPlan2flag) {
      if (CHE448CoopPlan2element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -26984,6 +32016,12 @@ $scope.CHE448CoopPlan2Listener = function () {
   }
 };
 $scope.MECE420CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE420CoopPlan2Time <= 200) { 
+        MECE420CoopPlan2Time = currentTime;
+        return;
+    }
+MECE420CoopPlan2Time = currentTime;
   var MECE420CoopPlan2element = document.getElementById("MECE420CoopPlan2");
  if (!MECE420CoopPlan2flag) {
      if (MECE420CoopPlan2element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -27005,6 +32043,12 @@ $scope.MECE420CoopPlan2Listener = function () {
   }
 };
 $scope.ENGG400CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG400CoopPlan2Time <= 200) { 
+        ENGG400CoopPlan2Time = currentTime;
+        return;
+    }
+ENGG400CoopPlan2Time = currentTime;
   var ENGG400CoopPlan2element = document.getElementById("ENGG400CoopPlan2");
  if (!ENGG400CoopPlan2flag) {
      if (ENGG400CoopPlan2element.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -27024,6 +32068,12 @@ $scope.ENGG400CoopPlan2Listener = function () {
   }
 };
 $scope.ENGG404CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG404CoopPlan2Time <= 200) { 
+        ENGG404CoopPlan2Time = currentTime;
+        return;
+    }
+ENGG404CoopPlan2Time = currentTime;
   var ENGG404CoopPlan2element = document.getElementById("ENGG404CoopPlan2");
  if (!ENGG404CoopPlan2flag) {
      if (ENGG404CoopPlan2element.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -27043,6 +32093,12 @@ $scope.ENGG404CoopPlan2Listener = function () {
   }
 };
 $scope.MECE430CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE430CoopPlan2Time <= 200) { 
+        MECE430CoopPlan2Time = currentTime;
+        return;
+    }
+MECE430CoopPlan2Time = currentTime;
   var MECE430CoopPlan2element = document.getElementById("MECE430CoopPlan2");
  if (!MECE430CoopPlan2flag) {
      if (MECE430CoopPlan2element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -27064,6 +32120,12 @@ $scope.MECE430CoopPlan2Listener = function () {
   }
 };
 $scope.MECE480CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE480CoopPlan2Time <= 200) { 
+        MECE480CoopPlan2Time = currentTime;
+        return;
+    }
+MECE480CoopPlan2Time = currentTime;
   var MECE480CoopPlan2element = document.getElementById("MECE480CoopPlan2");
  if (!MECE480CoopPlan2flag) {
      if (MECE480CoopPlan2element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -27089,6 +32151,12 @@ $scope.MECE480CoopPlan2Listener = function () {
   }
 };
 $scope.MECE463CoopPlan2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE463CoopPlan2Time <= 200) { 
+        MECE463CoopPlan2Time = currentTime;
+        return;
+    }
+MECE463CoopPlan2Time = currentTime;
   var MECE463CoopPlan2element = document.getElementById("MECE463CoopPlan2");
  if (!MECE463CoopPlan2flag) {
      if (MECE463CoopPlan2element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -27114,6 +32182,12 @@ $scope.MECE463CoopPlan2Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveCoopPlan22Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveCoopPlan22Time <= 200) { 
+        ProgramTechnicalElectiveCoopPlan22Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveCoopPlan22Time = currentTime;
   var ProgramTechnicalElectiveCoopPlan22element = document.getElementById("ProgramTechnicalElectiveCoopPlan22");
  if (!ProgramTechnicalElectiveCoopPlan22flag) {
      if (ProgramTechnicalElectiveCoopPlan22element.classList.contains("PROG-highlighted")) { 
@@ -27133,6 +32207,12 @@ $scope.ProgramTechnicalElectiveCoopPlan22Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveCoopPlan23Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveCoopPlan23Time <= 200) { 
+        ProgramTechnicalElectiveCoopPlan23Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveCoopPlan23Time = currentTime;
   var ProgramTechnicalElectiveCoopPlan23element = document.getElementById("ProgramTechnicalElectiveCoopPlan23");
  if (!ProgramTechnicalElectiveCoopPlan23flag) {
      if (ProgramTechnicalElectiveCoopPlan23element.classList.contains("PROG-highlighted")) { 
@@ -27152,67 +32232,195 @@ $scope.ProgramTechnicalElectiveCoopPlan23Listener = function () {
   }
 };
   var CHEM103CoopPlan3Biomedicalflag = false;
+  var CHEM103CoopPlan3Biomedicalrflag = false;
+ var CHEM103CoopPlan3BiomedicalTime = new Date().getTime();
   var ENGG100CoopPlan3Biomedicalflag = false;
+  var ENGG100CoopPlan3Biomedicalrflag = false;
+ var ENGG100CoopPlan3BiomedicalTime = new Date().getTime();
   var ENGG130CoopPlan3Biomedicalflag = false;
+  var ENGG130CoopPlan3Biomedicalrflag = false;
+ var ENGG130CoopPlan3BiomedicalTime = new Date().getTime();
   var ENGL199CoopPlan3Biomedicalflag = false;
+  var ENGL199CoopPlan3Biomedicalrflag = false;
+ var ENGL199CoopPlan3BiomedicalTime = new Date().getTime();
   var MATH100CoopPlan3Biomedicalflag = false;
+  var MATH100CoopPlan3Biomedicalrflag = false;
+ var MATH100CoopPlan3BiomedicalTime = new Date().getTime();
   var PHYS130CoopPlan3Biomedicalflag = false;
+  var PHYS130CoopPlan3Biomedicalrflag = false;
+ var PHYS130CoopPlan3BiomedicalTime = new Date().getTime();
   var CHEM105CoopPlan3Biomedicalflag = false;
+  var CHEM105CoopPlan3Biomedicalrflag = false;
+ var CHEM105CoopPlan3BiomedicalTime = new Date().getTime();
   var ENCMP100CoopPlan3Biomedicalflag = false;
+  var ENCMP100CoopPlan3Biomedicalrflag = false;
+ var ENCMP100CoopPlan3BiomedicalTime = new Date().getTime();
   var ENGG160CoopPlan3Biomedicalflag = false;
+  var ENGG160CoopPlan3Biomedicalrflag = false;
+ var ENGG160CoopPlan3BiomedicalTime = new Date().getTime();
   var ENPH131CoopPlan3Biomedicalflag = false;
+  var ENPH131CoopPlan3Biomedicalrflag = false;
+ var ENPH131CoopPlan3BiomedicalTime = new Date().getTime();
   var MATH101CoopPlan3Biomedicalflag = false;
+  var MATH101CoopPlan3Biomedicalrflag = false;
+ var MATH101CoopPlan3BiomedicalTime = new Date().getTime();
   var MATH102CoopPlan3Biomedicalflag = false;
+  var MATH102CoopPlan3Biomedicalrflag = false;
+ var MATH102CoopPlan3BiomedicalTime = new Date().getTime();
   var CIVE270CoopPlan3Biomedicalflag = false;
+  var CIVE270CoopPlan3Biomedicalrflag = false;
+ var CIVE270CoopPlan3BiomedicalTime = new Date().getTime();
   var ENGG299CoopPlan3Biomedicalflag = false;
+  var ENGG299CoopPlan3Biomedicalrflag = false;
+ var ENGG299CoopPlan3BiomedicalTime = new Date().getTime();
   var MATH209CoopPlan3Biomedicalflag = false;
+  var MATH209CoopPlan3Biomedicalrflag = false;
+ var MATH209CoopPlan3BiomedicalTime = new Date().getTime();
   var STAT235CoopPlan3Biomedicalflag = false;
+  var STAT235CoopPlan3Biomedicalrflag = false;
+ var STAT235CoopPlan3BiomedicalTime = new Date().getTime();
   var CHE243CoopPlan3Biomedicalflag = false;
+  var CHE243CoopPlan3Biomedicalrflag = false;
+ var CHE243CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE200CoopPlan3Biomedicalflag = false;
+  var MECE200CoopPlan3Biomedicalrflag = false;
+ var MECE200CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE250CoopPlan3Biomedicalflag = false;
+  var MECE250CoopPlan3Biomedicalrflag = false;
+ var MECE250CoopPlan3BiomedicalTime = new Date().getTime();
   var ECE209CoopPlan3Biomedicalflag = false;
+  var ECE209CoopPlan3Biomedicalrflag = false;
+ var ECE209CoopPlan3BiomedicalTime = new Date().getTime();
   var MATE202CoopPlan3Biomedicalflag = false;
+  var MATE202CoopPlan3Biomedicalrflag = false;
+ var MATE202CoopPlan3BiomedicalTime = new Date().getTime();
   var MATH201CoopPlan3Biomedicalflag = false;
+  var MATH201CoopPlan3Biomedicalrflag = false;
+ var MATH201CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE230CoopPlan3Biomedicalflag = false;
+  var MECE230CoopPlan3Biomedicalrflag = false;
+ var MECE230CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE260CoopPlan3Biomedicalflag = false;
+  var MECE260CoopPlan3Biomedicalrflag = false;
+ var MECE260CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE265CoopPlan3Biomedicalflag = false;
+  var MECE265CoopPlan3Biomedicalrflag = false;
+ var MECE265CoopPlan3BiomedicalTime = new Date().getTime();
   var WKEXP902CoopPlan3Biomedicalflag = false;
+  var WKEXP902CoopPlan3Biomedicalrflag = false;
+ var WKEXP902CoopPlan3BiomedicalTime = new Date().getTime();
   var BME320CoopPlan3Biomedicalflag = false;
+  var BME320CoopPlan3Biomedicalrflag = false;
+ var BME320CoopPlan3BiomedicalTime = new Date().getTime();
   var ENGM310CoopPlan3Biomedicalflag = false;
+  var ENGM310CoopPlan3Biomedicalrflag = false;
+ var ENGM310CoopPlan3BiomedicalTime = new Date().getTime();
   var ENGM401CoopPlan3Biomedicalflag = false;
+  var ENGM401CoopPlan3Biomedicalrflag = false;
+ var ENGM401CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE340CoopPlan3Biomedicalflag = false;
+  var MECE340CoopPlan3Biomedicalrflag = false;
+ var MECE340CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE360CoopPlan3Biomedicalflag = false;
+  var MECE360CoopPlan3Biomedicalrflag = false;
+ var MECE360CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE362CoopPlan3Biomedicalflag = false;
+  var MECE362CoopPlan3Biomedicalrflag = false;
+ var MECE362CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE390CoopPlan3Biomedicalflag = false;
+  var MECE390CoopPlan3Biomedicalrflag = false;
+ var MECE390CoopPlan3BiomedicalTime = new Date().getTime();
   var WKEXP903CoopPlan3Biomedicalflag = false;
+  var WKEXP903CoopPlan3Biomedicalrflag = false;
+ var WKEXP903CoopPlan3BiomedicalTime = new Date().getTime();
   var MATH300CoopPlan3Biomedicalflag = false;
+  var MATH300CoopPlan3Biomedicalrflag = false;
+ var MATH300CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE300CoopPlan3Biomedicalflag = false;
+  var MECE300CoopPlan3Biomedicalrflag = false;
+ var MECE300CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE301CoopPlan3Biomedicalflag = false;
+  var MECE301CoopPlan3Biomedicalrflag = false;
+ var MECE301CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE331CoopPlan3Biomedicalflag = false;
+  var MECE331CoopPlan3Biomedicalrflag = false;
+ var MECE331CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE371CoopPlan3Biomedicalflag = false;
+  var MECE371CoopPlan3Biomedicalrflag = false;
+ var MECE371CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE380CoopPlan3Biomedicalflag = false;
+  var MECE380CoopPlan3Biomedicalrflag = false;
+ var MECE380CoopPlan3BiomedicalTime = new Date().getTime();
   var BME321CoopPlan3Biomedicalflag = false;
+  var BME321CoopPlan3Biomedicalrflag = false;
+ var BME321CoopPlan3BiomedicalTime = new Date().getTime();
   var ENGG404CoopPlan3Biomedicalflag = false;
+  var ENGG404CoopPlan3Biomedicalrflag = false;
+ var ENGG404CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE563CoopPlan3Biomedicalflag = false;
+  var MECE563CoopPlan3Biomedicalrflag = false;
+ var MECE563CoopPlan3BiomedicalTime = new Date().getTime();
   var STAT337CoopPlan3Biomedicalflag = false;
+  var STAT337CoopPlan3Biomedicalrflag = false;
+ var STAT337CoopPlan3BiomedicalTime = new Date().getTime();
   var ComplementaryElectiveCoopPlan3Biomedical0flag = false;
+  var ComplementaryElectiveCoopPlan3Biomedical0rflag = false;
+ var ComplementaryElectiveCoopPlan3Biomedical0Time = new Date().getTime();
   var ProgramTechnicalElectiveCoopPlan3Biomedical0flag = false;
+  var ProgramTechnicalElectiveCoopPlan3Biomedical0rflag = false;
+ var ProgramTechnicalElectiveCoopPlan3Biomedical0Time = new Date().getTime();
   var WKEXP904CoopPlan3Biomedicalflag = false;
+  var WKEXP904CoopPlan3Biomedicalrflag = false;
+ var WKEXP904CoopPlan3BiomedicalTime = new Date().getTime();
   var WKEXP905CoopPlan3Biomedicalflag = false;
+  var WKEXP905CoopPlan3Biomedicalrflag = false;
+ var WKEXP905CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE430CoopPlan3Biomedicalflag = false;
+  var MECE430CoopPlan3Biomedicalrflag = false;
+ var MECE430CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE463CoopPlan3Biomedicalflag = false;
+  var MECE463CoopPlan3Biomedicalrflag = false;
+ var MECE463CoopPlan3BiomedicalTime = new Date().getTime();
   var ProgramTechnicalElectiveCoopPlan3Biomedical1flag = false;
+  var ProgramTechnicalElectiveCoopPlan3Biomedical1rflag = false;
+ var ProgramTechnicalElectiveCoopPlan3Biomedical1Time = new Date().getTime();
   var ProgramTechnicalElectiveCoopPlan3Biomedical2flag = false;
+  var ProgramTechnicalElectiveCoopPlan3Biomedical2rflag = false;
+ var ProgramTechnicalElectiveCoopPlan3Biomedical2Time = new Date().getTime();
   var ITSElectiveCoopPlan3Biomedical0flag = false;
+  var ITSElectiveCoopPlan3Biomedical0rflag = false;
+ var ITSElectiveCoopPlan3Biomedical0Time = new Date().getTime();
   var CHE448CoopPlan3Biomedicalflag = false;
+  var CHE448CoopPlan3Biomedicalrflag = false;
+ var CHE448CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE420CoopPlan3Biomedicalflag = false;
+  var MECE420CoopPlan3Biomedicalrflag = false;
+ var MECE420CoopPlan3BiomedicalTime = new Date().getTime();
   var ENGG400CoopPlan3Biomedicalflag = false;
+  var ENGG400CoopPlan3Biomedicalrflag = false;
+ var ENGG400CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE485CoopPlan3Biomedicalflag = false;
+  var MECE485CoopPlan3Biomedicalrflag = false;
+ var MECE485CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE403CoopPlan3Biomedicalflag = false;
+  var MECE403CoopPlan3Biomedicalrflag = false;
+ var MECE403CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE451CoopPlan3Biomedicalflag = false;
+  var MECE451CoopPlan3Biomedicalrflag = false;
+ var MECE451CoopPlan3BiomedicalTime = new Date().getTime();
   var MECE460CoopPlan3Biomedicalflag = false;
+  var MECE460CoopPlan3Biomedicalrflag = false;
+ var MECE460CoopPlan3BiomedicalTime = new Date().getTime();
   var PHIL386CoopPlan3Biomedicalflag = false;
+  var PHIL386CoopPlan3Biomedicalrflag = false;
+ var PHIL386CoopPlan3BiomedicalTime = new Date().getTime();
 $scope.CHEM103CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM103CoopPlan3BiomedicalTime <= 200) { 
+        CHEM103CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+CHEM103CoopPlan3BiomedicalTime = currentTime;
   var CHEM103CoopPlan3Biomedicalelement = document.getElementById("CHEM103CoopPlan3Biomedical");
  if (!CHEM103CoopPlan3Biomedicalflag) {
      if (CHEM103CoopPlan3Biomedicalelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -27234,6 +32442,12 @@ $scope.CHEM103CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.ENGG100CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG100CoopPlan3BiomedicalTime <= 200) { 
+        ENGG100CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+ENGG100CoopPlan3BiomedicalTime = currentTime;
   var ENGG100CoopPlan3Biomedicalelement = document.getElementById("ENGG100CoopPlan3Biomedical");
  if (!ENGG100CoopPlan3Biomedicalflag) {
      if (ENGG100CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -27253,6 +32467,12 @@ $scope.ENGG100CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.ENGG130CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG130CoopPlan3BiomedicalTime <= 200) { 
+        ENGG130CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+ENGG130CoopPlan3BiomedicalTime = currentTime;
   var ENGG130CoopPlan3Biomedicalelement = document.getElementById("ENGG130CoopPlan3Biomedical");
  if (!ENGG130CoopPlan3Biomedicalflag) {
      if (ENGG130CoopPlan3Biomedicalelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -27280,6 +32500,12 @@ $scope.ENGG130CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.ENGL199CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGL199CoopPlan3BiomedicalTime <= 200) { 
+        ENGL199CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+ENGL199CoopPlan3BiomedicalTime = currentTime;
   var ENGL199CoopPlan3Biomedicalelement = document.getElementById("ENGL199CoopPlan3Biomedical");
  if (!ENGL199CoopPlan3Biomedicalflag) {
      if (ENGL199CoopPlan3Biomedicalelement.classList.contains("Other-highlighted")) { 
@@ -27301,6 +32527,12 @@ $scope.ENGL199CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MATH100CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH100CoopPlan3BiomedicalTime <= 200) { 
+        MATH100CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MATH100CoopPlan3BiomedicalTime = currentTime;
   var MATH100CoopPlan3Biomedicalelement = document.getElementById("MATH100CoopPlan3Biomedical");
  if (!MATH100CoopPlan3Biomedicalflag) {
      if (MATH100CoopPlan3Biomedicalelement.classList.contains("MATH-highlighted")) { 
@@ -27332,6 +32564,12 @@ $scope.MATH100CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.PHYS130CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - PHYS130CoopPlan3BiomedicalTime <= 200) { 
+        PHYS130CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+PHYS130CoopPlan3BiomedicalTime = currentTime;
   var PHYS130CoopPlan3Biomedicalelement = document.getElementById("PHYS130CoopPlan3Biomedical");
  if (!PHYS130CoopPlan3Biomedicalflag) {
      if (PHYS130CoopPlan3Biomedicalelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -27353,6 +32591,12 @@ $scope.PHYS130CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.CHEM105CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM105CoopPlan3BiomedicalTime <= 200) { 
+        CHEM105CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+CHEM105CoopPlan3BiomedicalTime = currentTime;
   var CHEM105CoopPlan3Biomedicalelement = document.getElementById("CHEM105CoopPlan3Biomedical");
  if (!CHEM105CoopPlan3Biomedicalflag) {
      if (CHEM105CoopPlan3Biomedicalelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -27376,6 +32620,12 @@ $scope.CHEM105CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.ENCMP100CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENCMP100CoopPlan3BiomedicalTime <= 200) { 
+        ENCMP100CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+ENCMP100CoopPlan3BiomedicalTime = currentTime;
   var ENCMP100CoopPlan3Biomedicalelement = document.getElementById("ENCMP100CoopPlan3Biomedical");
  if (!ENCMP100CoopPlan3Biomedicalflag) {
      if (ENCMP100CoopPlan3Biomedicalelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -27395,6 +32645,12 @@ $scope.ENCMP100CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.ENGG160CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG160CoopPlan3BiomedicalTime <= 200) { 
+        ENGG160CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+ENGG160CoopPlan3BiomedicalTime = currentTime;
   var ENGG160CoopPlan3Biomedicalelement = document.getElementById("ENGG160CoopPlan3Biomedical");
  if (!ENGG160CoopPlan3Biomedicalflag) {
      if (ENGG160CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -27418,6 +32674,12 @@ $scope.ENGG160CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.ENPH131CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENPH131CoopPlan3BiomedicalTime <= 200) { 
+        ENPH131CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+ENPH131CoopPlan3BiomedicalTime = currentTime;
   var ENPH131CoopPlan3Biomedicalelement = document.getElementById("ENPH131CoopPlan3Biomedical");
  if (!ENPH131CoopPlan3Biomedicalflag) {
      if (ENPH131CoopPlan3Biomedicalelement.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -27447,6 +32709,12 @@ $scope.ENPH131CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MATH101CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH101CoopPlan3BiomedicalTime <= 200) { 
+        MATH101CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MATH101CoopPlan3BiomedicalTime = currentTime;
   var MATH101CoopPlan3Biomedicalelement = document.getElementById("MATH101CoopPlan3Biomedical");
  if (!MATH101CoopPlan3Biomedicalflag) {
      if (MATH101CoopPlan3Biomedicalelement.classList.contains("MATH-highlighted")) { 
@@ -27482,6 +32750,12 @@ $scope.MATH101CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MATH102CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH102CoopPlan3BiomedicalTime <= 200) { 
+        MATH102CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MATH102CoopPlan3BiomedicalTime = currentTime;
   var MATH102CoopPlan3Biomedicalelement = document.getElementById("MATH102CoopPlan3Biomedical");
  if (!MATH102CoopPlan3Biomedicalflag) {
      if (MATH102CoopPlan3Biomedicalelement.classList.contains("MATH-highlighted")) { 
@@ -27507,6 +32781,12 @@ $scope.MATH102CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.CIVE270CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CIVE270CoopPlan3BiomedicalTime <= 200) { 
+        CIVE270CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+CIVE270CoopPlan3BiomedicalTime = currentTime;
   var CIVE270CoopPlan3Biomedicalelement = document.getElementById("CIVE270CoopPlan3Biomedical");
  if (!CIVE270CoopPlan3Biomedicalflag) {
      if (CIVE270CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -27538,6 +32818,12 @@ $scope.CIVE270CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.ENGG299CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG299CoopPlan3BiomedicalTime <= 200) { 
+        ENGG299CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+ENGG299CoopPlan3BiomedicalTime = currentTime;
   var ENGG299CoopPlan3Biomedicalelement = document.getElementById("ENGG299CoopPlan3Biomedical");
  if (!ENGG299CoopPlan3Biomedicalflag) {
      if (ENGG299CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -27557,6 +32843,12 @@ $scope.ENGG299CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MATH209CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH209CoopPlan3BiomedicalTime <= 200) { 
+        MATH209CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MATH209CoopPlan3BiomedicalTime = currentTime;
   var MATH209CoopPlan3Biomedicalelement = document.getElementById("MATH209CoopPlan3Biomedical");
  if (!MATH209CoopPlan3Biomedicalflag) {
      if (MATH209CoopPlan3Biomedicalelement.classList.contains("MATH-highlighted")) { 
@@ -27588,6 +32880,12 @@ $scope.MATH209CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.STAT235CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - STAT235CoopPlan3BiomedicalTime <= 200) { 
+        STAT235CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+STAT235CoopPlan3BiomedicalTime = currentTime;
   var STAT235CoopPlan3Biomedicalelement = document.getElementById("STAT235CoopPlan3Biomedical");
  if (!STAT235CoopPlan3Biomedicalflag) {
      if (STAT235CoopPlan3Biomedicalelement.classList.contains("MATH-highlighted")) { 
@@ -27613,6 +32911,12 @@ $scope.STAT235CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.CHE243CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE243CoopPlan3BiomedicalTime <= 200) { 
+        CHE243CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+CHE243CoopPlan3BiomedicalTime = currentTime;
   var CHE243CoopPlan3Biomedicalelement = document.getElementById("CHE243CoopPlan3Biomedical");
  if (!CHE243CoopPlan3Biomedicalflag) {
      if (CHE243CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -27640,6 +32944,12 @@ $scope.CHE243CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE200CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE200CoopPlan3BiomedicalTime <= 200) { 
+        MECE200CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE200CoopPlan3BiomedicalTime = currentTime;
   var MECE200CoopPlan3Biomedicalelement = document.getElementById("MECE200CoopPlan3Biomedical");
  if (!MECE200CoopPlan3Biomedicalflag) {
      if (MECE200CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -27661,6 +32971,12 @@ $scope.MECE200CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE250CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE250CoopPlan3BiomedicalTime <= 200) { 
+        MECE250CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE250CoopPlan3BiomedicalTime = currentTime;
   var MECE250CoopPlan3Biomedicalelement = document.getElementById("MECE250CoopPlan3Biomedical");
  if (!MECE250CoopPlan3Biomedicalflag) {
      if (MECE250CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -27692,6 +33008,12 @@ $scope.MECE250CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.ECE209CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ECE209CoopPlan3BiomedicalTime <= 200) { 
+        ECE209CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+ECE209CoopPlan3BiomedicalTime = currentTime;
   var ECE209CoopPlan3Biomedicalelement = document.getElementById("ECE209CoopPlan3Biomedical");
  if (!ECE209CoopPlan3Biomedicalflag) {
      if (ECE209CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -27713,6 +33035,12 @@ $scope.ECE209CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MATE202CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATE202CoopPlan3BiomedicalTime <= 200) { 
+        MATE202CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MATE202CoopPlan3BiomedicalTime = currentTime;
   var MATE202CoopPlan3Biomedicalelement = document.getElementById("MATE202CoopPlan3Biomedical");
  if (!MATE202CoopPlan3Biomedicalflag) {
      if (MATE202CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -27736,6 +33064,12 @@ $scope.MATE202CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MATH201CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH201CoopPlan3BiomedicalTime <= 200) { 
+        MATH201CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MATH201CoopPlan3BiomedicalTime = currentTime;
   var MATH201CoopPlan3Biomedicalelement = document.getElementById("MATH201CoopPlan3Biomedical");
  if (!MATH201CoopPlan3Biomedicalflag) {
      if (MATH201CoopPlan3Biomedicalelement.classList.contains("MATH-highlighted")) { 
@@ -27763,6 +33097,12 @@ $scope.MATH201CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE230CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE230CoopPlan3BiomedicalTime <= 200) { 
+        MECE230CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE230CoopPlan3BiomedicalTime = currentTime;
   var MECE230CoopPlan3Biomedicalelement = document.getElementById("MECE230CoopPlan3Biomedical");
  if (!MECE230CoopPlan3Biomedicalflag) {
      if (MECE230CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -27790,6 +33130,12 @@ $scope.MECE230CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE260CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE260CoopPlan3BiomedicalTime <= 200) { 
+        MECE260CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE260CoopPlan3BiomedicalTime = currentTime;
   var MECE260CoopPlan3Biomedicalelement = document.getElementById("MECE260CoopPlan3Biomedical");
  if (!MECE260CoopPlan3Biomedicalflag) {
      if (MECE260CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -27817,6 +33163,12 @@ $scope.MECE260CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE265CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE265CoopPlan3BiomedicalTime <= 200) { 
+        MECE265CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE265CoopPlan3BiomedicalTime = currentTime;
   var MECE265CoopPlan3Biomedicalelement = document.getElementById("MECE265CoopPlan3Biomedical");
  if (!MECE265CoopPlan3Biomedicalflag) {
      if (MECE265CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -27840,6 +33192,12 @@ $scope.MECE265CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.WKEXP902CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP902CoopPlan3BiomedicalTime <= 200) { 
+        WKEXP902CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+WKEXP902CoopPlan3BiomedicalTime = currentTime;
   var WKEXP902CoopPlan3Biomedicalelement = document.getElementById("WKEXP902CoopPlan3Biomedical");
  if (!WKEXP902CoopPlan3Biomedicalflag) {
      if (WKEXP902CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -27861,6 +33219,12 @@ $scope.WKEXP902CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.BME320CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - BME320CoopPlan3BiomedicalTime <= 200) { 
+        BME320CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+BME320CoopPlan3BiomedicalTime = currentTime;
   var BME320CoopPlan3Biomedicalelement = document.getElementById("BME320CoopPlan3Biomedical");
  if (!BME320CoopPlan3Biomedicalflag) {
      if (BME320CoopPlan3Biomedicalelement.classList.contains("course-highlighted")) { 
@@ -27884,6 +33248,12 @@ $scope.BME320CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.ENGM310CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM310CoopPlan3BiomedicalTime <= 200) { 
+        ENGM310CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+ENGM310CoopPlan3BiomedicalTime = currentTime;
   var ENGM310CoopPlan3Biomedicalelement = document.getElementById("ENGM310CoopPlan3Biomedical");
  if (!ENGM310CoopPlan3Biomedicalflag) {
      if (ENGM310CoopPlan3Biomedicalelement.classList.contains("Other-highlighted")) { 
@@ -27905,6 +33275,12 @@ $scope.ENGM310CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.ENGM401CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM401CoopPlan3BiomedicalTime <= 200) { 
+        ENGM401CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+ENGM401CoopPlan3BiomedicalTime = currentTime;
   var ENGM401CoopPlan3Biomedicalelement = document.getElementById("ENGM401CoopPlan3Biomedical");
  if (!ENGM401CoopPlan3Biomedicalflag) {
      if (ENGM401CoopPlan3Biomedicalelement.classList.contains("Other-highlighted")) { 
@@ -27926,6 +33302,12 @@ $scope.ENGM401CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE340CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE340CoopPlan3BiomedicalTime <= 200) { 
+        MECE340CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE340CoopPlan3BiomedicalTime = currentTime;
   var MECE340CoopPlan3Biomedicalelement = document.getElementById("MECE340CoopPlan3Biomedical");
  if (!MECE340CoopPlan3Biomedicalflag) {
      if (MECE340CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -27953,6 +33335,12 @@ $scope.MECE340CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE360CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE360CoopPlan3BiomedicalTime <= 200) { 
+        MECE360CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE360CoopPlan3BiomedicalTime = currentTime;
   var MECE360CoopPlan3Biomedicalelement = document.getElementById("MECE360CoopPlan3Biomedical");
  if (!MECE360CoopPlan3Biomedicalflag) {
      if (MECE360CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -27988,6 +33376,12 @@ $scope.MECE360CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE362CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE362CoopPlan3BiomedicalTime <= 200) { 
+        MECE362CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE362CoopPlan3BiomedicalTime = currentTime;
   var MECE362CoopPlan3Biomedicalelement = document.getElementById("MECE362CoopPlan3Biomedical");
  if (!MECE362CoopPlan3Biomedicalflag) {
      if (MECE362CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -28013,6 +33407,12 @@ $scope.MECE362CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE390CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE390CoopPlan3BiomedicalTime <= 200) { 
+        MECE390CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE390CoopPlan3BiomedicalTime = currentTime;
   var MECE390CoopPlan3Biomedicalelement = document.getElementById("MECE390CoopPlan3Biomedical");
  if (!MECE390CoopPlan3Biomedicalflag) {
      if (MECE390CoopPlan3Biomedicalelement.classList.contains("MATH-highlighted")) { 
@@ -28040,6 +33440,12 @@ $scope.MECE390CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.WKEXP903CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP903CoopPlan3BiomedicalTime <= 200) { 
+        WKEXP903CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+WKEXP903CoopPlan3BiomedicalTime = currentTime;
   var WKEXP903CoopPlan3Biomedicalelement = document.getElementById("WKEXP903CoopPlan3Biomedical");
  if (!WKEXP903CoopPlan3Biomedicalflag) {
      if (WKEXP903CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -28063,6 +33469,12 @@ $scope.WKEXP903CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MATH300CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH300CoopPlan3BiomedicalTime <= 200) { 
+        MATH300CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MATH300CoopPlan3BiomedicalTime = currentTime;
   var MATH300CoopPlan3Biomedicalelement = document.getElementById("MATH300CoopPlan3Biomedical");
  if (!MATH300CoopPlan3Biomedicalflag) {
      if (MATH300CoopPlan3Biomedicalelement.classList.contains("MATH-highlighted")) { 
@@ -28092,6 +33504,12 @@ $scope.MATH300CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE300CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE300CoopPlan3BiomedicalTime <= 200) { 
+        MECE300CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE300CoopPlan3BiomedicalTime = currentTime;
   var MECE300CoopPlan3Biomedicalelement = document.getElementById("MECE300CoopPlan3Biomedical");
  if (!MECE300CoopPlan3Biomedicalflag) {
      if (MECE300CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -28123,6 +33541,12 @@ $scope.MECE300CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE301CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE301CoopPlan3BiomedicalTime <= 200) { 
+        MECE301CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE301CoopPlan3BiomedicalTime = currentTime;
   var MECE301CoopPlan3Biomedicalelement = document.getElementById("MECE301CoopPlan3Biomedical");
  if (!MECE301CoopPlan3Biomedicalflag) {
      if (MECE301CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -28146,6 +33570,12 @@ $scope.MECE301CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE331CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE331CoopPlan3BiomedicalTime <= 200) { 
+        MECE331CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE331CoopPlan3BiomedicalTime = currentTime;
   var MECE331CoopPlan3Biomedicalelement = document.getElementById("MECE331CoopPlan3Biomedical");
  if (!MECE331CoopPlan3Biomedicalflag) {
      if (MECE331CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -28187,6 +33617,12 @@ $scope.MECE331CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE371CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE371CoopPlan3BiomedicalTime <= 200) { 
+        MECE371CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE371CoopPlan3BiomedicalTime = currentTime;
   var MECE371CoopPlan3Biomedicalelement = document.getElementById("MECE371CoopPlan3Biomedical");
  if (!MECE371CoopPlan3Biomedicalflag) {
      if (MECE371CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -28220,6 +33656,12 @@ $scope.MECE371CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE380CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE380CoopPlan3BiomedicalTime <= 200) { 
+        MECE380CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE380CoopPlan3BiomedicalTime = currentTime;
   var MECE380CoopPlan3Biomedicalelement = document.getElementById("MECE380CoopPlan3Biomedical");
  if (!MECE380CoopPlan3Biomedicalflag) {
      if (MECE380CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -28243,6 +33685,12 @@ $scope.MECE380CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.BME321CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - BME321CoopPlan3BiomedicalTime <= 200) { 
+        BME321CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+BME321CoopPlan3BiomedicalTime = currentTime;
   var BME321CoopPlan3Biomedicalelement = document.getElementById("BME321CoopPlan3Biomedical");
  if (!BME321CoopPlan3Biomedicalflag) {
      if (BME321CoopPlan3Biomedicalelement.classList.contains("course-highlighted")) { 
@@ -28266,6 +33714,12 @@ $scope.BME321CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.ENGG404CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG404CoopPlan3BiomedicalTime <= 200) { 
+        ENGG404CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+ENGG404CoopPlan3BiomedicalTime = currentTime;
   var ENGG404CoopPlan3Biomedicalelement = document.getElementById("ENGG404CoopPlan3Biomedical");
  if (!ENGG404CoopPlan3Biomedicalflag) {
      if (ENGG404CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -28285,6 +33739,12 @@ $scope.ENGG404CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE563CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE563CoopPlan3BiomedicalTime <= 200) { 
+        MECE563CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE563CoopPlan3BiomedicalTime = currentTime;
   var MECE563CoopPlan3Biomedicalelement = document.getElementById("MECE563CoopPlan3Biomedical");
  if (!MECE563CoopPlan3Biomedicalflag) {
      if (MECE563CoopPlan3Biomedicalelement.classList.contains("course-highlighted")) { 
@@ -28310,6 +33770,12 @@ $scope.MECE563CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.STAT337CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - STAT337CoopPlan3BiomedicalTime <= 200) { 
+        STAT337CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+STAT337CoopPlan3BiomedicalTime = currentTime;
   var STAT337CoopPlan3Biomedicalelement = document.getElementById("STAT337CoopPlan3Biomedical");
  if (!STAT337CoopPlan3Biomedicalflag) {
      if (STAT337CoopPlan3Biomedicalelement.classList.contains("course-highlighted")) { 
@@ -28329,6 +33795,12 @@ $scope.STAT337CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.ComplementaryElectiveCoopPlan3Biomedical0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ComplementaryElectiveCoopPlan3Biomedical0Time <= 200) { 
+        ComplementaryElectiveCoopPlan3Biomedical0Time = currentTime;
+        return;
+    }
+ComplementaryElectiveCoopPlan3Biomedical0Time = currentTime;
   var ComplementaryElectiveCoopPlan3Biomedical0element = document.getElementById("ComplementaryElectiveCoopPlan3Biomedical0");
  if (!ComplementaryElectiveCoopPlan3Biomedical0flag) {
      if (ComplementaryElectiveCoopPlan3Biomedical0element.classList.contains("COMP-highlighted")) { 
@@ -28348,6 +33820,12 @@ $scope.ComplementaryElectiveCoopPlan3Biomedical0Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveCoopPlan3Biomedical0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveCoopPlan3Biomedical0Time <= 200) { 
+        ProgramTechnicalElectiveCoopPlan3Biomedical0Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveCoopPlan3Biomedical0Time = currentTime;
   var ProgramTechnicalElectiveCoopPlan3Biomedical0element = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical0");
  if (!ProgramTechnicalElectiveCoopPlan3Biomedical0flag) {
      if (ProgramTechnicalElectiveCoopPlan3Biomedical0element.classList.contains("PROG-highlighted")) { 
@@ -28367,6 +33845,12 @@ $scope.ProgramTechnicalElectiveCoopPlan3Biomedical0Listener = function () {
   }
 };
 $scope.WKEXP904CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP904CoopPlan3BiomedicalTime <= 200) { 
+        WKEXP904CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+WKEXP904CoopPlan3BiomedicalTime = currentTime;
   var WKEXP904CoopPlan3Biomedicalelement = document.getElementById("WKEXP904CoopPlan3Biomedical");
  if (!WKEXP904CoopPlan3Biomedicalflag) {
      if (WKEXP904CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -28390,6 +33874,12 @@ $scope.WKEXP904CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.WKEXP905CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP905CoopPlan3BiomedicalTime <= 200) { 
+        WKEXP905CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+WKEXP905CoopPlan3BiomedicalTime = currentTime;
   var WKEXP905CoopPlan3Biomedicalelement = document.getElementById("WKEXP905CoopPlan3Biomedical");
  if (!WKEXP905CoopPlan3Biomedicalflag) {
      if (WKEXP905CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -28411,6 +33901,12 @@ $scope.WKEXP905CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE430CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE430CoopPlan3BiomedicalTime <= 200) { 
+        MECE430CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE430CoopPlan3BiomedicalTime = currentTime;
   var MECE430CoopPlan3Biomedicalelement = document.getElementById("MECE430CoopPlan3Biomedical");
  if (!MECE430CoopPlan3Biomedicalflag) {
      if (MECE430CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -28432,6 +33928,12 @@ $scope.MECE430CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE463CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE463CoopPlan3BiomedicalTime <= 200) { 
+        MECE463CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE463CoopPlan3BiomedicalTime = currentTime;
   var MECE463CoopPlan3Biomedicalelement = document.getElementById("MECE463CoopPlan3Biomedical");
  if (!MECE463CoopPlan3Biomedicalflag) {
      if (MECE463CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -28457,6 +33959,12 @@ $scope.MECE463CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveCoopPlan3Biomedical1Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveCoopPlan3Biomedical1Time <= 200) { 
+        ProgramTechnicalElectiveCoopPlan3Biomedical1Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveCoopPlan3Biomedical1Time = currentTime;
   var ProgramTechnicalElectiveCoopPlan3Biomedical1element = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical1");
  if (!ProgramTechnicalElectiveCoopPlan3Biomedical1flag) {
      if (ProgramTechnicalElectiveCoopPlan3Biomedical1element.classList.contains("PROG-highlighted")) { 
@@ -28476,6 +33984,12 @@ $scope.ProgramTechnicalElectiveCoopPlan3Biomedical1Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveCoopPlan3Biomedical2Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveCoopPlan3Biomedical2Time <= 200) { 
+        ProgramTechnicalElectiveCoopPlan3Biomedical2Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveCoopPlan3Biomedical2Time = currentTime;
   var ProgramTechnicalElectiveCoopPlan3Biomedical2element = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedical2");
  if (!ProgramTechnicalElectiveCoopPlan3Biomedical2flag) {
      if (ProgramTechnicalElectiveCoopPlan3Biomedical2element.classList.contains("PROG-highlighted")) { 
@@ -28495,6 +34009,12 @@ $scope.ProgramTechnicalElectiveCoopPlan3Biomedical2Listener = function () {
   }
 };
 $scope.ITSElectiveCoopPlan3Biomedical0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ITSElectiveCoopPlan3Biomedical0Time <= 200) { 
+        ITSElectiveCoopPlan3Biomedical0Time = currentTime;
+        return;
+    }
+ITSElectiveCoopPlan3Biomedical0Time = currentTime;
   var ITSElectiveCoopPlan3Biomedical0element = document.getElementById("ITSElectiveCoopPlan3Biomedical0");
  if (!ITSElectiveCoopPlan3Biomedical0flag) {
      if (ITSElectiveCoopPlan3Biomedical0element.classList.contains("ITS-highlighted")) { 
@@ -28514,6 +34034,12 @@ $scope.ITSElectiveCoopPlan3Biomedical0Listener = function () {
   }
 };
 $scope.CHE448CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE448CoopPlan3BiomedicalTime <= 200) { 
+        CHE448CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+CHE448CoopPlan3BiomedicalTime = currentTime;
   var CHE448CoopPlan3Biomedicalelement = document.getElementById("CHE448CoopPlan3Biomedical");
  if (!CHE448CoopPlan3Biomedicalflag) {
      if (CHE448CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -28541,6 +34067,12 @@ $scope.CHE448CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE420CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE420CoopPlan3BiomedicalTime <= 200) { 
+        MECE420CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE420CoopPlan3BiomedicalTime = currentTime;
   var MECE420CoopPlan3Biomedicalelement = document.getElementById("MECE420CoopPlan3Biomedical");
  if (!MECE420CoopPlan3Biomedicalflag) {
      if (MECE420CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -28562,6 +34094,12 @@ $scope.MECE420CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.ENGG400CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG400CoopPlan3BiomedicalTime <= 200) { 
+        ENGG400CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+ENGG400CoopPlan3BiomedicalTime = currentTime;
   var ENGG400CoopPlan3Biomedicalelement = document.getElementById("ENGG400CoopPlan3Biomedical");
  if (!ENGG400CoopPlan3Biomedicalflag) {
      if (ENGG400CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -28581,6 +34119,12 @@ $scope.ENGG400CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE485CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE485CoopPlan3BiomedicalTime <= 200) { 
+        MECE485CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE485CoopPlan3BiomedicalTime = currentTime;
   var MECE485CoopPlan3Biomedicalelement = document.getElementById("MECE485CoopPlan3Biomedical");
  if (!MECE485CoopPlan3Biomedicalflag) {
      if (MECE485CoopPlan3Biomedicalelement.classList.contains("course-highlighted")) { 
@@ -28606,6 +34150,12 @@ $scope.MECE485CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE403CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE403CoopPlan3BiomedicalTime <= 200) { 
+        MECE403CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE403CoopPlan3BiomedicalTime = currentTime;
   var MECE403CoopPlan3Biomedicalelement = document.getElementById("MECE403CoopPlan3Biomedical");
  if (!MECE403CoopPlan3Biomedicalflag) {
      if (MECE403CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -28633,6 +34183,12 @@ $scope.MECE403CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE451CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE451CoopPlan3BiomedicalTime <= 200) { 
+        MECE451CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE451CoopPlan3BiomedicalTime = currentTime;
   var MECE451CoopPlan3Biomedicalelement = document.getElementById("MECE451CoopPlan3Biomedical");
  if (!MECE451CoopPlan3Biomedicalflag) {
      if (MECE451CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -28656,6 +34212,12 @@ $scope.MECE451CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.MECE460CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE460CoopPlan3BiomedicalTime <= 200) { 
+        MECE460CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+MECE460CoopPlan3BiomedicalTime = currentTime;
   var MECE460CoopPlan3Biomedicalelement = document.getElementById("MECE460CoopPlan3Biomedical");
  if (!MECE460CoopPlan3Biomedicalflag) {
      if (MECE460CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -28693,6 +34255,12 @@ $scope.MECE460CoopPlan3BiomedicalListener = function () {
   }
 };
 $scope.PHIL386CoopPlan3BiomedicalListener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - PHIL386CoopPlan3BiomedicalTime <= 200) { 
+        PHIL386CoopPlan3BiomedicalTime = currentTime;
+        return;
+    }
+PHIL386CoopPlan3BiomedicalTime = currentTime;
   var PHIL386CoopPlan3Biomedicalelement = document.getElementById("PHIL386CoopPlan3Biomedical");
  if (!PHIL386CoopPlan3Biomedicalflag) {
      if (PHIL386CoopPlan3Biomedicalelement.classList.contains("course-highlighted")) { 
@@ -28712,64 +34280,186 @@ $scope.PHIL386CoopPlan3BiomedicalListener = function () {
   }
 };
   var CHEM103CoopPlan4flag = false;
+  var CHEM103CoopPlan4rflag = false;
+ var CHEM103CoopPlan4Time = new Date().getTime();
   var ENGG100CoopPlan4flag = false;
+  var ENGG100CoopPlan4rflag = false;
+ var ENGG100CoopPlan4Time = new Date().getTime();
   var ENGG130CoopPlan4flag = false;
+  var ENGG130CoopPlan4rflag = false;
+ var ENGG130CoopPlan4Time = new Date().getTime();
   var ENGL199CoopPlan4flag = false;
+  var ENGL199CoopPlan4rflag = false;
+ var ENGL199CoopPlan4Time = new Date().getTime();
   var MATH100CoopPlan4flag = false;
+  var MATH100CoopPlan4rflag = false;
+ var MATH100CoopPlan4Time = new Date().getTime();
   var PHYS130CoopPlan4flag = false;
+  var PHYS130CoopPlan4rflag = false;
+ var PHYS130CoopPlan4Time = new Date().getTime();
   var CHEM105CoopPlan4flag = false;
+  var CHEM105CoopPlan4rflag = false;
+ var CHEM105CoopPlan4Time = new Date().getTime();
   var ENCMP100CoopPlan4flag = false;
+  var ENCMP100CoopPlan4rflag = false;
+ var ENCMP100CoopPlan4Time = new Date().getTime();
   var ENGG160CoopPlan4flag = false;
+  var ENGG160CoopPlan4rflag = false;
+ var ENGG160CoopPlan4Time = new Date().getTime();
   var ENPH131CoopPlan4flag = false;
+  var ENPH131CoopPlan4rflag = false;
+ var ENPH131CoopPlan4Time = new Date().getTime();
   var MATH101CoopPlan4flag = false;
+  var MATH101CoopPlan4rflag = false;
+ var MATH101CoopPlan4Time = new Date().getTime();
   var MATH102CoopPlan4flag = false;
+  var MATH102CoopPlan4rflag = false;
+ var MATH102CoopPlan4Time = new Date().getTime();
   var CIVE270CoopPlan4flag = false;
+  var CIVE270CoopPlan4rflag = false;
+ var CIVE270CoopPlan4Time = new Date().getTime();
   var ENGG299CoopPlan4flag = false;
+  var ENGG299CoopPlan4rflag = false;
+ var ENGG299CoopPlan4Time = new Date().getTime();
   var MATH209CoopPlan4flag = false;
+  var MATH209CoopPlan4rflag = false;
+ var MATH209CoopPlan4Time = new Date().getTime();
   var STAT235CoopPlan4flag = false;
+  var STAT235CoopPlan4rflag = false;
+ var STAT235CoopPlan4Time = new Date().getTime();
   var MECE230CoopPlan4flag = false;
+  var MECE230CoopPlan4rflag = false;
+ var MECE230CoopPlan4Time = new Date().getTime();
   var MECE260CoopPlan4flag = false;
+  var MECE260CoopPlan4rflag = false;
+ var MECE260CoopPlan4Time = new Date().getTime();
   var MECE265CoopPlan4flag = false;
+  var MECE265CoopPlan4rflag = false;
+ var MECE265CoopPlan4Time = new Date().getTime();
   var ECE209CoopPlan4flag = false;
+  var ECE209CoopPlan4rflag = false;
+ var ECE209CoopPlan4Time = new Date().getTime();
   var MATH201CoopPlan4flag = false;
+  var MATH201CoopPlan4rflag = false;
+ var MATH201CoopPlan4Time = new Date().getTime();
   var CHE243CoopPlan4flag = false;
+  var CHE243CoopPlan4rflag = false;
+ var CHE243CoopPlan4Time = new Date().getTime();
   var MATE202CoopPlan4flag = false;
+  var MATE202CoopPlan4rflag = false;
+ var MATE202CoopPlan4Time = new Date().getTime();
   var MECE200CoopPlan4flag = false;
+  var MECE200CoopPlan4rflag = false;
+ var MECE200CoopPlan4Time = new Date().getTime();
   var MECE250CoopPlan4flag = false;
+  var MECE250CoopPlan4rflag = false;
+ var MECE250CoopPlan4Time = new Date().getTime();
   var MATH300CoopPlan4flag = false;
+  var MATH300CoopPlan4rflag = false;
+ var MATH300CoopPlan4Time = new Date().getTime();
   var MECE300CoopPlan4flag = false;
+  var MECE300CoopPlan4rflag = false;
+ var MECE300CoopPlan4Time = new Date().getTime();
   var MECE301CoopPlan4flag = false;
+  var MECE301CoopPlan4rflag = false;
+ var MECE301CoopPlan4Time = new Date().getTime();
   var MECE331CoopPlan4flag = false;
+  var MECE331CoopPlan4rflag = false;
+ var MECE331CoopPlan4Time = new Date().getTime();
   var MECE371CoopPlan4flag = false;
+  var MECE371CoopPlan4rflag = false;
+ var MECE371CoopPlan4Time = new Date().getTime();
   var MECE380CoopPlan4flag = false;
+  var MECE380CoopPlan4rflag = false;
+ var MECE380CoopPlan4Time = new Date().getTime();
   var WKEXP901CoopPlan4flag = false;
+  var WKEXP901CoopPlan4rflag = false;
+ var WKEXP901CoopPlan4Time = new Date().getTime();
   var WKEXP902CoopPlan4flag = false;
+  var WKEXP902CoopPlan4rflag = false;
+ var WKEXP902CoopPlan4Time = new Date().getTime();
   var ENGM310CoopPlan4flag = false;
+  var ENGM310CoopPlan4rflag = false;
+ var ENGM310CoopPlan4Time = new Date().getTime();
   var ENGM401CoopPlan4flag = false;
+  var ENGM401CoopPlan4rflag = false;
+ var ENGM401CoopPlan4Time = new Date().getTime();
   var MECE340CoopPlan4flag = false;
+  var MECE340CoopPlan4rflag = false;
+ var MECE340CoopPlan4Time = new Date().getTime();
   var MECE360CoopPlan4flag = false;
+  var MECE360CoopPlan4rflag = false;
+ var MECE360CoopPlan4Time = new Date().getTime();
   var MECE362CoopPlan4flag = false;
+  var MECE362CoopPlan4rflag = false;
+ var MECE362CoopPlan4Time = new Date().getTime();
   var MECE390CoopPlan4flag = false;
+  var MECE390CoopPlan4rflag = false;
+ var MECE390CoopPlan4Time = new Date().getTime();
   var ComplementaryElectiveCoopPlan40flag = false;
+  var ComplementaryElectiveCoopPlan40rflag = false;
+ var ComplementaryElectiveCoopPlan40Time = new Date().getTime();
   var WKEXP903CoopPlan4flag = false;
+  var WKEXP903CoopPlan4rflag = false;
+ var WKEXP903CoopPlan4Time = new Date().getTime();
   var WKEXP904CoopPlan4flag = false;
+  var WKEXP904CoopPlan4rflag = false;
+ var WKEXP904CoopPlan4Time = new Date().getTime();
   var WKEXP905CoopPlan4flag = false;
+  var WKEXP905CoopPlan4rflag = false;
+ var WKEXP905CoopPlan4Time = new Date().getTime();
   var ENGG404CoopPlan4flag = false;
+  var ENGG404CoopPlan4rflag = false;
+ var ENGG404CoopPlan4Time = new Date().getTime();
   var MECE430CoopPlan4flag = false;
+  var MECE430CoopPlan4rflag = false;
+ var MECE430CoopPlan4Time = new Date().getTime();
   var MECE480CoopPlan4flag = false;
+  var MECE480CoopPlan4rflag = false;
+ var MECE480CoopPlan4Time = new Date().getTime();
   var MECE463CoopPlan4flag = false;
+  var MECE463CoopPlan4rflag = false;
+ var MECE463CoopPlan4Time = new Date().getTime();
   var ProgramTechnicalElectiveCoopPlan40flag = false;
+  var ProgramTechnicalElectiveCoopPlan40rflag = false;
+ var ProgramTechnicalElectiveCoopPlan40Time = new Date().getTime();
   var ProgramTechnicalElectiveCoopPlan41flag = false;
+  var ProgramTechnicalElectiveCoopPlan41rflag = false;
+ var ProgramTechnicalElectiveCoopPlan41Time = new Date().getTime();
   var ProgramTechnicalElectiveCoopPlan42flag = false;
+  var ProgramTechnicalElectiveCoopPlan42rflag = false;
+ var ProgramTechnicalElectiveCoopPlan42Time = new Date().getTime();
   var CHE448CoopPlan4flag = false;
+  var CHE448CoopPlan4rflag = false;
+ var CHE448CoopPlan4Time = new Date().getTime();
   var MECE420CoopPlan4flag = false;
+  var MECE420CoopPlan4rflag = false;
+ var MECE420CoopPlan4Time = new Date().getTime();
   var ENGG400CoopPlan4flag = false;
+  var ENGG400CoopPlan4rflag = false;
+ var ENGG400CoopPlan4Time = new Date().getTime();
   var MECE403CoopPlan4flag = false;
+  var MECE403CoopPlan4rflag = false;
+ var MECE403CoopPlan4Time = new Date().getTime();
   var MECE451CoopPlan4flag = false;
+  var MECE451CoopPlan4rflag = false;
+ var MECE451CoopPlan4Time = new Date().getTime();
   var MECE460CoopPlan4flag = false;
+  var MECE460CoopPlan4rflag = false;
+ var MECE460CoopPlan4Time = new Date().getTime();
   var ProgramTechnicalElectiveCoopPlan43flag = false;
+  var ProgramTechnicalElectiveCoopPlan43rflag = false;
+ var ProgramTechnicalElectiveCoopPlan43Time = new Date().getTime();
   var ITSElectiveCoopPlan40flag = false;
+  var ITSElectiveCoopPlan40rflag = false;
+ var ITSElectiveCoopPlan40Time = new Date().getTime();
 $scope.CHEM103CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM103CoopPlan4Time <= 200) { 
+        CHEM103CoopPlan4Time = currentTime;
+        return;
+    }
+CHEM103CoopPlan4Time = currentTime;
   var CHEM103CoopPlan4element = document.getElementById("CHEM103CoopPlan4");
  if (!CHEM103CoopPlan4flag) {
      if (CHEM103CoopPlan4element.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -28791,6 +34481,12 @@ $scope.CHEM103CoopPlan4Listener = function () {
   }
 };
 $scope.ENGG100CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG100CoopPlan4Time <= 200) { 
+        ENGG100CoopPlan4Time = currentTime;
+        return;
+    }
+ENGG100CoopPlan4Time = currentTime;
   var ENGG100CoopPlan4element = document.getElementById("ENGG100CoopPlan4");
  if (!ENGG100CoopPlan4flag) {
      if (ENGG100CoopPlan4element.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -28810,6 +34506,12 @@ $scope.ENGG100CoopPlan4Listener = function () {
   }
 };
 $scope.ENGG130CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG130CoopPlan4Time <= 200) { 
+        ENGG130CoopPlan4Time = currentTime;
+        return;
+    }
+ENGG130CoopPlan4Time = currentTime;
   var ENGG130CoopPlan4element = document.getElementById("ENGG130CoopPlan4");
  if (!ENGG130CoopPlan4flag) {
      if (ENGG130CoopPlan4element.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -28837,6 +34539,12 @@ $scope.ENGG130CoopPlan4Listener = function () {
   }
 };
 $scope.ENGL199CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGL199CoopPlan4Time <= 200) { 
+        ENGL199CoopPlan4Time = currentTime;
+        return;
+    }
+ENGL199CoopPlan4Time = currentTime;
   var ENGL199CoopPlan4element = document.getElementById("ENGL199CoopPlan4");
  if (!ENGL199CoopPlan4flag) {
      if (ENGL199CoopPlan4element.classList.contains("Other-highlighted")) { 
@@ -28858,6 +34566,12 @@ $scope.ENGL199CoopPlan4Listener = function () {
   }
 };
 $scope.MATH100CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH100CoopPlan4Time <= 200) { 
+        MATH100CoopPlan4Time = currentTime;
+        return;
+    }
+MATH100CoopPlan4Time = currentTime;
   var MATH100CoopPlan4element = document.getElementById("MATH100CoopPlan4");
  if (!MATH100CoopPlan4flag) {
      if (MATH100CoopPlan4element.classList.contains("MATH-highlighted")) { 
@@ -28889,6 +34603,12 @@ $scope.MATH100CoopPlan4Listener = function () {
   }
 };
 $scope.PHYS130CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - PHYS130CoopPlan4Time <= 200) { 
+        PHYS130CoopPlan4Time = currentTime;
+        return;
+    }
+PHYS130CoopPlan4Time = currentTime;
   var PHYS130CoopPlan4element = document.getElementById("PHYS130CoopPlan4");
  if (!PHYS130CoopPlan4flag) {
      if (PHYS130CoopPlan4element.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -28910,6 +34630,12 @@ $scope.PHYS130CoopPlan4Listener = function () {
   }
 };
 $scope.CHEM105CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHEM105CoopPlan4Time <= 200) { 
+        CHEM105CoopPlan4Time = currentTime;
+        return;
+    }
+CHEM105CoopPlan4Time = currentTime;
   var CHEM105CoopPlan4element = document.getElementById("CHEM105CoopPlan4");
  if (!CHEM105CoopPlan4flag) {
      if (CHEM105CoopPlan4element.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -28933,6 +34659,12 @@ $scope.CHEM105CoopPlan4Listener = function () {
   }
 };
 $scope.ENCMP100CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENCMP100CoopPlan4Time <= 200) { 
+        ENCMP100CoopPlan4Time = currentTime;
+        return;
+    }
+ENCMP100CoopPlan4Time = currentTime;
   var ENCMP100CoopPlan4element = document.getElementById("ENCMP100CoopPlan4");
  if (!ENCMP100CoopPlan4flag) {
      if (ENCMP100CoopPlan4element.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -28952,6 +34684,12 @@ $scope.ENCMP100CoopPlan4Listener = function () {
   }
 };
 $scope.ENGG160CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG160CoopPlan4Time <= 200) { 
+        ENGG160CoopPlan4Time = currentTime;
+        return;
+    }
+ENGG160CoopPlan4Time = currentTime;
   var ENGG160CoopPlan4element = document.getElementById("ENGG160CoopPlan4");
  if (!ENGG160CoopPlan4flag) {
      if (ENGG160CoopPlan4element.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -28975,6 +34713,12 @@ $scope.ENGG160CoopPlan4Listener = function () {
   }
 };
 $scope.ENPH131CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENPH131CoopPlan4Time <= 200) { 
+        ENPH131CoopPlan4Time = currentTime;
+        return;
+    }
+ENPH131CoopPlan4Time = currentTime;
   var ENPH131CoopPlan4element = document.getElementById("ENPH131CoopPlan4");
  if (!ENPH131CoopPlan4flag) {
      if (ENPH131CoopPlan4element.classList.contains("BASICSCIENCES-highlighted")) { 
@@ -29004,6 +34748,12 @@ $scope.ENPH131CoopPlan4Listener = function () {
   }
 };
 $scope.MATH101CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH101CoopPlan4Time <= 200) { 
+        MATH101CoopPlan4Time = currentTime;
+        return;
+    }
+MATH101CoopPlan4Time = currentTime;
   var MATH101CoopPlan4element = document.getElementById("MATH101CoopPlan4");
  if (!MATH101CoopPlan4flag) {
      if (MATH101CoopPlan4element.classList.contains("MATH-highlighted")) { 
@@ -29039,6 +34789,12 @@ $scope.MATH101CoopPlan4Listener = function () {
   }
 };
 $scope.MATH102CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH102CoopPlan4Time <= 200) { 
+        MATH102CoopPlan4Time = currentTime;
+        return;
+    }
+MATH102CoopPlan4Time = currentTime;
   var MATH102CoopPlan4element = document.getElementById("MATH102CoopPlan4");
  if (!MATH102CoopPlan4flag) {
      if (MATH102CoopPlan4element.classList.contains("MATH-highlighted")) { 
@@ -29064,6 +34820,12 @@ $scope.MATH102CoopPlan4Listener = function () {
   }
 };
 $scope.CIVE270CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CIVE270CoopPlan4Time <= 200) { 
+        CIVE270CoopPlan4Time = currentTime;
+        return;
+    }
+CIVE270CoopPlan4Time = currentTime;
   var CIVE270CoopPlan4element = document.getElementById("CIVE270CoopPlan4");
  if (!CIVE270CoopPlan4flag) {
      if (CIVE270CoopPlan4element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -29095,6 +34857,12 @@ $scope.CIVE270CoopPlan4Listener = function () {
   }
 };
 $scope.ENGG299CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG299CoopPlan4Time <= 200) { 
+        ENGG299CoopPlan4Time = currentTime;
+        return;
+    }
+ENGG299CoopPlan4Time = currentTime;
   var ENGG299CoopPlan4element = document.getElementById("ENGG299CoopPlan4");
  if (!ENGG299CoopPlan4flag) {
      if (ENGG299CoopPlan4element.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -29116,6 +34884,12 @@ $scope.ENGG299CoopPlan4Listener = function () {
   }
 };
 $scope.MATH209CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH209CoopPlan4Time <= 200) { 
+        MATH209CoopPlan4Time = currentTime;
+        return;
+    }
+MATH209CoopPlan4Time = currentTime;
   var MATH209CoopPlan4element = document.getElementById("MATH209CoopPlan4");
  if (!MATH209CoopPlan4flag) {
      if (MATH209CoopPlan4element.classList.contains("MATH-highlighted")) { 
@@ -29147,6 +34921,12 @@ $scope.MATH209CoopPlan4Listener = function () {
   }
 };
 $scope.STAT235CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - STAT235CoopPlan4Time <= 200) { 
+        STAT235CoopPlan4Time = currentTime;
+        return;
+    }
+STAT235CoopPlan4Time = currentTime;
   var STAT235CoopPlan4element = document.getElementById("STAT235CoopPlan4");
  if (!STAT235CoopPlan4flag) {
      if (STAT235CoopPlan4element.classList.contains("MATH-highlighted")) { 
@@ -29172,6 +34952,12 @@ $scope.STAT235CoopPlan4Listener = function () {
   }
 };
 $scope.MECE230CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE230CoopPlan4Time <= 200) { 
+        MECE230CoopPlan4Time = currentTime;
+        return;
+    }
+MECE230CoopPlan4Time = currentTime;
   var MECE230CoopPlan4element = document.getElementById("MECE230CoopPlan4");
  if (!MECE230CoopPlan4flag) {
      if (MECE230CoopPlan4element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -29199,6 +34985,12 @@ $scope.MECE230CoopPlan4Listener = function () {
   }
 };
 $scope.MECE260CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE260CoopPlan4Time <= 200) { 
+        MECE260CoopPlan4Time = currentTime;
+        return;
+    }
+MECE260CoopPlan4Time = currentTime;
   var MECE260CoopPlan4element = document.getElementById("MECE260CoopPlan4");
  if (!MECE260CoopPlan4flag) {
      if (MECE260CoopPlan4element.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -29226,6 +35018,12 @@ $scope.MECE260CoopPlan4Listener = function () {
   }
 };
 $scope.MECE265CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE265CoopPlan4Time <= 200) { 
+        MECE265CoopPlan4Time = currentTime;
+        return;
+    }
+MECE265CoopPlan4Time = currentTime;
   var MECE265CoopPlan4element = document.getElementById("MECE265CoopPlan4");
  if (!MECE265CoopPlan4flag) {
      if (MECE265CoopPlan4element.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -29249,6 +35047,12 @@ $scope.MECE265CoopPlan4Listener = function () {
   }
 };
 $scope.ECE209CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ECE209CoopPlan4Time <= 200) { 
+        ECE209CoopPlan4Time = currentTime;
+        return;
+    }
+ECE209CoopPlan4Time = currentTime;
   var ECE209CoopPlan4element = document.getElementById("ECE209CoopPlan4");
  if (!ECE209CoopPlan4flag) {
      if (ECE209CoopPlan4element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -29270,6 +35074,12 @@ $scope.ECE209CoopPlan4Listener = function () {
   }
 };
 $scope.MATH201CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH201CoopPlan4Time <= 200) { 
+        MATH201CoopPlan4Time = currentTime;
+        return;
+    }
+MATH201CoopPlan4Time = currentTime;
   var MATH201CoopPlan4element = document.getElementById("MATH201CoopPlan4");
  if (!MATH201CoopPlan4flag) {
      if (MATH201CoopPlan4element.classList.contains("MATH-highlighted")) { 
@@ -29297,6 +35107,12 @@ $scope.MATH201CoopPlan4Listener = function () {
   }
 };
 $scope.CHE243CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE243CoopPlan4Time <= 200) { 
+        CHE243CoopPlan4Time = currentTime;
+        return;
+    }
+CHE243CoopPlan4Time = currentTime;
   var CHE243CoopPlan4element = document.getElementById("CHE243CoopPlan4");
  if (!CHE243CoopPlan4flag) {
      if (CHE243CoopPlan4element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -29324,6 +35140,12 @@ $scope.CHE243CoopPlan4Listener = function () {
   }
 };
 $scope.MATE202CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATE202CoopPlan4Time <= 200) { 
+        MATE202CoopPlan4Time = currentTime;
+        return;
+    }
+MATE202CoopPlan4Time = currentTime;
   var MATE202CoopPlan4element = document.getElementById("MATE202CoopPlan4");
  if (!MATE202CoopPlan4flag) {
      if (MATE202CoopPlan4element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -29347,6 +35169,12 @@ $scope.MATE202CoopPlan4Listener = function () {
   }
 };
 $scope.MECE200CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE200CoopPlan4Time <= 200) { 
+        MECE200CoopPlan4Time = currentTime;
+        return;
+    }
+MECE200CoopPlan4Time = currentTime;
   var MECE200CoopPlan4element = document.getElementById("MECE200CoopPlan4");
  if (!MECE200CoopPlan4flag) {
      if (MECE200CoopPlan4element.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -29368,6 +35196,12 @@ $scope.MECE200CoopPlan4Listener = function () {
   }
 };
 $scope.MECE250CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE250CoopPlan4Time <= 200) { 
+        MECE250CoopPlan4Time = currentTime;
+        return;
+    }
+MECE250CoopPlan4Time = currentTime;
   var MECE250CoopPlan4element = document.getElementById("MECE250CoopPlan4");
  if (!MECE250CoopPlan4flag) {
      if (MECE250CoopPlan4element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -29399,6 +35233,12 @@ $scope.MECE250CoopPlan4Listener = function () {
   }
 };
 $scope.MATH300CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MATH300CoopPlan4Time <= 200) { 
+        MATH300CoopPlan4Time = currentTime;
+        return;
+    }
+MATH300CoopPlan4Time = currentTime;
   var MATH300CoopPlan4element = document.getElementById("MATH300CoopPlan4");
  if (!MATH300CoopPlan4flag) {
      if (MATH300CoopPlan4element.classList.contains("MATH-highlighted")) { 
@@ -29428,6 +35268,12 @@ $scope.MATH300CoopPlan4Listener = function () {
   }
 };
 $scope.MECE300CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE300CoopPlan4Time <= 200) { 
+        MECE300CoopPlan4Time = currentTime;
+        return;
+    }
+MECE300CoopPlan4Time = currentTime;
   var MECE300CoopPlan4element = document.getElementById("MECE300CoopPlan4");
  if (!MECE300CoopPlan4flag) {
      if (MECE300CoopPlan4element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -29459,6 +35305,12 @@ $scope.MECE300CoopPlan4Listener = function () {
   }
 };
 $scope.MECE301CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE301CoopPlan4Time <= 200) { 
+        MECE301CoopPlan4Time = currentTime;
+        return;
+    }
+MECE301CoopPlan4Time = currentTime;
   var MECE301CoopPlan4element = document.getElementById("MECE301CoopPlan4");
  if (!MECE301CoopPlan4flag) {
      if (MECE301CoopPlan4element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -29482,6 +35334,12 @@ $scope.MECE301CoopPlan4Listener = function () {
   }
 };
 $scope.MECE331CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE331CoopPlan4Time <= 200) { 
+        MECE331CoopPlan4Time = currentTime;
+        return;
+    }
+MECE331CoopPlan4Time = currentTime;
   var MECE331CoopPlan4element = document.getElementById("MECE331CoopPlan4");
  if (!MECE331CoopPlan4flag) {
      if (MECE331CoopPlan4element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -29521,6 +35379,12 @@ $scope.MECE331CoopPlan4Listener = function () {
   }
 };
 $scope.MECE371CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE371CoopPlan4Time <= 200) { 
+        MECE371CoopPlan4Time = currentTime;
+        return;
+    }
+MECE371CoopPlan4Time = currentTime;
   var MECE371CoopPlan4element = document.getElementById("MECE371CoopPlan4");
  if (!MECE371CoopPlan4flag) {
      if (MECE371CoopPlan4element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -29554,6 +35418,12 @@ $scope.MECE371CoopPlan4Listener = function () {
   }
 };
 $scope.MECE380CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE380CoopPlan4Time <= 200) { 
+        MECE380CoopPlan4Time = currentTime;
+        return;
+    }
+MECE380CoopPlan4Time = currentTime;
   var MECE380CoopPlan4element = document.getElementById("MECE380CoopPlan4");
  if (!MECE380CoopPlan4flag) {
      if (MECE380CoopPlan4element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -29579,6 +35449,12 @@ $scope.MECE380CoopPlan4Listener = function () {
   }
 };
 $scope.WKEXP901CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP901CoopPlan4Time <= 200) { 
+        WKEXP901CoopPlan4Time = currentTime;
+        return;
+    }
+WKEXP901CoopPlan4Time = currentTime;
   var WKEXP901CoopPlan4element = document.getElementById("WKEXP901CoopPlan4");
  if (!WKEXP901CoopPlan4flag) {
      if (WKEXP901CoopPlan4element.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -29602,6 +35478,12 @@ $scope.WKEXP901CoopPlan4Listener = function () {
   }
 };
 $scope.WKEXP902CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP902CoopPlan4Time <= 200) { 
+        WKEXP902CoopPlan4Time = currentTime;
+        return;
+    }
+WKEXP902CoopPlan4Time = currentTime;
   var WKEXP902CoopPlan4element = document.getElementById("WKEXP902CoopPlan4");
  if (!WKEXP902CoopPlan4flag) {
      if (WKEXP902CoopPlan4element.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -29625,6 +35507,12 @@ $scope.WKEXP902CoopPlan4Listener = function () {
   }
 };
 $scope.ENGM310CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM310CoopPlan4Time <= 200) { 
+        ENGM310CoopPlan4Time = currentTime;
+        return;
+    }
+ENGM310CoopPlan4Time = currentTime;
   var ENGM310CoopPlan4element = document.getElementById("ENGM310CoopPlan4");
  if (!ENGM310CoopPlan4flag) {
      if (ENGM310CoopPlan4element.classList.contains("Other-highlighted")) { 
@@ -29646,6 +35534,12 @@ $scope.ENGM310CoopPlan4Listener = function () {
   }
 };
 $scope.ENGM401CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGM401CoopPlan4Time <= 200) { 
+        ENGM401CoopPlan4Time = currentTime;
+        return;
+    }
+ENGM401CoopPlan4Time = currentTime;
   var ENGM401CoopPlan4element = document.getElementById("ENGM401CoopPlan4");
  if (!ENGM401CoopPlan4flag) {
      if (ENGM401CoopPlan4element.classList.contains("Other-highlighted")) { 
@@ -29667,6 +35561,12 @@ $scope.ENGM401CoopPlan4Listener = function () {
   }
 };
 $scope.MECE340CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE340CoopPlan4Time <= 200) { 
+        MECE340CoopPlan4Time = currentTime;
+        return;
+    }
+MECE340CoopPlan4Time = currentTime;
   var MECE340CoopPlan4element = document.getElementById("MECE340CoopPlan4");
  if (!MECE340CoopPlan4flag) {
      if (MECE340CoopPlan4element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -29694,6 +35594,12 @@ $scope.MECE340CoopPlan4Listener = function () {
   }
 };
 $scope.MECE360CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE360CoopPlan4Time <= 200) { 
+        MECE360CoopPlan4Time = currentTime;
+        return;
+    }
+MECE360CoopPlan4Time = currentTime;
   var MECE360CoopPlan4element = document.getElementById("MECE360CoopPlan4");
  if (!MECE360CoopPlan4flag) {
      if (MECE360CoopPlan4element.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -29729,6 +35635,12 @@ $scope.MECE360CoopPlan4Listener = function () {
   }
 };
 $scope.MECE362CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE362CoopPlan4Time <= 200) { 
+        MECE362CoopPlan4Time = currentTime;
+        return;
+    }
+MECE362CoopPlan4Time = currentTime;
   var MECE362CoopPlan4element = document.getElementById("MECE362CoopPlan4");
  if (!MECE362CoopPlan4flag) {
      if (MECE362CoopPlan4element.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -29754,6 +35666,12 @@ $scope.MECE362CoopPlan4Listener = function () {
   }
 };
 $scope.MECE390CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE390CoopPlan4Time <= 200) { 
+        MECE390CoopPlan4Time = currentTime;
+        return;
+    }
+MECE390CoopPlan4Time = currentTime;
   var MECE390CoopPlan4element = document.getElementById("MECE390CoopPlan4");
  if (!MECE390CoopPlan4flag) {
      if (MECE390CoopPlan4element.classList.contains("MATH-highlighted")) { 
@@ -29779,6 +35697,12 @@ $scope.MECE390CoopPlan4Listener = function () {
   }
 };
 $scope.ComplementaryElectiveCoopPlan40Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ComplementaryElectiveCoopPlan40Time <= 200) { 
+        ComplementaryElectiveCoopPlan40Time = currentTime;
+        return;
+    }
+ComplementaryElectiveCoopPlan40Time = currentTime;
   var ComplementaryElectiveCoopPlan40element = document.getElementById("ComplementaryElectiveCoopPlan40");
  if (!ComplementaryElectiveCoopPlan40flag) {
      if (ComplementaryElectiveCoopPlan40element.classList.contains("COMP-highlighted")) { 
@@ -29798,6 +35722,12 @@ $scope.ComplementaryElectiveCoopPlan40Listener = function () {
   }
 };
 $scope.WKEXP903CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP903CoopPlan4Time <= 200) { 
+        WKEXP903CoopPlan4Time = currentTime;
+        return;
+    }
+WKEXP903CoopPlan4Time = currentTime;
   var WKEXP903CoopPlan4element = document.getElementById("WKEXP903CoopPlan4");
  if (!WKEXP903CoopPlan4flag) {
      if (WKEXP903CoopPlan4element.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -29821,6 +35751,12 @@ $scope.WKEXP903CoopPlan4Listener = function () {
   }
 };
 $scope.WKEXP904CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP904CoopPlan4Time <= 200) { 
+        WKEXP904CoopPlan4Time = currentTime;
+        return;
+    }
+WKEXP904CoopPlan4Time = currentTime;
   var WKEXP904CoopPlan4element = document.getElementById("WKEXP904CoopPlan4");
  if (!WKEXP904CoopPlan4flag) {
      if (WKEXP904CoopPlan4element.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -29844,6 +35780,12 @@ $scope.WKEXP904CoopPlan4Listener = function () {
   }
 };
 $scope.WKEXP905CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - WKEXP905CoopPlan4Time <= 200) { 
+        WKEXP905CoopPlan4Time = currentTime;
+        return;
+    }
+WKEXP905CoopPlan4Time = currentTime;
   var WKEXP905CoopPlan4element = document.getElementById("WKEXP905CoopPlan4");
  if (!WKEXP905CoopPlan4flag) {
      if (WKEXP905CoopPlan4element.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -29865,6 +35807,12 @@ $scope.WKEXP905CoopPlan4Listener = function () {
   }
 };
 $scope.ENGG404CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG404CoopPlan4Time <= 200) { 
+        ENGG404CoopPlan4Time = currentTime;
+        return;
+    }
+ENGG404CoopPlan4Time = currentTime;
   var ENGG404CoopPlan4element = document.getElementById("ENGG404CoopPlan4");
  if (!ENGG404CoopPlan4flag) {
      if (ENGG404CoopPlan4element.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -29884,6 +35832,12 @@ $scope.ENGG404CoopPlan4Listener = function () {
   }
 };
 $scope.MECE430CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE430CoopPlan4Time <= 200) { 
+        MECE430CoopPlan4Time = currentTime;
+        return;
+    }
+MECE430CoopPlan4Time = currentTime;
   var MECE430CoopPlan4element = document.getElementById("MECE430CoopPlan4");
  if (!MECE430CoopPlan4flag) {
      if (MECE430CoopPlan4element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -29905,6 +35859,12 @@ $scope.MECE430CoopPlan4Listener = function () {
   }
 };
 $scope.MECE480CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE480CoopPlan4Time <= 200) { 
+        MECE480CoopPlan4Time = currentTime;
+        return;
+    }
+MECE480CoopPlan4Time = currentTime;
   var MECE480CoopPlan4element = document.getElementById("MECE480CoopPlan4");
  if (!MECE480CoopPlan4flag) {
      if (MECE480CoopPlan4element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -29930,6 +35890,12 @@ $scope.MECE480CoopPlan4Listener = function () {
   }
 };
 $scope.MECE463CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE463CoopPlan4Time <= 200) { 
+        MECE463CoopPlan4Time = currentTime;
+        return;
+    }
+MECE463CoopPlan4Time = currentTime;
   var MECE463CoopPlan4element = document.getElementById("MECE463CoopPlan4");
  if (!MECE463CoopPlan4flag) {
      if (MECE463CoopPlan4element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -29955,6 +35921,12 @@ $scope.MECE463CoopPlan4Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveCoopPlan40Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveCoopPlan40Time <= 200) { 
+        ProgramTechnicalElectiveCoopPlan40Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveCoopPlan40Time = currentTime;
   var ProgramTechnicalElectiveCoopPlan40element = document.getElementById("ProgramTechnicalElectiveCoopPlan40");
  if (!ProgramTechnicalElectiveCoopPlan40flag) {
      if (ProgramTechnicalElectiveCoopPlan40element.classList.contains("PROG-highlighted")) { 
@@ -29974,6 +35946,12 @@ $scope.ProgramTechnicalElectiveCoopPlan40Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveCoopPlan41Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveCoopPlan41Time <= 200) { 
+        ProgramTechnicalElectiveCoopPlan41Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveCoopPlan41Time = currentTime;
   var ProgramTechnicalElectiveCoopPlan41element = document.getElementById("ProgramTechnicalElectiveCoopPlan41");
  if (!ProgramTechnicalElectiveCoopPlan41flag) {
      if (ProgramTechnicalElectiveCoopPlan41element.classList.contains("PROG-highlighted")) { 
@@ -29993,6 +35971,12 @@ $scope.ProgramTechnicalElectiveCoopPlan41Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveCoopPlan42Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveCoopPlan42Time <= 200) { 
+        ProgramTechnicalElectiveCoopPlan42Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveCoopPlan42Time = currentTime;
   var ProgramTechnicalElectiveCoopPlan42element = document.getElementById("ProgramTechnicalElectiveCoopPlan42");
  if (!ProgramTechnicalElectiveCoopPlan42flag) {
      if (ProgramTechnicalElectiveCoopPlan42element.classList.contains("PROG-highlighted")) { 
@@ -30012,6 +35996,12 @@ $scope.ProgramTechnicalElectiveCoopPlan42Listener = function () {
   }
 };
 $scope.CHE448CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - CHE448CoopPlan4Time <= 200) { 
+        CHE448CoopPlan4Time = currentTime;
+        return;
+    }
+CHE448CoopPlan4Time = currentTime;
   var CHE448CoopPlan4element = document.getElementById("CHE448CoopPlan4");
  if (!CHE448CoopPlan4flag) {
      if (CHE448CoopPlan4element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -30039,6 +36029,12 @@ $scope.CHE448CoopPlan4Listener = function () {
   }
 };
 $scope.MECE420CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE420CoopPlan4Time <= 200) { 
+        MECE420CoopPlan4Time = currentTime;
+        return;
+    }
+MECE420CoopPlan4Time = currentTime;
   var MECE420CoopPlan4element = document.getElementById("MECE420CoopPlan4");
  if (!MECE420CoopPlan4flag) {
      if (MECE420CoopPlan4element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -30060,6 +36056,12 @@ $scope.MECE420CoopPlan4Listener = function () {
   }
 };
 $scope.ENGG400CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ENGG400CoopPlan4Time <= 200) { 
+        ENGG400CoopPlan4Time = currentTime;
+        return;
+    }
+ENGG400CoopPlan4Time = currentTime;
   var ENGG400CoopPlan4element = document.getElementById("ENGG400CoopPlan4");
  if (!ENGG400CoopPlan4flag) {
      if (ENGG400CoopPlan4element.classList.contains("ENGINEERINGPROFESSION-highlighted")) { 
@@ -30079,6 +36081,12 @@ $scope.ENGG400CoopPlan4Listener = function () {
   }
 };
 $scope.MECE403CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE403CoopPlan4Time <= 200) { 
+        MECE403CoopPlan4Time = currentTime;
+        return;
+    }
+MECE403CoopPlan4Time = currentTime;
   var MECE403CoopPlan4element = document.getElementById("MECE403CoopPlan4");
  if (!MECE403CoopPlan4flag) {
      if (MECE403CoopPlan4element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -30106,6 +36114,12 @@ $scope.MECE403CoopPlan4Listener = function () {
   }
 };
 $scope.MECE451CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE451CoopPlan4Time <= 200) { 
+        MECE451CoopPlan4Time = currentTime;
+        return;
+    }
+MECE451CoopPlan4Time = currentTime;
   var MECE451CoopPlan4element = document.getElementById("MECE451CoopPlan4");
  if (!MECE451CoopPlan4flag) {
      if (MECE451CoopPlan4element.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
@@ -30129,6 +36143,12 @@ $scope.MECE451CoopPlan4Listener = function () {
   }
 };
 $scope.MECE460CoopPlan4Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - MECE460CoopPlan4Time <= 200) { 
+        MECE460CoopPlan4Time = currentTime;
+        return;
+    }
+MECE460CoopPlan4Time = currentTime;
   var MECE460CoopPlan4element = document.getElementById("MECE460CoopPlan4");
  if (!MECE460CoopPlan4flag) {
      if (MECE460CoopPlan4element.classList.contains("ENGINEERINGDESIGN-highlighted")) { 
@@ -30166,6 +36186,12 @@ $scope.MECE460CoopPlan4Listener = function () {
   }
 };
 $scope.ProgramTechnicalElectiveCoopPlan43Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveCoopPlan43Time <= 200) { 
+        ProgramTechnicalElectiveCoopPlan43Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveCoopPlan43Time = currentTime;
   var ProgramTechnicalElectiveCoopPlan43element = document.getElementById("ProgramTechnicalElectiveCoopPlan43");
  if (!ProgramTechnicalElectiveCoopPlan43flag) {
      if (ProgramTechnicalElectiveCoopPlan43element.classList.contains("PROG-highlighted")) { 
@@ -30185,6 +36211,12 @@ $scope.ProgramTechnicalElectiveCoopPlan43Listener = function () {
   }
 };
 $scope.ITSElectiveCoopPlan40Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ITSElectiveCoopPlan40Time <= 200) { 
+        ITSElectiveCoopPlan40Time = currentTime;
+        return;
+    }
+ITSElectiveCoopPlan40Time = currentTime;
   var ITSElectiveCoopPlan40element = document.getElementById("ITSElectiveCoopPlan40");
  if (!ITSElectiveCoopPlan40flag) {
      if (ITSElectiveCoopPlan40element.classList.contains("ITS-highlighted")) { 

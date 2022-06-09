@@ -99,9 +99,13 @@ def placeLines(courseList, indexJS, lineManager, plan):
 #   plan - name of plan 
 def placeClickListeners(courseList, controller, lineManager, plan):
     formattedListener = "$scope.{courseName}Listener = function () {{\n"
+    formattedTimeIf = """if (currentTime - {courseName}Time <= 200) {{ 
+        {courseName}Time = currentTime;
+        return;
+    }}\n"""
     formattedElementGetter = "  var {courseName}element = document.getElementById(\"{courseName}\");\n"
     formattedContains = "     if ({courseName}element.classList.contains(\"{category}-highlighted\")) {{ \n"
-    formattedIf = " if (!{courseName}flag) {{\n"
+    formattedClickIf = " if (!{courseName}flag) {{\n"
     formattedStatement = "      that.{action}Line(getLine{num}());\n"
     formattedHighlightStatement = "     {courseName}element.classList.{action}(\"{className}\");\n"
     formattedRemoveClickedStatement = "     that.removeFromClicked(\"{courseName}\");\n"
@@ -135,8 +139,11 @@ def placeClickListeners(courseList, controller, lineManager, plan):
                 courseContClass = "course"
 
         controller.write(formattedListener.format(courseName=courseID))
+        controller.write("var currentTime = new Date().getTime();\n")
+        controller.write(formattedTimeIf.format(courseName=courseID))
+        controller.write(courseID +"Time = currentTime;\n")
         controller.write(formattedElementGetter.format(courseName=courseID))
-        controller.write(formattedIf.format(courseName=courseID))
+        controller.write(formattedClickIf.format(courseName=courseID))
         controller.write(formattedContains.format(courseName=courseID, category=courseContClass))
         controller.write(formattedHighlightStatement.format(courseName=courseID, 
                                                             action="remove",
