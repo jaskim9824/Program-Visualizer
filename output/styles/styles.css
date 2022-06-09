@@ -368,14 +368,15 @@ p.ortext {
 
 .tooltiptextright-locked {
     visibility: visible;
+    opacity: 1;
     left: 50%;
 }
 
 .tooltiptextleft-locked {
     visibility: visible;
+    opacity: 1;
     right: 50%;
 }
-
 
 /* After hovering, set content to empty */
 .tooltip .tooltiptextright::after, .tooltip .tooltiptextright-locked::after {
