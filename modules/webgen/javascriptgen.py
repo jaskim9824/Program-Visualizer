@@ -8,6 +8,7 @@
 
 # Dependencies: cleaner
 
+from unicodedata import category
 from .. import cleaner
 
 # Function that generates the JS before the generation of the course diagram
@@ -78,7 +79,7 @@ def generatePlanBasedBlocksController(sequenceDict, controller):
     generateDeleteLineSwitch(sequenceDict, controller)
     generateAddToClickSwitch(sequenceDict, controller)
     generateDeleteFromClickSwitch(sequenceDict, controller)
-    generateHighlightCategory(sequenceDict, controller)
+    generateCategoryLegendJS(sequenceDict, controller)
 
 def generatePlanBasedInitalVariables(sequenceDict, controller):
     for plan in sequenceDict:
@@ -313,31 +314,26 @@ switch($scope.selectedPlan) {{ \n"""
     
     controller.write(switchEndString)
 
-def placeHighlightCategoryFlags(controller, categoriesDict):
+def generateHighlightCategoryFlags(categoriesDict, controller):
     formattedCategoriesFlagStatement = """var {categoryName}{planName}flag = false;\n"""
     for category in categoriesDict:
         if category == "": 
             continue
         for plan in categoriesDict[category]:
-            controller.write(formattedCategoriesFlagStatement.format(categoryName = cleaner.cleanString(category), 
+            if category == "ComplementaryElective":
+                controller.write(formattedCategoriesFlagStatement.format(categoryName = "COMP", 
+                                                                     planName = cleaner.cleanString(plan)))
+            elif category == "ProgramTechnicalElective":
+                controller.write(formattedCategoriesFlagStatement.format(categoryName = "PROG", 
+                                                                     planName = cleaner.cleanString(plan)))
+            elif category == "ITSElective":
+                controller.write(formattedCategoriesFlagStatement.format(categoryName = "ITS", 
+                                                                     planName = cleaner.cleanString(plan)))
+            else:
+                controller.write(formattedCategoriesFlagStatement.format(categoryName = cleaner.cleanString(category), 
                                                                      planName = cleaner.cleanString(plan)))
 
-# Generates the clickable category legend. Allows a click to highlight all
-# courses in that category.
-# Parameters:
-#   sequenceDict - dict that stores course objects
-#       key - plan name
-#       value - dict with term name as key and list of course objs in that plan & term
-#   controller - file handle for controller.js file
-# Returns:
-#   None
-def generateHighlightCategory(sequenceDict, controller):
-    # sort courses into categories and plans
-    categoriesDict = sortIntoCategories(sequenceDict)
-
-    # flags for click on legend
-    placeHighlightCategoryFlags(controller, categoriesDict)
-
+def generateCategoryListeners(categoriesDict, controller):
     # listener for each category
     formattedCategoriesListener = """$scope.{categoryName}clickListener = function() {{
     var planName = $scope.selectedPlan;
@@ -364,10 +360,113 @@ def generateHighlightCategory(sequenceDict, controller):
         var flagName = "{categoryName}" + planName + "flag";
         eval(flagName + " = false");
     }}\n"""
+    for category in categoriesDict:
+        # special cases to handle electives, category is not the same as ID
+        if category == "ComplementaryElective":
+            controller.write(formattedCategoriesListener.format(categoryName="COMP", categoryNameId="COMP"))
+        elif category == "ProgramTechnicalElective":
+            controller.write(formattedCategoriesListener.format(categoryName="PROG", categoryNameId="PROG"))
+        elif category == "ITSElective":
+            controller.write(formattedCategoriesListener.format(categoryName="ITS", categoryNameId="ITS"))
+        else:
+            # not an elective
+            controller.write(formattedCategoriesListener.format(categoryName=category, categoryNameId=category))
+        controller.write("}\n")
 
-    # first switch statement between categories
+def generateCategorySwitchForHighlightCategory(categoriesDict, controller):
+    # outer switch between categories
+    switchEndString = """break;   default:
+    console.log("shouldn't be here");
+    }
+};\n"""
+    formattedCaseCat = """  case "{categoryName}":\n"""
+    for category in categoriesDict:
+        controller.write(formattedCaseCat.format(categoryName=cleaner.cleanString(category)))
+        generatePlanSwitchForHighlightCategory(categoriesDict[category], controller, category)
+        controller.write("""       }\n""")
+        controller.write("""      break;\n""")
+    controller.write(switchEndString)
+
+
+def generatePlanSwitchForHighlightCategory(planDict, controller, category):
+    # inner switch between plans
+    formattedCasePlan  = """      case "{planName}":\n"""
+    controller.write("    switch(planName) {\n")
+    for plan in planDict:
+        controller.write(formattedCasePlan.format(planName=cleaner.cleanString(plan)))
+        generateHighlightCourseStatements(planDict[plan], controller, plan, category)
+        controller.write("""       break;\n""")
+     
+def generateHighlightCourseStatements(courseList, controller, plan, category):
+    formattedElectiveGetUnhighlightedElement = """        var {electiveName}elements = document.getElementsByClassName("{electiveName}");\n"""
+    formattedElectivesHighlight = """        for (let i = 0; i < {electiveName}elements.length; i++) {{
+          var currelement = document.getElementById({electiveName}elements.item(i).id);
+          currelement.classList.remove("{electiveName}");
+          currelement.classList.add("{electiveName}-highlighted");
+          that.addToClicked(["{longElectiveName}{planName}{count}","{categoryName}"]);
+        }}\n"""
+    # finding the element with the appropriate id
+    formattedGetElement = """       var {courseName}{planName}element = document.getElementById("{courseName}{planName}");\n"""
+
+    # remove from list of unclicked
+    formattedRemoveUnclicked = """       {courseName}{planName}element.classList.remove("{categoryName}");\n"""
+
+    # add to list of clicked
+    formattedAddToClicked = """       {courseName}{planName}element.classList.add("{categoryName}-highlighted");
+       that.addToClicked(["{courseName}{planName}","{categoryName}"]);\n"""
+    compcounter = 0
+    progcounter = 0
+    itscounter = 0
+    for course in courseList:
+        # special cases to handle electives
+        if course.name == "Complementary Elective":
+            controller.write(formattedElectiveGetUnhighlightedElement.format(electiveName="COMP"))
+            controller.write(formattedElectivesHighlight.format(electiveName="COMP", count=compcounter, longElectiveName="ComplementaryElective", planName=plan, categoryName="COMP"))
+            compcounter += 1
+            continue
+        if course.name == "Program/Technical Elective":
+            controller.write(formattedElectiveGetUnhighlightedElement.format(electiveName="PROG"))
+            controller.write(formattedElectivesHighlight.format(electiveName="PROG", count=progcounter, longElectiveName="ProgramTechnicalElective", planName=plan, categoryName="PROG"))
+            progcounter += 1
+            continue
+        if course.name == "ITS Elective":
+            controller.write(formattedElectiveGetUnhighlightedElement.format(electiveName="ITS"))
+            controller.write(formattedElectivesHighlight.format(electiveName="ITS", count=itscounter, longElectiveName="ITSElective", planName=plan, categoryName="ITS"))
+            itscounter += 1
+            continue
+        # not an elective, fill formatted statement in with course attributes
+        controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name)))
+        controller.write(formattedRemoveUnclicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
+        controller.write(formattedAddToClicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
+          
+
+# Generates the clickable category legend. Allows a click to highlight all
+# courses in that category.
+# Parameters:
+#   sequenceDict - dict that stores course objects
+#       key - plan name
+#       value - dict with term name as key and list of course objs in that plan & term
+#   controller - file handle for controller.js file
+# Returns:
+#   None
+def generateCategoryLegendJS(sequenceDict, controller):
+    # sort courses into categories and plans
+    categoriesDict = sortIntoCategories(sequenceDict)
+
+    # flags for click on legend
+    generateHighlightCategoryFlags(categoriesDict, controller)
+
+    generateCategoryListeners(categoriesDict, controller)
+       
     formattedFunctionStatement = """this.{functionName} = function(categoryName, planName) {{
 switch(categoryName) {{ \n"""
+    controller.write(formattedFunctionStatement.format(functionName="highlightCategory"))
+
+    # first switch statement between categories
+    generateCategorySwitchForHighlightCategory(categoriesDict, controller)
+
+    controller.write(formattedFunctionStatement.format(functionName="unhighlightCategory"))
+
     
     switchEndString = """break;   default:
     console.log("shouldn't be here");
@@ -382,12 +481,6 @@ switch(categoryName) {{ \n"""
     # finding the element with the appropriate id
     formattedGetElement = """       var {courseName}{planName}element = document.getElementById("{courseName}{planName}");\n"""
 
-    # remove from list of unclicked
-    formattedRemoveUnclicked = """       {courseName}{planName}element.classList.remove("{categoryName}");\n"""
-
-    # add to list of clicked
-    formattedAddToClicked = """       {courseName}{planName}element.classList.add("{categoryName}-highlighted");
-       that.addToClicked(["{courseName}{planName}","{categoryName}"]);\n"""
 
     # remove from list of clicked
     formattedRemoveClicked = """       {courseName}{planName}element.classList.remove("{categoryName}-highlighted");\n"""
@@ -397,14 +490,7 @@ switch(categoryName) {{ \n"""
        that.removeFromClicked("{courseName}{planName}");\n"""
 
     # special case for electives
-    formattedElectiveGetUnhighlightedElement = """        var {electiveName}elements = document.getElementsByClassName("{electiveName}");\n"""
     formattedElectiveGetHighlightedElement = """        var {electiveName}elements = document.getElementsByClassName("{electiveName}-highlighted");\n"""
-    formattedElectivesHighlight = """        for (let i = 0; i < {electiveName}elements.length; i++) {{
-          var currelement = document.getElementById({electiveName}elements.item(i).id);
-          currelement.classList.remove("{electiveName}");
-          currelement.classList.add("{electiveName}-highlighted");
-          that.addToClicked(["{longElectiveName}{planName}{count}","{categoryName}"]);
-        }}\n"""
     formattedElectivesUnhighlight = """        for (let i = 0; i < {electiveName}elements.length; i++) {{
           var currelement = document.getElementById({electiveName}elements.item(i).id);
           currelement.classList.remove("{electiveName}-highlighted");
@@ -412,63 +498,9 @@ switch(categoryName) {{ \n"""
           that.removeFromClicked("{longElectiveName}{planName}{count}");
         }}\n"""
 
-    for category in categoriesDict:
-        # special cases to handle electives, category is not the same as ID
-        if category == "ComplementaryElective":
-            controller.write(formattedCategoriesListener.format(categoryName="COMP", categoryNameId="COMP"))
-        elif category == "ProgramTechnicalElective":
-            controller.write(formattedCategoriesListener.format(categoryName="PROG", categoryNameId="PROG"))
-        elif category == "ITSElective":
-            controller.write(formattedCategoriesListener.format(categoryName="ITS", categoryNameId="ITS"))
-        else:
-            # not an elective
-            controller.write(formattedCategoriesListener.format(categoryName=category, categoryNameId=category))
-        controller.write("}\n")
-
-    controller.write(formattedFunctionStatement.format(functionName="highlightCategory"))
-    for category in categoriesDict:
-        # outer switch between categories
-        controller.write(formattedCaseCat.format(categoryName=cleaner.cleanString(category)))
-        controller.write("    switch(planName) {\n")
-        for plan in categoriesDict[category]:
-            # inner switch between plans
-            controller.write(formattedCasePlan.format(planName=cleaner.cleanString(plan)))
-            # elective ids include a number on the end, need to count and add this number to
-            # find use document.findById()
-            compcounter = 0
-            progcounter = 0
-            itscounter = 0
-            for course in categoriesDict[category][plan]:
-                # special cases to handle electives
-                if course.name == "Complementary Elective":
-                    controller.write(formattedElectiveGetUnhighlightedElement.format(electiveName="COMP"))
-                    controller.write(formattedElectivesHighlight.format(electiveName="COMP", count=compcounter, longElectiveName="ComplementaryElective", planName=plan, categoryName="COMP"))
-                    compcounter += 1
-                    continue
-                if course.name == "Program/Technical Elective":
-                    controller.write(formattedElectiveGetUnhighlightedElement.format(electiveName="PROG"))
-                    controller.write(formattedElectivesHighlight.format(electiveName="PROG", count=progcounter, longElectiveName="ProgramTechnicalElective", planName=plan, categoryName="PROG"))
-                    progcounter += 1
-                    continue
-                if course.name == "ITS Elective":
-                    controller.write(formattedElectiveGetUnhighlightedElement.format(electiveName="ITS"))
-                    controller.write(formattedElectivesHighlight.format(electiveName="ITS", count=itscounter, longElectiveName="ITSElective", planName=plan, categoryName="ITS"))
-                    itscounter += 1
-                    continue
-                # not an elective, fill formatted statement in with course attributes
-                controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name)))
-                controller.write(formattedRemoveUnclicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
-                controller.write(formattedAddToClicked.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name), categoryName=cleaner.cleanString(category)))
-           
-            controller.write("""       break;\n""")
-        controller.write("""       }\n""")
-        controller.write("""      break;\n""")
-
-    controller.write(switchEndString)
-
     # same as above but for deselecting a course category
     formattedIfStatement = "if (!{courseName}{planName}flag) {{ \n"
-    controller.write(formattedFunctionStatement.format(functionName="unhighlightCategory"))
+   
     for category in categoriesDict:
         controller.write(formattedCaseCat.format(categoryName=cleaner.cleanString(category)))
         controller.write("    switch(planName) {\n")
