@@ -147,35 +147,29 @@ def generateSubMenus(tagList, inputList, plan, depth, soup):
 #   categoryDict - dict mapping category to colour
 #   soup - soup object, used to create HTML tags
 def placeLegend(legendTag, categoryDict, soup):
+    placeLegendDescription(soup, legendTag)
+    placeLegendButtons(soup, legendTag, categoryDict)
+ 
+
+def placeLegendDescription(soup, legendTag):
     legendDescription = soup.new_tag("b", attrs={"class":"legenddescription"})
     legendDescription.append("Click on a Category Below to Highlight all Courses in that Category")
     legendTag.append(legendDescription)
-    
+
+def placeLegendButtons(soup, legendTag, categoryDict):
     legendBoxes = soup.new_tag("div", attrs={"class":"legendboxes"})
     for category in categoryDict:
-        if category == "COMP":
-            coursecat = soup.new_tag("div", attrs={"ng-click":"ComplementaryElectiveclickListener()", 
-                                        "class":"legendbutton",
-                                        "id": cleaner.cleanString(category),
-                                        "style":"background-color:#" + categoryDict[category]})
-        elif category == "PROG":
-            coursecat = soup.new_tag("div", attrs={"ng-click":"ProgramTechnicalElectiveclickListener()", 
-                                        "class":"legendbutton",
-                                        "id": cleaner.cleanString(category),
-                                        "style":"background-color:#" + categoryDict[category]})
-        elif category == "ITS":
-            coursecat = soup.new_tag("div", attrs={"ng-click":"ITSElectiveclickListener()", 
-                                        "class":"legendbutton",
-                                        "id": cleaner.cleanString(category),
-                                        "style":"background-color:#" + categoryDict[category]})
-        else:
-            coursecat = soup.new_tag("div", attrs={"ng-click":cleaner.cleanString(category) + "clickListener()", 
-                                        "class":"legendbutton",
-                                        "id": cleaner.cleanString(category),
-                                        "style":"background-color:#" + categoryDict[category]})
+        coursecat = placeLegendButton(soup, cleaner.cleanString(category), categoryDict[category])
         coursecat.append(category)
         legendBoxes.append(coursecat)
     legendTag.append(legendBoxes)
+
+
+def placeLegendButton(soup, category, colour):
+    return soup.new_tag("div", attrs={"ng-click":category+ "clickListener()", 
+                                        "class":"legendbutton",
+                                        "id": cleaner.cleanString(category),
+                                        "style":"background-color:#" + colour})
 
 
 # Function that places the outer divs representing each plan

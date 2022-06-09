@@ -1449,81 +1449,81 @@ $scope.ENGINEERINGSCIENCESclickListener = function() {
         eval(flagName + " = false");
     }
 }
-$scope.ComplementaryElectiveclickListener = function() {
+$scope.COMPclickListener = function() {
     var planName = $scope.selectedPlan;
     var pressedbtn = document.getElementById("COMP");
-    var checkFlag = "!ComplementaryElective" + planName + "flag";
+    var checkFlag = "!COMP" + planName + "flag";
     var flagBool = eval(checkFlag);
     if (flagBool) {
-        that.highlightCategory("ComplementaryElective", $scope.selectedPlan);
+        that.highlightCategory("COMP", $scope.selectedPlan);
         pressedbtn.classList.remove("legendbutton");
         pressedbtn.classList.add("legendbutton-pressed");
         var addClick = "that." + planName + "LegendBtnsClicked.push(pressedbtn)";
         eval(addClick);
-        var flagName = "ComplementaryElective" + planName + "flag";
+        var flagName = "COMP" + planName + "flag";
         eval(flagName + " = true");
     }
     else {
-        that.unhighlightCategory("ComplementaryElective", $scope.selectedPlan);
+        that.unhighlightCategory("COMP", $scope.selectedPlan);
         pressedbtn.classList.remove("legendbutton-pressed");
         pressedbtn.classList.add("legendbutton");
         var findIndex = "var index = that." + planName + "LegendBtnsClicked.findIndex((element) => element[0] == pressedbtn)";
         eval(findIndex);
         var removeClick = "that." + planName + "LegendBtnsClicked.splice(index, 1)";
         eval(removeClick);
-        var flagName = "ComplementaryElective" + planName + "flag";
+        var flagName = "COMP" + planName + "flag";
         eval(flagName + " = false");
     }
 }
-$scope.ProgramTechnicalElectiveclickListener = function() {
+$scope.PROGclickListener = function() {
     var planName = $scope.selectedPlan;
     var pressedbtn = document.getElementById("PROG");
-    var checkFlag = "!ProgramTechnicalElective" + planName + "flag";
+    var checkFlag = "!PROG" + planName + "flag";
     var flagBool = eval(checkFlag);
     if (flagBool) {
-        that.highlightCategory("ProgramTechnicalElective", $scope.selectedPlan);
+        that.highlightCategory("PROG", $scope.selectedPlan);
         pressedbtn.classList.remove("legendbutton");
         pressedbtn.classList.add("legendbutton-pressed");
         var addClick = "that." + planName + "LegendBtnsClicked.push(pressedbtn)";
         eval(addClick);
-        var flagName = "ProgramTechnicalElective" + planName + "flag";
+        var flagName = "PROG" + planName + "flag";
         eval(flagName + " = true");
     }
     else {
-        that.unhighlightCategory("ProgramTechnicalElective", $scope.selectedPlan);
+        that.unhighlightCategory("PROG", $scope.selectedPlan);
         pressedbtn.classList.remove("legendbutton-pressed");
         pressedbtn.classList.add("legendbutton");
         var findIndex = "var index = that." + planName + "LegendBtnsClicked.findIndex((element) => element[0] == pressedbtn)";
         eval(findIndex);
         var removeClick = "that." + planName + "LegendBtnsClicked.splice(index, 1)";
         eval(removeClick);
-        var flagName = "ProgramTechnicalElective" + planName + "flag";
+        var flagName = "PROG" + planName + "flag";
         eval(flagName + " = false");
     }
 }
-$scope.ITSElectiveclickListener = function() {
+$scope.ITSclickListener = function() {
     var planName = $scope.selectedPlan;
     var pressedbtn = document.getElementById("ITS");
-    var checkFlag = "!ITSElective" + planName + "flag";
+    var checkFlag = "!ITS" + planName + "flag";
     var flagBool = eval(checkFlag);
     if (flagBool) {
-        that.highlightCategory("ITSElective", $scope.selectedPlan);
+        that.highlightCategory("ITS", $scope.selectedPlan);
         pressedbtn.classList.remove("legendbutton");
         pressedbtn.classList.add("legendbutton-pressed");
         var addClick = "that." + planName + "LegendBtnsClicked.push(pressedbtn)";
         eval(addClick);
-        var flagName = "ITSElective" + planName + "flag";
+        var flagName = "ITS" + planName + "flag";
         eval(flagName + " = true");
     }
     else {
-        that.unhighlightCategory("ITSElective", $scope.selectedPlan);
+        that.unhighlightCategory("ITS", $scope.selectedPlan);
         pressedbtn.classList.remove("legendbutton-pressed");
         pressedbtn.classList.add("legendbutton");
         var findIndex = "var index = that." + planName + "LegendBtnsClicked.findIndex((element) => element[0] == pressedbtn)";
         eval(findIndex);
         var removeClick = "that." + planName + "LegendBtnsClicked.splice(index, 1)";
         eval(removeClick);
-        var flagName = "ITSElective" + planName + "flag";
+        var flagName = "ITS" + planName + "flag";
         eval(flagName + " = false");
     }
 }

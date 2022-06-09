@@ -33,14 +33,16 @@ def debug(sequenceDict):
 
 # Main function   
 def main():
+    print("Beginning generation...")
     # opening the template html file and constructing html
     # note: here we calling parsing to extract the course data!
     try:  
         with open("template.html") as input:
             # deriving parsed html and creating soup object
             soup = BeautifulSoup(input, 'html.parser')
-
+            
             # opening the JS files
+            print("Opening files...")
             controller = open("./output/js/controller.js", "w")
             indexJS = open("./output/js/index.js", "w")
 
@@ -51,18 +53,23 @@ def main():
             lineManager = linegen.LineManager()
 
             # parsing the excel files with course info, pulls dependencies (prereqs, coreqs, reqs) too
+            print("Parsing courses...")
             courseDict = courseparsing.parseCourses("Courses.xls")
             
             # pulling the category and color info from excel
+            print("Parsing categories...")
             courseDict, categoryDict = categoriesparsing.parseCategories("CourseCategories.xls", courseDict)
 
             # writing colour highlighting CSS
+            print("Writing category CSS...")
             cssgen.writeCategoryCSS(categoryDict, categoryCSS)
             
             # sequencing courses
+            print("Parsing sequences....")
             sequenceDict, deptName = sequenceparsing.parseSeq("Sequencing.xls", courseDict)
 
             # generating intital JS based on the number and names of plans
+            print("Intialzing JS files....")
             javascriptgen.intializeControllerJavaScript(controller, sequenceDict)
 
             #locating title tag
@@ -81,18 +88,23 @@ def main():
             displayTag = mainTag.find("div", class_="display")
 
             # customizing webpage title
+            print("Writing title....")
             htmlgen.switchTitle(titleTag, deptName)
 
             # placing radio inputs
+            print("Placing radio inputs....")
             htmlgen.placeRadioInputs(formTag, sequenceDict, soup)
 
             # places legend for color-coding
+            print("Placing legend....")
             htmlgen.placeLegend(legendTag, categoryDict, soup)
 
             #placing the HTML and generating JS based on the courses (drawing lines)
+            print("Placing course diagram....")
             htmlgen.placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager)
 
             # closing JS and CSS files
+            print("Closing files...")
             javascriptgen.closeControllerJavaScript(controller)
             indexJS.close()
             categoryCSS.close()
@@ -105,12 +117,14 @@ def main():
 
     # writing output to an output html
     try:
+        print("Writing final HTML.....")
         with open("./output/index.html", "w", encoding="utf-8") as output:
             output.write(str(soup))
     except FileNotFoundError as err:
        print("Exception raised: " + 
              err.strerror + 
              ". The directory you are in does not have a directory named output.")
+    print("Generation Completed!")
         
 if __name__ == "__main__":
     main()

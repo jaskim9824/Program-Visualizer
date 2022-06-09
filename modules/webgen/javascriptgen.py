@@ -404,11 +404,11 @@ switch(categoryName) {{ \n"""
     for category in categoriesDict:
         # special cases to handle electives, category is not the same as ID
         if category == "ComplementaryElective":
-            controller.write(formattedCategoriesListener.format(categoryName=category, categoryNameId="COMP"))
+            controller.write(formattedCategoriesListener.format(categoryName="COMP", categoryNameId="COMP"))
         elif category == "ProgramTechnicalElective":
-            controller.write(formattedCategoriesListener.format(categoryName=category, categoryNameId="PROG"))
+            controller.write(formattedCategoriesListener.format(categoryName="PROG", categoryNameId="PROG"))
         elif category == "ITSElective":
-            controller.write(formattedCategoriesListener.format(categoryName=category, categoryNameId="ITS"))
+            controller.write(formattedCategoriesListener.format(categoryName="ITS", categoryNameId="ITS"))
         else:
             # not an elective
             controller.write(formattedCategoriesListener.format(categoryName=category, categoryNameId=category))
