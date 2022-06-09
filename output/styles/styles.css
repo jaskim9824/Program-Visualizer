@@ -25,6 +25,7 @@ header {
     background-color: #275d38;
     margin-bottom: 10px;
     height: 60px;
+    min-width: 100vw;
 }
 
 .linelegenddescription {
@@ -95,7 +96,7 @@ header {
     text-align: left;
 }
 
-/* legend for categories */
+/* legend for categories wrapper */
 .legendboxes {
     width: 12rem;
     height: 17rem;
@@ -107,6 +108,7 @@ header {
     text-align: center;
 }
 
+/* Individual legend button, unpressed */
 .legendbutton {
     text-align: center;
     padding: 8px;
@@ -115,6 +117,7 @@ header {
     margin: 5px;
 }
 
+/* Individual legend button, pressed */
 .legendbutton-pressed {
     text-align: center;
     padding: 6px;
@@ -141,9 +144,28 @@ header {
         bottom: 10px;
     }
 
-.header a.site-title {
-    font-size: 15px;
-}
+    .header a.site-title {
+        font-size: 15px;
+    }
+
+    /* Changing width of tooltip on narrow screens */
+    .coursecontainer .tooltip .tooltiptextleft, .coursecontainer .tooltip .tooltiptextright, 
+    .orcoursecontainer .tooltip .tooltiptextleft, .orcoursecontainer .tooltip .tooltiptextright {
+        width: 400px;
+    }
+
+    /* Smaller font on narrow screens */
+    .coursecontainer .tooltip .descriptiontitle, .orcoursecontainer .tooltip .descriptiontitle {
+        font-size: 15px;
+    }
+
+    /* Smaller font on narrow screens */
+    .coursecontainer .descriptionalphahours, .coursecontainer .descriptionavailability, 
+    .coursecontainer .descriptioncredits, .coursecontainer .descriptionfeeindex, .coursecontainer .fulldescription,
+    .orcoursecontainer .descriptionalphahours, .orcoursecontainer .descriptionavailability, 
+    .orcoursecontainer .descriptioncredits, .orcoursecontainer .descriptionfeeindex, .orcoursecontainer .fulldescription {
+        font-size: 12px;
+    }
 }
 
 #main {
@@ -464,6 +486,7 @@ footer {
     height: 64px;
     position: relative;
     bottom: 0;
+    min-width: 100vw;
 }
 
 /* U of A logo */
