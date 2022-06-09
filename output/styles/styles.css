@@ -438,7 +438,7 @@ p.ortext {
     position: absolute;
     z-index: 1;
     bottom: 125%;
-    left: 50%;
+    right: 50%;
     margin-left: -60px;
     opacity: 1;
     transition: opacity 0.3s;
@@ -449,6 +449,7 @@ p.ortext {
     vertical-align: baseline;
     white-space: normal;
 }
+
 
 /* After hovering, set content to empty */
 .tooltip .tooltiptextright::after {
@@ -472,6 +473,16 @@ p.ortext {
 }
 
 /* After hovering, set content to empty */
+.tooltip .tooltiptextleft::after {
+    content: "";         
+    top: 100%;
+    right: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #EEEEEE transparent transparent transparent;
+}
+
 .tooltip .tooltiptextleft-locked::after {
     content: "";         
     top: 100%;
