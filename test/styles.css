@@ -113,6 +113,15 @@ header {
     opacity: 0;
     transition: opacity 0.3s;
 }
+.tooltiptext{
+    -webkit-user-select: all;
+    /* Chrome all / Safari all */
+    -moz-user-select: all;
+    /* Firefox all */
+    -ms-user-select: all;
+    /* IE 10+ */
+    user-select: all;
+}
         
 .tooltip .tooltiptext::after {
     content: "";         
