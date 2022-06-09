@@ -7,14 +7,17 @@ class Line {
     }
     show(switching) {
         if (switching) {
+            // console.log("here");
             this.line = new LeaderLine(document.getElementById(this.start),
                                        document.getElementById(this.end),
                                        {dash:this.dashed});
         }
         else {
+            // console.log("here");
             this.line = new LeaderLine(document.getElementById(this.start), 
             document.getElementById(this.end),
             {hide:true, dash:this.dashed});
+            console.log(this.line);
             this.line.show();
         }
     }
@@ -28,6 +31,7 @@ class Line {
             setTimeout(function() {
                 that.line.remove();
             }, 200);
+            console.log("removed");
         }
     }
 }

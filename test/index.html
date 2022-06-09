@@ -88,8 +88,8 @@
                         <p>{{ece101courseinfo}}</p>
                     </div>
 
-                    <div class="course tooltip cateA" id="ECE 101" ng-click="ece101Listener()">
-                        <p class="tooltiptext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae temporibus sapiente omnis in et itaque maiores atque, deserunt corporis dolorum iure, rnihil, exercitationem illum nesciunt iste at, quo molestiae ipsa odio ratione, temporibus corrupti sed! Perspiciatis, saepe quos consectetur ullam in blanditiis neque placeat!</p>
+                    <div class="course tooltip cateA" id="ECE 101" ng-click="ece101Listener()" ng-right-click="doThis()">
+                        <p class="tooltiptext" id="ECE 101 desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae temporibus sapiente omnis in et itaque maiores atque, deserunt corporis dolorum iure, rnihil, exercitationem illum nesciunt iste at, quo molestiae ipsa odio ratione, temporibus corrupti sed! Perspiciatis, saepe quos consectetur ullam in blanditiis neque placeat!</p>
                         <h3 class="embed">ECE 101</h3>
                     </div>
                 </div>
@@ -444,6 +444,14 @@ evaluating as null -->
         // for referencing this within a function
         var that = this;
 
+        
+
+        this.delay = function () {
+            setTimeout(function() {
+                return;
+            }, 200);
+        }
+
         /* this is an array of pairs, where each pair is an active line for that plan and the count
         of courses keeping it active*/
         this.planAList = [];
@@ -495,12 +503,12 @@ evaluating as null -->
         };
 
         this.incrementActiveCount = function (line, alt, dest) {
-            console.log(alt);
+            // console.log(alt);
             switch(alt) {
                 case "alt1A":
                     switch(dest) {
                         case "ECE 331":
-                            console.log("here");
+                            // console.log("here");
                             var index = this.alt1Aece331temp.findIndex((element) => element[0] == line);
                             if (index == -1) {
                                 this.alt1Aece331temp.push([line, 1]);
@@ -707,6 +715,7 @@ evaluating as null -->
                 case "A":
                     // Check if in active list for plan
                     var index = this.planAList.findIndex((element) => element[0] == line);
+                    // console.log(index)
                     // If it does not exist
                     if (index == -1) {
                         line.show(false);
@@ -894,6 +903,8 @@ evaluating as null -->
 
         // add a clicked/not clicked flag for every single course
         var ece101flag = false; 
+        var ece101lastClickTime = new Date().getTime();
+        var ece101rflag = false;
         var ece201flag = false;
         var ece401flag = false;
         var ece461flag = false;
@@ -903,8 +914,20 @@ evaluating as null -->
     
         // add a listener for every possible course, following the below format
         $scope.ece101Listener = function () {
+            var currentTime = new Date().getTime()
+            console.log(currentTime);
+            console.log(ece101lastClickTime);
+            console.log(currentTime - ece101lastClickTime);
+            // prevent errors that might arise from a double click, ignore clicks < 200 ms from last one
+            if (currentTime - ece101lastClickTime <= 200) {
+                ece101lastClickTime = currentTime;
+                return;
+            }
+            ece101lastClickTime = currentTime;
             var element = document.getElementById("ECE 101")
             if (!ece101flag) {
+                // that.delay();
+                console.log("here")
                 if (element.classList.contains("cateA-highlighed")) {
                     element.classList.remove("cateA-highlighted");
                     element.classList.add("cateA");
@@ -915,11 +938,12 @@ evaluating as null -->
                 // call addLine() for every single line
                 // set the course info var to the course info
                 //$scope.ece101courseinfo = "ECE 101 is an intro course that teaches you several things about ECE. It serves as a basic overview of general concepts.";
+                // console.log("going here");
                 that.addLine(getLine1());
                 // that.addLine(getLine2());
                 // that.addLine(getLine4());
                 if (alt1AFlag == "ECE 331") {
-                    console.log("enters here");
+                    // console.log("enters here");
                     that.addLine(getLine7());
                     that.incrementActiveCount(getLine8(), "alt1A", "MEC E 331");
                 }
@@ -933,6 +957,7 @@ evaluating as null -->
                 ece101flag = true;
             }
             else {
+                console.log("now")
                 // call getter function to get all lines belonging to course
                 // call removeLine() for every single line
                 // set the course info variable to ""
@@ -954,6 +979,21 @@ evaluating as null -->
                 ece101flag = false;
             }
         };
+
+        $scope.doThis = function () {
+            if (!ece101rflag) {
+                document.getElementById("ECE 101 desc").classList.remove("tooltiptext")
+                document.getElementById("ECE 101 desc").classList.add("tooltiptext-locked")
+                console.log("here");
+                ece101rflag = true;
+            }
+            else {
+                document.getElementById("ECE 101 desc").classList.remove("tooltiptext-locked")
+                document.getElementById("ECE 101 desc").classList.add("tooltiptext")
+                console.log("now");
+                ece101rflag = false;
+            }
+        }
         
         $scope.ece201Listener = function() {
             if (!ece201flag) {
@@ -1045,6 +1085,19 @@ evaluating as null -->
         }
 
     });
+
+    // https://stackoverflow.com/questions/15731634/how-do-i-handle-right-click-events-in-angular-js
+    app.directive('ngRightClick', function($parse) {
+    return function(scope, element, attrs) {
+        var fn = $parse(attrs.ngRightClick);
+        element.bind('contextmenu', function(event) {
+            scope.$apply(function() {
+                event.preventDefault();
+                fn(scope, {$event:event});
+            });
+        });
+    };
+})
 </script>
 </body>
 </html>
