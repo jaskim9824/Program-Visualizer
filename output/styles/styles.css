@@ -373,6 +373,31 @@ p.ortext {
     white-space: normal;
 }
 
+.tooltiptextright-locked {
+    visibility: visible;
+    width: 46vw;
+    padding: 0px 10px;
+    background-color: #EEEEEE;
+    border: 1px solid #444444;
+    color: #2B292A;
+    text-align: left;           
+    border-radius: 0px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 1;
+    transition: opacity 0.3s;
+    font-size: 100%;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: 'Roboto', sans-serif;
+    vertical-align: baseline;
+    white-space: normal;
+}
+
 /* Most properties taken from Calendar */
 /* Course on right of page, tooltip appears to the left of course */
 .tooltip .tooltiptextleft {
@@ -400,6 +425,31 @@ p.ortext {
     white-space: normal;
 }
 
+.tooltiptextleft-locked {
+    visibility: visible;
+    width: 46vw;
+    padding: 0px 10px;
+    background-color: #EEEEEE;
+    border: 1px solid #444444;
+    color: #2B292A;
+    text-align: left;           
+    border-radius: 0px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 1;
+    transition: opacity 0.3s;
+    font-size: 100%;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: 'Roboto', sans-serif;
+    vertical-align: baseline;
+    white-space: normal;
+}
+
 /* After hovering, set content to empty */
 .tooltip .tooltiptextright::after {
     content: "";         
@@ -411,8 +461,18 @@ p.ortext {
     border-color: #EEEEEE transparent transparent transparent;
 }
 
+.tooltip .tooltiptextright-locked::after {
+    content: "";         
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #EEEEEE transparent transparent transparent;
+}
+
 /* After hovering, set content to empty */
-.tooltip .tooltiptextleft::after {
+.tooltip .tooltiptextleft-locked::after {
     content: "";         
     top: 100%;
     right: 50%;

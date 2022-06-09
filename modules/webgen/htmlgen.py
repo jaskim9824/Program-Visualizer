@@ -233,6 +233,7 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
     # placing lines and click listeners for this plan
     linegen.placeLines(courseList, indexJS, lineManager, plan)
     linegen.placeClickListeners(courseList, controller, lineManager, plan)
+    linegen.placeRightClickListeners(courseList, controller, plan)
 
 # Function that places the course divs within a certain term column of a certain plan
 # Parameters:
@@ -261,9 +262,11 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
 
         # Prevent tooltip from being off screen
         if termcounter < 4:
-            courseDisc = soup.new_tag("div", attrs={"class":"tooltiptextright"})
+            courseDisc = soup.new_tag("div", attrs={"id":courseID+"desc",
+                                                    "class":"tooltiptextright"})
         else:
-            courseDisc = soup.new_tag("div", attrs={"class":"tooltiptextleft"})
+            courseDisc = soup.new_tag("div", attrs={"id":courseID+"desc",
+                                                    "class":"tooltiptextleft"})
 
         # Constructing course div
         if course.name == "Complementary Elective":
@@ -271,7 +274,8 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
             courseID = courseID+str(compcounter)
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip COMP", 
                                                "id": courseID,
-                                               "ng-click":courseID+"Listener()"})
+                                               "ng-click":courseID+"Listener()",
+                                               "ng-right-click":courseID+"RCListener()"})
             compcounter += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
 
@@ -280,7 +284,8 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
             courseID = courseID+str(progcounter)
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip PROG", 
                                                "id": courseID, 
-                                               "ng-click":courseID+"Listener()"})
+                                               "ng-click":courseID+"Listener()",
+                                               "ng-right-click":courseID+"RCListener()"})
             progcounter += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
 
@@ -289,7 +294,8 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
             # Class allows formatting so words fit in course box
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip ITS", 
                                                 "id": courseID, 
-                                                "ng-click":courseID+"Listener()"})
+                                                "ng-click":courseID+"Listener()",
+                                                "ng-right-click":courseID+"RCListener()"})
             itscounter += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
 
@@ -297,16 +303,19 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
             # This is a regular course. All information should be available
             courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip " + courseContClass, 
                                                 "id": courseID, 
-                                                "ng-click":courseID+"Listener()"})
+                                                "ng-click":courseID+"Listener()",
+                                                "ng-right-click":courseID+"RCListener()"})
             if course.calendar_print.lower().strip() == "or":
                 if orCounter == 0:
                     courseDiv = soup.new_tag("div", attrs={"class":"orcoursetop tooltip " + courseContClass,
                                                 "id": courseID,
-                                                "ng-click":courseID+"Listener()"})
+                                                "ng-click":courseID+"Listener()",
+                                                "ng-right-click":courseID+"RCListener()"})
                 else:
                     courseDiv = soup.new_tag("div", attrs={"class":"orcoursebottom tooltip " + courseContClass,
                                                 "id": courseID,
-                                                "ng-click":courseID+"Listener()"})
+                                                "ng-click":courseID+"Listener()",
+                                                "ng-right-click":courseID+"RCListener()"})
             formatCourseDescriptionForRegular(soup, course, courseDisc)
 
         courseHeader = soup.new_tag("h3", attrs={"class":"embed"})  # text appearing in course box (eg: CHEM 103)

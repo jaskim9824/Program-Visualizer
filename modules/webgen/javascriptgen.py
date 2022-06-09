@@ -21,7 +21,19 @@ def intializeControllerJavaScript(controller, sequenceDict):
 # Function that properly concludes and closes the controller JS
 #   controller - file handle for controller JS
 def closeControllerJavaScript(controller):
-    controller.write("});")
+    controller.write("});\n")
+    rightClickDirective = """app.directive('ngRightClick', function($parse) {
+    return function(scope, element, attrs) {
+        var fn = $parse(attrs.ngRightClick);
+        element.bind('contextmenu', function(event) {
+            scope.$apply(function() {
+                event.preventDefault();
+                fn(scope, {$event:event});
+            });
+        });
+    };
+    });"""
+    controller.write(rightClickDirective)
     controller.close()
 
 

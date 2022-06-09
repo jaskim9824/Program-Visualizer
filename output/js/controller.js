@@ -12415,6 +12415,1202 @@ ITSElectiveTraditionalPlan2A3A4A0Time = currentTime;
       ITSElectiveTraditionalPlan2A3A4A0flag=false
   }
 };
+$scope.CHEM103TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("CHEM103TraditionalPlan2A3A4Adesc");
+ if (!CHEM103TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM103TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM103TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.ENGG100TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("ENGG100TraditionalPlan2A3A4Adesc");
+ if (!ENGG100TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG100TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG100TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.ENGG130TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("ENGG130TraditionalPlan2A3A4Adesc");
+ if (!ENGG130TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG130TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG130TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.ENGL199TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("ENGL199TraditionalPlan2A3A4Adesc");
+ if (!ENGL199TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGL199TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGL199TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MATH100TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MATH100TraditionalPlan2A3A4Adesc");
+ if (!MATH100TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH100TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH100TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.PHYS130TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("PHYS130TraditionalPlan2A3A4Adesc");
+ if (!PHYS130TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      PHYS130TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      PHYS130TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.CHEM105TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("CHEM105TraditionalPlan2A3A4Adesc");
+ if (!CHEM105TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM105TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM105TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.ENCMP100TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("ENCMP100TraditionalPlan2A3A4Adesc");
+ if (!ENCMP100TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENCMP100TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENCMP100TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.ENGG160TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("ENGG160TraditionalPlan2A3A4Adesc");
+ if (!ENGG160TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG160TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG160TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.ENPH131TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("ENPH131TraditionalPlan2A3A4Adesc");
+ if (!ENPH131TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENPH131TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENPH131TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MATH101TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MATH101TraditionalPlan2A3A4Adesc");
+ if (!MATH101TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH101TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH101TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MATH102TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MATH102TraditionalPlan2A3A4Adesc");
+ if (!MATH102TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH102TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH102TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.CIVE270TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("CIVE270TraditionalPlan2A3A4Adesc");
+ if (!CIVE270TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CIVE270TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CIVE270TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MATH209TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MATH209TraditionalPlan2A3A4Adesc");
+ if (!MATH209TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH209TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH209TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.STAT235TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("STAT235TraditionalPlan2A3A4Adesc");
+ if (!STAT235TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      STAT235TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      STAT235TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.CHE243TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("CHE243TraditionalPlan2A3A4Adesc");
+ if (!CHE243TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE243TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE243TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MECE200TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MECE200TraditionalPlan2A3A4Adesc");
+ if (!MECE200TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE200TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE200TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MECE250TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MECE250TraditionalPlan2A3A4Adesc");
+ if (!MECE250TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE250TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE250TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.ECE209TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("ECE209TraditionalPlan2A3A4Adesc");
+ if (!ECE209TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ECE209TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ECE209TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MATE202TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MATE202TraditionalPlan2A3A4Adesc");
+ if (!MATE202TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATE202TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATE202TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MATH201TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MATH201TraditionalPlan2A3A4Adesc");
+ if (!MATH201TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH201TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH201TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MECE230TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MECE230TraditionalPlan2A3A4Adesc");
+ if (!MECE230TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE230TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE230TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MECE260TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MECE260TraditionalPlan2A3A4Adesc");
+ if (!MECE260TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE260TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE260TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MECE265TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MECE265TraditionalPlan2A3A4Adesc");
+ if (!MECE265TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE265TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE265TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MATH300TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MATH300TraditionalPlan2A3A4Adesc");
+ if (!MATH300TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH300TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH300TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MECE300TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MECE300TraditionalPlan2A3A4Adesc");
+ if (!MECE300TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE300TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE300TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MECE301TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MECE301TraditionalPlan2A3A4Adesc");
+ if (!MECE301TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE301TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE301TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MECE331TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MECE331TraditionalPlan2A3A4Adesc");
+ if (!MECE331TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE331TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE331TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MECE371TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MECE371TraditionalPlan2A3A4Adesc");
+ if (!MECE371TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE371TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE371TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MECE380TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MECE380TraditionalPlan2A3A4Adesc");
+ if (!MECE380TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE380TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE380TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.ENGM310TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("ENGM310TraditionalPlan2A3A4Adesc");
+ if (!ENGM310TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM310TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM310TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.ENGM401TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("ENGM401TraditionalPlan2A3A4Adesc");
+ if (!ENGM401TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM401TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM401TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MECE340TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MECE340TraditionalPlan2A3A4Adesc");
+ if (!MECE340TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE340TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE340TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MECE360TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MECE360TraditionalPlan2A3A4Adesc");
+ if (!MECE360TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE360TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE360TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MECE362TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MECE362TraditionalPlan2A3A4Adesc");
+ if (!MECE362TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE362TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE362TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MECE390TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MECE390TraditionalPlan2A3A4Adesc");
+ if (!MECE390TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE390TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE390TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.ComplementaryElectiveTraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2A3A4Adesc");
+ if (!ComplementaryElectiveTraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ComplementaryElectiveTraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ComplementaryElectiveTraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.ENGG404TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("ENGG404TraditionalPlan2A3A4Adesc");
+ if (!ENGG404TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG404TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG404TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MECE430TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MECE430TraditionalPlan2A3A4Adesc");
+ if (!MECE430TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE430TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE430TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MECE480TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MECE480TraditionalPlan2A3A4Adesc");
+ if (!MECE480TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE480TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE480TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MECE463TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MECE463TraditionalPlan2A3A4Adesc");
+ if (!MECE463TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE463TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE463TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4Adesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4Adesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4Adesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.CHE448TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("CHE448TraditionalPlan2A3A4Adesc");
+ if (!CHE448TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE448TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE448TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MECE420TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MECE420TraditionalPlan2A3A4Adesc");
+ if (!MECE420TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE420TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE420TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.ENGG400TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("ENGG400TraditionalPlan2A3A4Adesc");
+ if (!ENGG400TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG400TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG400TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MECE403TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MECE403TraditionalPlan2A3A4Adesc");
+ if (!MECE403TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE403TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE403TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MECE451TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MECE451TraditionalPlan2A3A4Adesc");
+ if (!MECE451TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE451TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE451TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.MECE460TraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("MECE460TraditionalPlan2A3A4Adesc");
+ if (!MECE460TraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE460TraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE460TraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4Adesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3A4Arflag=false
+  }
+};
+$scope.ITSElectiveTraditionalPlan2A3A4ARCListener = function () {
+  var element = document.getElementById("ITSElectiveTraditionalPlan2A3A4Adesc");
+ if (!ITSElectiveTraditionalPlan2A3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ITSElectiveTraditionalPlan2A3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ITSElectiveTraditionalPlan2A3A4Arflag=false
+  }
+};
   var CHEM103TraditionalPlan2A3A4Bflag = false;
   var CHEM103TraditionalPlan2A3A4Brflag = false;
  var CHEM103TraditionalPlan2A3A4BTime = new Date().getTime();
@@ -14153,6 +15349,1179 @@ ProgramTechnicalElectiveTraditionalPlan2A3A4B3Time = currentTime;
      ProgramTechnicalElectiveTraditionalPlan2A3A4B3element.classList.add("PROG");
      that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4B3");
       ProgramTechnicalElectiveTraditionalPlan2A3A4B3flag=false
+  }
+};
+$scope.CHEM103TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("CHEM103TraditionalPlan2A3A4Bdesc");
+ if (!CHEM103TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM103TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM103TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.ENGG100TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("ENGG100TraditionalPlan2A3A4Bdesc");
+ if (!ENGG100TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG100TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG100TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.ENGG130TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("ENGG130TraditionalPlan2A3A4Bdesc");
+ if (!ENGG130TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG130TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG130TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.ENGL199TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("ENGL199TraditionalPlan2A3A4Bdesc");
+ if (!ENGL199TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGL199TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGL199TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MATH100TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MATH100TraditionalPlan2A3A4Bdesc");
+ if (!MATH100TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH100TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH100TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.PHYS130TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("PHYS130TraditionalPlan2A3A4Bdesc");
+ if (!PHYS130TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      PHYS130TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      PHYS130TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.CHEM105TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("CHEM105TraditionalPlan2A3A4Bdesc");
+ if (!CHEM105TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM105TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM105TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.ENCMP100TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("ENCMP100TraditionalPlan2A3A4Bdesc");
+ if (!ENCMP100TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENCMP100TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENCMP100TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.ENGG160TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("ENGG160TraditionalPlan2A3A4Bdesc");
+ if (!ENGG160TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG160TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG160TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.ENPH131TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("ENPH131TraditionalPlan2A3A4Bdesc");
+ if (!ENPH131TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENPH131TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENPH131TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MATH101TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MATH101TraditionalPlan2A3A4Bdesc");
+ if (!MATH101TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH101TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH101TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MATH102TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MATH102TraditionalPlan2A3A4Bdesc");
+ if (!MATH102TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH102TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH102TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.CIVE270TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("CIVE270TraditionalPlan2A3A4Bdesc");
+ if (!CIVE270TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CIVE270TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CIVE270TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MATH209TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MATH209TraditionalPlan2A3A4Bdesc");
+ if (!MATH209TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH209TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH209TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.STAT235TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("STAT235TraditionalPlan2A3A4Bdesc");
+ if (!STAT235TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      STAT235TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      STAT235TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.CHE243TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("CHE243TraditionalPlan2A3A4Bdesc");
+ if (!CHE243TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE243TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE243TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MECE200TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MECE200TraditionalPlan2A3A4Bdesc");
+ if (!MECE200TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE200TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE200TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MECE250TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MECE250TraditionalPlan2A3A4Bdesc");
+ if (!MECE250TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE250TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE250TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.ECE209TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("ECE209TraditionalPlan2A3A4Bdesc");
+ if (!ECE209TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ECE209TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ECE209TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MATE202TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MATE202TraditionalPlan2A3A4Bdesc");
+ if (!MATE202TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATE202TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATE202TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MATH201TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MATH201TraditionalPlan2A3A4Bdesc");
+ if (!MATH201TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH201TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH201TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MECE230TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MECE230TraditionalPlan2A3A4Bdesc");
+ if (!MECE230TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE230TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE230TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MECE260TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MECE260TraditionalPlan2A3A4Bdesc");
+ if (!MECE260TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE260TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE260TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MECE265TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MECE265TraditionalPlan2A3A4Bdesc");
+ if (!MECE265TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE265TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE265TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MATH300TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MATH300TraditionalPlan2A3A4Bdesc");
+ if (!MATH300TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH300TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH300TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MECE300TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MECE300TraditionalPlan2A3A4Bdesc");
+ if (!MECE300TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE300TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE300TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MECE301TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MECE301TraditionalPlan2A3A4Bdesc");
+ if (!MECE301TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE301TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE301TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MECE331TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MECE331TraditionalPlan2A3A4Bdesc");
+ if (!MECE331TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE331TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE331TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MECE371TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MECE371TraditionalPlan2A3A4Bdesc");
+ if (!MECE371TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE371TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE371TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MECE380TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MECE380TraditionalPlan2A3A4Bdesc");
+ if (!MECE380TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE380TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE380TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.ENGM310TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("ENGM310TraditionalPlan2A3A4Bdesc");
+ if (!ENGM310TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM310TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM310TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.ENGM401TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("ENGM401TraditionalPlan2A3A4Bdesc");
+ if (!ENGM401TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM401TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM401TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MECE340TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MECE340TraditionalPlan2A3A4Bdesc");
+ if (!MECE340TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE340TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE340TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MECE360TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MECE360TraditionalPlan2A3A4Bdesc");
+ if (!MECE360TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE360TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE360TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MECE362TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MECE362TraditionalPlan2A3A4Bdesc");
+ if (!MECE362TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE362TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE362TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MECE390TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MECE390TraditionalPlan2A3A4Bdesc");
+ if (!MECE390TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE390TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE390TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.ComplementaryElectiveTraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2A3A4Bdesc");
+ if (!ComplementaryElectiveTraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ComplementaryElectiveTraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ComplementaryElectiveTraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.CHE448TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("CHE448TraditionalPlan2A3A4Bdesc");
+ if (!CHE448TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE448TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE448TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MECE420TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MECE420TraditionalPlan2A3A4Bdesc");
+ if (!MECE420TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE420TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE420TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.ENGG400TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("ENGG400TraditionalPlan2A3A4Bdesc");
+ if (!ENGG400TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG400TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG400TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MECE403TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MECE403TraditionalPlan2A3A4Bdesc");
+ if (!MECE403TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE403TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE403TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MECE451TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MECE451TraditionalPlan2A3A4Bdesc");
+ if (!MECE451TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE451TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE451TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MECE460TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MECE460TraditionalPlan2A3A4Bdesc");
+ if (!MECE460TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE460TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE460TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4Bdesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.ENGG404TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("ENGG404TraditionalPlan2A3A4Bdesc");
+ if (!ENGG404TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG404TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG404TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MECE430TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MECE430TraditionalPlan2A3A4Bdesc");
+ if (!MECE430TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE430TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE430TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MECE480TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MECE480TraditionalPlan2A3A4Bdesc");
+ if (!MECE480TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE480TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE480TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.MECE463TraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("MECE463TraditionalPlan2A3A4Bdesc");
+ if (!MECE463TraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE463TraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE463TraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4Bdesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4Bdesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4BRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4Bdesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3A4Brflag=false
   }
 };
   var CHEM103TraditionalPlan2A3B4Aflag = false;
@@ -15895,6 +18264,1179 @@ ProgramTechnicalElectiveTraditionalPlan2A3B4A3Time = currentTime;
       ProgramTechnicalElectiveTraditionalPlan2A3B4A3flag=false
   }
 };
+$scope.CHEM103TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("CHEM103TraditionalPlan2A3B4Adesc");
+ if (!CHEM103TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM103TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM103TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.ENGG100TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("ENGG100TraditionalPlan2A3B4Adesc");
+ if (!ENGG100TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG100TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG100TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.ENGG130TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("ENGG130TraditionalPlan2A3B4Adesc");
+ if (!ENGG130TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG130TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG130TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.ENGL199TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("ENGL199TraditionalPlan2A3B4Adesc");
+ if (!ENGL199TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGL199TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGL199TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MATH100TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MATH100TraditionalPlan2A3B4Adesc");
+ if (!MATH100TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH100TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH100TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.PHYS130TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("PHYS130TraditionalPlan2A3B4Adesc");
+ if (!PHYS130TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      PHYS130TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      PHYS130TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.CHEM105TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("CHEM105TraditionalPlan2A3B4Adesc");
+ if (!CHEM105TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM105TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM105TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.ENCMP100TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("ENCMP100TraditionalPlan2A3B4Adesc");
+ if (!ENCMP100TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENCMP100TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENCMP100TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.ENGG160TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("ENGG160TraditionalPlan2A3B4Adesc");
+ if (!ENGG160TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG160TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG160TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.ENPH131TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("ENPH131TraditionalPlan2A3B4Adesc");
+ if (!ENPH131TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENPH131TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENPH131TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MATH101TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MATH101TraditionalPlan2A3B4Adesc");
+ if (!MATH101TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH101TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH101TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MATH102TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MATH102TraditionalPlan2A3B4Adesc");
+ if (!MATH102TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH102TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH102TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.CIVE270TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("CIVE270TraditionalPlan2A3B4Adesc");
+ if (!CIVE270TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CIVE270TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CIVE270TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MATH209TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MATH209TraditionalPlan2A3B4Adesc");
+ if (!MATH209TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH209TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH209TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.STAT235TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("STAT235TraditionalPlan2A3B4Adesc");
+ if (!STAT235TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      STAT235TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      STAT235TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.CHE243TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("CHE243TraditionalPlan2A3B4Adesc");
+ if (!CHE243TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE243TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE243TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MECE200TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MECE200TraditionalPlan2A3B4Adesc");
+ if (!MECE200TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE200TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE200TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MECE250TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MECE250TraditionalPlan2A3B4Adesc");
+ if (!MECE250TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE250TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE250TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.ECE209TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("ECE209TraditionalPlan2A3B4Adesc");
+ if (!ECE209TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ECE209TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ECE209TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MATE202TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MATE202TraditionalPlan2A3B4Adesc");
+ if (!MATE202TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATE202TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATE202TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MATH201TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MATH201TraditionalPlan2A3B4Adesc");
+ if (!MATH201TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH201TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH201TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MECE230TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MECE230TraditionalPlan2A3B4Adesc");
+ if (!MECE230TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE230TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE230TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MECE260TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MECE260TraditionalPlan2A3B4Adesc");
+ if (!MECE260TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE260TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE260TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MECE265TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MECE265TraditionalPlan2A3B4Adesc");
+ if (!MECE265TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE265TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE265TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.ENGM310TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("ENGM310TraditionalPlan2A3B4Adesc");
+ if (!ENGM310TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM310TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM310TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.ENGM401TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("ENGM401TraditionalPlan2A3B4Adesc");
+ if (!ENGM401TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM401TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM401TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MECE340TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MECE340TraditionalPlan2A3B4Adesc");
+ if (!MECE340TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE340TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE340TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MECE360TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MECE360TraditionalPlan2A3B4Adesc");
+ if (!MECE360TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE360TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE360TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MECE362TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MECE362TraditionalPlan2A3B4Adesc");
+ if (!MECE362TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE362TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE362TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MECE390TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MECE390TraditionalPlan2A3B4Adesc");
+ if (!MECE390TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE390TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE390TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.ComplementaryElectiveTraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2A3B4Adesc");
+ if (!ComplementaryElectiveTraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ComplementaryElectiveTraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ComplementaryElectiveTraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MATH300TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MATH300TraditionalPlan2A3B4Adesc");
+ if (!MATH300TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH300TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH300TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MECE300TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MECE300TraditionalPlan2A3B4Adesc");
+ if (!MECE300TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE300TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE300TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MECE301TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MECE301TraditionalPlan2A3B4Adesc");
+ if (!MECE301TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE301TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE301TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MECE331TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MECE331TraditionalPlan2A3B4Adesc");
+ if (!MECE331TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE331TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE331TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MECE371TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MECE371TraditionalPlan2A3B4Adesc");
+ if (!MECE371TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE371TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE371TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MECE380TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MECE380TraditionalPlan2A3B4Adesc");
+ if (!MECE380TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE380TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE380TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.ENGG404TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("ENGG404TraditionalPlan2A3B4Adesc");
+ if (!ENGG404TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG404TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG404TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MECE430TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MECE430TraditionalPlan2A3B4Adesc");
+ if (!MECE430TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE430TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE430TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MECE480TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MECE480TraditionalPlan2A3B4Adesc");
+ if (!MECE480TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE480TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE480TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MECE463TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MECE463TraditionalPlan2A3B4Adesc");
+ if (!MECE463TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE463TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE463TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4Adesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4Adesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4Adesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.CHE448TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("CHE448TraditionalPlan2A3B4Adesc");
+ if (!CHE448TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE448TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE448TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MECE420TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MECE420TraditionalPlan2A3B4Adesc");
+ if (!MECE420TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE420TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE420TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.ENGG400TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("ENGG400TraditionalPlan2A3B4Adesc");
+ if (!ENGG400TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG400TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG400TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MECE403TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MECE403TraditionalPlan2A3B4Adesc");
+ if (!MECE403TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE403TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE403TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MECE451TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MECE451TraditionalPlan2A3B4Adesc");
+ if (!MECE451TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE451TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE451TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.MECE460TraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("MECE460TraditionalPlan2A3B4Adesc");
+ if (!MECE460TraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE460TraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE460TraditionalPlan2A3B4Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4Adesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3B4Arflag=false
+  }
+};
   var CHEM103TraditionalPlan2A3B4Bflag = false;
   var CHEM103TraditionalPlan2A3B4Brflag = false;
  var CHEM103TraditionalPlan2A3B4BTime = new Date().getTime();
@@ -17633,6 +21175,1179 @@ ProgramTechnicalElectiveTraditionalPlan2A3B4B3Time = currentTime;
      ProgramTechnicalElectiveTraditionalPlan2A3B4B3element.classList.add("PROG");
      that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3B4B3");
       ProgramTechnicalElectiveTraditionalPlan2A3B4B3flag=false
+  }
+};
+$scope.CHEM103TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("CHEM103TraditionalPlan2A3B4Bdesc");
+ if (!CHEM103TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM103TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM103TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.ENGG100TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("ENGG100TraditionalPlan2A3B4Bdesc");
+ if (!ENGG100TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG100TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG100TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.ENGG130TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("ENGG130TraditionalPlan2A3B4Bdesc");
+ if (!ENGG130TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG130TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG130TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.ENGL199TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("ENGL199TraditionalPlan2A3B4Bdesc");
+ if (!ENGL199TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGL199TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGL199TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MATH100TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MATH100TraditionalPlan2A3B4Bdesc");
+ if (!MATH100TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH100TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH100TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.PHYS130TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("PHYS130TraditionalPlan2A3B4Bdesc");
+ if (!PHYS130TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      PHYS130TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      PHYS130TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.CHEM105TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("CHEM105TraditionalPlan2A3B4Bdesc");
+ if (!CHEM105TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM105TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM105TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.ENCMP100TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("ENCMP100TraditionalPlan2A3B4Bdesc");
+ if (!ENCMP100TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENCMP100TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENCMP100TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.ENGG160TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("ENGG160TraditionalPlan2A3B4Bdesc");
+ if (!ENGG160TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG160TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG160TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.ENPH131TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("ENPH131TraditionalPlan2A3B4Bdesc");
+ if (!ENPH131TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENPH131TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENPH131TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MATH101TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MATH101TraditionalPlan2A3B4Bdesc");
+ if (!MATH101TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH101TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH101TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MATH102TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MATH102TraditionalPlan2A3B4Bdesc");
+ if (!MATH102TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH102TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH102TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.CIVE270TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("CIVE270TraditionalPlan2A3B4Bdesc");
+ if (!CIVE270TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CIVE270TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CIVE270TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MATH209TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MATH209TraditionalPlan2A3B4Bdesc");
+ if (!MATH209TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH209TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH209TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.STAT235TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("STAT235TraditionalPlan2A3B4Bdesc");
+ if (!STAT235TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      STAT235TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      STAT235TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.CHE243TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("CHE243TraditionalPlan2A3B4Bdesc");
+ if (!CHE243TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE243TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE243TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MECE200TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MECE200TraditionalPlan2A3B4Bdesc");
+ if (!MECE200TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE200TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE200TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MECE250TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MECE250TraditionalPlan2A3B4Bdesc");
+ if (!MECE250TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE250TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE250TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.ECE209TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("ECE209TraditionalPlan2A3B4Bdesc");
+ if (!ECE209TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ECE209TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ECE209TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MATE202TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MATE202TraditionalPlan2A3B4Bdesc");
+ if (!MATE202TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATE202TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATE202TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MATH201TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MATH201TraditionalPlan2A3B4Bdesc");
+ if (!MATH201TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH201TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH201TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MECE230TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MECE230TraditionalPlan2A3B4Bdesc");
+ if (!MECE230TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE230TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE230TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MECE260TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MECE260TraditionalPlan2A3B4Bdesc");
+ if (!MECE260TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE260TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE260TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MECE265TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MECE265TraditionalPlan2A3B4Bdesc");
+ if (!MECE265TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE265TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE265TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.ENGM310TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("ENGM310TraditionalPlan2A3B4Bdesc");
+ if (!ENGM310TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM310TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM310TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.ENGM401TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("ENGM401TraditionalPlan2A3B4Bdesc");
+ if (!ENGM401TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM401TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM401TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MECE340TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MECE340TraditionalPlan2A3B4Bdesc");
+ if (!MECE340TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE340TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE340TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MECE360TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MECE360TraditionalPlan2A3B4Bdesc");
+ if (!MECE360TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE360TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE360TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MECE362TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MECE362TraditionalPlan2A3B4Bdesc");
+ if (!MECE362TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE362TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE362TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MECE390TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MECE390TraditionalPlan2A3B4Bdesc");
+ if (!MECE390TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE390TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE390TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.ComplementaryElectiveTraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2A3B4Bdesc");
+ if (!ComplementaryElectiveTraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ComplementaryElectiveTraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ComplementaryElectiveTraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MATH300TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MATH300TraditionalPlan2A3B4Bdesc");
+ if (!MATH300TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH300TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH300TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MECE300TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MECE300TraditionalPlan2A3B4Bdesc");
+ if (!MECE300TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE300TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE300TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MECE301TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MECE301TraditionalPlan2A3B4Bdesc");
+ if (!MECE301TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE301TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE301TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MECE331TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MECE331TraditionalPlan2A3B4Bdesc");
+ if (!MECE331TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE331TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE331TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MECE371TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MECE371TraditionalPlan2A3B4Bdesc");
+ if (!MECE371TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE371TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE371TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MECE380TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MECE380TraditionalPlan2A3B4Bdesc");
+ if (!MECE380TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE380TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE380TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.CHE448TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("CHE448TraditionalPlan2A3B4Bdesc");
+ if (!CHE448TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE448TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE448TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MECE420TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MECE420TraditionalPlan2A3B4Bdesc");
+ if (!MECE420TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE420TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE420TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.ENGG400TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("ENGG400TraditionalPlan2A3B4Bdesc");
+ if (!ENGG400TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG400TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG400TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MECE403TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MECE403TraditionalPlan2A3B4Bdesc");
+ if (!MECE403TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE403TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE403TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MECE451TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MECE451TraditionalPlan2A3B4Bdesc");
+ if (!MECE451TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE451TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE451TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MECE460TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MECE460TraditionalPlan2A3B4Bdesc");
+ if (!MECE460TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE460TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE460TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4Bdesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.ENGG404TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("ENGG404TraditionalPlan2A3B4Bdesc");
+ if (!ENGG404TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG404TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG404TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MECE430TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MECE430TraditionalPlan2A3B4Bdesc");
+ if (!MECE430TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE430TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE430TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MECE480TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MECE480TraditionalPlan2A3B4Bdesc");
+ if (!MECE480TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE480TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE480TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.MECE463TraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("MECE463TraditionalPlan2A3B4Bdesc");
+ if (!MECE463TraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE463TraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE463TraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4Bdesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4Bdesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3B4BRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3B4Bdesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3B4Brflag=false
   }
 };
   var CHEM103TraditionalPlan2B3A4Aflag = false;
@@ -19375,6 +24090,1179 @@ ProgramTechnicalElectiveTraditionalPlan2B3A4A3Time = currentTime;
       ProgramTechnicalElectiveTraditionalPlan2B3A4A3flag=false
   }
 };
+$scope.CHEM103TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("CHEM103TraditionalPlan2B3A4Adesc");
+ if (!CHEM103TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM103TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM103TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.ENGG100TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("ENGG100TraditionalPlan2B3A4Adesc");
+ if (!ENGG100TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG100TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG100TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.ENGG130TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("ENGG130TraditionalPlan2B3A4Adesc");
+ if (!ENGG130TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG130TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG130TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.ENGL199TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("ENGL199TraditionalPlan2B3A4Adesc");
+ if (!ENGL199TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGL199TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGL199TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MATH100TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MATH100TraditionalPlan2B3A4Adesc");
+ if (!MATH100TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH100TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH100TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.PHYS130TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("PHYS130TraditionalPlan2B3A4Adesc");
+ if (!PHYS130TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      PHYS130TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      PHYS130TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.CHEM105TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("CHEM105TraditionalPlan2B3A4Adesc");
+ if (!CHEM105TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM105TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM105TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.ENCMP100TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("ENCMP100TraditionalPlan2B3A4Adesc");
+ if (!ENCMP100TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENCMP100TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENCMP100TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.ENGG160TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("ENGG160TraditionalPlan2B3A4Adesc");
+ if (!ENGG160TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG160TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG160TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.ENPH131TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("ENPH131TraditionalPlan2B3A4Adesc");
+ if (!ENPH131TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENPH131TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENPH131TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MATH101TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MATH101TraditionalPlan2B3A4Adesc");
+ if (!MATH101TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH101TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH101TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MATH102TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MATH102TraditionalPlan2B3A4Adesc");
+ if (!MATH102TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH102TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH102TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.ECE209TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("ECE209TraditionalPlan2B3A4Adesc");
+ if (!ECE209TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ECE209TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ECE209TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MATE202TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MATE202TraditionalPlan2B3A4Adesc");
+ if (!MATE202TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATE202TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATE202TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MATH201TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MATH201TraditionalPlan2B3A4Adesc");
+ if (!MATH201TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH201TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH201TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MECE230TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MECE230TraditionalPlan2B3A4Adesc");
+ if (!MECE230TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE230TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE230TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MECE260TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MECE260TraditionalPlan2B3A4Adesc");
+ if (!MECE260TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE260TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE260TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MECE265TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MECE265TraditionalPlan2B3A4Adesc");
+ if (!MECE265TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE265TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE265TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.CIVE270TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("CIVE270TraditionalPlan2B3A4Adesc");
+ if (!CIVE270TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CIVE270TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CIVE270TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MATH209TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MATH209TraditionalPlan2B3A4Adesc");
+ if (!MATH209TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH209TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH209TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.STAT235TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("STAT235TraditionalPlan2B3A4Adesc");
+ if (!STAT235TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      STAT235TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      STAT235TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.CHE243TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("CHE243TraditionalPlan2B3A4Adesc");
+ if (!CHE243TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE243TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE243TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MECE200TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MECE200TraditionalPlan2B3A4Adesc");
+ if (!MECE200TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE200TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE200TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MECE250TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MECE250TraditionalPlan2B3A4Adesc");
+ if (!MECE250TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE250TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE250TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MATH300TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MATH300TraditionalPlan2B3A4Adesc");
+ if (!MATH300TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH300TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH300TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MECE300TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MECE300TraditionalPlan2B3A4Adesc");
+ if (!MECE300TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE300TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE300TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MECE301TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MECE301TraditionalPlan2B3A4Adesc");
+ if (!MECE301TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE301TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE301TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MECE331TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MECE331TraditionalPlan2B3A4Adesc");
+ if (!MECE331TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE331TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE331TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MECE371TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MECE371TraditionalPlan2B3A4Adesc");
+ if (!MECE371TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE371TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE371TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MECE380TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MECE380TraditionalPlan2B3A4Adesc");
+ if (!MECE380TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE380TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE380TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.ENGM310TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("ENGM310TraditionalPlan2B3A4Adesc");
+ if (!ENGM310TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM310TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM310TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.ENGM401TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("ENGM401TraditionalPlan2B3A4Adesc");
+ if (!ENGM401TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM401TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM401TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MECE340TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MECE340TraditionalPlan2B3A4Adesc");
+ if (!MECE340TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE340TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE340TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MECE360TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MECE360TraditionalPlan2B3A4Adesc");
+ if (!MECE360TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE360TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE360TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MECE362TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MECE362TraditionalPlan2B3A4Adesc");
+ if (!MECE362TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE362TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE362TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MECE390TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MECE390TraditionalPlan2B3A4Adesc");
+ if (!MECE390TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE390TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE390TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.ComplementaryElectiveTraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2B3A4Adesc");
+ if (!ComplementaryElectiveTraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ComplementaryElectiveTraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ComplementaryElectiveTraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.ENGG404TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("ENGG404TraditionalPlan2B3A4Adesc");
+ if (!ENGG404TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG404TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG404TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MECE430TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MECE430TraditionalPlan2B3A4Adesc");
+ if (!MECE430TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE430TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE430TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MECE480TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MECE480TraditionalPlan2B3A4Adesc");
+ if (!MECE480TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE480TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE480TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MECE463TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MECE463TraditionalPlan2B3A4Adesc");
+ if (!MECE463TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE463TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE463TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4Adesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4Adesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4Adesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.CHE448TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("CHE448TraditionalPlan2B3A4Adesc");
+ if (!CHE448TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE448TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE448TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MECE420TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MECE420TraditionalPlan2B3A4Adesc");
+ if (!MECE420TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE420TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE420TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.ENGG400TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("ENGG400TraditionalPlan2B3A4Adesc");
+ if (!ENGG400TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG400TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG400TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MECE403TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MECE403TraditionalPlan2B3A4Adesc");
+ if (!MECE403TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE403TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE403TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MECE451TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MECE451TraditionalPlan2B3A4Adesc");
+ if (!MECE451TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE451TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE451TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.MECE460TraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("MECE460TraditionalPlan2B3A4Adesc");
+ if (!MECE460TraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE460TraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE460TraditionalPlan2B3A4Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4Adesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3A4Arflag=false
+  }
+};
   var CHEM103TraditionalPlan2B3A4Bflag = false;
   var CHEM103TraditionalPlan2B3A4Brflag = false;
  var CHEM103TraditionalPlan2B3A4BTime = new Date().getTime();
@@ -21113,6 +27001,1179 @@ ProgramTechnicalElectiveTraditionalPlan2B3A4B3Time = currentTime;
      ProgramTechnicalElectiveTraditionalPlan2B3A4B3element.classList.add("PROG");
      that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3A4B3");
       ProgramTechnicalElectiveTraditionalPlan2B3A4B3flag=false
+  }
+};
+$scope.CHEM103TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("CHEM103TraditionalPlan2B3A4Bdesc");
+ if (!CHEM103TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM103TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM103TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.ENGG100TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("ENGG100TraditionalPlan2B3A4Bdesc");
+ if (!ENGG100TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG100TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG100TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.ENGG130TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("ENGG130TraditionalPlan2B3A4Bdesc");
+ if (!ENGG130TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG130TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG130TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.ENGL199TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("ENGL199TraditionalPlan2B3A4Bdesc");
+ if (!ENGL199TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGL199TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGL199TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MATH100TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MATH100TraditionalPlan2B3A4Bdesc");
+ if (!MATH100TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH100TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH100TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.PHYS130TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("PHYS130TraditionalPlan2B3A4Bdesc");
+ if (!PHYS130TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      PHYS130TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      PHYS130TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.CHEM105TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("CHEM105TraditionalPlan2B3A4Bdesc");
+ if (!CHEM105TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM105TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM105TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.ENCMP100TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("ENCMP100TraditionalPlan2B3A4Bdesc");
+ if (!ENCMP100TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENCMP100TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENCMP100TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.ENGG160TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("ENGG160TraditionalPlan2B3A4Bdesc");
+ if (!ENGG160TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG160TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG160TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.ENPH131TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("ENPH131TraditionalPlan2B3A4Bdesc");
+ if (!ENPH131TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENPH131TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENPH131TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MATH101TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MATH101TraditionalPlan2B3A4Bdesc");
+ if (!MATH101TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH101TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH101TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MATH102TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MATH102TraditionalPlan2B3A4Bdesc");
+ if (!MATH102TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH102TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH102TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.ECE209TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("ECE209TraditionalPlan2B3A4Bdesc");
+ if (!ECE209TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ECE209TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ECE209TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MATE202TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MATE202TraditionalPlan2B3A4Bdesc");
+ if (!MATE202TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATE202TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATE202TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MATH201TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MATH201TraditionalPlan2B3A4Bdesc");
+ if (!MATH201TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH201TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH201TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MECE230TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MECE230TraditionalPlan2B3A4Bdesc");
+ if (!MECE230TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE230TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE230TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MECE260TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MECE260TraditionalPlan2B3A4Bdesc");
+ if (!MECE260TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE260TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE260TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MECE265TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MECE265TraditionalPlan2B3A4Bdesc");
+ if (!MECE265TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE265TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE265TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.CIVE270TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("CIVE270TraditionalPlan2B3A4Bdesc");
+ if (!CIVE270TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CIVE270TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CIVE270TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MATH209TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MATH209TraditionalPlan2B3A4Bdesc");
+ if (!MATH209TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH209TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH209TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.STAT235TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("STAT235TraditionalPlan2B3A4Bdesc");
+ if (!STAT235TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      STAT235TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      STAT235TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.CHE243TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("CHE243TraditionalPlan2B3A4Bdesc");
+ if (!CHE243TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE243TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE243TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MECE200TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MECE200TraditionalPlan2B3A4Bdesc");
+ if (!MECE200TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE200TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE200TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MECE250TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MECE250TraditionalPlan2B3A4Bdesc");
+ if (!MECE250TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE250TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE250TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MATH300TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MATH300TraditionalPlan2B3A4Bdesc");
+ if (!MATH300TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH300TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH300TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MECE300TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MECE300TraditionalPlan2B3A4Bdesc");
+ if (!MECE300TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE300TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE300TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MECE301TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MECE301TraditionalPlan2B3A4Bdesc");
+ if (!MECE301TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE301TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE301TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MECE331TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MECE331TraditionalPlan2B3A4Bdesc");
+ if (!MECE331TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE331TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE331TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MECE371TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MECE371TraditionalPlan2B3A4Bdesc");
+ if (!MECE371TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE371TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE371TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MECE380TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MECE380TraditionalPlan2B3A4Bdesc");
+ if (!MECE380TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE380TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE380TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.ENGM310TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("ENGM310TraditionalPlan2B3A4Bdesc");
+ if (!ENGM310TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM310TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM310TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.ENGM401TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("ENGM401TraditionalPlan2B3A4Bdesc");
+ if (!ENGM401TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM401TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM401TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MECE340TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MECE340TraditionalPlan2B3A4Bdesc");
+ if (!MECE340TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE340TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE340TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MECE360TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MECE360TraditionalPlan2B3A4Bdesc");
+ if (!MECE360TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE360TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE360TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MECE362TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MECE362TraditionalPlan2B3A4Bdesc");
+ if (!MECE362TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE362TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE362TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MECE390TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MECE390TraditionalPlan2B3A4Bdesc");
+ if (!MECE390TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE390TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE390TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.ComplementaryElectiveTraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2B3A4Bdesc");
+ if (!ComplementaryElectiveTraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ComplementaryElectiveTraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ComplementaryElectiveTraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.CHE448TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("CHE448TraditionalPlan2B3A4Bdesc");
+ if (!CHE448TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE448TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE448TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MECE420TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MECE420TraditionalPlan2B3A4Bdesc");
+ if (!MECE420TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE420TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE420TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.ENGG400TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("ENGG400TraditionalPlan2B3A4Bdesc");
+ if (!ENGG400TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG400TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG400TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MECE403TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MECE403TraditionalPlan2B3A4Bdesc");
+ if (!MECE403TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE403TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE403TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MECE451TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MECE451TraditionalPlan2B3A4Bdesc");
+ if (!MECE451TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE451TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE451TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MECE460TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MECE460TraditionalPlan2B3A4Bdesc");
+ if (!MECE460TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE460TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE460TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4Bdesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.ENGG404TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("ENGG404TraditionalPlan2B3A4Bdesc");
+ if (!ENGG404TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG404TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG404TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MECE430TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MECE430TraditionalPlan2B3A4Bdesc");
+ if (!MECE430TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE430TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE430TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MECE480TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MECE480TraditionalPlan2B3A4Bdesc");
+ if (!MECE480TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE480TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE480TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.MECE463TraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("MECE463TraditionalPlan2B3A4Bdesc");
+ if (!MECE463TraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE463TraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE463TraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4Bdesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4Bdesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3A4BRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3A4Bdesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3A4Brflag=false
   }
 };
   var CHEM103TraditionalPlan2B3B4Aflag = false;
@@ -22855,6 +29916,1179 @@ ProgramTechnicalElectiveTraditionalPlan2B3B4A3Time = currentTime;
       ProgramTechnicalElectiveTraditionalPlan2B3B4A3flag=false
   }
 };
+$scope.CHEM103TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("CHEM103TraditionalPlan2B3B4Adesc");
+ if (!CHEM103TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM103TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM103TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.ENGG100TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("ENGG100TraditionalPlan2B3B4Adesc");
+ if (!ENGG100TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG100TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG100TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.ENGG130TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("ENGG130TraditionalPlan2B3B4Adesc");
+ if (!ENGG130TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG130TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG130TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.ENGL199TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("ENGL199TraditionalPlan2B3B4Adesc");
+ if (!ENGL199TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGL199TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGL199TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MATH100TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MATH100TraditionalPlan2B3B4Adesc");
+ if (!MATH100TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH100TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH100TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.PHYS130TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("PHYS130TraditionalPlan2B3B4Adesc");
+ if (!PHYS130TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      PHYS130TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      PHYS130TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.CHEM105TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("CHEM105TraditionalPlan2B3B4Adesc");
+ if (!CHEM105TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM105TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM105TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.ENCMP100TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("ENCMP100TraditionalPlan2B3B4Adesc");
+ if (!ENCMP100TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENCMP100TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENCMP100TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.ENGG160TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("ENGG160TraditionalPlan2B3B4Adesc");
+ if (!ENGG160TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG160TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG160TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.ENPH131TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("ENPH131TraditionalPlan2B3B4Adesc");
+ if (!ENPH131TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENPH131TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENPH131TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MATH101TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MATH101TraditionalPlan2B3B4Adesc");
+ if (!MATH101TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH101TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH101TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MATH102TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MATH102TraditionalPlan2B3B4Adesc");
+ if (!MATH102TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH102TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH102TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.ECE209TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("ECE209TraditionalPlan2B3B4Adesc");
+ if (!ECE209TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ECE209TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ECE209TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MATE202TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MATE202TraditionalPlan2B3B4Adesc");
+ if (!MATE202TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATE202TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATE202TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MATH201TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MATH201TraditionalPlan2B3B4Adesc");
+ if (!MATH201TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH201TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH201TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MECE230TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MECE230TraditionalPlan2B3B4Adesc");
+ if (!MECE230TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE230TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE230TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MECE260TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MECE260TraditionalPlan2B3B4Adesc");
+ if (!MECE260TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE260TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE260TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MECE265TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MECE265TraditionalPlan2B3B4Adesc");
+ if (!MECE265TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE265TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE265TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.CIVE270TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("CIVE270TraditionalPlan2B3B4Adesc");
+ if (!CIVE270TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CIVE270TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CIVE270TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MATH209TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MATH209TraditionalPlan2B3B4Adesc");
+ if (!MATH209TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH209TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH209TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.STAT235TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("STAT235TraditionalPlan2B3B4Adesc");
+ if (!STAT235TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      STAT235TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      STAT235TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.CHE243TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("CHE243TraditionalPlan2B3B4Adesc");
+ if (!CHE243TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE243TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE243TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MECE200TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MECE200TraditionalPlan2B3B4Adesc");
+ if (!MECE200TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE200TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE200TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MECE250TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MECE250TraditionalPlan2B3B4Adesc");
+ if (!MECE250TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE250TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE250TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.ENGM310TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("ENGM310TraditionalPlan2B3B4Adesc");
+ if (!ENGM310TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM310TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM310TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.ENGM401TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("ENGM401TraditionalPlan2B3B4Adesc");
+ if (!ENGM401TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM401TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM401TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MECE340TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MECE340TraditionalPlan2B3B4Adesc");
+ if (!MECE340TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE340TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE340TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MECE360TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MECE360TraditionalPlan2B3B4Adesc");
+ if (!MECE360TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE360TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE360TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MECE362TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MECE362TraditionalPlan2B3B4Adesc");
+ if (!MECE362TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE362TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE362TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MECE390TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MECE390TraditionalPlan2B3B4Adesc");
+ if (!MECE390TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE390TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE390TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.ComplementaryElectiveTraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2B3B4Adesc");
+ if (!ComplementaryElectiveTraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ComplementaryElectiveTraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ComplementaryElectiveTraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MATH300TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MATH300TraditionalPlan2B3B4Adesc");
+ if (!MATH300TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH300TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH300TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MECE300TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MECE300TraditionalPlan2B3B4Adesc");
+ if (!MECE300TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE300TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE300TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MECE301TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MECE301TraditionalPlan2B3B4Adesc");
+ if (!MECE301TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE301TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE301TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MECE331TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MECE331TraditionalPlan2B3B4Adesc");
+ if (!MECE331TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE331TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE331TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MECE371TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MECE371TraditionalPlan2B3B4Adesc");
+ if (!MECE371TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE371TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE371TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MECE380TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MECE380TraditionalPlan2B3B4Adesc");
+ if (!MECE380TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE380TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE380TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.ENGG404TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("ENGG404TraditionalPlan2B3B4Adesc");
+ if (!ENGG404TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG404TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG404TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MECE430TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MECE430TraditionalPlan2B3B4Adesc");
+ if (!MECE430TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE430TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE430TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MECE480TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MECE480TraditionalPlan2B3B4Adesc");
+ if (!MECE480TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE480TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE480TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MECE463TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MECE463TraditionalPlan2B3B4Adesc");
+ if (!MECE463TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE463TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE463TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4Adesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4Adesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4Adesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.CHE448TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("CHE448TraditionalPlan2B3B4Adesc");
+ if (!CHE448TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE448TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE448TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MECE420TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MECE420TraditionalPlan2B3B4Adesc");
+ if (!MECE420TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE420TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE420TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.ENGG400TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("ENGG400TraditionalPlan2B3B4Adesc");
+ if (!ENGG400TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG400TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG400TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MECE403TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MECE403TraditionalPlan2B3B4Adesc");
+ if (!MECE403TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE403TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE403TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MECE451TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MECE451TraditionalPlan2B3B4Adesc");
+ if (!MECE451TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE451TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE451TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.MECE460TraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("MECE460TraditionalPlan2B3B4Adesc");
+ if (!MECE460TraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE460TraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE460TraditionalPlan2B3B4Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4Adesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3B4Arflag=false
+  }
+};
   var CHEM103TraditionalPlan2B3B4Bflag = false;
   var CHEM103TraditionalPlan2B3B4Brflag = false;
  var CHEM103TraditionalPlan2B3B4BTime = new Date().getTime();
@@ -24593,6 +32827,1179 @@ ProgramTechnicalElectiveTraditionalPlan2B3B4B3Time = currentTime;
      ProgramTechnicalElectiveTraditionalPlan2B3B4B3element.classList.add("PROG");
      that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3B4B3");
       ProgramTechnicalElectiveTraditionalPlan2B3B4B3flag=false
+  }
+};
+$scope.CHEM103TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("CHEM103TraditionalPlan2B3B4Bdesc");
+ if (!CHEM103TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM103TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM103TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.ENGG100TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("ENGG100TraditionalPlan2B3B4Bdesc");
+ if (!ENGG100TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG100TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG100TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.ENGG130TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("ENGG130TraditionalPlan2B3B4Bdesc");
+ if (!ENGG130TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG130TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG130TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.ENGL199TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("ENGL199TraditionalPlan2B3B4Bdesc");
+ if (!ENGL199TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGL199TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGL199TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MATH100TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MATH100TraditionalPlan2B3B4Bdesc");
+ if (!MATH100TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH100TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH100TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.PHYS130TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("PHYS130TraditionalPlan2B3B4Bdesc");
+ if (!PHYS130TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      PHYS130TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      PHYS130TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.CHEM105TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("CHEM105TraditionalPlan2B3B4Bdesc");
+ if (!CHEM105TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM105TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM105TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.ENCMP100TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("ENCMP100TraditionalPlan2B3B4Bdesc");
+ if (!ENCMP100TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENCMP100TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENCMP100TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.ENGG160TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("ENGG160TraditionalPlan2B3B4Bdesc");
+ if (!ENGG160TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG160TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG160TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.ENPH131TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("ENPH131TraditionalPlan2B3B4Bdesc");
+ if (!ENPH131TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENPH131TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENPH131TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MATH101TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MATH101TraditionalPlan2B3B4Bdesc");
+ if (!MATH101TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH101TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH101TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MATH102TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MATH102TraditionalPlan2B3B4Bdesc");
+ if (!MATH102TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH102TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH102TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.ECE209TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("ECE209TraditionalPlan2B3B4Bdesc");
+ if (!ECE209TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ECE209TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ECE209TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MATE202TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MATE202TraditionalPlan2B3B4Bdesc");
+ if (!MATE202TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATE202TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATE202TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MATH201TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MATH201TraditionalPlan2B3B4Bdesc");
+ if (!MATH201TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH201TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH201TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MECE230TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MECE230TraditionalPlan2B3B4Bdesc");
+ if (!MECE230TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE230TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE230TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MECE260TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MECE260TraditionalPlan2B3B4Bdesc");
+ if (!MECE260TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE260TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE260TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MECE265TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MECE265TraditionalPlan2B3B4Bdesc");
+ if (!MECE265TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE265TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE265TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.CIVE270TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("CIVE270TraditionalPlan2B3B4Bdesc");
+ if (!CIVE270TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CIVE270TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CIVE270TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MATH209TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MATH209TraditionalPlan2B3B4Bdesc");
+ if (!MATH209TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH209TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH209TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.STAT235TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("STAT235TraditionalPlan2B3B4Bdesc");
+ if (!STAT235TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      STAT235TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      STAT235TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.CHE243TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("CHE243TraditionalPlan2B3B4Bdesc");
+ if (!CHE243TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE243TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE243TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MECE200TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MECE200TraditionalPlan2B3B4Bdesc");
+ if (!MECE200TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE200TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE200TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MECE250TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MECE250TraditionalPlan2B3B4Bdesc");
+ if (!MECE250TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE250TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE250TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.ENGM310TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("ENGM310TraditionalPlan2B3B4Bdesc");
+ if (!ENGM310TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM310TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM310TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.ENGM401TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("ENGM401TraditionalPlan2B3B4Bdesc");
+ if (!ENGM401TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM401TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM401TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MECE340TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MECE340TraditionalPlan2B3B4Bdesc");
+ if (!MECE340TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE340TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE340TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MECE360TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MECE360TraditionalPlan2B3B4Bdesc");
+ if (!MECE360TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE360TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE360TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MECE362TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MECE362TraditionalPlan2B3B4Bdesc");
+ if (!MECE362TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE362TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE362TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MECE390TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MECE390TraditionalPlan2B3B4Bdesc");
+ if (!MECE390TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE390TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE390TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.ComplementaryElectiveTraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveTraditionalPlan2B3B4Bdesc");
+ if (!ComplementaryElectiveTraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ComplementaryElectiveTraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ComplementaryElectiveTraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MATH300TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MATH300TraditionalPlan2B3B4Bdesc");
+ if (!MATH300TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH300TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH300TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MECE300TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MECE300TraditionalPlan2B3B4Bdesc");
+ if (!MECE300TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE300TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE300TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MECE301TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MECE301TraditionalPlan2B3B4Bdesc");
+ if (!MECE301TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE301TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE301TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MECE331TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MECE331TraditionalPlan2B3B4Bdesc");
+ if (!MECE331TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE331TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE331TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MECE371TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MECE371TraditionalPlan2B3B4Bdesc");
+ if (!MECE371TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE371TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE371TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MECE380TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MECE380TraditionalPlan2B3B4Bdesc");
+ if (!MECE380TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE380TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE380TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.CHE448TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("CHE448TraditionalPlan2B3B4Bdesc");
+ if (!CHE448TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE448TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE448TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MECE420TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MECE420TraditionalPlan2B3B4Bdesc");
+ if (!MECE420TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE420TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE420TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.ENGG400TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("ENGG400TraditionalPlan2B3B4Bdesc");
+ if (!ENGG400TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG400TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG400TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MECE403TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MECE403TraditionalPlan2B3B4Bdesc");
+ if (!MECE403TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE403TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE403TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MECE451TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MECE451TraditionalPlan2B3B4Bdesc");
+ if (!MECE451TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE451TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE451TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MECE460TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MECE460TraditionalPlan2B3B4Bdesc");
+ if (!MECE460TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE460TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE460TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4Bdesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.ENGG404TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("ENGG404TraditionalPlan2B3B4Bdesc");
+ if (!ENGG404TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG404TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG404TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MECE430TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MECE430TraditionalPlan2B3B4Bdesc");
+ if (!MECE430TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE430TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE430TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MECE480TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MECE480TraditionalPlan2B3B4Bdesc");
+ if (!MECE480TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE480TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE480TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.MECE463TraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("MECE463TraditionalPlan2B3B4Bdesc");
+ if (!MECE463TraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE463TraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE463TraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4Bdesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4Bdesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2B3B4BRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2B3B4Bdesc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2B3B4Brflag=false
   }
 };
   var CHEM103AlternatePlan3A4Aflag = false;
@@ -26361,6 +35768,1202 @@ MECE460AlternatePlan3A4ATime = currentTime;
      MECE460AlternatePlan3A4Aelement.classList.add("ENGINEERINGDESIGN");
      that.removeFromClicked("MECE460AlternatePlan3A4A");
       MECE460AlternatePlan3A4Aflag=false
+  }
+};
+$scope.CHEM103AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("CHEM103AlternatePlan3A4Adesc");
+ if (!CHEM103AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM103AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM103AlternatePlan3A4Arflag=false
+  }
+};
+$scope.ENGG100AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("ENGG100AlternatePlan3A4Adesc");
+ if (!ENGG100AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG100AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG100AlternatePlan3A4Arflag=false
+  }
+};
+$scope.ENGG130AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("ENGG130AlternatePlan3A4Adesc");
+ if (!ENGG130AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG130AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG130AlternatePlan3A4Arflag=false
+  }
+};
+$scope.ENGL199AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("ENGL199AlternatePlan3A4Adesc");
+ if (!ENGL199AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGL199AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGL199AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MATH100AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MATH100AlternatePlan3A4Adesc");
+ if (!MATH100AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH100AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH100AlternatePlan3A4Arflag=false
+  }
+};
+$scope.PHYS130AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("PHYS130AlternatePlan3A4Adesc");
+ if (!PHYS130AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      PHYS130AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      PHYS130AlternatePlan3A4Arflag=false
+  }
+};
+$scope.CHEM105AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("CHEM105AlternatePlan3A4Adesc");
+ if (!CHEM105AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM105AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM105AlternatePlan3A4Arflag=false
+  }
+};
+$scope.ENCMP100AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("ENCMP100AlternatePlan3A4Adesc");
+ if (!ENCMP100AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENCMP100AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENCMP100AlternatePlan3A4Arflag=false
+  }
+};
+$scope.ENGG160AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("ENGG160AlternatePlan3A4Adesc");
+ if (!ENGG160AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG160AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG160AlternatePlan3A4Arflag=false
+  }
+};
+$scope.ENPH131AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("ENPH131AlternatePlan3A4Adesc");
+ if (!ENPH131AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENPH131AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENPH131AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MATH101AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MATH101AlternatePlan3A4Adesc");
+ if (!MATH101AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH101AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH101AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MATH102AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MATH102AlternatePlan3A4Adesc");
+ if (!MATH102AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH102AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH102AlternatePlan3A4Arflag=false
+  }
+};
+$scope.ENGM310AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("ENGM310AlternatePlan3A4Adesc");
+ if (!ENGM310AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM310AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM310AlternatePlan3A4Arflag=false
+  }
+};
+$scope.ENGM401AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("ENGM401AlternatePlan3A4Adesc");
+ if (!ENGM401AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM401AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM401AlternatePlan3A4Arflag=false
+  }
+};
+$scope.ENGG404AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("ENGG404AlternatePlan3A4Adesc");
+ if (!ENGG404AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG404AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG404AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MATH201AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MATH201AlternatePlan3A4Adesc");
+ if (!MATH201AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH201AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH201AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MATH209AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MATH209AlternatePlan3A4Adesc");
+ if (!MATH209AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH209AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH209AlternatePlan3A4Arflag=false
+  }
+};
+$scope.ComplementaryElectiveAlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveAlternatePlan3A4Adesc");
+ if (!ComplementaryElectiveAlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ComplementaryElectiveAlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ComplementaryElectiveAlternatePlan3A4Arflag=false
+  }
+};
+$scope.ITSElectiveAlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("ITSElectiveAlternatePlan3A4Adesc");
+ if (!ITSElectiveAlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ITSElectiveAlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ITSElectiveAlternatePlan3A4Arflag=false
+  }
+};
+$scope.CIVE270AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("CIVE270AlternatePlan3A4Adesc");
+ if (!CIVE270AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CIVE270AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CIVE270AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MECE230AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MECE230AlternatePlan3A4Adesc");
+ if (!MECE230AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE230AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE230AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MECE260AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MECE260AlternatePlan3A4Adesc");
+ if (!MECE260AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE260AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE260AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MECE265AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MECE265AlternatePlan3A4Adesc");
+ if (!MECE265AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE265AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE265AlternatePlan3A4Arflag=false
+  }
+};
+$scope.STAT235AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("STAT235AlternatePlan3A4Adesc");
+ if (!STAT235AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      STAT235AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      STAT235AlternatePlan3A4Arflag=false
+  }
+};
+$scope.CHE243AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("CHE243AlternatePlan3A4Adesc");
+ if (!CHE243AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE243AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE243AlternatePlan3A4Arflag=false
+  }
+};
+$scope.ECE209AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("ECE209AlternatePlan3A4Adesc");
+ if (!ECE209AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ECE209AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ECE209AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MATE202AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MATE202AlternatePlan3A4Adesc");
+ if (!MATE202AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATE202AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATE202AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MECE200AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MECE200AlternatePlan3A4Adesc");
+ if (!MECE200AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE200AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE200AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MECE250AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MECE250AlternatePlan3A4Adesc");
+ if (!MECE250AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE250AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE250AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MATH300AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MATH300AlternatePlan3A4Adesc");
+ if (!MATH300AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH300AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH300AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MECE300AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MECE300AlternatePlan3A4Adesc");
+ if (!MECE300AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE300AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE300AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MECE301AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MECE301AlternatePlan3A4Adesc");
+ if (!MECE301AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE301AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE301AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MECE331AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MECE331AlternatePlan3A4Adesc");
+ if (!MECE331AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE331AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE331AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MECE371AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MECE371AlternatePlan3A4Adesc");
+ if (!MECE371AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE371AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE371AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MECE380AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MECE380AlternatePlan3A4Adesc");
+ if (!MECE380AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE380AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE380AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MECE340AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MECE340AlternatePlan3A4Adesc");
+ if (!MECE340AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE340AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE340AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MECE360AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MECE360AlternatePlan3A4Adesc");
+ if (!MECE360AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE360AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE360AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MECE362AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MECE362AlternatePlan3A4Adesc");
+ if (!MECE362AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE362AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE362AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MECE390AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MECE390AlternatePlan3A4Adesc");
+ if (!MECE390AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE390AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE390AlternatePlan3A4Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveAlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3A4Adesc");
+ if (!ProgramTechnicalElectiveAlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveAlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveAlternatePlan3A4Arflag=false
+  }
+};
+$scope.MECE430AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MECE430AlternatePlan3A4Adesc");
+ if (!MECE430AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE430AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE430AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MECE480AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MECE480AlternatePlan3A4Adesc");
+ if (!MECE480AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE480AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE480AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MECE463AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MECE463AlternatePlan3A4Adesc");
+ if (!MECE463AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE463AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE463AlternatePlan3A4Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveAlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3A4Adesc");
+ if (!ProgramTechnicalElectiveAlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveAlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveAlternatePlan3A4Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveAlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3A4Adesc");
+ if (!ProgramTechnicalElectiveAlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveAlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveAlternatePlan3A4Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveAlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveAlternatePlan3A4Adesc");
+ if (!ProgramTechnicalElectiveAlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveAlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveAlternatePlan3A4Arflag=false
+  }
+};
+$scope.CHE448AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("CHE448AlternatePlan3A4Adesc");
+ if (!CHE448AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE448AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE448AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MECE420AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MECE420AlternatePlan3A4Adesc");
+ if (!MECE420AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE420AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE420AlternatePlan3A4Arflag=false
+  }
+};
+$scope.ENGG400AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("ENGG400AlternatePlan3A4Adesc");
+ if (!ENGG400AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG400AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG400AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MECE403AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MECE403AlternatePlan3A4Adesc");
+ if (!MECE403AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE403AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE403AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MECE451AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MECE451AlternatePlan3A4Adesc");
+ if (!MECE451AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE451AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE451AlternatePlan3A4Arflag=false
+  }
+};
+$scope.MECE460AlternatePlan3A4ARCListener = function () {
+  var element = document.getElementById("MECE460AlternatePlan3A4Adesc");
+ if (!MECE460AlternatePlan3A4Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE460AlternatePlan3A4Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE460AlternatePlan3A4Arflag=false
   }
 };
   var CHEM103CoopPlan13Aflag = false;
@@ -28319,6 +38922,1340 @@ ITSElectiveCoopPlan13A0Time = currentTime;
       ITSElectiveCoopPlan13A0flag=false
   }
 };
+$scope.CHEM103CoopPlan13ARCListener = function () {
+  var element = document.getElementById("CHEM103CoopPlan13Adesc");
+ if (!CHEM103CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM103CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM103CoopPlan13Arflag=false
+  }
+};
+$scope.ENGG100CoopPlan13ARCListener = function () {
+  var element = document.getElementById("ENGG100CoopPlan13Adesc");
+ if (!ENGG100CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG100CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG100CoopPlan13Arflag=false
+  }
+};
+$scope.ENGG130CoopPlan13ARCListener = function () {
+  var element = document.getElementById("ENGG130CoopPlan13Adesc");
+ if (!ENGG130CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG130CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG130CoopPlan13Arflag=false
+  }
+};
+$scope.ENGL199CoopPlan13ARCListener = function () {
+  var element = document.getElementById("ENGL199CoopPlan13Adesc");
+ if (!ENGL199CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGL199CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGL199CoopPlan13Arflag=false
+  }
+};
+$scope.MATH100CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MATH100CoopPlan13Adesc");
+ if (!MATH100CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH100CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH100CoopPlan13Arflag=false
+  }
+};
+$scope.PHYS130CoopPlan13ARCListener = function () {
+  var element = document.getElementById("PHYS130CoopPlan13Adesc");
+ if (!PHYS130CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      PHYS130CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      PHYS130CoopPlan13Arflag=false
+  }
+};
+$scope.CHEM105CoopPlan13ARCListener = function () {
+  var element = document.getElementById("CHEM105CoopPlan13Adesc");
+ if (!CHEM105CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM105CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM105CoopPlan13Arflag=false
+  }
+};
+$scope.ENCMP100CoopPlan13ARCListener = function () {
+  var element = document.getElementById("ENCMP100CoopPlan13Adesc");
+ if (!ENCMP100CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENCMP100CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENCMP100CoopPlan13Arflag=false
+  }
+};
+$scope.ENGG160CoopPlan13ARCListener = function () {
+  var element = document.getElementById("ENGG160CoopPlan13Adesc");
+ if (!ENGG160CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG160CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG160CoopPlan13Arflag=false
+  }
+};
+$scope.ENPH131CoopPlan13ARCListener = function () {
+  var element = document.getElementById("ENPH131CoopPlan13Adesc");
+ if (!ENPH131CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENPH131CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENPH131CoopPlan13Arflag=false
+  }
+};
+$scope.MATH101CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MATH101CoopPlan13Adesc");
+ if (!MATH101CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH101CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH101CoopPlan13Arflag=false
+  }
+};
+$scope.MATH102CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MATH102CoopPlan13Adesc");
+ if (!MATH102CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH102CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH102CoopPlan13Arflag=false
+  }
+};
+$scope.CIVE270CoopPlan13ARCListener = function () {
+  var element = document.getElementById("CIVE270CoopPlan13Adesc");
+ if (!CIVE270CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CIVE270CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CIVE270CoopPlan13Arflag=false
+  }
+};
+$scope.ENGG299CoopPlan13ARCListener = function () {
+  var element = document.getElementById("ENGG299CoopPlan13Adesc");
+ if (!ENGG299CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG299CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG299CoopPlan13Arflag=false
+  }
+};
+$scope.MATH209CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MATH209CoopPlan13Adesc");
+ if (!MATH209CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH209CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH209CoopPlan13Arflag=false
+  }
+};
+$scope.MECE230CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MECE230CoopPlan13Adesc");
+ if (!MECE230CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE230CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE230CoopPlan13Arflag=false
+  }
+};
+$scope.MECE260CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MECE260CoopPlan13Adesc");
+ if (!MECE260CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE260CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE260CoopPlan13Arflag=false
+  }
+};
+$scope.MECE265CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MECE265CoopPlan13Adesc");
+ if (!MECE265CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE265CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE265CoopPlan13Arflag=false
+  }
+};
+$scope.STAT235CoopPlan13ARCListener = function () {
+  var element = document.getElementById("STAT235CoopPlan13Adesc");
+ if (!STAT235CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      STAT235CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      STAT235CoopPlan13Arflag=false
+  }
+};
+$scope.CHE243CoopPlan13ARCListener = function () {
+  var element = document.getElementById("CHE243CoopPlan13Adesc");
+ if (!CHE243CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE243CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE243CoopPlan13Arflag=false
+  }
+};
+$scope.ECE209CoopPlan13ARCListener = function () {
+  var element = document.getElementById("ECE209CoopPlan13Adesc");
+ if (!ECE209CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ECE209CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ECE209CoopPlan13Arflag=false
+  }
+};
+$scope.MATE202CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MATE202CoopPlan13Adesc");
+ if (!MATE202CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATE202CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATE202CoopPlan13Arflag=false
+  }
+};
+$scope.MATH201CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MATH201CoopPlan13Adesc");
+ if (!MATH201CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH201CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH201CoopPlan13Arflag=false
+  }
+};
+$scope.MECE200CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MECE200CoopPlan13Adesc");
+ if (!MECE200CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE200CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE200CoopPlan13Arflag=false
+  }
+};
+$scope.MECE250CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MECE250CoopPlan13Adesc");
+ if (!MECE250CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE250CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE250CoopPlan13Arflag=false
+  }
+};
+$scope.WKEXP901CoopPlan13ARCListener = function () {
+  var element = document.getElementById("WKEXP901CoopPlan13Adesc");
+ if (!WKEXP901CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP901CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP901CoopPlan13Arflag=false
+  }
+};
+$scope.WKEXP902CoopPlan13ARCListener = function () {
+  var element = document.getElementById("WKEXP902CoopPlan13Adesc");
+ if (!WKEXP902CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP902CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP902CoopPlan13Arflag=false
+  }
+};
+$scope.MATH300CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MATH300CoopPlan13Adesc");
+ if (!MATH300CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH300CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH300CoopPlan13Arflag=false
+  }
+};
+$scope.MECE300CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MECE300CoopPlan13Adesc");
+ if (!MECE300CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE300CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE300CoopPlan13Arflag=false
+  }
+};
+$scope.MECE301CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MECE301CoopPlan13Adesc");
+ if (!MECE301CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE301CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE301CoopPlan13Arflag=false
+  }
+};
+$scope.MECE331CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MECE331CoopPlan13Adesc");
+ if (!MECE331CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE331CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE331CoopPlan13Arflag=false
+  }
+};
+$scope.MECE371CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MECE371CoopPlan13Adesc");
+ if (!MECE371CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE371CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE371CoopPlan13Arflag=false
+  }
+};
+$scope.MECE380CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MECE380CoopPlan13Adesc");
+ if (!MECE380CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE380CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE380CoopPlan13Arflag=false
+  }
+};
+$scope.WKEXP903CoopPlan13ARCListener = function () {
+  var element = document.getElementById("WKEXP903CoopPlan13Adesc");
+ if (!WKEXP903CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP903CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP903CoopPlan13Arflag=false
+  }
+};
+$scope.WKEXP904CoopPlan13ARCListener = function () {
+  var element = document.getElementById("WKEXP904CoopPlan13Adesc");
+ if (!WKEXP904CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP904CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP904CoopPlan13Arflag=false
+  }
+};
+$scope.ENGM310CoopPlan13ARCListener = function () {
+  var element = document.getElementById("ENGM310CoopPlan13Adesc");
+ if (!ENGM310CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM310CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM310CoopPlan13Arflag=false
+  }
+};
+$scope.ENGM401CoopPlan13ARCListener = function () {
+  var element = document.getElementById("ENGM401CoopPlan13Adesc");
+ if (!ENGM401CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM401CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM401CoopPlan13Arflag=false
+  }
+};
+$scope.MECE340CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MECE340CoopPlan13Adesc");
+ if (!MECE340CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE340CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE340CoopPlan13Arflag=false
+  }
+};
+$scope.MECE360CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MECE360CoopPlan13Adesc");
+ if (!MECE360CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE360CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE360CoopPlan13Arflag=false
+  }
+};
+$scope.MECE362CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MECE362CoopPlan13Adesc");
+ if (!MECE362CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE362CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE362CoopPlan13Arflag=false
+  }
+};
+$scope.MECE390CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MECE390CoopPlan13Adesc");
+ if (!MECE390CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE390CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE390CoopPlan13Arflag=false
+  }
+};
+$scope.ComplementaryElectiveCoopPlan13ARCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveCoopPlan13Adesc");
+ if (!ComplementaryElectiveCoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ComplementaryElectiveCoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ComplementaryElectiveCoopPlan13Arflag=false
+  }
+};
+$scope.ENGG404CoopPlan13ARCListener = function () {
+  var element = document.getElementById("ENGG404CoopPlan13Adesc");
+ if (!ENGG404CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG404CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG404CoopPlan13Arflag=false
+  }
+};
+$scope.MECE430CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MECE430CoopPlan13Adesc");
+ if (!MECE430CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE430CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE430CoopPlan13Arflag=false
+  }
+};
+$scope.MECE480CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MECE480CoopPlan13Adesc");
+ if (!MECE480CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE480CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE480CoopPlan13Arflag=false
+  }
+};
+$scope.MECE463CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MECE463CoopPlan13Adesc");
+ if (!MECE463CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE463CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE463CoopPlan13Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan13ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13Adesc");
+ if (!ProgramTechnicalElectiveCoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveCoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveCoopPlan13Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan13ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13Adesc");
+ if (!ProgramTechnicalElectiveCoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveCoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveCoopPlan13Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan13ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13Adesc");
+ if (!ProgramTechnicalElectiveCoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveCoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveCoopPlan13Arflag=false
+  }
+};
+$scope.WKEXP905CoopPlan13ARCListener = function () {
+  var element = document.getElementById("WKEXP905CoopPlan13Adesc");
+ if (!WKEXP905CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP905CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP905CoopPlan13Arflag=false
+  }
+};
+$scope.CHE448CoopPlan13ARCListener = function () {
+  var element = document.getElementById("CHE448CoopPlan13Adesc");
+ if (!CHE448CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE448CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE448CoopPlan13Arflag=false
+  }
+};
+$scope.MECE420CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MECE420CoopPlan13Adesc");
+ if (!MECE420CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE420CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE420CoopPlan13Arflag=false
+  }
+};
+$scope.ENGG400CoopPlan13ARCListener = function () {
+  var element = document.getElementById("ENGG400CoopPlan13Adesc");
+ if (!ENGG400CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG400CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG400CoopPlan13Arflag=false
+  }
+};
+$scope.MECE403CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MECE403CoopPlan13Adesc");
+ if (!MECE403CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE403CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE403CoopPlan13Arflag=false
+  }
+};
+$scope.MECE451CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MECE451CoopPlan13Adesc");
+ if (!MECE451CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE451CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE451CoopPlan13Arflag=false
+  }
+};
+$scope.MECE460CoopPlan13ARCListener = function () {
+  var element = document.getElementById("MECE460CoopPlan13Adesc");
+ if (!MECE460CoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE460CoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE460CoopPlan13Arflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan13ARCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13Adesc");
+ if (!ProgramTechnicalElectiveCoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveCoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveCoopPlan13Arflag=false
+  }
+};
+$scope.ITSElectiveCoopPlan13ARCListener = function () {
+  var element = document.getElementById("ITSElectiveCoopPlan13Adesc");
+ if (!ITSElectiveCoopPlan13Arflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ITSElectiveCoopPlan13Arflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ITSElectiveCoopPlan13Arflag=false
+  }
+};
   var CHEM103CoopPlan13Bflag = false;
   var CHEM103CoopPlan13Brflag = false;
  var CHEM103CoopPlan13BTime = new Date().getTime();
@@ -30275,6 +42212,1340 @@ ITSElectiveCoopPlan13B0Time = currentTime;
       ITSElectiveCoopPlan13B0flag=false
   }
 };
+$scope.CHEM103CoopPlan13BRCListener = function () {
+  var element = document.getElementById("CHEM103CoopPlan13Bdesc");
+ if (!CHEM103CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM103CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM103CoopPlan13Brflag=false
+  }
+};
+$scope.ENGG100CoopPlan13BRCListener = function () {
+  var element = document.getElementById("ENGG100CoopPlan13Bdesc");
+ if (!ENGG100CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG100CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG100CoopPlan13Brflag=false
+  }
+};
+$scope.ENGG130CoopPlan13BRCListener = function () {
+  var element = document.getElementById("ENGG130CoopPlan13Bdesc");
+ if (!ENGG130CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG130CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG130CoopPlan13Brflag=false
+  }
+};
+$scope.ENGL199CoopPlan13BRCListener = function () {
+  var element = document.getElementById("ENGL199CoopPlan13Bdesc");
+ if (!ENGL199CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGL199CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGL199CoopPlan13Brflag=false
+  }
+};
+$scope.MATH100CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MATH100CoopPlan13Bdesc");
+ if (!MATH100CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH100CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH100CoopPlan13Brflag=false
+  }
+};
+$scope.PHYS130CoopPlan13BRCListener = function () {
+  var element = document.getElementById("PHYS130CoopPlan13Bdesc");
+ if (!PHYS130CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      PHYS130CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      PHYS130CoopPlan13Brflag=false
+  }
+};
+$scope.CHEM105CoopPlan13BRCListener = function () {
+  var element = document.getElementById("CHEM105CoopPlan13Bdesc");
+ if (!CHEM105CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM105CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM105CoopPlan13Brflag=false
+  }
+};
+$scope.ENCMP100CoopPlan13BRCListener = function () {
+  var element = document.getElementById("ENCMP100CoopPlan13Bdesc");
+ if (!ENCMP100CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENCMP100CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENCMP100CoopPlan13Brflag=false
+  }
+};
+$scope.ENGG160CoopPlan13BRCListener = function () {
+  var element = document.getElementById("ENGG160CoopPlan13Bdesc");
+ if (!ENGG160CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG160CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG160CoopPlan13Brflag=false
+  }
+};
+$scope.ENPH131CoopPlan13BRCListener = function () {
+  var element = document.getElementById("ENPH131CoopPlan13Bdesc");
+ if (!ENPH131CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENPH131CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENPH131CoopPlan13Brflag=false
+  }
+};
+$scope.MATH101CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MATH101CoopPlan13Bdesc");
+ if (!MATH101CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH101CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH101CoopPlan13Brflag=false
+  }
+};
+$scope.MATH102CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MATH102CoopPlan13Bdesc");
+ if (!MATH102CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH102CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH102CoopPlan13Brflag=false
+  }
+};
+$scope.CIVE270CoopPlan13BRCListener = function () {
+  var element = document.getElementById("CIVE270CoopPlan13Bdesc");
+ if (!CIVE270CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CIVE270CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CIVE270CoopPlan13Brflag=false
+  }
+};
+$scope.ENGG299CoopPlan13BRCListener = function () {
+  var element = document.getElementById("ENGG299CoopPlan13Bdesc");
+ if (!ENGG299CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG299CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG299CoopPlan13Brflag=false
+  }
+};
+$scope.MATH209CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MATH209CoopPlan13Bdesc");
+ if (!MATH209CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH209CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH209CoopPlan13Brflag=false
+  }
+};
+$scope.MECE230CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MECE230CoopPlan13Bdesc");
+ if (!MECE230CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE230CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE230CoopPlan13Brflag=false
+  }
+};
+$scope.MECE260CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MECE260CoopPlan13Bdesc");
+ if (!MECE260CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE260CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE260CoopPlan13Brflag=false
+  }
+};
+$scope.MECE265CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MECE265CoopPlan13Bdesc");
+ if (!MECE265CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE265CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE265CoopPlan13Brflag=false
+  }
+};
+$scope.STAT235CoopPlan13BRCListener = function () {
+  var element = document.getElementById("STAT235CoopPlan13Bdesc");
+ if (!STAT235CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      STAT235CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      STAT235CoopPlan13Brflag=false
+  }
+};
+$scope.CHE243CoopPlan13BRCListener = function () {
+  var element = document.getElementById("CHE243CoopPlan13Bdesc");
+ if (!CHE243CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE243CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE243CoopPlan13Brflag=false
+  }
+};
+$scope.ECE209CoopPlan13BRCListener = function () {
+  var element = document.getElementById("ECE209CoopPlan13Bdesc");
+ if (!ECE209CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ECE209CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ECE209CoopPlan13Brflag=false
+  }
+};
+$scope.MATE202CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MATE202CoopPlan13Bdesc");
+ if (!MATE202CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATE202CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATE202CoopPlan13Brflag=false
+  }
+};
+$scope.MATH201CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MATH201CoopPlan13Bdesc");
+ if (!MATH201CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH201CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH201CoopPlan13Brflag=false
+  }
+};
+$scope.MECE200CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MECE200CoopPlan13Bdesc");
+ if (!MECE200CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE200CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE200CoopPlan13Brflag=false
+  }
+};
+$scope.MECE250CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MECE250CoopPlan13Bdesc");
+ if (!MECE250CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE250CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE250CoopPlan13Brflag=false
+  }
+};
+$scope.WKEXP901CoopPlan13BRCListener = function () {
+  var element = document.getElementById("WKEXP901CoopPlan13Bdesc");
+ if (!WKEXP901CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP901CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP901CoopPlan13Brflag=false
+  }
+};
+$scope.WKEXP902CoopPlan13BRCListener = function () {
+  var element = document.getElementById("WKEXP902CoopPlan13Bdesc");
+ if (!WKEXP902CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP902CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP902CoopPlan13Brflag=false
+  }
+};
+$scope.ENGM310CoopPlan13BRCListener = function () {
+  var element = document.getElementById("ENGM310CoopPlan13Bdesc");
+ if (!ENGM310CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM310CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM310CoopPlan13Brflag=false
+  }
+};
+$scope.ENGM401CoopPlan13BRCListener = function () {
+  var element = document.getElementById("ENGM401CoopPlan13Bdesc");
+ if (!ENGM401CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM401CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM401CoopPlan13Brflag=false
+  }
+};
+$scope.MECE340CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MECE340CoopPlan13Bdesc");
+ if (!MECE340CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE340CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE340CoopPlan13Brflag=false
+  }
+};
+$scope.MECE360CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MECE360CoopPlan13Bdesc");
+ if (!MECE360CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE360CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE360CoopPlan13Brflag=false
+  }
+};
+$scope.MECE362CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MECE362CoopPlan13Bdesc");
+ if (!MECE362CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE362CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE362CoopPlan13Brflag=false
+  }
+};
+$scope.MECE390CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MECE390CoopPlan13Bdesc");
+ if (!MECE390CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE390CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE390CoopPlan13Brflag=false
+  }
+};
+$scope.ComplementaryElectiveCoopPlan13BRCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveCoopPlan13Bdesc");
+ if (!ComplementaryElectiveCoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ComplementaryElectiveCoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ComplementaryElectiveCoopPlan13Brflag=false
+  }
+};
+$scope.WKEXP903CoopPlan13BRCListener = function () {
+  var element = document.getElementById("WKEXP903CoopPlan13Bdesc");
+ if (!WKEXP903CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP903CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP903CoopPlan13Brflag=false
+  }
+};
+$scope.WKEXP904CoopPlan13BRCListener = function () {
+  var element = document.getElementById("WKEXP904CoopPlan13Bdesc");
+ if (!WKEXP904CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP904CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP904CoopPlan13Brflag=false
+  }
+};
+$scope.MATH300CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MATH300CoopPlan13Bdesc");
+ if (!MATH300CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH300CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH300CoopPlan13Brflag=false
+  }
+};
+$scope.MECE300CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MECE300CoopPlan13Bdesc");
+ if (!MECE300CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE300CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE300CoopPlan13Brflag=false
+  }
+};
+$scope.MECE301CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MECE301CoopPlan13Bdesc");
+ if (!MECE301CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE301CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE301CoopPlan13Brflag=false
+  }
+};
+$scope.MECE331CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MECE331CoopPlan13Bdesc");
+ if (!MECE331CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE331CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE331CoopPlan13Brflag=false
+  }
+};
+$scope.MECE371CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MECE371CoopPlan13Bdesc");
+ if (!MECE371CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE371CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE371CoopPlan13Brflag=false
+  }
+};
+$scope.MECE380CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MECE380CoopPlan13Bdesc");
+ if (!MECE380CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE380CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE380CoopPlan13Brflag=false
+  }
+};
+$scope.ENGG404CoopPlan13BRCListener = function () {
+  var element = document.getElementById("ENGG404CoopPlan13Bdesc");
+ if (!ENGG404CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG404CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG404CoopPlan13Brflag=false
+  }
+};
+$scope.MECE430CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MECE430CoopPlan13Bdesc");
+ if (!MECE430CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE430CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE430CoopPlan13Brflag=false
+  }
+};
+$scope.MECE480CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MECE480CoopPlan13Bdesc");
+ if (!MECE480CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE480CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE480CoopPlan13Brflag=false
+  }
+};
+$scope.MECE463CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MECE463CoopPlan13Bdesc");
+ if (!MECE463CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE463CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE463CoopPlan13Brflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan13BRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13Bdesc");
+ if (!ProgramTechnicalElectiveCoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveCoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveCoopPlan13Brflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan13BRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13Bdesc");
+ if (!ProgramTechnicalElectiveCoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveCoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveCoopPlan13Brflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan13BRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13Bdesc");
+ if (!ProgramTechnicalElectiveCoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveCoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveCoopPlan13Brflag=false
+  }
+};
+$scope.WKEXP905CoopPlan13BRCListener = function () {
+  var element = document.getElementById("WKEXP905CoopPlan13Bdesc");
+ if (!WKEXP905CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP905CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP905CoopPlan13Brflag=false
+  }
+};
+$scope.CHE448CoopPlan13BRCListener = function () {
+  var element = document.getElementById("CHE448CoopPlan13Bdesc");
+ if (!CHE448CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE448CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE448CoopPlan13Brflag=false
+  }
+};
+$scope.MECE420CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MECE420CoopPlan13Bdesc");
+ if (!MECE420CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE420CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE420CoopPlan13Brflag=false
+  }
+};
+$scope.ENGG400CoopPlan13BRCListener = function () {
+  var element = document.getElementById("ENGG400CoopPlan13Bdesc");
+ if (!ENGG400CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG400CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG400CoopPlan13Brflag=false
+  }
+};
+$scope.MECE403CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MECE403CoopPlan13Bdesc");
+ if (!MECE403CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE403CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE403CoopPlan13Brflag=false
+  }
+};
+$scope.MECE451CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MECE451CoopPlan13Bdesc");
+ if (!MECE451CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE451CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE451CoopPlan13Brflag=false
+  }
+};
+$scope.MECE460CoopPlan13BRCListener = function () {
+  var element = document.getElementById("MECE460CoopPlan13Bdesc");
+ if (!MECE460CoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE460CoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE460CoopPlan13Brflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan13BRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan13Bdesc");
+ if (!ProgramTechnicalElectiveCoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveCoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveCoopPlan13Brflag=false
+  }
+};
+$scope.ITSElectiveCoopPlan13BRCListener = function () {
+  var element = document.getElementById("ITSElectiveCoopPlan13Bdesc");
+ if (!ITSElectiveCoopPlan13Brflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ITSElectiveCoopPlan13Brflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ITSElectiveCoopPlan13Brflag=false
+  }
+};
   var CHEM103CoopPlan2flag = false;
   var CHEM103CoopPlan2rflag = false;
  var CHEM103CoopPlan2Time = new Date().getTime();
@@ -32229,6 +45500,1340 @@ ProgramTechnicalElectiveCoopPlan23Time = currentTime;
      ProgramTechnicalElectiveCoopPlan23element.classList.add("PROG");
      that.removeFromClicked("ProgramTechnicalElectiveCoopPlan23");
       ProgramTechnicalElectiveCoopPlan23flag=false
+  }
+};
+$scope.CHEM103CoopPlan2RCListener = function () {
+  var element = document.getElementById("CHEM103CoopPlan2desc");
+ if (!CHEM103CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM103CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM103CoopPlan2rflag=false
+  }
+};
+$scope.ENGG100CoopPlan2RCListener = function () {
+  var element = document.getElementById("ENGG100CoopPlan2desc");
+ if (!ENGG100CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG100CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG100CoopPlan2rflag=false
+  }
+};
+$scope.ENGG130CoopPlan2RCListener = function () {
+  var element = document.getElementById("ENGG130CoopPlan2desc");
+ if (!ENGG130CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG130CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG130CoopPlan2rflag=false
+  }
+};
+$scope.ENGL199CoopPlan2RCListener = function () {
+  var element = document.getElementById("ENGL199CoopPlan2desc");
+ if (!ENGL199CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGL199CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGL199CoopPlan2rflag=false
+  }
+};
+$scope.MATH100CoopPlan2RCListener = function () {
+  var element = document.getElementById("MATH100CoopPlan2desc");
+ if (!MATH100CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH100CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH100CoopPlan2rflag=false
+  }
+};
+$scope.PHYS130CoopPlan2RCListener = function () {
+  var element = document.getElementById("PHYS130CoopPlan2desc");
+ if (!PHYS130CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      PHYS130CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      PHYS130CoopPlan2rflag=false
+  }
+};
+$scope.CHEM105CoopPlan2RCListener = function () {
+  var element = document.getElementById("CHEM105CoopPlan2desc");
+ if (!CHEM105CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM105CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM105CoopPlan2rflag=false
+  }
+};
+$scope.ENCMP100CoopPlan2RCListener = function () {
+  var element = document.getElementById("ENCMP100CoopPlan2desc");
+ if (!ENCMP100CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENCMP100CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENCMP100CoopPlan2rflag=false
+  }
+};
+$scope.ENGG160CoopPlan2RCListener = function () {
+  var element = document.getElementById("ENGG160CoopPlan2desc");
+ if (!ENGG160CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG160CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG160CoopPlan2rflag=false
+  }
+};
+$scope.ENPH131CoopPlan2RCListener = function () {
+  var element = document.getElementById("ENPH131CoopPlan2desc");
+ if (!ENPH131CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENPH131CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENPH131CoopPlan2rflag=false
+  }
+};
+$scope.MATH101CoopPlan2RCListener = function () {
+  var element = document.getElementById("MATH101CoopPlan2desc");
+ if (!MATH101CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH101CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH101CoopPlan2rflag=false
+  }
+};
+$scope.MATH102CoopPlan2RCListener = function () {
+  var element = document.getElementById("MATH102CoopPlan2desc");
+ if (!MATH102CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH102CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH102CoopPlan2rflag=false
+  }
+};
+$scope.CHE243CoopPlan2RCListener = function () {
+  var element = document.getElementById("CHE243CoopPlan2desc");
+ if (!CHE243CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE243CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE243CoopPlan2rflag=false
+  }
+};
+$scope.CIVE270CoopPlan2RCListener = function () {
+  var element = document.getElementById("CIVE270CoopPlan2desc");
+ if (!CIVE270CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CIVE270CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CIVE270CoopPlan2rflag=false
+  }
+};
+$scope.ENGG299CoopPlan2RCListener = function () {
+  var element = document.getElementById("ENGG299CoopPlan2desc");
+ if (!ENGG299CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG299CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG299CoopPlan2rflag=false
+  }
+};
+$scope.MATH209CoopPlan2RCListener = function () {
+  var element = document.getElementById("MATH209CoopPlan2desc");
+ if (!MATH209CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH209CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH209CoopPlan2rflag=false
+  }
+};
+$scope.MECE200CoopPlan2RCListener = function () {
+  var element = document.getElementById("MECE200CoopPlan2desc");
+ if (!MECE200CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE200CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE200CoopPlan2rflag=false
+  }
+};
+$scope.MECE250CoopPlan2RCListener = function () {
+  var element = document.getElementById("MECE250CoopPlan2desc");
+ if (!MECE250CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE250CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE250CoopPlan2rflag=false
+  }
+};
+$scope.STAT235CoopPlan2RCListener = function () {
+  var element = document.getElementById("STAT235CoopPlan2desc");
+ if (!STAT235CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      STAT235CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      STAT235CoopPlan2rflag=false
+  }
+};
+$scope.WKEXP901CoopPlan2RCListener = function () {
+  var element = document.getElementById("WKEXP901CoopPlan2desc");
+ if (!WKEXP901CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP901CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP901CoopPlan2rflag=false
+  }
+};
+$scope.ECE209CoopPlan2RCListener = function () {
+  var element = document.getElementById("ECE209CoopPlan2desc");
+ if (!ECE209CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ECE209CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ECE209CoopPlan2rflag=false
+  }
+};
+$scope.MATE202CoopPlan2RCListener = function () {
+  var element = document.getElementById("MATE202CoopPlan2desc");
+ if (!MATE202CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATE202CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATE202CoopPlan2rflag=false
+  }
+};
+$scope.MATH201CoopPlan2RCListener = function () {
+  var element = document.getElementById("MATH201CoopPlan2desc");
+ if (!MATH201CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH201CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH201CoopPlan2rflag=false
+  }
+};
+$scope.MECE230CoopPlan2RCListener = function () {
+  var element = document.getElementById("MECE230CoopPlan2desc");
+ if (!MECE230CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE230CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE230CoopPlan2rflag=false
+  }
+};
+$scope.MECE260CoopPlan2RCListener = function () {
+  var element = document.getElementById("MECE260CoopPlan2desc");
+ if (!MECE260CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE260CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE260CoopPlan2rflag=false
+  }
+};
+$scope.MECE265CoopPlan2RCListener = function () {
+  var element = document.getElementById("MECE265CoopPlan2desc");
+ if (!MECE265CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE265CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE265CoopPlan2rflag=false
+  }
+};
+$scope.MATH300CoopPlan2RCListener = function () {
+  var element = document.getElementById("MATH300CoopPlan2desc");
+ if (!MATH300CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH300CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH300CoopPlan2rflag=false
+  }
+};
+$scope.MECE300CoopPlan2RCListener = function () {
+  var element = document.getElementById("MECE300CoopPlan2desc");
+ if (!MECE300CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE300CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE300CoopPlan2rflag=false
+  }
+};
+$scope.MECE301CoopPlan2RCListener = function () {
+  var element = document.getElementById("MECE301CoopPlan2desc");
+ if (!MECE301CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE301CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE301CoopPlan2rflag=false
+  }
+};
+$scope.MECE331CoopPlan2RCListener = function () {
+  var element = document.getElementById("MECE331CoopPlan2desc");
+ if (!MECE331CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE331CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE331CoopPlan2rflag=false
+  }
+};
+$scope.MECE371CoopPlan2RCListener = function () {
+  var element = document.getElementById("MECE371CoopPlan2desc");
+ if (!MECE371CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE371CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE371CoopPlan2rflag=false
+  }
+};
+$scope.MECE380CoopPlan2RCListener = function () {
+  var element = document.getElementById("MECE380CoopPlan2desc");
+ if (!MECE380CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE380CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE380CoopPlan2rflag=false
+  }
+};
+$scope.WKEXP902CoopPlan2RCListener = function () {
+  var element = document.getElementById("WKEXP902CoopPlan2desc");
+ if (!WKEXP902CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP902CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP902CoopPlan2rflag=false
+  }
+};
+$scope.WKEXP903CoopPlan2RCListener = function () {
+  var element = document.getElementById("WKEXP903CoopPlan2desc");
+ if (!WKEXP903CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP903CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP903CoopPlan2rflag=false
+  }
+};
+$scope.ENGM310CoopPlan2RCListener = function () {
+  var element = document.getElementById("ENGM310CoopPlan2desc");
+ if (!ENGM310CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM310CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM310CoopPlan2rflag=false
+  }
+};
+$scope.ENGM401CoopPlan2RCListener = function () {
+  var element = document.getElementById("ENGM401CoopPlan2desc");
+ if (!ENGM401CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM401CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM401CoopPlan2rflag=false
+  }
+};
+$scope.MECE340CoopPlan2RCListener = function () {
+  var element = document.getElementById("MECE340CoopPlan2desc");
+ if (!MECE340CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE340CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE340CoopPlan2rflag=false
+  }
+};
+$scope.MECE360CoopPlan2RCListener = function () {
+  var element = document.getElementById("MECE360CoopPlan2desc");
+ if (!MECE360CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE360CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE360CoopPlan2rflag=false
+  }
+};
+$scope.MECE362CoopPlan2RCListener = function () {
+  var element = document.getElementById("MECE362CoopPlan2desc");
+ if (!MECE362CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE362CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE362CoopPlan2rflag=false
+  }
+};
+$scope.MECE390CoopPlan2RCListener = function () {
+  var element = document.getElementById("MECE390CoopPlan2desc");
+ if (!MECE390CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE390CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE390CoopPlan2rflag=false
+  }
+};
+$scope.ComplementaryElectiveCoopPlan2RCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveCoopPlan2desc");
+ if (!ComplementaryElectiveCoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ComplementaryElectiveCoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ComplementaryElectiveCoopPlan2rflag=false
+  }
+};
+$scope.WKEXP904CoopPlan2RCListener = function () {
+  var element = document.getElementById("WKEXP904CoopPlan2desc");
+ if (!WKEXP904CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP904CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP904CoopPlan2rflag=false
+  }
+};
+$scope.MECE403CoopPlan2RCListener = function () {
+  var element = document.getElementById("MECE403CoopPlan2desc");
+ if (!MECE403CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE403CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE403CoopPlan2rflag=false
+  }
+};
+$scope.MECE451CoopPlan2RCListener = function () {
+  var element = document.getElementById("MECE451CoopPlan2desc");
+ if (!MECE451CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE451CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE451CoopPlan2rflag=false
+  }
+};
+$scope.MECE460CoopPlan2RCListener = function () {
+  var element = document.getElementById("MECE460CoopPlan2desc");
+ if (!MECE460CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE460CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE460CoopPlan2rflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan2RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan2desc");
+ if (!ProgramTechnicalElectiveCoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveCoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveCoopPlan2rflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan2RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan2desc");
+ if (!ProgramTechnicalElectiveCoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveCoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveCoopPlan2rflag=false
+  }
+};
+$scope.ITSElectiveCoopPlan2RCListener = function () {
+  var element = document.getElementById("ITSElectiveCoopPlan2desc");
+ if (!ITSElectiveCoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ITSElectiveCoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ITSElectiveCoopPlan2rflag=false
+  }
+};
+$scope.WKEXP905CoopPlan2RCListener = function () {
+  var element = document.getElementById("WKEXP905CoopPlan2desc");
+ if (!WKEXP905CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP905CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP905CoopPlan2rflag=false
+  }
+};
+$scope.CHE448CoopPlan2RCListener = function () {
+  var element = document.getElementById("CHE448CoopPlan2desc");
+ if (!CHE448CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE448CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE448CoopPlan2rflag=false
+  }
+};
+$scope.MECE420CoopPlan2RCListener = function () {
+  var element = document.getElementById("MECE420CoopPlan2desc");
+ if (!MECE420CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE420CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE420CoopPlan2rflag=false
+  }
+};
+$scope.ENGG400CoopPlan2RCListener = function () {
+  var element = document.getElementById("ENGG400CoopPlan2desc");
+ if (!ENGG400CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG400CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG400CoopPlan2rflag=false
+  }
+};
+$scope.ENGG404CoopPlan2RCListener = function () {
+  var element = document.getElementById("ENGG404CoopPlan2desc");
+ if (!ENGG404CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG404CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG404CoopPlan2rflag=false
+  }
+};
+$scope.MECE430CoopPlan2RCListener = function () {
+  var element = document.getElementById("MECE430CoopPlan2desc");
+ if (!MECE430CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE430CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE430CoopPlan2rflag=false
+  }
+};
+$scope.MECE480CoopPlan2RCListener = function () {
+  var element = document.getElementById("MECE480CoopPlan2desc");
+ if (!MECE480CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE480CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE480CoopPlan2rflag=false
+  }
+};
+$scope.MECE463CoopPlan2RCListener = function () {
+  var element = document.getElementById("MECE463CoopPlan2desc");
+ if (!MECE463CoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE463CoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE463CoopPlan2rflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan2RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan2desc");
+ if (!ProgramTechnicalElectiveCoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveCoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveCoopPlan2rflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan2RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan2desc");
+ if (!ProgramTechnicalElectiveCoopPlan2rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveCoopPlan2rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveCoopPlan2rflag=false
   }
 };
   var CHEM103CoopPlan3Biomedicalflag = false;
@@ -34279,6 +48884,1409 @@ PHIL386CoopPlan3BiomedicalTime = currentTime;
       PHIL386CoopPlan3Biomedicalflag=false
   }
 };
+$scope.CHEM103CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("CHEM103CoopPlan3Biomedicaldesc");
+ if (!CHEM103CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM103CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM103CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.ENGG100CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("ENGG100CoopPlan3Biomedicaldesc");
+ if (!ENGG100CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG100CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG100CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.ENGG130CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("ENGG130CoopPlan3Biomedicaldesc");
+ if (!ENGG130CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG130CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG130CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.ENGL199CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("ENGL199CoopPlan3Biomedicaldesc");
+ if (!ENGL199CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGL199CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGL199CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MATH100CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MATH100CoopPlan3Biomedicaldesc");
+ if (!MATH100CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH100CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH100CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.PHYS130CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("PHYS130CoopPlan3Biomedicaldesc");
+ if (!PHYS130CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      PHYS130CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      PHYS130CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.CHEM105CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("CHEM105CoopPlan3Biomedicaldesc");
+ if (!CHEM105CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM105CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM105CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.ENCMP100CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("ENCMP100CoopPlan3Biomedicaldesc");
+ if (!ENCMP100CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENCMP100CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENCMP100CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.ENGG160CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("ENGG160CoopPlan3Biomedicaldesc");
+ if (!ENGG160CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG160CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG160CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.ENPH131CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("ENPH131CoopPlan3Biomedicaldesc");
+ if (!ENPH131CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENPH131CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENPH131CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MATH101CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MATH101CoopPlan3Biomedicaldesc");
+ if (!MATH101CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH101CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH101CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MATH102CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MATH102CoopPlan3Biomedicaldesc");
+ if (!MATH102CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH102CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH102CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.CIVE270CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("CIVE270CoopPlan3Biomedicaldesc");
+ if (!CIVE270CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CIVE270CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CIVE270CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.ENGG299CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("ENGG299CoopPlan3Biomedicaldesc");
+ if (!ENGG299CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG299CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG299CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MATH209CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MATH209CoopPlan3Biomedicaldesc");
+ if (!MATH209CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH209CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH209CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.STAT235CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("STAT235CoopPlan3Biomedicaldesc");
+ if (!STAT235CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      STAT235CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      STAT235CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.CHE243CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("CHE243CoopPlan3Biomedicaldesc");
+ if (!CHE243CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE243CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE243CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE200CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE200CoopPlan3Biomedicaldesc");
+ if (!MECE200CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE200CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE200CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE250CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE250CoopPlan3Biomedicaldesc");
+ if (!MECE250CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE250CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE250CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.ECE209CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("ECE209CoopPlan3Biomedicaldesc");
+ if (!ECE209CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ECE209CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ECE209CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MATE202CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MATE202CoopPlan3Biomedicaldesc");
+ if (!MATE202CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATE202CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATE202CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MATH201CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MATH201CoopPlan3Biomedicaldesc");
+ if (!MATH201CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH201CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH201CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE230CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE230CoopPlan3Biomedicaldesc");
+ if (!MECE230CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE230CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE230CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE260CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE260CoopPlan3Biomedicaldesc");
+ if (!MECE260CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE260CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE260CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE265CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE265CoopPlan3Biomedicaldesc");
+ if (!MECE265CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE265CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE265CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.WKEXP902CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("WKEXP902CoopPlan3Biomedicaldesc");
+ if (!WKEXP902CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP902CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP902CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.BME320CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("BME320CoopPlan3Biomedicaldesc");
+ if (!BME320CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      BME320CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      BME320CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.ENGM310CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("ENGM310CoopPlan3Biomedicaldesc");
+ if (!ENGM310CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM310CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM310CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.ENGM401CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("ENGM401CoopPlan3Biomedicaldesc");
+ if (!ENGM401CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM401CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM401CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE340CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE340CoopPlan3Biomedicaldesc");
+ if (!MECE340CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE340CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE340CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE360CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE360CoopPlan3Biomedicaldesc");
+ if (!MECE360CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE360CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE360CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE362CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE362CoopPlan3Biomedicaldesc");
+ if (!MECE362CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE362CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE362CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE390CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE390CoopPlan3Biomedicaldesc");
+ if (!MECE390CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE390CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE390CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.WKEXP903CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("WKEXP903CoopPlan3Biomedicaldesc");
+ if (!WKEXP903CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP903CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP903CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MATH300CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MATH300CoopPlan3Biomedicaldesc");
+ if (!MATH300CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH300CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH300CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE300CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE300CoopPlan3Biomedicaldesc");
+ if (!MECE300CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE300CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE300CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE301CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE301CoopPlan3Biomedicaldesc");
+ if (!MECE301CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE301CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE301CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE331CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE331CoopPlan3Biomedicaldesc");
+ if (!MECE331CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE331CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE331CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE371CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE371CoopPlan3Biomedicaldesc");
+ if (!MECE371CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE371CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE371CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE380CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE380CoopPlan3Biomedicaldesc");
+ if (!MECE380CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE380CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE380CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.BME321CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("BME321CoopPlan3Biomedicaldesc");
+ if (!BME321CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      BME321CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      BME321CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.ENGG404CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("ENGG404CoopPlan3Biomedicaldesc");
+ if (!ENGG404CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG404CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG404CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE563CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE563CoopPlan3Biomedicaldesc");
+ if (!MECE563CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE563CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE563CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.STAT337CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("STAT337CoopPlan3Biomedicaldesc");
+ if (!STAT337CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      STAT337CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      STAT337CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.ComplementaryElectiveCoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveCoopPlan3Biomedicaldesc");
+ if (!ComplementaryElectiveCoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ComplementaryElectiveCoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ComplementaryElectiveCoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedicaldesc");
+ if (!ProgramTechnicalElectiveCoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveCoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveCoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.WKEXP904CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("WKEXP904CoopPlan3Biomedicaldesc");
+ if (!WKEXP904CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP904CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP904CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.WKEXP905CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("WKEXP905CoopPlan3Biomedicaldesc");
+ if (!WKEXP905CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP905CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP905CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE430CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE430CoopPlan3Biomedicaldesc");
+ if (!MECE430CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE430CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE430CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE463CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE463CoopPlan3Biomedicaldesc");
+ if (!MECE463CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE463CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE463CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedicaldesc");
+ if (!ProgramTechnicalElectiveCoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveCoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveCoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan3Biomedicaldesc");
+ if (!ProgramTechnicalElectiveCoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveCoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveCoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.ITSElectiveCoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("ITSElectiveCoopPlan3Biomedicaldesc");
+ if (!ITSElectiveCoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ITSElectiveCoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ITSElectiveCoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.CHE448CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("CHE448CoopPlan3Biomedicaldesc");
+ if (!CHE448CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE448CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE448CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE420CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE420CoopPlan3Biomedicaldesc");
+ if (!MECE420CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE420CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE420CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.ENGG400CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("ENGG400CoopPlan3Biomedicaldesc");
+ if (!ENGG400CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG400CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG400CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE485CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE485CoopPlan3Biomedicaldesc");
+ if (!MECE485CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE485CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE485CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE403CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE403CoopPlan3Biomedicaldesc");
+ if (!MECE403CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE403CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE403CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE451CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE451CoopPlan3Biomedicaldesc");
+ if (!MECE451CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE451CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE451CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.MECE460CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("MECE460CoopPlan3Biomedicaldesc");
+ if (!MECE460CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE460CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE460CoopPlan3Biomedicalrflag=false
+  }
+};
+$scope.PHIL386CoopPlan3BiomedicalRCListener = function () {
+  var element = document.getElementById("PHIL386CoopPlan3Biomedicaldesc");
+ if (!PHIL386CoopPlan3Biomedicalrflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      PHIL386CoopPlan3Biomedicalrflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      PHIL386CoopPlan3Biomedicalrflag=false
+  }
+};
   var CHEM103CoopPlan4flag = false;
   var CHEM103CoopPlan4rflag = false;
  var CHEM103CoopPlan4Time = new Date().getTime();
@@ -36235,4 +52243,1349 @@ ITSElectiveCoopPlan40Time = currentTime;
       ITSElectiveCoopPlan40flag=false
   }
 };
+$scope.CHEM103CoopPlan4RCListener = function () {
+  var element = document.getElementById("CHEM103CoopPlan4desc");
+ if (!CHEM103CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM103CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM103CoopPlan4rflag=false
+  }
+};
+$scope.ENGG100CoopPlan4RCListener = function () {
+  var element = document.getElementById("ENGG100CoopPlan4desc");
+ if (!ENGG100CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG100CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG100CoopPlan4rflag=false
+  }
+};
+$scope.ENGG130CoopPlan4RCListener = function () {
+  var element = document.getElementById("ENGG130CoopPlan4desc");
+ if (!ENGG130CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG130CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG130CoopPlan4rflag=false
+  }
+};
+$scope.ENGL199CoopPlan4RCListener = function () {
+  var element = document.getElementById("ENGL199CoopPlan4desc");
+ if (!ENGL199CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGL199CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGL199CoopPlan4rflag=false
+  }
+};
+$scope.MATH100CoopPlan4RCListener = function () {
+  var element = document.getElementById("MATH100CoopPlan4desc");
+ if (!MATH100CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH100CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH100CoopPlan4rflag=false
+  }
+};
+$scope.PHYS130CoopPlan4RCListener = function () {
+  var element = document.getElementById("PHYS130CoopPlan4desc");
+ if (!PHYS130CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      PHYS130CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      PHYS130CoopPlan4rflag=false
+  }
+};
+$scope.CHEM105CoopPlan4RCListener = function () {
+  var element = document.getElementById("CHEM105CoopPlan4desc");
+ if (!CHEM105CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHEM105CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHEM105CoopPlan4rflag=false
+  }
+};
+$scope.ENCMP100CoopPlan4RCListener = function () {
+  var element = document.getElementById("ENCMP100CoopPlan4desc");
+ if (!ENCMP100CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENCMP100CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENCMP100CoopPlan4rflag=false
+  }
+};
+$scope.ENGG160CoopPlan4RCListener = function () {
+  var element = document.getElementById("ENGG160CoopPlan4desc");
+ if (!ENGG160CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG160CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG160CoopPlan4rflag=false
+  }
+};
+$scope.ENPH131CoopPlan4RCListener = function () {
+  var element = document.getElementById("ENPH131CoopPlan4desc");
+ if (!ENPH131CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENPH131CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENPH131CoopPlan4rflag=false
+  }
+};
+$scope.MATH101CoopPlan4RCListener = function () {
+  var element = document.getElementById("MATH101CoopPlan4desc");
+ if (!MATH101CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH101CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH101CoopPlan4rflag=false
+  }
+};
+$scope.MATH102CoopPlan4RCListener = function () {
+  var element = document.getElementById("MATH102CoopPlan4desc");
+ if (!MATH102CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH102CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH102CoopPlan4rflag=false
+  }
+};
+$scope.CIVE270CoopPlan4RCListener = function () {
+  var element = document.getElementById("CIVE270CoopPlan4desc");
+ if (!CIVE270CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CIVE270CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CIVE270CoopPlan4rflag=false
+  }
+};
+$scope.ENGG299CoopPlan4RCListener = function () {
+  var element = document.getElementById("ENGG299CoopPlan4desc");
+ if (!ENGG299CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG299CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG299CoopPlan4rflag=false
+  }
+};
+$scope.MATH209CoopPlan4RCListener = function () {
+  var element = document.getElementById("MATH209CoopPlan4desc");
+ if (!MATH209CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH209CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH209CoopPlan4rflag=false
+  }
+};
+$scope.STAT235CoopPlan4RCListener = function () {
+  var element = document.getElementById("STAT235CoopPlan4desc");
+ if (!STAT235CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      STAT235CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      STAT235CoopPlan4rflag=false
+  }
+};
+$scope.MECE230CoopPlan4RCListener = function () {
+  var element = document.getElementById("MECE230CoopPlan4desc");
+ if (!MECE230CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE230CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE230CoopPlan4rflag=false
+  }
+};
+$scope.MECE260CoopPlan4RCListener = function () {
+  var element = document.getElementById("MECE260CoopPlan4desc");
+ if (!MECE260CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE260CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE260CoopPlan4rflag=false
+  }
+};
+$scope.MECE265CoopPlan4RCListener = function () {
+  var element = document.getElementById("MECE265CoopPlan4desc");
+ if (!MECE265CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE265CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE265CoopPlan4rflag=false
+  }
+};
+$scope.ECE209CoopPlan4RCListener = function () {
+  var element = document.getElementById("ECE209CoopPlan4desc");
+ if (!ECE209CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ECE209CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ECE209CoopPlan4rflag=false
+  }
+};
+$scope.MATH201CoopPlan4RCListener = function () {
+  var element = document.getElementById("MATH201CoopPlan4desc");
+ if (!MATH201CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH201CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH201CoopPlan4rflag=false
+  }
+};
+$scope.CHE243CoopPlan4RCListener = function () {
+  var element = document.getElementById("CHE243CoopPlan4desc");
+ if (!CHE243CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE243CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE243CoopPlan4rflag=false
+  }
+};
+$scope.MATE202CoopPlan4RCListener = function () {
+  var element = document.getElementById("MATE202CoopPlan4desc");
+ if (!MATE202CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATE202CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATE202CoopPlan4rflag=false
+  }
+};
+$scope.MECE200CoopPlan4RCListener = function () {
+  var element = document.getElementById("MECE200CoopPlan4desc");
+ if (!MECE200CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE200CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE200CoopPlan4rflag=false
+  }
+};
+$scope.MECE250CoopPlan4RCListener = function () {
+  var element = document.getElementById("MECE250CoopPlan4desc");
+ if (!MECE250CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE250CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE250CoopPlan4rflag=false
+  }
+};
+$scope.MATH300CoopPlan4RCListener = function () {
+  var element = document.getElementById("MATH300CoopPlan4desc");
+ if (!MATH300CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MATH300CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MATH300CoopPlan4rflag=false
+  }
+};
+$scope.MECE300CoopPlan4RCListener = function () {
+  var element = document.getElementById("MECE300CoopPlan4desc");
+ if (!MECE300CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE300CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE300CoopPlan4rflag=false
+  }
+};
+$scope.MECE301CoopPlan4RCListener = function () {
+  var element = document.getElementById("MECE301CoopPlan4desc");
+ if (!MECE301CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE301CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE301CoopPlan4rflag=false
+  }
+};
+$scope.MECE331CoopPlan4RCListener = function () {
+  var element = document.getElementById("MECE331CoopPlan4desc");
+ if (!MECE331CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE331CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE331CoopPlan4rflag=false
+  }
+};
+$scope.MECE371CoopPlan4RCListener = function () {
+  var element = document.getElementById("MECE371CoopPlan4desc");
+ if (!MECE371CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE371CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE371CoopPlan4rflag=false
+  }
+};
+$scope.MECE380CoopPlan4RCListener = function () {
+  var element = document.getElementById("MECE380CoopPlan4desc");
+ if (!MECE380CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE380CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE380CoopPlan4rflag=false
+  }
+};
+$scope.WKEXP901CoopPlan4RCListener = function () {
+  var element = document.getElementById("WKEXP901CoopPlan4desc");
+ if (!WKEXP901CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP901CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP901CoopPlan4rflag=false
+  }
+};
+$scope.WKEXP902CoopPlan4RCListener = function () {
+  var element = document.getElementById("WKEXP902CoopPlan4desc");
+ if (!WKEXP902CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP902CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP902CoopPlan4rflag=false
+  }
+};
+$scope.ENGM310CoopPlan4RCListener = function () {
+  var element = document.getElementById("ENGM310CoopPlan4desc");
+ if (!ENGM310CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM310CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM310CoopPlan4rflag=false
+  }
+};
+$scope.ENGM401CoopPlan4RCListener = function () {
+  var element = document.getElementById("ENGM401CoopPlan4desc");
+ if (!ENGM401CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGM401CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGM401CoopPlan4rflag=false
+  }
+};
+$scope.MECE340CoopPlan4RCListener = function () {
+  var element = document.getElementById("MECE340CoopPlan4desc");
+ if (!MECE340CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE340CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE340CoopPlan4rflag=false
+  }
+};
+$scope.MECE360CoopPlan4RCListener = function () {
+  var element = document.getElementById("MECE360CoopPlan4desc");
+ if (!MECE360CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE360CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE360CoopPlan4rflag=false
+  }
+};
+$scope.MECE362CoopPlan4RCListener = function () {
+  var element = document.getElementById("MECE362CoopPlan4desc");
+ if (!MECE362CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE362CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE362CoopPlan4rflag=false
+  }
+};
+$scope.MECE390CoopPlan4RCListener = function () {
+  var element = document.getElementById("MECE390CoopPlan4desc");
+ if (!MECE390CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE390CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE390CoopPlan4rflag=false
+  }
+};
+$scope.ComplementaryElectiveCoopPlan4RCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveCoopPlan4desc");
+ if (!ComplementaryElectiveCoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ComplementaryElectiveCoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ComplementaryElectiveCoopPlan4rflag=false
+  }
+};
+$scope.WKEXP903CoopPlan4RCListener = function () {
+  var element = document.getElementById("WKEXP903CoopPlan4desc");
+ if (!WKEXP903CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP903CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP903CoopPlan4rflag=false
+  }
+};
+$scope.WKEXP904CoopPlan4RCListener = function () {
+  var element = document.getElementById("WKEXP904CoopPlan4desc");
+ if (!WKEXP904CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP904CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP904CoopPlan4rflag=false
+  }
+};
+$scope.WKEXP905CoopPlan4RCListener = function () {
+  var element = document.getElementById("WKEXP905CoopPlan4desc");
+ if (!WKEXP905CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      WKEXP905CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      WKEXP905CoopPlan4rflag=false
+  }
+};
+$scope.ENGG404CoopPlan4RCListener = function () {
+  var element = document.getElementById("ENGG404CoopPlan4desc");
+ if (!ENGG404CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG404CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG404CoopPlan4rflag=false
+  }
+};
+$scope.MECE430CoopPlan4RCListener = function () {
+  var element = document.getElementById("MECE430CoopPlan4desc");
+ if (!MECE430CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE430CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE430CoopPlan4rflag=false
+  }
+};
+$scope.MECE480CoopPlan4RCListener = function () {
+  var element = document.getElementById("MECE480CoopPlan4desc");
+ if (!MECE480CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE480CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE480CoopPlan4rflag=false
+  }
+};
+$scope.MECE463CoopPlan4RCListener = function () {
+  var element = document.getElementById("MECE463CoopPlan4desc");
+ if (!MECE463CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE463CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE463CoopPlan4rflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan4RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan4desc");
+ if (!ProgramTechnicalElectiveCoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveCoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveCoopPlan4rflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan4RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan4desc");
+ if (!ProgramTechnicalElectiveCoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveCoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveCoopPlan4rflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan4RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan4desc");
+ if (!ProgramTechnicalElectiveCoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveCoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveCoopPlan4rflag=false
+  }
+};
+$scope.CHE448CoopPlan4RCListener = function () {
+  var element = document.getElementById("CHE448CoopPlan4desc");
+ if (!CHE448CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      CHE448CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      CHE448CoopPlan4rflag=false
+  }
+};
+$scope.MECE420CoopPlan4RCListener = function () {
+  var element = document.getElementById("MECE420CoopPlan4desc");
+ if (!MECE420CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE420CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE420CoopPlan4rflag=false
+  }
+};
+$scope.ENGG400CoopPlan4RCListener = function () {
+  var element = document.getElementById("ENGG400CoopPlan4desc");
+ if (!ENGG400CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ENGG400CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ENGG400CoopPlan4rflag=false
+  }
+};
+$scope.MECE403CoopPlan4RCListener = function () {
+  var element = document.getElementById("MECE403CoopPlan4desc");
+ if (!MECE403CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE403CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE403CoopPlan4rflag=false
+  }
+};
+$scope.MECE451CoopPlan4RCListener = function () {
+  var element = document.getElementById("MECE451CoopPlan4desc");
+ if (!MECE451CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE451CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE451CoopPlan4rflag=false
+  }
+};
+$scope.MECE460CoopPlan4RCListener = function () {
+  var element = document.getElementById("MECE460CoopPlan4desc");
+ if (!MECE460CoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      MECE460CoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      MECE460CoopPlan4rflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveCoopPlan4RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveCoopPlan4desc");
+ if (!ProgramTechnicalElectiveCoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveCoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveCoopPlan4rflag=false
+  }
+};
+$scope.ITSElectiveCoopPlan4RCListener = function () {
+  var element = document.getElementById("ITSElectiveCoopPlan4desc");
+ if (!ITSElectiveCoopPlan4rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ITSElectiveCoopPlan4rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ITSElectiveCoopPlan4rflag=false
+  }
+};
 });
+app.directive('ngRightClick', function($parse) {
+    return function(scope, element, attrs) {
+        var fn = $parse(attrs.ngRightClick);
+        element.bind('contextmenu', function(event) {
+            scope.$apply(function() {
+                event.preventDefault();
+                fn(scope, {$event:event});
+            });
+        });
+    };
+    });

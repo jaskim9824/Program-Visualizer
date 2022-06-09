@@ -195,6 +195,39 @@ def placeClickListeners(courseList, controller, lineManager, plan):
         controller.write("      " +courseID+"flag=false\n")
         controller.write("  }\n};\n")
 
+def placeRightClickListeners(courseList, controller, plan):
+    formattedListener = "$scope.{courseName}RCListener = function () {{\n"
+    formattedElementGetter = "  var element = document.getElementById(\"{courseName}desc\");\n"
+    formattedClickIf = " if (!{courseName}rflag) {{\n"
+    whenNotClicked = """       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }\n"""
+    whenClicked = """       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }\n"""
+    for course in courseList:
+        courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan)
+        controller.write(formattedListener.format(courseName=courseID))
+        controller.write(formattedElementGetter.format(courseName=courseID))
+        controller.write(formattedClickIf.format(courseName=courseID))
+
+        controller.write(whenNotClicked)
+        controller.write("      " +courseID+"rflag=true\n")
+        controller.write("  }\n else {\n")
+
+        controller.write(whenClicked)
+        controller.write("      " +courseID+"rflag=false\n")
+        controller.write("  }\n};\n")
+
+
 # Function that creates a prerequesite line object in index.js
 # Parameters:
 #   start - element ID of starting course
