@@ -255,9 +255,10 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
     for course in termList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan)
         courseContClass = course.category.replace(" ", "")
+        orCase = course.calendar_print.lower().strip() == "or"
 
         # In the case of an OR case in a sequence
-        if course.calendar_print.lower().strip() == "or":
+        if orCase:
             courseContDiv = soup.new_tag("div", attrs={"class":"orcoursecontainer"})
         else:
             courseContDiv = soup.new_tag("div", attrs={"class":"coursecontainer"})
@@ -270,75 +271,51 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
             courseDisc = soup.new_tag("div", attrs={"id":courseID+"desc",
                                                     "class":"tooltiptextleft"})
 
-        # Constructing course div
+        # Constructing course div, check for special cases
         if course.name == "Complementary Elective":
             # Class allows formatting so words fit in course box
             courseID = courseID+str(compcounter)
-            courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip COMP", 
-                                               "id": courseID,
-                                               "ng-click":courseID+"Listener()",
-                                               "ng-right-click":courseID+"RCListener()"})
+            courseDiv = createCourseDiv(soup, courseID, "COMP", orCounter, orCase)
             compcounter += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
 
         elif course.name == "Program/Technical Elective":
             # Class allows formatting so words fit in course box
             courseID = courseID+str(progcounter)
-            courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip PROG", 
-                                               "id": courseID, 
-                                               "ng-click":courseID+"Listener()",
-                                               "ng-right-click":courseID+"RCListener()"})
+            courseDiv = createCourseDiv(soup, courseID, "PROG", orCounter, orCase)
             progcounter += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
 
         elif course.name == "ITS Elective":
             courseID = courseID+str(itscounter)
             # Class allows formatting so words fit in course box
-            courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip ITS", 
-                                                "id": courseID, 
-                                                "ng-click":courseID+"Listener()",
-                                                "ng-right-click":courseID+"RCListener()"})
+            courseDiv = createCourseDiv(soup, courseID, "ITS", orCounter, orCase)
             itscounter += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
 
         else:
             # This is a regular course. All information should be available
-            courseDiv = soup.new_tag("div",attrs= {"class":"course tooltip " + courseContClass, 
-                                                "id": courseID, 
-                                                "ng-click":courseID+"Listener()",
-                                                "ng-right-click":courseID+"RCListener()"})
-            if course.calendar_print.lower().strip() == "or":
-                if orCounter == 0:
-                    courseDiv = soup.new_tag("div", attrs={"class":"orcoursetop tooltip " + courseContClass,
-                                                "id": courseID,
-                                                "ng-click":courseID+"Listener()",
-                                                "ng-right-click":courseID+"RCListener()"})
-                else:
-                    courseDiv = soup.new_tag("div", attrs={"class":"orcoursebottom tooltip " + courseContClass,
-                                                "id": courseID,
-                                                "ng-click":courseID+"Listener()",
-                                                "ng-right-click":courseID+"RCListener()"})
+            courseDiv = createCourseDiv(soup, 
+                                        courseID, 
+                                        courseContClass, 
+                                        orCounter, 
+                                        orCase) 
             formatCourseDescriptionForRegular(soup, course, courseDisc)
 
-        courseHeader = soup.new_tag("h3", attrs={"class":"embed"})  # text appearing in course box (eg: CHEM 103)
+        # text appearing in course box (eg: CHEM 103)
+        courseHeader = soup.new_tag("h3", attrs={"class":"embed"})  
         courseHeader.append(course.name)
 
         courseDiv.append(courseHeader)
         courseDiv.append(courseDisc)
 
-        if course.calendar_print.lower().strip() == "or":
+        if orCase:
             # This course is one of two options (eg: ENG M 310 or ENG M 401)
             if orCounter == 0:
                 # this first of two options
                 firstCourseDiv = courseDiv   # save the courseDiv which we access on the next iteration
                 orCounter += 1
-                controller.write("  var " + 
-                         courseID +
-                         "flag = false;\n")
-                controller.write("  var " + 
-                         courseID +
-                         "rflag = false;\n")
-                controller.write(" var " + courseID + "Time = new Date().getTime();\n")
+                writeFlagsAndVariables(controller, courseID)
                 continue
             else:
                 # the second of two options
@@ -348,17 +325,39 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
                 courseContDiv.append(courseOr)
                 orCounter = 0
 
-        courseContDiv.append(courseDiv)  # append the seocnd course option
+        courseContDiv.append(courseDiv) 
         termTag.append(courseContDiv)
-        controller.write("  var " + 
+        writeFlagsAndVariables(controller, courseID)
+    
+    return compcounter, progcounter, itscounter
+
+
+def createCourseDiv(soup, courseID, category, orCounter, orBool):
+    if orBool:
+        if orCounter == 0:
+            return soup.new_tag("div", attrs={"class":"orcoursetop tooltip " + category,
+                                                "id": courseID,
+                                                "ng-click":courseID+"Listener()",
+                                                "ng-right-click":courseID+"RCListener()"})
+        else: 
+            return soup.new_tag("div", attrs={"class":"orcoursebottom tooltip " + category,
+                                                "id": courseID,
+                                                "ng-click":courseID+"Listener()",
+                                                "ng-right-click":courseID+"RCListener()"})
+    else:
+        return soup.new_tag("div",attrs= {"class":"course tooltip " + category, 
+                                                "id": courseID, 
+                                                "ng-click":courseID+"Listener()",
+                                                "ng-right-click":courseID+"RCListener()"})
+
+def writeFlagsAndVariables(controller, courseID):
+    controller.write("  var " + 
                          courseID +
                          "flag = false;\n")
-        controller.write("  var " + 
+    controller.write("  var " + 
                          courseID +
                          "rflag = false;\n")
-        controller.write(" var " + courseID + "Time = new Date().getTime();\n")
-
-    return compcounter, progcounter, itscounter
+    controller.write(" var " + courseID + "Time = new Date().getTime();\n")
 
 # Function that consturcts the course description tooltip for an elective
 # Parameters:
