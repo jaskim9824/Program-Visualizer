@@ -4449,6 +4449,7 @@ switch(categoryName) {
        break;
        }
       break;
+  case "COMP":
   case "ComplementaryElective":
     switch(planName) {
       case "TraditionalPlan2A3A4A":
@@ -4579,6 +4580,7 @@ switch(categoryName) {
        break;
        }
       break;
+  case "PROG":
   case "ProgramTechnicalElective":
     switch(planName) {
       case "TraditionalPlan2A3A4A":
@@ -4996,7 +4998,7 @@ switch(categoryName) {
        break;
        }
       break;
-  case "ITSElective":
+  case "ITS":
     switch(planName) {
       case "TraditionalPlan2A3A4A":
         var ITSelements = document.getElementsByClassName("ITS");
@@ -9995,6 +9997,7 @@ if (!MECE451CoopPlan4flag) {
        break;
        }
       break;
+  case "COMP":
   case "ComplementaryElective":
     switch(planName) {
       case "TraditionalPlan2A3A4A":
@@ -10125,6 +10128,7 @@ if (!MECE451CoopPlan4flag) {
        break;
        }
       break;
+  case "PROG":
   case "ProgramTechnicalElective":
     switch(planName) {
       case "TraditionalPlan2A3A4A":
@@ -10542,7 +10546,7 @@ if (!MECE451CoopPlan4flag) {
        break;
        }
       break;
-  case "ITSElective":
+  case "ITS":
     switch(planName) {
       case "TraditionalPlan2A3A4A":
         var ITSelements = document.getElementsByClassName("ITS-highlighted");

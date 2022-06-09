@@ -382,7 +382,14 @@ def generateCategorySwitch(categoriesDict, controller, highlight):
 };\n"""
     formattedCaseCat = """  case "{categoryName}":\n"""
     for category in categoriesDict:
-        controller.write(formattedCaseCat.format(categoryName=cleaner.cleanString(category)))
+        if cleaner.cleanString(category) == "ComplementaryElective":
+            controller.write(formattedCaseCat.format(categoryName="COMP"))
+        if cleaner.cleanString(category) == "ProgramTechnicalElective":
+            controller.write(formattedCaseCat.format(categoryName="PROG"))
+        if cleaner.cleanString(category) == "ITSElective":
+            controller.write(formattedCaseCat.format(categoryName="ITS"))
+        else:
+            controller.write(formattedCaseCat.format(categoryName=cleaner.cleanString(category)))
         generatePlanSwitch(categoriesDict[category], controller, category, highlight)
         controller.write("""       }\n""")
         controller.write("""      break;\n""")
