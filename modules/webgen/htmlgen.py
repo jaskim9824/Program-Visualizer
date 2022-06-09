@@ -73,7 +73,8 @@ def placeRadioInputs(formTag, sequenceDict, soup):
             radioInput = soup.new_tag("input", attrs={"type":"radio", 
                                                   "name":"planselector", 
                                                   "ng-model":"selectedPlan",
-                                                  "value": cleaner.cleanString(plan)})
+                                                  "value": cleaner.cleanString(plan),
+                                                  "id": cleaner.cleanString(plan)})
             labelTag = soup.new_tag("label", attrs={"for":cleaner.cleanString(plan)})
             labelTag.append(plan)
             formTag.append(radioInput)
@@ -96,11 +97,12 @@ def generateSubMenus(tagList, inputList, plan, depth, soup):
     # print(len(inputList))
     if depth == len(inputList):
         # print("Inserting radio input...")
-        labelTag = soup.new_tag("label", attrs={"for":plan})
         radioInput = soup.new_tag("input", attrs={"type":"radio", 
                                                   "name":"planselector", 
                                                   "ng-model":"selectedPlan",
-                                                  "value": plan})
+                                                  "value": plan,
+                                                  "id":plan})
+        labelTag = soup.new_tag("label", attrs={"for":plan})
         labelTag.append(inputList[depth-1])
         # print("Parent tag is:")
         # print(tagList[depth-1])

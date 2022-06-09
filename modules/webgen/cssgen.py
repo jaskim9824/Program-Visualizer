@@ -17,16 +17,27 @@ from .. import cleaner
 def writeCategoryCSS(categoryDict, categoryCSS):
     for category in categoryDict:
         backgroundColour = categoryDict[category]
-        categoryFormattedString = """.{categoryName}:hover {{
-            background-color: #{backColour}!important;
-            border-color: #{backColour}!important;
+        categoryFormattedString = """.coursecontainer .{categoryName}:hover {{
+            background-color: #{backColour};
+            border-color: #{backColour};
         }}
         .{categoryName}-highlighted {{
             background-color: #{backColour};
         }}
         .{categoryName}-highlighted:hover {{
-            background-color: #{backColour}!important;
-            border-color: #{backColour}!important;
+            background-color: #{backColour};
+            border-color: #{backColour};
+        }}\n
+.orcoursecontainer .{categoryName}:hover {{
+            background-color: #{backColour};
+            border-color: #{backColour};
+        }}
+        .{categoryName}-highlighted {{
+            background-color: #{backColour};
+        }}
+        .{categoryName}-highlighted:hover {{
+            background-color: #{backColour};
+            border-color: #{backColour};
         }}\n"""
         categoryCSS.write(categoryFormattedString.format(categoryName=cleaner.cleanString(category),
                                                          backColour=backgroundColour))

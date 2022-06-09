@@ -1,5 +1,6 @@
 /*TO DO: adjust formatting of webpage */
 
+/* Set the <html> font size to 100%, ensures rem scaling is correct */
 :root {
     font-size: 100%;
 }
@@ -11,6 +12,7 @@ body {
     height: fit-content;
 }
 
+/* entire page style, scroll on overflow */
 html {
     margin: 0;
     width: fit-content;
@@ -28,32 +30,8 @@ header {
     min-width: 100vw;
 }
 
-.linelegenddescription {
-    width: 25rem;
-    position: relative;
-    left: 12rem;
-    bottom: 42.5rem;
-}
-
-/* legend for line legend image */
-.linelegend {
-    width: 275px;
-    height: 150px;
-    position: relative;
-    left: 12rem;
-    bottom: 42rem;
-    margin: 0;
-}
-
-/* @media screen and (max-width: 980px) {
-   #linelegend{
-       right: 200px;
-       width: 24.7vw;
-   }
-} */
-        
- /*Header link style */
- .header a {
+/*Header link style */
+.header a {
     padding: 15px;
     text-decoration: none;
     line-height: 1.5rem;
@@ -92,6 +70,7 @@ header {
     text-align: center;
 }
 
+/* Form styling, radio buttons to switch plan */
 .legenddescription {
     text-align: left;
 }
@@ -168,8 +147,22 @@ header {
     }
 }
 
-#main {
-    height: fit-content;
+/* description over line legend (prereq/coreq lines) */
+.linelegenddescription {
+    width: 25rem;
+    position: relative;
+    left: 12rem;
+    bottom: 42.5rem;
+}
+
+/* line legend image */
+.linelegend {
+    width: 275px;
+    height: 150px;
+    position: relative;
+    left: 12rem;
+    bottom: 42rem;
+    margin: 0;
 }
 
 /* Plan header styling*/
@@ -199,6 +192,11 @@ label {
     padding-top: 10px;
 }
 
+/* Wrapper div for the term names and course boxes, the main content */
+#main {
+    height: fit-content;
+}
+
 /* Plan diagram styling */
 .display {
     width:fit-content;
@@ -225,16 +223,13 @@ label {
 }
 
 /* Contains one (or two if an "or" option) course */
-.coursecontainer {
+.coursecontainer, .orcoursecontainer {
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
 }
 
 .orcoursecontainer {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
     outline-color: #573578;
     outline-width: 2px;
     outline-style: solid;
@@ -287,21 +282,12 @@ p.ortext {
 }
 
 /* Complementray elective box, taller to fit text */
-.COMP {
-    height: 80px;
-}
-
-.COMP-highlighted {
+.COMP, .COMP-highlighted {
     height: 80px;
 }
 
 /* Program elective box, taller to fit text */
-.PROG {
-    font-size:90%;
-    height:80px;
-}
-
-.PROG-highlighted {
+.PROG, .PROG-highlighted {
     font-size:90%;
     height:80px;
 }
@@ -348,7 +334,7 @@ p.ortext {
  
 /* Most properties taken from Calendar */
 /* Course on left of page, tooltip appears to the right of course */
-.tooltip .tooltiptextright {
+.tooltip .tooltiptextright, .tooltip .tooltiptextleft, .tooltiptextright-locked, .tooltiptextleft-locked {
     visibility: hidden;
     width: 46vw;
     padding: 0px 10px;
@@ -361,7 +347,6 @@ p.ortext {
     position: absolute;
     z-index: 1;
     bottom: 125%;
-    left: 50%;
     margin-left: -60px;
     opacity: 0;
     transition: opacity 0.3s;
@@ -371,98 +356,29 @@ p.ortext {
     font-family: 'Roboto', sans-serif;
     vertical-align: baseline;
     white-space: normal;
+}
+
+.tooltip .tooltiptextright {
+    left: 50%;
+}
+
+.tooltip .tooltiptextleft {
+    right: 50%;
 }
 
 .tooltiptextright-locked {
     visibility: visible;
-    width: 46vw;
-    padding: 0px 10px;
-    background-color: #EEEEEE;
-    border: 1px solid #444444;
-    color: #2B292A;
-    text-align: left;           
-    border-radius: 0px;
-    padding: 5px 10px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
     left: 50%;
-    margin-left: -60px;
-    opacity: 1;
-    transition: opacity 0.3s;
-    font-size: 100%;
-    font-weight: inherit;
-    font-style: inherit;
-    font-family: 'Roboto', sans-serif;
-    vertical-align: baseline;
-    white-space: normal;
-}
-
-/* Most properties taken from Calendar */
-/* Course on right of page, tooltip appears to the left of course */
-.tooltip .tooltiptextleft {
-    visibility: hidden;
-    width: 46vw;
-    padding: 0px 10px;
-    background-color: #EEEEEE;
-    border: 1px solid #444444;
-    color: #2B292A;
-    text-align: left;           
-    border-radius: 0px;
-    padding: 5px 10px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    right: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-size: 100%;
-    font-weight: inherit;
-    font-style: inherit;
-    font-family: 'Roboto', sans-serif;
-    vertical-align: baseline;
-    white-space: normal;
 }
 
 .tooltiptextleft-locked {
     visibility: visible;
-    width: 46vw;
-    padding: 0px 10px;
-    background-color: #EEEEEE;
-    border: 1px solid #444444;
-    color: #2B292A;
-    text-align: left;           
-    border-radius: 0px;
-    padding: 5px 10px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
     right: 50%;
-    margin-left: -60px;
-    opacity: 1;
-    transition: opacity 0.3s;
-    font-size: 100%;
-    font-weight: inherit;
-    font-style: inherit;
-    font-family: 'Roboto', sans-serif;
-    vertical-align: baseline;
-    white-space: normal;
 }
 
 
 /* After hovering, set content to empty */
-.tooltip .tooltiptextright::after {
-    content: "";         
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #EEEEEE transparent transparent transparent;
-}
-
-.tooltip .tooltiptextright-locked::after {
+.tooltip .tooltiptextright::after, .tooltip .tooltiptextright-locked::after {
     content: "";         
     top: 100%;
     left: 50%;
@@ -473,17 +389,7 @@ p.ortext {
 }
 
 /* After hovering, set content to empty */
-.tooltip .tooltiptextleft::after {
-    content: "";         
-    top: 100%;
-    right: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #EEEEEE transparent transparent transparent;
-}
-
-.tooltip .tooltiptextleft-locked::after {
+.tooltip .tooltiptextleft::after, .tooltip .tooltiptextleft-locked::after {
     content: "";         
     top: 100%;
     right: 50%;
@@ -494,13 +400,7 @@ p.ortext {
 }
 
 /* On hover, dsiplay course description */
-.tooltip:hover .tooltiptextright {
-    visibility: visible;
-    opacity: 1;
-}
-
-/* On hover, dsiplay course description */
-.tooltip:hover .tooltiptextleft {
+.tooltip:hover .tooltiptextright, .tooltip:hover .tooltiptextleft {
     visibility: visible;
     opacity: 1;
 }
@@ -528,23 +428,7 @@ p.ortext {
 }
 
 /* Various components of description body */
-.descriptioncredits {
-    display: inline;
-}
-
-.descriptionfeeindex {
-    display: inline;
-}
-
-.descriptionavailability {
-    display: inline;
-}
-
-.descriptionalphahours {
-    display: inline;
-}
-
-.fulldescription {
+.descriptioncredits, .descriptionfeeindex, .descriptionavailability, .descriptionalphahours, .fulldescription {
     display: inline;
 }
 
