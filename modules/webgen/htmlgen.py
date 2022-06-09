@@ -325,7 +325,6 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
     
     return compcounter, progcounter, itscounter
 
-
 def createCourseDiv(soup, courseID, category, orCounter, orBool):
     if orBool:
         if orCounter == 0:

@@ -14,14 +14,18 @@ from .. import cleaner
 # Parameters:
 #   controller - file handle for controller JS file
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
-def intializeControllerJavaScript(controller, sequenceDict):
-    generateIntitalBlockController(controller, sequenceDict)
-    generatePlanBasedBlocksController(controller, sequenceDict)
+def intializeControllerJavaScript(sequenceDict, controller):
+    generateIntitalBlockController(sequenceDict, controller)
+    generatePlanBasedBlocksController(sequenceDict, controller)
 
 # Function that properly concludes and closes the controller JS
 #   controller - file handle for controller JS
 def closeControllerJavaScript(controller):
     controller.write("});\n")
+    writeRightClickDirective(controller)
+    controller.close()
+
+def writeRightClickDirective(controller):
     rightClickDirective = """app.directive('ngRightClick', function($parse) {
     return function(scope, element, attrs) {
         var fn = $parse(attrs.ngRightClick);
@@ -34,13 +38,11 @@ def closeControllerJavaScript(controller):
     };
     });"""
     controller.write(rightClickDirective)
-    controller.close()
-
 
 # Function that generates the intital block of Javascript
 # Parameters:
 #   controller - file handle for controller JS file
-def generateIntitalBlockController(controller, sequenceDict):
+def generateIntitalBlockController(sequenceDict, controller):
     planList = list(sequenceDict.keys())
     controller.write("var app = angular.module(\"main\", []);\n")
     controller.write("app.controller(\"main\", function($scope) { \n")
@@ -61,12 +63,24 @@ Array.prototype.forEach.call(radios, function (radio) {
     });
 });\n""")
 
+
+
 # Function that generates the blocks of the controller JS that is dependent
 # on the number and names of plans provided
 # Parameters:
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   controller - file handle for controller.js file
-def generatePlanBasedBlocksController(controller, sequenceDict):
+def generatePlanBasedBlocksController(sequenceDict, controller):
+    generatePlanBasedInitalVariables(sequenceDict, controller)
+    generateDisableSwitchStatement(sequenceDict, controller)
+    generateEnableSwitchStatement(sequenceDict, controller)
+    generateAddLineSwitch(sequenceDict, controller)
+    generateDeleteLineSwitch(sequenceDict, controller)
+    generateAddToClickSwitch(sequenceDict, controller)
+    generateDeleteFromClickSwitch(sequenceDict, controller)
+    generateHighlightCategory(sequenceDict, controller)
+
+def generatePlanBasedInitalVariables(sequenceDict, controller):
     for plan in sequenceDict:
         controller.write("this." + cleaner.cleanString(plan) + "List = [];\n")
         controller.write("this." + cleaner.cleanString(plan) + "Clicked = [];\n")
@@ -80,13 +94,6 @@ def generatePlanBasedBlocksController(controller, sequenceDict):
             if termcourses > maxcourses:
                 maxcourses = termcourses
         controller.write("this." + cleaner.cleanString(plan) + "MaxCourses = " + str(maxcourses) + ";\n")
-    generateDisableSwitchStatement(sequenceDict, controller)
-    generateEnableSwitchStatement(sequenceDict, controller)
-    generateAddLineSwitch(sequenceDict, controller)
-    generateDeleteLineSwitch(sequenceDict, controller)
-    generateAddToClickSwitch(sequenceDict, controller)
-    generateDeleteFromClickSwitch(sequenceDict, controller)
-    generateHighlightCategory(sequenceDict, controller)
 
 # Function that generates the switch statements and functions which handle
 # disabling the lines of a plan when switched off.
@@ -306,6 +313,15 @@ switch($scope.selectedPlan) {{ \n"""
     
     controller.write(switchEndString)
 
+def placeHighlightCategoryFlags(controller, categoriesDict):
+    formattedCategoriesFlagStatement = """var {categoryName}{planName}flag = false;\n"""
+    for category in categoriesDict:
+        if category == "": 
+            continue
+        for plan in categoriesDict[category]:
+            controller.write(formattedCategoriesFlagStatement.format(categoryName = cleaner.cleanString(category), 
+                                                                     planName = cleaner.cleanString(plan)))
+
 # Generates the clickable category legend. Allows a click to highlight all
 # courses in that category.
 # Parameters:
@@ -318,14 +334,9 @@ switch($scope.selectedPlan) {{ \n"""
 def generateHighlightCategory(sequenceDict, controller):
     # sort courses into categories and plans
     categoriesDict = sortIntoCategories(sequenceDict)
-                
+
     # flags for click on legend
-    formattedCategoriesFlagStatement = """var {categoryName}{planName}flag = false;\n"""
-    for category in categoriesDict:
-        for plan in categoriesDict[category]:
-            if category != "":
-                controller.write(formattedCategoriesFlagStatement.format(categoryName = cleaner.cleanString(category), 
-                                                                        planName = cleaner.cleanString(plan)))
+    placeHighlightCategoryFlags(controller, categoriesDict)
 
     # listener for each category
     formattedCategoriesListener = """$scope.{categoryName}clickListener = function() {{

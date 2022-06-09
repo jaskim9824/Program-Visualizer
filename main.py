@@ -70,7 +70,7 @@ def main():
 
             # generating intital JS based on the number and names of plans
             print("Intialzing JS files....")
-            javascriptgen.intializeControllerJavaScript(controller, sequenceDict)
+            javascriptgen.intializeControllerJavaScript(sequenceDict, controller)
 
             #locating title tag
             titleTag = soup.body.find("a", class_="site-title")
