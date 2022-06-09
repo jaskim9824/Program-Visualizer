@@ -260,10 +260,12 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
         # Prevent tooltip from being off screen
         if termcounter < 4:
             courseDisc = soup.new_tag("div", attrs={"id":courseID+"desc",
-                                                    "class":"tooltiptextright"})
+                                                    "class":"tooltiptextright",
+                                                    "ng-click":"$event.stopPropagation()"})
         else:
             courseDisc = soup.new_tag("div", attrs={"id":courseID+"desc",
-                                                    "class":"tooltiptextleft"})
+                                                    "class":"tooltiptextleft",
+                                                    "ng-click":"$event.stopPropagation()"})
 
         # Constructing course div, check for special cases
         if course.name == "Complementary Elective":
