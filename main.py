@@ -68,6 +68,11 @@ def main():
             print("Parsing sequences....")
             sequenceDict, deptName = sequenceparsing.parseSeq("Sequencing.xls", courseDict)
 
+            courseGroupDict = htmlgen.extractPlanCourseGroupDict(sequenceDict)
+            courseGroupList = htmlgen.findListofAllCourseGroups(courseGroupDict)
+            intitalCourseGroupVals = htmlgen.findIntitalValuesofCourseGroups(courseGroupDict, courseGroupList)
+            print(intitalCourseGroupVals)
+
             # generating intital JS based on the number and names of plans
             print("Intialzing JS files....")
             javascriptgen.intializeControllerJavaScript(sequenceDict, controller)
@@ -87,13 +92,16 @@ def main():
             # locating display tag, this is where the course divs will be written
             displayTag = mainTag.find("div", class_="display")
 
+           
+
+
             # customizing webpage title
             print("Writing title....")
             htmlgen.switchTitle(titleTag, deptName)
 
             # placing radio inputs
             print("Placing radio inputs....")
-            htmlgen.placeRadioInputs(formTag, sequenceDict, soup)
+            htmlgen.placeRadioInputs(formTag, courseGroupDict, soup)
 
             # places legend for color-coding
             print("Placing legend....")

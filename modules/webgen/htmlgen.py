@@ -11,6 +11,52 @@ from .. import cleaner
 from . import linegen
 import html
 
+def findIntitalValuesofCourseGroups(courseGroupDict, courseGroupList):
+    intitalSelectionGroups = list(courseGroupDict.values())[0]
+    intitalCourseGroupVals = {}
+    for element in courseGroupList:
+        if element not in intitalSelectionGroups:
+            intitalCourseGroupVals[element] = ""
+        else:
+            intitalCourseGroupVals[element] = str(element) + "A"
+    return intitalCourseGroupVals
+
+def findListofAllCourseGroups(courseGroupDict):
+    currentList = []
+    for plan in courseGroupDict:
+        for element in courseGroupDict[plan]:
+            if element not in currentList:
+                currentList.append(element)
+    return currentList
+
+def extractPlanCourseGroupDict(sequnceDict):
+    planCourseGroupDict = {}
+    for plan in sequnceDict:
+        index = plan.find("{")
+        if index != -1:
+            shortenedPlanName = plan[0:index].strip()
+        else:
+            shortenedPlanName = plan
+        if shortenedPlanName in planCourseGroupDict:
+            continue
+        courseGroupList = extractListofCourseGroups(plan)
+        planCourseGroupDict[shortenedPlanName] = courseGroupList
+    return planCourseGroupDict
+            
+
+def extractListofCourseGroups(planName):
+    courseGroupList = []
+    index = planName.find("{")
+    if index == -1:
+        return courseGroupList
+    endIndex = planName.find("}")
+    courseGroupString = planName[index+1:endIndex]
+    for char in courseGroupString:
+        if char.isdigit() and int(char) not in courseGroupList:
+            courseGroupList.append(int(char))
+    return courseGroupList
+                 
+
 # Changes the header title to include deptName, which is pulled
 # from Sequncing Excel file
 # Parameters:
@@ -23,121 +69,21 @@ def switchTitle(titleTag, deptName):
 # which plan is currently selected on the webpage
 # Parameters:
 #   formTag - form HTML tag where the inputs will be placed
-#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
+#   courseGroupDict - dict that maps the plans to the course groups in it
 #   soup - soup object, used to create HTML tags
-def placeRadioInputs(formTag, sequenceDict, soup):
-    currentPlan = ""
-    tagList = []
-    currentSubPlanList = []
-    for plan in sequenceDict:
-        if "{" in plan or "}" in plan:
-            cleanedPlanName = plan[0:plan.find("{")].strip()
-            if currentPlan != cleanedPlanName: 
-                tagList = []
-                currentSubPlanList = []
-                currentPlan = cleanedPlanName
-                dropdownMenu = soup.new_tag("div", attrs={"class":"dropdown"})
-                dropdownContent = soup.new_tag("div", attrs={"class":"dropdown-content"})
-                labelTag = soup.new_tag("label") 
-                labelTag.append(cleanedPlanName)
-                dropdownMenu.append(labelTag)
-                dropdownMenu.append(dropdownContent)
-                formTag.append(dropdownMenu)
-                breakTag = soup.new_tag("br")
-                formTag.append(breakTag)
-                tagList.append(dropdownContent)
-            
-            subPlanList = plan[plan.find("{")+1:plan.find("}")].split()
-            # subPlanName = plan[plan.find("{")+1:plan.find("}")]
-            # print("Current sub plan list is..." + str(currentSubPlanList))
-            depth = getStartingDepth(currentSubPlanList, subPlanList)
-            currentSubPlanList = subPlanList
-            # print("Printing " + plan + "....")
-            # print("Depth is " + str(depth))
-            generateSubMenus(tagList, subPlanList, cleaner.cleanString(plan), depth, soup)
-            # radioInput = soup.new_tag("input", attrs={"type":"radio", 
-            #                                       "name":"planselector", 
-            #                                       "ng-model":"selectedPlan",
-            #                                       "value": cleaner.cleanString(plan)})
-            # labelTag = soup.new_tag("label", attrs={"for":cleaner.cleanString(plan)})
-            # labelTag.append(subPlanName)
-            # dropdownContent.append(radioInput)
-            # dropdownContent.append(labelTag)
-            # breakTag = soup.new_tag("br")
-            # dropdownContent.append(breakTag)
-        else:
-            if currentPlan != "":    
-                currentPlan = ""
-                tagList = []
-                currentSubPlanList = []
-            radioInput = soup.new_tag("input", attrs={"type":"radio", 
+def placeRadioInputs(formTag, courseGroupDict, soup):
+    for plan in courseGroupDict:
+        radioInput = soup.new_tag("input", attrs={"type":"radio", 
                                                   "name":"planselector", 
                                                   "ng-model":"selectedPlan",
                                                   "value": cleaner.cleanString(plan),
                                                   "id": cleaner.cleanString(plan)})
-            labelTag = soup.new_tag("label", attrs={"for":cleaner.cleanString(plan)})
-            labelTag.append(plan)
-            formTag.append(radioInput)
-            formTag.append(labelTag)
-            breakTag = soup.new_tag("br")
-            formTag.append(breakTag)
-
-def getStartingDepth(currentList, inputList):
-    if currentList == []:
-        return 1
-    else:
-        counter = 0
-        for i in range(len(inputList)):
-            counter += 1
-            if currentList[i] != inputList[i]:
-                return counter
-
-def generateSubMenus(tagList, inputList, plan, depth, soup):
-    # print(len(tagList))
-    # print(len(inputList))
-    if depth == len(inputList):
-        # print("Inserting radio input...")
-        radioInput = soup.new_tag("input", attrs={"type":"radio", 
-                                                  "name":"planselector", 
-                                                  "ng-model":"selectedPlan",
-                                                  "value": plan,
-                                                  "id":plan})
-        labelTag = soup.new_tag("label", attrs={"for":plan})
-        labelTag.append(inputList[depth-1])
-        # print("Parent tag is:")
-        # print(tagList[depth-1])
-        tagList[depth-1].append(radioInput)
-        tagList[depth-1].append(labelTag)
+        labelTag = soup.new_tag("label", attrs={"for":cleaner.cleanString(plan)})
+        labelTag.append(plan)
+        formTag.append(radioInput)
+        formTag.append(labelTag)
         breakTag = soup.new_tag("br")
-        tagList[depth-1].append(breakTag)
-    else:
-        if len(tagList) != len(inputList):
-            subText = "sub"*depth
-            dropdownMenu = soup.new_tag("div", attrs={"class":subText+"dropdown"})
-            dropdownContent = soup.new_tag("div", attrs={"class":subText+"dropdown-content"})
-            labelTag = soup.new_tag("label")
-            labelTag.append(inputList[depth-1])
-            dropdownMenu.append(labelTag)
-            dropdownMenu.append(dropdownContent)
-            tagList[depth-1].append(dropdownMenu)
-            breakTag = soup.new_tag("br")
-            tagList[depth-1].append(breakTag)
-            tagList.append(dropdownContent)
-        else:
-            subText = "sub"*depth
-            dropdownMenu = soup.new_tag("div", attrs={"class":subText+"dropdown"})
-            dropdownContent = soup.new_tag("div", attrs={"class":subText+"dropdown-content"})
-            labelTag = soup.new_tag("label")
-            labelTag.append(inputList[depth-1])
-            dropdownMenu.append(labelTag)
-            dropdownMenu.append(dropdownContent)
-            tagList[depth-1].append(dropdownMenu)
-            breakTag = soup.new_tag("br")
-            tagList[depth-1].append(breakTag)
-            # print("Reassigning...")
-            tagList[depth] = dropdownContent
-        generateSubMenus(tagList, inputList, plan, depth+1, soup)
-
+        formTag.append(breakTag)
 
 # Places the legend for the categories of courses (math, basic sciences, design, etc.)
 # Pulls the categories and colors from sequenceDict, which has these values as two of
