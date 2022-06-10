@@ -7,6 +7,7 @@
 
 # Dependencies: cleaner, linegen, html
 
+from numpy import number
 from .. import cleaner
 from . import linegen
 import html
@@ -55,6 +56,16 @@ def extractListofCourseGroups(planName):
         if char.isdigit() and int(char) not in courseGroupList:
             courseGroupList.append(int(char))
     return courseGroupList
+
+# TO DO: Move the above functions to a better module
+
+def generateDisplayDiv(soup, courseGroupList):
+    switchVariable = "selectedPlan"
+    formattedCourseGroupVar="field{number}.group{number}"
+    for element in courseGroupList:
+        switchVariable += "+" + formattedCourseGroupVar.format(number=element)
+    return soup.new_tag("div", attrs={"class":"display",
+                                      "ng-switch":switchVariable})
                  
 
 # Changes the header title to include deptName, which is pulled

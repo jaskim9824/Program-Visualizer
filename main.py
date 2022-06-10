@@ -75,7 +75,11 @@ def main():
 
             # generating intital JS based on the number and names of plans
             print("Intialzing JS files....")
-            javascriptgen.intializeControllerJavaScript(sequenceDict, controller)
+            javascriptgen.intializeControllerJavaScript(sequenceDict, 
+                                                        intitalCourseGroupVals,
+                                                        courseGroupDict,
+                                                        courseGroupList, 
+                                                        controller)
 
             #locating title tag
             titleTag = soup.body.find("a", class_="site-title")
@@ -90,7 +94,9 @@ def main():
             legendTag = mainTag.find("div", class_="legend")
 
             # locating display tag, this is where the course divs will be written
-            displayTag = mainTag.find("div", class_="display")
+            displayTag = htmlgen.generateDisplayDiv(soup, courseGroupList)
+
+            mainTag.append(displayTag)
 
            
 

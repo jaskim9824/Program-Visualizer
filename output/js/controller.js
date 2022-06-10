@@ -1,6 +1,6 @@
 var app = angular.module("main", []);
 app.controller("main", function($scope) { 
-$scope.selectedPlan = "TraditionalPlan2A3A4A";
+$scope.selectedPlan = "TraditionalPlan";
 var that = this;
 this.previousPlan = $scope.selectedPlan;
 this.render = function(plan) {
@@ -10,9 +10,10 @@ this.render = function(plan) {
 };
 var radios = document.querySelectorAll("input[type=radio][name=planselector]");
 Array.prototype.forEach.call(radios, function (radio) {
-    radio.addEventListener("change", function () {
-        that.render($scope.selectedPlan);
-    });
+    radio.addEventListener("change", function () { 
+that.setDefaults($scope.selectedPlan);
+that.render($scope.selectedPlan+$scope.field2.group2+$scope.field3.group3+$scope.field4.group4);
+   });
 });
 this.TraditionalPlan2A3A4AList = [];
 this.TraditionalPlan2A3A4AClicked = [];
@@ -98,6 +99,51 @@ this.CoopPlan4LegendBtns = [];
 this.CoopPlan4LegendBtnsClicked = [];
 this.CoopPlan4Terms = 13;
 this.CoopPlan4MaxCourses = 8;
+$scope.field2 = { group2: "2A" };
+$scope.field3 = { group3: "3A" };
+$scope.field4 = { group4: "4A" };
+this.setDefaults = function(plan) { 
+  switch(plan) { 
+      case "TraditionalPlan": 
+            $scope.field2.group2 ="2A";
+            $scope.field3.group3 ="3A";
+            $scope.field4.group4 ="4A";
+          $scope.apply;
+          break;
+      case "AlternatePlan": 
+            $scope.field2.group2 ="";
+            $scope.field3.group3 ="3A";
+            $scope.field4.group4 ="4A";
+          $scope.apply;
+          break;
+      case "CoopPlan1": 
+            $scope.field2.group2 ="";
+            $scope.field3.group3 ="3A";
+            $scope.field4.group4 ="";
+          $scope.apply;
+          break;
+      case "CoopPlan2": 
+            $scope.field2.group2 ="";
+            $scope.field3.group3 ="";
+            $scope.field4.group4 ="";
+          $scope.apply;
+          break;
+      case "CoopPlan3Biomedical": 
+            $scope.field2.group2 ="";
+            $scope.field3.group3 ="";
+            $scope.field4.group4 ="";
+          $scope.apply;
+          break;
+      case "CoopPlan4": 
+            $scope.field2.group2 ="";
+            $scope.field3.group3 ="";
+            $scope.field4.group4 ="";
+          $scope.apply;
+          break;
+    default:
+    console.log("shouldn't be here");
+    }
+};
 this.disable = function(plan) {
     switch (plan) { 
   case "TraditionalPlan2A3A4A": 

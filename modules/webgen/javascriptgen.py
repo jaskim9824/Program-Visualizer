@@ -8,15 +8,20 @@
 
 # Dependencies: cleaner
 
+from numpy import number
 from .. import cleaner
 
 # Function that generates the JS before the generation of the course diagram
 # Parameters:
 #   controller - file handle for controller JS file
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
-def intializeControllerJavaScript(sequenceDict, controller):
-    generateIntitalBlockController(sequenceDict, controller)
-    generatePlanBasedBlocksController(sequenceDict, controller)
+def intializeControllerJavaScript(sequenceDict, intitalCourseGroupVals, courseGroupDict, courseGroupList, controller):
+    generateIntitalBlockController(courseGroupDict, courseGroupList, controller)
+    generatePlanBasedBlocksController(sequenceDict, 
+                                      intitalCourseGroupVals,
+                                      courseGroupDict, 
+                                      courseGroupList,
+                                      controller)
 
 # Function that properly concludes and closes the controller JS
 # Parameters:
@@ -47,8 +52,8 @@ def writeRightClickDirective(controller):
 # Function that generates the intital block of Javascript
 # Parameters:
 #   controller - file handle for controller JS file
-def generateIntitalBlockController(sequenceDict, controller):
-    planList = list(sequenceDict.keys())
+def generateIntitalBlockController(courseGroupDict, courseGroupList, controller):
+    planList = list(courseGroupDict.keys())
     controller.write("var app = angular.module(\"main\", []);\n")
     controller.write("app.controller(\"main\", function($scope) { \n")
     controller.write("$scope.selectedPlan = \"" + cleaner.cleanString(planList[0])+ "\";\n")
@@ -63,9 +68,14 @@ def generateIntitalBlockController(sequenceDict, controller):
 
     controller.write("""var radios = document.querySelectorAll("input[type=radio][name=planselector]");
 Array.prototype.forEach.call(radios, function (radio) {
-    radio.addEventListener("change", function () {
-        that.render($scope.selectedPlan);
-    });
+    radio.addEventListener("change", function () { \n""")
+    controller.write("that.setDefaults($scope.selectedPlan);\n")
+    controller.write("that.render($scope.selectedPlan")
+    formattedCourseGroup = "$scope.field{number}.group{number}"
+    for element in courseGroupList:
+        controller.write("+"+formattedCourseGroup.format(number=element))
+    controller.write(");\n")
+    controller.write("""   });
 });\n""")
 
 
@@ -75,8 +85,9 @@ Array.prototype.forEach.call(radios, function (radio) {
 # Parameters:
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   controller - file handle for controller.js file
-def generatePlanBasedBlocksController(sequenceDict, controller):
-    generatePlanBasedInitalVariables(sequenceDict, controller)
+def generatePlanBasedBlocksController(sequenceDict, intitalCourseGroupVals, courseGroupDict, courseGroupList, controller):
+    generatePlanBasedInitalVariables(sequenceDict, intitalCourseGroupVals, controller)
+    generateSetDefaults(courseGroupDict, courseGroupList, controller)
     generateDisableSwitchStatement(sequenceDict, controller)
     generateEnableSwitchStatement(sequenceDict, controller)
     generateAddLineSwitch(sequenceDict, controller)
@@ -85,12 +96,34 @@ def generatePlanBasedBlocksController(sequenceDict, controller):
     generateDeleteFromClickSwitch(sequenceDict, controller)
     generateCategoryLegendJS(sequenceDict, controller)
 
+def generateSetDefaults(courseGroupDict, courseGroupList, controller):
+    controller.write("this.setDefaults = function(plan) { \n")
+    controller.write("  switch(plan) { \n")
+    formattedCaseStatement = "      case \"{case}\": \n"
+    formattedCourseGroup = "            $scope.field{number}.group{number} ="
+    switchEndString = """    default:
+    console.log("shouldn't be here");
+    }
+};\n"""
+    for mainPlan in courseGroupDict:
+        controller.write(formattedCaseStatement.format(case=cleaner.cleanString(mainPlan)))
+        for element in courseGroupList:
+            controller.write(formattedCourseGroup.format(number=element))
+            if element not in courseGroupDict[mainPlan]:
+                controller.write("\"\";\n")
+            else:
+                controller.write("\""+str(element)+"A\";\n")
+        controller.write("          $scope.apply;\n")
+        controller.write("          break;\n")
+    controller.write(switchEndString)
+                
+
 # Function that generates the intial variables for the controller
 # based on the plans
 # Parameters: 
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   controller - file handle for controller.js file
-def generatePlanBasedInitalVariables(sequenceDict, controller):
+def generatePlanBasedInitalVariables(sequenceDict, intitalCourseGroupVals, controller):
     for plan in sequenceDict:
         controller.write("this." + cleaner.cleanString(plan) + "List = [];\n")
         controller.write("this." + cleaner.cleanString(plan) + "Clicked = [];\n")
@@ -104,6 +137,10 @@ def generatePlanBasedInitalVariables(sequenceDict, controller):
             if termcourses > maxcourses:
                 maxcourses = termcourses
         controller.write("this." + cleaner.cleanString(plan) + "MaxCourses = " + str(maxcourses) + ";\n")
+    for courseGroup in intitalCourseGroupVals:
+        formattedCourseGroupVar = "$scope.field{number} = {{ group{number}: \"{val}\" }};\n"
+        controller.write(formattedCourseGroupVar.format(number=courseGroup, 
+                                                        val=intitalCourseGroupVals[courseGroup]))
 
 # Function that generates the switch statements and functions which handle
 # disabling the lines of a plan when switched off.
