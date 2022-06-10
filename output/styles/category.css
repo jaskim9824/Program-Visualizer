@@ -21,6 +21,28 @@
             background-color: #ff5050;
             border-color: #ff5050;
         }
+.coursegroupacontainer .MATH:hover {
+            background-color: #ff5050;
+            border-color: #ff5050;
+        }
+        .MATH-highlighted {
+            background-color: #ff5050;
+        }
+        .MATH-highlighted:hover {
+            background-color: #ff5050;
+            border-color: #ff5050;
+        }
+.coursegroupbcontainer .MATH:hover {
+            background-color: #ff5050;
+            border-color: #ff5050;
+        }
+        .MATH-highlighted {
+            background-color: #ff5050;
+        }
+        .MATH-highlighted:hover {
+            background-color: #ff5050;
+            border-color: #ff5050;
+        }
 .coursecontainer .BASICSCIENCES:hover {
             background-color: #a2fab0;
             border-color: #a2fab0;
@@ -34,6 +56,28 @@
         }
 
 .orcoursecontainer .BASICSCIENCES:hover {
+            background-color: #a2fab0;
+            border-color: #a2fab0;
+        }
+        .BASICSCIENCES-highlighted {
+            background-color: #a2fab0;
+        }
+        .BASICSCIENCES-highlighted:hover {
+            background-color: #a2fab0;
+            border-color: #a2fab0;
+        }
+.coursegroupacontainer .BASICSCIENCES:hover {
+            background-color: #a2fab0;
+            border-color: #a2fab0;
+        }
+        .BASICSCIENCES-highlighted {
+            background-color: #a2fab0;
+        }
+        .BASICSCIENCES-highlighted:hover {
+            background-color: #a2fab0;
+            border-color: #a2fab0;
+        }
+.coursegroupbcontainer .BASICSCIENCES:hover {
             background-color: #a2fab0;
             border-color: #a2fab0;
         }
@@ -67,6 +111,28 @@
             background-color: #66ccff;
             border-color: #66ccff;
         }
+.coursegroupacontainer .ENGINEERINGSCIENCES:hover {
+            background-color: #66ccff;
+            border-color: #66ccff;
+        }
+        .ENGINEERINGSCIENCES-highlighted {
+            background-color: #66ccff;
+        }
+        .ENGINEERINGSCIENCES-highlighted:hover {
+            background-color: #66ccff;
+            border-color: #66ccff;
+        }
+.coursegroupbcontainer .ENGINEERINGSCIENCES:hover {
+            background-color: #66ccff;
+            border-color: #66ccff;
+        }
+        .ENGINEERINGSCIENCES-highlighted {
+            background-color: #66ccff;
+        }
+        .ENGINEERINGSCIENCES-highlighted:hover {
+            background-color: #66ccff;
+            border-color: #66ccff;
+        }
 .coursecontainer .ENGINEERINGDESIGN:hover {
             background-color: #ff9900;
             border-color: #ff9900;
@@ -80,6 +146,28 @@
         }
 
 .orcoursecontainer .ENGINEERINGDESIGN:hover {
+            background-color: #ff9900;
+            border-color: #ff9900;
+        }
+        .ENGINEERINGDESIGN-highlighted {
+            background-color: #ff9900;
+        }
+        .ENGINEERINGDESIGN-highlighted:hover {
+            background-color: #ff9900;
+            border-color: #ff9900;
+        }
+.coursegroupacontainer .ENGINEERINGDESIGN:hover {
+            background-color: #ff9900;
+            border-color: #ff9900;
+        }
+        .ENGINEERINGDESIGN-highlighted {
+            background-color: #ff9900;
+        }
+        .ENGINEERINGDESIGN-highlighted:hover {
+            background-color: #ff9900;
+            border-color: #ff9900;
+        }
+.coursegroupbcontainer .ENGINEERINGDESIGN:hover {
             background-color: #ff9900;
             border-color: #ff9900;
         }
@@ -113,6 +201,28 @@
             background-color: #ff78c0;
             border-color: #ff78c0;
         }
+.coursegroupacontainer .ENGINEERINGPROFESSION:hover {
+            background-color: #ff78c0;
+            border-color: #ff78c0;
+        }
+        .ENGINEERINGPROFESSION-highlighted {
+            background-color: #ff78c0;
+        }
+        .ENGINEERINGPROFESSION-highlighted:hover {
+            background-color: #ff78c0;
+            border-color: #ff78c0;
+        }
+.coursegroupbcontainer .ENGINEERINGPROFESSION:hover {
+            background-color: #ff78c0;
+            border-color: #ff78c0;
+        }
+        .ENGINEERINGPROFESSION-highlighted {
+            background-color: #ff78c0;
+        }
+        .ENGINEERINGPROFESSION-highlighted:hover {
+            background-color: #ff78c0;
+            border-color: #ff78c0;
+        }
 .coursecontainer .COMP:hover {
             background-color: #f5f569;
             border-color: #f5f569;
@@ -126,6 +236,28 @@
         }
 
 .orcoursecontainer .COMP:hover {
+            background-color: #f5f569;
+            border-color: #f5f569;
+        }
+        .COMP-highlighted {
+            background-color: #f5f569;
+        }
+        .COMP-highlighted:hover {
+            background-color: #f5f569;
+            border-color: #f5f569;
+        }
+.coursegroupacontainer .COMP:hover {
+            background-color: #f5f569;
+            border-color: #f5f569;
+        }
+        .COMP-highlighted {
+            background-color: #f5f569;
+        }
+        .COMP-highlighted:hover {
+            background-color: #f5f569;
+            border-color: #f5f569;
+        }
+.coursegroupbcontainer .COMP:hover {
             background-color: #f5f569;
             border-color: #f5f569;
         }
@@ -159,6 +291,28 @@
             background-color: #cc33ff;
             border-color: #cc33ff;
         }
+.coursegroupacontainer .PROG:hover {
+            background-color: #cc33ff;
+            border-color: #cc33ff;
+        }
+        .PROG-highlighted {
+            background-color: #cc33ff;
+        }
+        .PROG-highlighted:hover {
+            background-color: #cc33ff;
+            border-color: #cc33ff;
+        }
+.coursegroupbcontainer .PROG:hover {
+            background-color: #cc33ff;
+            border-color: #cc33ff;
+        }
+        .PROG-highlighted {
+            background-color: #cc33ff;
+        }
+        .PROG-highlighted:hover {
+            background-color: #cc33ff;
+            border-color: #cc33ff;
+        }
 .coursecontainer .ITS:hover {
             background-color: #996633;
             border-color: #996633;
@@ -182,6 +336,28 @@
             background-color: #996633;
             border-color: #996633;
         }
+.coursegroupacontainer .ITS:hover {
+            background-color: #996633;
+            border-color: #996633;
+        }
+        .ITS-highlighted {
+            background-color: #996633;
+        }
+        .ITS-highlighted:hover {
+            background-color: #996633;
+            border-color: #996633;
+        }
+.coursegroupbcontainer .ITS:hover {
+            background-color: #996633;
+            border-color: #996633;
+        }
+        .ITS-highlighted {
+            background-color: #996633;
+        }
+        .ITS-highlighted:hover {
+            background-color: #996633;
+            border-color: #996633;
+        }
 .coursecontainer .Other:hover {
             background-color: #5ce0c4;
             border-color: #5ce0c4;
@@ -195,6 +371,28 @@
         }
 
 .orcoursecontainer .Other:hover {
+            background-color: #5ce0c4;
+            border-color: #5ce0c4;
+        }
+        .Other-highlighted {
+            background-color: #5ce0c4;
+        }
+        .Other-highlighted:hover {
+            background-color: #5ce0c4;
+            border-color: #5ce0c4;
+        }
+.coursegroupacontainer .Other:hover {
+            background-color: #5ce0c4;
+            border-color: #5ce0c4;
+        }
+        .Other-highlighted {
+            background-color: #5ce0c4;
+        }
+        .Other-highlighted:hover {
+            background-color: #5ce0c4;
+            border-color: #5ce0c4;
+        }
+.coursegroupbcontainer .Other:hover {
             background-color: #5ce0c4;
             border-color: #5ce0c4;
         }

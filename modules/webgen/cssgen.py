@@ -38,6 +38,28 @@ def writeCategoryCSS(categoryDict, categoryCSS):
         .{categoryName}-highlighted:hover {{
             background-color: #{backColour};
             border-color: #{backColour};
+        }}
+.coursegroupacontainer .{categoryName}:hover {{
+            background-color: #{backColour};
+            border-color: #{backColour};
+        }}
+        .{categoryName}-highlighted {{
+            background-color: #{backColour};
+        }}
+        .{categoryName}-highlighted:hover {{
+            background-color: #{backColour};
+            border-color: #{backColour};
+        }}
+.coursegroupbcontainer .{categoryName}:hover {{
+            background-color: #{backColour};
+            border-color: #{backColour};
+        }}
+        .{categoryName}-highlighted {{
+            background-color: #{backColour};
+        }}
+        .{categoryName}-highlighted:hover {{
+            background-color: #{backColour};
+            border-color: #{backColour};
         }}\n"""
         categoryCSS.write(categoryFormattedString.format(categoryName=cleaner.cleanString(category),
                                                          backColour=backgroundColour))

@@ -150,20 +150,12 @@ def placeLegend(legendTag, categoryDict, soup):
     placeLegendDescription(soup, legendTag)
     placeLegendButtons(soup, legendTag, categoryDict)
  
-# Function that places the legend description
-# Parameters:
-#   soup - soup object used to create HTML tags
-#   legendTag - HTML tag representing legend
+
 def placeLegendDescription(soup, legendTag):
     legendDescription = soup.new_tag("b", attrs={"class":"legenddescription"})
     legendDescription.append("Click on a Category Below to Highlight all Courses in that Category")
     legendTag.append(legendDescription)
 
-# Function that places down the legend buttons
-# Parameters:
-#   soup - soup object used to create HTML tags
-#   legendTag - HTML tag representing legend
-#   categoryDict - dict mapping categories to colours
 def placeLegendButtons(soup, legendTag, categoryDict):
     legendBoxes = soup.new_tag("div", attrs={"class":"legendboxes"})
     for category in categoryDict:
@@ -172,11 +164,7 @@ def placeLegendButtons(soup, legendTag, categoryDict):
         legendBoxes.append(coursecat)
     legendTag.append(legendBoxes)
 
-# Function that places down a legend button
-# Parameters:
-#   soup - soup object used to create HTML tags
-#   category - category of button
-#   colour - colour of category
+
 def placeLegendButton(soup, category, colour):
     return soup.new_tag("div", attrs={"ng-click":category+ "clickListener()", 
                                         "class":"legendbutton",
@@ -218,12 +206,16 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
     progcounter = 0
     # count of amount of comp electives placed in the plan
     compcounter = 0
+    # number that goes into course group (eg: group 2A, 4B -> #A or #B)
+    groupcounter = 0
+    groupcountsetflag = False  # flag to tell if the initial value of groupcounter is set
+
     for term in planDict:
         termDiv = soup.new_tag("div", attrs={"class":"term"})
         termHeader = soup.new_tag("h3", attrs={"class":"termheader"})
         termHeader.append(term)
         termDiv.append(termHeader)
-        compcounter, progcounter, itscounter = placeCourses(termDiv, 
+        compcounter, progcounter, itscounter, groupcounter, groupcountsetflag = placeCourses(termDiv, 
                                                             planDict[term], 
                                                             soup, 
                                                             controller, 
@@ -231,7 +223,10 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
                                                             termcounter,
                                                             compcounter,
                                                             progcounter,
-                                                            itscounter)
+                                                            itscounter,
+                                                            groupcounter, 
+                                                            groupcountsetflag,
+                                                            term)
         planTag.append(termDiv)
         termcounter += 1
     # generating a list of all courses taken in this plan
@@ -254,30 +249,46 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
 #   compcounter - number of comp electives that have been placed for this plan
 #   progcounter - number of program electives that have been placed for this plan
 #   itscoutner - number of its electives that have been placed for this plan
+#   groupcounter - number that goes into course group name (#A or #B eg: 2A, 4B)
+#   groupcountsetflag - flag set when initial value is set
+#   term - name of the current term, used to set initial value of groupcounter
 # Returns:
-#   compcounter, progcounter, itscounter 
-def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcounter, progcounter, itscounter):
-    orCounter = 0
+#   compcounter, progcounter, itscounter, groupcounter, groupcountsetflag
+def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcounter, progcounter, itscounter, groupcounter, groupcountsetflag, term):
+    orCounter = 0  # if course has "or" option, first and second courseDiv need different styling, this counts if 1st or 2nd
+    courseGroupList = []  # list of courses (course objects) in a course group
+    courseGroupTitle = ""  # name of the course group (eg: "Course group 2A")
     for course in termList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan)
         courseContClass = course.category.replace(" ", "")
-        orCase = course.calendar_print.lower().strip() == "or"
+        orCase = course.calendar_print.lower().strip() == "or"  # handles improper formatting pulled from Excel
 
-        # In the case of an OR case in a sequence
-        if orCase:
-            courseContDiv = soup.new_tag("div", attrs={"class":"orcoursecontainer"})
+        if course.course_group == "A":
+            # groupcounter is initially set to ceil(term[-1]/2), it is the year of study/2 with ceiling fnc
+            if int(term[-1]) % 2 == 0:
+                groupcounter = int(term[-1])//2
+            else:
+                groupcounter = int(term[-1])//2 + 1
+
+            groupcountsetflag = True
+            # different classes for course groups A and B
+            courseContDiv = soup.new_tag("div", attrs={"class":"coursegroupacontainer"})
+            courseGroupTitle = soup.new_tag("p", attrs={"class":"coursegrouptitle"})
+            courseGroupTitle.append("Course Group " + str(groupcounter) + "A")
+        elif course.course_group == "B":
+            courseContDiv = soup.new_tag("div", attrs={"class":"coursegroupbcontainer"})
+            courseGroupTitle = soup.new_tag("p", attrs={"class":"coursegrouptitle"})
+            courseGroupTitle.append("Course Group " + str(groupcounter) + "B")
         else:
+            # not in a course group
             courseContDiv = soup.new_tag("div", attrs={"class":"coursecontainer"})
 
+        if orCase:
+            # In the case of an OR in a sequence
+            courseOrContDiv = soup.new_tag("div", attrs={"class":"orcoursecontainer"})
+
         # Prevent tooltip from being off screen
-        if termcounter < 4:
-            courseDisc = soup.new_tag("div", attrs={"id":courseID+"desc",
-                                                    "class":"tooltiptextright",
-                                                    "ng-click":"$event.stopPropagation()"})
-        else:
-            courseDisc = soup.new_tag("div", attrs={"id":courseID+"desc",
-                                                    "class":"tooltiptextleft",
-                                                    "ng-click":"$event.stopPropagation()"})
+        courseDisc = pickTooltipSide(termcounter, courseID, soup)
 
         # Constructing course div, check for special cases
         if course.name == "Complementary Elective":
@@ -334,25 +345,73 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
                 continue
             else:
                 # the second of two options
-                courseContDiv.append(firstCourseDiv)  # appending the first course option we saved from last iteration
+                courseOrContDiv.append(firstCourseDiv)  # appending the first course option we saved from last iteration
                 courseOr = soup.new_tag("p", attrs={"class":"ortext"})
                 courseOr.append("OR")  # add the word or between course boxes
-                courseContDiv.append(courseOr)
+                courseOrContDiv.append(courseOr)
+                courseOrContDiv.append(courseDiv)
                 orCounter = 0
+                if (course.course_group == "A") or (course.course_group == "B"):
+                    # also need to append to courseGroupList
+                    courseGroupList.append(courseOrContDiv)
+                    writeFlagsAndVariables(controller, courseID)
+                    continue
 
-        courseContDiv.append(courseDiv) 
-        termTag.append(courseContDiv)
+        if (course.course_group == "A") or (course.course_group == "B"):
+            # need to append to courseGroupList, different than check in orCase because
+            # this doesn't involve OR
+            courseGroupList.append(courseDiv)
+            writeFlagsAndVariables(controller, courseID)
+            continue
+
+        if orCase:
+            termTag.append(courseOrContDiv)
+        else:
+            courseContDiv.append(courseDiv) 
+            termTag.append(courseContDiv)
         writeFlagsAndVariables(controller, courseID)
-    
-    return compcounter, progcounter, itscounter
 
-# Function that constructs a course div for a specific course
+    if courseGroupTitle != "":
+        # Need to add course group title, outside of course group box so
+        # append directly to termTag
+        termTag.append(courseGroupTitle)
+    if courseGroupList != []:
+        # A course group is involved. Append each course to the coursegroupcontainer,
+        # then append this container to the termTag
+        for i in range(0, len(courseGroupList)):
+            if i == (len(courseGroupList) - 1):
+                courseGroupList[i]["class"].append("lastcourseingroup")  # last course has no bottom margin
+            courseContDiv.append(courseGroupList[i])
+        termTag.append(courseContDiv)
+        if course.course_group == "B":
+            # A and B groups are done, next course group will be one number higher
+            groupcounter += 1
+    
+    return compcounter, progcounter, itscounter, groupcounter, groupcountsetflag
+
+# Determines which side a tooltip should appear on based on the term position on the page.
+# If the term is near the left side, the tooltip appears on the right and vice versa.
+# Terms 1,2 and 3 have tooltips on the right, all others on the left.
 # Parameters:
-#   - soup: soup object used to create HTML tags
-#   - courseID: ID of course
-#   - category: category of course
-#   - orCounter: counter indicating whether is a top or bottom or
-#   - orBool: flag indicating an or case
+#   termcounter - which term is currently being placed (int)
+#   courseID - ID of the course being placed (str)
+#   soup - soup object, used to create HTML tags 
+# Returns:
+#   courseDisc - course disc HTML tag
+def pickTooltipSide(termcounter, courseID, soup):
+    if termcounter < 4:
+        # Term is on the left of the page, tooltip should be on right
+        courseDisc = soup.new_tag("div", attrs={"id":courseID+"desc",
+                                                "class":"tooltiptextright",
+                                                "ng-click":"$event.stopPropagation()"})
+    else:
+        # Term is on the right of the page, tooltip should be on left
+        courseDisc = soup.new_tag("div", attrs={"id":courseID+"desc",
+                                                "class":"tooltiptextleft",
+                                                "ng-click":"$event.stopPropagation()"})
+
+    return courseDisc
+
 def createCourseDiv(soup, courseID, category, orCounter, orBool):
     if orBool:
         if orCounter == 0:
@@ -370,11 +429,7 @@ def createCourseDiv(soup, courseID, category, orCounter, orBool):
                                                 "id": courseID, 
                                                 "ng-click":courseID+"Listener()",
                                                 "ng-right-click":courseID+"RCListener()"})
-# Function that writes the flags and variables associated 
-# with a course
-# Parameters:
-#   - controller: file handle to controller.js
-#   - courseID: ID for course
+
 def writeFlagsAndVariables(controller, courseID):
     controller.write("  var " + 
                          courseID +

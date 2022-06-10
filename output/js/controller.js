@@ -302,8 +302,6 @@ this.disable = function(plan) {
   that.CoopPlan2LegendBtns.push(currbtn);
   that.CoopPlan3BiomedicalLegendBtns.push(currbtn);
   that.CoopPlan4LegendBtns.push(currbtn);
-  var currbtn = document.getElementById("");
-  that.CoopPlan3BiomedicalLegendBtns.push(currbtn);
 this.enable = function(plan) {
   switch(plan) {
     case "TraditionalPlan2A3A4A": 
@@ -1541,32 +1539,6 @@ $scope.ITSclickListener = function() {
         eval(flagName + " = false");
     }
 }
-$scope.clickListener = function() {
-    var planName = $scope.selectedPlan;
-    var pressedbtn = document.getElementById("");
-    var checkFlag = "!" + planName + "flag";
-    var flagBool = eval(checkFlag);
-    if (flagBool) {
-        that.highlightCategory("", $scope.selectedPlan);
-        pressedbtn.classList.remove("legendbutton");
-        pressedbtn.classList.add("legendbutton-pressed");
-        var addClick = "that." + planName + "LegendBtnsClicked.push(pressedbtn)";
-        eval(addClick);
-        var flagName = "" + planName + "flag";
-        eval(flagName + " = true");
-    }
-    else {
-        that.unhighlightCategory("", $scope.selectedPlan);
-        pressedbtn.classList.remove("legendbutton-pressed");
-        pressedbtn.classList.add("legendbutton");
-        var findIndex = "var index = that." + planName + "LegendBtnsClicked.findIndex((element) => element[0] == pressedbtn)";
-        eval(findIndex);
-        var removeClick = "that." + planName + "LegendBtnsClicked.splice(index, 1)";
-        eval(removeClick);
-        var flagName = "" + planName + "flag";
-        eval(flagName + " = false");
-    }
-}
 this.highlightCategory = function(categoryName, planName) {
 switch(categoryName) { 
   case "BASICSCIENCES":
@@ -1908,6 +1880,14 @@ switch(categoryName) {
        ENPH131CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES");
        ENPH131CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES-highlighted");
        that.addToClicked(["ENPH131CoopPlan3Biomedical","BASICSCIENCES"]);
+       var BME320CoopPlan3Biomedicalelement = document.getElementById("BME320CoopPlan3Biomedical");
+       BME320CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES");
+       BME320CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES-highlighted");
+       that.addToClicked(["BME320CoopPlan3Biomedical","BASICSCIENCES"]);
+       var BME321CoopPlan3Biomedicalelement = document.getElementById("BME321CoopPlan3Biomedical");
+       BME321CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES");
+       BME321CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES-highlighted");
+       that.addToClicked(["BME321CoopPlan3Biomedical","BASICSCIENCES"]);
        break;
       case "CoopPlan4":
        var CHEM103CoopPlan4element = document.getElementById("CHEM103CoopPlan4");
@@ -2492,6 +2472,10 @@ switch(categoryName) {
        ENGM401CoopPlan3Biomedicalelement.classList.remove("Other");
        ENGM401CoopPlan3Biomedicalelement.classList.add("Other-highlighted");
        that.addToClicked(["ENGM401CoopPlan3Biomedical","Other"]);
+       var PHIL386CoopPlan3Biomedicalelement = document.getElementById("PHIL386CoopPlan3Biomedical");
+       PHIL386CoopPlan3Biomedicalelement.classList.remove("Other");
+       PHIL386CoopPlan3Biomedicalelement.classList.add("Other-highlighted");
+       that.addToClicked(["PHIL386CoopPlan3Biomedical","Other"]);
        break;
       case "CoopPlan4":
        var ENGL199CoopPlan4element = document.getElementById("ENGL199CoopPlan4");
@@ -2952,6 +2936,10 @@ switch(categoryName) {
        MATH300CoopPlan3Biomedicalelement.classList.remove("MATH");
        MATH300CoopPlan3Biomedicalelement.classList.add("MATH-highlighted");
        that.addToClicked(["MATH300CoopPlan3Biomedical","MATH"]);
+       var STAT337CoopPlan3Biomedicalelement = document.getElementById("STAT337CoopPlan3Biomedical");
+       STAT337CoopPlan3Biomedicalelement.classList.remove("MATH");
+       STAT337CoopPlan3Biomedicalelement.classList.add("MATH-highlighted");
+       that.addToClicked(["STAT337CoopPlan3Biomedical","MATH"]);
        break;
       case "CoopPlan4":
        var MATH100CoopPlan4element = document.getElementById("MATH100CoopPlan4");
@@ -4344,6 +4332,10 @@ switch(categoryName) {
        MECE380CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
        MECE380CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
        that.addToClicked(["MECE380CoopPlan3Biomedical","ENGINEERINGSCIENCES"]);
+       var MECE563CoopPlan3Biomedicalelement = document.getElementById("MECE563CoopPlan3Biomedical");
+       MECE563CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
+       MECE563CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+       that.addToClicked(["MECE563CoopPlan3Biomedical","ENGINEERINGSCIENCES"]);
        var MECE430CoopPlan3Biomedicalelement = document.getElementById("MECE430CoopPlan3Biomedical");
        MECE430CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
        MECE430CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
@@ -4360,6 +4352,10 @@ switch(categoryName) {
        MECE420CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
        MECE420CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
        that.addToClicked(["MECE420CoopPlan3Biomedical","ENGINEERINGSCIENCES"]);
+       var MECE485CoopPlan3Biomedicalelement = document.getElementById("MECE485CoopPlan3Biomedical");
+       MECE485CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
+       MECE485CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+       that.addToClicked(["MECE485CoopPlan3Biomedical","ENGINEERINGSCIENCES"]);
        var MECE403CoopPlan3Biomedicalelement = document.getElementById("MECE403CoopPlan3Biomedical");
        MECE403CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
        MECE403CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
@@ -4454,128 +4450,156 @@ switch(categoryName) {
     switch(planName) {
       case "TraditionalPlan2A3A4A":
         var COMPelements = document.getElementsByClassName("COMP");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["ComplementaryElectiveTraditionalPlan2A3A4A0","COMP"]);
+          that.addToClicked(["ComplementaryElectiveTraditionalPlan2A3A4A" + i,"COMP"]);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2A3A4B":
         var COMPelements = document.getElementsByClassName("COMP");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["ComplementaryElectiveTraditionalPlan2A3A4B0","COMP"]);
+          that.addToClicked(["ComplementaryElectiveTraditionalPlan2A3A4B" + i,"COMP"]);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2A3B4A":
         var COMPelements = document.getElementsByClassName("COMP");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["ComplementaryElectiveTraditionalPlan2A3B4A0","COMP"]);
+          that.addToClicked(["ComplementaryElectiveTraditionalPlan2A3B4A" + i,"COMP"]);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2A3B4B":
         var COMPelements = document.getElementsByClassName("COMP");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["ComplementaryElectiveTraditionalPlan2A3B4B0","COMP"]);
+          that.addToClicked(["ComplementaryElectiveTraditionalPlan2A3B4B" + i,"COMP"]);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2B3A4A":
         var COMPelements = document.getElementsByClassName("COMP");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["ComplementaryElectiveTraditionalPlan2B3A4A0","COMP"]);
+          that.addToClicked(["ComplementaryElectiveTraditionalPlan2B3A4A" + i,"COMP"]);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2B3A4B":
         var COMPelements = document.getElementsByClassName("COMP");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["ComplementaryElectiveTraditionalPlan2B3A4B0","COMP"]);
+          that.addToClicked(["ComplementaryElectiveTraditionalPlan2B3A4B" + i,"COMP"]);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2B3B4A":
         var COMPelements = document.getElementsByClassName("COMP");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["ComplementaryElectiveTraditionalPlan2B3B4A0","COMP"]);
+          that.addToClicked(["ComplementaryElectiveTraditionalPlan2B3B4A" + i,"COMP"]);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2B3B4B":
         var COMPelements = document.getElementsByClassName("COMP");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["ComplementaryElectiveTraditionalPlan2B3B4B0","COMP"]);
+          that.addToClicked(["ComplementaryElectiveTraditionalPlan2B3B4B" + i,"COMP"]);
+          i = i + 1;
         }
        break;
       case "AlternatePlan3A4A":
         var COMPelements = document.getElementsByClassName("COMP");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["ComplementaryElectiveAlternatePlan3A4A0","COMP"]);
+          that.addToClicked(["ComplementaryElectiveAlternatePlan3A4A" + i,"COMP"]);
+          i = i + 1;
         }
        break;
       case "CoopPlan13A":
         var COMPelements = document.getElementsByClassName("COMP");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["ComplementaryElectiveCoopPlan13A0","COMP"]);
+          that.addToClicked(["ComplementaryElectiveCoopPlan13A" + i,"COMP"]);
+          i = i + 1;
         }
        break;
       case "CoopPlan13B":
         var COMPelements = document.getElementsByClassName("COMP");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["ComplementaryElectiveCoopPlan13B0","COMP"]);
+          that.addToClicked(["ComplementaryElectiveCoopPlan13B" + i,"COMP"]);
+          i = i + 1;
         }
        break;
       case "CoopPlan2":
         var COMPelements = document.getElementsByClassName("COMP");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["ComplementaryElectiveCoopPlan20","COMP"]);
+          that.addToClicked(["ComplementaryElectiveCoopPlan2" + i,"COMP"]);
+          i = i + 1;
         }
        break;
       case "CoopPlan3Biomedical":
         var COMPelements = document.getElementsByClassName("COMP");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["ComplementaryElectiveCoopPlan3Biomedical0","COMP"]);
+          that.addToClicked(["ComplementaryElectiveCoopPlan3Biomedical" + i,"COMP"]);
+          i = i + 1;
         }
        break;
       case "CoopPlan4":
         var COMPelements = document.getElementsByClassName("COMP");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["ComplementaryElectiveCoopPlan40","COMP"]);
+          that.addToClicked(["ComplementaryElectiveCoopPlan4" + i,"COMP"]);
+          i = i + 1;
         }
        break;
        }
@@ -4585,415 +4609,156 @@ switch(categoryName) {
     switch(planName) {
       case "TraditionalPlan2A3A4A":
         var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4A0","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4A1","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4A2","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4A3","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4A" + i,"PROG"]);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2A3A4B":
         var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4B0","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4B1","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4B2","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4B3","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4B" + i,"PROG"]);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2A3B4A":
         var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3B4A0","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3B4A1","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3B4A2","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3B4A3","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3B4A" + i,"PROG"]);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2A3B4B":
         var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3B4B0","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3B4B1","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3B4B2","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3B4B3","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3B4B" + i,"PROG"]);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2B3A4A":
         var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3A4A0","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3A4A1","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3A4A2","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3A4A3","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3A4A" + i,"PROG"]);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2B3A4B":
         var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3A4B0","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3A4B1","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3A4B2","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3A4B3","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3A4B" + i,"PROG"]);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2B3B4A":
         var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3B4A0","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3B4A1","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3B4A2","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3B4A3","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3B4A" + i,"PROG"]);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2B3B4B":
         var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3B4B0","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3B4B1","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3B4B2","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3B4B3","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2B3B4B" + i,"PROG"]);
+          i = i + 1;
         }
        break;
       case "AlternatePlan3A4A":
         var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveAlternatePlan3A4A0","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveAlternatePlan3A4A1","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveAlternatePlan3A4A2","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveAlternatePlan3A4A3","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveAlternatePlan3A4A" + i,"PROG"]);
+          i = i + 1;
         }
        break;
       case "CoopPlan13A":
         var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveCoopPlan13A0","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveCoopPlan13A1","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveCoopPlan13A2","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveCoopPlan13A3","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan13A" + i,"PROG"]);
+          i = i + 1;
         }
        break;
       case "CoopPlan13B":
         var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveCoopPlan13B0","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveCoopPlan13B1","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveCoopPlan13B2","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveCoopPlan13B3","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan13B" + i,"PROG"]);
+          i = i + 1;
         }
        break;
       case "CoopPlan2":
         var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveCoopPlan20","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveCoopPlan21","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveCoopPlan22","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveCoopPlan23","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan2" + i,"PROG"]);
+          i = i + 1;
         }
        break;
       case "CoopPlan3Biomedical":
         var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveCoopPlan3Biomedical0","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveCoopPlan3Biomedical1","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveCoopPlan3Biomedical2","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan3Biomedical" + i,"PROG"]);
+          i = i + 1;
         }
        break;
       case "CoopPlan4":
         var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveCoopPlan40","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveCoopPlan41","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveCoopPlan42","PROG"]);
-        }
-        var PROGelements = document.getElementsByClassName("PROG");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG");
-          currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveCoopPlan43","PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveCoopPlan4" + i,"PROG"]);
+          i = i + 1;
         }
        break;
        }
@@ -5002,96 +4767,80 @@ switch(categoryName) {
     switch(planName) {
       case "TraditionalPlan2A3A4A":
         var ITSelements = document.getElementsByClassName("ITS");
-        for (let i = 0; i < ITSelements.length; i++) {
-          var currelement = document.getElementById(ITSelements.item(i).id);
+        var i = 0;
+        while (ITSelements.length > 0) {
+          var currelement = document.getElementById(ITSelements.item(0).id);
           currelement.classList.remove("ITS");
           currelement.classList.add("ITS-highlighted");
-          that.addToClicked(["ITSElectiveTraditionalPlan2A3A4A0","ITS"]);
+          that.addToClicked(["ITSElectiveTraditionalPlan2A3A4A" + i,"ITS"]);
+          i = i + 1;
         }
        break;
       case "AlternatePlan3A4A":
         var ITSelements = document.getElementsByClassName("ITS");
-        for (let i = 0; i < ITSelements.length; i++) {
-          var currelement = document.getElementById(ITSelements.item(i).id);
+        var i = 0;
+        while (ITSelements.length > 0) {
+          var currelement = document.getElementById(ITSelements.item(0).id);
           currelement.classList.remove("ITS");
           currelement.classList.add("ITS-highlighted");
-          that.addToClicked(["ITSElectiveAlternatePlan3A4A0","ITS"]);
+          that.addToClicked(["ITSElectiveAlternatePlan3A4A" + i,"ITS"]);
+          i = i + 1;
         }
        break;
       case "CoopPlan13A":
         var ITSelements = document.getElementsByClassName("ITS");
-        for (let i = 0; i < ITSelements.length; i++) {
-          var currelement = document.getElementById(ITSelements.item(i).id);
+        var i = 0;
+        while (ITSelements.length > 0) {
+          var currelement = document.getElementById(ITSelements.item(0).id);
           currelement.classList.remove("ITS");
           currelement.classList.add("ITS-highlighted");
-          that.addToClicked(["ITSElectiveCoopPlan13A0","ITS"]);
+          that.addToClicked(["ITSElectiveCoopPlan13A" + i,"ITS"]);
+          i = i + 1;
         }
        break;
       case "CoopPlan13B":
         var ITSelements = document.getElementsByClassName("ITS");
-        for (let i = 0; i < ITSelements.length; i++) {
-          var currelement = document.getElementById(ITSelements.item(i).id);
+        var i = 0;
+        while (ITSelements.length > 0) {
+          var currelement = document.getElementById(ITSelements.item(0).id);
           currelement.classList.remove("ITS");
           currelement.classList.add("ITS-highlighted");
-          that.addToClicked(["ITSElectiveCoopPlan13B0","ITS"]);
+          that.addToClicked(["ITSElectiveCoopPlan13B" + i,"ITS"]);
+          i = i + 1;
         }
        break;
       case "CoopPlan2":
         var ITSelements = document.getElementsByClassName("ITS");
-        for (let i = 0; i < ITSelements.length; i++) {
-          var currelement = document.getElementById(ITSelements.item(i).id);
+        var i = 0;
+        while (ITSelements.length > 0) {
+          var currelement = document.getElementById(ITSelements.item(0).id);
           currelement.classList.remove("ITS");
           currelement.classList.add("ITS-highlighted");
-          that.addToClicked(["ITSElectiveCoopPlan20","ITS"]);
+          that.addToClicked(["ITSElectiveCoopPlan2" + i,"ITS"]);
+          i = i + 1;
         }
        break;
       case "CoopPlan3Biomedical":
         var ITSelements = document.getElementsByClassName("ITS");
-        for (let i = 0; i < ITSelements.length; i++) {
-          var currelement = document.getElementById(ITSelements.item(i).id);
+        var i = 0;
+        while (ITSelements.length > 0) {
+          var currelement = document.getElementById(ITSelements.item(0).id);
           currelement.classList.remove("ITS");
           currelement.classList.add("ITS-highlighted");
-          that.addToClicked(["ITSElectiveCoopPlan3Biomedical0","ITS"]);
+          that.addToClicked(["ITSElectiveCoopPlan3Biomedical" + i,"ITS"]);
+          i = i + 1;
         }
        break;
       case "CoopPlan4":
         var ITSelements = document.getElementsByClassName("ITS");
-        for (let i = 0; i < ITSelements.length; i++) {
-          var currelement = document.getElementById(ITSelements.item(i).id);
+        var i = 0;
+        while (ITSelements.length > 0) {
+          var currelement = document.getElementById(ITSelements.item(0).id);
           currelement.classList.remove("ITS");
           currelement.classList.add("ITS-highlighted");
-          that.addToClicked(["ITSElectiveCoopPlan40","ITS"]);
+          that.addToClicked(["ITSElectiveCoopPlan4" + i,"ITS"]);
+          i = i + 1;
         }
-       break;
-       }
-      break;
-  case "":
-    switch(planName) {
-      case "CoopPlan3Biomedical":
-       var BME320CoopPlan3Biomedicalelement = document.getElementById("BME320CoopPlan3Biomedical");
-       BME320CoopPlan3Biomedicalelement.classList.remove("");
-       BME320CoopPlan3Biomedicalelement.classList.add("-highlighted");
-       that.addToClicked(["BME320CoopPlan3Biomedical",""]);
-       var BME321CoopPlan3Biomedicalelement = document.getElementById("BME321CoopPlan3Biomedical");
-       BME321CoopPlan3Biomedicalelement.classList.remove("");
-       BME321CoopPlan3Biomedicalelement.classList.add("-highlighted");
-       that.addToClicked(["BME321CoopPlan3Biomedical",""]);
-       var MECE563CoopPlan3Biomedicalelement = document.getElementById("MECE563CoopPlan3Biomedical");
-       MECE563CoopPlan3Biomedicalelement.classList.remove("");
-       MECE563CoopPlan3Biomedicalelement.classList.add("-highlighted");
-       that.addToClicked(["MECE563CoopPlan3Biomedical",""]);
-       var STAT337CoopPlan3Biomedicalelement = document.getElementById("STAT337CoopPlan3Biomedical");
-       STAT337CoopPlan3Biomedicalelement.classList.remove("");
-       STAT337CoopPlan3Biomedicalelement.classList.add("-highlighted");
-       that.addToClicked(["STAT337CoopPlan3Biomedical",""]);
-       var MECE485CoopPlan3Biomedicalelement = document.getElementById("MECE485CoopPlan3Biomedical");
-       MECE485CoopPlan3Biomedicalelement.classList.remove("");
-       MECE485CoopPlan3Biomedicalelement.classList.add("-highlighted");
-       that.addToClicked(["MECE485CoopPlan3Biomedical",""]);
-       var PHIL386CoopPlan3Biomedicalelement = document.getElementById("PHIL386CoopPlan3Biomedical");
-       PHIL386CoopPlan3Biomedicalelement.classList.remove("");
-       PHIL386CoopPlan3Biomedicalelement.classList.add("-highlighted");
-       that.addToClicked(["PHIL386CoopPlan3Biomedical",""]);
        break;
        }
       break;
@@ -5673,6 +5422,20 @@ if (!ENPH131CoopPlan3Biomedicalflag) {
        ENPH131CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
        
        that.removeFromClicked("ENPH131CoopPlan3Biomedical");
+ } 
+if (!BME320CoopPlan3Biomedicalflag) { 
+       var BME320CoopPlan3Biomedicalelement = document.getElementById("BME320CoopPlan3Biomedical");
+       BME320CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
+       BME320CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
+       
+       that.removeFromClicked("BME320CoopPlan3Biomedical");
+ } 
+if (!BME321CoopPlan3Biomedicalflag) { 
+       var BME321CoopPlan3Biomedicalelement = document.getElementById("BME321CoopPlan3Biomedical");
+       BME321CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
+       BME321CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
+       
+       that.removeFromClicked("BME321CoopPlan3Biomedical");
  } 
        break;
       case "CoopPlan4":
@@ -6648,6 +6411,13 @@ if (!ENGM401CoopPlan3Biomedicalflag) {
        
        that.removeFromClicked("ENGM401CoopPlan3Biomedical");
  } 
+if (!PHIL386CoopPlan3Biomedicalflag) { 
+       var PHIL386CoopPlan3Biomedicalelement = document.getElementById("PHIL386CoopPlan3Biomedical");
+       PHIL386CoopPlan3Biomedicalelement.classList.remove("Other-highlighted");
+       PHIL386CoopPlan3Biomedicalelement.classList.add("Other");
+       
+       that.removeFromClicked("PHIL386CoopPlan3Biomedical");
+ } 
        break;
       case "CoopPlan4":
 if (!ENGL199CoopPlan4flag) { 
@@ -7428,6 +7198,13 @@ if (!MATH300CoopPlan3Biomedicalflag) {
        MATH300CoopPlan3Biomedicalelement.classList.add("MATH");
        
        that.removeFromClicked("MATH300CoopPlan3Biomedical");
+ } 
+if (!STAT337CoopPlan3Biomedicalflag) { 
+       var STAT337CoopPlan3Biomedicalelement = document.getElementById("STAT337CoopPlan3Biomedical");
+       STAT337CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
+       STAT337CoopPlan3Biomedicalelement.classList.add("MATH");
+       
+       that.removeFromClicked("STAT337CoopPlan3Biomedical");
  } 
        break;
       case "CoopPlan4":
@@ -9817,6 +9594,13 @@ if (!MECE380CoopPlan3Biomedicalflag) {
        
        that.removeFromClicked("MECE380CoopPlan3Biomedical");
  } 
+if (!MECE563CoopPlan3Biomedicalflag) { 
+       var MECE563CoopPlan3Biomedicalelement = document.getElementById("MECE563CoopPlan3Biomedical");
+       MECE563CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+       MECE563CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
+       
+       that.removeFromClicked("MECE563CoopPlan3Biomedical");
+ } 
 if (!MECE430CoopPlan3Biomedicalflag) { 
        var MECE430CoopPlan3Biomedicalelement = document.getElementById("MECE430CoopPlan3Biomedical");
        MECE430CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
@@ -9844,6 +9628,13 @@ if (!MECE420CoopPlan3Biomedicalflag) {
        MECE420CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
        
        that.removeFromClicked("MECE420CoopPlan3Biomedical");
+ } 
+if (!MECE485CoopPlan3Biomedicalflag) { 
+       var MECE485CoopPlan3Biomedicalelement = document.getElementById("MECE485CoopPlan3Biomedical");
+       MECE485CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+       MECE485CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
+       
+       that.removeFromClicked("MECE485CoopPlan3Biomedical");
  } 
 if (!MECE403CoopPlan3Biomedicalflag) { 
        var MECE403CoopPlan3Biomedicalelement = document.getElementById("MECE403CoopPlan3Biomedical");
@@ -10002,128 +9793,156 @@ if (!MECE451CoopPlan4flag) {
     switch(planName) {
       case "TraditionalPlan2A3A4A":
         var COMPelements = document.getElementsByClassName("COMP-highlighted");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;        
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2A3A4A0");
+          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2A3A4A" + i);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2A3A4B":
         var COMPelements = document.getElementsByClassName("COMP-highlighted");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;        
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2A3A4B0");
+          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2A3A4B" + i);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2A3B4A":
         var COMPelements = document.getElementsByClassName("COMP-highlighted");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;        
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2A3B4A0");
+          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2A3B4A" + i);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2A3B4B":
         var COMPelements = document.getElementsByClassName("COMP-highlighted");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;        
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2A3B4B0");
+          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2A3B4B" + i);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2B3A4A":
         var COMPelements = document.getElementsByClassName("COMP-highlighted");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;        
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2B3A4A0");
+          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2B3A4A" + i);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2B3A4B":
         var COMPelements = document.getElementsByClassName("COMP-highlighted");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;        
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2B3A4B0");
+          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2B3A4B" + i);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2B3B4A":
         var COMPelements = document.getElementsByClassName("COMP-highlighted");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;        
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2B3B4A0");
+          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2B3B4A" + i);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2B3B4B":
         var COMPelements = document.getElementsByClassName("COMP-highlighted");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;        
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2B3B4B0");
+          that.removeFromClicked("ComplementaryElectiveTraditionalPlan2B3B4B" + i);
+          i = i + 1;
         }
        break;
       case "AlternatePlan3A4A":
         var COMPelements = document.getElementsByClassName("COMP-highlighted");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;        
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("ComplementaryElectiveAlternatePlan3A4A0");
+          that.removeFromClicked("ComplementaryElectiveAlternatePlan3A4A" + i);
+          i = i + 1;
         }
        break;
       case "CoopPlan13A":
         var COMPelements = document.getElementsByClassName("COMP-highlighted");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;        
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("ComplementaryElectiveCoopPlan13A0");
+          that.removeFromClicked("ComplementaryElectiveCoopPlan13A" + i);
+          i = i + 1;
         }
        break;
       case "CoopPlan13B":
         var COMPelements = document.getElementsByClassName("COMP-highlighted");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;        
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("ComplementaryElectiveCoopPlan13B0");
+          that.removeFromClicked("ComplementaryElectiveCoopPlan13B" + i);
+          i = i + 1;
         }
        break;
       case "CoopPlan2":
         var COMPelements = document.getElementsByClassName("COMP-highlighted");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;        
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("ComplementaryElectiveCoopPlan20");
+          that.removeFromClicked("ComplementaryElectiveCoopPlan2" + i);
+          i = i + 1;
         }
        break;
       case "CoopPlan3Biomedical":
         var COMPelements = document.getElementsByClassName("COMP-highlighted");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;        
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("ComplementaryElectiveCoopPlan3Biomedical0");
+          that.removeFromClicked("ComplementaryElectiveCoopPlan3Biomedical" + i);
+          i = i + 1;
         }
        break;
       case "CoopPlan4":
         var COMPelements = document.getElementsByClassName("COMP-highlighted");
-        for (let i = 0; i < COMPelements.length; i++) {
-          var currelement = document.getElementById(COMPelements.item(i).id);
+        var i = 0;        
+        while (COMPelements.length > 0) {
+          var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("ComplementaryElectiveCoopPlan40");
+          that.removeFromClicked("ComplementaryElectiveCoopPlan4" + i);
+          i = i + 1;
         }
        break;
        }
@@ -10133,415 +9952,156 @@ if (!MECE451CoopPlan4flag) {
     switch(planName) {
       case "TraditionalPlan2A3A4A":
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;        
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4A0");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4A1");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4A2");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4A3");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4A" + i);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2A3A4B":
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;        
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4B0");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4B1");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4B2");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4B3");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4B" + i);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2A3B4A":
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;        
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3B4A0");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3B4A1");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3B4A2");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3B4A3");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3B4A" + i);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2A3B4B":
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;        
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3B4B0");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3B4B1");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3B4B2");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3B4B3");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3B4B" + i);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2B3A4A":
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;        
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3A4A0");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3A4A1");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3A4A2");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3A4A3");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3A4A" + i);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2B3A4B":
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;        
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3A4B0");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3A4B1");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3A4B2");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3A4B3");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3A4B" + i);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2B3B4A":
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;        
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3B4A0");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3B4A1");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3B4A2");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3B4A3");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3B4A" + i);
+          i = i + 1;
         }
        break;
       case "TraditionalPlan2B3B4B":
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;        
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3B4B0");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3B4B1");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3B4B2");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3B4B3");
+          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2B3B4B" + i);
+          i = i + 1;
         }
        break;
       case "AlternatePlan3A4A":
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;        
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan3A4A0");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan3A4A1");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan3A4A2");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan3A4A3");
+          that.removeFromClicked("ProgramTechnicalElectiveAlternatePlan3A4A" + i);
+          i = i + 1;
         }
        break;
       case "CoopPlan13A":
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;        
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan13A0");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan13A1");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan13A2");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan13A3");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan13A" + i);
+          i = i + 1;
         }
        break;
       case "CoopPlan13B":
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;        
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan13B0");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan13B1");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan13B2");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan13B3");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan13B" + i);
+          i = i + 1;
         }
        break;
       case "CoopPlan2":
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;        
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan20");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan21");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan22");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan23");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan2" + i);
+          i = i + 1;
         }
        break;
       case "CoopPlan3Biomedical":
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;        
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan3Biomedical0");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan3Biomedical1");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan3Biomedical2");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan3Biomedical" + i);
+          i = i + 1;
         }
        break;
       case "CoopPlan4":
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
+        var i = 0;        
+        while (PROGelements.length > 0) {
+          var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan40");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan41");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan42");
-        }
-        var PROGelements = document.getElementsByClassName("PROG-highlighted");
-        for (let i = 0; i < PROGelements.length; i++) {
-          var currelement = document.getElementById(PROGelements.item(i).id);
-          currelement.classList.remove("PROG-highlighted");
-          currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan43");
+          that.removeFromClicked("ProgramTechnicalElectiveCoopPlan4" + i);
+          i = i + 1;
         }
        break;
        }
@@ -10550,114 +10110,80 @@ if (!MECE451CoopPlan4flag) {
     switch(planName) {
       case "TraditionalPlan2A3A4A":
         var ITSelements = document.getElementsByClassName("ITS-highlighted");
-        for (let i = 0; i < ITSelements.length; i++) {
-          var currelement = document.getElementById(ITSelements.item(i).id);
+        var i = 0;        
+        while (ITSelements.length > 0) {
+          var currelement = document.getElementById(ITSelements.item(0).id);
           currelement.classList.remove("ITS-highlighted");
           currelement.classList.add("ITS");
-          that.removeFromClicked("ITSElectiveTraditionalPlan2A3A4A0");
+          that.removeFromClicked("ITSElectiveTraditionalPlan2A3A4A" + i);
+          i = i + 1;
         }
        break;
       case "AlternatePlan3A4A":
         var ITSelements = document.getElementsByClassName("ITS-highlighted");
-        for (let i = 0; i < ITSelements.length; i++) {
-          var currelement = document.getElementById(ITSelements.item(i).id);
+        var i = 0;        
+        while (ITSelements.length > 0) {
+          var currelement = document.getElementById(ITSelements.item(0).id);
           currelement.classList.remove("ITS-highlighted");
           currelement.classList.add("ITS");
-          that.removeFromClicked("ITSElectiveAlternatePlan3A4A0");
+          that.removeFromClicked("ITSElectiveAlternatePlan3A4A" + i);
+          i = i + 1;
         }
        break;
       case "CoopPlan13A":
         var ITSelements = document.getElementsByClassName("ITS-highlighted");
-        for (let i = 0; i < ITSelements.length; i++) {
-          var currelement = document.getElementById(ITSelements.item(i).id);
+        var i = 0;        
+        while (ITSelements.length > 0) {
+          var currelement = document.getElementById(ITSelements.item(0).id);
           currelement.classList.remove("ITS-highlighted");
           currelement.classList.add("ITS");
-          that.removeFromClicked("ITSElectiveCoopPlan13A0");
+          that.removeFromClicked("ITSElectiveCoopPlan13A" + i);
+          i = i + 1;
         }
        break;
       case "CoopPlan13B":
         var ITSelements = document.getElementsByClassName("ITS-highlighted");
-        for (let i = 0; i < ITSelements.length; i++) {
-          var currelement = document.getElementById(ITSelements.item(i).id);
+        var i = 0;        
+        while (ITSelements.length > 0) {
+          var currelement = document.getElementById(ITSelements.item(0).id);
           currelement.classList.remove("ITS-highlighted");
           currelement.classList.add("ITS");
-          that.removeFromClicked("ITSElectiveCoopPlan13B0");
+          that.removeFromClicked("ITSElectiveCoopPlan13B" + i);
+          i = i + 1;
         }
        break;
       case "CoopPlan2":
         var ITSelements = document.getElementsByClassName("ITS-highlighted");
-        for (let i = 0; i < ITSelements.length; i++) {
-          var currelement = document.getElementById(ITSelements.item(i).id);
+        var i = 0;        
+        while (ITSelements.length > 0) {
+          var currelement = document.getElementById(ITSelements.item(0).id);
           currelement.classList.remove("ITS-highlighted");
           currelement.classList.add("ITS");
-          that.removeFromClicked("ITSElectiveCoopPlan20");
+          that.removeFromClicked("ITSElectiveCoopPlan2" + i);
+          i = i + 1;
         }
        break;
       case "CoopPlan3Biomedical":
         var ITSelements = document.getElementsByClassName("ITS-highlighted");
-        for (let i = 0; i < ITSelements.length; i++) {
-          var currelement = document.getElementById(ITSelements.item(i).id);
+        var i = 0;        
+        while (ITSelements.length > 0) {
+          var currelement = document.getElementById(ITSelements.item(0).id);
           currelement.classList.remove("ITS-highlighted");
           currelement.classList.add("ITS");
-          that.removeFromClicked("ITSElectiveCoopPlan3Biomedical0");
+          that.removeFromClicked("ITSElectiveCoopPlan3Biomedical" + i);
+          i = i + 1;
         }
        break;
       case "CoopPlan4":
         var ITSelements = document.getElementsByClassName("ITS-highlighted");
-        for (let i = 0; i < ITSelements.length; i++) {
-          var currelement = document.getElementById(ITSelements.item(i).id);
+        var i = 0;        
+        while (ITSelements.length > 0) {
+          var currelement = document.getElementById(ITSelements.item(0).id);
           currelement.classList.remove("ITS-highlighted");
           currelement.classList.add("ITS");
-          that.removeFromClicked("ITSElectiveCoopPlan40");
+          that.removeFromClicked("ITSElectiveCoopPlan4" + i);
+          i = i + 1;
         }
-       break;
-       }
-      break;
-  case "":
-    switch(planName) {
-      case "CoopPlan3Biomedical":
-if (!BME320CoopPlan3Biomedicalflag) { 
-       var BME320CoopPlan3Biomedicalelement = document.getElementById("BME320CoopPlan3Biomedical");
-       BME320CoopPlan3Biomedicalelement.classList.remove("-highlighted");
-       BME320CoopPlan3Biomedicalelement.classList.add("");
-       
-       that.removeFromClicked("BME320CoopPlan3Biomedical");
- } 
-if (!BME321CoopPlan3Biomedicalflag) { 
-       var BME321CoopPlan3Biomedicalelement = document.getElementById("BME321CoopPlan3Biomedical");
-       BME321CoopPlan3Biomedicalelement.classList.remove("-highlighted");
-       BME321CoopPlan3Biomedicalelement.classList.add("");
-       
-       that.removeFromClicked("BME321CoopPlan3Biomedical");
- } 
-if (!MECE563CoopPlan3Biomedicalflag) { 
-       var MECE563CoopPlan3Biomedicalelement = document.getElementById("MECE563CoopPlan3Biomedical");
-       MECE563CoopPlan3Biomedicalelement.classList.remove("-highlighted");
-       MECE563CoopPlan3Biomedicalelement.classList.add("");
-       
-       that.removeFromClicked("MECE563CoopPlan3Biomedical");
- } 
-if (!STAT337CoopPlan3Biomedicalflag) { 
-       var STAT337CoopPlan3Biomedicalelement = document.getElementById("STAT337CoopPlan3Biomedical");
-       STAT337CoopPlan3Biomedicalelement.classList.remove("-highlighted");
-       STAT337CoopPlan3Biomedicalelement.classList.add("");
-       
-       that.removeFromClicked("STAT337CoopPlan3Biomedical");
- } 
-if (!MECE485CoopPlan3Biomedicalflag) { 
-       var MECE485CoopPlan3Biomedicalelement = document.getElementById("MECE485CoopPlan3Biomedical");
-       MECE485CoopPlan3Biomedicalelement.classList.remove("-highlighted");
-       MECE485CoopPlan3Biomedicalelement.classList.add("");
-       
-       that.removeFromClicked("MECE485CoopPlan3Biomedical");
- } 
-if (!PHIL386CoopPlan3Biomedicalflag) { 
-       var PHIL386CoopPlan3Biomedicalelement = document.getElementById("PHIL386CoopPlan3Biomedical");
-       PHIL386CoopPlan3Biomedicalelement.classList.remove("-highlighted");
-       PHIL386CoopPlan3Biomedicalelement.classList.add("");
-       
-       that.removeFromClicked("PHIL386CoopPlan3Biomedical");
- } 
        break;
        }
       break;
@@ -10776,6 +10302,12 @@ break;   default:
   var ComplementaryElectiveTraditionalPlan2A3A4A0flag = false;
   var ComplementaryElectiveTraditionalPlan2A3A4A0rflag = false;
  var ComplementaryElectiveTraditionalPlan2A3A4A0Time = new Date().getTime();
+  var ProgramTechnicalElectiveTraditionalPlan2A3A4A0flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2A3A4A0rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2A3A4A0Time = new Date().getTime();
+  var ProgramTechnicalElectiveTraditionalPlan2A3A4A1flag = false;
+  var ProgramTechnicalElectiveTraditionalPlan2A3A4A1rflag = false;
+ var ProgramTechnicalElectiveTraditionalPlan2A3A4A1Time = new Date().getTime();
   var ENGG404TraditionalPlan2A3A4Aflag = false;
   var ENGG404TraditionalPlan2A3A4Arflag = false;
  var ENGG404TraditionalPlan2A3A4ATime = new Date().getTime();
@@ -10788,12 +10320,6 @@ break;   default:
   var MECE463TraditionalPlan2A3A4Aflag = false;
   var MECE463TraditionalPlan2A3A4Arflag = false;
  var MECE463TraditionalPlan2A3A4ATime = new Date().getTime();
-  var ProgramTechnicalElectiveTraditionalPlan2A3A4A0flag = false;
-  var ProgramTechnicalElectiveTraditionalPlan2A3A4A0rflag = false;
- var ProgramTechnicalElectiveTraditionalPlan2A3A4A0Time = new Date().getTime();
-  var ProgramTechnicalElectiveTraditionalPlan2A3A4A1flag = false;
-  var ProgramTechnicalElectiveTraditionalPlan2A3A4A1rflag = false;
- var ProgramTechnicalElectiveTraditionalPlan2A3A4A1Time = new Date().getTime();
   var ProgramTechnicalElectiveTraditionalPlan2A3A4A2flag = false;
   var ProgramTechnicalElectiveTraditionalPlan2A3A4A2rflag = false;
  var ProgramTechnicalElectiveTraditionalPlan2A3A4A2Time = new Date().getTime();
@@ -12004,6 +11530,56 @@ ComplementaryElectiveTraditionalPlan2A3A4A0Time = currentTime;
       ComplementaryElectiveTraditionalPlan2A3A4A0flag=false
   }
 };
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A0Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2A3A4A0Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2A3A4A0Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2A3A4A0Time = currentTime;
+  var ProgramTechnicalElectiveTraditionalPlan2A3A4A0element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4A0");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3A4A0flag) {
+     if (ProgramTechnicalElectiveTraditionalPlan2A3A4A0element.classList.contains("PROG-highlighted")) { 
+     ProgramTechnicalElectiveTraditionalPlan2A3A4A0element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveTraditionalPlan2A3A4A0element.classList.add("PROG");
+      return;
+}     ProgramTechnicalElectiveTraditionalPlan2A3A4A0element.classList.remove("PROG");
+     ProgramTechnicalElectiveTraditionalPlan2A3A4A0element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4A0", "PROG"]);
+      ProgramTechnicalElectiveTraditionalPlan2A3A4A0flag=true
+  }
+ else {
+     ProgramTechnicalElectiveTraditionalPlan2A3A4A0element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveTraditionalPlan2A3A4A0element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4A0");
+      ProgramTechnicalElectiveTraditionalPlan2A3A4A0flag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A1Listener = function () {
+var currentTime = new Date().getTime();
+if (currentTime - ProgramTechnicalElectiveTraditionalPlan2A3A4A1Time <= 200) { 
+        ProgramTechnicalElectiveTraditionalPlan2A3A4A1Time = currentTime;
+        return;
+    }
+ProgramTechnicalElectiveTraditionalPlan2A3A4A1Time = currentTime;
+  var ProgramTechnicalElectiveTraditionalPlan2A3A4A1element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4A1");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3A4A1flag) {
+     if (ProgramTechnicalElectiveTraditionalPlan2A3A4A1element.classList.contains("PROG-highlighted")) { 
+     ProgramTechnicalElectiveTraditionalPlan2A3A4A1element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveTraditionalPlan2A3A4A1element.classList.add("PROG");
+      return;
+}     ProgramTechnicalElectiveTraditionalPlan2A3A4A1element.classList.remove("PROG");
+     ProgramTechnicalElectiveTraditionalPlan2A3A4A1element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4A1", "PROG"]);
+      ProgramTechnicalElectiveTraditionalPlan2A3A4A1flag=true
+  }
+ else {
+     ProgramTechnicalElectiveTraditionalPlan2A3A4A1element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveTraditionalPlan2A3A4A1element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4A1");
+      ProgramTechnicalElectiveTraditionalPlan2A3A4A1flag=false
+  }
+};
 $scope.ENGG404TraditionalPlan2A3A4AListener = function () {
 var currentTime = new Date().getTime();
 if (currentTime - ENGG404TraditionalPlan2A3A4ATime <= 200) { 
@@ -12116,56 +11692,6 @@ MECE463TraditionalPlan2A3A4ATime = currentTime;
      MECE463TraditionalPlan2A3A4Aelement.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE463TraditionalPlan2A3A4A");
       MECE463TraditionalPlan2A3A4Aflag=false
-  }
-};
-$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A0Listener = function () {
-var currentTime = new Date().getTime();
-if (currentTime - ProgramTechnicalElectiveTraditionalPlan2A3A4A0Time <= 200) { 
-        ProgramTechnicalElectiveTraditionalPlan2A3A4A0Time = currentTime;
-        return;
-    }
-ProgramTechnicalElectiveTraditionalPlan2A3A4A0Time = currentTime;
-  var ProgramTechnicalElectiveTraditionalPlan2A3A4A0element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4A0");
- if (!ProgramTechnicalElectiveTraditionalPlan2A3A4A0flag) {
-     if (ProgramTechnicalElectiveTraditionalPlan2A3A4A0element.classList.contains("PROG-highlighted")) { 
-     ProgramTechnicalElectiveTraditionalPlan2A3A4A0element.classList.remove("PROG-highlighted");
-     ProgramTechnicalElectiveTraditionalPlan2A3A4A0element.classList.add("PROG");
-      return;
-}     ProgramTechnicalElectiveTraditionalPlan2A3A4A0element.classList.remove("PROG");
-     ProgramTechnicalElectiveTraditionalPlan2A3A4A0element.classList.add("PROG-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4A0", "PROG"]);
-      ProgramTechnicalElectiveTraditionalPlan2A3A4A0flag=true
-  }
- else {
-     ProgramTechnicalElectiveTraditionalPlan2A3A4A0element.classList.remove("PROG-highlighted");
-     ProgramTechnicalElectiveTraditionalPlan2A3A4A0element.classList.add("PROG");
-     that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4A0");
-      ProgramTechnicalElectiveTraditionalPlan2A3A4A0flag=false
-  }
-};
-$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A1Listener = function () {
-var currentTime = new Date().getTime();
-if (currentTime - ProgramTechnicalElectiveTraditionalPlan2A3A4A1Time <= 200) { 
-        ProgramTechnicalElectiveTraditionalPlan2A3A4A1Time = currentTime;
-        return;
-    }
-ProgramTechnicalElectiveTraditionalPlan2A3A4A1Time = currentTime;
-  var ProgramTechnicalElectiveTraditionalPlan2A3A4A1element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4A1");
- if (!ProgramTechnicalElectiveTraditionalPlan2A3A4A1flag) {
-     if (ProgramTechnicalElectiveTraditionalPlan2A3A4A1element.classList.contains("PROG-highlighted")) { 
-     ProgramTechnicalElectiveTraditionalPlan2A3A4A1element.classList.remove("PROG-highlighted");
-     ProgramTechnicalElectiveTraditionalPlan2A3A4A1element.classList.add("PROG");
-      return;
-}     ProgramTechnicalElectiveTraditionalPlan2A3A4A1element.classList.remove("PROG");
-     ProgramTechnicalElectiveTraditionalPlan2A3A4A1element.classList.add("PROG-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan2A3A4A1", "PROG"]);
-      ProgramTechnicalElectiveTraditionalPlan2A3A4A1flag=true
-  }
- else {
-     ProgramTechnicalElectiveTraditionalPlan2A3A4A1element.classList.remove("PROG-highlighted");
-     ProgramTechnicalElectiveTraditionalPlan2A3A4A1element.classList.add("PROG");
-     that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan2A3A4A1");
-      ProgramTechnicalElectiveTraditionalPlan2A3A4A1flag=false
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A2Listener = function () {
@@ -13284,6 +12810,52 @@ $scope.ComplementaryElectiveTraditionalPlan2A3A4A0RCListener = function () {
       ComplementaryElectiveTraditionalPlan2A3A4A0rflag=false
   }
 };
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A0RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4A0desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3A4A0rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3A4A0rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3A4A0rflag=false
+  }
+};
+$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A1RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4A1desc");
+ if (!ProgramTechnicalElectiveTraditionalPlan2A3A4A1rflag) {
+       if (element.classList.contains("tooltiptextleft")) {
+        element.classList.remove("tooltiptextleft");
+        element.classList.add("tooltiptextleft-locked");
+    } else {
+        element.classList.remove("tooltiptextright");
+        element.classList.add("tooltiptextright-locked");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3A4A1rflag=true
+  }
+ else {
+       if (element.classList.contains("tooltiptextleft-locked")) {
+        element.classList.remove("tooltiptextleft-locked");
+        element.classList.add("tooltiptextleft");
+    } else {
+        element.classList.remove("tooltiptextright-locked");
+        element.classList.add("tooltiptextright");
+    }
+      ProgramTechnicalElectiveTraditionalPlan2A3A4A1rflag=false
+  }
+};
 $scope.ENGG404TraditionalPlan2A3A4ARCListener = function () {
   var element = document.getElementById("ENGG404TraditionalPlan2A3A4Adesc");
  if (!ENGG404TraditionalPlan2A3A4Arflag) {
@@ -13374,52 +12946,6 @@ $scope.MECE463TraditionalPlan2A3A4ARCListener = function () {
         element.classList.add("tooltiptextright");
     }
       MECE463TraditionalPlan2A3A4Arflag=false
-  }
-};
-$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A0RCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4A0desc");
- if (!ProgramTechnicalElectiveTraditionalPlan2A3A4A0rflag) {
-       if (element.classList.contains("tooltiptextleft")) {
-        element.classList.remove("tooltiptextleft");
-        element.classList.add("tooltiptextleft-locked");
-    } else {
-        element.classList.remove("tooltiptextright");
-        element.classList.add("tooltiptextright-locked");
-    }
-      ProgramTechnicalElectiveTraditionalPlan2A3A4A0rflag=true
-  }
- else {
-       if (element.classList.contains("tooltiptextleft-locked")) {
-        element.classList.remove("tooltiptextleft-locked");
-        element.classList.add("tooltiptextleft");
-    } else {
-        element.classList.remove("tooltiptextright-locked");
-        element.classList.add("tooltiptextright");
-    }
-      ProgramTechnicalElectiveTraditionalPlan2A3A4A0rflag=false
-  }
-};
-$scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A1RCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan2A3A4A1desc");
- if (!ProgramTechnicalElectiveTraditionalPlan2A3A4A1rflag) {
-       if (element.classList.contains("tooltiptextleft")) {
-        element.classList.remove("tooltiptextleft");
-        element.classList.add("tooltiptextleft-locked");
-    } else {
-        element.classList.remove("tooltiptextright");
-        element.classList.add("tooltiptextright-locked");
-    }
-      ProgramTechnicalElectiveTraditionalPlan2A3A4A1rflag=true
-  }
- else {
-       if (element.classList.contains("tooltiptextleft-locked")) {
-        element.classList.remove("tooltiptextleft-locked");
-        element.classList.add("tooltiptextleft");
-    } else {
-        element.classList.remove("tooltiptextright-locked");
-        element.classList.add("tooltiptextright");
-    }
-      ProgramTechnicalElectiveTraditionalPlan2A3A4A1rflag=false
   }
 };
 $scope.ProgramTechnicalElectiveTraditionalPlan2A3A4A2RCListener = function () {
@@ -47579,14 +47105,14 @@ MECE200CoopPlan3BiomedicalTime = currentTime;
      MECE200CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
      MECE200CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
       return;
-}      that.addLine(getLine1027());
+}      that.addLine(getLine1030());
      MECE200CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION");
      MECE200CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION-highlighted");
      that.addToClicked(["MECE200CoopPlan3Biomedical", "ENGINEERINGPROFESSION"]);
       MECE200CoopPlan3Biomedicalflag=true
   }
  else {
-      that.removeLine(getLine1027());
+      that.removeLine(getLine1030());
      MECE200CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGPROFESSION-highlighted");
      MECE200CoopPlan3Biomedicalelement.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("MECE200CoopPlan3Biomedical");
@@ -47611,7 +47137,7 @@ MECE250CoopPlan3BiomedicalTime = currentTime;
       that.addLine(getLine969());
       that.addLine(getLine983());
       that.addLine(getLine995());
-      that.addLine(getLine1025());
+      that.addLine(getLine1028());
      MECE250CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MECE250CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE250CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
@@ -47623,7 +47149,7 @@ MECE250CoopPlan3BiomedicalTime = currentTime;
       that.removeLine(getLine969());
       that.removeLine(getLine983());
       that.removeLine(getLine995());
-      that.removeLine(getLine1025());
+      that.removeLine(getLine1028());
      MECE250CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE250CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE250CoopPlan3Biomedical");
@@ -47850,22 +47376,22 @@ if (currentTime - BME320CoopPlan3BiomedicalTime <= 200) {
 BME320CoopPlan3BiomedicalTime = currentTime;
   var BME320CoopPlan3Biomedicalelement = document.getElementById("BME320CoopPlan3Biomedical");
  if (!BME320CoopPlan3Biomedicalflag) {
-     if (BME320CoopPlan3Biomedicalelement.classList.contains("course-highlighted")) { 
-     BME320CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
-     BME320CoopPlan3Biomedicalelement.classList.add("course");
+     if (BME320CoopPlan3Biomedicalelement.classList.contains("BASICSCIENCES-highlighted")) { 
+     BME320CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
+     BME320CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
       return;
 }      that.addLine(getLine1003());
       that.addLine(getLine1018());
-     BME320CoopPlan3Biomedicalelement.classList.remove("course");
-     BME320CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["BME320CoopPlan3Biomedical", "course"]);
+     BME320CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES");
+     BME320CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES-highlighted");
+     that.addToClicked(["BME320CoopPlan3Biomedical", "BASICSCIENCES"]);
       BME320CoopPlan3Biomedicalflag=true
   }
  else {
       that.removeLine(getLine1003());
       that.removeLine(getLine1018());
-     BME320CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
-     BME320CoopPlan3Biomedicalelement.classList.add("course");
+     BME320CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
+     BME320CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
      that.removeFromClicked("BME320CoopPlan3Biomedical");
       BME320CoopPlan3Biomedicalflag=false
   }
@@ -47883,14 +47409,14 @@ ENGM310CoopPlan3BiomedicalTime = currentTime;
      ENGM310CoopPlan3Biomedicalelement.classList.remove("Other-highlighted");
      ENGM310CoopPlan3Biomedicalelement.classList.add("Other");
       return;
-}      that.addLine(getLine1034());
+}      that.addLine(getLine1037());
      ENGM310CoopPlan3Biomedicalelement.classList.remove("Other");
      ENGM310CoopPlan3Biomedicalelement.classList.add("Other-highlighted");
      that.addToClicked(["ENGM310CoopPlan3Biomedical", "Other"]);
       ENGM310CoopPlan3Biomedicalflag=true
   }
  else {
-      that.removeLine(getLine1034());
+      that.removeLine(getLine1037());
      ENGM310CoopPlan3Biomedicalelement.classList.remove("Other-highlighted");
      ENGM310CoopPlan3Biomedicalelement.classList.add("Other");
      that.removeFromClicked("ENGM310CoopPlan3Biomedical");
@@ -47910,14 +47436,14 @@ ENGM401CoopPlan3BiomedicalTime = currentTime;
      ENGM401CoopPlan3Biomedicalelement.classList.remove("Other-highlighted");
      ENGM401CoopPlan3Biomedicalelement.classList.add("Other");
       return;
-}      that.addLine(getLine1035());
+}      that.addLine(getLine1038());
      ENGM401CoopPlan3Biomedicalelement.classList.remove("Other");
      ENGM401CoopPlan3Biomedicalelement.classList.add("Other-highlighted");
      that.addToClicked(["ENGM401CoopPlan3Biomedical", "Other"]);
       ENGM401CoopPlan3Biomedicalflag=true
   }
  else {
-      that.removeLine(getLine1035());
+      that.removeLine(getLine1038());
      ENGM401CoopPlan3Biomedicalelement.classList.remove("Other-highlighted");
      ENGM401CoopPlan3Biomedicalelement.classList.add("Other");
      that.removeFromClicked("ENGM401CoopPlan3Biomedical");
@@ -47939,8 +47465,8 @@ MECE340CoopPlan3BiomedicalTime = currentTime;
       return;
 }      that.addLine(getLine977());
       that.addLine(getLine1011());
-      that.addLine(getLine1023());
-      that.addLine(getLine1029());
+      that.addLine(getLine1026());
+      that.addLine(getLine1032());
      MECE340CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MECE340CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE340CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
@@ -47949,8 +47475,8 @@ MECE340CoopPlan3BiomedicalTime = currentTime;
  else {
       that.removeLine(getLine977());
       that.removeLine(getLine1011());
-      that.removeLine(getLine1023());
-      that.removeLine(getLine1029());
+      that.removeLine(getLine1026());
+      that.removeLine(getLine1032());
      MECE340CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE340CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE340CoopPlan3Biomedical");
@@ -47976,8 +47502,8 @@ MECE360CoopPlan3BiomedicalTime = currentTime;
       that.addLine(getLine981());
       that.addLine(getLine982());
       that.addLine(getLine1005());
-      that.addLine(getLine1024());
-      that.addLine(getLine1030());
+      that.addLine(getLine1027());
+      that.addLine(getLine1033());
      MECE360CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN");
      MECE360CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN-highlighted");
      that.addToClicked(["MECE360CoopPlan3Biomedical", "ENGINEERINGDESIGN"]);
@@ -47990,8 +47516,8 @@ MECE360CoopPlan3BiomedicalTime = currentTime;
       that.removeLine(getLine981());
       that.removeLine(getLine982());
       that.removeLine(getLine1005());
-      that.removeLine(getLine1024());
-      that.removeLine(getLine1030());
+      that.removeLine(getLine1027());
+      that.removeLine(getLine1033());
      MECE360CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE360CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN");
      that.removeFromClicked("MECE360CoopPlan3Biomedical");
@@ -48013,7 +47539,8 @@ MECE362CoopPlan3BiomedicalTime = currentTime;
       return;
 }      that.addLine(getLine982());
       that.addLine(getLine983());
-      that.addLine(getLine1031());
+      that.addLine(getLine1021());
+      that.addLine(getLine1034());
      MECE362CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN");
      MECE362CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN-highlighted");
      that.addToClicked(["MECE362CoopPlan3Biomedical", "ENGINEERINGDESIGN"]);
@@ -48022,7 +47549,8 @@ MECE362CoopPlan3BiomedicalTime = currentTime;
  else {
       that.removeLine(getLine982());
       that.removeLine(getLine983());
-      that.removeLine(getLine1031());
+      that.removeLine(getLine1021());
+      that.removeLine(getLine1034());
      MECE362CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE362CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN");
      that.removeFromClicked("MECE362CoopPlan3Biomedical");
@@ -48108,7 +47636,7 @@ MATH300CoopPlan3BiomedicalTime = currentTime;
       that.addLine(getLine988());
       that.addLine(getLine1000());
       that.addLine(getLine1004());
-      that.addLine(getLine1026());
+      that.addLine(getLine1029());
      MATH300CoopPlan3Biomedicalelement.classList.remove("MATH");
      MATH300CoopPlan3Biomedicalelement.classList.add("MATH-highlighted");
      that.addToClicked(["MATH300CoopPlan3Biomedical", "MATH"]);
@@ -48119,7 +47647,7 @@ MATH300CoopPlan3BiomedicalTime = currentTime;
       that.removeLine(getLine988());
       that.removeLine(getLine1000());
       that.removeLine(getLine1004());
-      that.removeLine(getLine1026());
+      that.removeLine(getLine1029());
      MATH300CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
      MATH300CoopPlan3Biomedicalelement.classList.add("MATH");
      that.removeFromClicked("MATH300CoopPlan3Biomedical");
@@ -48144,7 +47672,8 @@ MECE300CoopPlan3BiomedicalTime = currentTime;
       that.addLine(getLine991());
       that.addLine(getLine992());
       that.addLine(getLine993());
-      that.addLine(getLine1021());
+      that.addLine(getLine1020());
+      that.addLine(getLine1024());
      MECE300CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MECE300CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE300CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
@@ -48156,7 +47685,8 @@ MECE300CoopPlan3BiomedicalTime = currentTime;
       that.removeLine(getLine991());
       that.removeLine(getLine992());
       that.removeLine(getLine993());
-      that.removeLine(getLine1021());
+      that.removeLine(getLine1020());
+      that.removeLine(getLine1024());
      MECE300CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE300CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE300CoopPlan3Biomedical");
@@ -48177,7 +47707,7 @@ MECE301CoopPlan3BiomedicalTime = currentTime;
      MECE301CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine993());
-      that.addLine(getLine1022());
+      that.addLine(getLine1025());
      MECE301CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MECE301CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE301CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
@@ -48185,7 +47715,7 @@ MECE301CoopPlan3BiomedicalTime = currentTime;
   }
  else {
       that.removeLine(getLine993());
-      that.removeLine(getLine1022());
+      that.removeLine(getLine1025());
      MECE301CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE301CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE301CoopPlan3Biomedical");
@@ -48214,8 +47744,8 @@ MECE331CoopPlan3BiomedicalTime = currentTime;
       that.addLine(getLine1009());
       that.addLine(getLine1010());
       that.addLine(getLine1015());
-      that.addLine(getLine1020());
-      that.addLine(getLine1028());
+      that.addLine(getLine1023());
+      that.addLine(getLine1031());
      MECE331CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MECE331CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE331CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
@@ -48231,8 +47761,8 @@ MECE331CoopPlan3BiomedicalTime = currentTime;
       that.removeLine(getLine1009());
       that.removeLine(getLine1010());
       that.removeLine(getLine1015());
-      that.removeLine(getLine1020());
-      that.removeLine(getLine1028());
+      that.removeLine(getLine1023());
+      that.removeLine(getLine1031());
      MECE331CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE331CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE331CoopPlan3Biomedical");
@@ -48258,7 +47788,7 @@ MECE371CoopPlan3BiomedicalTime = currentTime;
       that.addLine(getLine1001());
       that.addLine(getLine1012());
       that.addLine(getLine1016());
-      that.addLine(getLine1032());
+      that.addLine(getLine1035());
      MECE371CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MECE371CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE371CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
@@ -48271,7 +47801,7 @@ MECE371CoopPlan3BiomedicalTime = currentTime;
       that.removeLine(getLine1001());
       that.removeLine(getLine1012());
       that.removeLine(getLine1016());
-      that.removeLine(getLine1032());
+      that.removeLine(getLine1035());
      MECE371CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE371CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE371CoopPlan3Biomedical");
@@ -48292,7 +47822,8 @@ MECE380CoopPlan3BiomedicalTime = currentTime;
      MECE380CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine1002());
-      that.addLine(getLine1033());
+      that.addLine(getLine1022());
+      that.addLine(getLine1036());
      MECE380CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MECE380CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE380CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
@@ -48300,7 +47831,8 @@ MECE380CoopPlan3BiomedicalTime = currentTime;
   }
  else {
       that.removeLine(getLine1002());
-      that.removeLine(getLine1033());
+      that.removeLine(getLine1022());
+      that.removeLine(getLine1036());
      MECE380CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE380CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE380CoopPlan3Biomedical");
@@ -48316,22 +47848,22 @@ if (currentTime - BME321CoopPlan3BiomedicalTime <= 200) {
 BME321CoopPlan3BiomedicalTime = currentTime;
   var BME321CoopPlan3Biomedicalelement = document.getElementById("BME321CoopPlan3Biomedical");
  if (!BME321CoopPlan3Biomedicalflag) {
-     if (BME321CoopPlan3Biomedicalelement.classList.contains("course-highlighted")) { 
-     BME321CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
-     BME321CoopPlan3Biomedicalelement.classList.add("course");
+     if (BME321CoopPlan3Biomedicalelement.classList.contains("BASICSCIENCES-highlighted")) { 
+     BME321CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
+     BME321CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
       return;
 }      that.addLine(getLine1003());
       that.addLine(getLine1019());
-     BME321CoopPlan3Biomedicalelement.classList.remove("course");
-     BME321CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["BME321CoopPlan3Biomedical", "course"]);
+     BME321CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES");
+     BME321CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES-highlighted");
+     that.addToClicked(["BME321CoopPlan3Biomedical", "BASICSCIENCES"]);
       BME321CoopPlan3Biomedicalflag=true
   }
  else {
       that.removeLine(getLine1003());
       that.removeLine(getLine1019());
-     BME321CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
-     BME321CoopPlan3Biomedicalelement.classList.add("course");
+     BME321CoopPlan3Biomedicalelement.classList.remove("BASICSCIENCES-highlighted");
+     BME321CoopPlan3Biomedicalelement.classList.add("BASICSCIENCES");
      that.removeFromClicked("BME321CoopPlan3Biomedical");
       BME321CoopPlan3Biomedicalflag=false
   }
@@ -48370,24 +47902,24 @@ if (currentTime - MECE563CoopPlan3BiomedicalTime <= 200) {
 MECE563CoopPlan3BiomedicalTime = currentTime;
   var MECE563CoopPlan3Biomedicalelement = document.getElementById("MECE563CoopPlan3Biomedical");
  if (!MECE563CoopPlan3Biomedicalflag) {
-     if (MECE563CoopPlan3Biomedicalelement.classList.contains("course-highlighted")) { 
-     MECE563CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
-     MECE563CoopPlan3Biomedicalelement.classList.add("course");
+     if (MECE563CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
+     MECE563CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE563CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine1004());
       that.addLine(getLine1005());
       that.addLine(getLine1006());
-     MECE563CoopPlan3Biomedicalelement.classList.remove("course");
-     MECE563CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["MECE563CoopPlan3Biomedical", "course"]);
+     MECE563CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
+     MECE563CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE563CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       MECE563CoopPlan3Biomedicalflag=true
   }
  else {
       that.removeLine(getLine1004());
       that.removeLine(getLine1005());
       that.removeLine(getLine1006());
-     MECE563CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
-     MECE563CoopPlan3Biomedicalelement.classList.add("course");
+     MECE563CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE563CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE563CoopPlan3Biomedical");
       MECE563CoopPlan3Biomedicalflag=false
   }
@@ -48401,18 +47933,18 @@ if (currentTime - STAT337CoopPlan3BiomedicalTime <= 200) {
 STAT337CoopPlan3BiomedicalTime = currentTime;
   var STAT337CoopPlan3Biomedicalelement = document.getElementById("STAT337CoopPlan3Biomedical");
  if (!STAT337CoopPlan3Biomedicalflag) {
-     if (STAT337CoopPlan3Biomedicalelement.classList.contains("course-highlighted")) { 
-     STAT337CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
-     STAT337CoopPlan3Biomedicalelement.classList.add("course");
+     if (STAT337CoopPlan3Biomedicalelement.classList.contains("MATH-highlighted")) { 
+     STAT337CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
+     STAT337CoopPlan3Biomedicalelement.classList.add("MATH");
       return;
-}     STAT337CoopPlan3Biomedicalelement.classList.remove("course");
-     STAT337CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["STAT337CoopPlan3Biomedical", "course"]);
+}     STAT337CoopPlan3Biomedicalelement.classList.remove("MATH");
+     STAT337CoopPlan3Biomedicalelement.classList.add("MATH-highlighted");
+     that.addToClicked(["STAT337CoopPlan3Biomedical", "MATH"]);
       STAT337CoopPlan3Biomedicalflag=true
   }
  else {
-     STAT337CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
-     STAT337CoopPlan3Biomedicalelement.classList.add("course");
+     STAT337CoopPlan3Biomedicalelement.classList.remove("MATH-highlighted");
+     STAT337CoopPlan3Biomedicalelement.classList.add("MATH");
      that.removeFromClicked("STAT337CoopPlan3Biomedical");
       STAT337CoopPlan3Biomedicalflag=false
   }
@@ -48750,24 +48282,30 @@ if (currentTime - MECE485CoopPlan3BiomedicalTime <= 200) {
 MECE485CoopPlan3BiomedicalTime = currentTime;
   var MECE485CoopPlan3Biomedicalelement = document.getElementById("MECE485CoopPlan3Biomedical");
  if (!MECE485CoopPlan3Biomedicalflag) {
-     if (MECE485CoopPlan3Biomedicalelement.classList.contains("course-highlighted")) { 
-     MECE485CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
-     MECE485CoopPlan3Biomedicalelement.classList.add("course");
+     if (MECE485CoopPlan3Biomedicalelement.classList.contains("ENGINEERINGSCIENCES-highlighted")) { 
+     MECE485CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE485CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
       return;
 }      that.addLine(getLine1018());
       that.addLine(getLine1019());
       that.addLine(getLine1020());
-     MECE485CoopPlan3Biomedicalelement.classList.remove("course");
-     MECE485CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["MECE485CoopPlan3Biomedical", "course"]);
+      that.addLine(getLine1021());
+      that.addLine(getLine1022());
+      that.addLine(getLine1023());
+     MECE485CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
+     MECE485CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
+     that.addToClicked(["MECE485CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       MECE485CoopPlan3Biomedicalflag=true
   }
  else {
       that.removeLine(getLine1018());
       that.removeLine(getLine1019());
       that.removeLine(getLine1020());
-     MECE485CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
-     MECE485CoopPlan3Biomedicalelement.classList.add("course");
+      that.removeLine(getLine1021());
+      that.removeLine(getLine1022());
+      that.removeLine(getLine1023());
+     MECE485CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
+     MECE485CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE485CoopPlan3Biomedical");
       MECE485CoopPlan3Biomedicalflag=false
   }
@@ -48785,20 +48323,20 @@ MECE403CoopPlan3BiomedicalTime = currentTime;
      MECE403CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE403CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine1021());
-      that.addLine(getLine1022());
-      that.addLine(getLine1023());
-      that.addLine(getLine1024());
+}      that.addLine(getLine1024());
+      that.addLine(getLine1025());
+      that.addLine(getLine1026());
+      that.addLine(getLine1027());
      MECE403CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MECE403CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE403CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       MECE403CoopPlan3Biomedicalflag=true
   }
  else {
-      that.removeLine(getLine1021());
-      that.removeLine(getLine1022());
-      that.removeLine(getLine1023());
       that.removeLine(getLine1024());
+      that.removeLine(getLine1025());
+      that.removeLine(getLine1026());
+      that.removeLine(getLine1027());
      MECE403CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE403CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE403CoopPlan3Biomedical");
@@ -48818,16 +48356,16 @@ MECE451CoopPlan3BiomedicalTime = currentTime;
      MECE451CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE451CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine1025());
-      that.addLine(getLine1026());
+}      that.addLine(getLine1028());
+      that.addLine(getLine1029());
      MECE451CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES");
      MECE451CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE451CoopPlan3Biomedical", "ENGINEERINGSCIENCES"]);
       MECE451CoopPlan3Biomedicalflag=true
   }
  else {
-      that.removeLine(getLine1025());
-      that.removeLine(getLine1026());
+      that.removeLine(getLine1028());
+      that.removeLine(getLine1029());
      MECE451CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE451CoopPlan3Biomedicalelement.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE451CoopPlan3Biomedical");
@@ -48847,30 +48385,30 @@ MECE460CoopPlan3BiomedicalTime = currentTime;
      MECE460CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE460CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN");
       return;
-}      that.addLine(getLine1027());
-      that.addLine(getLine1028());
-      that.addLine(getLine1029());
-      that.addLine(getLine1030());
+}      that.addLine(getLine1030());
       that.addLine(getLine1031());
       that.addLine(getLine1032());
       that.addLine(getLine1033());
       that.addLine(getLine1034());
       that.addLine(getLine1035());
+      that.addLine(getLine1036());
+      that.addLine(getLine1037());
+      that.addLine(getLine1038());
      MECE460CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN");
      MECE460CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN-highlighted");
      that.addToClicked(["MECE460CoopPlan3Biomedical", "ENGINEERINGDESIGN"]);
       MECE460CoopPlan3Biomedicalflag=true
   }
  else {
-      that.removeLine(getLine1027());
-      that.removeLine(getLine1028());
-      that.removeLine(getLine1029());
       that.removeLine(getLine1030());
       that.removeLine(getLine1031());
       that.removeLine(getLine1032());
       that.removeLine(getLine1033());
       that.removeLine(getLine1034());
       that.removeLine(getLine1035());
+      that.removeLine(getLine1036());
+      that.removeLine(getLine1037());
+      that.removeLine(getLine1038());
      MECE460CoopPlan3Biomedicalelement.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE460CoopPlan3Biomedicalelement.classList.add("ENGINEERINGDESIGN");
      that.removeFromClicked("MECE460CoopPlan3Biomedical");
@@ -48886,18 +48424,18 @@ if (currentTime - PHIL386CoopPlan3BiomedicalTime <= 200) {
 PHIL386CoopPlan3BiomedicalTime = currentTime;
   var PHIL386CoopPlan3Biomedicalelement = document.getElementById("PHIL386CoopPlan3Biomedical");
  if (!PHIL386CoopPlan3Biomedicalflag) {
-     if (PHIL386CoopPlan3Biomedicalelement.classList.contains("course-highlighted")) { 
-     PHIL386CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
-     PHIL386CoopPlan3Biomedicalelement.classList.add("course");
+     if (PHIL386CoopPlan3Biomedicalelement.classList.contains("Other-highlighted")) { 
+     PHIL386CoopPlan3Biomedicalelement.classList.remove("Other-highlighted");
+     PHIL386CoopPlan3Biomedicalelement.classList.add("Other");
       return;
-}     PHIL386CoopPlan3Biomedicalelement.classList.remove("course");
-     PHIL386CoopPlan3Biomedicalelement.classList.add("course-highlighted");
-     that.addToClicked(["PHIL386CoopPlan3Biomedical", "course"]);
+}     PHIL386CoopPlan3Biomedicalelement.classList.remove("Other");
+     PHIL386CoopPlan3Biomedicalelement.classList.add("Other-highlighted");
+     that.addToClicked(["PHIL386CoopPlan3Biomedical", "Other"]);
       PHIL386CoopPlan3Biomedicalflag=true
   }
  else {
-     PHIL386CoopPlan3Biomedicalelement.classList.remove("course-highlighted");
-     PHIL386CoopPlan3Biomedicalelement.classList.add("course");
+     PHIL386CoopPlan3Biomedicalelement.classList.remove("Other-highlighted");
+     PHIL386CoopPlan3Biomedicalelement.classList.add("Other");
      that.removeFromClicked("PHIL386CoopPlan3Biomedical");
       PHIL386CoopPlan3Biomedicalflag=false
   }
@@ -50492,14 +50030,14 @@ CHEM103CoopPlan4Time = currentTime;
      CHEM103CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
      CHEM103CoopPlan4element.classList.add("BASICSCIENCES");
       return;
-}      that.addLine(getLine1038());
+}      that.addLine(getLine1041());
      CHEM103CoopPlan4element.classList.remove("BASICSCIENCES");
      CHEM103CoopPlan4element.classList.add("BASICSCIENCES-highlighted");
      that.addToClicked(["CHEM103CoopPlan4", "BASICSCIENCES"]);
       CHEM103CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1038());
+      that.removeLine(getLine1041());
      CHEM103CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
      CHEM103CoopPlan4element.classList.add("BASICSCIENCES");
      that.removeFromClicked("CHEM103CoopPlan4");
@@ -50544,20 +50082,20 @@ ENGG130CoopPlan4Time = currentTime;
      ENGG130CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
      ENGG130CoopPlan4element.classList.add("BASICSCIENCES");
       return;
-}      that.addLine(getLine1036());
-      that.addLine(getLine1041());
-      that.addLine(getLine1045());
-      that.addLine(getLine1059());
+}      that.addLine(getLine1039());
+      that.addLine(getLine1044());
+      that.addLine(getLine1048());
+      that.addLine(getLine1062());
      ENGG130CoopPlan4element.classList.remove("BASICSCIENCES");
      ENGG130CoopPlan4element.classList.add("BASICSCIENCES-highlighted");
      that.addToClicked(["ENGG130CoopPlan4", "BASICSCIENCES"]);
       ENGG130CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1036());
-      that.removeLine(getLine1041());
-      that.removeLine(getLine1045());
-      that.removeLine(getLine1059());
+      that.removeLine(getLine1039());
+      that.removeLine(getLine1044());
+      that.removeLine(getLine1048());
+      that.removeLine(getLine1062());
      ENGG130CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
      ENGG130CoopPlan4element.classList.add("BASICSCIENCES");
      that.removeFromClicked("ENGG130CoopPlan4");
@@ -50577,14 +50115,14 @@ ENGL199CoopPlan4Time = currentTime;
      ENGL199CoopPlan4element.classList.remove("Other-highlighted");
      ENGL199CoopPlan4element.classList.add("Other");
       return;
-}      that.addLine(getLine1039());
+}      that.addLine(getLine1042());
      ENGL199CoopPlan4element.classList.remove("Other");
      ENGL199CoopPlan4element.classList.add("Other-highlighted");
      that.addToClicked(["ENGL199CoopPlan4", "Other"]);
       ENGL199CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1039());
+      that.removeLine(getLine1042());
      ENGL199CoopPlan4element.classList.remove("Other-highlighted");
      ENGL199CoopPlan4element.classList.add("Other");
      that.removeFromClicked("ENGL199CoopPlan4");
@@ -50604,24 +50142,24 @@ MATH100CoopPlan4Time = currentTime;
      MATH100CoopPlan4element.classList.remove("MATH-highlighted");
      MATH100CoopPlan4element.classList.add("MATH");
       return;
-}      that.addLine(getLine1036());
-      that.addLine(getLine1037());
+}      that.addLine(getLine1039());
       that.addLine(getLine1040());
       that.addLine(getLine1043());
-      that.addLine(getLine1044());
-      that.addLine(getLine1049());
+      that.addLine(getLine1046());
+      that.addLine(getLine1047());
+      that.addLine(getLine1052());
      MATH100CoopPlan4element.classList.remove("MATH");
      MATH100CoopPlan4element.classList.add("MATH-highlighted");
      that.addToClicked(["MATH100CoopPlan4", "MATH"]);
       MATH100CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1036());
-      that.removeLine(getLine1037());
+      that.removeLine(getLine1039());
       that.removeLine(getLine1040());
       that.removeLine(getLine1043());
-      that.removeLine(getLine1044());
-      that.removeLine(getLine1049());
+      that.removeLine(getLine1046());
+      that.removeLine(getLine1047());
+      that.removeLine(getLine1052());
      MATH100CoopPlan4element.classList.remove("MATH-highlighted");
      MATH100CoopPlan4element.classList.add("MATH");
      that.removeFromClicked("MATH100CoopPlan4");
@@ -50641,14 +50179,14 @@ PHYS130CoopPlan4Time = currentTime;
      PHYS130CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
      PHYS130CoopPlan4element.classList.add("BASICSCIENCES");
       return;
-}      that.addLine(getLine1037());
+}      that.addLine(getLine1040());
      PHYS130CoopPlan4element.classList.remove("BASICSCIENCES");
      PHYS130CoopPlan4element.classList.add("BASICSCIENCES-highlighted");
      that.addToClicked(["PHYS130CoopPlan4", "BASICSCIENCES"]);
       PHYS130CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1037());
+      that.removeLine(getLine1040());
      PHYS130CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
      PHYS130CoopPlan4element.classList.add("BASICSCIENCES");
      that.removeFromClicked("PHYS130CoopPlan4");
@@ -50668,16 +50206,16 @@ CHEM105CoopPlan4Time = currentTime;
      CHEM105CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
      CHEM105CoopPlan4element.classList.add("BASICSCIENCES");
       return;
-}      that.addLine(getLine1038());
-      that.addLine(getLine1058());
+}      that.addLine(getLine1041());
+      that.addLine(getLine1061());
      CHEM105CoopPlan4element.classList.remove("BASICSCIENCES");
      CHEM105CoopPlan4element.classList.add("BASICSCIENCES-highlighted");
      that.addToClicked(["CHEM105CoopPlan4", "BASICSCIENCES"]);
       CHEM105CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1038());
-      that.removeLine(getLine1058());
+      that.removeLine(getLine1041());
+      that.removeLine(getLine1061());
      CHEM105CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
      CHEM105CoopPlan4element.classList.add("BASICSCIENCES");
      that.removeFromClicked("CHEM105CoopPlan4");
@@ -50722,16 +50260,16 @@ ENGG160CoopPlan4Time = currentTime;
      ENGG160CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
      ENGG160CoopPlan4element.classList.add("ENGINEERINGDESIGN");
       return;
-}      that.addLine(getLine1039());
-      that.addLine(getLine1053());
+}      that.addLine(getLine1042());
+      that.addLine(getLine1056());
      ENGG160CoopPlan4element.classList.remove("ENGINEERINGDESIGN");
      ENGG160CoopPlan4element.classList.add("ENGINEERINGDESIGN-highlighted");
      that.addToClicked(["ENGG160CoopPlan4", "ENGINEERINGDESIGN"]);
       ENGG160CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1039());
-      that.removeLine(getLine1053());
+      that.removeLine(getLine1042());
+      that.removeLine(getLine1056());
      ENGG160CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
      ENGG160CoopPlan4element.classList.add("ENGINEERINGDESIGN");
      that.removeFromClicked("ENGG160CoopPlan4");
@@ -50751,22 +50289,22 @@ ENPH131CoopPlan4Time = currentTime;
      ENPH131CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
      ENPH131CoopPlan4element.classList.add("BASICSCIENCES");
       return;
-}      that.addLine(getLine1040());
-      that.addLine(getLine1041());
-      that.addLine(getLine1042());
-      that.addLine(getLine1052());
-      that.addLine(getLine1060());
+}      that.addLine(getLine1043());
+      that.addLine(getLine1044());
+      that.addLine(getLine1045());
+      that.addLine(getLine1055());
+      that.addLine(getLine1063());
      ENPH131CoopPlan4element.classList.remove("BASICSCIENCES");
      ENPH131CoopPlan4element.classList.add("BASICSCIENCES-highlighted");
      that.addToClicked(["ENPH131CoopPlan4", "BASICSCIENCES"]);
       ENPH131CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1040());
-      that.removeLine(getLine1041());
-      that.removeLine(getLine1042());
-      that.removeLine(getLine1052());
-      that.removeLine(getLine1060());
+      that.removeLine(getLine1043());
+      that.removeLine(getLine1044());
+      that.removeLine(getLine1045());
+      that.removeLine(getLine1055());
+      that.removeLine(getLine1063());
      ENPH131CoopPlan4element.classList.remove("BASICSCIENCES-highlighted");
      ENPH131CoopPlan4element.classList.add("BASICSCIENCES");
      that.removeFromClicked("ENPH131CoopPlan4");
@@ -50786,28 +50324,28 @@ MATH101CoopPlan4Time = currentTime;
      MATH101CoopPlan4element.classList.remove("MATH-highlighted");
      MATH101CoopPlan4element.classList.add("MATH");
       return;
-}      that.addLine(getLine1042());
-      that.addLine(getLine1043());
+}      that.addLine(getLine1045());
       that.addLine(getLine1046());
-      that.addLine(getLine1047());
+      that.addLine(getLine1049());
       that.addLine(getLine1050());
-      that.addLine(getLine1051());
-      that.addLine(getLine1057());
-      that.addLine(getLine1061());
+      that.addLine(getLine1053());
+      that.addLine(getLine1054());
+      that.addLine(getLine1060());
+      that.addLine(getLine1064());
      MATH101CoopPlan4element.classList.remove("MATH");
      MATH101CoopPlan4element.classList.add("MATH-highlighted");
      that.addToClicked(["MATH101CoopPlan4", "MATH"]);
       MATH101CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1042());
-      that.removeLine(getLine1043());
+      that.removeLine(getLine1045());
       that.removeLine(getLine1046());
-      that.removeLine(getLine1047());
+      that.removeLine(getLine1049());
       that.removeLine(getLine1050());
-      that.removeLine(getLine1051());
-      that.removeLine(getLine1057());
-      that.removeLine(getLine1061());
+      that.removeLine(getLine1053());
+      that.removeLine(getLine1054());
+      that.removeLine(getLine1060());
+      that.removeLine(getLine1064());
      MATH101CoopPlan4element.classList.remove("MATH-highlighted");
      MATH101CoopPlan4element.classList.add("MATH");
      that.removeFromClicked("MATH101CoopPlan4");
@@ -50827,18 +50365,18 @@ MATH102CoopPlan4Time = currentTime;
      MATH102CoopPlan4element.classList.remove("MATH-highlighted");
      MATH102CoopPlan4element.classList.add("MATH");
       return;
-}      that.addLine(getLine1044());
-      that.addLine(getLine1048());
-      that.addLine(getLine1087());
+}      that.addLine(getLine1047());
+      that.addLine(getLine1051());
+      that.addLine(getLine1090());
      MATH102CoopPlan4element.classList.remove("MATH");
      MATH102CoopPlan4element.classList.add("MATH-highlighted");
      that.addToClicked(["MATH102CoopPlan4", "MATH"]);
       MATH102CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1044());
-      that.removeLine(getLine1048());
-      that.removeLine(getLine1087());
+      that.removeLine(getLine1047());
+      that.removeLine(getLine1051());
+      that.removeLine(getLine1090());
      MATH102CoopPlan4element.classList.remove("MATH-highlighted");
      MATH102CoopPlan4element.classList.add("MATH");
      that.removeFromClicked("MATH102CoopPlan4");
@@ -50858,24 +50396,24 @@ CIVE270CoopPlan4Time = currentTime;
      CIVE270CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      CIVE270CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine1045());
-      that.addLine(getLine1046());
-      that.addLine(getLine1055());
-      that.addLine(getLine1064());
-      that.addLine(getLine1077());
-      that.addLine(getLine1084());
+}      that.addLine(getLine1048());
+      that.addLine(getLine1049());
+      that.addLine(getLine1058());
+      that.addLine(getLine1067());
+      that.addLine(getLine1080());
+      that.addLine(getLine1087());
      CIVE270CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      CIVE270CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["CIVE270CoopPlan4", "ENGINEERINGSCIENCES"]);
       CIVE270CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1045());
-      that.removeLine(getLine1046());
-      that.removeLine(getLine1055());
-      that.removeLine(getLine1064());
-      that.removeLine(getLine1077());
-      that.removeLine(getLine1084());
+      that.removeLine(getLine1048());
+      that.removeLine(getLine1049());
+      that.removeLine(getLine1058());
+      that.removeLine(getLine1067());
+      that.removeLine(getLine1080());
+      that.removeLine(getLine1087());
      CIVE270CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      CIVE270CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("CIVE270CoopPlan4");
@@ -50895,14 +50433,14 @@ ENGG299CoopPlan4Time = currentTime;
      ENGG299CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
      ENGG299CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
       return;
-}      that.addLine(getLine1078());
+}      that.addLine(getLine1081());
      ENGG299CoopPlan4element.classList.remove("ENGINEERINGPROFESSION");
      ENGG299CoopPlan4element.classList.add("ENGINEERINGPROFESSION-highlighted");
      that.addToClicked(["ENGG299CoopPlan4", "ENGINEERINGPROFESSION"]);
       ENGG299CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1078());
+      that.removeLine(getLine1081());
      ENGG299CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
      ENGG299CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("ENGG299CoopPlan4");
@@ -50922,24 +50460,24 @@ MATH209CoopPlan4Time = currentTime;
      MATH209CoopPlan4element.classList.remove("MATH-highlighted");
      MATH209CoopPlan4element.classList.add("MATH");
       return;
-}      that.addLine(getLine1047());
-      that.addLine(getLine1048());
-      that.addLine(getLine1056());
-      that.addLine(getLine1063());
-      that.addLine(getLine1071());
-      that.addLine(getLine1100());
+}      that.addLine(getLine1050());
+      that.addLine(getLine1051());
+      that.addLine(getLine1059());
+      that.addLine(getLine1066());
+      that.addLine(getLine1074());
+      that.addLine(getLine1103());
      MATH209CoopPlan4element.classList.remove("MATH");
      MATH209CoopPlan4element.classList.add("MATH-highlighted");
      that.addToClicked(["MATH209CoopPlan4", "MATH"]);
       MATH209CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1047());
-      that.removeLine(getLine1048());
-      that.removeLine(getLine1056());
-      that.removeLine(getLine1063());
-      that.removeLine(getLine1071());
-      that.removeLine(getLine1100());
+      that.removeLine(getLine1050());
+      that.removeLine(getLine1051());
+      that.removeLine(getLine1059());
+      that.removeLine(getLine1066());
+      that.removeLine(getLine1074());
+      that.removeLine(getLine1103());
      MATH209CoopPlan4element.classList.remove("MATH-highlighted");
      MATH209CoopPlan4element.classList.add("MATH");
      that.removeFromClicked("MATH209CoopPlan4");
@@ -50959,18 +50497,18 @@ STAT235CoopPlan4Time = currentTime;
      STAT235CoopPlan4element.classList.remove("MATH-highlighted");
      STAT235CoopPlan4element.classList.add("MATH");
       return;
-}      that.addLine(getLine1049());
-      that.addLine(getLine1050());
-      that.addLine(getLine1066());
+}      that.addLine(getLine1052());
+      that.addLine(getLine1053());
+      that.addLine(getLine1069());
      STAT235CoopPlan4element.classList.remove("MATH");
      STAT235CoopPlan4element.classList.add("MATH-highlighted");
      that.addToClicked(["STAT235CoopPlan4", "MATH"]);
       STAT235CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1049());
-      that.removeLine(getLine1050());
-      that.removeLine(getLine1066());
+      that.removeLine(getLine1052());
+      that.removeLine(getLine1053());
+      that.removeLine(getLine1069());
      STAT235CoopPlan4element.classList.remove("MATH-highlighted");
      STAT235CoopPlan4element.classList.add("MATH");
      that.removeFromClicked("STAT235CoopPlan4");
@@ -50990,20 +50528,20 @@ MECE230CoopPlan4Time = currentTime;
      MECE230CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE230CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine1051());
-      that.addLine(getLine1052());
-      that.addLine(getLine1069());
-      that.addLine(getLine1073());
+}      that.addLine(getLine1054());
+      that.addLine(getLine1055());
+      that.addLine(getLine1072());
+      that.addLine(getLine1076());
      MECE230CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE230CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE230CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE230CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1051());
-      that.removeLine(getLine1052());
-      that.removeLine(getLine1069());
-      that.removeLine(getLine1073());
+      that.removeLine(getLine1054());
+      that.removeLine(getLine1055());
+      that.removeLine(getLine1072());
+      that.removeLine(getLine1076());
      MECE230CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE230CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE230CoopPlan4");
@@ -51023,20 +50561,20 @@ MECE260CoopPlan4Time = currentTime;
      MECE260CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE260CoopPlan4element.classList.add("ENGINEERINGDESIGN");
       return;
-}      that.addLine(getLine1053());
-      that.addLine(getLine1054());
-      that.addLine(getLine1055());
-      that.addLine(getLine1081());
+}      that.addLine(getLine1056());
+      that.addLine(getLine1057());
+      that.addLine(getLine1058());
+      that.addLine(getLine1084());
      MECE260CoopPlan4element.classList.remove("ENGINEERINGDESIGN");
      MECE260CoopPlan4element.classList.add("ENGINEERINGDESIGN-highlighted");
      that.addToClicked(["MECE260CoopPlan4", "ENGINEERINGDESIGN"]);
       MECE260CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1053());
-      that.removeLine(getLine1054());
-      that.removeLine(getLine1055());
-      that.removeLine(getLine1081());
+      that.removeLine(getLine1056());
+      that.removeLine(getLine1057());
+      that.removeLine(getLine1058());
+      that.removeLine(getLine1084());
      MECE260CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE260CoopPlan4element.classList.add("ENGINEERINGDESIGN");
      that.removeFromClicked("MECE260CoopPlan4");
@@ -51056,16 +50594,16 @@ MECE265CoopPlan4Time = currentTime;
      MECE265CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265CoopPlan4element.classList.add("ENGINEERINGDESIGN");
       return;
-}      that.addLine(getLine1054());
-      that.addLine(getLine1082());
+}      that.addLine(getLine1057());
+      that.addLine(getLine1085());
      MECE265CoopPlan4element.classList.remove("ENGINEERINGDESIGN");
      MECE265CoopPlan4element.classList.add("ENGINEERINGDESIGN-highlighted");
      that.addToClicked(["MECE265CoopPlan4", "ENGINEERINGDESIGN"]);
       MECE265CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1054());
-      that.removeLine(getLine1082());
+      that.removeLine(getLine1057());
+      that.removeLine(getLine1085());
      MECE265CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE265CoopPlan4element.classList.add("ENGINEERINGDESIGN");
      that.removeFromClicked("MECE265CoopPlan4");
@@ -51085,14 +50623,14 @@ ECE209CoopPlan4Time = currentTime;
      ECE209CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      ECE209CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine1065());
+}      that.addLine(getLine1068());
      ECE209CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      ECE209CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["ECE209CoopPlan4", "ENGINEERINGSCIENCES"]);
       ECE209CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1065());
+      that.removeLine(getLine1068());
      ECE209CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      ECE209CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("ECE209CoopPlan4");
@@ -51112,20 +50650,20 @@ MATH201CoopPlan4Time = currentTime;
      MATH201CoopPlan4element.classList.remove("MATH-highlighted");
      MATH201CoopPlan4element.classList.add("MATH");
       return;
-}      that.addLine(getLine1056());
-      that.addLine(getLine1062());
-      that.addLine(getLine1088());
-      that.addLine(getLine1099());
+}      that.addLine(getLine1059());
+      that.addLine(getLine1065());
+      that.addLine(getLine1091());
+      that.addLine(getLine1102());
      MATH201CoopPlan4element.classList.remove("MATH");
      MATH201CoopPlan4element.classList.add("MATH-highlighted");
      that.addToClicked(["MATH201CoopPlan4", "MATH"]);
       MATH201CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1056());
-      that.removeLine(getLine1062());
-      that.removeLine(getLine1088());
-      that.removeLine(getLine1099());
+      that.removeLine(getLine1059());
+      that.removeLine(getLine1065());
+      that.removeLine(getLine1091());
+      that.removeLine(getLine1102());
      MATH201CoopPlan4element.classList.remove("MATH-highlighted");
      MATH201CoopPlan4element.classList.add("MATH");
      that.removeFromClicked("MATH201CoopPlan4");
@@ -51145,20 +50683,20 @@ CHE243CoopPlan4Time = currentTime;
      CHE243CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      CHE243CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine1057());
-      that.addLine(getLine1072());
-      that.addLine(getLine1074());
-      that.addLine(getLine1080());
+}      that.addLine(getLine1060());
+      that.addLine(getLine1075());
+      that.addLine(getLine1077());
+      that.addLine(getLine1083());
      CHE243CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      CHE243CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["CHE243CoopPlan4", "ENGINEERINGSCIENCES"]);
       CHE243CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1057());
-      that.removeLine(getLine1072());
-      that.removeLine(getLine1074());
-      that.removeLine(getLine1080());
+      that.removeLine(getLine1060());
+      that.removeLine(getLine1075());
+      that.removeLine(getLine1077());
+      that.removeLine(getLine1083());
      CHE243CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      CHE243CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("CHE243CoopPlan4");
@@ -51178,16 +50716,16 @@ MATE202CoopPlan4Time = currentTime;
      MATE202CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MATE202CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine1058());
-      that.addLine(getLine1083());
+}      that.addLine(getLine1061());
+      that.addLine(getLine1086());
      MATE202CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MATE202CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MATE202CoopPlan4", "ENGINEERINGSCIENCES"]);
       MATE202CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1058());
-      that.removeLine(getLine1083());
+      that.removeLine(getLine1061());
+      that.removeLine(getLine1086());
      MATE202CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MATE202CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MATE202CoopPlan4");
@@ -51207,14 +50745,14 @@ MECE200CoopPlan4Time = currentTime;
      MECE200CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
      MECE200CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
       return;
-}      that.addLine(getLine1110());
+}      that.addLine(getLine1113());
      MECE200CoopPlan4element.classList.remove("ENGINEERINGPROFESSION");
      MECE200CoopPlan4element.classList.add("ENGINEERINGPROFESSION-highlighted");
      that.addToClicked(["MECE200CoopPlan4", "ENGINEERINGPROFESSION"]);
       MECE200CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1110());
+      that.removeLine(getLine1113());
      MECE200CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
      MECE200CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("MECE200CoopPlan4");
@@ -51234,24 +50772,24 @@ MECE250CoopPlan4Time = currentTime;
      MECE250CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE250CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine1059());
-      that.addLine(getLine1060());
-      that.addLine(getLine1061());
-      that.addLine(getLine1070());
-      that.addLine(getLine1086());
-      that.addLine(getLine1108());
+}      that.addLine(getLine1062());
+      that.addLine(getLine1063());
+      that.addLine(getLine1064());
+      that.addLine(getLine1073());
+      that.addLine(getLine1089());
+      that.addLine(getLine1111());
      MECE250CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE250CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE250CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE250CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1059());
-      that.removeLine(getLine1060());
-      that.removeLine(getLine1061());
-      that.removeLine(getLine1070());
-      that.removeLine(getLine1086());
-      that.removeLine(getLine1108());
+      that.removeLine(getLine1062());
+      that.removeLine(getLine1063());
+      that.removeLine(getLine1064());
+      that.removeLine(getLine1073());
+      that.removeLine(getLine1089());
+      that.removeLine(getLine1111());
      MECE250CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE250CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE250CoopPlan4");
@@ -51271,22 +50809,22 @@ MATH300CoopPlan4Time = currentTime;
      MATH300CoopPlan4element.classList.remove("MATH-highlighted");
      MATH300CoopPlan4element.classList.add("MATH");
       return;
-}      that.addLine(getLine1062());
-      that.addLine(getLine1063());
-      that.addLine(getLine1075());
-      that.addLine(getLine1095());
-      that.addLine(getLine1109());
+}      that.addLine(getLine1065());
+      that.addLine(getLine1066());
+      that.addLine(getLine1078());
+      that.addLine(getLine1098());
+      that.addLine(getLine1112());
      MATH300CoopPlan4element.classList.remove("MATH");
      MATH300CoopPlan4element.classList.add("MATH-highlighted");
      that.addToClicked(["MATH300CoopPlan4", "MATH"]);
       MATH300CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1062());
-      that.removeLine(getLine1063());
-      that.removeLine(getLine1075());
-      that.removeLine(getLine1095());
-      that.removeLine(getLine1109());
+      that.removeLine(getLine1065());
+      that.removeLine(getLine1066());
+      that.removeLine(getLine1078());
+      that.removeLine(getLine1098());
+      that.removeLine(getLine1112());
      MATH300CoopPlan4element.classList.remove("MATH-highlighted");
      MATH300CoopPlan4element.classList.add("MATH");
      that.removeFromClicked("MATH300CoopPlan4");
@@ -51306,24 +50844,24 @@ MECE300CoopPlan4Time = currentTime;
      MECE300CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE300CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine1064());
-      that.addLine(getLine1065());
-      that.addLine(getLine1066());
-      that.addLine(getLine1067());
+}      that.addLine(getLine1067());
       that.addLine(getLine1068());
-      that.addLine(getLine1104());
+      that.addLine(getLine1069());
+      that.addLine(getLine1070());
+      that.addLine(getLine1071());
+      that.addLine(getLine1107());
      MECE300CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE300CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE300CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE300CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1064());
-      that.removeLine(getLine1065());
-      that.removeLine(getLine1066());
       that.removeLine(getLine1067());
       that.removeLine(getLine1068());
-      that.removeLine(getLine1104());
+      that.removeLine(getLine1069());
+      that.removeLine(getLine1070());
+      that.removeLine(getLine1071());
+      that.removeLine(getLine1107());
      MECE300CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE300CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE300CoopPlan4");
@@ -51343,16 +50881,16 @@ MECE301CoopPlan4Time = currentTime;
      MECE301CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE301CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine1068());
-      that.addLine(getLine1105());
+}      that.addLine(getLine1071());
+      that.addLine(getLine1108());
      MECE301CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE301CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE301CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE301CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1068());
-      that.removeLine(getLine1105());
+      that.removeLine(getLine1071());
+      that.removeLine(getLine1108());
      MECE301CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE301CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE301CoopPlan4");
@@ -51372,32 +50910,32 @@ MECE331CoopPlan4Time = currentTime;
      MECE331CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE331CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine1067());
-      that.addLine(getLine1069());
-      that.addLine(getLine1070());
-      that.addLine(getLine1071());
+}      that.addLine(getLine1070());
       that.addLine(getLine1072());
-      that.addLine(getLine1076());
-      that.addLine(getLine1092());
-      that.addLine(getLine1096());
-      that.addLine(getLine1101());
-      that.addLine(getLine1111());
+      that.addLine(getLine1073());
+      that.addLine(getLine1074());
+      that.addLine(getLine1075());
+      that.addLine(getLine1079());
+      that.addLine(getLine1095());
+      that.addLine(getLine1099());
+      that.addLine(getLine1104());
+      that.addLine(getLine1114());
      MECE331CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE331CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE331CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE331CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1067());
-      that.removeLine(getLine1069());
       that.removeLine(getLine1070());
-      that.removeLine(getLine1071());
       that.removeLine(getLine1072());
-      that.removeLine(getLine1076());
-      that.removeLine(getLine1092());
-      that.removeLine(getLine1096());
-      that.removeLine(getLine1101());
-      that.removeLine(getLine1111());
+      that.removeLine(getLine1073());
+      that.removeLine(getLine1074());
+      that.removeLine(getLine1075());
+      that.removeLine(getLine1079());
+      that.removeLine(getLine1095());
+      that.removeLine(getLine1099());
+      that.removeLine(getLine1104());
+      that.removeLine(getLine1114());
      MECE331CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE331CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE331CoopPlan4");
@@ -51417,26 +50955,26 @@ MECE371CoopPlan4Time = currentTime;
      MECE371CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE371CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine1073());
-      that.addLine(getLine1074());
-      that.addLine(getLine1075());
-      that.addLine(getLine1076());
-      that.addLine(getLine1098());
-      that.addLine(getLine1102());
-      that.addLine(getLine1115());
+}      that.addLine(getLine1076());
+      that.addLine(getLine1077());
+      that.addLine(getLine1078());
+      that.addLine(getLine1079());
+      that.addLine(getLine1101());
+      that.addLine(getLine1105());
+      that.addLine(getLine1118());
      MECE371CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE371CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE371CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE371CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1073());
-      that.removeLine(getLine1074());
-      that.removeLine(getLine1075());
       that.removeLine(getLine1076());
-      that.removeLine(getLine1098());
-      that.removeLine(getLine1102());
-      that.removeLine(getLine1115());
+      that.removeLine(getLine1077());
+      that.removeLine(getLine1078());
+      that.removeLine(getLine1079());
+      that.removeLine(getLine1101());
+      that.removeLine(getLine1105());
+      that.removeLine(getLine1118());
      MECE371CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE371CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE371CoopPlan4");
@@ -51456,18 +50994,18 @@ MECE380CoopPlan4Time = currentTime;
      MECE380CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE380CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine1077());
-      that.addLine(getLine1094());
-      that.addLine(getLine1116());
+}      that.addLine(getLine1080());
+      that.addLine(getLine1097());
+      that.addLine(getLine1119());
      MECE380CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE380CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE380CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE380CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1077());
-      that.removeLine(getLine1094());
-      that.removeLine(getLine1116());
+      that.removeLine(getLine1080());
+      that.removeLine(getLine1097());
+      that.removeLine(getLine1119());
      MECE380CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE380CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE380CoopPlan4");
@@ -51487,16 +51025,16 @@ WKEXP901CoopPlan4Time = currentTime;
      WKEXP901CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
      WKEXP901CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
       return;
-}      that.addLine(getLine1078());
-      that.addLine(getLine1079());
+}      that.addLine(getLine1081());
+      that.addLine(getLine1082());
      WKEXP901CoopPlan4element.classList.remove("ENGINEERINGPROFESSION");
      WKEXP901CoopPlan4element.classList.add("ENGINEERINGPROFESSION-highlighted");
      that.addToClicked(["WKEXP901CoopPlan4", "ENGINEERINGPROFESSION"]);
       WKEXP901CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1078());
-      that.removeLine(getLine1079());
+      that.removeLine(getLine1081());
+      that.removeLine(getLine1082());
      WKEXP901CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
      WKEXP901CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("WKEXP901CoopPlan4");
@@ -51516,16 +51054,16 @@ WKEXP902CoopPlan4Time = currentTime;
      WKEXP902CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
      WKEXP902CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
       return;
-}      that.addLine(getLine1079());
-      that.addLine(getLine1089());
+}      that.addLine(getLine1082());
+      that.addLine(getLine1092());
      WKEXP902CoopPlan4element.classList.remove("ENGINEERINGPROFESSION");
      WKEXP902CoopPlan4element.classList.add("ENGINEERINGPROFESSION-highlighted");
      that.addToClicked(["WKEXP902CoopPlan4", "ENGINEERINGPROFESSION"]);
       WKEXP902CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1079());
-      that.removeLine(getLine1089());
+      that.removeLine(getLine1082());
+      that.removeLine(getLine1092());
      WKEXP902CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
      WKEXP902CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("WKEXP902CoopPlan4");
@@ -51545,14 +51083,14 @@ ENGM310CoopPlan4Time = currentTime;
      ENGM310CoopPlan4element.classList.remove("Other-highlighted");
      ENGM310CoopPlan4element.classList.add("Other");
       return;
-}      that.addLine(getLine1117());
+}      that.addLine(getLine1120());
      ENGM310CoopPlan4element.classList.remove("Other");
      ENGM310CoopPlan4element.classList.add("Other-highlighted");
      that.addToClicked(["ENGM310CoopPlan4", "Other"]);
       ENGM310CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1117());
+      that.removeLine(getLine1120());
      ENGM310CoopPlan4element.classList.remove("Other-highlighted");
      ENGM310CoopPlan4element.classList.add("Other");
      that.removeFromClicked("ENGM310CoopPlan4");
@@ -51572,14 +51110,14 @@ ENGM401CoopPlan4Time = currentTime;
      ENGM401CoopPlan4element.classList.remove("Other-highlighted");
      ENGM401CoopPlan4element.classList.add("Other");
       return;
-}      that.addLine(getLine1118());
+}      that.addLine(getLine1121());
      ENGM401CoopPlan4element.classList.remove("Other");
      ENGM401CoopPlan4element.classList.add("Other-highlighted");
      that.addToClicked(["ENGM401CoopPlan4", "Other"]);
       ENGM401CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1118());
+      that.removeLine(getLine1121());
      ENGM401CoopPlan4element.classList.remove("Other-highlighted");
      ENGM401CoopPlan4element.classList.add("Other");
      that.removeFromClicked("ENGM401CoopPlan4");
@@ -51599,20 +51137,20 @@ MECE340CoopPlan4Time = currentTime;
      MECE340CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE340CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine1080());
-      that.addLine(getLine1097());
-      that.addLine(getLine1106());
-      that.addLine(getLine1112());
+}      that.addLine(getLine1083());
+      that.addLine(getLine1100());
+      that.addLine(getLine1109());
+      that.addLine(getLine1115());
      MECE340CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE340CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE340CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE340CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1080());
-      that.removeLine(getLine1097());
-      that.removeLine(getLine1106());
-      that.removeLine(getLine1112());
+      that.removeLine(getLine1083());
+      that.removeLine(getLine1100());
+      that.removeLine(getLine1109());
+      that.removeLine(getLine1115());
      MECE340CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE340CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE340CoopPlan4");
@@ -51632,28 +51170,28 @@ MECE360CoopPlan4Time = currentTime;
      MECE360CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE360CoopPlan4element.classList.add("ENGINEERINGDESIGN");
       return;
-}      that.addLine(getLine1081());
-      that.addLine(getLine1082());
-      that.addLine(getLine1083());
-      that.addLine(getLine1084());
+}      that.addLine(getLine1084());
       that.addLine(getLine1085());
-      that.addLine(getLine1093());
-      that.addLine(getLine1107());
-      that.addLine(getLine1113());
+      that.addLine(getLine1086());
+      that.addLine(getLine1087());
+      that.addLine(getLine1088());
+      that.addLine(getLine1096());
+      that.addLine(getLine1110());
+      that.addLine(getLine1116());
      MECE360CoopPlan4element.classList.remove("ENGINEERINGDESIGN");
      MECE360CoopPlan4element.classList.add("ENGINEERINGDESIGN-highlighted");
      that.addToClicked(["MECE360CoopPlan4", "ENGINEERINGDESIGN"]);
       MECE360CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1081());
-      that.removeLine(getLine1082());
-      that.removeLine(getLine1083());
       that.removeLine(getLine1084());
       that.removeLine(getLine1085());
-      that.removeLine(getLine1093());
-      that.removeLine(getLine1107());
-      that.removeLine(getLine1113());
+      that.removeLine(getLine1086());
+      that.removeLine(getLine1087());
+      that.removeLine(getLine1088());
+      that.removeLine(getLine1096());
+      that.removeLine(getLine1110());
+      that.removeLine(getLine1116());
      MECE360CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE360CoopPlan4element.classList.add("ENGINEERINGDESIGN");
      that.removeFromClicked("MECE360CoopPlan4");
@@ -51673,18 +51211,18 @@ MECE362CoopPlan4Time = currentTime;
      MECE362CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE362CoopPlan4element.classList.add("ENGINEERINGDESIGN");
       return;
-}      that.addLine(getLine1085());
-      that.addLine(getLine1086());
-      that.addLine(getLine1114());
+}      that.addLine(getLine1088());
+      that.addLine(getLine1089());
+      that.addLine(getLine1117());
      MECE362CoopPlan4element.classList.remove("ENGINEERINGDESIGN");
      MECE362CoopPlan4element.classList.add("ENGINEERINGDESIGN-highlighted");
      that.addToClicked(["MECE362CoopPlan4", "ENGINEERINGDESIGN"]);
       MECE362CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1085());
-      that.removeLine(getLine1086());
-      that.removeLine(getLine1114());
+      that.removeLine(getLine1088());
+      that.removeLine(getLine1089());
+      that.removeLine(getLine1117());
      MECE362CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE362CoopPlan4element.classList.add("ENGINEERINGDESIGN");
      that.removeFromClicked("MECE362CoopPlan4");
@@ -51704,18 +51242,18 @@ MECE390CoopPlan4Time = currentTime;
      MECE390CoopPlan4element.classList.remove("MATH-highlighted");
      MECE390CoopPlan4element.classList.add("MATH");
       return;
-}      that.addLine(getLine1087());
-      that.addLine(getLine1088());
-      that.addLine(getLine1103());
+}      that.addLine(getLine1090());
+      that.addLine(getLine1091());
+      that.addLine(getLine1106());
      MECE390CoopPlan4element.classList.remove("MATH");
      MECE390CoopPlan4element.classList.add("MATH-highlighted");
      that.addToClicked(["MECE390CoopPlan4", "MATH"]);
       MECE390CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1087());
-      that.removeLine(getLine1088());
-      that.removeLine(getLine1103());
+      that.removeLine(getLine1090());
+      that.removeLine(getLine1091());
+      that.removeLine(getLine1106());
      MECE390CoopPlan4element.classList.remove("MATH-highlighted");
      MECE390CoopPlan4element.classList.add("MATH");
      that.removeFromClicked("MECE390CoopPlan4");
@@ -51760,16 +51298,16 @@ WKEXP903CoopPlan4Time = currentTime;
      WKEXP903CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
      WKEXP903CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
       return;
-}      that.addLine(getLine1089());
-      that.addLine(getLine1090());
+}      that.addLine(getLine1092());
+      that.addLine(getLine1093());
      WKEXP903CoopPlan4element.classList.remove("ENGINEERINGPROFESSION");
      WKEXP903CoopPlan4element.classList.add("ENGINEERINGPROFESSION-highlighted");
      that.addToClicked(["WKEXP903CoopPlan4", "ENGINEERINGPROFESSION"]);
       WKEXP903CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1089());
-      that.removeLine(getLine1090());
+      that.removeLine(getLine1092());
+      that.removeLine(getLine1093());
      WKEXP903CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
      WKEXP903CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("WKEXP903CoopPlan4");
@@ -51789,16 +51327,16 @@ WKEXP904CoopPlan4Time = currentTime;
      WKEXP904CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
      WKEXP904CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
       return;
-}      that.addLine(getLine1090());
-      that.addLine(getLine1091());
+}      that.addLine(getLine1093());
+      that.addLine(getLine1094());
      WKEXP904CoopPlan4element.classList.remove("ENGINEERINGPROFESSION");
      WKEXP904CoopPlan4element.classList.add("ENGINEERINGPROFESSION-highlighted");
      that.addToClicked(["WKEXP904CoopPlan4", "ENGINEERINGPROFESSION"]);
       WKEXP904CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1090());
-      that.removeLine(getLine1091());
+      that.removeLine(getLine1093());
+      that.removeLine(getLine1094());
      WKEXP904CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
      WKEXP904CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("WKEXP904CoopPlan4");
@@ -51818,14 +51356,14 @@ WKEXP905CoopPlan4Time = currentTime;
      WKEXP905CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
      WKEXP905CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
       return;
-}      that.addLine(getLine1091());
+}      that.addLine(getLine1094());
      WKEXP905CoopPlan4element.classList.remove("ENGINEERINGPROFESSION");
      WKEXP905CoopPlan4element.classList.add("ENGINEERINGPROFESSION-highlighted");
      that.addToClicked(["WKEXP905CoopPlan4", "ENGINEERINGPROFESSION"]);
       WKEXP905CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1091());
+      that.removeLine(getLine1094());
      WKEXP905CoopPlan4element.classList.remove("ENGINEERINGPROFESSION-highlighted");
      WKEXP905CoopPlan4element.classList.add("ENGINEERINGPROFESSION");
      that.removeFromClicked("WKEXP905CoopPlan4");
@@ -51870,14 +51408,14 @@ MECE430CoopPlan4Time = currentTime;
      MECE430CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE430CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine1092());
+}      that.addLine(getLine1095());
      MECE430CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE430CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE430CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE430CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1092());
+      that.removeLine(getLine1095());
      MECE430CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE430CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE430CoopPlan4");
@@ -51897,18 +51435,18 @@ MECE480CoopPlan4Time = currentTime;
      MECE480CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE480CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine1093());
-      that.addLine(getLine1094());
-      that.addLine(getLine1095());
+}      that.addLine(getLine1096());
+      that.addLine(getLine1097());
+      that.addLine(getLine1098());
      MECE480CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE480CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE480CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE480CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1093());
-      that.removeLine(getLine1094());
-      that.removeLine(getLine1095());
+      that.removeLine(getLine1096());
+      that.removeLine(getLine1097());
+      that.removeLine(getLine1098());
      MECE480CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE480CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE480CoopPlan4");
@@ -51928,18 +51466,18 @@ MECE463CoopPlan4Time = currentTime;
      MECE463CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE463CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine1096());
-      that.addLine(getLine1097());
-      that.addLine(getLine1098());
+}      that.addLine(getLine1099());
+      that.addLine(getLine1100());
+      that.addLine(getLine1101());
      MECE463CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE463CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE463CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE463CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1096());
-      that.removeLine(getLine1097());
-      that.removeLine(getLine1098());
+      that.removeLine(getLine1099());
+      that.removeLine(getLine1100());
+      that.removeLine(getLine1101());
      MECE463CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE463CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE463CoopPlan4");
@@ -52034,20 +51572,20 @@ CHE448CoopPlan4Time = currentTime;
      CHE448CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      CHE448CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine1099());
-      that.addLine(getLine1100());
-      that.addLine(getLine1101());
-      that.addLine(getLine1102());
+}      that.addLine(getLine1102());
+      that.addLine(getLine1103());
+      that.addLine(getLine1104());
+      that.addLine(getLine1105());
      CHE448CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      CHE448CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["CHE448CoopPlan4", "ENGINEERINGSCIENCES"]);
       CHE448CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1099());
-      that.removeLine(getLine1100());
-      that.removeLine(getLine1101());
       that.removeLine(getLine1102());
+      that.removeLine(getLine1103());
+      that.removeLine(getLine1104());
+      that.removeLine(getLine1105());
      CHE448CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      CHE448CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("CHE448CoopPlan4");
@@ -52067,14 +51605,14 @@ MECE420CoopPlan4Time = currentTime;
      MECE420CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE420CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine1103());
+}      that.addLine(getLine1106());
      MECE420CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE420CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE420CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE420CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1103());
+      that.removeLine(getLine1106());
      MECE420CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE420CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE420CoopPlan4");
@@ -52119,20 +51657,20 @@ MECE403CoopPlan4Time = currentTime;
      MECE403CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE403CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine1104());
-      that.addLine(getLine1105());
-      that.addLine(getLine1106());
-      that.addLine(getLine1107());
+}      that.addLine(getLine1107());
+      that.addLine(getLine1108());
+      that.addLine(getLine1109());
+      that.addLine(getLine1110());
      MECE403CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE403CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE403CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE403CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1104());
-      that.removeLine(getLine1105());
-      that.removeLine(getLine1106());
       that.removeLine(getLine1107());
+      that.removeLine(getLine1108());
+      that.removeLine(getLine1109());
+      that.removeLine(getLine1110());
      MECE403CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE403CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE403CoopPlan4");
@@ -52152,16 +51690,16 @@ MECE451CoopPlan4Time = currentTime;
      MECE451CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE451CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
       return;
-}      that.addLine(getLine1108());
-      that.addLine(getLine1109());
+}      that.addLine(getLine1111());
+      that.addLine(getLine1112());
      MECE451CoopPlan4element.classList.remove("ENGINEERINGSCIENCES");
      MECE451CoopPlan4element.classList.add("ENGINEERINGSCIENCES-highlighted");
      that.addToClicked(["MECE451CoopPlan4", "ENGINEERINGSCIENCES"]);
       MECE451CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1108());
-      that.removeLine(getLine1109());
+      that.removeLine(getLine1111());
+      that.removeLine(getLine1112());
      MECE451CoopPlan4element.classList.remove("ENGINEERINGSCIENCES-highlighted");
      MECE451CoopPlan4element.classList.add("ENGINEERINGSCIENCES");
      that.removeFromClicked("MECE451CoopPlan4");
@@ -52181,30 +51719,30 @@ MECE460CoopPlan4Time = currentTime;
      MECE460CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE460CoopPlan4element.classList.add("ENGINEERINGDESIGN");
       return;
-}      that.addLine(getLine1110());
-      that.addLine(getLine1111());
-      that.addLine(getLine1112());
-      that.addLine(getLine1113());
+}      that.addLine(getLine1113());
       that.addLine(getLine1114());
       that.addLine(getLine1115());
       that.addLine(getLine1116());
       that.addLine(getLine1117());
       that.addLine(getLine1118());
+      that.addLine(getLine1119());
+      that.addLine(getLine1120());
+      that.addLine(getLine1121());
      MECE460CoopPlan4element.classList.remove("ENGINEERINGDESIGN");
      MECE460CoopPlan4element.classList.add("ENGINEERINGDESIGN-highlighted");
      that.addToClicked(["MECE460CoopPlan4", "ENGINEERINGDESIGN"]);
       MECE460CoopPlan4flag=true
   }
  else {
-      that.removeLine(getLine1110());
-      that.removeLine(getLine1111());
-      that.removeLine(getLine1112());
       that.removeLine(getLine1113());
       that.removeLine(getLine1114());
       that.removeLine(getLine1115());
       that.removeLine(getLine1116());
       that.removeLine(getLine1117());
       that.removeLine(getLine1118());
+      that.removeLine(getLine1119());
+      that.removeLine(getLine1120());
+      that.removeLine(getLine1121());
      MECE460CoopPlan4element.classList.remove("ENGINEERINGDESIGN-highlighted");
      MECE460CoopPlan4element.classList.add("ENGINEERINGDESIGN");
      that.removeFromClicked("MECE460CoopPlan4");

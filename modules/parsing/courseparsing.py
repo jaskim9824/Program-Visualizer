@@ -97,6 +97,8 @@ def parseCourses(filename):
 #       be filled in
 def pullDependencies(course_obj_dict):
     for course in course_obj_dict:
+        if course_obj_dict[course].name == "MEC E 485":
+            print("test")
         # Pulling pre-reqs, co-reqs, and requisites for each course
         prereqslist = pullPreReqs(course_obj_dict[course].course_description)
         for i in range(0, len(prereqslist)):
@@ -409,6 +411,15 @@ def preprocess(reqlist):
     while i < len(reqlist):
         # Remove all commas and brackets
         reqlist[i] = reqlist[i].replace("(", "").replace(")", "").replace(",", "")
+
+        if ";" in reqlist[i]:
+            semicolsplit = reqlist[i].split(";")
+            del reqlist[i]
+            k = i
+            for splititem in semicolsplit:
+                splititem = splititem.strip()
+                reqlist.insert(k, splititem)
+                k += 1
 
         # A slash between courses indicates the same as "or". 
         # Replace all slashes with " or "
