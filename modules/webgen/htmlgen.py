@@ -150,12 +150,20 @@ def placeLegend(legendTag, categoryDict, soup):
     placeLegendDescription(soup, legendTag)
     placeLegendButtons(soup, legendTag, categoryDict)
  
-
+# Function that places the legend description
+# Parameters:
+#   soup - soup object used to create HTML tags
+#   legendTag - HTML tag representing legend
 def placeLegendDescription(soup, legendTag):
     legendDescription = soup.new_tag("b", attrs={"class":"legenddescription"})
     legendDescription.append("Click on a Category Below to Highlight all Courses in that Category")
     legendTag.append(legendDescription)
 
+# Function that places down the legend buttons
+# Parameters:
+#   soup - soup object used to create HTML tags
+#   legendTag - HTML tag representing legend
+#   categoryDict - dict mapping categories to colours
 def placeLegendButtons(soup, legendTag, categoryDict):
     legendBoxes = soup.new_tag("div", attrs={"class":"legendboxes"})
     for category in categoryDict:
@@ -164,7 +172,11 @@ def placeLegendButtons(soup, legendTag, categoryDict):
         legendBoxes.append(coursecat)
     legendTag.append(legendBoxes)
 
-
+# Function that places down a legend button
+# Parameters:
+#   soup - soup object used to create HTML tags
+#   category - category of button
+#   colour - colour of category
 def placeLegendButton(soup, category, colour):
     return soup.new_tag("div", attrs={"ng-click":category+ "clickListener()", 
                                         "class":"legendbutton",
@@ -334,6 +346,13 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
     
     return compcounter, progcounter, itscounter
 
+# Function that constructs a course div for a specific course
+# Parameters:
+#   - soup: soup object used to create HTML tags
+#   - courseID: ID of course
+#   - category: category of course
+#   - orCounter: counter indicating whether is a top or bottom or
+#   - orBool: flag indicating an or case
 def createCourseDiv(soup, courseID, category, orCounter, orBool):
     if orBool:
         if orCounter == 0:
@@ -351,7 +370,11 @@ def createCourseDiv(soup, courseID, category, orCounter, orBool):
                                                 "id": courseID, 
                                                 "ng-click":courseID+"Listener()",
                                                 "ng-right-click":courseID+"RCListener()"})
-
+# Function that writes the flags and variables associated 
+# with a course
+# Parameters:
+#   - controller: file handle to controller.js
+#   - courseID: ID for course
 def writeFlagsAndVariables(controller, courseID):
     controller.write("  var " + 
                          courseID +

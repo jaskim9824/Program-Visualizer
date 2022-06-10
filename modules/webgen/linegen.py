@@ -8,7 +8,6 @@
 
 # Dependencies: cleaner
 
-from unicodedata import category
 from .. import cleaner
 
 
@@ -195,6 +194,11 @@ def placeClickListeners(courseList, controller, lineManager, plan):
         controller.write("      " +courseID+"flag=false\n")
         controller.write("  }\n};\n")
 
+# Function that places right click listeners for each course in the specified plan
+# Parameters:
+#   courseList - list of course objects of course taken in that plan
+#   controller - file handle for controller.js
+#   plan - name of plan 
 def placeRightClickListeners(courseList, controller, plan):
     formattedListener = "$scope.{courseName}RCListener = function () {{\n"
     formattedElementGetter = "  var element = document.getElementById(\"{courseName}desc\");\n"
