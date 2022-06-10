@@ -8,7 +8,6 @@
 
 # Dependencies: cleaner
 
-from numpy import number
 from .. import cleaner
 
 # Function that generates the JS before the generation of the course diagram
@@ -24,17 +23,12 @@ def intializeControllerJavaScript(sequenceDict, intitalCourseGroupVals, courseGr
                                       controller)
 
 # Function that properly concludes and closes the controller JS
-# Parameters:
 #   controller - file handle for controller JS
 def closeControllerJavaScript(controller):
     controller.write("});\n")
     writeRightClickDirective(controller)
     controller.close()
 
-# Function that appends the custom Angular directive to allow handling of
-# right click events
-# Parameters:
-#   controller - file handle for controller JS
 def writeRightClickDirective(controller):
     rightClickDirective = """app.directive('ngRightClick', function($parse) {
     return function(scope, element, attrs) {
@@ -379,14 +373,9 @@ def generateHighlightCategoryFlags(categoriesDict, controller):
             else:
                 controller.write(formattedCategoriesFlagStatement.format(categoryName = cleaner.cleanString(category), 
                                                                      planName = cleaner.cleanString(plan)))
-# Function that generates the listeners for the buttons for each
-# category on the legend
-# Parameters:
-#   - categoriesDict: dict that maps categories to plans dict containing courses in 
-#   that category
-#   - controller: file handle to controller.js
+
 def generateCategoryListeners(categoriesDict, controller):
-    # format string for a category listener
+    # listener for each category
     formattedCategoriesListener = """$scope.{categoryName}clickListener = function() {{
     var planName = $scope.selectedPlan;
     var pressedbtn = document.getElementById("{categoryNameId}");
@@ -425,14 +414,6 @@ def generateCategoryListeners(categoriesDict, controller):
             controller.write(formattedCategoriesListener.format(categoryName=category, categoryNameId=category))
         controller.write("}\n")
 
-# Function that generates the switch statement to switch between catergoies within highlight
-# or unhighlight function
-# Parameters:
-#   - categoriesDict: dict that maps categories to a dict of plans which contain courses within
-#   that category
-#   - controller: file handle to controller.js
-#   - highlight: flag indicating if it is highlighting or unhighlighting 
-#   (T for highlighting)  
 def generateCategorySwitch(categoriesDict, controller, highlight):
     # outer switch between categories
     switchEndString = """break;   default:
@@ -454,14 +435,7 @@ def generateCategorySwitch(categoriesDict, controller, highlight):
         controller.write("""      break;\n""")
     controller.write(switchEndString)
 
-# Function that generates the switch statement to switch between plans within highlight
-# or unhighlight function for a specific category
-# Parameters:
-#   - planDict: dict that maps plans to courses in that category
-#   - controller: file handle to controller.js
-#   - category: name of the category
-#   - highlight: flag indicating if it is highlighting or unhighlighting 
-#   (T for highlighting)  
+
 def generatePlanSwitch(planDict, controller, category, highlight):
     # inner switch between plans
     formattedCasePlan  = """      case "{planName}":\n"""
@@ -470,16 +444,7 @@ def generatePlanSwitch(planDict, controller, category, highlight):
         controller.write(formattedCasePlan.format(planName=cleaner.cleanString(plan)))
         generateCourseStatements(planDict[plan], controller, plan, category, highlight)
         controller.write("""       break;\n""")
-
-# Function that generates the highlight or unhighlight statements for a specfic categtory
-# and plan
-# Parameters:
-#   - courseList: list of course objects in that category for that plan
-#   - controller: file handle to controller.js
-#   - plan: name of current plan
-#   - category: name of the category
-#   - highlight: flag indicating if it is highlighting or unhighlighting 
-#   (T for highlighting)  
+     
 def generateCourseStatements(courseList, controller, plan, category, highlight):
     compcounter = 0
     progcounter = 0
@@ -537,62 +502,48 @@ def generateCourseStatements(courseList, controller, plan, category, highlight):
         else:
             generateNormalCourseUnhighlightStatement(course, plan, category, controller)
 
-
-# Generates the statements needed to unhighlight a single elective when pressing
-# the legend buttons
-# Parameters:
-#   - elective: shortend elective type
-#   - longelective: long elective type
-#   - plan: current plan
-#   - category: category of course
-#   - controller: file handle to controller.js
 def generateElectiveHighlightStatement(elective, longelective, plan, counter, controller):
     formattedElectiveGetUnhighlightedElement = """        var {electiveName}elements = document.getElementsByClassName("{electiveName}");\n"""
-    formattedElectivesHighlight = """        for (let i = 0; i < {electiveName}elements.length; i++) {{
-          var currelement = document.getElementById({electiveName}elements.item(i).id);
+    formattedElectivesHighlight = """        var i = 0;
+        while ({electiveName}elements.length > 0) {{
+          var currelement = document.getElementById({electiveName}elements.item(0).id);
           currelement.classList.remove("{electiveName}");
           currelement.classList.add("{electiveName}-highlighted");
-          that.addToClicked(["{longElectiveName}{planName}{count}","{categoryName}"]);
+          that.addToClicked(["{longElectiveName}{planName}" + i,"{categoryName}"]);
+          i = i + 1;
         }}\n"""
-    controller.write(formattedElectiveGetUnhighlightedElement.format(electiveName=elective))
-    controller.write(formattedElectivesHighlight.format(electiveName=elective, 
+    if counter == 0:
+        controller.write(formattedElectiveGetUnhighlightedElement.format(electiveName=elective))
+        controller.write(formattedElectivesHighlight.format(electiveName=elective, 
                                                         count=counter, 
                                                         longElectiveName=longelective, 
                                                         planName=plan, 
                                                         categoryName=elective))
 
-# Generates the statements needed to unhighlight a single elective when pressing
-# the legend buttons
-# Parameters:
-#   - elective: shortend elective type
-#   - longelective: long elective type
-#   - plan: current plan
-#   - category: category of course
-#   - controller: file handle to controller.js
 def generateElectiveUnhighlightStatement(elective, longelective, plan, counter, controller):
     formattedElectiveGetHighlightedElement = """        var {electiveName}elements = document.getElementsByClassName("{electiveName}-highlighted");\n"""
-    formattedElectivesUnhighlight = """        for (let i = 0; i < {electiveName}elements.length; i++) {{
-          var currelement = document.getElementById({electiveName}elements.item(i).id);
+    formattedElectivesUnhighlight = """        var i = 0;        
+        while ({electiveName}elements.length > 0) {{
+          var currelement = document.getElementById({electiveName}elements.item(0).id);
           currelement.classList.remove("{electiveName}-highlighted");
           currelement.classList.add("{electiveName}");
-          that.removeFromClicked("{longElectiveName}{planName}{count}");
+          that.removeFromClicked("{longElectiveName}{planName}" + i);
+          i = i + 1;
         }}\n"""
-    controller.write(formattedElectiveGetHighlightedElement.format(electiveName=elective))
-    controller.write(formattedElectivesUnhighlight.format(electiveName=elective, 
+    if counter == 0:
+        controller.write(formattedElectiveGetHighlightedElement.format(electiveName=elective))
+        controller.write(formattedElectivesUnhighlight.format(electiveName=elective, 
                                                           longElectiveName=longelective, 
                                                           count=counter, 
                                                           planName=plan, 
                                                           categoryName=elective))
-# Generates the statements needed to highlight a single normal course when pressing
-# the legend buttons
-# Parameters:
-#   - course: course object
-#   - plan: current plan
-#   - category: category of course
-#   - controller: file handle to controller.js
+
 def generateNormalCourseHighlightStatement(course, plan, category, controller):
+    # finding the element with the appropriate id
     formattedGetElement = """       var {courseName}{planName}element = document.getElementById("{courseName}{planName}");\n"""
+    # remove from list of unclicked
     formattedRemoveUnclicked = """       {courseName}{planName}element.classList.remove("{categoryName}");\n"""
+    # add to list of clicked
     formattedAddToClicked = """       {courseName}{planName}element.classList.add("{categoryName}-highlighted");
        that.addToClicked(["{courseName}{planName}","{categoryName}"]);\n"""
     controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name)))
@@ -603,17 +554,13 @@ def generateNormalCourseHighlightStatement(course, plan, category, controller):
                                                   courseName=cleaner.cleanString(course.name), 
                                                   categoryName=cleaner.cleanString(category)))
 
-# Generates the statements needed to unhighlight a single normal course when pressing
-# the legend buttons
-# Parameters:
-#   - course: course object
-#   - plan: current plan
-#   - category: category of course
-#   - controller: file handle to controller.js
 def generateNormalCourseUnhighlightStatement(course, plan, category, controller):
     formattedIfStatement = "if (!{courseName}{planName}flag) {{ \n"
+    # finding the element with the appropriate id
     formattedGetElement = """       var {courseName}{planName}element = document.getElementById("{courseName}{planName}");\n"""
+    # remove from list of clicked
     formattedRemoveClicked = """       {courseName}{planName}element.classList.remove("{categoryName}-highlighted");\n"""
+    # add to list of unclicked
     formattedAddToUnclicked = """       {courseName}{planName}element.classList.add("{categoryName}");\n       
        that.removeFromClicked("{courseName}{planName}");\n"""
     controller.write(formattedIfStatement.format(planName=cleaner.cleanString(plan), 

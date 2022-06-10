@@ -129,12 +129,15 @@ header {
 
     /* Changing width of tooltip on narrow screens */
     .coursecontainer .tooltip .tooltiptextleft, .coursecontainer .tooltip .tooltiptextright, 
-    .orcoursecontainer .tooltip .tooltiptextleft, .orcoursecontainer .tooltip .tooltiptextright {
+    .orcoursecontainer .tooltip .tooltiptextleft, .orcoursecontainer .tooltip .tooltiptextright,
+    .coursegroupacontainer .tooltip .tooltiptextleft, .coursegroupacontainer .tooltip .tooltiptextright
+    .coursegroupbcontainer .tooltip .tooltiptextleft, .coursegroupbcontainer .tooltip .tooltiptextright {
         width: 400px;
     }
 
     /* Smaller font on narrow screens */
-    .coursecontainer .tooltip .descriptiontitle, .orcoursecontainer .tooltip .descriptiontitle {
+    .coursecontainer .tooltip .descriptiontitle, .orcoursecontainer .tooltip .descriptiontitle,
+    .coursegroupacontainer .tooltip .descriptiontitle, .coursegorupbcontainer .tooltip .description {
         font-size: 15px;
     }
 
@@ -142,7 +145,11 @@ header {
     .coursecontainer .descriptionalphahours, .coursecontainer .descriptionavailability, 
     .coursecontainer .descriptioncredits, .coursecontainer .descriptionfeeindex, .coursecontainer .fulldescription,
     .orcoursecontainer .descriptionalphahours, .orcoursecontainer .descriptionavailability, 
-    .orcoursecontainer .descriptioncredits, .orcoursecontainer .descriptionfeeindex, .orcoursecontainer .fulldescription {
+    .orcoursecontainer .descriptioncredits, .orcoursecontainer .descriptionfeeindex, .orcoursecontainer .fulldescription,
+    .coursegroupacontainer .descriptionalphahours, .coursegroupacontainer .descriptionavailability, 
+    .coursegroupacontainer .descriptioncredits, .coursegroupacontainer .descriptionfeeindex, .coursegroupacontainer .fulldescription,
+    .coursegroupbcontainer .descriptionalphahours, .coursegroupbcontainer .descriptionavailability, 
+    .coursegroupbcontainer .descriptioncredits, .coursegroupbcontainer .descriptionfeeindex, .coursegroupbcontainer .fulldescription {
         font-size: 12px;
     }
 }
@@ -217,24 +224,56 @@ label {
 
 /* Term header styling */
 .termheader {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     width: 125%;
     text-align: center;
     font-size: 115%;
 }
 
 /* Contains one (or two if an "or" option) course */
-.coursecontainer, .orcoursecontainer {
+.coursecontainer, .orcoursecontainer, .coursegroupacontainer, .coursegroupbcontainer {
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
 }
 
 .orcoursecontainer {
-    outline-color: #573578;
-    outline-width: 2px;
-    outline-style: solid;
-    outline-offset: 4px;
+    outline-color: #542a7e;
+    outline-width: 3px;
+    outline-style: dashed;
+    outline-offset: 3px;
+}
+
+.coursegroupacontainer {
+    outline-color: red;
+    outline-width: 3px;
+    outline-style: ridge;
+    outline-offset: 5px;
+    position: relative;
+    bottom: 16px;
+    padding: 1px;
+}
+
+.coursegroupacontainer .course, .coursegroupbcontainer .course {
+    margin-bottom: 49px;
+}
+
+.coursegroupbcontainer {
+    outline-color: blue;
+    outline-width: 3px;
+    outline-style: ridge;
+    outline-offset: 5px;
+    position: relative;
+    bottom: 16px;
+    padding: 1px;
+}
+
+.coursegrouptitle {
+    text-align: center;
+    margin: 0;
+    position: relative;
+    bottom: 28px;
+    background-color: #84e3f6;
 }
 
 /* Text within a course box styling*/
@@ -251,6 +290,10 @@ label {
     border-width: 2px;
     height: 50px;
     width: 150px;
+}
+
+.coursegroupacontainer .lastcourseingroup, .coursegroupbcontainer .lastcourseingroup {
+    margin-bottom: 0;
 }
 
 /* two option with "or" between them, smaller margin */
