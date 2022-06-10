@@ -108,37 +108,37 @@ this.setDefaults = function(plan) {
             $scope.field2.group2 ="2A";
             $scope.field3.group3 ="3A";
             $scope.field4.group4 ="4A";
-          $scope.apply;
+          $scope.$apply();
           break;
       case "AlternatePlan": 
             $scope.field2.group2 ="";
             $scope.field3.group3 ="3A";
             $scope.field4.group4 ="4A";
-          $scope.apply;
+          $scope.$apply();
           break;
       case "CoopPlan1": 
             $scope.field2.group2 ="";
             $scope.field3.group3 ="3A";
             $scope.field4.group4 ="";
-          $scope.apply;
+          $scope.$apply();
           break;
       case "CoopPlan2": 
             $scope.field2.group2 ="";
             $scope.field3.group3 ="";
             $scope.field4.group4 ="";
-          $scope.apply;
+          $scope.$apply();
           break;
       case "CoopPlan3Biomedical": 
             $scope.field2.group2 ="";
             $scope.field3.group3 ="";
             $scope.field4.group4 ="";
-          $scope.apply;
+          $scope.$apply();
           break;
       case "CoopPlan4": 
             $scope.field2.group2 ="";
             $scope.field3.group3 ="";
             $scope.field4.group4 ="";
-          $scope.apply;
+          $scope.$apply();
           break;
     default:
     console.log("shouldn't be here");

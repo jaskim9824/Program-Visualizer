@@ -113,7 +113,7 @@ def generateSetDefaults(courseGroupDict, courseGroupList, controller):
                 controller.write("\"\";\n")
             else:
                 controller.write("\""+str(element)+"A\";\n")
-        controller.write("          $scope.apply;\n")
+        controller.write("          $scope.$apply();\n")
         controller.write("          break;\n")
     controller.write(switchEndString)
                 
