@@ -38,7 +38,7 @@
 
 <div id="main" ng-app="main" ng-controller="main">
     <!--Selecting different plans-->
-    <!-- <h3 class="planhead">Plan</h3>
+    <h3 class="planhead">Plan</h3>
     <form class="select">
         <input type="radio" name="planselector" ng-model="selectedPlan" value="A">
         <label for="A">A</label><br>
@@ -48,10 +48,46 @@
         <label for="C">C</label><br>
         <input type="radio" name="planselector" ng-model="selectedPlan" value="D">
         <label for="D">D</label><br>
-    </form> -->
+    </form>
+    <div id="coursegroupselector" ng-switch="selectedPlan">
+        <div id="coursesgroupsA" ng-switch-when="A">
+            <form class="select">
+                <input type="radio" name="coursegroup2A" ng-model="field2.group2" value="2A">
+                <label for="2A">2A</label><br>
+                <input type="radio" name="coursegroup2A" ng-model="field2.group2" value="2B">
+                <label for="2B">2B</label><br>
+            </form>
+        </div>
+        <div id="coursesgroupsB" ng-switch-when="B">
+            <form class="select">
+                <input type="radio" name="coursegroup2B" ng-model="field2.group2" value="2A">
+                <label for="2A">2A</label><br>
+                <input type="radio" name="coursegroup2B" ng-model="field2.group2" value="2B">
+                <label for="2B">2B</label><br>
+            </form>
+        </div>
+        <div id="coursesgroupsC" ng-switch-when="C">
+            <form class="select">
+                <input type="radio" name="coursegroup2C" ng-model="field2.group2" value="2A">
+                <label for="2A">2A</label><br>
+                <input type="radio" name="coursegroup2C" ng-model="field2.group2" value="2B">
+                <label for="2B">2B</label><br>
+            </form>
+            <form class="select">
+                <input type="radio" name="coursegroup3C" ng-model="field3.group3" value="3A">
+                <label for="3A">3A</label><br>
+                <input type="radio" name="coursegroup3C" ng-model="field3.group3" value="3B">
+                <label for="3B">3B</label><br>
+            </form>
+        </div>
+        <div id="coursesgroupsD" ng-switch-when="D">
+            
+        </div>
+    </div>
+    
 
     <!--Dropdown menu-->
-    <form class="select">
+    <!-- <form class="select">
     <div class="dropdown">
         <button class="dropbtn"><strong>Plans</button>
         <div class="dropdown-content">
@@ -70,9 +106,10 @@
             <label for="D">D</label><br>
         </div>
     </div>
-    </form>
+
+    </form> -->
     <!--Display div, main course confriguation display-->
-    <div class="display" ng-switch="selectedPlan">
+    <div class="display" ng-switch="selectedPlan + field2.group2 + field3.group3">
         <!--Div representing a plan-->
         <div id="A" ng-switch-when="A">
             <!--Div representing a term, follow the format below-->
@@ -440,6 +477,8 @@ evaluating as null -->
     app.controller("main", function ($scope) {
         // default plan selection 
         $scope.selectedPlan = "A";
+        $scope.field2 = {group2: ""};
+        $scope.field3 = {group3: ""};
 
         // for referencing this within a function
         var that = this;
@@ -558,6 +597,7 @@ evaluating as null -->
                 that.render($scope.selectedPlan);
             });
         });
+        console.log(document.querySelectorAll("input[type=radio][name=coursegroup2A]"))
 
         $scope.alt1Aece331Listener = function () {
             $scope.alt1ASelected = "ECE 331";
@@ -1085,6 +1125,8 @@ evaluating as null -->
         }
 
     });
+
+  
 
     // https://stackoverflow.com/questions/15731634/how-do-i-handle-right-click-events-in-angular-js
     app.directive('ngRightClick', function($parse) {
