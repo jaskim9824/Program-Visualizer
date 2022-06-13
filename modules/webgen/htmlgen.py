@@ -123,6 +123,7 @@ def placeCourseGroupRadioInputsForSubPlan(subPlanTag, soup, subPlanOptionList, s
     formattedSubPlanVar = "field{number}.group{number}"
     for option in subPlanOptionList:
         inputTag = soup.new_tag("input", attrs={"type":"radio",
+                                                "id":option,
                                                 "ng-model":formattedSubPlanVar.format(number=subplan),
                                                 "value":option,
                                                 "ng-change-radio":"globalSubGroupChange()"})
