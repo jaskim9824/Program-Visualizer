@@ -27,6 +27,7 @@ from tkinter import *
 from tkinter import messagebox
 from tkinter import ttk
 from tkinter import filedialog
+from PIL import ImageTk, Image
 
 
 # Debug function for cleanly printing contents of plan sequences
@@ -50,13 +51,108 @@ root.geometry('700x200')
 root.resizable(0,0)
 
 #new window
-
-#new window
 def new_window():
+
+    global new_img1, new_img2, new_img3, new_tutorial, new_web_img
     helpWin = Toplevel()
+    helpWin.geometry('1500x700')
     helpWin.title("Manual")
     helpWin.iconbitmap('C:output/images/favicon.ico')
 
+    #### Scroll bar ####
+    # Create A Main Frame
+    main_frame = Frame(helpWin)
+    main_frame.pack(fill=BOTH, expand=1)
+
+    # Create A Canvas
+    my_canvas = Canvas(main_frame)
+    my_canvas.pack(side=LEFT, fill=BOTH, expand=1)
+
+    # Add A Scrollbar To The Canvas
+    my_scrollbar = ttk.Scrollbar(main_frame, orient=VERTICAL, command=my_canvas.yview)
+    my_scrollbar.pack(side=RIGHT, fill=Y)
+
+    # Configure The Canvas
+    my_canvas.configure(yscrollcommand=my_scrollbar.set)
+    my_canvas.bind('<Configure>', lambda e: my_canvas.configure(scrollregion = my_canvas.bbox("all")))
+
+    # Create ANOTHER Frame INSIDE the Canvas
+    second_frame = Frame(my_canvas)
+
+    # Add that New frame To a Window In The Canvas
+    my_canvas.create_window((0,0), window=second_frame, anchor="nw")
+
+    header = Message(second_frame, 
+    text="This app generates the Plan visulizer webpage by taking in three excel files. Follow the steps below to generate the webpage!",
+    aspect=800,
+    justify=CENTER,
+    font=('helvatica', 15)
+    )
+    header.grid(row=0, column=1)
+
+    message1 = Label(second_frame, 
+    text="1- Make sure the directory you are in has a directory named output."
+    )
+    message1.grid(row=1, column=0,padx=20, pady=20)
+
+    message2 = Label(second_frame, 
+    text="2- Make sure you have the following excel files:"
+    )
+    message2.grid(row=2, column=0,padx=20, pady=20)
+    #courses.xls image
+    excel_pic1 = Image.open("C:output/images/courseexcel.png")
+    resized1 = excel_pic1.resize((100,100))
+    new_img1 = ImageTk.PhotoImage(resized1)
+    img_label = Label(second_frame,image=new_img1)
+    img_label.grid(row=3, column=0)
+
+    #categories.xls image
+    excel_pic2 = Image.open("C:output/images/catexcel.png")
+    resized2 = excel_pic2.resize((100,100))
+    new_img2 = ImageTk.PhotoImage(resized2)
+    img_label2 = Label(second_frame,image=new_img2)
+    img_label2.grid(row=3, column=1)
+
+    #Sequencing.xls image
+    tutorial_img = Image.open("C:output/images/seqexcel.png")
+    resized_img = tutorial_img.resize((100,100))
+    new_img3 = ImageTk.PhotoImage(resized_img)
+    img_label3 = Label(second_frame,image=new_img3)
+    img_label3.grid(row=3, column=2, padx=150)
+
+    #excel file description
+    pic1_description = Label(second_frame, text="This excel file must contain\nall the program's courses")
+    pic1_description.grid(row=4, column=0)
+
+    pic2_description = Label(second_frame, text="This excel file must contain course categories\nand all courses that fall under each category")
+    pic2_description.grid(row=4, column=1)
+
+    pic3_description = Label(second_frame, text="This excel file must contain\nthe plan sequence")
+    pic3_description.grid(row=4, column=2)
+
+    message3 = Label(second_frame, 
+    text="3- Type in the excel file name (if it's present in the same directory as the program files)\n or provide it's path:"
+    
+    )
+    message3.grid(row=5, column=0,padx=20, pady=25)
+
+    #Sequencing.xls image
+    tutorial_img = Image.open("C:output/images/tutorial.png")
+    resized_img = tutorial_img.resize((500,300))
+    new_tutorial = ImageTk.PhotoImage(resized_img)
+    tut_label = Label(second_frame,image=new_tutorial)
+    tut_label.grid(row=6, column=1, padx=10, pady=20)
+
+    message4 = Label(second_frame, 
+    text="4- Refresh the webpage and the plan visualizer webpage will be generated!"
+    )
+    message4.grid(row=7, column=0,padx=20, pady=25)
+
+    web_img = Image.open("C:output/images/website.png")
+    resized_webImg = web_img.resize((500, 300))
+    new_web_img = ImageTk.PhotoImage(resized_webImg)
+    web_label = Label(second_frame, image=new_web_img)
+    web_label.grid(row=8, column=1)
 
 menubar = Menu(root)
 root.config(menu=menubar)
