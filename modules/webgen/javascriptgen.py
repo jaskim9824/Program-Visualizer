@@ -82,6 +82,7 @@ Array.prototype.forEach.call(radios, function (radio) {
 def generatePlanBasedBlocksController(sequenceDict, intitalCourseGroupVals, courseGroupDict, courseGroupList, controller):
     generatePlanBasedInitalVariables(sequenceDict, intitalCourseGroupVals, controller)
     generateSetDefaults(courseGroupDict, courseGroupList, controller)
+    generateSubRadioListener(courseGroupList, controller)
     generateDisableSwitchStatement(sequenceDict, controller)
     generateEnableSwitchStatement(sequenceDict, controller)
     generateAddLineSwitch(sequenceDict, controller)
@@ -89,6 +90,18 @@ def generatePlanBasedBlocksController(sequenceDict, intitalCourseGroupVals, cour
     generateAddToClickSwitch(sequenceDict, controller)
     generateDeleteFromClickSwitch(sequenceDict, controller)
     generateCategoryLegendJS(sequenceDict, controller)
+
+def generateSubRadioListener(courseGroupList, controller):
+    planString = "$scope.selectedPlan"
+    formattedCourseGroup = "$scope.field{number}.group{number}"
+    for courseGroup in courseGroupList:
+        planString += "+"+formattedCourseGroup.format(number=courseGroup)
+    print(planString)
+    controller.write("$scope.globalSubGroupChange = function () { \n")
+    controller.write("that.render(" + planString + ");\n")
+    controller.write("};\n")
+
+
 
 def generateSetDefaults(courseGroupDict, courseGroupList, controller):
     controller.write("this.setDefaults = function(plan) { \n")
