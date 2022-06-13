@@ -49,6 +49,38 @@ root.iconbitmap('C:output/images/favicon.ico')
 root.geometry('700x200')
 root.resizable(0,0)
 
+#new window
+
+#new window
+def new_window():
+    helpWin = Toplevel()
+    helpWin.title("Manual")
+    helpWin.iconbitmap('C:output/images/favicon.ico')
+
+
+menubar = Menu(root)
+root.config(menu=menubar)
+
+# create the Help menu
+help_menu = Menu(
+    menubar,
+    tearoff=0
+)
+
+
+help_menu.add_command(
+    label='About...',
+    command=new_window
+
+)
+
+# add the Help menu to the menubar
+menubar.add_cascade(
+    label="Help",
+    menu=help_menu
+)
+
+
 paddings = {'padx': 20, 'pady': 5}
 entry_font = {'font': ('Helvetica', 11)}
 
