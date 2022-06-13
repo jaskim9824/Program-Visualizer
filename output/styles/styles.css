@@ -386,6 +386,7 @@ p.ortext {
 .tooltip .tooltiptextright, .tooltip .tooltiptextleft, .tooltiptextright-locked, .tooltiptextleft-locked {
     visibility: hidden;
     width: 46vw;
+    max-width: 900px;
     padding: 0px 10px;
     background-color: #EEEEEE;
     border: 1px solid #444444;

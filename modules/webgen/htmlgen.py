@@ -201,13 +201,14 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
     # number that goes into course group (eg: group 2A, 4B -> #A or #B)
     groupcounter = 0
     groupcountsetflag = False  # flag to tell if the initial value of groupcounter is set
+    totalgroupscount = 0
 
     for term in planDict:
         termDiv = soup.new_tag("div", attrs={"class":"term"})
         termHeader = soup.new_tag("h3", attrs={"class":"termheader"})
         termHeader.append(term)
         termDiv.append(termHeader)
-        compcounter, progcounter, itscounter, groupcounter, groupcountsetflag = placeCourses(termDiv, 
+        compcounter, progcounter, itscounter, groupcounter, totalgroupscount, groupcountsetflag = placeCourses(termDiv, 
                                                             planDict[term], 
                                                             soup, 
                                                             controller, 
@@ -216,7 +217,8 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
                                                             compcounter,
                                                             progcounter,
                                                             itscounter,
-                                                            groupcounter, 
+                                                            groupcounter,
+                                                            totalgroupscount,
                                                             groupcountsetflag,
                                                             term)
         planTag.append(termDiv)
@@ -242,11 +244,12 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
 #   progcounter - number of program electives that have been placed for this plan
 #   itscoutner - number of its electives that have been placed for this plan
 #   groupcounter - number that goes into course group name (#A or #B eg: 2A, 4B)
+#   totalgroupscount - total number of course groups (A and B) that have been cycled through
 #   groupcountsetflag - flag set when initial value is set
 #   term - name of the current term, used to set initial value of groupcounter
 # Returns:
-#   compcounter, progcounter, itscounter, groupcounter, groupcountsetflag
-def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcounter, progcounter, itscounter, groupcounter, groupcountsetflag, term):
+#   compcounter, progcounter, itscounter, groupcounter, totalgroupscount groupcountsetflag
+def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcounter, progcounter, itscounter, groupcounter, totalgroupscount, groupcountsetflag, term):
     orCounter = 0  # if course has "or" option, first and second courseDiv need different styling, this counts if 1st or 2nd
     courseGroupList = []  # list of courses (course objects) in a course group
     courseGroupTitle = ""  # name of the course group (eg: "Course group 2A")
@@ -257,17 +260,25 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
 
         if course.course_group == "A":
             # groupcounter is initially set to ceil(term[-1]/2), it is the year of study/2 with ceiling fnc
-            if int(term[-1]) % 2 == 0:
-                groupcounter = int(term[-1])//2
-            else:
-                groupcounter = int(term[-1])//2 + 1
+            if groupcountsetflag == False:
+                if int(term[-1]) % 2 == 0:
+                    groupcounter = int(term[-1])//2
+                else:
+                    groupcounter = int(term[-1])//2 + 1
 
-            groupcountsetflag = True
+                groupcountsetflag = True
             # different classes for course groups A and B
             courseContDiv = soup.new_tag("div", attrs={"class":"coursegroupacontainer"})
             courseGroupTitle = soup.new_tag("p", attrs={"class":"coursegrouptitle"})
             courseGroupTitle.append("Course Group " + str(groupcounter) + "A")
         elif course.course_group == "B":
+            if groupcountsetflag == False:
+                if int(term[-1]) % 2 == 0:
+                    groupcounter = int(term[-1])//2
+                else:
+                    groupcounter = int(term[-1])//2 + 1
+                groupcountsetflag = True
+
             courseContDiv = soup.new_tag("div", attrs={"class":"coursegroupbcontainer"})
             courseGroupTitle = soup.new_tag("p", attrs={"class":"coursegrouptitle"})
             courseGroupTitle.append("Course Group " + str(groupcounter) + "B")
@@ -375,11 +386,12 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
                 courseGroupList[i]["class"].append("lastcourseingroup")  # last course has no bottom margin
             courseContDiv.append(courseGroupList[i])
         termTag.append(courseContDiv)
-        if course.course_group == "B":
+        totalgroupscount += 1
+        if totalgroupscount % 2 == 0:
             # A and B groups are done, next course group will be one number higher
             groupcounter += 1
     
-    return compcounter, progcounter, itscounter, groupcounter, groupcountsetflag
+    return compcounter, progcounter, itscounter, groupcounter, totalgroupscount, groupcountsetflag
 
 # Determines which side a tooltip should appear on based on the term position on the page.
 # If the term is near the left side, the tooltip appears on the right and vice versa.
