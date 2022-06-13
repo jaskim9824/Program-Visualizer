@@ -113,6 +113,9 @@ def placeCourseGroupRadioInputs(courseGroupSelectTag, soup, courseGroupDict):
 def placeCourseGroupRadioInputsForPlan(planCourseGroupsTag, soup, planCourseGroupDict):
     for subplan in planCourseGroupDict:
         formTag = soup.new_tag("form", class_="select")
+        boldFaceTag = soup.new_tag("b")
+        boldFaceTag.append("Course Plan " + str(subplan))
+        planCourseGroupsTag.append(boldFaceTag)
         placeCourseGroupRadioInputsForSubPlan(formTag, soup, planCourseGroupDict[subplan], subplan)
         planCourseGroupsTag.append(formTag)
 
