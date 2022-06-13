@@ -214,16 +214,17 @@ def seqBrowse():
     filename =filedialog.askopenfilename()
     seq_excel.insert(tkinter.END, filename) 
 
-# Main function   
 def main():
+    print("Beginning generation...")
     # opening the template html file and constructing html
     # note: here we calling parsing to extract the course data!
     try:  
         with open("template.html") as input:
             # deriving parsed html and creating soup object
             soup = BeautifulSoup(input, 'html.parser')
-
+            
             # opening the JS files
+            print("Opening files...")
             controller = open("./output/js/controller.js", "w")
             indexJS = open("./output/js/index.js", "w")
 
@@ -234,56 +235,91 @@ def main():
             lineManager = linegen.LineManager()
 
             # parsing the excel files with course info, pulls dependencies (prereqs, coreqs, reqs) too
+            print("Parsing courses...")
             courseDict = courseparsing.parseCourses(courses_excel.get())
-
+            
             # pulling the category and color info from excel
+            print("Parsing categories...")
             courseDict, categoryDict = categoriesparsing.parseCategories(course_cat_excel.get(), courseDict)
 
             # writing colour highlighting CSS
+            print("Writing category CSS...")
             cssgen.writeCategoryCSS(categoryDict, categoryCSS)
             
             # sequencing courses
+            print("Parsing sequences....")
             sequenceDict, deptName = sequenceparsing.parseSeq(seq_excel.get(), courseDict)
 
-            # generating intital JS based on the number and names of plans
-            javascriptgen.intializeControllerJavaScript(sequenceDict, controller)
+            courseGroupDict = htmlgen.extractPlanCourseGroupDict(sequenceDict)
+            courseGroupList = htmlgen.findListofAllCourseGroups(courseGroupDict)
+            # print(courseGroupDict)
+            # print(courseGroupList)
+            intitalCourseGroupVals = htmlgen.findIntitalValuesofCourseGroups(courseGroupDict, courseGroupList)
 
+            # print(intitalCourseGroupVals)
+
+            # generating intital JS based on the number and names of plans
+            print("Intialzing JS files....")
+            javascriptgen.intializeControllerJavaScript(sequenceDict, 
+                                                        intitalCourseGroupVals,
+                                                        courseGroupDict,
+                                                        courseGroupList, 
+                                                        controller)
+
+            #locating title tag
             titleTag = soup.body.find("a", class_="site-title")
-      
+
             #locating main div, this is where all the html will be written
             mainTag = soup.body.find("div", id="main")
-            # locating form tag
-            formTag = mainTag.find("form")
-            # locating legend tag
-            legendTag = mainTag.find("div", class_="legend")
-            # locating display tag, this is where the course divs will be written
-            displayTag = mainTag.find("div", class_="display")
+
+    
 
             # customizing webpage title
+            print("Writing title....")
             htmlgen.switchTitle(titleTag, deptName)
 
-            # placing radio inputs
-            htmlgen.placeRadioInputs(formTag, sequenceDict, soup)
+            # locating form tag
+            formTag = mainTag.find("form")
+
+            # placing main radio inputs
+            print("Placing radio inputs....")
+            htmlgen.placeRadioInputs(formTag, courseGroupDict, soup)
+
+            # locating course group selector
+            courseGroupSelectTag = soup.body.find("div", class_="coursegroupselector")
+
+            # placing submenu radio inputs
+            htmlgen.placeCourseGroupRadioInputs(courseGroupSelectTag, soup, courseGroupDict)
+
+            # locating legend tag
+            legendTag = mainTag.find("div", class_="legend")
 
             # places legend for color-coding
+            print("Placing legend....")
             htmlgen.placeLegend(legendTag, categoryDict, soup)
 
+            # Generating display tag, this is where the course divs will be written
+            print("Generating display tag...")
+            displayTag = htmlgen.generateDisplayDiv(soup, courseGroupList)
+
+            mainTag.append(displayTag)
+
             #placing the HTML and generating JS based on the courses (drawing lines)
+            print("Placing course diagram....")
             htmlgen.placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager)
 
-            #closing JS files
+            # closing JS and CSS files
+            print("Closing files...")
             javascriptgen.closeControllerJavaScript(controller)
             indexJS.close()
             categoryCSS.close()
            
-
-
-    #TO DO: improve expection handling here
     except FileNotFoundError as err:
        print("Exception raised: " + 
        err.strerror + 
        ". Either the template HTML file is not in the same directory as the script or" +
        " the output directory is not organized correctly or does not exist")
+       
        #gui error box
        messagebox.showerror('Python Error', "Exception raised: " + 
        err.strerror + 
@@ -292,13 +328,14 @@ def main():
 
     # writing output to an output html
     try:
+        print("Writing final HTML.....")
         with open("./output/index.html", "w", encoding="utf-8") as output:
             output.write(str(soup))
-    #TO DO: improve expection handling here
     except FileNotFoundError as err:
        print("Exception raised: " + 
              err.strerror + 
              ". The directory you are in does not have a directory named output.")
+    print("Generation Completed!")
 
 #browse buttons
 button_excel = ttk.Button(root, text="Browse", command=courseBrowse)
