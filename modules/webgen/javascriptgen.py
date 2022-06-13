@@ -99,7 +99,7 @@ def generatePlanBasedBlocksController(sequenceDict, intitalCourseGroupVals, cour
     generateDeleteLineSwitch(sequenceDict, courseGroupList, controller)
     generateAddToClickSwitch(sequenceDict, courseGroupList, controller)
     generateDeleteFromClickSwitch(sequenceDict, courseGroupList, controller)
-    generateCategoryLegendJS(sequenceDict, controller)
+    generateCategoryLegendJS(sequenceDict, courseGroupList, controller)
 
 def generatePlanString(courseGroupList):
     planString = "$scope.selectedPlan"
@@ -407,10 +407,10 @@ def generateHighlightCategoryFlags(categoriesDict, controller):
                 controller.write(formattedCategoriesFlagStatement.format(categoryName = cleaner.cleanString(category), 
                                                                      planName = cleaner.cleanString(plan)))
 
-def generateCategoryListeners(categoriesDict, controller):
+def generateCategoryListeners(categoriesDict, courseGroupList, controller):
     # listener for each category
     formattedCategoriesListener = """$scope.{categoryName}clickListener = function() {{
-    var planName = $scope.selectedPlan;
+    var planName = {planString};
     var pressedbtn = document.getElementById("{categoryNameId}");
     var checkFlag = "!{categoryName}" + planName + "flag";
     var flagBool = eval(checkFlag);
@@ -437,14 +437,22 @@ def generateCategoryListeners(categoriesDict, controller):
     for category in categoriesDict:
         # special cases to handle electives, category is not the same as ID
         if category == "ComplementaryElective":
-            controller.write(formattedCategoriesListener.format(categoryName="COMP", categoryNameId="COMP"))
+            controller.write(formattedCategoriesListener.format(categoryName="COMP", 
+                                                                categoryNameId="COMP",
+                                                                planString=generatePlanString(courseGroupList)))
         elif category == "ProgramTechnicalElective":
-            controller.write(formattedCategoriesListener.format(categoryName="PROG", categoryNameId="PROG"))
+            controller.write(formattedCategoriesListener.format(categoryName="PROG", 
+                                                                categoryNameId="PROG",
+                                                                planString=generatePlanString(courseGroupList)))
         elif category == "ITSElective":
-            controller.write(formattedCategoriesListener.format(categoryName="ITS", categoryNameId="ITS"))
+            controller.write(formattedCategoriesListener.format(categoryName="ITS", 
+                                                                categoryNameId="ITS",
+                                                                planString=generatePlanString(courseGroupList)))
         else:
             # not an elective
-            controller.write(formattedCategoriesListener.format(categoryName=category, categoryNameId=category))
+            controller.write(formattedCategoriesListener.format(categoryName=category, 
+                                                                categoryNameId=category,
+                                                                planString=generatePlanString(courseGroupList)))
         controller.write("}\n")
 
 def generateCategorySwitch(categoriesDict, controller, highlight):
@@ -618,7 +626,7 @@ def generateNormalCourseUnhighlightStatement(course, plan, category, controller)
 #   controller - file handle for controller.js file
 # Returns:
 #   None
-def generateCategoryLegendJS(sequenceDict, controller):
+def generateCategoryLegendJS(sequenceDict, courseGroupList, controller):
     # sort courses into categories and plans
     categoriesDict = sortIntoCategories(sequenceDict)
 
@@ -626,7 +634,7 @@ def generateCategoryLegendJS(sequenceDict, controller):
     generateHighlightCategoryFlags(categoriesDict, controller)
 
     #listeners for categories
-    generateCategoryListeners(categoriesDict, controller)
+    generateCategoryListeners(categoriesDict, courseGroupList, controller)
        
     formattedFunctionStatement = """this.{functionName} = function(categoryName, planName) {{
 switch(categoryName) {{ \n"""

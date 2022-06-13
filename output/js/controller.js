@@ -1362,7 +1362,7 @@ var ITSCoopPlan2flag = false;
 var ITSCoopPlan3Biomedicalflag = false;
 var ITSCoopPlan4flag = false;
 $scope.NaturalSciencesclickListener = function() {
-    var planName = $scope.selectedPlan;
+    var planName = $scope.selectedPlan+$scope.field2.group2+$scope.field3.group3+$scope.field4.group4;
     var pressedbtn = document.getElementById("NaturalSciences");
     var checkFlag = "!NaturalSciences" + planName + "flag";
     var flagBool = eval(checkFlag);
@@ -1388,7 +1388,7 @@ $scope.NaturalSciencesclickListener = function() {
     }
 }
 $scope.EngineeringProfessionclickListener = function() {
-    var planName = $scope.selectedPlan;
+    var planName = $scope.selectedPlan+$scope.field2.group2+$scope.field3.group3+$scope.field4.group4;
     var pressedbtn = document.getElementById("EngineeringProfession");
     var checkFlag = "!EngineeringProfession" + planName + "flag";
     var flagBool = eval(checkFlag);
@@ -1414,7 +1414,7 @@ $scope.EngineeringProfessionclickListener = function() {
     }
 }
 $scope.OtherclickListener = function() {
-    var planName = $scope.selectedPlan;
+    var planName = $scope.selectedPlan+$scope.field2.group2+$scope.field3.group3+$scope.field4.group4;
     var pressedbtn = document.getElementById("Other");
     var checkFlag = "!Other" + planName + "flag";
     var flagBool = eval(checkFlag);
@@ -1440,7 +1440,7 @@ $scope.OtherclickListener = function() {
     }
 }
 $scope.MathclickListener = function() {
-    var planName = $scope.selectedPlan;
+    var planName = $scope.selectedPlan+$scope.field2.group2+$scope.field3.group3+$scope.field4.group4;
     var pressedbtn = document.getElementById("Math");
     var checkFlag = "!Math" + planName + "flag";
     var flagBool = eval(checkFlag);
@@ -1466,7 +1466,7 @@ $scope.MathclickListener = function() {
     }
 }
 $scope.EngineeringDesignclickListener = function() {
-    var planName = $scope.selectedPlan;
+    var planName = $scope.selectedPlan+$scope.field2.group2+$scope.field3.group3+$scope.field4.group4;
     var pressedbtn = document.getElementById("EngineeringDesign");
     var checkFlag = "!EngineeringDesign" + planName + "flag";
     var flagBool = eval(checkFlag);
@@ -1492,7 +1492,7 @@ $scope.EngineeringDesignclickListener = function() {
     }
 }
 $scope.EngineeringSciencesclickListener = function() {
-    var planName = $scope.selectedPlan;
+    var planName = $scope.selectedPlan+$scope.field2.group2+$scope.field3.group3+$scope.field4.group4;
     var pressedbtn = document.getElementById("EngineeringSciences");
     var checkFlag = "!EngineeringSciences" + planName + "flag";
     var flagBool = eval(checkFlag);
@@ -1518,7 +1518,7 @@ $scope.EngineeringSciencesclickListener = function() {
     }
 }
 $scope.COMPclickListener = function() {
-    var planName = $scope.selectedPlan;
+    var planName = $scope.selectedPlan+$scope.field2.group2+$scope.field3.group3+$scope.field4.group4;
     var pressedbtn = document.getElementById("COMP");
     var checkFlag = "!COMP" + planName + "flag";
     var flagBool = eval(checkFlag);
@@ -1544,7 +1544,7 @@ $scope.COMPclickListener = function() {
     }
 }
 $scope.PROGclickListener = function() {
-    var planName = $scope.selectedPlan;
+    var planName = $scope.selectedPlan+$scope.field2.group2+$scope.field3.group3+$scope.field4.group4;
     var pressedbtn = document.getElementById("PROG");
     var checkFlag = "!PROG" + planName + "flag";
     var flagBool = eval(checkFlag);
@@ -1570,7 +1570,7 @@ $scope.PROGclickListener = function() {
     }
 }
 $scope.ITSclickListener = function() {
-    var planName = $scope.selectedPlan;
+    var planName = $scope.selectedPlan+$scope.field2.group2+$scope.field3.group3+$scope.field4.group4;
     var pressedbtn = document.getElementById("ITS");
     var checkFlag = "!ITS" + planName + "flag";
     var flagBool = eval(checkFlag);
