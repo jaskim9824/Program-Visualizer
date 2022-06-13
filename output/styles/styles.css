@@ -193,6 +193,15 @@ h3.planhead {
     margin-right: 0;
 }
 
+.coursegroupselector {
+    width: fit-content;
+    position: absolute;
+    left: 65rem;
+    top: 7rem;
+    margin-top: 15px;
+    margin-right: 0;
+}
+
 /* Form text styling */
 label {
     display: inline-block;
