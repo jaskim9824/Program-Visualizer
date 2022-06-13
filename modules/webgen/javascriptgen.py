@@ -67,8 +67,6 @@ def generateIntitalBlockController(courseGroupDict, courseGroupList, controller)
     controller.write("app.controller(\"main\", function($scope) { \n")
     controller.write("$scope.selectedPlan = \"" + cleaner.cleanString(planList[0])+ "\";\n")
     controller.write("var that = this;\n")
-    controller.write("this.previousPlan = $scope.selectedPlan;\n")
-
     controller.write("""this.render = function(plan) {
             this.disable(this.previousPlan);
             this.enable(plan);
@@ -79,11 +77,8 @@ def generateIntitalBlockController(courseGroupDict, courseGroupList, controller)
 Array.prototype.forEach.call(radios, function (radio) {
     radio.addEventListener("change", function () { \n""")
     controller.write("that.setDefaults($scope.selectedPlan);\n")
-    controller.write("that.render($scope.selectedPlan")
-    formattedCourseGroup = "$scope.field{number}.group{number}"
-    for element in courseGroupList:
-        controller.write("+"+formattedCourseGroup.format(number=element))
-    controller.write(");\n")
+    planString = generatePlanString(courseGroupList)
+    controller.write("that.render("+planString+");\n")
     controller.write("""   });
 });\n""")
 
@@ -95,23 +90,26 @@ Array.prototype.forEach.call(radios, function (radio) {
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   controller - file handle for controller.js file
 def generatePlanBasedBlocksController(sequenceDict, intitalCourseGroupVals, courseGroupDict, courseGroupList, controller):
-    generatePlanBasedInitalVariables(sequenceDict, intitalCourseGroupVals, controller)
+    generatePlanBasedInitalVariables(sequenceDict, intitalCourseGroupVals, courseGroupList, controller)
     generateSetDefaults(courseGroupDict, courseGroupList, controller)
     generateSubRadioListener(courseGroupList, controller)
     generateDisableSwitchStatement(sequenceDict, controller)
     generateEnableSwitchStatement(sequenceDict, controller)
-    generateAddLineSwitch(sequenceDict, controller)
-    generateDeleteLineSwitch(sequenceDict, controller)
-    generateAddToClickSwitch(sequenceDict, controller)
-    generateDeleteFromClickSwitch(sequenceDict, controller)
+    generateAddLineSwitch(sequenceDict, courseGroupList, controller)
+    generateDeleteLineSwitch(sequenceDict, courseGroupList, controller)
+    generateAddToClickSwitch(sequenceDict, courseGroupList, controller)
+    generateDeleteFromClickSwitch(sequenceDict, courseGroupList, controller)
     generateCategoryLegendJS(sequenceDict, controller)
 
-def generateSubRadioListener(courseGroupList, controller):
+def generatePlanString(courseGroupList):
     planString = "$scope.selectedPlan"
     formattedCourseGroup = "$scope.field{number}.group{number}"
     for courseGroup in courseGroupList:
         planString += "+"+formattedCourseGroup.format(number=courseGroup)
-    print(planString)
+    return planString
+        
+def generateSubRadioListener(courseGroupList, controller):
+    planString = generatePlanString(courseGroupList)
     controller.write("$scope.globalSubGroupChange = function () { \n")
     controller.write("that.render(" + planString + ");\n")
     controller.write("};\n")
@@ -145,7 +143,7 @@ def generateSetDefaults(courseGroupDict, courseGroupList, controller):
 # Parameters: 
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   controller - file handle for controller.js file
-def generatePlanBasedInitalVariables(sequenceDict, intitalCourseGroupVals, controller):
+def generatePlanBasedInitalVariables(sequenceDict, intitalCourseGroupVals, courseGroupList, controller):
     for plan in sequenceDict:
         controller.write("this." + cleaner.cleanString(plan) + "List = [];\n")
         controller.write("this." + cleaner.cleanString(plan) + "Clicked = [];\n")
@@ -163,6 +161,8 @@ def generatePlanBasedInitalVariables(sequenceDict, intitalCourseGroupVals, contr
         formattedCourseGroupVar = "$scope.field{number} = {{ group{number}: \"{val}\" }};\n"
         controller.write(formattedCourseGroupVar.format(number=courseGroup, 
                                                         val=intitalCourseGroupVals[courseGroup]))
+    planString = generatePlanString(courseGroupList)
+    controller.write("this.previousPlan = " +planString + "\n")
 
 # Function that generates the switch statements and functions which handle
 # disabling the lines of a plan when switched off.
@@ -287,13 +287,13 @@ def findLegendButtons(categoriesDict, sequenceDict, controller):
 # Parameters:
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   controller - file handle for controller.js file
-def generateAddLineSwitch(sequenceDict, controller):
+def generateAddLineSwitch(sequenceDict, courseGroupList, controller):
     switchEndString = """    default:
     console.log("shouldn't be here");
     }
 };\n"""
     formattedFunctionStatement = """this.{functionName} = function(line) {{
-switch($scope.selectedPlan) {{ \n"""
+switch({planString}) {{ \n"""
     formattedAddLineSwitchStatement = """ case "{planName}":
     var index = this.{planName}List.findIndex((element) => element[0] == line);
     if (index == -1) {{
@@ -304,7 +304,8 @@ switch($scope.selectedPlan) {{ \n"""
         this.{planName}List[index][1]++;
     }}
     break;\n"""
-    controller.write(formattedFunctionStatement.format(functionName="addLine"))
+    controller.write(formattedFunctionStatement.format(functionName="addLine",
+                                                       planString=generatePlanString(courseGroupList)))
     for plan in sequenceDict:
         controller.write(formattedAddLineSwitchStatement.format(planName=cleaner.cleanString(plan)))
     controller.write(switchEndString)
@@ -314,13 +315,13 @@ switch($scope.selectedPlan) {{ \n"""
 # Parameters:
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   controller - file handle for controller.js file
-def generateDeleteLineSwitch(sequenceDict, controller):
+def generateDeleteLineSwitch(sequenceDict, courseGroupList, controller):
     switchEndString = """    default:
     console.log("shouldn't be here");
     }
 };\n"""
     formattedFunctionStatement = """this.{functionName} = function(line) {{
-switch($scope.selectedPlan) {{ \n"""
+switch({planString}) {{ \n"""
     formmattedDeleteLineSwitchStatement = """ case "{planName}":
     var index = this.{planName}List.findIndex((element) => element[0] == line);
     if (index != -1) {{
@@ -331,7 +332,8 @@ switch($scope.selectedPlan) {{ \n"""
         }}
     }}
     break;"""
-    controller.write(formattedFunctionStatement.format(functionName="removeLine"))
+    controller.write(formattedFunctionStatement.format(functionName="removeLine",
+                                                      planString=generatePlanString(courseGroupList)))
 
     for plan in sequenceDict:
         controller.write(formmattedDeleteLineSwitchStatement.format(planName=cleaner.cleanString(plan)))
@@ -342,20 +344,21 @@ switch($scope.selectedPlan) {{ \n"""
 # Parameters:
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   controller - file handle for controller.js file
-def generateAddToClickSwitch(sequenceDict, controller):
+def generateAddToClickSwitch(sequenceDict, courseGroupList, controller):
     switchEndString = """    default:
     console.log("shouldn't be here");
     }
 };\n"""
     formattedFunctionStatement = """this.{functionName} = function(element) {{
-switch($scope.selectedPlan) {{ \n"""
+switch({planString}) {{ \n"""
     formattedAddToClickStatement = """ case "{planName}":
     var index = this.{planName}Clicked.findIndex((item) => item[0] == element[0]);
     if (index == -1) {{
         this.{planName}Clicked.push(element);
     }}
     break;"""
-    controller.write(formattedFunctionStatement.format(functionName="addToClicked"))
+    controller.write(formattedFunctionStatement.format(functionName="addToClicked",
+                                                       planString=generatePlanString(courseGroupList)))
     for plan in sequenceDict:
         controller.write(formattedAddToClickStatement.format(planName=cleaner.cleanString(plan)))
     
@@ -365,20 +368,21 @@ switch($scope.selectedPlan) {{ \n"""
 # Parameters:
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   controller - file handle for controller.js file
-def generateDeleteFromClickSwitch(sequenceDict, controller):
+def generateDeleteFromClickSwitch(sequenceDict, courseGroupList, controller):
     switchEndString = """    default:
     console.log("shouldn't be here");
     }
 };\n"""
     formattedFunctionStatement = """this.{functionName} = function(element) {{
-switch($scope.selectedPlan) {{ \n"""
+switch({planString}) {{ \n"""
     formattedAddToClickStatement = """ case "{planName}":
     var index = this.{planName}Clicked.findIndex((item) => item[0] == element);
     if (index != -1) {{
         this.{planName}Clicked.splice(index, 1);
     }}
     break;"""
-    controller.write(formattedFunctionStatement.format(functionName="removeFromClicked"))
+    controller.write(formattedFunctionStatement.format(functionName="removeFromClicked",
+                                                       planString=generatePlanString(courseGroupList)))
     for plan in sequenceDict:
         controller.write(formattedAddToClickStatement.format(planName=cleaner.cleanString(plan)))
     

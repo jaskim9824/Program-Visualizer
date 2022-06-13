@@ -2,7 +2,6 @@ var app = angular.module("main", []);
 app.controller("main", function($scope) { 
 $scope.selectedPlan = "TraditionalPlan";
 var that = this;
-this.previousPlan = $scope.selectedPlan;
 this.render = function(plan) {
             this.disable(this.previousPlan);
             this.enable(plan);
@@ -102,6 +101,7 @@ this.CoopPlan4MaxCourses = 8;
 $scope.field2 = { group2: "2A" };
 $scope.field3 = { group3: "3A" };
 $scope.field4 = { group4: "4A" };
+this.previousPlan = $scope.selectedPlan+$scope.field2.group2+$scope.field3.group3+$scope.field4.group4
 this.setDefaults = function(plan) { 
   switch(plan) { 
       case "TraditionalPlan": 
@@ -145,6 +145,7 @@ this.setDefaults = function(plan) {
     }
 };
 $scope.globalSubGroupChange = function () { 
+$scope.$apply();
 that.render($scope.selectedPlan+$scope.field2.group2+$scope.field3.group3+$scope.field4.group4);
 };
 this.disable = function(plan) {
@@ -813,7 +814,7 @@ this.enable = function(plan) {
     }
 };
 this.addLine = function(line) {
-switch($scope.selectedPlan) { 
+switch($scope.selectedPlan+$scope.field2.group2+$scope.field3.group3+$scope.field4.group4) { 
  case "TraditionalPlan2A3A4A":
     var index = this.TraditionalPlan2A3A4AList.findIndex((element) => element[0] == line);
     if (index == -1) {
@@ -959,7 +960,7 @@ switch($scope.selectedPlan) {
     }
 };
 this.removeLine = function(line) {
-switch($scope.selectedPlan) { 
+switch($scope.selectedPlan+$scope.field2.group2+$scope.field3.group3+$scope.field4.group4) { 
  case "TraditionalPlan2A3A4A":
     var index = this.TraditionalPlan2A3A4AList.findIndex((element) => element[0] == line);
     if (index != -1) {
@@ -1091,7 +1092,7 @@ switch($scope.selectedPlan) {
     }
 };
 this.addToClicked = function(element) {
-switch($scope.selectedPlan) { 
+switch($scope.selectedPlan+$scope.field2.group2+$scope.field3.group3+$scope.field4.group4) { 
  case "TraditionalPlan2A3A4A":
     var index = this.TraditionalPlan2A3A4AClicked.findIndex((item) => item[0] == element[0]);
     if (index == -1) {
@@ -1167,7 +1168,7 @@ switch($scope.selectedPlan) {
     }
 };
 this.removeFromClicked = function(element) {
-switch($scope.selectedPlan) { 
+switch($scope.selectedPlan+$scope.field2.group2+$scope.field3.group3+$scope.field4.group4) { 
  case "TraditionalPlan2A3A4A":
     var index = this.TraditionalPlan2A3A4AClicked.findIndex((item) => item[0] == element);
     if (index != -1) {
