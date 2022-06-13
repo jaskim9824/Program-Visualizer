@@ -2806,1883 +2806,3151 @@ var line701 = new Line("ENGM401AlternatePlan3A4A", "MECE460AlternatePlan3A4A", t
 function getLine701() {
         return line701
     };
-var line702 = new Line("MATH100CoopPlan13A", "ENGG130CoopPlan13A", true);
+var line702 = new Line("MATH100AlternatePlan3A4B", "ENGG130AlternatePlan3A4B", true);
 function getLine702() {
         return line702
     };
-var line703 = new Line("MATH100CoopPlan13A", "PHYS130CoopPlan13A", true);
+var line703 = new Line("MATH100AlternatePlan3A4B", "PHYS130AlternatePlan3A4B", true);
 function getLine703() {
         return line703
     };
-var line704 = new Line("CHEM103CoopPlan13A", "CHEM105CoopPlan13A", false);
+var line704 = new Line("CHEM103AlternatePlan3A4B", "CHEM105AlternatePlan3A4B", false);
 function getLine704() {
         return line704
     };
-var line705 = new Line("ENGL199CoopPlan13A", "ENGG160CoopPlan13A", true);
+var line705 = new Line("ENGL199AlternatePlan3A4B", "ENGG160AlternatePlan3A4B", true);
 function getLine705() {
         return line705
     };
-var line706 = new Line("MATH100CoopPlan13A", "ENPH131CoopPlan13A", false);
+var line706 = new Line("MATH100AlternatePlan3A4B", "ENPH131AlternatePlan3A4B", false);
 function getLine706() {
         return line706
     };
-var line707 = new Line("ENGG130CoopPlan13A", "ENPH131CoopPlan13A", false);
+var line707 = new Line("ENGG130AlternatePlan3A4B", "ENPH131AlternatePlan3A4B", false);
 function getLine707() {
         return line707
     };
-var line708 = new Line("MATH101CoopPlan13A", "ENPH131CoopPlan13A", true);
+var line708 = new Line("MATH101AlternatePlan3A4B", "ENPH131AlternatePlan3A4B", true);
 function getLine708() {
         return line708
     };
-var line709 = new Line("MATH100CoopPlan13A", "MATH101CoopPlan13A", false);
+var line709 = new Line("MATH100AlternatePlan3A4B", "MATH101AlternatePlan3A4B", false);
 function getLine709() {
         return line709
     };
-var line710 = new Line("MATH100CoopPlan13A", "MATH102CoopPlan13A", true);
+var line710 = new Line("MATH100AlternatePlan3A4B", "MATH102AlternatePlan3A4B", true);
 function getLine710() {
         return line710
     };
-var line711 = new Line("ENGG130CoopPlan13A", "CIVE270CoopPlan13A", false);
+var line711 = new Line("MATH209AlternatePlan3A4B", "MATH201AlternatePlan3A4B", true);
 function getLine711() {
         return line711
     };
-var line712 = new Line("MATH101CoopPlan13A", "CIVE270CoopPlan13A", false);
+var line712 = new Line("MATH101AlternatePlan3A4B", "MATH209AlternatePlan3A4B", false);
 function getLine712() {
         return line712
     };
-var line713 = new Line("MATH101CoopPlan13A", "MATH209CoopPlan13A", false);
+var line713 = new Line("MATH102AlternatePlan3A4B", "MATH209AlternatePlan3A4B", true);
 function getLine713() {
         return line713
     };
-var line714 = new Line("MATH102CoopPlan13A", "MATH209CoopPlan13A", true);
+var line714 = new Line("ENGG130AlternatePlan3A4B", "CIVE270AlternatePlan3A4B", false);
 function getLine714() {
         return line714
     };
-var line715 = new Line("MATH101CoopPlan13A", "MECE230CoopPlan13A", false);
+var line715 = new Line("MATH101AlternatePlan3A4B", "CIVE270AlternatePlan3A4B", false);
 function getLine715() {
         return line715
     };
-var line716 = new Line("ENPH131CoopPlan13A", "MECE230CoopPlan13A", false);
+var line716 = new Line("MATH101AlternatePlan3A4B", "MECE230AlternatePlan3A4B", false);
 function getLine716() {
         return line716
     };
-var line717 = new Line("ENGG160CoopPlan13A", "MECE260CoopPlan13A", false);
+var line717 = new Line("ENPH131AlternatePlan3A4B", "MECE230AlternatePlan3A4B", false);
 function getLine717() {
         return line717
     };
-var line718 = new Line("MECE265CoopPlan13A", "MECE260CoopPlan13A", true);
+var line718 = new Line("ENGG160AlternatePlan3A4B", "MECE260AlternatePlan3A4B", false);
 function getLine718() {
         return line718
     };
-var line719 = new Line("CIVE270CoopPlan13A", "MECE260CoopPlan13A", true);
+var line719 = new Line("MECE265AlternatePlan3A4B", "MECE260AlternatePlan3A4B", true);
 function getLine719() {
         return line719
     };
-var line720 = new Line("MATH100CoopPlan13A", "STAT235CoopPlan13A", false);
+var line720 = new Line("CIVE270AlternatePlan3A4B", "MECE260AlternatePlan3A4B", true);
 function getLine720() {
         return line720
     };
-var line721 = new Line("MATH101CoopPlan13A", "STAT235CoopPlan13A", true);
+var line721 = new Line("MATH100AlternatePlan3A4B", "STAT235AlternatePlan3A4B", false);
 function getLine721() {
         return line721
     };
-var line722 = new Line("MATH101CoopPlan13A", "CHE243CoopPlan13A", false);
+var line722 = new Line("MATH101AlternatePlan3A4B", "STAT235AlternatePlan3A4B", true);
 function getLine722() {
         return line722
     };
-var line723 = new Line("CHEM105CoopPlan13A", "MATE202CoopPlan13A", false);
+var line723 = new Line("MATH101AlternatePlan3A4B", "CHE243AlternatePlan3A4B", false);
 function getLine723() {
         return line723
     };
-var line724 = new Line("MATH209CoopPlan13A", "MATH201CoopPlan13A", true);
+var line724 = new Line("CHEM105AlternatePlan3A4B", "MATE202AlternatePlan3A4B", false);
 function getLine724() {
         return line724
     };
-var line725 = new Line("ENGG130CoopPlan13A", "MECE250CoopPlan13A", false);
+var line725 = new Line("ENGG130AlternatePlan3A4B", "MECE250AlternatePlan3A4B", false);
 function getLine725() {
         return line725
     };
-var line726 = new Line("ENPH131CoopPlan13A", "MECE250CoopPlan13A", false);
+var line726 = new Line("ENPH131AlternatePlan3A4B", "MECE250AlternatePlan3A4B", false);
 function getLine726() {
         return line726
     };
-var line727 = new Line("MATH101CoopPlan13A", "MECE250CoopPlan13A", false);
+var line727 = new Line("MATH101AlternatePlan3A4B", "MECE250AlternatePlan3A4B", false);
 function getLine727() {
         return line727
     };
-var line728 = new Line("ENGG299CoopPlan13A", "WKEXP901CoopPlan13A", false);
+var line728 = new Line("MATH201AlternatePlan3A4B", "MATH300AlternatePlan3A4B", false);
 function getLine728() {
         return line728
     };
-var line729 = new Line("WKEXP901CoopPlan13A", "WKEXP902CoopPlan13A", false);
+var line729 = new Line("MATH209AlternatePlan3A4B", "MATH300AlternatePlan3A4B", false);
 function getLine729() {
         return line729
     };
-var line730 = new Line("MATH201CoopPlan13A", "MATH300CoopPlan13A", false);
+var line730 = new Line("CIVE270AlternatePlan3A4B", "MECE300AlternatePlan3A4B", false);
 function getLine730() {
         return line730
     };
-var line731 = new Line("MATH209CoopPlan13A", "MATH300CoopPlan13A", false);
+var line731 = new Line("ECE209AlternatePlan3A4B", "MECE300AlternatePlan3A4B", false);
 function getLine731() {
         return line731
     };
-var line732 = new Line("CIVE270CoopPlan13A", "MECE300CoopPlan13A", false);
+var line732 = new Line("STAT235AlternatePlan3A4B", "MECE300AlternatePlan3A4B", false);
 function getLine732() {
         return line732
     };
-var line733 = new Line("ECE209CoopPlan13A", "MECE300CoopPlan13A", false);
+var line733 = new Line("MECE331AlternatePlan3A4B", "MECE300AlternatePlan3A4B", true);
 function getLine733() {
         return line733
     };
-var line734 = new Line("STAT235CoopPlan13A", "MECE300CoopPlan13A", false);
+var line734 = new Line("MECE300AlternatePlan3A4B", "MECE301AlternatePlan3A4B", true);
 function getLine734() {
         return line734
     };
-var line735 = new Line("MECE331CoopPlan13A", "MECE300CoopPlan13A", true);
+var line735 = new Line("MECE230AlternatePlan3A4B", "MECE331AlternatePlan3A4B", false);
 function getLine735() {
         return line735
     };
-var line736 = new Line("MECE300CoopPlan13A", "MECE301CoopPlan13A", true);
+var line736 = new Line("MECE250AlternatePlan3A4B", "MECE331AlternatePlan3A4B", false);
 function getLine736() {
         return line736
     };
-var line737 = new Line("MECE230CoopPlan13A", "MECE331CoopPlan13A", false);
+var line737 = new Line("MATH209AlternatePlan3A4B", "MECE331AlternatePlan3A4B", false);
 function getLine737() {
         return line737
     };
-var line738 = new Line("MECE250CoopPlan13A", "MECE331CoopPlan13A", false);
+var line738 = new Line("CHE243AlternatePlan3A4B", "MECE331AlternatePlan3A4B", true);
 function getLine738() {
         return line738
     };
-var line739 = new Line("MATH209CoopPlan13A", "MECE331CoopPlan13A", false);
+var line739 = new Line("MECE230AlternatePlan3A4B", "MECE371AlternatePlan3A4B", false);
 function getLine739() {
         return line739
     };
-var line740 = new Line("CHE243CoopPlan13A", "MECE331CoopPlan13A", true);
+var line740 = new Line("CHE243AlternatePlan3A4B", "MECE371AlternatePlan3A4B", false);
 function getLine740() {
         return line740
     };
-var line741 = new Line("MECE230CoopPlan13A", "MECE371CoopPlan13A", false);
+var line741 = new Line("MATH300AlternatePlan3A4B", "MECE371AlternatePlan3A4B", true);
 function getLine741() {
         return line741
     };
-var line742 = new Line("CHE243CoopPlan13A", "MECE371CoopPlan13A", false);
+var line742 = new Line("MECE331AlternatePlan3A4B", "MECE371AlternatePlan3A4B", true);
 function getLine742() {
         return line742
     };
-var line743 = new Line("MATH300CoopPlan13A", "MECE371CoopPlan13A", true);
+var line743 = new Line("CIVE270AlternatePlan3A4B", "MECE380AlternatePlan3A4B", false);
 function getLine743() {
         return line743
     };
-var line744 = new Line("MECE331CoopPlan13A", "MECE371CoopPlan13A", true);
+var line744 = new Line("CHE243AlternatePlan3A4B", "MECE340AlternatePlan3A4B", false);
 function getLine744() {
         return line744
     };
-var line745 = new Line("CIVE270CoopPlan13A", "MECE380CoopPlan13A", false);
+var line745 = new Line("MECE260AlternatePlan3A4B", "MECE360AlternatePlan3A4B", false);
 function getLine745() {
         return line745
     };
-var line746 = new Line("WKEXP902CoopPlan13A", "WKEXP903CoopPlan13A", false);
+var line746 = new Line("MECE265AlternatePlan3A4B", "MECE360AlternatePlan3A4B", false);
 function getLine746() {
         return line746
     };
-var line747 = new Line("WKEXP903CoopPlan13A", "WKEXP904CoopPlan13A", false);
+var line747 = new Line("MATE202AlternatePlan3A4B", "MECE360AlternatePlan3A4B", false);
 function getLine747() {
         return line747
     };
-var line748 = new Line("CHE243CoopPlan13A", "MECE340CoopPlan13A", false);
+var line748 = new Line("CIVE270AlternatePlan3A4B", "MECE360AlternatePlan3A4B", false);
 function getLine748() {
         return line748
     };
-var line749 = new Line("MECE260CoopPlan13A", "MECE360CoopPlan13A", false);
+var line749 = new Line("MECE362AlternatePlan3A4B", "MECE360AlternatePlan3A4B", true);
 function getLine749() {
         return line749
     };
-var line750 = new Line("MECE265CoopPlan13A", "MECE360CoopPlan13A", false);
+var line750 = new Line("MECE250AlternatePlan3A4B", "MECE362AlternatePlan3A4B", false);
 function getLine750() {
         return line750
     };
-var line751 = new Line("MATE202CoopPlan13A", "MECE360CoopPlan13A", false);
+var line751 = new Line("MATH102AlternatePlan3A4B", "MECE390AlternatePlan3A4B", false);
 function getLine751() {
         return line751
     };
-var line752 = new Line("CIVE270CoopPlan13A", "MECE360CoopPlan13A", false);
+var line752 = new Line("MATH201AlternatePlan3A4B", "MECE390AlternatePlan3A4B", false);
 function getLine752() {
         return line752
     };
-var line753 = new Line("MECE362CoopPlan13A", "MECE360CoopPlan13A", true);
+var line753 = new Line("MECE300AlternatePlan3A4B", "MECE403AlternatePlan3A4B", false);
 function getLine753() {
         return line753
     };
-var line754 = new Line("MECE250CoopPlan13A", "MECE362CoopPlan13A", false);
+var line754 = new Line("MECE301AlternatePlan3A4B", "MECE403AlternatePlan3A4B", false);
 function getLine754() {
         return line754
     };
-var line755 = new Line("MATH102CoopPlan13A", "MECE390CoopPlan13A", false);
+var line755 = new Line("MECE340AlternatePlan3A4B", "MECE403AlternatePlan3A4B", false);
 function getLine755() {
         return line755
     };
-var line756 = new Line("MATH201CoopPlan13A", "MECE390CoopPlan13A", false);
+var line756 = new Line("MECE360AlternatePlan3A4B", "MECE403AlternatePlan3A4B", false);
 function getLine756() {
         return line756
     };
-var line757 = new Line("MECE331CoopPlan13A", "MECE430CoopPlan13A", false);
+var line757 = new Line("MECE250AlternatePlan3A4B", "MECE451AlternatePlan3A4B", false);
 function getLine757() {
         return line757
     };
-var line758 = new Line("MECE360CoopPlan13A", "MECE480CoopPlan13A", false);
+var line758 = new Line("MATH300AlternatePlan3A4B", "MECE451AlternatePlan3A4B", false);
 function getLine758() {
         return line758
     };
-var line759 = new Line("MECE380CoopPlan13A", "MECE480CoopPlan13A", false);
+var line759 = new Line("MECE200AlternatePlan3A4B", "MECE460AlternatePlan3A4B", false);
 function getLine759() {
         return line759
     };
-var line760 = new Line("MATH300CoopPlan13A", "MECE480CoopPlan13A", false);
+var line760 = new Line("MECE331AlternatePlan3A4B", "MECE460AlternatePlan3A4B", false);
 function getLine760() {
         return line760
     };
-var line761 = new Line("MECE331CoopPlan13A", "MECE463CoopPlan13A", false);
+var line761 = new Line("MECE340AlternatePlan3A4B", "MECE460AlternatePlan3A4B", false);
 function getLine761() {
         return line761
     };
-var line762 = new Line("MECE340CoopPlan13A", "MECE463CoopPlan13A", false);
+var line762 = new Line("MECE360AlternatePlan3A4B", "MECE460AlternatePlan3A4B", false);
 function getLine762() {
         return line762
     };
-var line763 = new Line("MECE371CoopPlan13A", "MECE463CoopPlan13A", false);
+var line763 = new Line("MECE362AlternatePlan3A4B", "MECE460AlternatePlan3A4B", false);
 function getLine763() {
         return line763
     };
-var line764 = new Line("WKEXP904CoopPlan13A", "WKEXP905CoopPlan13A", false);
+var line764 = new Line("MECE371AlternatePlan3A4B", "MECE460AlternatePlan3A4B", false);
 function getLine764() {
         return line764
     };
-var line765 = new Line("MATH201CoopPlan13A", "CHE448CoopPlan13A", false);
+var line765 = new Line("MECE380AlternatePlan3A4B", "MECE460AlternatePlan3A4B", false);
 function getLine765() {
         return line765
     };
-var line766 = new Line("MATH209CoopPlan13A", "CHE448CoopPlan13A", false);
+var line766 = new Line("ENGM310AlternatePlan3A4B", "MECE460AlternatePlan3A4B", true);
 function getLine766() {
         return line766
     };
-var line767 = new Line("MECE331CoopPlan13A", "CHE448CoopPlan13A", false);
+var line767 = new Line("ENGM401AlternatePlan3A4B", "MECE460AlternatePlan3A4B", true);
 function getLine767() {
         return line767
     };
-var line768 = new Line("MECE371CoopPlan13A", "CHE448CoopPlan13A", true);
+var line768 = new Line("MATH201AlternatePlan3A4B", "CHE448AlternatePlan3A4B", false);
 function getLine768() {
         return line768
     };
-var line769 = new Line("MECE390CoopPlan13A", "MECE420CoopPlan13A", false);
+var line769 = new Line("MATH209AlternatePlan3A4B", "CHE448AlternatePlan3A4B", false);
 function getLine769() {
         return line769
     };
-var line770 = new Line("MECE300CoopPlan13A", "MECE403CoopPlan13A", false);
+var line770 = new Line("MECE331AlternatePlan3A4B", "CHE448AlternatePlan3A4B", false);
 function getLine770() {
         return line770
     };
-var line771 = new Line("MECE301CoopPlan13A", "MECE403CoopPlan13A", false);
+var line771 = new Line("MECE371AlternatePlan3A4B", "CHE448AlternatePlan3A4B", true);
 function getLine771() {
         return line771
     };
-var line772 = new Line("MECE340CoopPlan13A", "MECE403CoopPlan13A", false);
+var line772 = new Line("MECE390AlternatePlan3A4B", "MECE420AlternatePlan3A4B", false);
 function getLine772() {
         return line772
     };
-var line773 = new Line("MECE360CoopPlan13A", "MECE403CoopPlan13A", false);
+var line773 = new Line("MECE331AlternatePlan3A4B", "MECE430AlternatePlan3A4B", false);
 function getLine773() {
         return line773
     };
-var line774 = new Line("MECE250CoopPlan13A", "MECE451CoopPlan13A", false);
+var line774 = new Line("MECE360AlternatePlan3A4B", "MECE480AlternatePlan3A4B", false);
 function getLine774() {
         return line774
     };
-var line775 = new Line("MATH300CoopPlan13A", "MECE451CoopPlan13A", false);
+var line775 = new Line("MECE380AlternatePlan3A4B", "MECE480AlternatePlan3A4B", false);
 function getLine775() {
         return line775
     };
-var line776 = new Line("MECE200CoopPlan13A", "MECE460CoopPlan13A", false);
+var line776 = new Line("MATH300AlternatePlan3A4B", "MECE480AlternatePlan3A4B", false);
 function getLine776() {
         return line776
     };
-var line777 = new Line("MECE331CoopPlan13A", "MECE460CoopPlan13A", false);
+var line777 = new Line("MECE331AlternatePlan3A4B", "MECE463AlternatePlan3A4B", false);
 function getLine777() {
         return line777
     };
-var line778 = new Line("MECE340CoopPlan13A", "MECE460CoopPlan13A", false);
+var line778 = new Line("MECE340AlternatePlan3A4B", "MECE463AlternatePlan3A4B", false);
 function getLine778() {
         return line778
     };
-var line779 = new Line("MECE360CoopPlan13A", "MECE460CoopPlan13A", false);
+var line779 = new Line("MECE371AlternatePlan3A4B", "MECE463AlternatePlan3A4B", false);
 function getLine779() {
         return line779
     };
-var line780 = new Line("MECE362CoopPlan13A", "MECE460CoopPlan13A", false);
+var line780 = new Line("MATH100AlternatePlan3B4A", "ENGG130AlternatePlan3B4A", true);
 function getLine780() {
         return line780
     };
-var line781 = new Line("MECE371CoopPlan13A", "MECE460CoopPlan13A", false);
+var line781 = new Line("MATH100AlternatePlan3B4A", "PHYS130AlternatePlan3B4A", true);
 function getLine781() {
         return line781
     };
-var line782 = new Line("MECE380CoopPlan13A", "MECE460CoopPlan13A", false);
+var line782 = new Line("CHEM103AlternatePlan3B4A", "CHEM105AlternatePlan3B4A", false);
 function getLine782() {
         return line782
     };
-var line783 = new Line("ENGM310CoopPlan13A", "MECE460CoopPlan13A", true);
+var line783 = new Line("ENGL199AlternatePlan3B4A", "ENGG160AlternatePlan3B4A", true);
 function getLine783() {
         return line783
     };
-var line784 = new Line("ENGM401CoopPlan13A", "MECE460CoopPlan13A", true);
+var line784 = new Line("MATH100AlternatePlan3B4A", "ENPH131AlternatePlan3B4A", false);
 function getLine784() {
         return line784
     };
-var line785 = new Line("MATH100CoopPlan13B", "ENGG130CoopPlan13B", true);
+var line785 = new Line("ENGG130AlternatePlan3B4A", "ENPH131AlternatePlan3B4A", false);
 function getLine785() {
         return line785
     };
-var line786 = new Line("MATH100CoopPlan13B", "PHYS130CoopPlan13B", true);
+var line786 = new Line("MATH101AlternatePlan3B4A", "ENPH131AlternatePlan3B4A", true);
 function getLine786() {
         return line786
     };
-var line787 = new Line("CHEM103CoopPlan13B", "CHEM105CoopPlan13B", false);
+var line787 = new Line("MATH100AlternatePlan3B4A", "MATH101AlternatePlan3B4A", false);
 function getLine787() {
         return line787
     };
-var line788 = new Line("ENGL199CoopPlan13B", "ENGG160CoopPlan13B", true);
+var line788 = new Line("MATH100AlternatePlan3B4A", "MATH102AlternatePlan3B4A", true);
 function getLine788() {
         return line788
     };
-var line789 = new Line("MATH100CoopPlan13B", "ENPH131CoopPlan13B", false);
+var line789 = new Line("MATH209AlternatePlan3B4A", "MATH201AlternatePlan3B4A", true);
 function getLine789() {
         return line789
     };
-var line790 = new Line("ENGG130CoopPlan13B", "ENPH131CoopPlan13B", false);
+var line790 = new Line("MATH101AlternatePlan3B4A", "MATH209AlternatePlan3B4A", false);
 function getLine790() {
         return line790
     };
-var line791 = new Line("MATH101CoopPlan13B", "ENPH131CoopPlan13B", true);
+var line791 = new Line("MATH102AlternatePlan3B4A", "MATH209AlternatePlan3B4A", true);
 function getLine791() {
         return line791
     };
-var line792 = new Line("MATH100CoopPlan13B", "MATH101CoopPlan13B", false);
+var line792 = new Line("ENGG130AlternatePlan3B4A", "CIVE270AlternatePlan3B4A", false);
 function getLine792() {
         return line792
     };
-var line793 = new Line("MATH100CoopPlan13B", "MATH102CoopPlan13B", true);
+var line793 = new Line("MATH101AlternatePlan3B4A", "CIVE270AlternatePlan3B4A", false);
 function getLine793() {
         return line793
     };
-var line794 = new Line("ENGG130CoopPlan13B", "CIVE270CoopPlan13B", false);
+var line794 = new Line("MATH101AlternatePlan3B4A", "MECE230AlternatePlan3B4A", false);
 function getLine794() {
         return line794
     };
-var line795 = new Line("MATH101CoopPlan13B", "CIVE270CoopPlan13B", false);
+var line795 = new Line("ENPH131AlternatePlan3B4A", "MECE230AlternatePlan3B4A", false);
 function getLine795() {
         return line795
     };
-var line796 = new Line("MATH101CoopPlan13B", "MATH209CoopPlan13B", false);
+var line796 = new Line("ENGG160AlternatePlan3B4A", "MECE260AlternatePlan3B4A", false);
 function getLine796() {
         return line796
     };
-var line797 = new Line("MATH102CoopPlan13B", "MATH209CoopPlan13B", true);
+var line797 = new Line("MECE265AlternatePlan3B4A", "MECE260AlternatePlan3B4A", true);
 function getLine797() {
         return line797
     };
-var line798 = new Line("MATH101CoopPlan13B", "MECE230CoopPlan13B", false);
+var line798 = new Line("CIVE270AlternatePlan3B4A", "MECE260AlternatePlan3B4A", true);
 function getLine798() {
         return line798
     };
-var line799 = new Line("ENPH131CoopPlan13B", "MECE230CoopPlan13B", false);
+var line799 = new Line("MATH100AlternatePlan3B4A", "STAT235AlternatePlan3B4A", false);
 function getLine799() {
         return line799
     };
-var line800 = new Line("ENGG160CoopPlan13B", "MECE260CoopPlan13B", false);
+var line800 = new Line("MATH101AlternatePlan3B4A", "STAT235AlternatePlan3B4A", true);
 function getLine800() {
         return line800
     };
-var line801 = new Line("MECE265CoopPlan13B", "MECE260CoopPlan13B", true);
+var line801 = new Line("MATH101AlternatePlan3B4A", "CHE243AlternatePlan3B4A", false);
 function getLine801() {
         return line801
     };
-var line802 = new Line("CIVE270CoopPlan13B", "MECE260CoopPlan13B", true);
+var line802 = new Line("CHEM105AlternatePlan3B4A", "MATE202AlternatePlan3B4A", false);
 function getLine802() {
         return line802
     };
-var line803 = new Line("MATH100CoopPlan13B", "STAT235CoopPlan13B", false);
+var line803 = new Line("ENGG130AlternatePlan3B4A", "MECE250AlternatePlan3B4A", false);
 function getLine803() {
         return line803
     };
-var line804 = new Line("MATH101CoopPlan13B", "STAT235CoopPlan13B", true);
+var line804 = new Line("ENPH131AlternatePlan3B4A", "MECE250AlternatePlan3B4A", false);
 function getLine804() {
         return line804
     };
-var line805 = new Line("MATH101CoopPlan13B", "CHE243CoopPlan13B", false);
+var line805 = new Line("MATH101AlternatePlan3B4A", "MECE250AlternatePlan3B4A", false);
 function getLine805() {
         return line805
     };
-var line806 = new Line("CHEM105CoopPlan13B", "MATE202CoopPlan13B", false);
+var line806 = new Line("CHE243AlternatePlan3B4A", "MECE340AlternatePlan3B4A", false);
 function getLine806() {
         return line806
     };
-var line807 = new Line("MATH209CoopPlan13B", "MATH201CoopPlan13B", true);
+var line807 = new Line("MECE260AlternatePlan3B4A", "MECE360AlternatePlan3B4A", false);
 function getLine807() {
         return line807
     };
-var line808 = new Line("ENGG130CoopPlan13B", "MECE250CoopPlan13B", false);
+var line808 = new Line("MECE265AlternatePlan3B4A", "MECE360AlternatePlan3B4A", false);
 function getLine808() {
         return line808
     };
-var line809 = new Line("ENPH131CoopPlan13B", "MECE250CoopPlan13B", false);
+var line809 = new Line("MATE202AlternatePlan3B4A", "MECE360AlternatePlan3B4A", false);
 function getLine809() {
         return line809
     };
-var line810 = new Line("MATH101CoopPlan13B", "MECE250CoopPlan13B", false);
+var line810 = new Line("CIVE270AlternatePlan3B4A", "MECE360AlternatePlan3B4A", false);
 function getLine810() {
         return line810
     };
-var line811 = new Line("ENGG299CoopPlan13B", "WKEXP901CoopPlan13B", false);
+var line811 = new Line("MECE362AlternatePlan3B4A", "MECE360AlternatePlan3B4A", true);
 function getLine811() {
         return line811
     };
-var line812 = new Line("WKEXP901CoopPlan13B", "WKEXP902CoopPlan13B", false);
+var line812 = new Line("MECE250AlternatePlan3B4A", "MECE362AlternatePlan3B4A", false);
 function getLine812() {
         return line812
     };
-var line813 = new Line("CHE243CoopPlan13B", "MECE340CoopPlan13B", false);
+var line813 = new Line("MATH102AlternatePlan3B4A", "MECE390AlternatePlan3B4A", false);
 function getLine813() {
         return line813
     };
-var line814 = new Line("MECE260CoopPlan13B", "MECE360CoopPlan13B", false);
+var line814 = new Line("MATH201AlternatePlan3B4A", "MECE390AlternatePlan3B4A", false);
 function getLine814() {
         return line814
     };
-var line815 = new Line("MECE265CoopPlan13B", "MECE360CoopPlan13B", false);
+var line815 = new Line("MATH201AlternatePlan3B4A", "MATH300AlternatePlan3B4A", false);
 function getLine815() {
         return line815
     };
-var line816 = new Line("MATE202CoopPlan13B", "MECE360CoopPlan13B", false);
+var line816 = new Line("MATH209AlternatePlan3B4A", "MATH300AlternatePlan3B4A", false);
 function getLine816() {
         return line816
     };
-var line817 = new Line("CIVE270CoopPlan13B", "MECE360CoopPlan13B", false);
+var line817 = new Line("CIVE270AlternatePlan3B4A", "MECE300AlternatePlan3B4A", false);
 function getLine817() {
         return line817
     };
-var line818 = new Line("MECE362CoopPlan13B", "MECE360CoopPlan13B", true);
+var line818 = new Line("ECE209AlternatePlan3B4A", "MECE300AlternatePlan3B4A", false);
 function getLine818() {
         return line818
     };
-var line819 = new Line("MECE250CoopPlan13B", "MECE362CoopPlan13B", false);
+var line819 = new Line("STAT235AlternatePlan3B4A", "MECE300AlternatePlan3B4A", false);
 function getLine819() {
         return line819
     };
-var line820 = new Line("MATH102CoopPlan13B", "MECE390CoopPlan13B", false);
+var line820 = new Line("MECE331AlternatePlan3B4A", "MECE300AlternatePlan3B4A", true);
 function getLine820() {
         return line820
     };
-var line821 = new Line("MATH201CoopPlan13B", "MECE390CoopPlan13B", false);
+var line821 = new Line("MECE300AlternatePlan3B4A", "MECE301AlternatePlan3B4A", true);
 function getLine821() {
         return line821
     };
-var line822 = new Line("WKEXP902CoopPlan13B", "WKEXP903CoopPlan13B", false);
+var line822 = new Line("MECE230AlternatePlan3B4A", "MECE331AlternatePlan3B4A", false);
 function getLine822() {
         return line822
     };
-var line823 = new Line("WKEXP903CoopPlan13B", "WKEXP904CoopPlan13B", false);
+var line823 = new Line("MECE250AlternatePlan3B4A", "MECE331AlternatePlan3B4A", false);
 function getLine823() {
         return line823
     };
-var line824 = new Line("MATH201CoopPlan13B", "MATH300CoopPlan13B", false);
+var line824 = new Line("MATH209AlternatePlan3B4A", "MECE331AlternatePlan3B4A", false);
 function getLine824() {
         return line824
     };
-var line825 = new Line("MATH209CoopPlan13B", "MATH300CoopPlan13B", false);
+var line825 = new Line("CHE243AlternatePlan3B4A", "MECE331AlternatePlan3B4A", true);
 function getLine825() {
         return line825
     };
-var line826 = new Line("CIVE270CoopPlan13B", "MECE300CoopPlan13B", false);
+var line826 = new Line("MECE230AlternatePlan3B4A", "MECE371AlternatePlan3B4A", false);
 function getLine826() {
         return line826
     };
-var line827 = new Line("ECE209CoopPlan13B", "MECE300CoopPlan13B", false);
+var line827 = new Line("CHE243AlternatePlan3B4A", "MECE371AlternatePlan3B4A", false);
 function getLine827() {
         return line827
     };
-var line828 = new Line("STAT235CoopPlan13B", "MECE300CoopPlan13B", false);
+var line828 = new Line("MATH300AlternatePlan3B4A", "MECE371AlternatePlan3B4A", true);
 function getLine828() {
         return line828
     };
-var line829 = new Line("MECE331CoopPlan13B", "MECE300CoopPlan13B", true);
+var line829 = new Line("MECE331AlternatePlan3B4A", "MECE371AlternatePlan3B4A", true);
 function getLine829() {
         return line829
     };
-var line830 = new Line("MECE300CoopPlan13B", "MECE301CoopPlan13B", true);
+var line830 = new Line("CIVE270AlternatePlan3B4A", "MECE380AlternatePlan3B4A", false);
 function getLine830() {
         return line830
     };
-var line831 = new Line("MECE230CoopPlan13B", "MECE331CoopPlan13B", false);
+var line831 = new Line("MECE331AlternatePlan3B4A", "MECE430AlternatePlan3B4A", false);
 function getLine831() {
         return line831
     };
-var line832 = new Line("MECE250CoopPlan13B", "MECE331CoopPlan13B", false);
+var line832 = new Line("MECE360AlternatePlan3B4A", "MECE480AlternatePlan3B4A", false);
 function getLine832() {
         return line832
     };
-var line833 = new Line("MATH209CoopPlan13B", "MECE331CoopPlan13B", false);
+var line833 = new Line("MECE380AlternatePlan3B4A", "MECE480AlternatePlan3B4A", false);
 function getLine833() {
         return line833
     };
-var line834 = new Line("CHE243CoopPlan13B", "MECE331CoopPlan13B", true);
+var line834 = new Line("MATH300AlternatePlan3B4A", "MECE480AlternatePlan3B4A", false);
 function getLine834() {
         return line834
     };
-var line835 = new Line("MECE230CoopPlan13B", "MECE371CoopPlan13B", false);
+var line835 = new Line("MECE331AlternatePlan3B4A", "MECE463AlternatePlan3B4A", false);
 function getLine835() {
         return line835
     };
-var line836 = new Line("CHE243CoopPlan13B", "MECE371CoopPlan13B", false);
+var line836 = new Line("MECE340AlternatePlan3B4A", "MECE463AlternatePlan3B4A", false);
 function getLine836() {
         return line836
     };
-var line837 = new Line("MATH300CoopPlan13B", "MECE371CoopPlan13B", true);
+var line837 = new Line("MECE371AlternatePlan3B4A", "MECE463AlternatePlan3B4A", false);
 function getLine837() {
         return line837
     };
-var line838 = new Line("MECE331CoopPlan13B", "MECE371CoopPlan13B", true);
+var line838 = new Line("MATH201AlternatePlan3B4A", "CHE448AlternatePlan3B4A", false);
 function getLine838() {
         return line838
     };
-var line839 = new Line("CIVE270CoopPlan13B", "MECE380CoopPlan13B", false);
+var line839 = new Line("MATH209AlternatePlan3B4A", "CHE448AlternatePlan3B4A", false);
 function getLine839() {
         return line839
     };
-var line840 = new Line("MECE331CoopPlan13B", "MECE430CoopPlan13B", false);
+var line840 = new Line("MECE331AlternatePlan3B4A", "CHE448AlternatePlan3B4A", false);
 function getLine840() {
         return line840
     };
-var line841 = new Line("MECE360CoopPlan13B", "MECE480CoopPlan13B", false);
+var line841 = new Line("MECE371AlternatePlan3B4A", "CHE448AlternatePlan3B4A", true);
 function getLine841() {
         return line841
     };
-var line842 = new Line("MECE380CoopPlan13B", "MECE480CoopPlan13B", false);
+var line842 = new Line("MECE390AlternatePlan3B4A", "MECE420AlternatePlan3B4A", false);
 function getLine842() {
         return line842
     };
-var line843 = new Line("MATH300CoopPlan13B", "MECE480CoopPlan13B", false);
+var line843 = new Line("MECE300AlternatePlan3B4A", "MECE403AlternatePlan3B4A", false);
 function getLine843() {
         return line843
     };
-var line844 = new Line("MECE331CoopPlan13B", "MECE463CoopPlan13B", false);
+var line844 = new Line("MECE301AlternatePlan3B4A", "MECE403AlternatePlan3B4A", false);
 function getLine844() {
         return line844
     };
-var line845 = new Line("MECE340CoopPlan13B", "MECE463CoopPlan13B", false);
+var line845 = new Line("MECE340AlternatePlan3B4A", "MECE403AlternatePlan3B4A", false);
 function getLine845() {
         return line845
     };
-var line846 = new Line("MECE371CoopPlan13B", "MECE463CoopPlan13B", false);
+var line846 = new Line("MECE360AlternatePlan3B4A", "MECE403AlternatePlan3B4A", false);
 function getLine846() {
         return line846
     };
-var line847 = new Line("WKEXP904CoopPlan13B", "WKEXP905CoopPlan13B", false);
+var line847 = new Line("MECE250AlternatePlan3B4A", "MECE451AlternatePlan3B4A", false);
 function getLine847() {
         return line847
     };
-var line848 = new Line("MATH201CoopPlan13B", "CHE448CoopPlan13B", false);
+var line848 = new Line("MATH300AlternatePlan3B4A", "MECE451AlternatePlan3B4A", false);
 function getLine848() {
         return line848
     };
-var line849 = new Line("MATH209CoopPlan13B", "CHE448CoopPlan13B", false);
+var line849 = new Line("MECE200AlternatePlan3B4A", "MECE460AlternatePlan3B4A", false);
 function getLine849() {
         return line849
     };
-var line850 = new Line("MECE331CoopPlan13B", "CHE448CoopPlan13B", false);
+var line850 = new Line("MECE331AlternatePlan3B4A", "MECE460AlternatePlan3B4A", false);
 function getLine850() {
         return line850
     };
-var line851 = new Line("MECE371CoopPlan13B", "CHE448CoopPlan13B", true);
+var line851 = new Line("MECE340AlternatePlan3B4A", "MECE460AlternatePlan3B4A", false);
 function getLine851() {
         return line851
     };
-var line852 = new Line("MECE390CoopPlan13B", "MECE420CoopPlan13B", false);
+var line852 = new Line("MECE360AlternatePlan3B4A", "MECE460AlternatePlan3B4A", false);
 function getLine852() {
         return line852
     };
-var line853 = new Line("MECE300CoopPlan13B", "MECE403CoopPlan13B", false);
+var line853 = new Line("MECE362AlternatePlan3B4A", "MECE460AlternatePlan3B4A", false);
 function getLine853() {
         return line853
     };
-var line854 = new Line("MECE301CoopPlan13B", "MECE403CoopPlan13B", false);
+var line854 = new Line("MECE371AlternatePlan3B4A", "MECE460AlternatePlan3B4A", false);
 function getLine854() {
         return line854
     };
-var line855 = new Line("MECE340CoopPlan13B", "MECE403CoopPlan13B", false);
+var line855 = new Line("MECE380AlternatePlan3B4A", "MECE460AlternatePlan3B4A", false);
 function getLine855() {
         return line855
     };
-var line856 = new Line("MECE360CoopPlan13B", "MECE403CoopPlan13B", false);
+var line856 = new Line("ENGM310AlternatePlan3B4A", "MECE460AlternatePlan3B4A", true);
 function getLine856() {
         return line856
     };
-var line857 = new Line("MECE250CoopPlan13B", "MECE451CoopPlan13B", false);
+var line857 = new Line("ENGM401AlternatePlan3B4A", "MECE460AlternatePlan3B4A", true);
 function getLine857() {
         return line857
     };
-var line858 = new Line("MATH300CoopPlan13B", "MECE451CoopPlan13B", false);
+var line858 = new Line("MATH100AlternatePlan3B4B", "ENGG130AlternatePlan3B4B", true);
 function getLine858() {
         return line858
     };
-var line859 = new Line("MECE200CoopPlan13B", "MECE460CoopPlan13B", false);
+var line859 = new Line("MATH100AlternatePlan3B4B", "PHYS130AlternatePlan3B4B", true);
 function getLine859() {
         return line859
     };
-var line860 = new Line("MECE331CoopPlan13B", "MECE460CoopPlan13B", false);
+var line860 = new Line("CHEM103AlternatePlan3B4B", "CHEM105AlternatePlan3B4B", false);
 function getLine860() {
         return line860
     };
-var line861 = new Line("MECE340CoopPlan13B", "MECE460CoopPlan13B", false);
+var line861 = new Line("ENGL199AlternatePlan3B4B", "ENGG160AlternatePlan3B4B", true);
 function getLine861() {
         return line861
     };
-var line862 = new Line("MECE360CoopPlan13B", "MECE460CoopPlan13B", false);
+var line862 = new Line("MATH100AlternatePlan3B4B", "ENPH131AlternatePlan3B4B", false);
 function getLine862() {
         return line862
     };
-var line863 = new Line("MECE362CoopPlan13B", "MECE460CoopPlan13B", false);
+var line863 = new Line("ENGG130AlternatePlan3B4B", "ENPH131AlternatePlan3B4B", false);
 function getLine863() {
         return line863
     };
-var line864 = new Line("MECE371CoopPlan13B", "MECE460CoopPlan13B", false);
+var line864 = new Line("MATH101AlternatePlan3B4B", "ENPH131AlternatePlan3B4B", true);
 function getLine864() {
         return line864
     };
-var line865 = new Line("MECE380CoopPlan13B", "MECE460CoopPlan13B", false);
+var line865 = new Line("MATH100AlternatePlan3B4B", "MATH101AlternatePlan3B4B", false);
 function getLine865() {
         return line865
     };
-var line866 = new Line("ENGM310CoopPlan13B", "MECE460CoopPlan13B", true);
+var line866 = new Line("MATH100AlternatePlan3B4B", "MATH102AlternatePlan3B4B", true);
 function getLine866() {
         return line866
     };
-var line867 = new Line("ENGM401CoopPlan13B", "MECE460CoopPlan13B", true);
+var line867 = new Line("MATH209AlternatePlan3B4B", "MATH201AlternatePlan3B4B", true);
 function getLine867() {
         return line867
     };
-var line868 = new Line("MATH100CoopPlan2", "ENGG130CoopPlan2", true);
+var line868 = new Line("MATH101AlternatePlan3B4B", "MATH209AlternatePlan3B4B", false);
 function getLine868() {
         return line868
     };
-var line869 = new Line("MATH100CoopPlan2", "PHYS130CoopPlan2", true);
+var line869 = new Line("MATH102AlternatePlan3B4B", "MATH209AlternatePlan3B4B", true);
 function getLine869() {
         return line869
     };
-var line870 = new Line("CHEM103CoopPlan2", "CHEM105CoopPlan2", false);
+var line870 = new Line("ENGG130AlternatePlan3B4B", "CIVE270AlternatePlan3B4B", false);
 function getLine870() {
         return line870
     };
-var line871 = new Line("ENGL199CoopPlan2", "ENGG160CoopPlan2", true);
+var line871 = new Line("MATH101AlternatePlan3B4B", "CIVE270AlternatePlan3B4B", false);
 function getLine871() {
         return line871
     };
-var line872 = new Line("MATH100CoopPlan2", "ENPH131CoopPlan2", false);
+var line872 = new Line("MATH101AlternatePlan3B4B", "MECE230AlternatePlan3B4B", false);
 function getLine872() {
         return line872
     };
-var line873 = new Line("ENGG130CoopPlan2", "ENPH131CoopPlan2", false);
+var line873 = new Line("ENPH131AlternatePlan3B4B", "MECE230AlternatePlan3B4B", false);
 function getLine873() {
         return line873
     };
-var line874 = new Line("MATH101CoopPlan2", "ENPH131CoopPlan2", true);
+var line874 = new Line("ENGG160AlternatePlan3B4B", "MECE260AlternatePlan3B4B", false);
 function getLine874() {
         return line874
     };
-var line875 = new Line("MATH100CoopPlan2", "MATH101CoopPlan2", false);
+var line875 = new Line("MECE265AlternatePlan3B4B", "MECE260AlternatePlan3B4B", true);
 function getLine875() {
         return line875
     };
-var line876 = new Line("MATH100CoopPlan2", "MATH102CoopPlan2", true);
+var line876 = new Line("CIVE270AlternatePlan3B4B", "MECE260AlternatePlan3B4B", true);
 function getLine876() {
         return line876
     };
-var line877 = new Line("MATH101CoopPlan2", "CHE243CoopPlan2", false);
+var line877 = new Line("MATH100AlternatePlan3B4B", "STAT235AlternatePlan3B4B", false);
 function getLine877() {
         return line877
     };
-var line878 = new Line("ENGG130CoopPlan2", "CIVE270CoopPlan2", false);
+var line878 = new Line("MATH101AlternatePlan3B4B", "STAT235AlternatePlan3B4B", true);
 function getLine878() {
         return line878
     };
-var line879 = new Line("MATH101CoopPlan2", "CIVE270CoopPlan2", false);
+var line879 = new Line("MATH101AlternatePlan3B4B", "CHE243AlternatePlan3B4B", false);
 function getLine879() {
         return line879
     };
-var line880 = new Line("MATH101CoopPlan2", "MATH209CoopPlan2", false);
+var line880 = new Line("CHEM105AlternatePlan3B4B", "MATE202AlternatePlan3B4B", false);
 function getLine880() {
         return line880
     };
-var line881 = new Line("MATH102CoopPlan2", "MATH209CoopPlan2", true);
+var line881 = new Line("ENGG130AlternatePlan3B4B", "MECE250AlternatePlan3B4B", false);
 function getLine881() {
         return line881
     };
-var line882 = new Line("ENGG130CoopPlan2", "MECE250CoopPlan2", false);
+var line882 = new Line("ENPH131AlternatePlan3B4B", "MECE250AlternatePlan3B4B", false);
 function getLine882() {
         return line882
     };
-var line883 = new Line("ENPH131CoopPlan2", "MECE250CoopPlan2", false);
+var line883 = new Line("MATH101AlternatePlan3B4B", "MECE250AlternatePlan3B4B", false);
 function getLine883() {
         return line883
     };
-var line884 = new Line("MATH101CoopPlan2", "MECE250CoopPlan2", false);
+var line884 = new Line("CHE243AlternatePlan3B4B", "MECE340AlternatePlan3B4B", false);
 function getLine884() {
         return line884
     };
-var line885 = new Line("MATH100CoopPlan2", "STAT235CoopPlan2", false);
+var line885 = new Line("MECE260AlternatePlan3B4B", "MECE360AlternatePlan3B4B", false);
 function getLine885() {
         return line885
     };
-var line886 = new Line("MATH101CoopPlan2", "STAT235CoopPlan2", true);
+var line886 = new Line("MECE265AlternatePlan3B4B", "MECE360AlternatePlan3B4B", false);
 function getLine886() {
         return line886
     };
-var line887 = new Line("ENGG299CoopPlan2", "WKEXP901CoopPlan2", false);
+var line887 = new Line("MATE202AlternatePlan3B4B", "MECE360AlternatePlan3B4B", false);
 function getLine887() {
         return line887
     };
-var line888 = new Line("CHEM105CoopPlan2", "MATE202CoopPlan2", false);
+var line888 = new Line("CIVE270AlternatePlan3B4B", "MECE360AlternatePlan3B4B", false);
 function getLine888() {
         return line888
     };
-var line889 = new Line("MATH209CoopPlan2", "MATH201CoopPlan2", true);
+var line889 = new Line("MECE362AlternatePlan3B4B", "MECE360AlternatePlan3B4B", true);
 function getLine889() {
         return line889
     };
-var line890 = new Line("MATH101CoopPlan2", "MECE230CoopPlan2", false);
+var line890 = new Line("MECE250AlternatePlan3B4B", "MECE362AlternatePlan3B4B", false);
 function getLine890() {
         return line890
     };
-var line891 = new Line("ENPH131CoopPlan2", "MECE230CoopPlan2", false);
+var line891 = new Line("MATH102AlternatePlan3B4B", "MECE390AlternatePlan3B4B", false);
 function getLine891() {
         return line891
     };
-var line892 = new Line("ENGG160CoopPlan2", "MECE260CoopPlan2", false);
+var line892 = new Line("MATH201AlternatePlan3B4B", "MECE390AlternatePlan3B4B", false);
 function getLine892() {
         return line892
     };
-var line893 = new Line("MECE265CoopPlan2", "MECE260CoopPlan2", true);
+var line893 = new Line("MATH201AlternatePlan3B4B", "MATH300AlternatePlan3B4B", false);
 function getLine893() {
         return line893
     };
-var line894 = new Line("CIVE270CoopPlan2", "MECE260CoopPlan2", true);
+var line894 = new Line("MATH209AlternatePlan3B4B", "MATH300AlternatePlan3B4B", false);
 function getLine894() {
         return line894
     };
-var line895 = new Line("MATH201CoopPlan2", "MATH300CoopPlan2", false);
+var line895 = new Line("CIVE270AlternatePlan3B4B", "MECE300AlternatePlan3B4B", false);
 function getLine895() {
         return line895
     };
-var line896 = new Line("MATH209CoopPlan2", "MATH300CoopPlan2", false);
+var line896 = new Line("ECE209AlternatePlan3B4B", "MECE300AlternatePlan3B4B", false);
 function getLine896() {
         return line896
     };
-var line897 = new Line("CIVE270CoopPlan2", "MECE300CoopPlan2", false);
+var line897 = new Line("STAT235AlternatePlan3B4B", "MECE300AlternatePlan3B4B", false);
 function getLine897() {
         return line897
     };
-var line898 = new Line("ECE209CoopPlan2", "MECE300CoopPlan2", false);
+var line898 = new Line("MECE331AlternatePlan3B4B", "MECE300AlternatePlan3B4B", true);
 function getLine898() {
         return line898
     };
-var line899 = new Line("STAT235CoopPlan2", "MECE300CoopPlan2", false);
+var line899 = new Line("MECE300AlternatePlan3B4B", "MECE301AlternatePlan3B4B", true);
 function getLine899() {
         return line899
     };
-var line900 = new Line("MECE331CoopPlan2", "MECE300CoopPlan2", true);
+var line900 = new Line("MECE230AlternatePlan3B4B", "MECE331AlternatePlan3B4B", false);
 function getLine900() {
         return line900
     };
-var line901 = new Line("MECE300CoopPlan2", "MECE301CoopPlan2", true);
+var line901 = new Line("MECE250AlternatePlan3B4B", "MECE331AlternatePlan3B4B", false);
 function getLine901() {
         return line901
     };
-var line902 = new Line("MECE230CoopPlan2", "MECE331CoopPlan2", false);
+var line902 = new Line("MATH209AlternatePlan3B4B", "MECE331AlternatePlan3B4B", false);
 function getLine902() {
         return line902
     };
-var line903 = new Line("MECE250CoopPlan2", "MECE331CoopPlan2", false);
+var line903 = new Line("CHE243AlternatePlan3B4B", "MECE331AlternatePlan3B4B", true);
 function getLine903() {
         return line903
     };
-var line904 = new Line("MATH209CoopPlan2", "MECE331CoopPlan2", false);
+var line904 = new Line("MECE230AlternatePlan3B4B", "MECE371AlternatePlan3B4B", false);
 function getLine904() {
         return line904
     };
-var line905 = new Line("CHE243CoopPlan2", "MECE331CoopPlan2", true);
+var line905 = new Line("CHE243AlternatePlan3B4B", "MECE371AlternatePlan3B4B", false);
 function getLine905() {
         return line905
     };
-var line906 = new Line("MECE230CoopPlan2", "MECE371CoopPlan2", false);
+var line906 = new Line("MATH300AlternatePlan3B4B", "MECE371AlternatePlan3B4B", true);
 function getLine906() {
         return line906
     };
-var line907 = new Line("CHE243CoopPlan2", "MECE371CoopPlan2", false);
+var line907 = new Line("MECE331AlternatePlan3B4B", "MECE371AlternatePlan3B4B", true);
 function getLine907() {
         return line907
     };
-var line908 = new Line("MATH300CoopPlan2", "MECE371CoopPlan2", true);
+var line908 = new Line("CIVE270AlternatePlan3B4B", "MECE380AlternatePlan3B4B", false);
 function getLine908() {
         return line908
     };
-var line909 = new Line("MECE331CoopPlan2", "MECE371CoopPlan2", true);
+var line909 = new Line("MECE300AlternatePlan3B4B", "MECE403AlternatePlan3B4B", false);
 function getLine909() {
         return line909
     };
-var line910 = new Line("CIVE270CoopPlan2", "MECE380CoopPlan2", false);
+var line910 = new Line("MECE301AlternatePlan3B4B", "MECE403AlternatePlan3B4B", false);
 function getLine910() {
         return line910
     };
-var line911 = new Line("WKEXP901CoopPlan2", "WKEXP902CoopPlan2", false);
+var line911 = new Line("MECE340AlternatePlan3B4B", "MECE403AlternatePlan3B4B", false);
 function getLine911() {
         return line911
     };
-var line912 = new Line("WKEXP902CoopPlan2", "WKEXP903CoopPlan2", false);
+var line912 = new Line("MECE360AlternatePlan3B4B", "MECE403AlternatePlan3B4B", false);
 function getLine912() {
         return line912
     };
-var line913 = new Line("CHE243CoopPlan2", "MECE340CoopPlan2", false);
+var line913 = new Line("MECE250AlternatePlan3B4B", "MECE451AlternatePlan3B4B", false);
 function getLine913() {
         return line913
     };
-var line914 = new Line("MECE260CoopPlan2", "MECE360CoopPlan2", false);
+var line914 = new Line("MATH300AlternatePlan3B4B", "MECE451AlternatePlan3B4B", false);
 function getLine914() {
         return line914
     };
-var line915 = new Line("MECE265CoopPlan2", "MECE360CoopPlan2", false);
+var line915 = new Line("MECE200AlternatePlan3B4B", "MECE460AlternatePlan3B4B", false);
 function getLine915() {
         return line915
     };
-var line916 = new Line("MATE202CoopPlan2", "MECE360CoopPlan2", false);
+var line916 = new Line("MECE331AlternatePlan3B4B", "MECE460AlternatePlan3B4B", false);
 function getLine916() {
         return line916
     };
-var line917 = new Line("CIVE270CoopPlan2", "MECE360CoopPlan2", false);
+var line917 = new Line("MECE340AlternatePlan3B4B", "MECE460AlternatePlan3B4B", false);
 function getLine917() {
         return line917
     };
-var line918 = new Line("MECE362CoopPlan2", "MECE360CoopPlan2", true);
+var line918 = new Line("MECE360AlternatePlan3B4B", "MECE460AlternatePlan3B4B", false);
 function getLine918() {
         return line918
     };
-var line919 = new Line("MECE250CoopPlan2", "MECE362CoopPlan2", false);
+var line919 = new Line("MECE362AlternatePlan3B4B", "MECE460AlternatePlan3B4B", false);
 function getLine919() {
         return line919
     };
-var line920 = new Line("MATH102CoopPlan2", "MECE390CoopPlan2", false);
+var line920 = new Line("MECE371AlternatePlan3B4B", "MECE460AlternatePlan3B4B", false);
 function getLine920() {
         return line920
     };
-var line921 = new Line("MATH201CoopPlan2", "MECE390CoopPlan2", false);
+var line921 = new Line("MECE380AlternatePlan3B4B", "MECE460AlternatePlan3B4B", false);
 function getLine921() {
         return line921
     };
-var line922 = new Line("WKEXP903CoopPlan2", "WKEXP904CoopPlan2", false);
+var line922 = new Line("ENGM310AlternatePlan3B4B", "MECE460AlternatePlan3B4B", true);
 function getLine922() {
         return line922
     };
-var line923 = new Line("MECE300CoopPlan2", "MECE403CoopPlan2", false);
+var line923 = new Line("ENGM401AlternatePlan3B4B", "MECE460AlternatePlan3B4B", true);
 function getLine923() {
         return line923
     };
-var line924 = new Line("MECE301CoopPlan2", "MECE403CoopPlan2", false);
+var line924 = new Line("MATH201AlternatePlan3B4B", "CHE448AlternatePlan3B4B", false);
 function getLine924() {
         return line924
     };
-var line925 = new Line("MECE340CoopPlan2", "MECE403CoopPlan2", false);
+var line925 = new Line("MATH209AlternatePlan3B4B", "CHE448AlternatePlan3B4B", false);
 function getLine925() {
         return line925
     };
-var line926 = new Line("MECE360CoopPlan2", "MECE403CoopPlan2", false);
+var line926 = new Line("MECE331AlternatePlan3B4B", "CHE448AlternatePlan3B4B", false);
 function getLine926() {
         return line926
     };
-var line927 = new Line("MECE250CoopPlan2", "MECE451CoopPlan2", false);
+var line927 = new Line("MECE371AlternatePlan3B4B", "CHE448AlternatePlan3B4B", true);
 function getLine927() {
         return line927
     };
-var line928 = new Line("MATH300CoopPlan2", "MECE451CoopPlan2", false);
+var line928 = new Line("MECE390AlternatePlan3B4B", "MECE420AlternatePlan3B4B", false);
 function getLine928() {
         return line928
     };
-var line929 = new Line("MECE200CoopPlan2", "MECE460CoopPlan2", false);
+var line929 = new Line("MECE331AlternatePlan3B4B", "MECE430AlternatePlan3B4B", false);
 function getLine929() {
         return line929
     };
-var line930 = new Line("MECE331CoopPlan2", "MECE460CoopPlan2", false);
+var line930 = new Line("MECE360AlternatePlan3B4B", "MECE480AlternatePlan3B4B", false);
 function getLine930() {
         return line930
     };
-var line931 = new Line("MECE340CoopPlan2", "MECE460CoopPlan2", false);
+var line931 = new Line("MECE380AlternatePlan3B4B", "MECE480AlternatePlan3B4B", false);
 function getLine931() {
         return line931
     };
-var line932 = new Line("MECE360CoopPlan2", "MECE460CoopPlan2", false);
+var line932 = new Line("MATH300AlternatePlan3B4B", "MECE480AlternatePlan3B4B", false);
 function getLine932() {
         return line932
     };
-var line933 = new Line("MECE362CoopPlan2", "MECE460CoopPlan2", false);
+var line933 = new Line("MECE331AlternatePlan3B4B", "MECE463AlternatePlan3B4B", false);
 function getLine933() {
         return line933
     };
-var line934 = new Line("MECE371CoopPlan2", "MECE460CoopPlan2", false);
+var line934 = new Line("MECE340AlternatePlan3B4B", "MECE463AlternatePlan3B4B", false);
 function getLine934() {
         return line934
     };
-var line935 = new Line("MECE380CoopPlan2", "MECE460CoopPlan2", false);
+var line935 = new Line("MECE371AlternatePlan3B4B", "MECE463AlternatePlan3B4B", false);
 function getLine935() {
         return line935
     };
-var line936 = new Line("ENGM310CoopPlan2", "MECE460CoopPlan2", true);
+var line936 = new Line("MATH100CoopPlan13A", "ENGG130CoopPlan13A", true);
 function getLine936() {
         return line936
     };
-var line937 = new Line("ENGM401CoopPlan2", "MECE460CoopPlan2", true);
+var line937 = new Line("MATH100CoopPlan13A", "PHYS130CoopPlan13A", true);
 function getLine937() {
         return line937
     };
-var line938 = new Line("WKEXP904CoopPlan2", "WKEXP905CoopPlan2", false);
+var line938 = new Line("CHEM103CoopPlan13A", "CHEM105CoopPlan13A", false);
 function getLine938() {
         return line938
     };
-var line939 = new Line("MATH201CoopPlan2", "CHE448CoopPlan2", false);
+var line939 = new Line("ENGL199CoopPlan13A", "ENGG160CoopPlan13A", true);
 function getLine939() {
         return line939
     };
-var line940 = new Line("MATH209CoopPlan2", "CHE448CoopPlan2", false);
+var line940 = new Line("MATH100CoopPlan13A", "ENPH131CoopPlan13A", false);
 function getLine940() {
         return line940
     };
-var line941 = new Line("MECE331CoopPlan2", "CHE448CoopPlan2", false);
+var line941 = new Line("ENGG130CoopPlan13A", "ENPH131CoopPlan13A", false);
 function getLine941() {
         return line941
     };
-var line942 = new Line("MECE371CoopPlan2", "CHE448CoopPlan2", true);
+var line942 = new Line("MATH101CoopPlan13A", "ENPH131CoopPlan13A", true);
 function getLine942() {
         return line942
     };
-var line943 = new Line("MECE390CoopPlan2", "MECE420CoopPlan2", false);
+var line943 = new Line("MATH100CoopPlan13A", "MATH101CoopPlan13A", false);
 function getLine943() {
         return line943
     };
-var line944 = new Line("MECE331CoopPlan2", "MECE430CoopPlan2", false);
+var line944 = new Line("MATH100CoopPlan13A", "MATH102CoopPlan13A", true);
 function getLine944() {
         return line944
     };
-var line945 = new Line("MECE360CoopPlan2", "MECE480CoopPlan2", false);
+var line945 = new Line("ENGG130CoopPlan13A", "CIVE270CoopPlan13A", false);
 function getLine945() {
         return line945
     };
-var line946 = new Line("MECE380CoopPlan2", "MECE480CoopPlan2", false);
+var line946 = new Line("MATH101CoopPlan13A", "CIVE270CoopPlan13A", false);
 function getLine946() {
         return line946
     };
-var line947 = new Line("MATH300CoopPlan2", "MECE480CoopPlan2", false);
+var line947 = new Line("MATH101CoopPlan13A", "MATH209CoopPlan13A", false);
 function getLine947() {
         return line947
     };
-var line948 = new Line("MECE331CoopPlan2", "MECE463CoopPlan2", false);
+var line948 = new Line("MATH102CoopPlan13A", "MATH209CoopPlan13A", true);
 function getLine948() {
         return line948
     };
-var line949 = new Line("MECE340CoopPlan2", "MECE463CoopPlan2", false);
+var line949 = new Line("MATH101CoopPlan13A", "MECE230CoopPlan13A", false);
 function getLine949() {
         return line949
     };
-var line950 = new Line("MECE371CoopPlan2", "MECE463CoopPlan2", false);
+var line950 = new Line("ENPH131CoopPlan13A", "MECE230CoopPlan13A", false);
 function getLine950() {
         return line950
     };
-var line951 = new Line("MATH100CoopPlan3Biomedical", "ENGG130CoopPlan3Biomedical", true);
+var line951 = new Line("ENGG160CoopPlan13A", "MECE260CoopPlan13A", false);
 function getLine951() {
         return line951
     };
-var line952 = new Line("MATH100CoopPlan3Biomedical", "PHYS130CoopPlan3Biomedical", true);
+var line952 = new Line("MECE265CoopPlan13A", "MECE260CoopPlan13A", true);
 function getLine952() {
         return line952
     };
-var line953 = new Line("CHEM103CoopPlan3Biomedical", "CHEM105CoopPlan3Biomedical", false);
+var line953 = new Line("CIVE270CoopPlan13A", "MECE260CoopPlan13A", true);
 function getLine953() {
         return line953
     };
-var line954 = new Line("ENGL199CoopPlan3Biomedical", "ENGG160CoopPlan3Biomedical", true);
+var line954 = new Line("MATH100CoopPlan13A", "STAT235CoopPlan13A", false);
 function getLine954() {
         return line954
     };
-var line955 = new Line("MATH100CoopPlan3Biomedical", "ENPH131CoopPlan3Biomedical", false);
+var line955 = new Line("MATH101CoopPlan13A", "STAT235CoopPlan13A", true);
 function getLine955() {
         return line955
     };
-var line956 = new Line("ENGG130CoopPlan3Biomedical", "ENPH131CoopPlan3Biomedical", false);
+var line956 = new Line("MATH101CoopPlan13A", "CHE243CoopPlan13A", false);
 function getLine956() {
         return line956
     };
-var line957 = new Line("MATH101CoopPlan3Biomedical", "ENPH131CoopPlan3Biomedical", true);
+var line957 = new Line("CHEM105CoopPlan13A", "MATE202CoopPlan13A", false);
 function getLine957() {
         return line957
     };
-var line958 = new Line("MATH100CoopPlan3Biomedical", "MATH101CoopPlan3Biomedical", false);
+var line958 = new Line("MATH209CoopPlan13A", "MATH201CoopPlan13A", true);
 function getLine958() {
         return line958
     };
-var line959 = new Line("MATH100CoopPlan3Biomedical", "MATH102CoopPlan3Biomedical", true);
+var line959 = new Line("ENGG130CoopPlan13A", "MECE250CoopPlan13A", false);
 function getLine959() {
         return line959
     };
-var line960 = new Line("ENGG130CoopPlan3Biomedical", "CIVE270CoopPlan3Biomedical", false);
+var line960 = new Line("ENPH131CoopPlan13A", "MECE250CoopPlan13A", false);
 function getLine960() {
         return line960
     };
-var line961 = new Line("MATH101CoopPlan3Biomedical", "CIVE270CoopPlan3Biomedical", false);
+var line961 = new Line("MATH101CoopPlan13A", "MECE250CoopPlan13A", false);
 function getLine961() {
         return line961
     };
-var line962 = new Line("MATH101CoopPlan3Biomedical", "MATH209CoopPlan3Biomedical", false);
+var line962 = new Line("ENGG299CoopPlan13A", "WKEXP901CoopPlan13A", false);
 function getLine962() {
         return line962
     };
-var line963 = new Line("MATH102CoopPlan3Biomedical", "MATH209CoopPlan3Biomedical", true);
+var line963 = new Line("WKEXP901CoopPlan13A", "WKEXP902CoopPlan13A", false);
 function getLine963() {
         return line963
     };
-var line964 = new Line("MATH100CoopPlan3Biomedical", "STAT235CoopPlan3Biomedical", false);
+var line964 = new Line("MATH201CoopPlan13A", "MATH300CoopPlan13A", false);
 function getLine964() {
         return line964
     };
-var line965 = new Line("MATH101CoopPlan3Biomedical", "STAT235CoopPlan3Biomedical", true);
+var line965 = new Line("MATH209CoopPlan13A", "MATH300CoopPlan13A", false);
 function getLine965() {
         return line965
     };
-var line966 = new Line("MATH101CoopPlan3Biomedical", "CHE243CoopPlan3Biomedical", false);
+var line966 = new Line("CIVE270CoopPlan13A", "MECE300CoopPlan13A", false);
 function getLine966() {
         return line966
     };
-var line967 = new Line("ENGG130CoopPlan3Biomedical", "MECE250CoopPlan3Biomedical", false);
+var line967 = new Line("ECE209CoopPlan13A", "MECE300CoopPlan13A", false);
 function getLine967() {
         return line967
     };
-var line968 = new Line("ENPH131CoopPlan3Biomedical", "MECE250CoopPlan3Biomedical", false);
+var line968 = new Line("STAT235CoopPlan13A", "MECE300CoopPlan13A", false);
 function getLine968() {
         return line968
     };
-var line969 = new Line("MATH101CoopPlan3Biomedical", "MECE250CoopPlan3Biomedical", false);
+var line969 = new Line("MECE331CoopPlan13A", "MECE300CoopPlan13A", true);
 function getLine969() {
         return line969
     };
-var line970 = new Line("CHEM105CoopPlan3Biomedical", "MATE202CoopPlan3Biomedical", false);
+var line970 = new Line("MECE300CoopPlan13A", "MECE301CoopPlan13A", true);
 function getLine970() {
         return line970
     };
-var line971 = new Line("MATH209CoopPlan3Biomedical", "MATH201CoopPlan3Biomedical", true);
+var line971 = new Line("MECE230CoopPlan13A", "MECE331CoopPlan13A", false);
 function getLine971() {
         return line971
     };
-var line972 = new Line("MATH101CoopPlan3Biomedical", "MECE230CoopPlan3Biomedical", false);
+var line972 = new Line("MECE250CoopPlan13A", "MECE331CoopPlan13A", false);
 function getLine972() {
         return line972
     };
-var line973 = new Line("ENPH131CoopPlan3Biomedical", "MECE230CoopPlan3Biomedical", false);
+var line973 = new Line("MATH209CoopPlan13A", "MECE331CoopPlan13A", false);
 function getLine973() {
         return line973
     };
-var line974 = new Line("ENGG160CoopPlan3Biomedical", "MECE260CoopPlan3Biomedical", false);
+var line974 = new Line("CHE243CoopPlan13A", "MECE331CoopPlan13A", true);
 function getLine974() {
         return line974
     };
-var line975 = new Line("MECE265CoopPlan3Biomedical", "MECE260CoopPlan3Biomedical", true);
+var line975 = new Line("MECE230CoopPlan13A", "MECE371CoopPlan13A", false);
 function getLine975() {
         return line975
     };
-var line976 = new Line("CIVE270CoopPlan3Biomedical", "MECE260CoopPlan3Biomedical", true);
+var line976 = new Line("CHE243CoopPlan13A", "MECE371CoopPlan13A", false);
 function getLine976() {
         return line976
     };
-var line977 = new Line("CHE243CoopPlan3Biomedical", "MECE340CoopPlan3Biomedical", false);
+var line977 = new Line("MATH300CoopPlan13A", "MECE371CoopPlan13A", true);
 function getLine977() {
         return line977
     };
-var line978 = new Line("MECE260CoopPlan3Biomedical", "MECE360CoopPlan3Biomedical", false);
+var line978 = new Line("MECE331CoopPlan13A", "MECE371CoopPlan13A", true);
 function getLine978() {
         return line978
     };
-var line979 = new Line("MECE265CoopPlan3Biomedical", "MECE360CoopPlan3Biomedical", false);
+var line979 = new Line("CIVE270CoopPlan13A", "MECE380CoopPlan13A", false);
 function getLine979() {
         return line979
     };
-var line980 = new Line("MATE202CoopPlan3Biomedical", "MECE360CoopPlan3Biomedical", false);
+var line980 = new Line("WKEXP902CoopPlan13A", "WKEXP903CoopPlan13A", false);
 function getLine980() {
         return line980
     };
-var line981 = new Line("CIVE270CoopPlan3Biomedical", "MECE360CoopPlan3Biomedical", false);
+var line981 = new Line("WKEXP903CoopPlan13A", "WKEXP904CoopPlan13A", false);
 function getLine981() {
         return line981
     };
-var line982 = new Line("MECE362CoopPlan3Biomedical", "MECE360CoopPlan3Biomedical", true);
+var line982 = new Line("CHE243CoopPlan13A", "MECE340CoopPlan13A", false);
 function getLine982() {
         return line982
     };
-var line983 = new Line("MECE250CoopPlan3Biomedical", "MECE362CoopPlan3Biomedical", false);
+var line983 = new Line("MECE260CoopPlan13A", "MECE360CoopPlan13A", false);
 function getLine983() {
         return line983
     };
-var line984 = new Line("MATH102CoopPlan3Biomedical", "MECE390CoopPlan3Biomedical", false);
+var line984 = new Line("MECE265CoopPlan13A", "MECE360CoopPlan13A", false);
 function getLine984() {
         return line984
     };
-var line985 = new Line("MATH201CoopPlan3Biomedical", "MECE390CoopPlan3Biomedical", false);
+var line985 = new Line("MATE202CoopPlan13A", "MECE360CoopPlan13A", false);
 function getLine985() {
         return line985
     };
-var line986 = new Line("WKEXP902CoopPlan3Biomedical", "WKEXP903CoopPlan3Biomedical", false);
+var line986 = new Line("CIVE270CoopPlan13A", "MECE360CoopPlan13A", false);
 function getLine986() {
         return line986
     };
-var line987 = new Line("MATH201CoopPlan3Biomedical", "MATH300CoopPlan3Biomedical", false);
+var line987 = new Line("MECE362CoopPlan13A", "MECE360CoopPlan13A", true);
 function getLine987() {
         return line987
     };
-var line988 = new Line("MATH209CoopPlan3Biomedical", "MATH300CoopPlan3Biomedical", false);
+var line988 = new Line("MECE250CoopPlan13A", "MECE362CoopPlan13A", false);
 function getLine988() {
         return line988
     };
-var line989 = new Line("CIVE270CoopPlan3Biomedical", "MECE300CoopPlan3Biomedical", false);
+var line989 = new Line("MATH102CoopPlan13A", "MECE390CoopPlan13A", false);
 function getLine989() {
         return line989
     };
-var line990 = new Line("ECE209CoopPlan3Biomedical", "MECE300CoopPlan3Biomedical", false);
+var line990 = new Line("MATH201CoopPlan13A", "MECE390CoopPlan13A", false);
 function getLine990() {
         return line990
     };
-var line991 = new Line("STAT235CoopPlan3Biomedical", "MECE300CoopPlan3Biomedical", false);
+var line991 = new Line("MECE331CoopPlan13A", "MECE430CoopPlan13A", false);
 function getLine991() {
         return line991
     };
-var line992 = new Line("MECE331CoopPlan3Biomedical", "MECE300CoopPlan3Biomedical", true);
+var line992 = new Line("MECE360CoopPlan13A", "MECE480CoopPlan13A", false);
 function getLine992() {
         return line992
     };
-var line993 = new Line("MECE300CoopPlan3Biomedical", "MECE301CoopPlan3Biomedical", true);
+var line993 = new Line("MECE380CoopPlan13A", "MECE480CoopPlan13A", false);
 function getLine993() {
         return line993
     };
-var line994 = new Line("MECE230CoopPlan3Biomedical", "MECE331CoopPlan3Biomedical", false);
+var line994 = new Line("MATH300CoopPlan13A", "MECE480CoopPlan13A", false);
 function getLine994() {
         return line994
     };
-var line995 = new Line("MECE250CoopPlan3Biomedical", "MECE331CoopPlan3Biomedical", false);
+var line995 = new Line("MECE331CoopPlan13A", "MECE463CoopPlan13A", false);
 function getLine995() {
         return line995
     };
-var line996 = new Line("MATH209CoopPlan3Biomedical", "MECE331CoopPlan3Biomedical", false);
+var line996 = new Line("MECE340CoopPlan13A", "MECE463CoopPlan13A", false);
 function getLine996() {
         return line996
     };
-var line997 = new Line("CHE243CoopPlan3Biomedical", "MECE331CoopPlan3Biomedical", true);
+var line997 = new Line("MECE371CoopPlan13A", "MECE463CoopPlan13A", false);
 function getLine997() {
         return line997
     };
-var line998 = new Line("MECE230CoopPlan3Biomedical", "MECE371CoopPlan3Biomedical", false);
+var line998 = new Line("WKEXP904CoopPlan13A", "WKEXP905CoopPlan13A", false);
 function getLine998() {
         return line998
     };
-var line999 = new Line("CHE243CoopPlan3Biomedical", "MECE371CoopPlan3Biomedical", false);
+var line999 = new Line("MATH201CoopPlan13A", "CHE448CoopPlan13A", false);
 function getLine999() {
         return line999
     };
-var line1000 = new Line("MATH300CoopPlan3Biomedical", "MECE371CoopPlan3Biomedical", true);
+var line1000 = new Line("MATH209CoopPlan13A", "CHE448CoopPlan13A", false);
 function getLine1000() {
         return line1000
     };
-var line1001 = new Line("MECE331CoopPlan3Biomedical", "MECE371CoopPlan3Biomedical", true);
+var line1001 = new Line("MECE331CoopPlan13A", "CHE448CoopPlan13A", false);
 function getLine1001() {
         return line1001
     };
-var line1002 = new Line("CIVE270CoopPlan3Biomedical", "MECE380CoopPlan3Biomedical", false);
+var line1002 = new Line("MECE371CoopPlan13A", "CHE448CoopPlan13A", true);
 function getLine1002() {
         return line1002
     };
-var line1003 = new Line("BME320CoopPlan3Biomedical", "BME321CoopPlan3Biomedical", false);
+var line1003 = new Line("MECE390CoopPlan13A", "MECE420CoopPlan13A", false);
 function getLine1003() {
         return line1003
     };
-var line1004 = new Line("MATH300CoopPlan3Biomedical", "MECE563CoopPlan3Biomedical", false);
+var line1004 = new Line("MECE300CoopPlan13A", "MECE403CoopPlan13A", false);
 function getLine1004() {
         return line1004
     };
-var line1005 = new Line("MECE360CoopPlan3Biomedical", "MECE563CoopPlan3Biomedical", false);
+var line1005 = new Line("MECE301CoopPlan13A", "MECE403CoopPlan13A", false);
 function getLine1005() {
         return line1005
     };
-var line1006 = new Line("MECE390CoopPlan3Biomedical", "MECE563CoopPlan3Biomedical", false);
+var line1006 = new Line("MECE340CoopPlan13A", "MECE403CoopPlan13A", false);
 function getLine1006() {
         return line1006
     };
-var line1007 = new Line("WKEXP903CoopPlan3Biomedical", "WKEXP904CoopPlan3Biomedical", false);
+var line1007 = new Line("MECE360CoopPlan13A", "MECE403CoopPlan13A", false);
 function getLine1007() {
         return line1007
     };
-var line1008 = new Line("WKEXP904CoopPlan3Biomedical", "WKEXP905CoopPlan3Biomedical", false);
+var line1008 = new Line("MECE250CoopPlan13A", "MECE451CoopPlan13A", false);
 function getLine1008() {
         return line1008
     };
-var line1009 = new Line("MECE331CoopPlan3Biomedical", "MECE430CoopPlan3Biomedical", false);
+var line1009 = new Line("MATH300CoopPlan13A", "MECE451CoopPlan13A", false);
 function getLine1009() {
         return line1009
     };
-var line1010 = new Line("MECE331CoopPlan3Biomedical", "MECE463CoopPlan3Biomedical", false);
+var line1010 = new Line("MECE200CoopPlan13A", "MECE460CoopPlan13A", false);
 function getLine1010() {
         return line1010
     };
-var line1011 = new Line("MECE340CoopPlan3Biomedical", "MECE463CoopPlan3Biomedical", false);
+var line1011 = new Line("MECE331CoopPlan13A", "MECE460CoopPlan13A", false);
 function getLine1011() {
         return line1011
     };
-var line1012 = new Line("MECE371CoopPlan3Biomedical", "MECE463CoopPlan3Biomedical", false);
+var line1012 = new Line("MECE340CoopPlan13A", "MECE460CoopPlan13A", false);
 function getLine1012() {
         return line1012
     };
-var line1013 = new Line("MATH201CoopPlan3Biomedical", "CHE448CoopPlan3Biomedical", false);
+var line1013 = new Line("MECE360CoopPlan13A", "MECE460CoopPlan13A", false);
 function getLine1013() {
         return line1013
     };
-var line1014 = new Line("MATH209CoopPlan3Biomedical", "CHE448CoopPlan3Biomedical", false);
+var line1014 = new Line("MECE362CoopPlan13A", "MECE460CoopPlan13A", false);
 function getLine1014() {
         return line1014
     };
-var line1015 = new Line("MECE331CoopPlan3Biomedical", "CHE448CoopPlan3Biomedical", false);
+var line1015 = new Line("MECE371CoopPlan13A", "MECE460CoopPlan13A", false);
 function getLine1015() {
         return line1015
     };
-var line1016 = new Line("MECE371CoopPlan3Biomedical", "CHE448CoopPlan3Biomedical", true);
+var line1016 = new Line("MECE380CoopPlan13A", "MECE460CoopPlan13A", false);
 function getLine1016() {
         return line1016
     };
-var line1017 = new Line("MECE390CoopPlan3Biomedical", "MECE420CoopPlan3Biomedical", false);
+var line1017 = new Line("ENGM310CoopPlan13A", "MECE460CoopPlan13A", true);
 function getLine1017() {
         return line1017
     };
-var line1018 = new Line("BME320CoopPlan3Biomedical", "MECE485CoopPlan3Biomedical", false);
+var line1018 = new Line("ENGM401CoopPlan13A", "MECE460CoopPlan13A", true);
 function getLine1018() {
         return line1018
     };
-var line1019 = new Line("BME321CoopPlan3Biomedical", "MECE485CoopPlan3Biomedical", false);
+var line1019 = new Line("MATH100CoopPlan13B", "ENGG130CoopPlan13B", true);
 function getLine1019() {
         return line1019
     };
-var line1020 = new Line("MECE300CoopPlan3Biomedical", "MECE485CoopPlan3Biomedical", false);
+var line1020 = new Line("MATH100CoopPlan13B", "PHYS130CoopPlan13B", true);
 function getLine1020() {
         return line1020
     };
-var line1021 = new Line("MECE362CoopPlan3Biomedical", "MECE485CoopPlan3Biomedical", false);
+var line1021 = new Line("CHEM103CoopPlan13B", "CHEM105CoopPlan13B", false);
 function getLine1021() {
         return line1021
     };
-var line1022 = new Line("MECE380CoopPlan3Biomedical", "MECE485CoopPlan3Biomedical", false);
+var line1022 = new Line("ENGL199CoopPlan13B", "ENGG160CoopPlan13B", true);
 function getLine1022() {
         return line1022
     };
-var line1023 = new Line("MECE331CoopPlan3Biomedical", "MECE485CoopPlan3Biomedical", false);
+var line1023 = new Line("MATH100CoopPlan13B", "ENPH131CoopPlan13B", false);
 function getLine1023() {
         return line1023
     };
-var line1024 = new Line("MECE300CoopPlan3Biomedical", "MECE403CoopPlan3Biomedical", false);
+var line1024 = new Line("ENGG130CoopPlan13B", "ENPH131CoopPlan13B", false);
 function getLine1024() {
         return line1024
     };
-var line1025 = new Line("MECE301CoopPlan3Biomedical", "MECE403CoopPlan3Biomedical", false);
+var line1025 = new Line("MATH101CoopPlan13B", "ENPH131CoopPlan13B", true);
 function getLine1025() {
         return line1025
     };
-var line1026 = new Line("MECE340CoopPlan3Biomedical", "MECE403CoopPlan3Biomedical", false);
+var line1026 = new Line("MATH100CoopPlan13B", "MATH101CoopPlan13B", false);
 function getLine1026() {
         return line1026
     };
-var line1027 = new Line("MECE360CoopPlan3Biomedical", "MECE403CoopPlan3Biomedical", false);
+var line1027 = new Line("MATH100CoopPlan13B", "MATH102CoopPlan13B", true);
 function getLine1027() {
         return line1027
     };
-var line1028 = new Line("MECE250CoopPlan3Biomedical", "MECE451CoopPlan3Biomedical", false);
+var line1028 = new Line("ENGG130CoopPlan13B", "CIVE270CoopPlan13B", false);
 function getLine1028() {
         return line1028
     };
-var line1029 = new Line("MATH300CoopPlan3Biomedical", "MECE451CoopPlan3Biomedical", false);
+var line1029 = new Line("MATH101CoopPlan13B", "CIVE270CoopPlan13B", false);
 function getLine1029() {
         return line1029
     };
-var line1030 = new Line("MECE200CoopPlan3Biomedical", "MECE460CoopPlan3Biomedical", false);
+var line1030 = new Line("MATH101CoopPlan13B", "MATH209CoopPlan13B", false);
 function getLine1030() {
         return line1030
     };
-var line1031 = new Line("MECE331CoopPlan3Biomedical", "MECE460CoopPlan3Biomedical", false);
+var line1031 = new Line("MATH102CoopPlan13B", "MATH209CoopPlan13B", true);
 function getLine1031() {
         return line1031
     };
-var line1032 = new Line("MECE340CoopPlan3Biomedical", "MECE460CoopPlan3Biomedical", false);
+var line1032 = new Line("MATH101CoopPlan13B", "MECE230CoopPlan13B", false);
 function getLine1032() {
         return line1032
     };
-var line1033 = new Line("MECE360CoopPlan3Biomedical", "MECE460CoopPlan3Biomedical", false);
+var line1033 = new Line("ENPH131CoopPlan13B", "MECE230CoopPlan13B", false);
 function getLine1033() {
         return line1033
     };
-var line1034 = new Line("MECE362CoopPlan3Biomedical", "MECE460CoopPlan3Biomedical", false);
+var line1034 = new Line("ENGG160CoopPlan13B", "MECE260CoopPlan13B", false);
 function getLine1034() {
         return line1034
     };
-var line1035 = new Line("MECE371CoopPlan3Biomedical", "MECE460CoopPlan3Biomedical", false);
+var line1035 = new Line("MECE265CoopPlan13B", "MECE260CoopPlan13B", true);
 function getLine1035() {
         return line1035
     };
-var line1036 = new Line("MECE380CoopPlan3Biomedical", "MECE460CoopPlan3Biomedical", false);
+var line1036 = new Line("CIVE270CoopPlan13B", "MECE260CoopPlan13B", true);
 function getLine1036() {
         return line1036
     };
-var line1037 = new Line("ENGM310CoopPlan3Biomedical", "MECE460CoopPlan3Biomedical", true);
+var line1037 = new Line("MATH100CoopPlan13B", "STAT235CoopPlan13B", false);
 function getLine1037() {
         return line1037
     };
-var line1038 = new Line("ENGM401CoopPlan3Biomedical", "MECE460CoopPlan3Biomedical", true);
+var line1038 = new Line("MATH101CoopPlan13B", "STAT235CoopPlan13B", true);
 function getLine1038() {
         return line1038
     };
-var line1039 = new Line("MATH100CoopPlan4", "ENGG130CoopPlan4", true);
+var line1039 = new Line("MATH101CoopPlan13B", "CHE243CoopPlan13B", false);
 function getLine1039() {
         return line1039
     };
-var line1040 = new Line("MATH100CoopPlan4", "PHYS130CoopPlan4", true);
+var line1040 = new Line("CHEM105CoopPlan13B", "MATE202CoopPlan13B", false);
 function getLine1040() {
         return line1040
     };
-var line1041 = new Line("CHEM103CoopPlan4", "CHEM105CoopPlan4", false);
+var line1041 = new Line("MATH209CoopPlan13B", "MATH201CoopPlan13B", true);
 function getLine1041() {
         return line1041
     };
-var line1042 = new Line("ENGL199CoopPlan4", "ENGG160CoopPlan4", true);
+var line1042 = new Line("ENGG130CoopPlan13B", "MECE250CoopPlan13B", false);
 function getLine1042() {
         return line1042
     };
-var line1043 = new Line("MATH100CoopPlan4", "ENPH131CoopPlan4", false);
+var line1043 = new Line("ENPH131CoopPlan13B", "MECE250CoopPlan13B", false);
 function getLine1043() {
         return line1043
     };
-var line1044 = new Line("ENGG130CoopPlan4", "ENPH131CoopPlan4", false);
+var line1044 = new Line("MATH101CoopPlan13B", "MECE250CoopPlan13B", false);
 function getLine1044() {
         return line1044
     };
-var line1045 = new Line("MATH101CoopPlan4", "ENPH131CoopPlan4", true);
+var line1045 = new Line("ENGG299CoopPlan13B", "WKEXP901CoopPlan13B", false);
 function getLine1045() {
         return line1045
     };
-var line1046 = new Line("MATH100CoopPlan4", "MATH101CoopPlan4", false);
+var line1046 = new Line("WKEXP901CoopPlan13B", "WKEXP902CoopPlan13B", false);
 function getLine1046() {
         return line1046
     };
-var line1047 = new Line("MATH100CoopPlan4", "MATH102CoopPlan4", true);
+var line1047 = new Line("CHE243CoopPlan13B", "MECE340CoopPlan13B", false);
 function getLine1047() {
         return line1047
     };
-var line1048 = new Line("ENGG130CoopPlan4", "CIVE270CoopPlan4", false);
+var line1048 = new Line("MECE260CoopPlan13B", "MECE360CoopPlan13B", false);
 function getLine1048() {
         return line1048
     };
-var line1049 = new Line("MATH101CoopPlan4", "CIVE270CoopPlan4", false);
+var line1049 = new Line("MECE265CoopPlan13B", "MECE360CoopPlan13B", false);
 function getLine1049() {
         return line1049
     };
-var line1050 = new Line("MATH101CoopPlan4", "MATH209CoopPlan4", false);
+var line1050 = new Line("MATE202CoopPlan13B", "MECE360CoopPlan13B", false);
 function getLine1050() {
         return line1050
     };
-var line1051 = new Line("MATH102CoopPlan4", "MATH209CoopPlan4", true);
+var line1051 = new Line("CIVE270CoopPlan13B", "MECE360CoopPlan13B", false);
 function getLine1051() {
         return line1051
     };
-var line1052 = new Line("MATH100CoopPlan4", "STAT235CoopPlan4", false);
+var line1052 = new Line("MECE362CoopPlan13B", "MECE360CoopPlan13B", true);
 function getLine1052() {
         return line1052
     };
-var line1053 = new Line("MATH101CoopPlan4", "STAT235CoopPlan4", true);
+var line1053 = new Line("MECE250CoopPlan13B", "MECE362CoopPlan13B", false);
 function getLine1053() {
         return line1053
     };
-var line1054 = new Line("MATH101CoopPlan4", "MECE230CoopPlan4", false);
+var line1054 = new Line("MATH102CoopPlan13B", "MECE390CoopPlan13B", false);
 function getLine1054() {
         return line1054
     };
-var line1055 = new Line("ENPH131CoopPlan4", "MECE230CoopPlan4", false);
+var line1055 = new Line("MATH201CoopPlan13B", "MECE390CoopPlan13B", false);
 function getLine1055() {
         return line1055
     };
-var line1056 = new Line("ENGG160CoopPlan4", "MECE260CoopPlan4", false);
+var line1056 = new Line("WKEXP902CoopPlan13B", "WKEXP903CoopPlan13B", false);
 function getLine1056() {
         return line1056
     };
-var line1057 = new Line("MECE265CoopPlan4", "MECE260CoopPlan4", true);
+var line1057 = new Line("WKEXP903CoopPlan13B", "WKEXP904CoopPlan13B", false);
 function getLine1057() {
         return line1057
     };
-var line1058 = new Line("CIVE270CoopPlan4", "MECE260CoopPlan4", true);
+var line1058 = new Line("MATH201CoopPlan13B", "MATH300CoopPlan13B", false);
 function getLine1058() {
         return line1058
     };
-var line1059 = new Line("MATH209CoopPlan4", "MATH201CoopPlan4", true);
+var line1059 = new Line("MATH209CoopPlan13B", "MATH300CoopPlan13B", false);
 function getLine1059() {
         return line1059
     };
-var line1060 = new Line("MATH101CoopPlan4", "CHE243CoopPlan4", false);
+var line1060 = new Line("CIVE270CoopPlan13B", "MECE300CoopPlan13B", false);
 function getLine1060() {
         return line1060
     };
-var line1061 = new Line("CHEM105CoopPlan4", "MATE202CoopPlan4", false);
+var line1061 = new Line("ECE209CoopPlan13B", "MECE300CoopPlan13B", false);
 function getLine1061() {
         return line1061
     };
-var line1062 = new Line("ENGG130CoopPlan4", "MECE250CoopPlan4", false);
+var line1062 = new Line("STAT235CoopPlan13B", "MECE300CoopPlan13B", false);
 function getLine1062() {
         return line1062
     };
-var line1063 = new Line("ENPH131CoopPlan4", "MECE250CoopPlan4", false);
+var line1063 = new Line("MECE331CoopPlan13B", "MECE300CoopPlan13B", true);
 function getLine1063() {
         return line1063
     };
-var line1064 = new Line("MATH101CoopPlan4", "MECE250CoopPlan4", false);
+var line1064 = new Line("MECE300CoopPlan13B", "MECE301CoopPlan13B", true);
 function getLine1064() {
         return line1064
     };
-var line1065 = new Line("MATH201CoopPlan4", "MATH300CoopPlan4", false);
+var line1065 = new Line("MECE230CoopPlan13B", "MECE331CoopPlan13B", false);
 function getLine1065() {
         return line1065
     };
-var line1066 = new Line("MATH209CoopPlan4", "MATH300CoopPlan4", false);
+var line1066 = new Line("MECE250CoopPlan13B", "MECE331CoopPlan13B", false);
 function getLine1066() {
         return line1066
     };
-var line1067 = new Line("CIVE270CoopPlan4", "MECE300CoopPlan4", false);
+var line1067 = new Line("MATH209CoopPlan13B", "MECE331CoopPlan13B", false);
 function getLine1067() {
         return line1067
     };
-var line1068 = new Line("ECE209CoopPlan4", "MECE300CoopPlan4", false);
+var line1068 = new Line("CHE243CoopPlan13B", "MECE331CoopPlan13B", true);
 function getLine1068() {
         return line1068
     };
-var line1069 = new Line("STAT235CoopPlan4", "MECE300CoopPlan4", false);
+var line1069 = new Line("MECE230CoopPlan13B", "MECE371CoopPlan13B", false);
 function getLine1069() {
         return line1069
     };
-var line1070 = new Line("MECE331CoopPlan4", "MECE300CoopPlan4", true);
+var line1070 = new Line("CHE243CoopPlan13B", "MECE371CoopPlan13B", false);
 function getLine1070() {
         return line1070
     };
-var line1071 = new Line("MECE300CoopPlan4", "MECE301CoopPlan4", true);
+var line1071 = new Line("MATH300CoopPlan13B", "MECE371CoopPlan13B", true);
 function getLine1071() {
         return line1071
     };
-var line1072 = new Line("MECE230CoopPlan4", "MECE331CoopPlan4", false);
+var line1072 = new Line("MECE331CoopPlan13B", "MECE371CoopPlan13B", true);
 function getLine1072() {
         return line1072
     };
-var line1073 = new Line("MECE250CoopPlan4", "MECE331CoopPlan4", false);
+var line1073 = new Line("CIVE270CoopPlan13B", "MECE380CoopPlan13B", false);
 function getLine1073() {
         return line1073
     };
-var line1074 = new Line("MATH209CoopPlan4", "MECE331CoopPlan4", false);
+var line1074 = new Line("MECE331CoopPlan13B", "MECE430CoopPlan13B", false);
 function getLine1074() {
         return line1074
     };
-var line1075 = new Line("CHE243CoopPlan4", "MECE331CoopPlan4", true);
+var line1075 = new Line("MECE360CoopPlan13B", "MECE480CoopPlan13B", false);
 function getLine1075() {
         return line1075
     };
-var line1076 = new Line("MECE230CoopPlan4", "MECE371CoopPlan4", false);
+var line1076 = new Line("MECE380CoopPlan13B", "MECE480CoopPlan13B", false);
 function getLine1076() {
         return line1076
     };
-var line1077 = new Line("CHE243CoopPlan4", "MECE371CoopPlan4", false);
+var line1077 = new Line("MATH300CoopPlan13B", "MECE480CoopPlan13B", false);
 function getLine1077() {
         return line1077
     };
-var line1078 = new Line("MATH300CoopPlan4", "MECE371CoopPlan4", true);
+var line1078 = new Line("MECE331CoopPlan13B", "MECE463CoopPlan13B", false);
 function getLine1078() {
         return line1078
     };
-var line1079 = new Line("MECE331CoopPlan4", "MECE371CoopPlan4", true);
+var line1079 = new Line("MECE340CoopPlan13B", "MECE463CoopPlan13B", false);
 function getLine1079() {
         return line1079
     };
-var line1080 = new Line("CIVE270CoopPlan4", "MECE380CoopPlan4", false);
+var line1080 = new Line("MECE371CoopPlan13B", "MECE463CoopPlan13B", false);
 function getLine1080() {
         return line1080
     };
-var line1081 = new Line("ENGG299CoopPlan4", "WKEXP901CoopPlan4", false);
+var line1081 = new Line("WKEXP904CoopPlan13B", "WKEXP905CoopPlan13B", false);
 function getLine1081() {
         return line1081
     };
-var line1082 = new Line("WKEXP901CoopPlan4", "WKEXP902CoopPlan4", false);
+var line1082 = new Line("MATH201CoopPlan13B", "CHE448CoopPlan13B", false);
 function getLine1082() {
         return line1082
     };
-var line1083 = new Line("CHE243CoopPlan4", "MECE340CoopPlan4", false);
+var line1083 = new Line("MATH209CoopPlan13B", "CHE448CoopPlan13B", false);
 function getLine1083() {
         return line1083
     };
-var line1084 = new Line("MECE260CoopPlan4", "MECE360CoopPlan4", false);
+var line1084 = new Line("MECE331CoopPlan13B", "CHE448CoopPlan13B", false);
 function getLine1084() {
         return line1084
     };
-var line1085 = new Line("MECE265CoopPlan4", "MECE360CoopPlan4", false);
+var line1085 = new Line("MECE371CoopPlan13B", "CHE448CoopPlan13B", true);
 function getLine1085() {
         return line1085
     };
-var line1086 = new Line("MATE202CoopPlan4", "MECE360CoopPlan4", false);
+var line1086 = new Line("MECE390CoopPlan13B", "MECE420CoopPlan13B", false);
 function getLine1086() {
         return line1086
     };
-var line1087 = new Line("CIVE270CoopPlan4", "MECE360CoopPlan4", false);
+var line1087 = new Line("MECE300CoopPlan13B", "MECE403CoopPlan13B", false);
 function getLine1087() {
         return line1087
     };
-var line1088 = new Line("MECE362CoopPlan4", "MECE360CoopPlan4", true);
+var line1088 = new Line("MECE301CoopPlan13B", "MECE403CoopPlan13B", false);
 function getLine1088() {
         return line1088
     };
-var line1089 = new Line("MECE250CoopPlan4", "MECE362CoopPlan4", false);
+var line1089 = new Line("MECE340CoopPlan13B", "MECE403CoopPlan13B", false);
 function getLine1089() {
         return line1089
     };
-var line1090 = new Line("MATH102CoopPlan4", "MECE390CoopPlan4", false);
+var line1090 = new Line("MECE360CoopPlan13B", "MECE403CoopPlan13B", false);
 function getLine1090() {
         return line1090
     };
-var line1091 = new Line("MATH201CoopPlan4", "MECE390CoopPlan4", false);
+var line1091 = new Line("MECE250CoopPlan13B", "MECE451CoopPlan13B", false);
 function getLine1091() {
         return line1091
     };
-var line1092 = new Line("WKEXP902CoopPlan4", "WKEXP903CoopPlan4", false);
+var line1092 = new Line("MATH300CoopPlan13B", "MECE451CoopPlan13B", false);
 function getLine1092() {
         return line1092
     };
-var line1093 = new Line("WKEXP903CoopPlan4", "WKEXP904CoopPlan4", false);
+var line1093 = new Line("MECE200CoopPlan13B", "MECE460CoopPlan13B", false);
 function getLine1093() {
         return line1093
     };
-var line1094 = new Line("WKEXP904CoopPlan4", "WKEXP905CoopPlan4", false);
+var line1094 = new Line("MECE331CoopPlan13B", "MECE460CoopPlan13B", false);
 function getLine1094() {
         return line1094
     };
-var line1095 = new Line("MECE331CoopPlan4", "MECE430CoopPlan4", false);
+var line1095 = new Line("MECE340CoopPlan13B", "MECE460CoopPlan13B", false);
 function getLine1095() {
         return line1095
     };
-var line1096 = new Line("MECE360CoopPlan4", "MECE480CoopPlan4", false);
+var line1096 = new Line("MECE360CoopPlan13B", "MECE460CoopPlan13B", false);
 function getLine1096() {
         return line1096
     };
-var line1097 = new Line("MECE380CoopPlan4", "MECE480CoopPlan4", false);
+var line1097 = new Line("MECE362CoopPlan13B", "MECE460CoopPlan13B", false);
 function getLine1097() {
         return line1097
     };
-var line1098 = new Line("MATH300CoopPlan4", "MECE480CoopPlan4", false);
+var line1098 = new Line("MECE371CoopPlan13B", "MECE460CoopPlan13B", false);
 function getLine1098() {
         return line1098
     };
-var line1099 = new Line("MECE331CoopPlan4", "MECE463CoopPlan4", false);
+var line1099 = new Line("MECE380CoopPlan13B", "MECE460CoopPlan13B", false);
 function getLine1099() {
         return line1099
     };
-var line1100 = new Line("MECE340CoopPlan4", "MECE463CoopPlan4", false);
+var line1100 = new Line("ENGM310CoopPlan13B", "MECE460CoopPlan13B", true);
 function getLine1100() {
         return line1100
     };
-var line1101 = new Line("MECE371CoopPlan4", "MECE463CoopPlan4", false);
+var line1101 = new Line("ENGM401CoopPlan13B", "MECE460CoopPlan13B", true);
 function getLine1101() {
         return line1101
     };
-var line1102 = new Line("MATH201CoopPlan4", "CHE448CoopPlan4", false);
+var line1102 = new Line("MATH100CoopPlan2", "ENGG130CoopPlan2", true);
 function getLine1102() {
         return line1102
     };
-var line1103 = new Line("MATH209CoopPlan4", "CHE448CoopPlan4", false);
+var line1103 = new Line("MATH100CoopPlan2", "PHYS130CoopPlan2", true);
 function getLine1103() {
         return line1103
     };
-var line1104 = new Line("MECE331CoopPlan4", "CHE448CoopPlan4", false);
+var line1104 = new Line("CHEM103CoopPlan2", "CHEM105CoopPlan2", false);
 function getLine1104() {
         return line1104
     };
-var line1105 = new Line("MECE371CoopPlan4", "CHE448CoopPlan4", true);
+var line1105 = new Line("ENGL199CoopPlan2", "ENGG160CoopPlan2", true);
 function getLine1105() {
         return line1105
     };
-var line1106 = new Line("MECE390CoopPlan4", "MECE420CoopPlan4", false);
+var line1106 = new Line("MATH100CoopPlan2", "ENPH131CoopPlan2", false);
 function getLine1106() {
         return line1106
     };
-var line1107 = new Line("MECE300CoopPlan4", "MECE403CoopPlan4", false);
+var line1107 = new Line("ENGG130CoopPlan2", "ENPH131CoopPlan2", false);
 function getLine1107() {
         return line1107
     };
-var line1108 = new Line("MECE301CoopPlan4", "MECE403CoopPlan4", false);
+var line1108 = new Line("MATH101CoopPlan2", "ENPH131CoopPlan2", true);
 function getLine1108() {
         return line1108
     };
-var line1109 = new Line("MECE340CoopPlan4", "MECE403CoopPlan4", false);
+var line1109 = new Line("MATH100CoopPlan2", "MATH101CoopPlan2", false);
 function getLine1109() {
         return line1109
     };
-var line1110 = new Line("MECE360CoopPlan4", "MECE403CoopPlan4", false);
+var line1110 = new Line("MATH100CoopPlan2", "MATH102CoopPlan2", true);
 function getLine1110() {
         return line1110
     };
-var line1111 = new Line("MECE250CoopPlan4", "MECE451CoopPlan4", false);
+var line1111 = new Line("MATH101CoopPlan2", "CHE243CoopPlan2", false);
 function getLine1111() {
         return line1111
     };
-var line1112 = new Line("MATH300CoopPlan4", "MECE451CoopPlan4", false);
+var line1112 = new Line("ENGG130CoopPlan2", "CIVE270CoopPlan2", false);
 function getLine1112() {
         return line1112
     };
-var line1113 = new Line("MECE200CoopPlan4", "MECE460CoopPlan4", false);
+var line1113 = new Line("MATH101CoopPlan2", "CIVE270CoopPlan2", false);
 function getLine1113() {
         return line1113
     };
-var line1114 = new Line("MECE331CoopPlan4", "MECE460CoopPlan4", false);
+var line1114 = new Line("MATH101CoopPlan2", "MATH209CoopPlan2", false);
 function getLine1114() {
         return line1114
     };
-var line1115 = new Line("MECE340CoopPlan4", "MECE460CoopPlan4", false);
+var line1115 = new Line("MATH102CoopPlan2", "MATH209CoopPlan2", true);
 function getLine1115() {
         return line1115
     };
-var line1116 = new Line("MECE360CoopPlan4", "MECE460CoopPlan4", false);
+var line1116 = new Line("ENGG130CoopPlan2", "MECE250CoopPlan2", false);
 function getLine1116() {
         return line1116
     };
-var line1117 = new Line("MECE362CoopPlan4", "MECE460CoopPlan4", false);
+var line1117 = new Line("ENPH131CoopPlan2", "MECE250CoopPlan2", false);
 function getLine1117() {
         return line1117
     };
-var line1118 = new Line("MECE371CoopPlan4", "MECE460CoopPlan4", false);
+var line1118 = new Line("MATH101CoopPlan2", "MECE250CoopPlan2", false);
 function getLine1118() {
         return line1118
     };
-var line1119 = new Line("MECE380CoopPlan4", "MECE460CoopPlan4", false);
+var line1119 = new Line("MATH100CoopPlan2", "STAT235CoopPlan2", false);
 function getLine1119() {
         return line1119
     };
-var line1120 = new Line("ENGM310CoopPlan4", "MECE460CoopPlan4", true);
+var line1120 = new Line("MATH101CoopPlan2", "STAT235CoopPlan2", true);
 function getLine1120() {
         return line1120
     };
-var line1121 = new Line("ENGM401CoopPlan4", "MECE460CoopPlan4", true);
+var line1121 = new Line("ENGG299CoopPlan2", "WKEXP901CoopPlan2", false);
 function getLine1121() {
         return line1121
     };
-var line1122 = new Line("MATH100MechatronicsPlan", "ENGG130MechatronicsPlan", true);
+var line1122 = new Line("CHEM105CoopPlan2", "MATE202CoopPlan2", false);
 function getLine1122() {
         return line1122
     };
-var line1123 = new Line("MATH100MechatronicsPlan", "PHYS130MechatronicsPlan", true);
+var line1123 = new Line("MATH209CoopPlan2", "MATH201CoopPlan2", true);
 function getLine1123() {
         return line1123
     };
-var line1124 = new Line("CHEM103MechatronicsPlan", "CHEM105MechatronicsPlan", false);
+var line1124 = new Line("MATH101CoopPlan2", "MECE230CoopPlan2", false);
 function getLine1124() {
         return line1124
     };
-var line1125 = new Line("ENGL199MechatronicsPlan", "ENGG160MechatronicsPlan", true);
+var line1125 = new Line("ENPH131CoopPlan2", "MECE230CoopPlan2", false);
 function getLine1125() {
         return line1125
     };
-var line1126 = new Line("MATH100MechatronicsPlan", "ENPH131MechatronicsPlan", false);
+var line1126 = new Line("ENGG160CoopPlan2", "MECE260CoopPlan2", false);
 function getLine1126() {
         return line1126
     };
-var line1127 = new Line("ENGG130MechatronicsPlan", "ENPH131MechatronicsPlan", false);
+var line1127 = new Line("MECE265CoopPlan2", "MECE260CoopPlan2", true);
 function getLine1127() {
         return line1127
     };
-var line1128 = new Line("MATH101MechatronicsPlan", "ENPH131MechatronicsPlan", true);
+var line1128 = new Line("CIVE270CoopPlan2", "MECE260CoopPlan2", true);
 function getLine1128() {
         return line1128
     };
-var line1129 = new Line("MATH100MechatronicsPlan", "MATH101MechatronicsPlan", false);
+var line1129 = new Line("MATH201CoopPlan2", "MATH300CoopPlan2", false);
 function getLine1129() {
         return line1129
     };
-var line1130 = new Line("MATH100MechatronicsPlan", "MATH102MechatronicsPlan", true);
+var line1130 = new Line("MATH209CoopPlan2", "MATH300CoopPlan2", false);
 function getLine1130() {
         return line1130
     };
-var line1131 = new Line("ENGG130MechatronicsPlan", "CIVE270MechatronicsPlan", false);
+var line1131 = new Line("CIVE270CoopPlan2", "MECE300CoopPlan2", false);
 function getLine1131() {
         return line1131
     };
-var line1132 = new Line("MATH101MechatronicsPlan", "CIVE270MechatronicsPlan", false);
+var line1132 = new Line("ECE209CoopPlan2", "MECE300CoopPlan2", false);
 function getLine1132() {
         return line1132
     };
-var line1133 = new Line("MCTR202MechatronicsPlan", "ECE240MechatronicsPlan", false);
+var line1133 = new Line("STAT235CoopPlan2", "MECE300CoopPlan2", false);
 function getLine1133() {
         return line1133
     };
-var line1134 = new Line("MATH201MechatronicsPlan", "ECE240MechatronicsPlan", false);
+var line1134 = new Line("MECE331CoopPlan2", "MECE300CoopPlan2", true);
 function getLine1134() {
         return line1134
     };
-var line1135 = new Line("MATH209MechatronicsPlan", "MATH201MechatronicsPlan", true);
+var line1135 = new Line("MECE300CoopPlan2", "MECE301CoopPlan2", true);
 function getLine1135() {
         return line1135
     };
-var line1136 = new Line("MATH101MechatronicsPlan", "MATH209MechatronicsPlan", false);
+var line1136 = new Line("MECE230CoopPlan2", "MECE331CoopPlan2", false);
 function getLine1136() {
         return line1136
     };
-var line1137 = new Line("MATH102MechatronicsPlan", "MATH209MechatronicsPlan", true);
+var line1137 = new Line("MECE250CoopPlan2", "MECE331CoopPlan2", false);
 function getLine1137() {
         return line1137
     };
-var line1138 = new Line("MATH101MechatronicsPlan", "MCTR202MechatronicsPlan", false);
+var line1138 = new Line("MATH209CoopPlan2", "MECE331CoopPlan2", false);
 function getLine1138() {
         return line1138
     };
-var line1139 = new Line("MATH102MechatronicsPlan", "MCTR202MechatronicsPlan", false);
+var line1139 = new Line("CHE243CoopPlan2", "MECE331CoopPlan2", true);
 function getLine1139() {
         return line1139
     };
-var line1140 = new Line("MATH101MechatronicsPlan", "CHE243MechatronicsPlan", false);
+var line1140 = new Line("MECE230CoopPlan2", "MECE371CoopPlan2", false);
 function getLine1140() {
         return line1140
     };
-var line1141 = new Line("ENCMP100MechatronicsPlan", "MCTR274MechatronicsPlan", false);
+var line1141 = new Line("CHE243CoopPlan2", "MECE371CoopPlan2", false);
 function getLine1141() {
         return line1141
     };
-var line1142 = new Line("MATH101MechatronicsPlan", "MECE230MechatronicsPlan", false);
+var line1142 = new Line("MATH300CoopPlan2", "MECE371CoopPlan2", true);
 function getLine1142() {
         return line1142
     };
-var line1143 = new Line("ENPH131MechatronicsPlan", "MECE230MechatronicsPlan", false);
+var line1143 = new Line("MECE331CoopPlan2", "MECE371CoopPlan2", true);
 function getLine1143() {
         return line1143
     };
-var line1144 = new Line("ENGG130MechatronicsPlan", "MECE250MechatronicsPlan", false);
+var line1144 = new Line("CIVE270CoopPlan2", "MECE380CoopPlan2", false);
 function getLine1144() {
         return line1144
     };
-var line1145 = new Line("ENPH131MechatronicsPlan", "MECE250MechatronicsPlan", false);
+var line1145 = new Line("WKEXP901CoopPlan2", "WKEXP902CoopPlan2", false);
 function getLine1145() {
         return line1145
     };
-var line1146 = new Line("MATH101MechatronicsPlan", "MECE250MechatronicsPlan", false);
+var line1146 = new Line("WKEXP902CoopPlan2", "WKEXP903CoopPlan2", false);
 function getLine1146() {
         return line1146
     };
-var line1147 = new Line("ENGG160MechatronicsPlan", "MECE260MechatronicsPlan", false);
+var line1147 = new Line("CHE243CoopPlan2", "MECE340CoopPlan2", false);
 function getLine1147() {
         return line1147
     };
-var line1148 = new Line("MECE265MechatronicsPlan", "MECE260MechatronicsPlan", true);
+var line1148 = new Line("MECE260CoopPlan2", "MECE360CoopPlan2", false);
 function getLine1148() {
         return line1148
     };
-var line1149 = new Line("CIVE270MechatronicsPlan", "MECE260MechatronicsPlan", true);
+var line1149 = new Line("MECE265CoopPlan2", "MECE360CoopPlan2", false);
 function getLine1149() {
         return line1149
     };
-var line1150 = new Line("MCTR202MechatronicsPlan", "ECE315MechatronicsPlan", false);
+var line1150 = new Line("MATE202CoopPlan2", "MECE360CoopPlan2", false);
 function getLine1150() {
         return line1150
     };
-var line1151 = new Line("MCTR374MechatronicsPlan", "ECE315MechatronicsPlan", true);
+var line1151 = new Line("CIVE270CoopPlan2", "MECE360CoopPlan2", false);
 function getLine1151() {
         return line1151
     };
-var line1152 = new Line("MATH209MechatronicsPlan", "ECE342MechatronicsPlan", false);
+var line1152 = new Line("MECE362CoopPlan2", "MECE360CoopPlan2", true);
 function getLine1152() {
         return line1152
     };
-var line1153 = new Line("MECE260MechatronicsPlan", "MECE360MechatronicsPlan", false);
+var line1153 = new Line("MECE250CoopPlan2", "MECE362CoopPlan2", false);
 function getLine1153() {
         return line1153
     };
-var line1154 = new Line("MECE265MechatronicsPlan", "MECE360MechatronicsPlan", false);
+var line1154 = new Line("MATH102CoopPlan2", "MECE390CoopPlan2", false);
 function getLine1154() {
         return line1154
     };
-var line1155 = new Line("CIVE270MechatronicsPlan", "MECE360MechatronicsPlan", false);
+var line1155 = new Line("MATH201CoopPlan2", "MECE390CoopPlan2", false);
 function getLine1155() {
         return line1155
     };
-var line1156 = new Line("MECE350MechatronicsPlan", "MECE360MechatronicsPlan", true);
+var line1156 = new Line("WKEXP903CoopPlan2", "WKEXP904CoopPlan2", false);
 function getLine1156() {
         return line1156
     };
-var line1157 = new Line("MATH102MechatronicsPlan", "MECE390MechatronicsPlan", false);
+var line1157 = new Line("MECE300CoopPlan2", "MECE403CoopPlan2", false);
 function getLine1157() {
         return line1157
     };
-var line1158 = new Line("MATH201MechatronicsPlan", "MECE390MechatronicsPlan", false);
+var line1158 = new Line("MECE301CoopPlan2", "MECE403CoopPlan2", false);
 function getLine1158() {
         return line1158
     };
-var line1159 = new Line("CIVE270MechatronicsPlan", "MCTR300MechatronicsPlan", false);
+var line1159 = new Line("MECE340CoopPlan2", "MECE403CoopPlan2", false);
 function getLine1159() {
         return line1159
     };
-var line1160 = new Line("ECE342MechatronicsPlan", "MCTR300MechatronicsPlan", false);
+var line1160 = new Line("MECE360CoopPlan2", "MECE403CoopPlan2", false);
 function getLine1160() {
         return line1160
     };
-var line1161 = new Line("ECE342MechatronicsPlan", "MCTR370MechatronicsPlan", false);
+var line1161 = new Line("MECE250CoopPlan2", "MECE451CoopPlan2", false);
 function getLine1161() {
         return line1161
     };
-var line1162 = new Line("MECE390MechatronicsPlan", "MECE420MechatronicsPlan", false);
+var line1162 = new Line("MATH300CoopPlan2", "MECE451CoopPlan2", false);
 function getLine1162() {
         return line1162
     };
-var line1163 = new Line("CHEM105MechatronicsPlan", "MATE201MechatronicsPlan", false);
+var line1163 = new Line("MECE200CoopPlan2", "MECE460CoopPlan2", false);
 function getLine1163() {
         return line1163
     };
-var line1164 = new Line("MECE360MechatronicsPlan", "MECE460MechatronicsPlan", false);
+var line1164 = new Line("MECE331CoopPlan2", "MECE460CoopPlan2", false);
 function getLine1164() {
         return line1164
     };
-var line1165 = new Line("MCTR365MechatronicsPlan", "MECE460MechatronicsPlan", false);
+var line1165 = new Line("MECE340CoopPlan2", "MECE460CoopPlan2", false);
 function getLine1165() {
         return line1165
     };
-var line1166 = new Line("ENGM401MechatronicsPlan", "MECE460MechatronicsPlan", true);
+var line1166 = new Line("MECE360CoopPlan2", "MECE460CoopPlan2", false);
 function getLine1166() {
         return line1166
     };
-var line1167 = new Line("MECE420MechatronicsPlan", "MCTR461MechatronicsPlan", false);
+var line1167 = new Line("MECE362CoopPlan2", "MECE460CoopPlan2", false);
 function getLine1167() {
         return line1167
     };
-var line1168 = new Line("MCTR374MechatronicsPlan", "MCTR465MechatronicsPlan", false);
+var line1168 = new Line("MECE371CoopPlan2", "MECE460CoopPlan2", false);
 function getLine1168() {
         return line1168
     };
-var line1169 = new Line("MECE420MechatronicsPlan", "MCTR465MechatronicsPlan", false);
+var line1169 = new Line("MECE380CoopPlan2", "MECE460CoopPlan2", false);
 function getLine1169() {
         return line1169
     };
-var line1170 = new Line("MECE460MechatronicsPlan", "MECE461MechatronicsPlan", false);
+var line1170 = new Line("ENGM310CoopPlan2", "MECE460CoopPlan2", true);
 function getLine1170() {
         return line1170
     };
-var line1171 = new Line("MCTR300MechatronicsPlan", "MECE465MechatronicsPlan", false);
+var line1171 = new Line("ENGM401CoopPlan2", "MECE460CoopPlan2", true);
 function getLine1171() {
         return line1171
+    };
+var line1172 = new Line("WKEXP904CoopPlan2", "WKEXP905CoopPlan2", false);
+function getLine1172() {
+        return line1172
+    };
+var line1173 = new Line("MATH201CoopPlan2", "CHE448CoopPlan2", false);
+function getLine1173() {
+        return line1173
+    };
+var line1174 = new Line("MATH209CoopPlan2", "CHE448CoopPlan2", false);
+function getLine1174() {
+        return line1174
+    };
+var line1175 = new Line("MECE331CoopPlan2", "CHE448CoopPlan2", false);
+function getLine1175() {
+        return line1175
+    };
+var line1176 = new Line("MECE371CoopPlan2", "CHE448CoopPlan2", true);
+function getLine1176() {
+        return line1176
+    };
+var line1177 = new Line("MECE390CoopPlan2", "MECE420CoopPlan2", false);
+function getLine1177() {
+        return line1177
+    };
+var line1178 = new Line("MECE331CoopPlan2", "MECE430CoopPlan2", false);
+function getLine1178() {
+        return line1178
+    };
+var line1179 = new Line("MECE360CoopPlan2", "MECE480CoopPlan2", false);
+function getLine1179() {
+        return line1179
+    };
+var line1180 = new Line("MECE380CoopPlan2", "MECE480CoopPlan2", false);
+function getLine1180() {
+        return line1180
+    };
+var line1181 = new Line("MATH300CoopPlan2", "MECE480CoopPlan2", false);
+function getLine1181() {
+        return line1181
+    };
+var line1182 = new Line("MECE331CoopPlan2", "MECE463CoopPlan2", false);
+function getLine1182() {
+        return line1182
+    };
+var line1183 = new Line("MECE340CoopPlan2", "MECE463CoopPlan2", false);
+function getLine1183() {
+        return line1183
+    };
+var line1184 = new Line("MECE371CoopPlan2", "MECE463CoopPlan2", false);
+function getLine1184() {
+        return line1184
+    };
+var line1185 = new Line("MATH100CoopPlan3Biomedical", "ENGG130CoopPlan3Biomedical", true);
+function getLine1185() {
+        return line1185
+    };
+var line1186 = new Line("MATH100CoopPlan3Biomedical", "PHYS130CoopPlan3Biomedical", true);
+function getLine1186() {
+        return line1186
+    };
+var line1187 = new Line("CHEM103CoopPlan3Biomedical", "CHEM105CoopPlan3Biomedical", false);
+function getLine1187() {
+        return line1187
+    };
+var line1188 = new Line("ENGL199CoopPlan3Biomedical", "ENGG160CoopPlan3Biomedical", true);
+function getLine1188() {
+        return line1188
+    };
+var line1189 = new Line("MATH100CoopPlan3Biomedical", "ENPH131CoopPlan3Biomedical", false);
+function getLine1189() {
+        return line1189
+    };
+var line1190 = new Line("ENGG130CoopPlan3Biomedical", "ENPH131CoopPlan3Biomedical", false);
+function getLine1190() {
+        return line1190
+    };
+var line1191 = new Line("MATH101CoopPlan3Biomedical", "ENPH131CoopPlan3Biomedical", true);
+function getLine1191() {
+        return line1191
+    };
+var line1192 = new Line("MATH100CoopPlan3Biomedical", "MATH101CoopPlan3Biomedical", false);
+function getLine1192() {
+        return line1192
+    };
+var line1193 = new Line("MATH100CoopPlan3Biomedical", "MATH102CoopPlan3Biomedical", true);
+function getLine1193() {
+        return line1193
+    };
+var line1194 = new Line("ENGG130CoopPlan3Biomedical", "CIVE270CoopPlan3Biomedical", false);
+function getLine1194() {
+        return line1194
+    };
+var line1195 = new Line("MATH101CoopPlan3Biomedical", "CIVE270CoopPlan3Biomedical", false);
+function getLine1195() {
+        return line1195
+    };
+var line1196 = new Line("MATH101CoopPlan3Biomedical", "MATH209CoopPlan3Biomedical", false);
+function getLine1196() {
+        return line1196
+    };
+var line1197 = new Line("MATH102CoopPlan3Biomedical", "MATH209CoopPlan3Biomedical", true);
+function getLine1197() {
+        return line1197
+    };
+var line1198 = new Line("MATH100CoopPlan3Biomedical", "STAT235CoopPlan3Biomedical", false);
+function getLine1198() {
+        return line1198
+    };
+var line1199 = new Line("MATH101CoopPlan3Biomedical", "STAT235CoopPlan3Biomedical", true);
+function getLine1199() {
+        return line1199
+    };
+var line1200 = new Line("MATH101CoopPlan3Biomedical", "CHE243CoopPlan3Biomedical", false);
+function getLine1200() {
+        return line1200
+    };
+var line1201 = new Line("ENGG130CoopPlan3Biomedical", "MECE250CoopPlan3Biomedical", false);
+function getLine1201() {
+        return line1201
+    };
+var line1202 = new Line("ENPH131CoopPlan3Biomedical", "MECE250CoopPlan3Biomedical", false);
+function getLine1202() {
+        return line1202
+    };
+var line1203 = new Line("MATH101CoopPlan3Biomedical", "MECE250CoopPlan3Biomedical", false);
+function getLine1203() {
+        return line1203
+    };
+var line1204 = new Line("CHEM105CoopPlan3Biomedical", "MATE202CoopPlan3Biomedical", false);
+function getLine1204() {
+        return line1204
+    };
+var line1205 = new Line("MATH209CoopPlan3Biomedical", "MATH201CoopPlan3Biomedical", true);
+function getLine1205() {
+        return line1205
+    };
+var line1206 = new Line("MATH101CoopPlan3Biomedical", "MECE230CoopPlan3Biomedical", false);
+function getLine1206() {
+        return line1206
+    };
+var line1207 = new Line("ENPH131CoopPlan3Biomedical", "MECE230CoopPlan3Biomedical", false);
+function getLine1207() {
+        return line1207
+    };
+var line1208 = new Line("ENGG160CoopPlan3Biomedical", "MECE260CoopPlan3Biomedical", false);
+function getLine1208() {
+        return line1208
+    };
+var line1209 = new Line("MECE265CoopPlan3Biomedical", "MECE260CoopPlan3Biomedical", true);
+function getLine1209() {
+        return line1209
+    };
+var line1210 = new Line("CIVE270CoopPlan3Biomedical", "MECE260CoopPlan3Biomedical", true);
+function getLine1210() {
+        return line1210
+    };
+var line1211 = new Line("CHE243CoopPlan3Biomedical", "MECE340CoopPlan3Biomedical", false);
+function getLine1211() {
+        return line1211
+    };
+var line1212 = new Line("MECE260CoopPlan3Biomedical", "MECE360CoopPlan3Biomedical", false);
+function getLine1212() {
+        return line1212
+    };
+var line1213 = new Line("MECE265CoopPlan3Biomedical", "MECE360CoopPlan3Biomedical", false);
+function getLine1213() {
+        return line1213
+    };
+var line1214 = new Line("MATE202CoopPlan3Biomedical", "MECE360CoopPlan3Biomedical", false);
+function getLine1214() {
+        return line1214
+    };
+var line1215 = new Line("CIVE270CoopPlan3Biomedical", "MECE360CoopPlan3Biomedical", false);
+function getLine1215() {
+        return line1215
+    };
+var line1216 = new Line("MECE362CoopPlan3Biomedical", "MECE360CoopPlan3Biomedical", true);
+function getLine1216() {
+        return line1216
+    };
+var line1217 = new Line("MECE250CoopPlan3Biomedical", "MECE362CoopPlan3Biomedical", false);
+function getLine1217() {
+        return line1217
+    };
+var line1218 = new Line("MATH102CoopPlan3Biomedical", "MECE390CoopPlan3Biomedical", false);
+function getLine1218() {
+        return line1218
+    };
+var line1219 = new Line("MATH201CoopPlan3Biomedical", "MECE390CoopPlan3Biomedical", false);
+function getLine1219() {
+        return line1219
+    };
+var line1220 = new Line("WKEXP902CoopPlan3Biomedical", "WKEXP903CoopPlan3Biomedical", false);
+function getLine1220() {
+        return line1220
+    };
+var line1221 = new Line("MATH201CoopPlan3Biomedical", "MATH300CoopPlan3Biomedical", false);
+function getLine1221() {
+        return line1221
+    };
+var line1222 = new Line("MATH209CoopPlan3Biomedical", "MATH300CoopPlan3Biomedical", false);
+function getLine1222() {
+        return line1222
+    };
+var line1223 = new Line("CIVE270CoopPlan3Biomedical", "MECE300CoopPlan3Biomedical", false);
+function getLine1223() {
+        return line1223
+    };
+var line1224 = new Line("ECE209CoopPlan3Biomedical", "MECE300CoopPlan3Biomedical", false);
+function getLine1224() {
+        return line1224
+    };
+var line1225 = new Line("STAT235CoopPlan3Biomedical", "MECE300CoopPlan3Biomedical", false);
+function getLine1225() {
+        return line1225
+    };
+var line1226 = new Line("MECE331CoopPlan3Biomedical", "MECE300CoopPlan3Biomedical", true);
+function getLine1226() {
+        return line1226
+    };
+var line1227 = new Line("MECE300CoopPlan3Biomedical", "MECE301CoopPlan3Biomedical", true);
+function getLine1227() {
+        return line1227
+    };
+var line1228 = new Line("MECE230CoopPlan3Biomedical", "MECE331CoopPlan3Biomedical", false);
+function getLine1228() {
+        return line1228
+    };
+var line1229 = new Line("MECE250CoopPlan3Biomedical", "MECE331CoopPlan3Biomedical", false);
+function getLine1229() {
+        return line1229
+    };
+var line1230 = new Line("MATH209CoopPlan3Biomedical", "MECE331CoopPlan3Biomedical", false);
+function getLine1230() {
+        return line1230
+    };
+var line1231 = new Line("CHE243CoopPlan3Biomedical", "MECE331CoopPlan3Biomedical", true);
+function getLine1231() {
+        return line1231
+    };
+var line1232 = new Line("MECE230CoopPlan3Biomedical", "MECE371CoopPlan3Biomedical", false);
+function getLine1232() {
+        return line1232
+    };
+var line1233 = new Line("CHE243CoopPlan3Biomedical", "MECE371CoopPlan3Biomedical", false);
+function getLine1233() {
+        return line1233
+    };
+var line1234 = new Line("MATH300CoopPlan3Biomedical", "MECE371CoopPlan3Biomedical", true);
+function getLine1234() {
+        return line1234
+    };
+var line1235 = new Line("MECE331CoopPlan3Biomedical", "MECE371CoopPlan3Biomedical", true);
+function getLine1235() {
+        return line1235
+    };
+var line1236 = new Line("CIVE270CoopPlan3Biomedical", "MECE380CoopPlan3Biomedical", false);
+function getLine1236() {
+        return line1236
+    };
+var line1237 = new Line("BME320CoopPlan3Biomedical", "BME321CoopPlan3Biomedical", false);
+function getLine1237() {
+        return line1237
+    };
+var line1238 = new Line("MATH300CoopPlan3Biomedical", "MECE563CoopPlan3Biomedical", false);
+function getLine1238() {
+        return line1238
+    };
+var line1239 = new Line("MECE360CoopPlan3Biomedical", "MECE563CoopPlan3Biomedical", false);
+function getLine1239() {
+        return line1239
+    };
+var line1240 = new Line("MECE390CoopPlan3Biomedical", "MECE563CoopPlan3Biomedical", false);
+function getLine1240() {
+        return line1240
+    };
+var line1241 = new Line("WKEXP903CoopPlan3Biomedical", "WKEXP904CoopPlan3Biomedical", false);
+function getLine1241() {
+        return line1241
+    };
+var line1242 = new Line("WKEXP904CoopPlan3Biomedical", "WKEXP905CoopPlan3Biomedical", false);
+function getLine1242() {
+        return line1242
+    };
+var line1243 = new Line("MECE331CoopPlan3Biomedical", "MECE430CoopPlan3Biomedical", false);
+function getLine1243() {
+        return line1243
+    };
+var line1244 = new Line("MECE331CoopPlan3Biomedical", "MECE463CoopPlan3Biomedical", false);
+function getLine1244() {
+        return line1244
+    };
+var line1245 = new Line("MECE340CoopPlan3Biomedical", "MECE463CoopPlan3Biomedical", false);
+function getLine1245() {
+        return line1245
+    };
+var line1246 = new Line("MECE371CoopPlan3Biomedical", "MECE463CoopPlan3Biomedical", false);
+function getLine1246() {
+        return line1246
+    };
+var line1247 = new Line("MATH201CoopPlan3Biomedical", "CHE448CoopPlan3Biomedical", false);
+function getLine1247() {
+        return line1247
+    };
+var line1248 = new Line("MATH209CoopPlan3Biomedical", "CHE448CoopPlan3Biomedical", false);
+function getLine1248() {
+        return line1248
+    };
+var line1249 = new Line("MECE331CoopPlan3Biomedical", "CHE448CoopPlan3Biomedical", false);
+function getLine1249() {
+        return line1249
+    };
+var line1250 = new Line("MECE371CoopPlan3Biomedical", "CHE448CoopPlan3Biomedical", true);
+function getLine1250() {
+        return line1250
+    };
+var line1251 = new Line("MECE390CoopPlan3Biomedical", "MECE420CoopPlan3Biomedical", false);
+function getLine1251() {
+        return line1251
+    };
+var line1252 = new Line("BME320CoopPlan3Biomedical", "MECE485CoopPlan3Biomedical", false);
+function getLine1252() {
+        return line1252
+    };
+var line1253 = new Line("BME321CoopPlan3Biomedical", "MECE485CoopPlan3Biomedical", false);
+function getLine1253() {
+        return line1253
+    };
+var line1254 = new Line("MECE300CoopPlan3Biomedical", "MECE485CoopPlan3Biomedical", false);
+function getLine1254() {
+        return line1254
+    };
+var line1255 = new Line("MECE362CoopPlan3Biomedical", "MECE485CoopPlan3Biomedical", false);
+function getLine1255() {
+        return line1255
+    };
+var line1256 = new Line("MECE380CoopPlan3Biomedical", "MECE485CoopPlan3Biomedical", false);
+function getLine1256() {
+        return line1256
+    };
+var line1257 = new Line("MECE331CoopPlan3Biomedical", "MECE485CoopPlan3Biomedical", false);
+function getLine1257() {
+        return line1257
+    };
+var line1258 = new Line("MECE300CoopPlan3Biomedical", "MECE403CoopPlan3Biomedical", false);
+function getLine1258() {
+        return line1258
+    };
+var line1259 = new Line("MECE301CoopPlan3Biomedical", "MECE403CoopPlan3Biomedical", false);
+function getLine1259() {
+        return line1259
+    };
+var line1260 = new Line("MECE340CoopPlan3Biomedical", "MECE403CoopPlan3Biomedical", false);
+function getLine1260() {
+        return line1260
+    };
+var line1261 = new Line("MECE360CoopPlan3Biomedical", "MECE403CoopPlan3Biomedical", false);
+function getLine1261() {
+        return line1261
+    };
+var line1262 = new Line("MECE250CoopPlan3Biomedical", "MECE451CoopPlan3Biomedical", false);
+function getLine1262() {
+        return line1262
+    };
+var line1263 = new Line("MATH300CoopPlan3Biomedical", "MECE451CoopPlan3Biomedical", false);
+function getLine1263() {
+        return line1263
+    };
+var line1264 = new Line("MECE200CoopPlan3Biomedical", "MECE460CoopPlan3Biomedical", false);
+function getLine1264() {
+        return line1264
+    };
+var line1265 = new Line("MECE331CoopPlan3Biomedical", "MECE460CoopPlan3Biomedical", false);
+function getLine1265() {
+        return line1265
+    };
+var line1266 = new Line("MECE340CoopPlan3Biomedical", "MECE460CoopPlan3Biomedical", false);
+function getLine1266() {
+        return line1266
+    };
+var line1267 = new Line("MECE360CoopPlan3Biomedical", "MECE460CoopPlan3Biomedical", false);
+function getLine1267() {
+        return line1267
+    };
+var line1268 = new Line("MECE362CoopPlan3Biomedical", "MECE460CoopPlan3Biomedical", false);
+function getLine1268() {
+        return line1268
+    };
+var line1269 = new Line("MECE371CoopPlan3Biomedical", "MECE460CoopPlan3Biomedical", false);
+function getLine1269() {
+        return line1269
+    };
+var line1270 = new Line("MECE380CoopPlan3Biomedical", "MECE460CoopPlan3Biomedical", false);
+function getLine1270() {
+        return line1270
+    };
+var line1271 = new Line("ENGM310CoopPlan3Biomedical", "MECE460CoopPlan3Biomedical", true);
+function getLine1271() {
+        return line1271
+    };
+var line1272 = new Line("ENGM401CoopPlan3Biomedical", "MECE460CoopPlan3Biomedical", true);
+function getLine1272() {
+        return line1272
+    };
+var line1273 = new Line("MATH100CoopPlan43A", "ENGG130CoopPlan43A", true);
+function getLine1273() {
+        return line1273
+    };
+var line1274 = new Line("MATH100CoopPlan43A", "PHYS130CoopPlan43A", true);
+function getLine1274() {
+        return line1274
+    };
+var line1275 = new Line("CHEM103CoopPlan43A", "CHEM105CoopPlan43A", false);
+function getLine1275() {
+        return line1275
+    };
+var line1276 = new Line("ENGL199CoopPlan43A", "ENGG160CoopPlan43A", true);
+function getLine1276() {
+        return line1276
+    };
+var line1277 = new Line("MATH100CoopPlan43A", "ENPH131CoopPlan43A", false);
+function getLine1277() {
+        return line1277
+    };
+var line1278 = new Line("ENGG130CoopPlan43A", "ENPH131CoopPlan43A", false);
+function getLine1278() {
+        return line1278
+    };
+var line1279 = new Line("MATH101CoopPlan43A", "ENPH131CoopPlan43A", true);
+function getLine1279() {
+        return line1279
+    };
+var line1280 = new Line("MATH100CoopPlan43A", "MATH101CoopPlan43A", false);
+function getLine1280() {
+        return line1280
+    };
+var line1281 = new Line("MATH100CoopPlan43A", "MATH102CoopPlan43A", true);
+function getLine1281() {
+        return line1281
+    };
+var line1282 = new Line("ENGG130CoopPlan43A", "CIVE270CoopPlan43A", false);
+function getLine1282() {
+        return line1282
+    };
+var line1283 = new Line("MATH101CoopPlan43A", "CIVE270CoopPlan43A", false);
+function getLine1283() {
+        return line1283
+    };
+var line1284 = new Line("MATH101CoopPlan43A", "MATH209CoopPlan43A", false);
+function getLine1284() {
+        return line1284
+    };
+var line1285 = new Line("MATH102CoopPlan43A", "MATH209CoopPlan43A", true);
+function getLine1285() {
+        return line1285
+    };
+var line1286 = new Line("MATH100CoopPlan43A", "STAT235CoopPlan43A", false);
+function getLine1286() {
+        return line1286
+    };
+var line1287 = new Line("MATH101CoopPlan43A", "STAT235CoopPlan43A", true);
+function getLine1287() {
+        return line1287
+    };
+var line1288 = new Line("MATH101CoopPlan43A", "MECE230CoopPlan43A", false);
+function getLine1288() {
+        return line1288
+    };
+var line1289 = new Line("ENPH131CoopPlan43A", "MECE230CoopPlan43A", false);
+function getLine1289() {
+        return line1289
+    };
+var line1290 = new Line("ENGG160CoopPlan43A", "MECE260CoopPlan43A", false);
+function getLine1290() {
+        return line1290
+    };
+var line1291 = new Line("MECE265CoopPlan43A", "MECE260CoopPlan43A", true);
+function getLine1291() {
+        return line1291
+    };
+var line1292 = new Line("CIVE270CoopPlan43A", "MECE260CoopPlan43A", true);
+function getLine1292() {
+        return line1292
+    };
+var line1293 = new Line("MATH209CoopPlan43A", "MATH201CoopPlan43A", true);
+function getLine1293() {
+        return line1293
+    };
+var line1294 = new Line("MATH101CoopPlan43A", "CHE243CoopPlan43A", false);
+function getLine1294() {
+        return line1294
+    };
+var line1295 = new Line("CHEM105CoopPlan43A", "MATE202CoopPlan43A", false);
+function getLine1295() {
+        return line1295
+    };
+var line1296 = new Line("ENGG130CoopPlan43A", "MECE250CoopPlan43A", false);
+function getLine1296() {
+        return line1296
+    };
+var line1297 = new Line("ENPH131CoopPlan43A", "MECE250CoopPlan43A", false);
+function getLine1297() {
+        return line1297
+    };
+var line1298 = new Line("MATH101CoopPlan43A", "MECE250CoopPlan43A", false);
+function getLine1298() {
+        return line1298
+    };
+var line1299 = new Line("MATH201CoopPlan43A", "MATH300CoopPlan43A", false);
+function getLine1299() {
+        return line1299
+    };
+var line1300 = new Line("MATH209CoopPlan43A", "MATH300CoopPlan43A", false);
+function getLine1300() {
+        return line1300
+    };
+var line1301 = new Line("CIVE270CoopPlan43A", "MECE300CoopPlan43A", false);
+function getLine1301() {
+        return line1301
+    };
+var line1302 = new Line("ECE209CoopPlan43A", "MECE300CoopPlan43A", false);
+function getLine1302() {
+        return line1302
+    };
+var line1303 = new Line("STAT235CoopPlan43A", "MECE300CoopPlan43A", false);
+function getLine1303() {
+        return line1303
+    };
+var line1304 = new Line("MECE331CoopPlan43A", "MECE300CoopPlan43A", true);
+function getLine1304() {
+        return line1304
+    };
+var line1305 = new Line("MECE300CoopPlan43A", "MECE301CoopPlan43A", true);
+function getLine1305() {
+        return line1305
+    };
+var line1306 = new Line("MECE230CoopPlan43A", "MECE331CoopPlan43A", false);
+function getLine1306() {
+        return line1306
+    };
+var line1307 = new Line("MECE250CoopPlan43A", "MECE331CoopPlan43A", false);
+function getLine1307() {
+        return line1307
+    };
+var line1308 = new Line("MATH209CoopPlan43A", "MECE331CoopPlan43A", false);
+function getLine1308() {
+        return line1308
+    };
+var line1309 = new Line("CHE243CoopPlan43A", "MECE331CoopPlan43A", true);
+function getLine1309() {
+        return line1309
+    };
+var line1310 = new Line("MECE230CoopPlan43A", "MECE371CoopPlan43A", false);
+function getLine1310() {
+        return line1310
+    };
+var line1311 = new Line("CHE243CoopPlan43A", "MECE371CoopPlan43A", false);
+function getLine1311() {
+        return line1311
+    };
+var line1312 = new Line("MATH300CoopPlan43A", "MECE371CoopPlan43A", true);
+function getLine1312() {
+        return line1312
+    };
+var line1313 = new Line("MECE331CoopPlan43A", "MECE371CoopPlan43A", true);
+function getLine1313() {
+        return line1313
+    };
+var line1314 = new Line("CIVE270CoopPlan43A", "MECE380CoopPlan43A", false);
+function getLine1314() {
+        return line1314
+    };
+var line1315 = new Line("ENGG299CoopPlan43A", "WKEXP901CoopPlan43A", false);
+function getLine1315() {
+        return line1315
+    };
+var line1316 = new Line("WKEXP901CoopPlan43A", "WKEXP902CoopPlan43A", false);
+function getLine1316() {
+        return line1316
+    };
+var line1317 = new Line("CHE243CoopPlan43A", "MECE340CoopPlan43A", false);
+function getLine1317() {
+        return line1317
+    };
+var line1318 = new Line("MECE260CoopPlan43A", "MECE360CoopPlan43A", false);
+function getLine1318() {
+        return line1318
+    };
+var line1319 = new Line("MECE265CoopPlan43A", "MECE360CoopPlan43A", false);
+function getLine1319() {
+        return line1319
+    };
+var line1320 = new Line("MATE202CoopPlan43A", "MECE360CoopPlan43A", false);
+function getLine1320() {
+        return line1320
+    };
+var line1321 = new Line("CIVE270CoopPlan43A", "MECE360CoopPlan43A", false);
+function getLine1321() {
+        return line1321
+    };
+var line1322 = new Line("MECE362CoopPlan43A", "MECE360CoopPlan43A", true);
+function getLine1322() {
+        return line1322
+    };
+var line1323 = new Line("MECE250CoopPlan43A", "MECE362CoopPlan43A", false);
+function getLine1323() {
+        return line1323
+    };
+var line1324 = new Line("MATH102CoopPlan43A", "MECE390CoopPlan43A", false);
+function getLine1324() {
+        return line1324
+    };
+var line1325 = new Line("MATH201CoopPlan43A", "MECE390CoopPlan43A", false);
+function getLine1325() {
+        return line1325
+    };
+var line1326 = new Line("WKEXP902CoopPlan43A", "WKEXP903CoopPlan43A", false);
+function getLine1326() {
+        return line1326
+    };
+var line1327 = new Line("WKEXP903CoopPlan43A", "WKEXP904CoopPlan43A", false);
+function getLine1327() {
+        return line1327
+    };
+var line1328 = new Line("WKEXP904CoopPlan43A", "WKEXP905CoopPlan43A", false);
+function getLine1328() {
+        return line1328
+    };
+var line1329 = new Line("MECE331CoopPlan43A", "MECE430CoopPlan43A", false);
+function getLine1329() {
+        return line1329
+    };
+var line1330 = new Line("MECE360CoopPlan43A", "MECE480CoopPlan43A", false);
+function getLine1330() {
+        return line1330
+    };
+var line1331 = new Line("MECE380CoopPlan43A", "MECE480CoopPlan43A", false);
+function getLine1331() {
+        return line1331
+    };
+var line1332 = new Line("MATH300CoopPlan43A", "MECE480CoopPlan43A", false);
+function getLine1332() {
+        return line1332
+    };
+var line1333 = new Line("MECE331CoopPlan43A", "MECE463CoopPlan43A", false);
+function getLine1333() {
+        return line1333
+    };
+var line1334 = new Line("MECE340CoopPlan43A", "MECE463CoopPlan43A", false);
+function getLine1334() {
+        return line1334
+    };
+var line1335 = new Line("MECE371CoopPlan43A", "MECE463CoopPlan43A", false);
+function getLine1335() {
+        return line1335
+    };
+var line1336 = new Line("MATH201CoopPlan43A", "CHE448CoopPlan43A", false);
+function getLine1336() {
+        return line1336
+    };
+var line1337 = new Line("MATH209CoopPlan43A", "CHE448CoopPlan43A", false);
+function getLine1337() {
+        return line1337
+    };
+var line1338 = new Line("MECE331CoopPlan43A", "CHE448CoopPlan43A", false);
+function getLine1338() {
+        return line1338
+    };
+var line1339 = new Line("MECE371CoopPlan43A", "CHE448CoopPlan43A", true);
+function getLine1339() {
+        return line1339
+    };
+var line1340 = new Line("MECE390CoopPlan43A", "MECE420CoopPlan43A", false);
+function getLine1340() {
+        return line1340
+    };
+var line1341 = new Line("MECE300CoopPlan43A", "MECE403CoopPlan43A", false);
+function getLine1341() {
+        return line1341
+    };
+var line1342 = new Line("MECE301CoopPlan43A", "MECE403CoopPlan43A", false);
+function getLine1342() {
+        return line1342
+    };
+var line1343 = new Line("MECE340CoopPlan43A", "MECE403CoopPlan43A", false);
+function getLine1343() {
+        return line1343
+    };
+var line1344 = new Line("MECE360CoopPlan43A", "MECE403CoopPlan43A", false);
+function getLine1344() {
+        return line1344
+    };
+var line1345 = new Line("MECE250CoopPlan43A", "MECE451CoopPlan43A", false);
+function getLine1345() {
+        return line1345
+    };
+var line1346 = new Line("MATH300CoopPlan43A", "MECE451CoopPlan43A", false);
+function getLine1346() {
+        return line1346
+    };
+var line1347 = new Line("MECE200CoopPlan43A", "MECE460CoopPlan43A", false);
+function getLine1347() {
+        return line1347
+    };
+var line1348 = new Line("MECE331CoopPlan43A", "MECE460CoopPlan43A", false);
+function getLine1348() {
+        return line1348
+    };
+var line1349 = new Line("MECE340CoopPlan43A", "MECE460CoopPlan43A", false);
+function getLine1349() {
+        return line1349
+    };
+var line1350 = new Line("MECE360CoopPlan43A", "MECE460CoopPlan43A", false);
+function getLine1350() {
+        return line1350
+    };
+var line1351 = new Line("MECE362CoopPlan43A", "MECE460CoopPlan43A", false);
+function getLine1351() {
+        return line1351
+    };
+var line1352 = new Line("MECE371CoopPlan43A", "MECE460CoopPlan43A", false);
+function getLine1352() {
+        return line1352
+    };
+var line1353 = new Line("MECE380CoopPlan43A", "MECE460CoopPlan43A", false);
+function getLine1353() {
+        return line1353
+    };
+var line1354 = new Line("ENGM310CoopPlan43A", "MECE460CoopPlan43A", true);
+function getLine1354() {
+        return line1354
+    };
+var line1355 = new Line("ENGM401CoopPlan43A", "MECE460CoopPlan43A", true);
+function getLine1355() {
+        return line1355
+    };
+var line1356 = new Line("MATH100CoopPlan43B", "ENGG130CoopPlan43B", true);
+function getLine1356() {
+        return line1356
+    };
+var line1357 = new Line("MATH100CoopPlan43B", "PHYS130CoopPlan43B", true);
+function getLine1357() {
+        return line1357
+    };
+var line1358 = new Line("CHEM103CoopPlan43B", "CHEM105CoopPlan43B", false);
+function getLine1358() {
+        return line1358
+    };
+var line1359 = new Line("ENGL199CoopPlan43B", "ENGG160CoopPlan43B", true);
+function getLine1359() {
+        return line1359
+    };
+var line1360 = new Line("MATH100CoopPlan43B", "ENPH131CoopPlan43B", false);
+function getLine1360() {
+        return line1360
+    };
+var line1361 = new Line("ENGG130CoopPlan43B", "ENPH131CoopPlan43B", false);
+function getLine1361() {
+        return line1361
+    };
+var line1362 = new Line("MATH101CoopPlan43B", "ENPH131CoopPlan43B", true);
+function getLine1362() {
+        return line1362
+    };
+var line1363 = new Line("MATH100CoopPlan43B", "MATH101CoopPlan43B", false);
+function getLine1363() {
+        return line1363
+    };
+var line1364 = new Line("MATH100CoopPlan43B", "MATH102CoopPlan43B", true);
+function getLine1364() {
+        return line1364
+    };
+var line1365 = new Line("ENGG130CoopPlan43B", "CIVE270CoopPlan43B", false);
+function getLine1365() {
+        return line1365
+    };
+var line1366 = new Line("MATH101CoopPlan43B", "CIVE270CoopPlan43B", false);
+function getLine1366() {
+        return line1366
+    };
+var line1367 = new Line("MATH101CoopPlan43B", "MATH209CoopPlan43B", false);
+function getLine1367() {
+        return line1367
+    };
+var line1368 = new Line("MATH102CoopPlan43B", "MATH209CoopPlan43B", true);
+function getLine1368() {
+        return line1368
+    };
+var line1369 = new Line("MATH100CoopPlan43B", "STAT235CoopPlan43B", false);
+function getLine1369() {
+        return line1369
+    };
+var line1370 = new Line("MATH101CoopPlan43B", "STAT235CoopPlan43B", true);
+function getLine1370() {
+        return line1370
+    };
+var line1371 = new Line("MATH101CoopPlan43B", "MECE230CoopPlan43B", false);
+function getLine1371() {
+        return line1371
+    };
+var line1372 = new Line("ENPH131CoopPlan43B", "MECE230CoopPlan43B", false);
+function getLine1372() {
+        return line1372
+    };
+var line1373 = new Line("ENGG160CoopPlan43B", "MECE260CoopPlan43B", false);
+function getLine1373() {
+        return line1373
+    };
+var line1374 = new Line("MECE265CoopPlan43B", "MECE260CoopPlan43B", true);
+function getLine1374() {
+        return line1374
+    };
+var line1375 = new Line("CIVE270CoopPlan43B", "MECE260CoopPlan43B", true);
+function getLine1375() {
+        return line1375
+    };
+var line1376 = new Line("MATH209CoopPlan43B", "MATH201CoopPlan43B", true);
+function getLine1376() {
+        return line1376
+    };
+var line1377 = new Line("MATH101CoopPlan43B", "CHE243CoopPlan43B", false);
+function getLine1377() {
+        return line1377
+    };
+var line1378 = new Line("CHEM105CoopPlan43B", "MATE202CoopPlan43B", false);
+function getLine1378() {
+        return line1378
+    };
+var line1379 = new Line("ENGG130CoopPlan43B", "MECE250CoopPlan43B", false);
+function getLine1379() {
+        return line1379
+    };
+var line1380 = new Line("ENPH131CoopPlan43B", "MECE250CoopPlan43B", false);
+function getLine1380() {
+        return line1380
+    };
+var line1381 = new Line("MATH101CoopPlan43B", "MECE250CoopPlan43B", false);
+function getLine1381() {
+        return line1381
+    };
+var line1382 = new Line("CHE243CoopPlan43B", "MECE340CoopPlan43B", false);
+function getLine1382() {
+        return line1382
+    };
+var line1383 = new Line("MECE260CoopPlan43B", "MECE360CoopPlan43B", false);
+function getLine1383() {
+        return line1383
+    };
+var line1384 = new Line("MECE265CoopPlan43B", "MECE360CoopPlan43B", false);
+function getLine1384() {
+        return line1384
+    };
+var line1385 = new Line("MATE202CoopPlan43B", "MECE360CoopPlan43B", false);
+function getLine1385() {
+        return line1385
+    };
+var line1386 = new Line("CIVE270CoopPlan43B", "MECE360CoopPlan43B", false);
+function getLine1386() {
+        return line1386
+    };
+var line1387 = new Line("MECE362CoopPlan43B", "MECE360CoopPlan43B", true);
+function getLine1387() {
+        return line1387
+    };
+var line1388 = new Line("MECE250CoopPlan43B", "MECE362CoopPlan43B", false);
+function getLine1388() {
+        return line1388
+    };
+var line1389 = new Line("MATH102CoopPlan43B", "MECE390CoopPlan43B", false);
+function getLine1389() {
+        return line1389
+    };
+var line1390 = new Line("MATH201CoopPlan43B", "MECE390CoopPlan43B", false);
+function getLine1390() {
+        return line1390
+    };
+var line1391 = new Line("ENGG299CoopPlan43B", "WKEXP901CoopPlan43B", false);
+function getLine1391() {
+        return line1391
+    };
+var line1392 = new Line("WKEXP901CoopPlan43B", "WKEXP902CoopPlan43B", false);
+function getLine1392() {
+        return line1392
+    };
+var line1393 = new Line("MATH201CoopPlan43B", "MATH300CoopPlan43B", false);
+function getLine1393() {
+        return line1393
+    };
+var line1394 = new Line("MATH209CoopPlan43B", "MATH300CoopPlan43B", false);
+function getLine1394() {
+        return line1394
+    };
+var line1395 = new Line("CIVE270CoopPlan43B", "MECE300CoopPlan43B", false);
+function getLine1395() {
+        return line1395
+    };
+var line1396 = new Line("ECE209CoopPlan43B", "MECE300CoopPlan43B", false);
+function getLine1396() {
+        return line1396
+    };
+var line1397 = new Line("STAT235CoopPlan43B", "MECE300CoopPlan43B", false);
+function getLine1397() {
+        return line1397
+    };
+var line1398 = new Line("MECE331CoopPlan43B", "MECE300CoopPlan43B", true);
+function getLine1398() {
+        return line1398
+    };
+var line1399 = new Line("MECE300CoopPlan43B", "MECE301CoopPlan43B", true);
+function getLine1399() {
+        return line1399
+    };
+var line1400 = new Line("MECE230CoopPlan43B", "MECE331CoopPlan43B", false);
+function getLine1400() {
+        return line1400
+    };
+var line1401 = new Line("MECE250CoopPlan43B", "MECE331CoopPlan43B", false);
+function getLine1401() {
+        return line1401
+    };
+var line1402 = new Line("MATH209CoopPlan43B", "MECE331CoopPlan43B", false);
+function getLine1402() {
+        return line1402
+    };
+var line1403 = new Line("CHE243CoopPlan43B", "MECE331CoopPlan43B", true);
+function getLine1403() {
+        return line1403
+    };
+var line1404 = new Line("MECE230CoopPlan43B", "MECE371CoopPlan43B", false);
+function getLine1404() {
+        return line1404
+    };
+var line1405 = new Line("CHE243CoopPlan43B", "MECE371CoopPlan43B", false);
+function getLine1405() {
+        return line1405
+    };
+var line1406 = new Line("MATH300CoopPlan43B", "MECE371CoopPlan43B", true);
+function getLine1406() {
+        return line1406
+    };
+var line1407 = new Line("MECE331CoopPlan43B", "MECE371CoopPlan43B", true);
+function getLine1407() {
+        return line1407
+    };
+var line1408 = new Line("CIVE270CoopPlan43B", "MECE380CoopPlan43B", false);
+function getLine1408() {
+        return line1408
+    };
+var line1409 = new Line("WKEXP902CoopPlan43B", "WKEXP903CoopPlan43B", false);
+function getLine1409() {
+        return line1409
+    };
+var line1410 = new Line("WKEXP903CoopPlan43B", "WKEXP904CoopPlan43B", false);
+function getLine1410() {
+        return line1410
+    };
+var line1411 = new Line("WKEXP904CoopPlan43B", "WKEXP905CoopPlan43B", false);
+function getLine1411() {
+        return line1411
+    };
+var line1412 = new Line("MECE331CoopPlan43B", "MECE430CoopPlan43B", false);
+function getLine1412() {
+        return line1412
+    };
+var line1413 = new Line("MECE360CoopPlan43B", "MECE480CoopPlan43B", false);
+function getLine1413() {
+        return line1413
+    };
+var line1414 = new Line("MECE380CoopPlan43B", "MECE480CoopPlan43B", false);
+function getLine1414() {
+        return line1414
+    };
+var line1415 = new Line("MATH300CoopPlan43B", "MECE480CoopPlan43B", false);
+function getLine1415() {
+        return line1415
+    };
+var line1416 = new Line("MECE331CoopPlan43B", "MECE463CoopPlan43B", false);
+function getLine1416() {
+        return line1416
+    };
+var line1417 = new Line("MECE340CoopPlan43B", "MECE463CoopPlan43B", false);
+function getLine1417() {
+        return line1417
+    };
+var line1418 = new Line("MECE371CoopPlan43B", "MECE463CoopPlan43B", false);
+function getLine1418() {
+        return line1418
+    };
+var line1419 = new Line("MATH201CoopPlan43B", "CHE448CoopPlan43B", false);
+function getLine1419() {
+        return line1419
+    };
+var line1420 = new Line("MATH209CoopPlan43B", "CHE448CoopPlan43B", false);
+function getLine1420() {
+        return line1420
+    };
+var line1421 = new Line("MECE331CoopPlan43B", "CHE448CoopPlan43B", false);
+function getLine1421() {
+        return line1421
+    };
+var line1422 = new Line("MECE371CoopPlan43B", "CHE448CoopPlan43B", true);
+function getLine1422() {
+        return line1422
+    };
+var line1423 = new Line("MECE390CoopPlan43B", "MECE420CoopPlan43B", false);
+function getLine1423() {
+        return line1423
+    };
+var line1424 = new Line("MECE300CoopPlan43B", "MECE403CoopPlan43B", false);
+function getLine1424() {
+        return line1424
+    };
+var line1425 = new Line("MECE301CoopPlan43B", "MECE403CoopPlan43B", false);
+function getLine1425() {
+        return line1425
+    };
+var line1426 = new Line("MECE340CoopPlan43B", "MECE403CoopPlan43B", false);
+function getLine1426() {
+        return line1426
+    };
+var line1427 = new Line("MECE360CoopPlan43B", "MECE403CoopPlan43B", false);
+function getLine1427() {
+        return line1427
+    };
+var line1428 = new Line("MECE250CoopPlan43B", "MECE451CoopPlan43B", false);
+function getLine1428() {
+        return line1428
+    };
+var line1429 = new Line("MATH300CoopPlan43B", "MECE451CoopPlan43B", false);
+function getLine1429() {
+        return line1429
+    };
+var line1430 = new Line("MECE200CoopPlan43B", "MECE460CoopPlan43B", false);
+function getLine1430() {
+        return line1430
+    };
+var line1431 = new Line("MECE331CoopPlan43B", "MECE460CoopPlan43B", false);
+function getLine1431() {
+        return line1431
+    };
+var line1432 = new Line("MECE340CoopPlan43B", "MECE460CoopPlan43B", false);
+function getLine1432() {
+        return line1432
+    };
+var line1433 = new Line("MECE360CoopPlan43B", "MECE460CoopPlan43B", false);
+function getLine1433() {
+        return line1433
+    };
+var line1434 = new Line("MECE362CoopPlan43B", "MECE460CoopPlan43B", false);
+function getLine1434() {
+        return line1434
+    };
+var line1435 = new Line("MECE371CoopPlan43B", "MECE460CoopPlan43B", false);
+function getLine1435() {
+        return line1435
+    };
+var line1436 = new Line("MECE380CoopPlan43B", "MECE460CoopPlan43B", false);
+function getLine1436() {
+        return line1436
+    };
+var line1437 = new Line("ENGM310CoopPlan43B", "MECE460CoopPlan43B", true);
+function getLine1437() {
+        return line1437
+    };
+var line1438 = new Line("ENGM401CoopPlan43B", "MECE460CoopPlan43B", true);
+function getLine1438() {
+        return line1438
+    };
+var line1439 = new Line("MATH100MechatronicsPlan", "ENGG130MechatronicsPlan", true);
+function getLine1439() {
+        return line1439
+    };
+var line1440 = new Line("MATH100MechatronicsPlan", "PHYS130MechatronicsPlan", true);
+function getLine1440() {
+        return line1440
+    };
+var line1441 = new Line("CHEM103MechatronicsPlan", "CHEM105MechatronicsPlan", false);
+function getLine1441() {
+        return line1441
+    };
+var line1442 = new Line("ENGL199MechatronicsPlan", "ENGG160MechatronicsPlan", true);
+function getLine1442() {
+        return line1442
+    };
+var line1443 = new Line("MATH100MechatronicsPlan", "ENPH131MechatronicsPlan", false);
+function getLine1443() {
+        return line1443
+    };
+var line1444 = new Line("ENGG130MechatronicsPlan", "ENPH131MechatronicsPlan", false);
+function getLine1444() {
+        return line1444
+    };
+var line1445 = new Line("MATH101MechatronicsPlan", "ENPH131MechatronicsPlan", true);
+function getLine1445() {
+        return line1445
+    };
+var line1446 = new Line("MATH100MechatronicsPlan", "MATH101MechatronicsPlan", false);
+function getLine1446() {
+        return line1446
+    };
+var line1447 = new Line("MATH100MechatronicsPlan", "MATH102MechatronicsPlan", true);
+function getLine1447() {
+        return line1447
+    };
+var line1448 = new Line("ENGG130MechatronicsPlan", "CIVE270MechatronicsPlan", false);
+function getLine1448() {
+        return line1448
+    };
+var line1449 = new Line("MATH101MechatronicsPlan", "CIVE270MechatronicsPlan", false);
+function getLine1449() {
+        return line1449
+    };
+var line1450 = new Line("MCTR202MechatronicsPlan", "ECE240MechatronicsPlan", false);
+function getLine1450() {
+        return line1450
+    };
+var line1451 = new Line("MATH201MechatronicsPlan", "ECE240MechatronicsPlan", false);
+function getLine1451() {
+        return line1451
+    };
+var line1452 = new Line("MATH209MechatronicsPlan", "MATH201MechatronicsPlan", true);
+function getLine1452() {
+        return line1452
+    };
+var line1453 = new Line("MATH101MechatronicsPlan", "MATH209MechatronicsPlan", false);
+function getLine1453() {
+        return line1453
+    };
+var line1454 = new Line("MATH102MechatronicsPlan", "MATH209MechatronicsPlan", true);
+function getLine1454() {
+        return line1454
+    };
+var line1455 = new Line("MATH101MechatronicsPlan", "MCTR202MechatronicsPlan", false);
+function getLine1455() {
+        return line1455
+    };
+var line1456 = new Line("MATH102MechatronicsPlan", "MCTR202MechatronicsPlan", false);
+function getLine1456() {
+        return line1456
+    };
+var line1457 = new Line("MATH101MechatronicsPlan", "CHE243MechatronicsPlan", false);
+function getLine1457() {
+        return line1457
+    };
+var line1458 = new Line("ENCMP100MechatronicsPlan", "MCTR274MechatronicsPlan", false);
+function getLine1458() {
+        return line1458
+    };
+var line1459 = new Line("MATH101MechatronicsPlan", "MECE230MechatronicsPlan", false);
+function getLine1459() {
+        return line1459
+    };
+var line1460 = new Line("ENPH131MechatronicsPlan", "MECE230MechatronicsPlan", false);
+function getLine1460() {
+        return line1460
+    };
+var line1461 = new Line("ENGG130MechatronicsPlan", "MECE250MechatronicsPlan", false);
+function getLine1461() {
+        return line1461
+    };
+var line1462 = new Line("ENPH131MechatronicsPlan", "MECE250MechatronicsPlan", false);
+function getLine1462() {
+        return line1462
+    };
+var line1463 = new Line("MATH101MechatronicsPlan", "MECE250MechatronicsPlan", false);
+function getLine1463() {
+        return line1463
+    };
+var line1464 = new Line("ENGG160MechatronicsPlan", "MECE260MechatronicsPlan", false);
+function getLine1464() {
+        return line1464
+    };
+var line1465 = new Line("MECE265MechatronicsPlan", "MECE260MechatronicsPlan", true);
+function getLine1465() {
+        return line1465
+    };
+var line1466 = new Line("CIVE270MechatronicsPlan", "MECE260MechatronicsPlan", true);
+function getLine1466() {
+        return line1466
+    };
+var line1467 = new Line("MCTR202MechatronicsPlan", "ECE315MechatronicsPlan", false);
+function getLine1467() {
+        return line1467
+    };
+var line1468 = new Line("MCTR374MechatronicsPlan", "ECE315MechatronicsPlan", true);
+function getLine1468() {
+        return line1468
+    };
+var line1469 = new Line("MATH209MechatronicsPlan", "ECE342MechatronicsPlan", false);
+function getLine1469() {
+        return line1469
+    };
+var line1470 = new Line("MECE260MechatronicsPlan", "MECE360MechatronicsPlan", false);
+function getLine1470() {
+        return line1470
+    };
+var line1471 = new Line("MECE265MechatronicsPlan", "MECE360MechatronicsPlan", false);
+function getLine1471() {
+        return line1471
+    };
+var line1472 = new Line("CIVE270MechatronicsPlan", "MECE360MechatronicsPlan", false);
+function getLine1472() {
+        return line1472
+    };
+var line1473 = new Line("MECE350MechatronicsPlan", "MECE360MechatronicsPlan", true);
+function getLine1473() {
+        return line1473
+    };
+var line1474 = new Line("MATH102MechatronicsPlan", "MECE390MechatronicsPlan", false);
+function getLine1474() {
+        return line1474
+    };
+var line1475 = new Line("MATH201MechatronicsPlan", "MECE390MechatronicsPlan", false);
+function getLine1475() {
+        return line1475
+    };
+var line1476 = new Line("CIVE270MechatronicsPlan", "MCTR300MechatronicsPlan", false);
+function getLine1476() {
+        return line1476
+    };
+var line1477 = new Line("ECE342MechatronicsPlan", "MCTR300MechatronicsPlan", false);
+function getLine1477() {
+        return line1477
+    };
+var line1478 = new Line("ECE342MechatronicsPlan", "MCTR370MechatronicsPlan", false);
+function getLine1478() {
+        return line1478
+    };
+var line1479 = new Line("MECE390MechatronicsPlan", "MECE420MechatronicsPlan", false);
+function getLine1479() {
+        return line1479
+    };
+var line1480 = new Line("CHEM105MechatronicsPlan", "MATE201MechatronicsPlan", false);
+function getLine1480() {
+        return line1480
+    };
+var line1481 = new Line("MECE360MechatronicsPlan", "MECE460MechatronicsPlan", false);
+function getLine1481() {
+        return line1481
+    };
+var line1482 = new Line("MCTR365MechatronicsPlan", "MECE460MechatronicsPlan", false);
+function getLine1482() {
+        return line1482
+    };
+var line1483 = new Line("ENGM401MechatronicsPlan", "MECE460MechatronicsPlan", true);
+function getLine1483() {
+        return line1483
+    };
+var line1484 = new Line("MECE420MechatronicsPlan", "MCTR461MechatronicsPlan", false);
+function getLine1484() {
+        return line1484
+    };
+var line1485 = new Line("MCTR374MechatronicsPlan", "MCTR465MechatronicsPlan", false);
+function getLine1485() {
+        return line1485
+    };
+var line1486 = new Line("MECE420MechatronicsPlan", "MCTR465MechatronicsPlan", false);
+function getLine1486() {
+        return line1486
+    };
+var line1487 = new Line("MECE460MechatronicsPlan", "MECE461MechatronicsPlan", false);
+function getLine1487() {
+        return line1487
+    };
+var line1488 = new Line("MCTR300MechatronicsPlan", "MECE465MechatronicsPlan", false);
+function getLine1488() {
+        return line1488
     };
