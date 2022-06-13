@@ -1715,6 +1715,10 @@ switch(categoryName) {
        ENPH131TraditionalPlan2A3A4Aelement.classList.remove("NaturalSciences");
        ENPH131TraditionalPlan2A3A4Aelement.classList.add("NaturalSciences-highlighted");
        that.addToClicked(["ENPH131TraditionalPlan2A3A4A","NaturalSciences"]);
+       var MECE230TraditionalPlan2A3A4Aelement = document.getElementById("MECE230TraditionalPlan2A3A4A");
+       MECE230TraditionalPlan2A3A4Aelement.classList.remove("NaturalSciences");
+       MECE230TraditionalPlan2A3A4Aelement.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["MECE230TraditionalPlan2A3A4A","NaturalSciences"]);
        break;
       case "TraditionalPlan2A3A4B":
        var CHEM103TraditionalPlan2A3A4Belement = document.getElementById("CHEM103TraditionalPlan2A3A4B");
@@ -1741,6 +1745,10 @@ switch(categoryName) {
        ENPH131TraditionalPlan2A3A4Belement.classList.remove("NaturalSciences");
        ENPH131TraditionalPlan2A3A4Belement.classList.add("NaturalSciences-highlighted");
        that.addToClicked(["ENPH131TraditionalPlan2A3A4B","NaturalSciences"]);
+       var MECE230TraditionalPlan2A3A4Belement = document.getElementById("MECE230TraditionalPlan2A3A4B");
+       MECE230TraditionalPlan2A3A4Belement.classList.remove("NaturalSciences");
+       MECE230TraditionalPlan2A3A4Belement.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["MECE230TraditionalPlan2A3A4B","NaturalSciences"]);
        break;
       case "TraditionalPlan2A3B4A":
        var CHEM103TraditionalPlan2A3B4Aelement = document.getElementById("CHEM103TraditionalPlan2A3B4A");
@@ -1767,6 +1775,10 @@ switch(categoryName) {
        ENPH131TraditionalPlan2A3B4Aelement.classList.remove("NaturalSciences");
        ENPH131TraditionalPlan2A3B4Aelement.classList.add("NaturalSciences-highlighted");
        that.addToClicked(["ENPH131TraditionalPlan2A3B4A","NaturalSciences"]);
+       var MECE230TraditionalPlan2A3B4Aelement = document.getElementById("MECE230TraditionalPlan2A3B4A");
+       MECE230TraditionalPlan2A3B4Aelement.classList.remove("NaturalSciences");
+       MECE230TraditionalPlan2A3B4Aelement.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["MECE230TraditionalPlan2A3B4A","NaturalSciences"]);
        break;
       case "TraditionalPlan2A3B4B":
        var CHEM103TraditionalPlan2A3B4Belement = document.getElementById("CHEM103TraditionalPlan2A3B4B");
@@ -1793,6 +1805,10 @@ switch(categoryName) {
        ENPH131TraditionalPlan2A3B4Belement.classList.remove("NaturalSciences");
        ENPH131TraditionalPlan2A3B4Belement.classList.add("NaturalSciences-highlighted");
        that.addToClicked(["ENPH131TraditionalPlan2A3B4B","NaturalSciences"]);
+       var MECE230TraditionalPlan2A3B4Belement = document.getElementById("MECE230TraditionalPlan2A3B4B");
+       MECE230TraditionalPlan2A3B4Belement.classList.remove("NaturalSciences");
+       MECE230TraditionalPlan2A3B4Belement.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["MECE230TraditionalPlan2A3B4B","NaturalSciences"]);
        break;
       case "TraditionalPlan2B3A4A":
        var CHEM103TraditionalPlan2B3A4Aelement = document.getElementById("CHEM103TraditionalPlan2B3A4A");
@@ -1819,6 +1835,10 @@ switch(categoryName) {
        ENPH131TraditionalPlan2B3A4Aelement.classList.remove("NaturalSciences");
        ENPH131TraditionalPlan2B3A4Aelement.classList.add("NaturalSciences-highlighted");
        that.addToClicked(["ENPH131TraditionalPlan2B3A4A","NaturalSciences"]);
+       var MECE230TraditionalPlan2B3A4Aelement = document.getElementById("MECE230TraditionalPlan2B3A4A");
+       MECE230TraditionalPlan2B3A4Aelement.classList.remove("NaturalSciences");
+       MECE230TraditionalPlan2B3A4Aelement.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["MECE230TraditionalPlan2B3A4A","NaturalSciences"]);
        break;
       case "TraditionalPlan2B3A4B":
        var CHEM103TraditionalPlan2B3A4Belement = document.getElementById("CHEM103TraditionalPlan2B3A4B");
@@ -1845,6 +1865,10 @@ switch(categoryName) {
        ENPH131TraditionalPlan2B3A4Belement.classList.remove("NaturalSciences");
        ENPH131TraditionalPlan2B3A4Belement.classList.add("NaturalSciences-highlighted");
        that.addToClicked(["ENPH131TraditionalPlan2B3A4B","NaturalSciences"]);
+       var MECE230TraditionalPlan2B3A4Belement = document.getElementById("MECE230TraditionalPlan2B3A4B");
+       MECE230TraditionalPlan2B3A4Belement.classList.remove("NaturalSciences");
+       MECE230TraditionalPlan2B3A4Belement.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["MECE230TraditionalPlan2B3A4B","NaturalSciences"]);
        break;
       case "TraditionalPlan2B3B4A":
        var CHEM103TraditionalPlan2B3B4Aelement = document.getElementById("CHEM103TraditionalPlan2B3B4A");
@@ -1871,6 +1895,10 @@ switch(categoryName) {
        ENPH131TraditionalPlan2B3B4Aelement.classList.remove("NaturalSciences");
        ENPH131TraditionalPlan2B3B4Aelement.classList.add("NaturalSciences-highlighted");
        that.addToClicked(["ENPH131TraditionalPlan2B3B4A","NaturalSciences"]);
+       var MECE230TraditionalPlan2B3B4Aelement = document.getElementById("MECE230TraditionalPlan2B3B4A");
+       MECE230TraditionalPlan2B3B4Aelement.classList.remove("NaturalSciences");
+       MECE230TraditionalPlan2B3B4Aelement.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["MECE230TraditionalPlan2B3B4A","NaturalSciences"]);
        break;
       case "TraditionalPlan2B3B4B":
        var CHEM103TraditionalPlan2B3B4Belement = document.getElementById("CHEM103TraditionalPlan2B3B4B");
@@ -1897,6 +1925,10 @@ switch(categoryName) {
        ENPH131TraditionalPlan2B3B4Belement.classList.remove("NaturalSciences");
        ENPH131TraditionalPlan2B3B4Belement.classList.add("NaturalSciences-highlighted");
        that.addToClicked(["ENPH131TraditionalPlan2B3B4B","NaturalSciences"]);
+       var MECE230TraditionalPlan2B3B4Belement = document.getElementById("MECE230TraditionalPlan2B3B4B");
+       MECE230TraditionalPlan2B3B4Belement.classList.remove("NaturalSciences");
+       MECE230TraditionalPlan2B3B4Belement.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["MECE230TraditionalPlan2B3B4B","NaturalSciences"]);
        break;
       case "AlternatePlan3A4A":
        var CHEM103AlternatePlan3A4Aelement = document.getElementById("CHEM103AlternatePlan3A4A");
@@ -1923,6 +1955,10 @@ switch(categoryName) {
        ENPH131AlternatePlan3A4Aelement.classList.remove("NaturalSciences");
        ENPH131AlternatePlan3A4Aelement.classList.add("NaturalSciences-highlighted");
        that.addToClicked(["ENPH131AlternatePlan3A4A","NaturalSciences"]);
+       var MECE230AlternatePlan3A4Aelement = document.getElementById("MECE230AlternatePlan3A4A");
+       MECE230AlternatePlan3A4Aelement.classList.remove("NaturalSciences");
+       MECE230AlternatePlan3A4Aelement.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["MECE230AlternatePlan3A4A","NaturalSciences"]);
        break;
       case "CoopPlan13A":
        var CHEM103CoopPlan13Aelement = document.getElementById("CHEM103CoopPlan13A");
@@ -1949,6 +1985,10 @@ switch(categoryName) {
        ENPH131CoopPlan13Aelement.classList.remove("NaturalSciences");
        ENPH131CoopPlan13Aelement.classList.add("NaturalSciences-highlighted");
        that.addToClicked(["ENPH131CoopPlan13A","NaturalSciences"]);
+       var MECE230CoopPlan13Aelement = document.getElementById("MECE230CoopPlan13A");
+       MECE230CoopPlan13Aelement.classList.remove("NaturalSciences");
+       MECE230CoopPlan13Aelement.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["MECE230CoopPlan13A","NaturalSciences"]);
        break;
       case "CoopPlan13B":
        var CHEM103CoopPlan13Belement = document.getElementById("CHEM103CoopPlan13B");
@@ -1975,6 +2015,10 @@ switch(categoryName) {
        ENPH131CoopPlan13Belement.classList.remove("NaturalSciences");
        ENPH131CoopPlan13Belement.classList.add("NaturalSciences-highlighted");
        that.addToClicked(["ENPH131CoopPlan13B","NaturalSciences"]);
+       var MECE230CoopPlan13Belement = document.getElementById("MECE230CoopPlan13B");
+       MECE230CoopPlan13Belement.classList.remove("NaturalSciences");
+       MECE230CoopPlan13Belement.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["MECE230CoopPlan13B","NaturalSciences"]);
        break;
       case "CoopPlan2":
        var CHEM103CoopPlan2element = document.getElementById("CHEM103CoopPlan2");
@@ -2001,6 +2045,10 @@ switch(categoryName) {
        ENPH131CoopPlan2element.classList.remove("NaturalSciences");
        ENPH131CoopPlan2element.classList.add("NaturalSciences-highlighted");
        that.addToClicked(["ENPH131CoopPlan2","NaturalSciences"]);
+       var MECE230CoopPlan2element = document.getElementById("MECE230CoopPlan2");
+       MECE230CoopPlan2element.classList.remove("NaturalSciences");
+       MECE230CoopPlan2element.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["MECE230CoopPlan2","NaturalSciences"]);
        break;
       case "CoopPlan3Biomedical":
        var CHEM103CoopPlan3Biomedicalelement = document.getElementById("CHEM103CoopPlan3Biomedical");
@@ -2027,6 +2075,10 @@ switch(categoryName) {
        ENPH131CoopPlan3Biomedicalelement.classList.remove("NaturalSciences");
        ENPH131CoopPlan3Biomedicalelement.classList.add("NaturalSciences-highlighted");
        that.addToClicked(["ENPH131CoopPlan3Biomedical","NaturalSciences"]);
+       var MECE230CoopPlan3Biomedicalelement = document.getElementById("MECE230CoopPlan3Biomedical");
+       MECE230CoopPlan3Biomedicalelement.classList.remove("NaturalSciences");
+       MECE230CoopPlan3Biomedicalelement.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["MECE230CoopPlan3Biomedical","NaturalSciences"]);
        var BME320CoopPlan3Biomedicalelement = document.getElementById("BME320CoopPlan3Biomedical");
        BME320CoopPlan3Biomedicalelement.classList.remove("NaturalSciences");
        BME320CoopPlan3Biomedicalelement.classList.add("NaturalSciences-highlighted");
@@ -2061,6 +2113,10 @@ switch(categoryName) {
        ENPH131CoopPlan4element.classList.remove("NaturalSciences");
        ENPH131CoopPlan4element.classList.add("NaturalSciences-highlighted");
        that.addToClicked(["ENPH131CoopPlan4","NaturalSciences"]);
+       var MECE230CoopPlan4element = document.getElementById("MECE230CoopPlan4");
+       MECE230CoopPlan4element.classList.remove("NaturalSciences");
+       MECE230CoopPlan4element.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["MECE230CoopPlan4","NaturalSciences"]);
        break;
       case "MechatronicsPlan":
        var CHEM103MechatronicsPlanelement = document.getElementById("CHEM103MechatronicsPlan");
@@ -2087,6 +2143,10 @@ switch(categoryName) {
        ENPH131MechatronicsPlanelement.classList.remove("NaturalSciences");
        ENPH131MechatronicsPlanelement.classList.add("NaturalSciences-highlighted");
        that.addToClicked(["ENPH131MechatronicsPlan","NaturalSciences"]);
+       var MECE230MechatronicsPlanelement = document.getElementById("MECE230MechatronicsPlan");
+       MECE230MechatronicsPlanelement.classList.remove("NaturalSciences");
+       MECE230MechatronicsPlanelement.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["MECE230MechatronicsPlan","NaturalSciences"]);
        var MATE201MechatronicsPlanelement = document.getElementById("MATE201MechatronicsPlan");
        MATE201MechatronicsPlanelement.classList.remove("NaturalSciences");
        MATE201MechatronicsPlanelement.classList.add("NaturalSciences-highlighted");
@@ -3629,10 +3689,6 @@ switch(categoryName) {
        MATE202TraditionalPlan2A3A4Aelement.classList.remove("EngineeringSciences");
        MATE202TraditionalPlan2A3A4Aelement.classList.add("EngineeringSciences-highlighted");
        that.addToClicked(["MATE202TraditionalPlan2A3A4A","EngineeringSciences"]);
-       var MECE230TraditionalPlan2A3A4Aelement = document.getElementById("MECE230TraditionalPlan2A3A4A");
-       MECE230TraditionalPlan2A3A4Aelement.classList.remove("EngineeringSciences");
-       MECE230TraditionalPlan2A3A4Aelement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["MECE230TraditionalPlan2A3A4A","EngineeringSciences"]);
        var MECE300TraditionalPlan2A3A4Aelement = document.getElementById("MECE300TraditionalPlan2A3A4A");
        MECE300TraditionalPlan2A3A4Aelement.classList.remove("EngineeringSciences");
        MECE300TraditionalPlan2A3A4Aelement.classList.add("EngineeringSciences-highlighted");
@@ -3707,10 +3763,6 @@ switch(categoryName) {
        MATE202TraditionalPlan2A3A4Belement.classList.remove("EngineeringSciences");
        MATE202TraditionalPlan2A3A4Belement.classList.add("EngineeringSciences-highlighted");
        that.addToClicked(["MATE202TraditionalPlan2A3A4B","EngineeringSciences"]);
-       var MECE230TraditionalPlan2A3A4Belement = document.getElementById("MECE230TraditionalPlan2A3A4B");
-       MECE230TraditionalPlan2A3A4Belement.classList.remove("EngineeringSciences");
-       MECE230TraditionalPlan2A3A4Belement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["MECE230TraditionalPlan2A3A4B","EngineeringSciences"]);
        var MECE300TraditionalPlan2A3A4Belement = document.getElementById("MECE300TraditionalPlan2A3A4B");
        MECE300TraditionalPlan2A3A4Belement.classList.remove("EngineeringSciences");
        MECE300TraditionalPlan2A3A4Belement.classList.add("EngineeringSciences-highlighted");
@@ -3785,10 +3837,6 @@ switch(categoryName) {
        MATE202TraditionalPlan2A3B4Aelement.classList.remove("EngineeringSciences");
        MATE202TraditionalPlan2A3B4Aelement.classList.add("EngineeringSciences-highlighted");
        that.addToClicked(["MATE202TraditionalPlan2A3B4A","EngineeringSciences"]);
-       var MECE230TraditionalPlan2A3B4Aelement = document.getElementById("MECE230TraditionalPlan2A3B4A");
-       MECE230TraditionalPlan2A3B4Aelement.classList.remove("EngineeringSciences");
-       MECE230TraditionalPlan2A3B4Aelement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["MECE230TraditionalPlan2A3B4A","EngineeringSciences"]);
        var MECE340TraditionalPlan2A3B4Aelement = document.getElementById("MECE340TraditionalPlan2A3B4A");
        MECE340TraditionalPlan2A3B4Aelement.classList.remove("EngineeringSciences");
        MECE340TraditionalPlan2A3B4Aelement.classList.add("EngineeringSciences-highlighted");
@@ -3863,10 +3911,6 @@ switch(categoryName) {
        MATE202TraditionalPlan2A3B4Belement.classList.remove("EngineeringSciences");
        MATE202TraditionalPlan2A3B4Belement.classList.add("EngineeringSciences-highlighted");
        that.addToClicked(["MATE202TraditionalPlan2A3B4B","EngineeringSciences"]);
-       var MECE230TraditionalPlan2A3B4Belement = document.getElementById("MECE230TraditionalPlan2A3B4B");
-       MECE230TraditionalPlan2A3B4Belement.classList.remove("EngineeringSciences");
-       MECE230TraditionalPlan2A3B4Belement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["MECE230TraditionalPlan2A3B4B","EngineeringSciences"]);
        var MECE340TraditionalPlan2A3B4Belement = document.getElementById("MECE340TraditionalPlan2A3B4B");
        MECE340TraditionalPlan2A3B4Belement.classList.remove("EngineeringSciences");
        MECE340TraditionalPlan2A3B4Belement.classList.add("EngineeringSciences-highlighted");
@@ -3925,10 +3969,6 @@ switch(categoryName) {
        CIVE270TraditionalPlan2B3A4Aelement.classList.remove("EngineeringSciences");
        CIVE270TraditionalPlan2B3A4Aelement.classList.add("EngineeringSciences-highlighted");
        that.addToClicked(["CIVE270TraditionalPlan2B3A4A","EngineeringSciences"]);
-       var MECE230TraditionalPlan2B3A4Aelement = document.getElementById("MECE230TraditionalPlan2B3A4A");
-       MECE230TraditionalPlan2B3A4Aelement.classList.remove("EngineeringSciences");
-       MECE230TraditionalPlan2B3A4Aelement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["MECE230TraditionalPlan2B3A4A","EngineeringSciences"]);
        var ECE209TraditionalPlan2B3A4Aelement = document.getElementById("ECE209TraditionalPlan2B3A4A");
        ECE209TraditionalPlan2B3A4Aelement.classList.remove("EngineeringSciences");
        ECE209TraditionalPlan2B3A4Aelement.classList.add("EngineeringSciences-highlighted");
@@ -4003,10 +4043,6 @@ switch(categoryName) {
        CIVE270TraditionalPlan2B3A4Belement.classList.remove("EngineeringSciences");
        CIVE270TraditionalPlan2B3A4Belement.classList.add("EngineeringSciences-highlighted");
        that.addToClicked(["CIVE270TraditionalPlan2B3A4B","EngineeringSciences"]);
-       var MECE230TraditionalPlan2B3A4Belement = document.getElementById("MECE230TraditionalPlan2B3A4B");
-       MECE230TraditionalPlan2B3A4Belement.classList.remove("EngineeringSciences");
-       MECE230TraditionalPlan2B3A4Belement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["MECE230TraditionalPlan2B3A4B","EngineeringSciences"]);
        var ECE209TraditionalPlan2B3A4Belement = document.getElementById("ECE209TraditionalPlan2B3A4B");
        ECE209TraditionalPlan2B3A4Belement.classList.remove("EngineeringSciences");
        ECE209TraditionalPlan2B3A4Belement.classList.add("EngineeringSciences-highlighted");
@@ -4081,10 +4117,6 @@ switch(categoryName) {
        CIVE270TraditionalPlan2B3B4Aelement.classList.remove("EngineeringSciences");
        CIVE270TraditionalPlan2B3B4Aelement.classList.add("EngineeringSciences-highlighted");
        that.addToClicked(["CIVE270TraditionalPlan2B3B4A","EngineeringSciences"]);
-       var MECE230TraditionalPlan2B3B4Aelement = document.getElementById("MECE230TraditionalPlan2B3B4A");
-       MECE230TraditionalPlan2B3B4Aelement.classList.remove("EngineeringSciences");
-       MECE230TraditionalPlan2B3B4Aelement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["MECE230TraditionalPlan2B3B4A","EngineeringSciences"]);
        var ECE209TraditionalPlan2B3B4Aelement = document.getElementById("ECE209TraditionalPlan2B3B4A");
        ECE209TraditionalPlan2B3B4Aelement.classList.remove("EngineeringSciences");
        ECE209TraditionalPlan2B3B4Aelement.classList.add("EngineeringSciences-highlighted");
@@ -4159,10 +4191,6 @@ switch(categoryName) {
        CIVE270TraditionalPlan2B3B4Belement.classList.remove("EngineeringSciences");
        CIVE270TraditionalPlan2B3B4Belement.classList.add("EngineeringSciences-highlighted");
        that.addToClicked(["CIVE270TraditionalPlan2B3B4B","EngineeringSciences"]);
-       var MECE230TraditionalPlan2B3B4Belement = document.getElementById("MECE230TraditionalPlan2B3B4B");
-       MECE230TraditionalPlan2B3B4Belement.classList.remove("EngineeringSciences");
-       MECE230TraditionalPlan2B3B4Belement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["MECE230TraditionalPlan2B3B4B","EngineeringSciences"]);
        var ECE209TraditionalPlan2B3B4Belement = document.getElementById("ECE209TraditionalPlan2B3B4B");
        ECE209TraditionalPlan2B3B4Belement.classList.remove("EngineeringSciences");
        ECE209TraditionalPlan2B3B4Belement.classList.add("EngineeringSciences-highlighted");
@@ -4237,10 +4265,6 @@ switch(categoryName) {
        CIVE270AlternatePlan3A4Aelement.classList.remove("EngineeringSciences");
        CIVE270AlternatePlan3A4Aelement.classList.add("EngineeringSciences-highlighted");
        that.addToClicked(["CIVE270AlternatePlan3A4A","EngineeringSciences"]);
-       var MECE230AlternatePlan3A4Aelement = document.getElementById("MECE230AlternatePlan3A4A");
-       MECE230AlternatePlan3A4Aelement.classList.remove("EngineeringSciences");
-       MECE230AlternatePlan3A4Aelement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["MECE230AlternatePlan3A4A","EngineeringSciences"]);
        var CHE243AlternatePlan3A4Aelement = document.getElementById("CHE243AlternatePlan3A4A");
        CHE243AlternatePlan3A4Aelement.classList.remove("EngineeringSciences");
        CHE243AlternatePlan3A4Aelement.classList.add("EngineeringSciences-highlighted");
@@ -4315,10 +4339,6 @@ switch(categoryName) {
        CIVE270CoopPlan13Aelement.classList.remove("EngineeringSciences");
        CIVE270CoopPlan13Aelement.classList.add("EngineeringSciences-highlighted");
        that.addToClicked(["CIVE270CoopPlan13A","EngineeringSciences"]);
-       var MECE230CoopPlan13Aelement = document.getElementById("MECE230CoopPlan13A");
-       MECE230CoopPlan13Aelement.classList.remove("EngineeringSciences");
-       MECE230CoopPlan13Aelement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["MECE230CoopPlan13A","EngineeringSciences"]);
        var CHE243CoopPlan13Aelement = document.getElementById("CHE243CoopPlan13A");
        CHE243CoopPlan13Aelement.classList.remove("EngineeringSciences");
        CHE243CoopPlan13Aelement.classList.add("EngineeringSciences-highlighted");
@@ -4393,10 +4413,6 @@ switch(categoryName) {
        CIVE270CoopPlan13Belement.classList.remove("EngineeringSciences");
        CIVE270CoopPlan13Belement.classList.add("EngineeringSciences-highlighted");
        that.addToClicked(["CIVE270CoopPlan13B","EngineeringSciences"]);
-       var MECE230CoopPlan13Belement = document.getElementById("MECE230CoopPlan13B");
-       MECE230CoopPlan13Belement.classList.remove("EngineeringSciences");
-       MECE230CoopPlan13Belement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["MECE230CoopPlan13B","EngineeringSciences"]);
        var CHE243CoopPlan13Belement = document.getElementById("CHE243CoopPlan13B");
        CHE243CoopPlan13Belement.classList.remove("EngineeringSciences");
        CHE243CoopPlan13Belement.classList.add("EngineeringSciences-highlighted");
@@ -4487,10 +4503,6 @@ switch(categoryName) {
        MATE202CoopPlan2element.classList.remove("EngineeringSciences");
        MATE202CoopPlan2element.classList.add("EngineeringSciences-highlighted");
        that.addToClicked(["MATE202CoopPlan2","EngineeringSciences"]);
-       var MECE230CoopPlan2element = document.getElementById("MECE230CoopPlan2");
-       MECE230CoopPlan2element.classList.remove("EngineeringSciences");
-       MECE230CoopPlan2element.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["MECE230CoopPlan2","EngineeringSciences"]);
        var MECE300CoopPlan2element = document.getElementById("MECE300CoopPlan2");
        MECE300CoopPlan2element.classList.remove("EngineeringSciences");
        MECE300CoopPlan2element.classList.add("EngineeringSciences-highlighted");
@@ -4565,10 +4577,6 @@ switch(categoryName) {
        MATE202CoopPlan3Biomedicalelement.classList.remove("EngineeringSciences");
        MATE202CoopPlan3Biomedicalelement.classList.add("EngineeringSciences-highlighted");
        that.addToClicked(["MATE202CoopPlan3Biomedical","EngineeringSciences"]);
-       var MECE230CoopPlan3Biomedicalelement = document.getElementById("MECE230CoopPlan3Biomedical");
-       MECE230CoopPlan3Biomedicalelement.classList.remove("EngineeringSciences");
-       MECE230CoopPlan3Biomedicalelement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["MECE230CoopPlan3Biomedical","EngineeringSciences"]);
        var MECE340CoopPlan3Biomedicalelement = document.getElementById("MECE340CoopPlan3Biomedical");
        MECE340CoopPlan3Biomedicalelement.classList.remove("EngineeringSciences");
        MECE340CoopPlan3Biomedicalelement.classList.add("EngineeringSciences-highlighted");
@@ -4631,10 +4639,6 @@ switch(categoryName) {
        CIVE270CoopPlan4element.classList.remove("EngineeringSciences");
        CIVE270CoopPlan4element.classList.add("EngineeringSciences-highlighted");
        that.addToClicked(["CIVE270CoopPlan4","EngineeringSciences"]);
-       var MECE230CoopPlan4element = document.getElementById("MECE230CoopPlan4");
-       MECE230CoopPlan4element.classList.remove("EngineeringSciences");
-       MECE230CoopPlan4element.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["MECE230CoopPlan4","EngineeringSciences"]);
        var ECE209CoopPlan4element = document.getElementById("ECE209CoopPlan4");
        ECE209CoopPlan4element.classList.remove("EngineeringSciences");
        ECE209CoopPlan4element.classList.add("EngineeringSciences-highlighted");
@@ -4721,10 +4725,6 @@ switch(categoryName) {
        CHE243MechatronicsPlanelement.classList.remove("EngineeringSciences");
        CHE243MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
        that.addToClicked(["CHE243MechatronicsPlan","EngineeringSciences"]);
-       var MECE230MechatronicsPlanelement = document.getElementById("MECE230MechatronicsPlan");
-       MECE230MechatronicsPlanelement.classList.remove("EngineeringSciences");
-       MECE230MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["MECE230MechatronicsPlan","EngineeringSciences"]);
        var MECE250MechatronicsPlanelement = document.getElementById("MECE250MechatronicsPlan");
        MECE250MechatronicsPlanelement.classList.remove("EngineeringSciences");
        MECE250MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
@@ -5358,6 +5358,13 @@ if (!ENPH131TraditionalPlan2A3A4Aflag) {
        
        that.removeFromClicked("ENPH131TraditionalPlan2A3A4A");
  } 
+if (!MECE230TraditionalPlan2A3A4Aflag) { 
+       var MECE230TraditionalPlan2A3A4Aelement = document.getElementById("MECE230TraditionalPlan2A3A4A");
+       MECE230TraditionalPlan2A3A4Aelement.classList.remove("NaturalSciences-highlighted");
+       MECE230TraditionalPlan2A3A4Aelement.classList.add("NaturalSciences");
+       
+       that.removeFromClicked("MECE230TraditionalPlan2A3A4A");
+ } 
        break;
       case "TraditionalPlan2A3A4B":
 if (!CHEM103TraditionalPlan2A3A4Bflag) { 
@@ -5401,6 +5408,13 @@ if (!ENPH131TraditionalPlan2A3A4Bflag) {
        ENPH131TraditionalPlan2A3A4Belement.classList.add("NaturalSciences");
        
        that.removeFromClicked("ENPH131TraditionalPlan2A3A4B");
+ } 
+if (!MECE230TraditionalPlan2A3A4Bflag) { 
+       var MECE230TraditionalPlan2A3A4Belement = document.getElementById("MECE230TraditionalPlan2A3A4B");
+       MECE230TraditionalPlan2A3A4Belement.classList.remove("NaturalSciences-highlighted");
+       MECE230TraditionalPlan2A3A4Belement.classList.add("NaturalSciences");
+       
+       that.removeFromClicked("MECE230TraditionalPlan2A3A4B");
  } 
        break;
       case "TraditionalPlan2A3B4A":
@@ -5446,6 +5460,13 @@ if (!ENPH131TraditionalPlan2A3B4Aflag) {
        
        that.removeFromClicked("ENPH131TraditionalPlan2A3B4A");
  } 
+if (!MECE230TraditionalPlan2A3B4Aflag) { 
+       var MECE230TraditionalPlan2A3B4Aelement = document.getElementById("MECE230TraditionalPlan2A3B4A");
+       MECE230TraditionalPlan2A3B4Aelement.classList.remove("NaturalSciences-highlighted");
+       MECE230TraditionalPlan2A3B4Aelement.classList.add("NaturalSciences");
+       
+       that.removeFromClicked("MECE230TraditionalPlan2A3B4A");
+ } 
        break;
       case "TraditionalPlan2A3B4B":
 if (!CHEM103TraditionalPlan2A3B4Bflag) { 
@@ -5489,6 +5510,13 @@ if (!ENPH131TraditionalPlan2A3B4Bflag) {
        ENPH131TraditionalPlan2A3B4Belement.classList.add("NaturalSciences");
        
        that.removeFromClicked("ENPH131TraditionalPlan2A3B4B");
+ } 
+if (!MECE230TraditionalPlan2A3B4Bflag) { 
+       var MECE230TraditionalPlan2A3B4Belement = document.getElementById("MECE230TraditionalPlan2A3B4B");
+       MECE230TraditionalPlan2A3B4Belement.classList.remove("NaturalSciences-highlighted");
+       MECE230TraditionalPlan2A3B4Belement.classList.add("NaturalSciences");
+       
+       that.removeFromClicked("MECE230TraditionalPlan2A3B4B");
  } 
        break;
       case "TraditionalPlan2B3A4A":
@@ -5534,6 +5562,13 @@ if (!ENPH131TraditionalPlan2B3A4Aflag) {
        
        that.removeFromClicked("ENPH131TraditionalPlan2B3A4A");
  } 
+if (!MECE230TraditionalPlan2B3A4Aflag) { 
+       var MECE230TraditionalPlan2B3A4Aelement = document.getElementById("MECE230TraditionalPlan2B3A4A");
+       MECE230TraditionalPlan2B3A4Aelement.classList.remove("NaturalSciences-highlighted");
+       MECE230TraditionalPlan2B3A4Aelement.classList.add("NaturalSciences");
+       
+       that.removeFromClicked("MECE230TraditionalPlan2B3A4A");
+ } 
        break;
       case "TraditionalPlan2B3A4B":
 if (!CHEM103TraditionalPlan2B3A4Bflag) { 
@@ -5577,6 +5612,13 @@ if (!ENPH131TraditionalPlan2B3A4Bflag) {
        ENPH131TraditionalPlan2B3A4Belement.classList.add("NaturalSciences");
        
        that.removeFromClicked("ENPH131TraditionalPlan2B3A4B");
+ } 
+if (!MECE230TraditionalPlan2B3A4Bflag) { 
+       var MECE230TraditionalPlan2B3A4Belement = document.getElementById("MECE230TraditionalPlan2B3A4B");
+       MECE230TraditionalPlan2B3A4Belement.classList.remove("NaturalSciences-highlighted");
+       MECE230TraditionalPlan2B3A4Belement.classList.add("NaturalSciences");
+       
+       that.removeFromClicked("MECE230TraditionalPlan2B3A4B");
  } 
        break;
       case "TraditionalPlan2B3B4A":
@@ -5622,6 +5664,13 @@ if (!ENPH131TraditionalPlan2B3B4Aflag) {
        
        that.removeFromClicked("ENPH131TraditionalPlan2B3B4A");
  } 
+if (!MECE230TraditionalPlan2B3B4Aflag) { 
+       var MECE230TraditionalPlan2B3B4Aelement = document.getElementById("MECE230TraditionalPlan2B3B4A");
+       MECE230TraditionalPlan2B3B4Aelement.classList.remove("NaturalSciences-highlighted");
+       MECE230TraditionalPlan2B3B4Aelement.classList.add("NaturalSciences");
+       
+       that.removeFromClicked("MECE230TraditionalPlan2B3B4A");
+ } 
        break;
       case "TraditionalPlan2B3B4B":
 if (!CHEM103TraditionalPlan2B3B4Bflag) { 
@@ -5665,6 +5714,13 @@ if (!ENPH131TraditionalPlan2B3B4Bflag) {
        ENPH131TraditionalPlan2B3B4Belement.classList.add("NaturalSciences");
        
        that.removeFromClicked("ENPH131TraditionalPlan2B3B4B");
+ } 
+if (!MECE230TraditionalPlan2B3B4Bflag) { 
+       var MECE230TraditionalPlan2B3B4Belement = document.getElementById("MECE230TraditionalPlan2B3B4B");
+       MECE230TraditionalPlan2B3B4Belement.classList.remove("NaturalSciences-highlighted");
+       MECE230TraditionalPlan2B3B4Belement.classList.add("NaturalSciences");
+       
+       that.removeFromClicked("MECE230TraditionalPlan2B3B4B");
  } 
        break;
       case "AlternatePlan3A4A":
@@ -5710,6 +5766,13 @@ if (!ENPH131AlternatePlan3A4Aflag) {
        
        that.removeFromClicked("ENPH131AlternatePlan3A4A");
  } 
+if (!MECE230AlternatePlan3A4Aflag) { 
+       var MECE230AlternatePlan3A4Aelement = document.getElementById("MECE230AlternatePlan3A4A");
+       MECE230AlternatePlan3A4Aelement.classList.remove("NaturalSciences-highlighted");
+       MECE230AlternatePlan3A4Aelement.classList.add("NaturalSciences");
+       
+       that.removeFromClicked("MECE230AlternatePlan3A4A");
+ } 
        break;
       case "CoopPlan13A":
 if (!CHEM103CoopPlan13Aflag) { 
@@ -5753,6 +5816,13 @@ if (!ENPH131CoopPlan13Aflag) {
        ENPH131CoopPlan13Aelement.classList.add("NaturalSciences");
        
        that.removeFromClicked("ENPH131CoopPlan13A");
+ } 
+if (!MECE230CoopPlan13Aflag) { 
+       var MECE230CoopPlan13Aelement = document.getElementById("MECE230CoopPlan13A");
+       MECE230CoopPlan13Aelement.classList.remove("NaturalSciences-highlighted");
+       MECE230CoopPlan13Aelement.classList.add("NaturalSciences");
+       
+       that.removeFromClicked("MECE230CoopPlan13A");
  } 
        break;
       case "CoopPlan13B":
@@ -5798,6 +5868,13 @@ if (!ENPH131CoopPlan13Bflag) {
        
        that.removeFromClicked("ENPH131CoopPlan13B");
  } 
+if (!MECE230CoopPlan13Bflag) { 
+       var MECE230CoopPlan13Belement = document.getElementById("MECE230CoopPlan13B");
+       MECE230CoopPlan13Belement.classList.remove("NaturalSciences-highlighted");
+       MECE230CoopPlan13Belement.classList.add("NaturalSciences");
+       
+       that.removeFromClicked("MECE230CoopPlan13B");
+ } 
        break;
       case "CoopPlan2":
 if (!CHEM103CoopPlan2flag) { 
@@ -5842,6 +5919,13 @@ if (!ENPH131CoopPlan2flag) {
        
        that.removeFromClicked("ENPH131CoopPlan2");
  } 
+if (!MECE230CoopPlan2flag) { 
+       var MECE230CoopPlan2element = document.getElementById("MECE230CoopPlan2");
+       MECE230CoopPlan2element.classList.remove("NaturalSciences-highlighted");
+       MECE230CoopPlan2element.classList.add("NaturalSciences");
+       
+       that.removeFromClicked("MECE230CoopPlan2");
+ } 
        break;
       case "CoopPlan3Biomedical":
 if (!CHEM103CoopPlan3Biomedicalflag) { 
@@ -5885,6 +5969,13 @@ if (!ENPH131CoopPlan3Biomedicalflag) {
        ENPH131CoopPlan3Biomedicalelement.classList.add("NaturalSciences");
        
        that.removeFromClicked("ENPH131CoopPlan3Biomedical");
+ } 
+if (!MECE230CoopPlan3Biomedicalflag) { 
+       var MECE230CoopPlan3Biomedicalelement = document.getElementById("MECE230CoopPlan3Biomedical");
+       MECE230CoopPlan3Biomedicalelement.classList.remove("NaturalSciences-highlighted");
+       MECE230CoopPlan3Biomedicalelement.classList.add("NaturalSciences");
+       
+       that.removeFromClicked("MECE230CoopPlan3Biomedical");
  } 
 if (!BME320CoopPlan3Biomedicalflag) { 
        var BME320CoopPlan3Biomedicalelement = document.getElementById("BME320CoopPlan3Biomedical");
@@ -5944,6 +6035,13 @@ if (!ENPH131CoopPlan4flag) {
        
        that.removeFromClicked("ENPH131CoopPlan4");
  } 
+if (!MECE230CoopPlan4flag) { 
+       var MECE230CoopPlan4element = document.getElementById("MECE230CoopPlan4");
+       MECE230CoopPlan4element.classList.remove("NaturalSciences-highlighted");
+       MECE230CoopPlan4element.classList.add("NaturalSciences");
+       
+       that.removeFromClicked("MECE230CoopPlan4");
+ } 
        break;
       case "MechatronicsPlan":
 if (!CHEM103MechatronicsPlanflag) { 
@@ -5987,6 +6085,13 @@ if (!ENPH131MechatronicsPlanflag) {
        ENPH131MechatronicsPlanelement.classList.add("NaturalSciences");
        
        that.removeFromClicked("ENPH131MechatronicsPlan");
+ } 
+if (!MECE230MechatronicsPlanflag) { 
+       var MECE230MechatronicsPlanelement = document.getElementById("MECE230MechatronicsPlan");
+       MECE230MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+       MECE230MechatronicsPlanelement.classList.add("NaturalSciences");
+       
+       that.removeFromClicked("MECE230MechatronicsPlan");
  } 
 if (!MATE201MechatronicsPlanflag) { 
        var MATE201MechatronicsPlanelement = document.getElementById("MATE201MechatronicsPlan");
@@ -8580,13 +8685,6 @@ if (!MATE202TraditionalPlan2A3A4Aflag) {
        
        that.removeFromClicked("MATE202TraditionalPlan2A3A4A");
  } 
-if (!MECE230TraditionalPlan2A3A4Aflag) { 
-       var MECE230TraditionalPlan2A3A4Aelement = document.getElementById("MECE230TraditionalPlan2A3A4A");
-       MECE230TraditionalPlan2A3A4Aelement.classList.remove("EngineeringSciences-highlighted");
-       MECE230TraditionalPlan2A3A4Aelement.classList.add("EngineeringSciences");
-       
-       that.removeFromClicked("MECE230TraditionalPlan2A3A4A");
- } 
 if (!MECE300TraditionalPlan2A3A4Aflag) { 
        var MECE300TraditionalPlan2A3A4Aelement = document.getElementById("MECE300TraditionalPlan2A3A4A");
        MECE300TraditionalPlan2A3A4Aelement.classList.remove("EngineeringSciences-highlighted");
@@ -8714,13 +8812,6 @@ if (!MATE202TraditionalPlan2A3A4Bflag) {
        MATE202TraditionalPlan2A3A4Belement.classList.add("EngineeringSciences");
        
        that.removeFromClicked("MATE202TraditionalPlan2A3A4B");
- } 
-if (!MECE230TraditionalPlan2A3A4Bflag) { 
-       var MECE230TraditionalPlan2A3A4Belement = document.getElementById("MECE230TraditionalPlan2A3A4B");
-       MECE230TraditionalPlan2A3A4Belement.classList.remove("EngineeringSciences-highlighted");
-       MECE230TraditionalPlan2A3A4Belement.classList.add("EngineeringSciences");
-       
-       that.removeFromClicked("MECE230TraditionalPlan2A3A4B");
  } 
 if (!MECE300TraditionalPlan2A3A4Bflag) { 
        var MECE300TraditionalPlan2A3A4Belement = document.getElementById("MECE300TraditionalPlan2A3A4B");
@@ -8850,13 +8941,6 @@ if (!MATE202TraditionalPlan2A3B4Aflag) {
        
        that.removeFromClicked("MATE202TraditionalPlan2A3B4A");
  } 
-if (!MECE230TraditionalPlan2A3B4Aflag) { 
-       var MECE230TraditionalPlan2A3B4Aelement = document.getElementById("MECE230TraditionalPlan2A3B4A");
-       MECE230TraditionalPlan2A3B4Aelement.classList.remove("EngineeringSciences-highlighted");
-       MECE230TraditionalPlan2A3B4Aelement.classList.add("EngineeringSciences");
-       
-       that.removeFromClicked("MECE230TraditionalPlan2A3B4A");
- } 
 if (!MECE340TraditionalPlan2A3B4Aflag) { 
        var MECE340TraditionalPlan2A3B4Aelement = document.getElementById("MECE340TraditionalPlan2A3B4A");
        MECE340TraditionalPlan2A3B4Aelement.classList.remove("EngineeringSciences-highlighted");
@@ -8985,13 +9069,6 @@ if (!MATE202TraditionalPlan2A3B4Bflag) {
        
        that.removeFromClicked("MATE202TraditionalPlan2A3B4B");
  } 
-if (!MECE230TraditionalPlan2A3B4Bflag) { 
-       var MECE230TraditionalPlan2A3B4Belement = document.getElementById("MECE230TraditionalPlan2A3B4B");
-       MECE230TraditionalPlan2A3B4Belement.classList.remove("EngineeringSciences-highlighted");
-       MECE230TraditionalPlan2A3B4Belement.classList.add("EngineeringSciences");
-       
-       that.removeFromClicked("MECE230TraditionalPlan2A3B4B");
- } 
 if (!MECE340TraditionalPlan2A3B4Bflag) { 
        var MECE340TraditionalPlan2A3B4Belement = document.getElementById("MECE340TraditionalPlan2A3B4B");
        MECE340TraditionalPlan2A3B4Belement.classList.remove("EngineeringSciences-highlighted");
@@ -9091,13 +9168,6 @@ if (!CIVE270TraditionalPlan2B3A4Aflag) {
        CIVE270TraditionalPlan2B3A4Aelement.classList.add("EngineeringSciences");
        
        that.removeFromClicked("CIVE270TraditionalPlan2B3A4A");
- } 
-if (!MECE230TraditionalPlan2B3A4Aflag) { 
-       var MECE230TraditionalPlan2B3A4Aelement = document.getElementById("MECE230TraditionalPlan2B3A4A");
-       MECE230TraditionalPlan2B3A4Aelement.classList.remove("EngineeringSciences-highlighted");
-       MECE230TraditionalPlan2B3A4Aelement.classList.add("EngineeringSciences");
-       
-       that.removeFromClicked("MECE230TraditionalPlan2B3A4A");
  } 
 if (!ECE209TraditionalPlan2B3A4Aflag) { 
        var ECE209TraditionalPlan2B3A4Aelement = document.getElementById("ECE209TraditionalPlan2B3A4A");
@@ -9227,13 +9297,6 @@ if (!CIVE270TraditionalPlan2B3A4Bflag) {
        
        that.removeFromClicked("CIVE270TraditionalPlan2B3A4B");
  } 
-if (!MECE230TraditionalPlan2B3A4Bflag) { 
-       var MECE230TraditionalPlan2B3A4Belement = document.getElementById("MECE230TraditionalPlan2B3A4B");
-       MECE230TraditionalPlan2B3A4Belement.classList.remove("EngineeringSciences-highlighted");
-       MECE230TraditionalPlan2B3A4Belement.classList.add("EngineeringSciences");
-       
-       that.removeFromClicked("MECE230TraditionalPlan2B3A4B");
- } 
 if (!ECE209TraditionalPlan2B3A4Bflag) { 
        var ECE209TraditionalPlan2B3A4Belement = document.getElementById("ECE209TraditionalPlan2B3A4B");
        ECE209TraditionalPlan2B3A4Belement.classList.remove("EngineeringSciences-highlighted");
@@ -9361,13 +9424,6 @@ if (!CIVE270TraditionalPlan2B3B4Aflag) {
        CIVE270TraditionalPlan2B3B4Aelement.classList.add("EngineeringSciences");
        
        that.removeFromClicked("CIVE270TraditionalPlan2B3B4A");
- } 
-if (!MECE230TraditionalPlan2B3B4Aflag) { 
-       var MECE230TraditionalPlan2B3B4Aelement = document.getElementById("MECE230TraditionalPlan2B3B4A");
-       MECE230TraditionalPlan2B3B4Aelement.classList.remove("EngineeringSciences-highlighted");
-       MECE230TraditionalPlan2B3B4Aelement.classList.add("EngineeringSciences");
-       
-       that.removeFromClicked("MECE230TraditionalPlan2B3B4A");
  } 
 if (!ECE209TraditionalPlan2B3B4Aflag) { 
        var ECE209TraditionalPlan2B3B4Aelement = document.getElementById("ECE209TraditionalPlan2B3B4A");
@@ -9497,13 +9553,6 @@ if (!CIVE270TraditionalPlan2B3B4Bflag) {
        
        that.removeFromClicked("CIVE270TraditionalPlan2B3B4B");
  } 
-if (!MECE230TraditionalPlan2B3B4Bflag) { 
-       var MECE230TraditionalPlan2B3B4Belement = document.getElementById("MECE230TraditionalPlan2B3B4B");
-       MECE230TraditionalPlan2B3B4Belement.classList.remove("EngineeringSciences-highlighted");
-       MECE230TraditionalPlan2B3B4Belement.classList.add("EngineeringSciences");
-       
-       that.removeFromClicked("MECE230TraditionalPlan2B3B4B");
- } 
 if (!ECE209TraditionalPlan2B3B4Bflag) { 
        var ECE209TraditionalPlan2B3B4Belement = document.getElementById("ECE209TraditionalPlan2B3B4B");
        ECE209TraditionalPlan2B3B4Belement.classList.remove("EngineeringSciences-highlighted");
@@ -9631,13 +9680,6 @@ if (!CIVE270AlternatePlan3A4Aflag) {
        CIVE270AlternatePlan3A4Aelement.classList.add("EngineeringSciences");
        
        that.removeFromClicked("CIVE270AlternatePlan3A4A");
- } 
-if (!MECE230AlternatePlan3A4Aflag) { 
-       var MECE230AlternatePlan3A4Aelement = document.getElementById("MECE230AlternatePlan3A4A");
-       MECE230AlternatePlan3A4Aelement.classList.remove("EngineeringSciences-highlighted");
-       MECE230AlternatePlan3A4Aelement.classList.add("EngineeringSciences");
-       
-       that.removeFromClicked("MECE230AlternatePlan3A4A");
  } 
 if (!CHE243AlternatePlan3A4Aflag) { 
        var CHE243AlternatePlan3A4Aelement = document.getElementById("CHE243AlternatePlan3A4A");
@@ -9767,13 +9809,6 @@ if (!CIVE270CoopPlan13Aflag) {
        
        that.removeFromClicked("CIVE270CoopPlan13A");
  } 
-if (!MECE230CoopPlan13Aflag) { 
-       var MECE230CoopPlan13Aelement = document.getElementById("MECE230CoopPlan13A");
-       MECE230CoopPlan13Aelement.classList.remove("EngineeringSciences-highlighted");
-       MECE230CoopPlan13Aelement.classList.add("EngineeringSciences");
-       
-       that.removeFromClicked("MECE230CoopPlan13A");
- } 
 if (!CHE243CoopPlan13Aflag) { 
        var CHE243CoopPlan13Aelement = document.getElementById("CHE243CoopPlan13A");
        CHE243CoopPlan13Aelement.classList.remove("EngineeringSciences-highlighted");
@@ -9901,13 +9936,6 @@ if (!CIVE270CoopPlan13Bflag) {
        CIVE270CoopPlan13Belement.classList.add("EngineeringSciences");
        
        that.removeFromClicked("CIVE270CoopPlan13B");
- } 
-if (!MECE230CoopPlan13Bflag) { 
-       var MECE230CoopPlan13Belement = document.getElementById("MECE230CoopPlan13B");
-       MECE230CoopPlan13Belement.classList.remove("EngineeringSciences-highlighted");
-       MECE230CoopPlan13Belement.classList.add("EngineeringSciences");
-       
-       that.removeFromClicked("MECE230CoopPlan13B");
  } 
 if (!CHE243CoopPlan13Bflag) { 
        var CHE243CoopPlan13Belement = document.getElementById("CHE243CoopPlan13B");
@@ -10065,13 +10093,6 @@ if (!MATE202CoopPlan2flag) {
        
        that.removeFromClicked("MATE202CoopPlan2");
  } 
-if (!MECE230CoopPlan2flag) { 
-       var MECE230CoopPlan2element = document.getElementById("MECE230CoopPlan2");
-       MECE230CoopPlan2element.classList.remove("EngineeringSciences-highlighted");
-       MECE230CoopPlan2element.classList.add("EngineeringSciences");
-       
-       that.removeFromClicked("MECE230CoopPlan2");
- } 
 if (!MECE300CoopPlan2flag) { 
        var MECE300CoopPlan2element = document.getElementById("MECE300CoopPlan2");
        MECE300CoopPlan2element.classList.remove("EngineeringSciences-highlighted");
@@ -10200,13 +10221,6 @@ if (!MATE202CoopPlan3Biomedicalflag) {
        
        that.removeFromClicked("MATE202CoopPlan3Biomedical");
  } 
-if (!MECE230CoopPlan3Biomedicalflag) { 
-       var MECE230CoopPlan3Biomedicalelement = document.getElementById("MECE230CoopPlan3Biomedical");
-       MECE230CoopPlan3Biomedicalelement.classList.remove("EngineeringSciences-highlighted");
-       MECE230CoopPlan3Biomedicalelement.classList.add("EngineeringSciences");
-       
-       that.removeFromClicked("MECE230CoopPlan3Biomedical");
- } 
 if (!MECE340CoopPlan3Biomedicalflag) { 
        var MECE340CoopPlan3Biomedicalelement = document.getElementById("MECE340CoopPlan3Biomedical");
        MECE340CoopPlan3Biomedicalelement.classList.remove("EngineeringSciences-highlighted");
@@ -10313,13 +10327,6 @@ if (!CIVE270CoopPlan4flag) {
        CIVE270CoopPlan4element.classList.add("EngineeringSciences");
        
        that.removeFromClicked("CIVE270CoopPlan4");
- } 
-if (!MECE230CoopPlan4flag) { 
-       var MECE230CoopPlan4element = document.getElementById("MECE230CoopPlan4");
-       MECE230CoopPlan4element.classList.remove("EngineeringSciences-highlighted");
-       MECE230CoopPlan4element.classList.add("EngineeringSciences");
-       
-       that.removeFromClicked("MECE230CoopPlan4");
  } 
 if (!ECE209CoopPlan4flag) { 
        var ECE209CoopPlan4element = document.getElementById("ECE209CoopPlan4");
@@ -10469,13 +10476,6 @@ if (!CHE243MechatronicsPlanflag) {
        CHE243MechatronicsPlanelement.classList.add("EngineeringSciences");
        
        that.removeFromClicked("CHE243MechatronicsPlan");
- } 
-if (!MECE230MechatronicsPlanflag) { 
-       var MECE230MechatronicsPlanelement = document.getElementById("MECE230MechatronicsPlan");
-       MECE230MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
-       MECE230MechatronicsPlanelement.classList.add("EngineeringSciences");
-       
-       that.removeFromClicked("MECE230MechatronicsPlan");
  } 
 if (!MECE250MechatronicsPlanflag) { 
        var MECE250MechatronicsPlanelement = document.getElementById("MECE250MechatronicsPlan");
@@ -11933,17 +11933,17 @@ if (currentTime - MECE230TraditionalPlan2A3A4ATime <= 200) {
 MECE230TraditionalPlan2A3A4ATime = currentTime;
   var MECE230TraditionalPlan2A3A4Aelement = document.getElementById("MECE230TraditionalPlan2A3A4A");
  if (!MECE230TraditionalPlan2A3A4Aflag) {
-     if (MECE230TraditionalPlan2A3A4Aelement.classList.contains("EngineeringSciences-highlighted")) { 
-     MECE230TraditionalPlan2A3A4Aelement.classList.remove("EngineeringSciences-highlighted");
-     MECE230TraditionalPlan2A3A4Aelement.classList.add("EngineeringSciences");
+     if (MECE230TraditionalPlan2A3A4Aelement.classList.contains("NaturalSciences-highlighted")) { 
+     MECE230TraditionalPlan2A3A4Aelement.classList.remove("NaturalSciences-highlighted");
+     MECE230TraditionalPlan2A3A4Aelement.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine21());
       that.addLine(getLine22());
       that.addLine(getLine33());
       that.addLine(getLine37());
-     MECE230TraditionalPlan2A3A4Aelement.classList.remove("EngineeringSciences");
-     MECE230TraditionalPlan2A3A4Aelement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["MECE230TraditionalPlan2A3A4A", "EngineeringSciences"]);
+     MECE230TraditionalPlan2A3A4Aelement.classList.remove("NaturalSciences");
+     MECE230TraditionalPlan2A3A4Aelement.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["MECE230TraditionalPlan2A3A4A", "NaturalSciences"]);
       MECE230TraditionalPlan2A3A4Aflag=true
   }
  else {
@@ -11951,8 +11951,8 @@ MECE230TraditionalPlan2A3A4ATime = currentTime;
       that.removeLine(getLine22());
       that.removeLine(getLine33());
       that.removeLine(getLine37());
-     MECE230TraditionalPlan2A3A4Aelement.classList.remove("EngineeringSciences-highlighted");
-     MECE230TraditionalPlan2A3A4Aelement.classList.add("EngineeringSciences");
+     MECE230TraditionalPlan2A3A4Aelement.classList.remove("NaturalSciences-highlighted");
+     MECE230TraditionalPlan2A3A4Aelement.classList.add("NaturalSciences");
      that.removeFromClicked("MECE230TraditionalPlan2A3A4A");
       MECE230TraditionalPlan2A3A4Aflag=false
   }
@@ -14897,17 +14897,17 @@ if (currentTime - MECE230TraditionalPlan2A3A4BTime <= 200) {
 MECE230TraditionalPlan2A3A4BTime = currentTime;
   var MECE230TraditionalPlan2A3A4Belement = document.getElementById("MECE230TraditionalPlan2A3A4B");
  if (!MECE230TraditionalPlan2A3A4Bflag) {
-     if (MECE230TraditionalPlan2A3A4Belement.classList.contains("EngineeringSciences-highlighted")) { 
-     MECE230TraditionalPlan2A3A4Belement.classList.remove("EngineeringSciences-highlighted");
-     MECE230TraditionalPlan2A3A4Belement.classList.add("EngineeringSciences");
+     if (MECE230TraditionalPlan2A3A4Belement.classList.contains("NaturalSciences-highlighted")) { 
+     MECE230TraditionalPlan2A3A4Belement.classList.remove("NaturalSciences-highlighted");
+     MECE230TraditionalPlan2A3A4Belement.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine99());
       that.addLine(getLine100());
       that.addLine(getLine111());
       that.addLine(getLine115());
-     MECE230TraditionalPlan2A3A4Belement.classList.remove("EngineeringSciences");
-     MECE230TraditionalPlan2A3A4Belement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["MECE230TraditionalPlan2A3A4B", "EngineeringSciences"]);
+     MECE230TraditionalPlan2A3A4Belement.classList.remove("NaturalSciences");
+     MECE230TraditionalPlan2A3A4Belement.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["MECE230TraditionalPlan2A3A4B", "NaturalSciences"]);
       MECE230TraditionalPlan2A3A4Bflag=true
   }
  else {
@@ -14915,8 +14915,8 @@ MECE230TraditionalPlan2A3A4BTime = currentTime;
       that.removeLine(getLine100());
       that.removeLine(getLine111());
       that.removeLine(getLine115());
-     MECE230TraditionalPlan2A3A4Belement.classList.remove("EngineeringSciences-highlighted");
-     MECE230TraditionalPlan2A3A4Belement.classList.add("EngineeringSciences");
+     MECE230TraditionalPlan2A3A4Belement.classList.remove("NaturalSciences-highlighted");
+     MECE230TraditionalPlan2A3A4Belement.classList.add("NaturalSciences");
      that.removeFromClicked("MECE230TraditionalPlan2A3A4B");
       MECE230TraditionalPlan2A3A4Bflag=false
   }
@@ -17861,17 +17861,17 @@ if (currentTime - MECE230TraditionalPlan2A3B4ATime <= 200) {
 MECE230TraditionalPlan2A3B4ATime = currentTime;
   var MECE230TraditionalPlan2A3B4Aelement = document.getElementById("MECE230TraditionalPlan2A3B4A");
  if (!MECE230TraditionalPlan2A3B4Aflag) {
-     if (MECE230TraditionalPlan2A3B4Aelement.classList.contains("EngineeringSciences-highlighted")) { 
-     MECE230TraditionalPlan2A3B4Aelement.classList.remove("EngineeringSciences-highlighted");
-     MECE230TraditionalPlan2A3B4Aelement.classList.add("EngineeringSciences");
+     if (MECE230TraditionalPlan2A3B4Aelement.classList.contains("NaturalSciences-highlighted")) { 
+     MECE230TraditionalPlan2A3B4Aelement.classList.remove("NaturalSciences-highlighted");
+     MECE230TraditionalPlan2A3B4Aelement.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine177());
       that.addLine(getLine178());
       that.addLine(getLine198());
       that.addLine(getLine202());
-     MECE230TraditionalPlan2A3B4Aelement.classList.remove("EngineeringSciences");
-     MECE230TraditionalPlan2A3B4Aelement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["MECE230TraditionalPlan2A3B4A", "EngineeringSciences"]);
+     MECE230TraditionalPlan2A3B4Aelement.classList.remove("NaturalSciences");
+     MECE230TraditionalPlan2A3B4Aelement.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["MECE230TraditionalPlan2A3B4A", "NaturalSciences"]);
       MECE230TraditionalPlan2A3B4Aflag=true
   }
  else {
@@ -17879,8 +17879,8 @@ MECE230TraditionalPlan2A3B4ATime = currentTime;
       that.removeLine(getLine178());
       that.removeLine(getLine198());
       that.removeLine(getLine202());
-     MECE230TraditionalPlan2A3B4Aelement.classList.remove("EngineeringSciences-highlighted");
-     MECE230TraditionalPlan2A3B4Aelement.classList.add("EngineeringSciences");
+     MECE230TraditionalPlan2A3B4Aelement.classList.remove("NaturalSciences-highlighted");
+     MECE230TraditionalPlan2A3B4Aelement.classList.add("NaturalSciences");
      that.removeFromClicked("MECE230TraditionalPlan2A3B4A");
       MECE230TraditionalPlan2A3B4Aflag=false
   }
@@ -20825,17 +20825,17 @@ if (currentTime - MECE230TraditionalPlan2A3B4BTime <= 200) {
 MECE230TraditionalPlan2A3B4BTime = currentTime;
   var MECE230TraditionalPlan2A3B4Belement = document.getElementById("MECE230TraditionalPlan2A3B4B");
  if (!MECE230TraditionalPlan2A3B4Bflag) {
-     if (MECE230TraditionalPlan2A3B4Belement.classList.contains("EngineeringSciences-highlighted")) { 
-     MECE230TraditionalPlan2A3B4Belement.classList.remove("EngineeringSciences-highlighted");
-     MECE230TraditionalPlan2A3B4Belement.classList.add("EngineeringSciences");
+     if (MECE230TraditionalPlan2A3B4Belement.classList.contains("NaturalSciences-highlighted")) { 
+     MECE230TraditionalPlan2A3B4Belement.classList.remove("NaturalSciences-highlighted");
+     MECE230TraditionalPlan2A3B4Belement.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine255());
       that.addLine(getLine256());
       that.addLine(getLine276());
       that.addLine(getLine280());
-     MECE230TraditionalPlan2A3B4Belement.classList.remove("EngineeringSciences");
-     MECE230TraditionalPlan2A3B4Belement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["MECE230TraditionalPlan2A3B4B", "EngineeringSciences"]);
+     MECE230TraditionalPlan2A3B4Belement.classList.remove("NaturalSciences");
+     MECE230TraditionalPlan2A3B4Belement.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["MECE230TraditionalPlan2A3B4B", "NaturalSciences"]);
       MECE230TraditionalPlan2A3B4Bflag=true
   }
  else {
@@ -20843,8 +20843,8 @@ MECE230TraditionalPlan2A3B4BTime = currentTime;
       that.removeLine(getLine256());
       that.removeLine(getLine276());
       that.removeLine(getLine280());
-     MECE230TraditionalPlan2A3B4Belement.classList.remove("EngineeringSciences-highlighted");
-     MECE230TraditionalPlan2A3B4Belement.classList.add("EngineeringSciences");
+     MECE230TraditionalPlan2A3B4Belement.classList.remove("NaturalSciences-highlighted");
+     MECE230TraditionalPlan2A3B4Belement.classList.add("NaturalSciences");
      that.removeFromClicked("MECE230TraditionalPlan2A3B4B");
       MECE230TraditionalPlan2A3B4Bflag=false
   }
@@ -23603,17 +23603,17 @@ if (currentTime - MECE230TraditionalPlan2B3A4ATime <= 200) {
 MECE230TraditionalPlan2B3A4ATime = currentTime;
   var MECE230TraditionalPlan2B3A4Aelement = document.getElementById("MECE230TraditionalPlan2B3A4A");
  if (!MECE230TraditionalPlan2B3A4Aflag) {
-     if (MECE230TraditionalPlan2B3A4Aelement.classList.contains("EngineeringSciences-highlighted")) { 
-     MECE230TraditionalPlan2B3A4Aelement.classList.remove("EngineeringSciences-highlighted");
-     MECE230TraditionalPlan2B3A4Aelement.classList.add("EngineeringSciences");
+     if (MECE230TraditionalPlan2B3A4Aelement.classList.contains("NaturalSciences-highlighted")) { 
+     MECE230TraditionalPlan2B3A4Aelement.classList.remove("NaturalSciences-highlighted");
+     MECE230TraditionalPlan2B3A4Aelement.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine327());
       that.addLine(getLine328());
       that.addLine(getLine345());
       that.addLine(getLine349());
-     MECE230TraditionalPlan2B3A4Aelement.classList.remove("EngineeringSciences");
-     MECE230TraditionalPlan2B3A4Aelement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["MECE230TraditionalPlan2B3A4A", "EngineeringSciences"]);
+     MECE230TraditionalPlan2B3A4Aelement.classList.remove("NaturalSciences");
+     MECE230TraditionalPlan2B3A4Aelement.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["MECE230TraditionalPlan2B3A4A", "NaturalSciences"]);
       MECE230TraditionalPlan2B3A4Aflag=true
   }
  else {
@@ -23621,8 +23621,8 @@ MECE230TraditionalPlan2B3A4ATime = currentTime;
       that.removeLine(getLine328());
       that.removeLine(getLine345());
       that.removeLine(getLine349());
-     MECE230TraditionalPlan2B3A4Aelement.classList.remove("EngineeringSciences-highlighted");
-     MECE230TraditionalPlan2B3A4Aelement.classList.add("EngineeringSciences");
+     MECE230TraditionalPlan2B3A4Aelement.classList.remove("NaturalSciences-highlighted");
+     MECE230TraditionalPlan2B3A4Aelement.classList.add("NaturalSciences");
      that.removeFromClicked("MECE230TraditionalPlan2B3A4A");
       MECE230TraditionalPlan2B3A4Aflag=false
   }
@@ -26567,17 +26567,17 @@ if (currentTime - MECE230TraditionalPlan2B3A4BTime <= 200) {
 MECE230TraditionalPlan2B3A4BTime = currentTime;
   var MECE230TraditionalPlan2B3A4Belement = document.getElementById("MECE230TraditionalPlan2B3A4B");
  if (!MECE230TraditionalPlan2B3A4Bflag) {
-     if (MECE230TraditionalPlan2B3A4Belement.classList.contains("EngineeringSciences-highlighted")) { 
-     MECE230TraditionalPlan2B3A4Belement.classList.remove("EngineeringSciences-highlighted");
-     MECE230TraditionalPlan2B3A4Belement.classList.add("EngineeringSciences");
+     if (MECE230TraditionalPlan2B3A4Belement.classList.contains("NaturalSciences-highlighted")) { 
+     MECE230TraditionalPlan2B3A4Belement.classList.remove("NaturalSciences-highlighted");
+     MECE230TraditionalPlan2B3A4Belement.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine405());
       that.addLine(getLine406());
       that.addLine(getLine423());
       that.addLine(getLine427());
-     MECE230TraditionalPlan2B3A4Belement.classList.remove("EngineeringSciences");
-     MECE230TraditionalPlan2B3A4Belement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["MECE230TraditionalPlan2B3A4B", "EngineeringSciences"]);
+     MECE230TraditionalPlan2B3A4Belement.classList.remove("NaturalSciences");
+     MECE230TraditionalPlan2B3A4Belement.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["MECE230TraditionalPlan2B3A4B", "NaturalSciences"]);
       MECE230TraditionalPlan2B3A4Bflag=true
   }
  else {
@@ -26585,8 +26585,8 @@ MECE230TraditionalPlan2B3A4BTime = currentTime;
       that.removeLine(getLine406());
       that.removeLine(getLine423());
       that.removeLine(getLine427());
-     MECE230TraditionalPlan2B3A4Belement.classList.remove("EngineeringSciences-highlighted");
-     MECE230TraditionalPlan2B3A4Belement.classList.add("EngineeringSciences");
+     MECE230TraditionalPlan2B3A4Belement.classList.remove("NaturalSciences-highlighted");
+     MECE230TraditionalPlan2B3A4Belement.classList.add("NaturalSciences");
      that.removeFromClicked("MECE230TraditionalPlan2B3A4B");
       MECE230TraditionalPlan2B3A4Bflag=false
   }
@@ -29531,17 +29531,17 @@ if (currentTime - MECE230TraditionalPlan2B3B4ATime <= 200) {
 MECE230TraditionalPlan2B3B4ATime = currentTime;
   var MECE230TraditionalPlan2B3B4Aelement = document.getElementById("MECE230TraditionalPlan2B3B4A");
  if (!MECE230TraditionalPlan2B3B4Aflag) {
-     if (MECE230TraditionalPlan2B3B4Aelement.classList.contains("EngineeringSciences-highlighted")) { 
-     MECE230TraditionalPlan2B3B4Aelement.classList.remove("EngineeringSciences-highlighted");
-     MECE230TraditionalPlan2B3B4Aelement.classList.add("EngineeringSciences");
+     if (MECE230TraditionalPlan2B3B4Aelement.classList.contains("NaturalSciences-highlighted")) { 
+     MECE230TraditionalPlan2B3B4Aelement.classList.remove("NaturalSciences-highlighted");
+     MECE230TraditionalPlan2B3B4Aelement.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine483());
       that.addLine(getLine484());
       that.addLine(getLine510());
       that.addLine(getLine514());
-     MECE230TraditionalPlan2B3B4Aelement.classList.remove("EngineeringSciences");
-     MECE230TraditionalPlan2B3B4Aelement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["MECE230TraditionalPlan2B3B4A", "EngineeringSciences"]);
+     MECE230TraditionalPlan2B3B4Aelement.classList.remove("NaturalSciences");
+     MECE230TraditionalPlan2B3B4Aelement.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["MECE230TraditionalPlan2B3B4A", "NaturalSciences"]);
       MECE230TraditionalPlan2B3B4Aflag=true
   }
  else {
@@ -29549,8 +29549,8 @@ MECE230TraditionalPlan2B3B4ATime = currentTime;
       that.removeLine(getLine484());
       that.removeLine(getLine510());
       that.removeLine(getLine514());
-     MECE230TraditionalPlan2B3B4Aelement.classList.remove("EngineeringSciences-highlighted");
-     MECE230TraditionalPlan2B3B4Aelement.classList.add("EngineeringSciences");
+     MECE230TraditionalPlan2B3B4Aelement.classList.remove("NaturalSciences-highlighted");
+     MECE230TraditionalPlan2B3B4Aelement.classList.add("NaturalSciences");
      that.removeFromClicked("MECE230TraditionalPlan2B3B4A");
       MECE230TraditionalPlan2B3B4Aflag=false
   }
@@ -32495,17 +32495,17 @@ if (currentTime - MECE230TraditionalPlan2B3B4BTime <= 200) {
 MECE230TraditionalPlan2B3B4BTime = currentTime;
   var MECE230TraditionalPlan2B3B4Belement = document.getElementById("MECE230TraditionalPlan2B3B4B");
  if (!MECE230TraditionalPlan2B3B4Bflag) {
-     if (MECE230TraditionalPlan2B3B4Belement.classList.contains("EngineeringSciences-highlighted")) { 
-     MECE230TraditionalPlan2B3B4Belement.classList.remove("EngineeringSciences-highlighted");
-     MECE230TraditionalPlan2B3B4Belement.classList.add("EngineeringSciences");
+     if (MECE230TraditionalPlan2B3B4Belement.classList.contains("NaturalSciences-highlighted")) { 
+     MECE230TraditionalPlan2B3B4Belement.classList.remove("NaturalSciences-highlighted");
+     MECE230TraditionalPlan2B3B4Belement.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine561());
       that.addLine(getLine562());
       that.addLine(getLine588());
       that.addLine(getLine592());
-     MECE230TraditionalPlan2B3B4Belement.classList.remove("EngineeringSciences");
-     MECE230TraditionalPlan2B3B4Belement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["MECE230TraditionalPlan2B3B4B", "EngineeringSciences"]);
+     MECE230TraditionalPlan2B3B4Belement.classList.remove("NaturalSciences");
+     MECE230TraditionalPlan2B3B4Belement.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["MECE230TraditionalPlan2B3B4B", "NaturalSciences"]);
       MECE230TraditionalPlan2B3B4Bflag=true
   }
  else {
@@ -32513,8 +32513,8 @@ MECE230TraditionalPlan2B3B4BTime = currentTime;
       that.removeLine(getLine562());
       that.removeLine(getLine588());
       that.removeLine(getLine592());
-     MECE230TraditionalPlan2B3B4Belement.classList.remove("EngineeringSciences-highlighted");
-     MECE230TraditionalPlan2B3B4Belement.classList.add("EngineeringSciences");
+     MECE230TraditionalPlan2B3B4Belement.classList.remove("NaturalSciences-highlighted");
+     MECE230TraditionalPlan2B3B4Belement.classList.add("NaturalSciences");
      that.removeFromClicked("MECE230TraditionalPlan2B3B4B");
       MECE230TraditionalPlan2B3B4Bflag=false
   }
@@ -35590,17 +35590,17 @@ if (currentTime - MECE230AlternatePlan3A4ATime <= 200) {
 MECE230AlternatePlan3A4ATime = currentTime;
   var MECE230AlternatePlan3A4Aelement = document.getElementById("MECE230AlternatePlan3A4A");
  if (!MECE230AlternatePlan3A4Aflag) {
-     if (MECE230AlternatePlan3A4Aelement.classList.contains("EngineeringSciences-highlighted")) { 
-     MECE230AlternatePlan3A4Aelement.classList.remove("EngineeringSciences-highlighted");
-     MECE230AlternatePlan3A4Aelement.classList.add("EngineeringSciences");
+     if (MECE230AlternatePlan3A4Aelement.classList.contains("NaturalSciences-highlighted")) { 
+     MECE230AlternatePlan3A4Aelement.classList.remove("NaturalSciences-highlighted");
+     MECE230AlternatePlan3A4Aelement.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine638());
       that.addLine(getLine639());
       that.addLine(getLine657());
       that.addLine(getLine661());
-     MECE230AlternatePlan3A4Aelement.classList.remove("EngineeringSciences");
-     MECE230AlternatePlan3A4Aelement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["MECE230AlternatePlan3A4A", "EngineeringSciences"]);
+     MECE230AlternatePlan3A4Aelement.classList.remove("NaturalSciences");
+     MECE230AlternatePlan3A4Aelement.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["MECE230AlternatePlan3A4A", "NaturalSciences"]);
       MECE230AlternatePlan3A4Aflag=true
   }
  else {
@@ -35608,8 +35608,8 @@ MECE230AlternatePlan3A4ATime = currentTime;
       that.removeLine(getLine639());
       that.removeLine(getLine657());
       that.removeLine(getLine661());
-     MECE230AlternatePlan3A4Aelement.classList.remove("EngineeringSciences-highlighted");
-     MECE230AlternatePlan3A4Aelement.classList.add("EngineeringSciences");
+     MECE230AlternatePlan3A4Aelement.classList.remove("NaturalSciences-highlighted");
+     MECE230AlternatePlan3A4Aelement.classList.add("NaturalSciences");
      that.removeFromClicked("MECE230AlternatePlan3A4A");
       MECE230AlternatePlan3A4Aflag=false
   }
@@ -38437,17 +38437,17 @@ if (currentTime - MECE230CoopPlan13ATime <= 200) {
 MECE230CoopPlan13ATime = currentTime;
   var MECE230CoopPlan13Aelement = document.getElementById("MECE230CoopPlan13A");
  if (!MECE230CoopPlan13Aflag) {
-     if (MECE230CoopPlan13Aelement.classList.contains("EngineeringSciences-highlighted")) { 
-     MECE230CoopPlan13Aelement.classList.remove("EngineeringSciences-highlighted");
-     MECE230CoopPlan13Aelement.classList.add("EngineeringSciences");
+     if (MECE230CoopPlan13Aelement.classList.contains("NaturalSciences-highlighted")) { 
+     MECE230CoopPlan13Aelement.classList.remove("NaturalSciences-highlighted");
+     MECE230CoopPlan13Aelement.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine715());
       that.addLine(getLine716());
       that.addLine(getLine737());
       that.addLine(getLine741());
-     MECE230CoopPlan13Aelement.classList.remove("EngineeringSciences");
-     MECE230CoopPlan13Aelement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["MECE230CoopPlan13A", "EngineeringSciences"]);
+     MECE230CoopPlan13Aelement.classList.remove("NaturalSciences");
+     MECE230CoopPlan13Aelement.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["MECE230CoopPlan13A", "NaturalSciences"]);
       MECE230CoopPlan13Aflag=true
   }
  else {
@@ -38455,8 +38455,8 @@ MECE230CoopPlan13ATime = currentTime;
       that.removeLine(getLine716());
       that.removeLine(getLine737());
       that.removeLine(getLine741());
-     MECE230CoopPlan13Aelement.classList.remove("EngineeringSciences-highlighted");
-     MECE230CoopPlan13Aelement.classList.add("EngineeringSciences");
+     MECE230CoopPlan13Aelement.classList.remove("NaturalSciences-highlighted");
+     MECE230CoopPlan13Aelement.classList.add("NaturalSciences");
      that.removeFromClicked("MECE230CoopPlan13A");
       MECE230CoopPlan13Aflag=false
   }
@@ -41727,17 +41727,17 @@ if (currentTime - MECE230CoopPlan13BTime <= 200) {
 MECE230CoopPlan13BTime = currentTime;
   var MECE230CoopPlan13Belement = document.getElementById("MECE230CoopPlan13B");
  if (!MECE230CoopPlan13Bflag) {
-     if (MECE230CoopPlan13Belement.classList.contains("EngineeringSciences-highlighted")) { 
-     MECE230CoopPlan13Belement.classList.remove("EngineeringSciences-highlighted");
-     MECE230CoopPlan13Belement.classList.add("EngineeringSciences");
+     if (MECE230CoopPlan13Belement.classList.contains("NaturalSciences-highlighted")) { 
+     MECE230CoopPlan13Belement.classList.remove("NaturalSciences-highlighted");
+     MECE230CoopPlan13Belement.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine798());
       that.addLine(getLine799());
       that.addLine(getLine831());
       that.addLine(getLine835());
-     MECE230CoopPlan13Belement.classList.remove("EngineeringSciences");
-     MECE230CoopPlan13Belement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["MECE230CoopPlan13B", "EngineeringSciences"]);
+     MECE230CoopPlan13Belement.classList.remove("NaturalSciences");
+     MECE230CoopPlan13Belement.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["MECE230CoopPlan13B", "NaturalSciences"]);
       MECE230CoopPlan13Bflag=true
   }
  else {
@@ -41745,8 +41745,8 @@ MECE230CoopPlan13BTime = currentTime;
       that.removeLine(getLine799());
       that.removeLine(getLine831());
       that.removeLine(getLine835());
-     MECE230CoopPlan13Belement.classList.remove("EngineeringSciences-highlighted");
-     MECE230CoopPlan13Belement.classList.add("EngineeringSciences");
+     MECE230CoopPlan13Belement.classList.remove("NaturalSciences-highlighted");
+     MECE230CoopPlan13Belement.classList.add("NaturalSciences");
      that.removeFromClicked("MECE230CoopPlan13B");
       MECE230CoopPlan13Bflag=false
   }
@@ -45263,17 +45263,17 @@ if (currentTime - MECE230CoopPlan2Time <= 200) {
 MECE230CoopPlan2Time = currentTime;
   var MECE230CoopPlan2element = document.getElementById("MECE230CoopPlan2");
  if (!MECE230CoopPlan2flag) {
-     if (MECE230CoopPlan2element.classList.contains("EngineeringSciences-highlighted")) { 
-     MECE230CoopPlan2element.classList.remove("EngineeringSciences-highlighted");
-     MECE230CoopPlan2element.classList.add("EngineeringSciences");
+     if (MECE230CoopPlan2element.classList.contains("NaturalSciences-highlighted")) { 
+     MECE230CoopPlan2element.classList.remove("NaturalSciences-highlighted");
+     MECE230CoopPlan2element.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine890());
       that.addLine(getLine891());
       that.addLine(getLine902());
       that.addLine(getLine906());
-     MECE230CoopPlan2element.classList.remove("EngineeringSciences");
-     MECE230CoopPlan2element.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["MECE230CoopPlan2", "EngineeringSciences"]);
+     MECE230CoopPlan2element.classList.remove("NaturalSciences");
+     MECE230CoopPlan2element.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["MECE230CoopPlan2", "NaturalSciences"]);
       MECE230CoopPlan2flag=true
   }
  else {
@@ -45281,8 +45281,8 @@ MECE230CoopPlan2Time = currentTime;
       that.removeLine(getLine891());
       that.removeLine(getLine902());
       that.removeLine(getLine906());
-     MECE230CoopPlan2element.classList.remove("EngineeringSciences-highlighted");
-     MECE230CoopPlan2element.classList.add("EngineeringSciences");
+     MECE230CoopPlan2element.classList.remove("NaturalSciences-highlighted");
+     MECE230CoopPlan2element.classList.add("NaturalSciences");
      that.removeFromClicked("MECE230CoopPlan2");
       MECE230CoopPlan2flag=false
   }
@@ -48531,17 +48531,17 @@ if (currentTime - MECE230CoopPlan3BiomedicalTime <= 200) {
 MECE230CoopPlan3BiomedicalTime = currentTime;
   var MECE230CoopPlan3Biomedicalelement = document.getElementById("MECE230CoopPlan3Biomedical");
  if (!MECE230CoopPlan3Biomedicalflag) {
-     if (MECE230CoopPlan3Biomedicalelement.classList.contains("EngineeringSciences-highlighted")) { 
-     MECE230CoopPlan3Biomedicalelement.classList.remove("EngineeringSciences-highlighted");
-     MECE230CoopPlan3Biomedicalelement.classList.add("EngineeringSciences");
+     if (MECE230CoopPlan3Biomedicalelement.classList.contains("NaturalSciences-highlighted")) { 
+     MECE230CoopPlan3Biomedicalelement.classList.remove("NaturalSciences-highlighted");
+     MECE230CoopPlan3Biomedicalelement.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine972());
       that.addLine(getLine973());
       that.addLine(getLine994());
       that.addLine(getLine998());
-     MECE230CoopPlan3Biomedicalelement.classList.remove("EngineeringSciences");
-     MECE230CoopPlan3Biomedicalelement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["MECE230CoopPlan3Biomedical", "EngineeringSciences"]);
+     MECE230CoopPlan3Biomedicalelement.classList.remove("NaturalSciences");
+     MECE230CoopPlan3Biomedicalelement.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["MECE230CoopPlan3Biomedical", "NaturalSciences"]);
       MECE230CoopPlan3Biomedicalflag=true
   }
  else {
@@ -48549,8 +48549,8 @@ MECE230CoopPlan3BiomedicalTime = currentTime;
       that.removeLine(getLine973());
       that.removeLine(getLine994());
       that.removeLine(getLine998());
-     MECE230CoopPlan3Biomedicalelement.classList.remove("EngineeringSciences-highlighted");
-     MECE230CoopPlan3Biomedicalelement.classList.add("EngineeringSciences");
+     MECE230CoopPlan3Biomedicalelement.classList.remove("NaturalSciences-highlighted");
+     MECE230CoopPlan3Biomedicalelement.classList.add("NaturalSciences");
      that.removeFromClicked("MECE230CoopPlan3Biomedical");
       MECE230CoopPlan3Biomedicalflag=false
   }
@@ -51801,17 +51801,17 @@ if (currentTime - MECE230CoopPlan4Time <= 200) {
 MECE230CoopPlan4Time = currentTime;
   var MECE230CoopPlan4element = document.getElementById("MECE230CoopPlan4");
  if (!MECE230CoopPlan4flag) {
-     if (MECE230CoopPlan4element.classList.contains("EngineeringSciences-highlighted")) { 
-     MECE230CoopPlan4element.classList.remove("EngineeringSciences-highlighted");
-     MECE230CoopPlan4element.classList.add("EngineeringSciences");
+     if (MECE230CoopPlan4element.classList.contains("NaturalSciences-highlighted")) { 
+     MECE230CoopPlan4element.classList.remove("NaturalSciences-highlighted");
+     MECE230CoopPlan4element.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine1054());
       that.addLine(getLine1055());
       that.addLine(getLine1072());
       that.addLine(getLine1076());
-     MECE230CoopPlan4element.classList.remove("EngineeringSciences");
-     MECE230CoopPlan4element.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["MECE230CoopPlan4", "EngineeringSciences"]);
+     MECE230CoopPlan4element.classList.remove("NaturalSciences");
+     MECE230CoopPlan4element.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["MECE230CoopPlan4", "NaturalSciences"]);
       MECE230CoopPlan4flag=true
   }
  else {
@@ -51819,8 +51819,8 @@ MECE230CoopPlan4Time = currentTime;
       that.removeLine(getLine1055());
       that.removeLine(getLine1072());
       that.removeLine(getLine1076());
-     MECE230CoopPlan4element.classList.remove("EngineeringSciences-highlighted");
-     MECE230CoopPlan4element.classList.add("EngineeringSciences");
+     MECE230CoopPlan4element.classList.remove("NaturalSciences-highlighted");
+     MECE230CoopPlan4element.classList.add("NaturalSciences");
      that.removeFromClicked("MECE230CoopPlan4");
       MECE230CoopPlan4flag=false
   }
@@ -55230,22 +55230,22 @@ if (currentTime - MECE230MechatronicsPlanTime <= 200) {
 MECE230MechatronicsPlanTime = currentTime;
   var MECE230MechatronicsPlanelement = document.getElementById("MECE230MechatronicsPlan");
  if (!MECE230MechatronicsPlanflag) {
-     if (MECE230MechatronicsPlanelement.classList.contains("EngineeringSciences-highlighted")) { 
-     MECE230MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
-     MECE230MechatronicsPlanelement.classList.add("EngineeringSciences");
+     if (MECE230MechatronicsPlanelement.classList.contains("NaturalSciences-highlighted")) { 
+     MECE230MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+     MECE230MechatronicsPlanelement.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine1142());
       that.addLine(getLine1143());
-     MECE230MechatronicsPlanelement.classList.remove("EngineeringSciences");
-     MECE230MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["MECE230MechatronicsPlan", "EngineeringSciences"]);
+     MECE230MechatronicsPlanelement.classList.remove("NaturalSciences");
+     MECE230MechatronicsPlanelement.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["MECE230MechatronicsPlan", "NaturalSciences"]);
       MECE230MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine1142());
       that.removeLine(getLine1143());
-     MECE230MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
-     MECE230MechatronicsPlanelement.classList.add("EngineeringSciences");
+     MECE230MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+     MECE230MechatronicsPlanelement.classList.add("NaturalSciences");
      that.removeFromClicked("MECE230MechatronicsPlan");
       MECE230MechatronicsPlanflag=false
   }
