@@ -129,7 +129,7 @@ def generateDisableSwitchStatement(sequenceDict, controller):
 def generateEnableSwitchStatement(sequenceDict, controller):
 
     categoriesDict = sortIntoCategories(sequenceDict)  # sort courses into categories
-    findLegendButtons(categoriesDict, controller)  # find legend buttons in the document, store them in a list
+    findLegendButtons(categoriesDict, sequenceDict, controller)  # find legend buttons in the document, store them in a list
 
     formattedFunctionStatement = """this.{functionName} = function(plan) {{
   switch(plan) {{\n"""
@@ -191,8 +191,9 @@ def generateEnableSwitchStatement(sequenceDict, controller):
 #   categoriesDict - dict storing course objects
 #       key - category name (eg: MATH)
 #       value - dict with key as plan name, value as course object
+#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   controller - file handle for controller.js file
-def findLegendButtons(categoriesDict, controller):
+def findLegendButtons(categoriesDict, sequenceDict, controller):
     # find the button in the doc
     formattedbtnStatement = """  var currbtn = document.getElementById("{categoryName}");\n"""
     # push the button element to a list
@@ -211,8 +212,8 @@ def findLegendButtons(categoriesDict, controller):
             # not an elective
             controller.write(formattedbtnStatement.format(categoryName=category))
 
-        for plan in categoriesDict[category]:
-            controller.write(formattedpushbtnStatement.format(planName=plan))
+        for plan in sequenceDict:
+            controller.write(formattedpushbtnStatement.format(planName=cleaner.cleanString(plan)))
 
 # Function that generates the switch statement and function addLine
 # Parameters:
