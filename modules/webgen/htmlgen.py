@@ -7,19 +7,19 @@
 
 # Dependencies: cleaner, linegen, html
 
-from numpy import number
 from .. import cleaner
 from . import linegen
 import html
 
 def findIntitalValuesofCourseGroups(courseGroupDict, courseGroupList):
     intitalSelectionGroups = list(courseGroupDict.values())[0]
+    print(intitalSelectionGroups)
     intitalCourseGroupVals = {}
     for element in courseGroupList:
         if element not in intitalSelectionGroups:
             intitalCourseGroupVals[element] = ""
         else:
-            intitalCourseGroupVals[element] = str(element) + "A"
+            intitalCourseGroupVals[element] = intitalSelectionGroups[element][0]
     return intitalCourseGroupVals
 
 def findListofAllCourseGroups(courseGroupDict):
@@ -31,31 +31,38 @@ def findListofAllCourseGroups(courseGroupDict):
     return currentList
 
 def extractPlanCourseGroupDict(sequnceDict):
-    planCourseGroupDict = {}
+    courseGroupDict = {}
     for plan in sequnceDict:
         index = plan.find("{")
         if index != -1:
             shortenedPlanName = plan[0:index].strip()
         else:
             shortenedPlanName = plan
-        if shortenedPlanName in planCourseGroupDict:
+        if shortenedPlanName not in courseGroupDict:
+            courseGroupDict[shortenedPlanName] = {}
+        courseGroupList = extractCourseGroupListFromString(plan)
+        if courseGroupList == []:
             continue
-        courseGroupList = extractListofCourseGroups(plan)
-        planCourseGroupDict[shortenedPlanName] = courseGroupList
-    return planCourseGroupDict
-            
+        planCourseGroupsDict = courseGroupDict[shortenedPlanName]
+        courseGroupDict[shortenedPlanName] = appendCourseGroups(planCourseGroupsDict,courseGroupList)
+    return courseGroupDict
 
-def extractListofCourseGroups(planName):
-    courseGroupList = []
+def appendCourseGroups(planCourseGroupsDict, courseGroupList):
+    for group in courseGroupList:
+        numOfGroup = int(''.join(filter(lambda s: (s.isdigit()), group)))
+        if numOfGroup not in planCourseGroupsDict:
+            planCourseGroupsDict[numOfGroup] = []
+        if group not in planCourseGroupsDict[numOfGroup]:
+            planCourseGroupsDict[numOfGroup].append(group)
+    return planCourseGroupsDict
+
+def extractCourseGroupListFromString(planName):
     index = planName.find("{")
     if index == -1:
-        return courseGroupList
+        return []
     endIndex = planName.find("}")
-    courseGroupString = planName[index+1:endIndex]
-    for char in courseGroupString:
-        if char.isdigit() and int(char) not in courseGroupList:
-            courseGroupList.append(int(char))
-    return courseGroupList
+    return planName[index+1:endIndex].split()
+            
 
 # TO DO: Move the above functions to a better module
 

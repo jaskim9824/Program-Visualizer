@@ -70,8 +70,11 @@ def main():
 
             courseGroupDict = htmlgen.extractPlanCourseGroupDict(sequenceDict)
             courseGroupList = htmlgen.findListofAllCourseGroups(courseGroupDict)
+            # print(courseGroupDict)
+            # print(courseGroupList)
             intitalCourseGroupVals = htmlgen.findIntitalValuesofCourseGroups(courseGroupDict, courseGroupList)
-            print(intitalCourseGroupVals)
+
+            # print(intitalCourseGroupVals)
 
             # generating intital JS based on the number and names of plans
             print("Intialzing JS files....")
