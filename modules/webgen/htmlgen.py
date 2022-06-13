@@ -13,7 +13,7 @@ import html
 
 def findIntitalValuesofCourseGroups(courseGroupDict, courseGroupList):
     intitalSelectionGroups = list(courseGroupDict.values())[0]
-    print(intitalSelectionGroups)
+    # print(intitalSelectionGroups)
     intitalCourseGroupVals = {}
     for element in courseGroupList:
         if element not in intitalSelectionGroups:
@@ -102,6 +102,34 @@ def placeRadioInputs(formTag, courseGroupDict, soup):
         formTag.append(labelTag)
         breakTag = soup.new_tag("br")
         formTag.append(breakTag)
+
+def placeCourseGroupRadioInputs(courseGroupSelectTag, soup, courseGroupDict):
+    for plan in courseGroupDict:
+        planCourseGroupsTag = soup.new_tag("div", attrs={"id":cleaner.cleanString(plan),
+                                                         "ng-switch-when":cleaner.cleanString(plan)})
+        placeCourseGroupRadioInputsForPlan(planCourseGroupsTag, soup, courseGroupDict[plan])
+        courseGroupSelectTag.append(planCourseGroupsTag)
+
+def placeCourseGroupRadioInputsForPlan(planCourseGroupsTag, soup, planCourseGroupDict):
+    for subplan in planCourseGroupDict:
+        formTag = soup.new_tag("form", class_="select")
+        placeCourseGroupRadioInputsForSubPlan(formTag, soup, planCourseGroupDict[subplan], subplan)
+        planCourseGroupsTag.append(formTag)
+
+def placeCourseGroupRadioInputsForSubPlan(subPlanTag, soup, subPlanOptionList, subplan):
+    formattedSubPlanVar = "field{number}.group{number}"
+    for option in subPlanOptionList:
+        inputTag = soup.new_tag("input", attrs={"type":"radio",
+                                                "ng-model":formattedSubPlanVar.format(number=subplan),
+                                                "value":option,
+                                                "ng-change":"globalSubGroupChange()"})
+        labelTag = soup.new_tag("label", attrs={"for":option})
+        labelTag.append(option)
+        subPlanTag.append(inputTag)
+        subPlanTag.append(labelTag)
+        breakTag = soup.new_tag("br")
+        subPlanTag.append(breakTag)
+                    
 
 # Places the legend for the categories of courses (math, basic sciences, design, etc.)
 # Pulls the categories and colors from sequenceDict, which has these values as two of

@@ -90,31 +90,37 @@ def main():
             #locating main div, this is where all the html will be written
             mainTag = soup.body.find("div", id="main")
 
-            # locating form tag
-            formTag = mainTag.find("form")
-
-            # locating legend tag
-            legendTag = mainTag.find("div", class_="legend")
-
-            # locating display tag, this is where the course divs will be written
-            displayTag = htmlgen.generateDisplayDiv(soup, courseGroupList)
-
-            mainTag.append(displayTag)
-
-           
-
+    
 
             # customizing webpage title
             print("Writing title....")
             htmlgen.switchTitle(titleTag, deptName)
 
-            # placing radio inputs
+            # locating form tag
+            formTag = mainTag.find("form")
+
+            # placing main radio inputs
             print("Placing radio inputs....")
             htmlgen.placeRadioInputs(formTag, courseGroupDict, soup)
+
+            # locating course group selector
+            courseGroupSelectTag = soup.body.find("div", class_="coursegroupselector")
+
+            # placing submenu radio inputs
+            htmlgen.placeCourseGroupRadioInputs(courseGroupSelectTag, soup, courseGroupDict)
+
+            # locating legend tag
+            legendTag = mainTag.find("div", class_="legend")
 
             # places legend for color-coding
             print("Placing legend....")
             htmlgen.placeLegend(legendTag, categoryDict, soup)
+
+            # Generating display tag, this is where the course divs will be written
+            print("Generating display tag...")
+            displayTag = htmlgen.generateDisplayDiv(soup, courseGroupList)
+
+            mainTag.append(displayTag)
 
             #placing the HTML and generating JS based on the courses (drawing lines)
             print("Placing course diagram....")
