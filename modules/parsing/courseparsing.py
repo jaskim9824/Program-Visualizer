@@ -97,8 +97,6 @@ def parseCourses(filename):
 #       be filled in
 def pullDependencies(course_obj_dict):
     for course in course_obj_dict:
-        if course_obj_dict[course].name == "MEC E 485":
-            print("test")
         # Pulling pre-reqs, co-reqs, and requisites for each course
         prereqslist = pullPreReqs(course_obj_dict[course].course_description)
         for i in range(0, len(prereqslist)):
