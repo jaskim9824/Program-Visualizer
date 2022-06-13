@@ -345,12 +345,39 @@ this.disable = function(plan) {
   that.CoopPlan4LegendBtns.push(currbtn);
   var currbtn = document.getElementById("ITS");
   that.TraditionalPlan2A3A4ALegendBtns.push(currbtn);
+  that.TraditionalPlan2A3A4BLegendBtns.push(currbtn);
+  that.TraditionalPlan2A3B4ALegendBtns.push(currbtn);
+  that.TraditionalPlan2A3B4BLegendBtns.push(currbtn);
+  that.TraditionalPlan2B3A4ALegendBtns.push(currbtn);
+  that.TraditionalPlan2B3A4BLegendBtns.push(currbtn);
+  that.TraditionalPlan2B3B4ALegendBtns.push(currbtn);
+  that.TraditionalPlan2B3B4BLegendBtns.push(currbtn);
   that.AlternatePlan3A4ALegendBtns.push(currbtn);
   that.CoopPlan13ALegendBtns.push(currbtn);
   that.CoopPlan13BLegendBtns.push(currbtn);
   that.CoopPlan2LegendBtns.push(currbtn);
   that.CoopPlan3BiomedicalLegendBtns.push(currbtn);
   that.CoopPlan4LegendBtns.push(currbtn);
+<<<<<<< HEAD
+=======
+  that.MechatronicsPlanLegendBtns.push(currbtn);
+  var currbtn = document.getElementById("Mechatronics");
+  that.TraditionalPlan2A3A4ALegendBtns.push(currbtn);
+  that.TraditionalPlan2A3A4BLegendBtns.push(currbtn);
+  that.TraditionalPlan2A3B4ALegendBtns.push(currbtn);
+  that.TraditionalPlan2A3B4BLegendBtns.push(currbtn);
+  that.TraditionalPlan2B3A4ALegendBtns.push(currbtn);
+  that.TraditionalPlan2B3A4BLegendBtns.push(currbtn);
+  that.TraditionalPlan2B3B4ALegendBtns.push(currbtn);
+  that.TraditionalPlan2B3B4BLegendBtns.push(currbtn);
+  that.AlternatePlan3A4ALegendBtns.push(currbtn);
+  that.CoopPlan13ALegendBtns.push(currbtn);
+  that.CoopPlan13BLegendBtns.push(currbtn);
+  that.CoopPlan2LegendBtns.push(currbtn);
+  that.CoopPlan3BiomedicalLegendBtns.push(currbtn);
+  that.CoopPlan4LegendBtns.push(currbtn);
+  that.MechatronicsPlanLegendBtns.push(currbtn);
+>>>>>>> origin/main
 this.enable = function(plan) {
   switch(plan) {
     case "TraditionalPlan2A3A4A": 
