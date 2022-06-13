@@ -415,7 +415,7 @@ def generateCategoryListeners(categoriesDict, courseGroupList, controller):
     var checkFlag = "!{categoryName}" + planName + "flag";
     var flagBool = eval(checkFlag);
     if (flagBool) {{
-        that.highlightCategory("{categoryName}", $scope.selectedPlan);
+        that.highlightCategory("{categoryName}", planName);
         pressedbtn.classList.remove("legendbutton");
         pressedbtn.classList.add("legendbutton-pressed");
         var addClick = "that." + planName + "LegendBtnsClicked.push(pressedbtn)";
@@ -424,7 +424,7 @@ def generateCategoryListeners(categoriesDict, courseGroupList, controller):
         eval(flagName + " = true");
     }}
     else {{
-        that.unhighlightCategory("{categoryName}", $scope.selectedPlan);
+        that.unhighlightCategory("{categoryName}", planName);
         pressedbtn.classList.remove("legendbutton-pressed");
         pressedbtn.classList.add("legendbutton");
         var findIndex = "var index = that." + planName + "LegendBtnsClicked.findIndex((element) => element[0] == pressedbtn)";

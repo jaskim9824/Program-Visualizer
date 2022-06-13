@@ -1367,7 +1367,7 @@ $scope.NaturalSciencesclickListener = function() {
     var checkFlag = "!NaturalSciences" + planName + "flag";
     var flagBool = eval(checkFlag);
     if (flagBool) {
-        that.highlightCategory("NaturalSciences", $scope.selectedPlan);
+        that.highlightCategory("NaturalSciences", planName);
         pressedbtn.classList.remove("legendbutton");
         pressedbtn.classList.add("legendbutton-pressed");
         var addClick = "that." + planName + "LegendBtnsClicked.push(pressedbtn)";
@@ -1376,7 +1376,7 @@ $scope.NaturalSciencesclickListener = function() {
         eval(flagName + " = true");
     }
     else {
-        that.unhighlightCategory("NaturalSciences", $scope.selectedPlan);
+        that.unhighlightCategory("NaturalSciences", planName);
         pressedbtn.classList.remove("legendbutton-pressed");
         pressedbtn.classList.add("legendbutton");
         var findIndex = "var index = that." + planName + "LegendBtnsClicked.findIndex((element) => element[0] == pressedbtn)";
@@ -1393,7 +1393,7 @@ $scope.EngineeringProfessionclickListener = function() {
     var checkFlag = "!EngineeringProfession" + planName + "flag";
     var flagBool = eval(checkFlag);
     if (flagBool) {
-        that.highlightCategory("EngineeringProfession", $scope.selectedPlan);
+        that.highlightCategory("EngineeringProfession", planName);
         pressedbtn.classList.remove("legendbutton");
         pressedbtn.classList.add("legendbutton-pressed");
         var addClick = "that." + planName + "LegendBtnsClicked.push(pressedbtn)";
@@ -1402,7 +1402,7 @@ $scope.EngineeringProfessionclickListener = function() {
         eval(flagName + " = true");
     }
     else {
-        that.unhighlightCategory("EngineeringProfession", $scope.selectedPlan);
+        that.unhighlightCategory("EngineeringProfession", planName);
         pressedbtn.classList.remove("legendbutton-pressed");
         pressedbtn.classList.add("legendbutton");
         var findIndex = "var index = that." + planName + "LegendBtnsClicked.findIndex((element) => element[0] == pressedbtn)";
@@ -1419,7 +1419,7 @@ $scope.OtherclickListener = function() {
     var checkFlag = "!Other" + planName + "flag";
     var flagBool = eval(checkFlag);
     if (flagBool) {
-        that.highlightCategory("Other", $scope.selectedPlan);
+        that.highlightCategory("Other", planName);
         pressedbtn.classList.remove("legendbutton");
         pressedbtn.classList.add("legendbutton-pressed");
         var addClick = "that." + planName + "LegendBtnsClicked.push(pressedbtn)";
@@ -1428,7 +1428,7 @@ $scope.OtherclickListener = function() {
         eval(flagName + " = true");
     }
     else {
-        that.unhighlightCategory("Other", $scope.selectedPlan);
+        that.unhighlightCategory("Other", planName);
         pressedbtn.classList.remove("legendbutton-pressed");
         pressedbtn.classList.add("legendbutton");
         var findIndex = "var index = that." + planName + "LegendBtnsClicked.findIndex((element) => element[0] == pressedbtn)";
@@ -1445,7 +1445,7 @@ $scope.MathclickListener = function() {
     var checkFlag = "!Math" + planName + "flag";
     var flagBool = eval(checkFlag);
     if (flagBool) {
-        that.highlightCategory("Math", $scope.selectedPlan);
+        that.highlightCategory("Math", planName);
         pressedbtn.classList.remove("legendbutton");
         pressedbtn.classList.add("legendbutton-pressed");
         var addClick = "that." + planName + "LegendBtnsClicked.push(pressedbtn)";
@@ -1454,7 +1454,7 @@ $scope.MathclickListener = function() {
         eval(flagName + " = true");
     }
     else {
-        that.unhighlightCategory("Math", $scope.selectedPlan);
+        that.unhighlightCategory("Math", planName);
         pressedbtn.classList.remove("legendbutton-pressed");
         pressedbtn.classList.add("legendbutton");
         var findIndex = "var index = that." + planName + "LegendBtnsClicked.findIndex((element) => element[0] == pressedbtn)";
@@ -1471,7 +1471,7 @@ $scope.EngineeringDesignclickListener = function() {
     var checkFlag = "!EngineeringDesign" + planName + "flag";
     var flagBool = eval(checkFlag);
     if (flagBool) {
-        that.highlightCategory("EngineeringDesign", $scope.selectedPlan);
+        that.highlightCategory("EngineeringDesign", planName);
         pressedbtn.classList.remove("legendbutton");
         pressedbtn.classList.add("legendbutton-pressed");
         var addClick = "that." + planName + "LegendBtnsClicked.push(pressedbtn)";
@@ -1480,7 +1480,7 @@ $scope.EngineeringDesignclickListener = function() {
         eval(flagName + " = true");
     }
     else {
-        that.unhighlightCategory("EngineeringDesign", $scope.selectedPlan);
+        that.unhighlightCategory("EngineeringDesign", planName);
         pressedbtn.classList.remove("legendbutton-pressed");
         pressedbtn.classList.add("legendbutton");
         var findIndex = "var index = that." + planName + "LegendBtnsClicked.findIndex((element) => element[0] == pressedbtn)";
@@ -1497,7 +1497,7 @@ $scope.EngineeringSciencesclickListener = function() {
     var checkFlag = "!EngineeringSciences" + planName + "flag";
     var flagBool = eval(checkFlag);
     if (flagBool) {
-        that.highlightCategory("EngineeringSciences", $scope.selectedPlan);
+        that.highlightCategory("EngineeringSciences", planName);
         pressedbtn.classList.remove("legendbutton");
         pressedbtn.classList.add("legendbutton-pressed");
         var addClick = "that." + planName + "LegendBtnsClicked.push(pressedbtn)";
@@ -1506,7 +1506,7 @@ $scope.EngineeringSciencesclickListener = function() {
         eval(flagName + " = true");
     }
     else {
-        that.unhighlightCategory("EngineeringSciences", $scope.selectedPlan);
+        that.unhighlightCategory("EngineeringSciences", planName);
         pressedbtn.classList.remove("legendbutton-pressed");
         pressedbtn.classList.add("legendbutton");
         var findIndex = "var index = that." + planName + "LegendBtnsClicked.findIndex((element) => element[0] == pressedbtn)";
@@ -1523,7 +1523,7 @@ $scope.COMPclickListener = function() {
     var checkFlag = "!COMP" + planName + "flag";
     var flagBool = eval(checkFlag);
     if (flagBool) {
-        that.highlightCategory("COMP", $scope.selectedPlan);
+        that.highlightCategory("COMP", planName);
         pressedbtn.classList.remove("legendbutton");
         pressedbtn.classList.add("legendbutton-pressed");
         var addClick = "that." + planName + "LegendBtnsClicked.push(pressedbtn)";
@@ -1532,7 +1532,7 @@ $scope.COMPclickListener = function() {
         eval(flagName + " = true");
     }
     else {
-        that.unhighlightCategory("COMP", $scope.selectedPlan);
+        that.unhighlightCategory("COMP", planName);
         pressedbtn.classList.remove("legendbutton-pressed");
         pressedbtn.classList.add("legendbutton");
         var findIndex = "var index = that." + planName + "LegendBtnsClicked.findIndex((element) => element[0] == pressedbtn)";
@@ -1549,7 +1549,7 @@ $scope.PROGclickListener = function() {
     var checkFlag = "!PROG" + planName + "flag";
     var flagBool = eval(checkFlag);
     if (flagBool) {
-        that.highlightCategory("PROG", $scope.selectedPlan);
+        that.highlightCategory("PROG", planName);
         pressedbtn.classList.remove("legendbutton");
         pressedbtn.classList.add("legendbutton-pressed");
         var addClick = "that." + planName + "LegendBtnsClicked.push(pressedbtn)";
@@ -1558,7 +1558,7 @@ $scope.PROGclickListener = function() {
         eval(flagName + " = true");
     }
     else {
-        that.unhighlightCategory("PROG", $scope.selectedPlan);
+        that.unhighlightCategory("PROG", planName);
         pressedbtn.classList.remove("legendbutton-pressed");
         pressedbtn.classList.add("legendbutton");
         var findIndex = "var index = that." + planName + "LegendBtnsClicked.findIndex((element) => element[0] == pressedbtn)";
@@ -1575,7 +1575,7 @@ $scope.ITSclickListener = function() {
     var checkFlag = "!ITS" + planName + "flag";
     var flagBool = eval(checkFlag);
     if (flagBool) {
-        that.highlightCategory("ITS", $scope.selectedPlan);
+        that.highlightCategory("ITS", planName);
         pressedbtn.classList.remove("legendbutton");
         pressedbtn.classList.add("legendbutton-pressed");
         var addClick = "that." + planName + "LegendBtnsClicked.push(pressedbtn)";
@@ -1584,7 +1584,7 @@ $scope.ITSclickListener = function() {
         eval(flagName + " = true");
     }
     else {
-        that.unhighlightCategory("ITS", $scope.selectedPlan);
+        that.unhighlightCategory("ITS", planName);
         pressedbtn.classList.remove("legendbutton-pressed");
         pressedbtn.classList.add("legendbutton");
         var findIndex = "var index = that." + planName + "LegendBtnsClicked.findIndex((element) => element[0] == pressedbtn)";
