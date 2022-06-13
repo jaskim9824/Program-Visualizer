@@ -145,7 +145,6 @@ this.setDefaults = function(plan) {
     }
 };
 $scope.globalSubGroupChange = function () { 
-$scope.$apply();
 that.render($scope.selectedPlan+$scope.field2.group2+$scope.field3.group3+$scope.field4.group4);
 };
 this.disable = function(plan) {
