@@ -100,21 +100,21 @@ def new_window():
     )
     message2.grid(row=2, column=0,padx=20, pady=20)
     #courses.xls image
-    excel_pic1 = Image.open("C:output/images/courseexcel.png")
+    excel_pic1 = Image.open("C:GUI_images/courseexcel.png")
     resized1 = excel_pic1.resize((100,100))
     new_img1 = ImageTk.PhotoImage(resized1)
     img_label = Label(second_frame,image=new_img1)
     img_label.grid(row=3, column=0)
 
     #categories.xls image
-    excel_pic2 = Image.open("C:output/images/catexcel.png")
+    excel_pic2 = Image.open("C:GUI_images/catexcel.png")
     resized2 = excel_pic2.resize((100,100))
     new_img2 = ImageTk.PhotoImage(resized2)
     img_label2 = Label(second_frame,image=new_img2)
     img_label2.grid(row=3, column=1)
 
     #Sequencing.xls image
-    tutorial_img = Image.open("C:output/images/seqexcel.png")
+    tutorial_img = Image.open("C:GUI_images/seqexcel.png")
     resized_img = tutorial_img.resize((100,100))
     new_img3 = ImageTk.PhotoImage(resized_img)
     img_label3 = Label(second_frame,image=new_img3)
@@ -137,7 +137,7 @@ def new_window():
     message3.grid(row=5, column=0,padx=20, pady=25)
 
     #Sequencing.xls image
-    tutorial_img = Image.open("C:output/images/tutorial.png")
+    tutorial_img = Image.open("C:GUI_images/tutorial.png")
     resized_img = tutorial_img.resize((500,300))
     new_tutorial = ImageTk.PhotoImage(resized_img)
     tut_label = Label(second_frame,image=new_tutorial)
@@ -148,7 +148,7 @@ def new_window():
     )
     message4.grid(row=7, column=0,padx=20, pady=25)
 
-    web_img = Image.open("C:output/images/website.png")
+    web_img = Image.open("C:GUI_images/website.png")
     resized_webImg = web_img.resize((500, 300))
     new_web_img = ImageTk.PhotoImage(resized_webImg)
     web_label = Label(second_frame, image=new_web_img)
@@ -319,7 +319,7 @@ def main():
        err.strerror + 
        ". Either the template HTML file is not in the same directory as the script or" +
        " the output directory is not organized correctly or does not exist")
-       
+
        #gui error box
        messagebox.showerror('Python Error', "Exception raised: " + 
        err.strerror + 
