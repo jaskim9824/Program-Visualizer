@@ -27,6 +27,7 @@ def intializeControllerJavaScript(sequenceDict, intitalCourseGroupVals, courseGr
 def closeControllerJavaScript(controller):
     controller.write("});\n")
     writeRightClickDirective(controller)
+    writeRadioChangeDirective(controller)
     controller.close()
 
 def writeRightClickDirective(controller):
@@ -42,6 +43,20 @@ def writeRightClickDirective(controller):
     };
     });"""
     controller.write(rightClickDirective)
+
+def writeRadioChangeDirective(controller):
+    radioChangeDirective = """app.directive('ngChangeRadio', function($parse) {
+    return function(scope, element, attrs) {
+        var fn = $parse(attrs.ngChangeRadio);
+        element.bind('change', function(event) {
+            scope.$apply(function() {
+                event.preventDefault();
+                fn(scope, {$event:event});
+            });
+        });
+    };
+    });"""
+    controller.write(radioChangeDirective)
 
 # Function that generates the intital block of Javascript
 # Parameters:

@@ -358,26 +358,6 @@ this.disable = function(plan) {
   that.CoopPlan2LegendBtns.push(currbtn);
   that.CoopPlan3BiomedicalLegendBtns.push(currbtn);
   that.CoopPlan4LegendBtns.push(currbtn);
-<<<<<<< HEAD
-=======
-  that.MechatronicsPlanLegendBtns.push(currbtn);
-  var currbtn = document.getElementById("Mechatronics");
-  that.TraditionalPlan2A3A4ALegendBtns.push(currbtn);
-  that.TraditionalPlan2A3A4BLegendBtns.push(currbtn);
-  that.TraditionalPlan2A3B4ALegendBtns.push(currbtn);
-  that.TraditionalPlan2A3B4BLegendBtns.push(currbtn);
-  that.TraditionalPlan2B3A4ALegendBtns.push(currbtn);
-  that.TraditionalPlan2B3A4BLegendBtns.push(currbtn);
-  that.TraditionalPlan2B3B4ALegendBtns.push(currbtn);
-  that.TraditionalPlan2B3B4BLegendBtns.push(currbtn);
-  that.AlternatePlan3A4ALegendBtns.push(currbtn);
-  that.CoopPlan13ALegendBtns.push(currbtn);
-  that.CoopPlan13BLegendBtns.push(currbtn);
-  that.CoopPlan2LegendBtns.push(currbtn);
-  that.CoopPlan3BiomedicalLegendBtns.push(currbtn);
-  that.CoopPlan4LegendBtns.push(currbtn);
-  that.MechatronicsPlanLegendBtns.push(currbtn);
->>>>>>> origin/main
 this.enable = function(plan) {
   switch(plan) {
     case "TraditionalPlan2A3A4A": 
@@ -53214,6 +53194,16 @@ app.directive('ngRightClick', function($parse) {
     return function(scope, element, attrs) {
         var fn = $parse(attrs.ngRightClick);
         element.bind('contextmenu', function(event) {
+            scope.$apply(function() {
+                event.preventDefault();
+                fn(scope, {$event:event});
+            });
+        });
+    };
+    });app.directive('ngChangeRadio', function($parse) {
+    return function(scope, element, attrs) {
+        var fn = $parse(attrs.ngChangeRadio);
+        element.bind('change', function(event) {
             scope.$apply(function() {
                 event.preventDefault();
                 fn(scope, {$event:event});
