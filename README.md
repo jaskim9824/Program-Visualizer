@@ -41,4 +41,5 @@ This project has the following dependencies:
   - copy (deepcopy function) in parsing.py to make a deepcopy of course objects for each plan
   - pyinstaller to convert the Python script into a portable executable
   - html for writing escape characters without BeautifulSoup auto-formatting
+  - tkinter for generating the GUI
 
