@@ -11,7 +11,7 @@ from .. import cleaner
 from . import linegen
 import html
 
-def findIntitalValuesofCourseGroups(courseGroupDict, courseGroupList):
+def findInitialValuesofCourseGroups(courseGroupDict, courseGroupList):
     intitalSelectionGroups = list(courseGroupDict.values())[0]
     # print(intitalSelectionGroups)
     intitalCourseGroupVals = {}
@@ -86,7 +86,7 @@ def switchTitle(titleTag, deptName):
 # Function that places the radio inputs into the form which controls
 # which plan is currently selected on the webpage
 # Parameters:
-#   formTag - form HTML tag where the inputs will be placed
+#   formTag - form HTML tag where the inputs will be placed for plans
 #   courseGroupDict - dict that maps the plans to the course groups in it
 #   soup - soup object, used to create HTML tags
 def placeRadioInputs(formTag, courseGroupDict, soup):
@@ -103,6 +103,12 @@ def placeRadioInputs(formTag, courseGroupDict, soup):
         breakTag = soup.new_tag("br")
         formTag.append(breakTag)
 
+# Function that places the radio inputs into the form which controls
+# which course group comes first (A or B)
+# Parameters:
+#   courseGroupSelectTag - form HTML tag where the inputs will be placed for course groups
+#   soup - soup object, used to create HTML tags
+#   courseGroupDict - dict that maps the plans to the course groups in it
 def placeCourseGroupRadioInputs(courseGroupSelectTag, soup, courseGroupDict):
     for plan in courseGroupDict:
         planCourseGroupsTag = soup.new_tag("div", attrs={"id":cleaner.cleanString(plan),
@@ -132,8 +138,7 @@ def placeCourseGroupRadioInputsForSubPlan(subPlanTag, soup, subPlanOptionList, s
         subPlanTag.append(inputTag)
         subPlanTag.append(labelTag)
         breakTag = soup.new_tag("br")
-        subPlanTag.append(breakTag)
-                    
+        subPlanTag.append(breakTag)                  
 
 # Places the legend for the categories of courses (math, basic sciences, design, etc.)
 # Pulls the categories and colors from sequenceDict, which has these values as two of
@@ -146,12 +151,20 @@ def placeLegend(legendTag, categoryDict, soup):
     placeLegendDescription(soup, legendTag)
     placeLegendButtons(soup, legendTag, categoryDict)
  
-
+# Places the legend desccription above the legend buttons.
+# Parameters:
+#   soup - soup object, used to create HTML tags
+#   legendTag - HTML tag representing div which holds the category color legend
 def placeLegendDescription(soup, legendTag):
     legendDescription = soup.new_tag("b", attrs={"class":"legenddescription"})
     legendDescription.append("Click on a Category Below to Highlight all Courses in that Category")
     legendTag.append(legendDescription)
 
+# Places the container for buttons that highlight categories.
+# Parameters:
+#   soup - soup object, used to create HTML tags
+#   legendTag - HTML tag representing div which holds the category color legend
+#   categoryDict - dict mapping category to colour
 def placeLegendButtons(soup, legendTag, categoryDict):
     legendBoxes = soup.new_tag("div", attrs={"class":"legendboxes"})
     for category in categoryDict:
@@ -160,13 +173,16 @@ def placeLegendButtons(soup, legendTag, categoryDict):
         legendBoxes.append(coursecat)
     legendTag.append(legendBoxes)
 
-
+# Places one of the buttosn to highlight a category
+# Parameters:
+#   soup - soup object, used to create HTML tags
+#   category - name of the category (Math, Engineering Design, etc.)
+#   color - color that the button will appear as
 def placeLegendButton(soup, category, colour):
     return soup.new_tag("div", attrs={"ng-click":category+ "clickListener()", 
                                         "class":"legendbutton",
                                         "id": cleaner.cleanString(category),
                                         "style":"background-color:#" + colour})
-
 
 # Function that places the outer divs representing each plan
 # Parameters:
@@ -422,19 +438,30 @@ def pickTooltipSide(termcounter, courseID, soup):
 
     return courseDisc
 
+# Creates a course div that wraps around everything required for one course (embed and tooltiptext).
+# Parameters:
+#   soup - soup object, used to create HTML tags 
+#   courseID - ID of the course being placed (str) 
+#   category - name of the category this course belongs to
+#   orCounter - keeps track if the first or second of two options for OR case
+#   orBool - true only if this course is an OR case
 def createCourseDiv(soup, courseID, category, orCounter, orBool):
     if orBool:
+        # This course is an OR case
         if orCounter == 0:
+            # first of two options
             return soup.new_tag("div", attrs={"class":"orcoursetop tooltip " + category,
                                                 "id": courseID,
                                                 "ng-click":courseID+"Listener()",
                                                 "ng-right-click":courseID+"RCListener()"})
-        else: 
+        else:
+            # second of two options
             return soup.new_tag("div", attrs={"class":"orcoursebottom tooltip " + category,
                                                 "id": courseID,
                                                 "ng-click":courseID+"Listener()",
                                                 "ng-right-click":courseID+"RCListener()"})
     else:
+        # not an OR case
         return soup.new_tag("div",attrs= {"class":"course tooltip " + category, 
                                                 "id": courseID, 
                                                 "ng-click":courseID+"Listener()",
