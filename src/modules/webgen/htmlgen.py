@@ -558,23 +558,3 @@ def extractCourseGroupListFromString(planName):
         return []
     endIndex = planName.find("}")
     return planName[index+1:endIndex].split()
-            
-
-# TO DO: Move the above functions to a better module
-
-
-                 
-
-
-
-
-                    
-
-
-
-
- 
-
-
-
-
