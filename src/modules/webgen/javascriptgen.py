@@ -214,7 +214,7 @@ def generateEnableSwitchStatement(sequenceDict, controller):
       width = this.{planName}Terms*220 + 20;
       widthstr = width.toString() + "px";
       document.getElementById("main").style.width = widthstr;
-      height = this.{planName}MaxCourses*100 + 440;
+      height = this.{planName}MaxCourses*100 + 690;
       heightstr = height.toString() + "px";
       document.getElementById("main").style.height = heightstr;
       for (let i = 0; i < this.{planName}Clicked.length; i++) {{
