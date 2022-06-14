@@ -106,7 +106,7 @@ def new_window():
     message1.grid(row=1, column=0,padx=20, pady=20)
 
     message2 = Label(second_frame, 
-    text="2- Make sure you have the following excel files:"
+    text="2- Make sure you have the following excel files (All Excel files must be in the .xls format): "
     )
     message2.grid(row=2, column=0,padx=20, pady=20)
     #courses.xls image
@@ -153,7 +153,7 @@ def new_window():
     tut_label.grid(row=6, column=1, padx=10, pady=20)
 
     message4 = Label(second_frame, 
-    text="4- Refresh the webpage and the plan visualizer webpage will be generated!"
+    text="4- Refresh the webpage and the plan visualizer webpage will be generated! "
     )
     message4.grid(row=7, column=0,padx=20, pady=25)
 
