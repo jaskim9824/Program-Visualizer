@@ -1,6 +1,6 @@
 var app = angular.module("main", []);
 app.controller("main", function($scope) { 
-$scope.selectedPlan = "TraditionalPlan";
+$scope.selectedPlan = "MechatronicsPlan";
 var that = this;
 this.render = function(plan) {
             this.disable(this.previousPlan);
@@ -14,16 +14,16 @@ that.setDefaults($scope.selectedPlan);
 that.render($scope.selectedPlan);
    });
 });
-this.TraditionalPlanList = [];
-this.TraditionalPlanClicked = [];
-this.TraditionalPlanLegendBtns = [];
-this.TraditionalPlanLegendBtnsClicked = [];
-this.TraditionalPlanTerms = 8;
-this.TraditionalPlanMaxCourses = 7;
+this.MechatronicsPlanList = [];
+this.MechatronicsPlanClicked = [];
+this.MechatronicsPlanLegendBtns = [];
+this.MechatronicsPlanLegendBtnsClicked = [];
+this.MechatronicsPlanTerms = 8;
+this.MechatronicsPlanMaxCourses = 7;
 this.previousPlan = $scope.selectedPlan
 this.setDefaults = function(plan) { 
   switch(plan) { 
-      case "TraditionalPlan": 
+      case "MechatronicsPlan": 
           $scope.$apply();
           break;
     default:
@@ -35,9 +35,9 @@ that.render($scope.selectedPlan);
 };
 this.disable = function(plan) {
     switch (plan) { 
-  case "TraditionalPlan": 
-    for (let i = 0; i < this.TraditionalPlanList.length; i++) {
-        this.TraditionalPlanList[i][0].hide(true);
+  case "MechatronicsPlan": 
+    for (let i = 0; i < this.MechatronicsPlanList.length; i++) {
+        this.MechatronicsPlanList[i][0].hide(true);
     }
     break; 
     default:
@@ -45,56 +45,56 @@ this.disable = function(plan) {
     }
 };
   var currbtn = document.getElementById("NaturalSciences");
-  that.TraditionalPlanLegendBtns.push(currbtn);
+  that.MechatronicsPlanLegendBtns.push(currbtn);
   var currbtn = document.getElementById("EngineeringProfession");
-  that.TraditionalPlanLegendBtns.push(currbtn);
+  that.MechatronicsPlanLegendBtns.push(currbtn);
   var currbtn = document.getElementById("Other");
-  that.TraditionalPlanLegendBtns.push(currbtn);
+  that.MechatronicsPlanLegendBtns.push(currbtn);
   var currbtn = document.getElementById("Math");
-  that.TraditionalPlanLegendBtns.push(currbtn);
+  that.MechatronicsPlanLegendBtns.push(currbtn);
   var currbtn = document.getElementById("EngineeringDesign");
-  that.TraditionalPlanLegendBtns.push(currbtn);
+  that.MechatronicsPlanLegendBtns.push(currbtn);
   var currbtn = document.getElementById("EngineeringSciences");
-  that.TraditionalPlanLegendBtns.push(currbtn);
+  that.MechatronicsPlanLegendBtns.push(currbtn);
   var currbtn = document.getElementById("Mechatronics");
-  that.TraditionalPlanLegendBtns.push(currbtn);
+  that.MechatronicsPlanLegendBtns.push(currbtn);
   var currbtn = document.getElementById("COMP");
-  that.TraditionalPlanLegendBtns.push(currbtn);
+  that.MechatronicsPlanLegendBtns.push(currbtn);
   var currbtn = document.getElementById("ITS");
-  that.TraditionalPlanLegendBtns.push(currbtn);
+  that.MechatronicsPlanLegendBtns.push(currbtn);
   var currbtn = document.getElementById("PROG");
-  that.TraditionalPlanLegendBtns.push(currbtn);
+  that.MechatronicsPlanLegendBtns.push(currbtn);
 this.enable = function(plan) {
   switch(plan) {
-    case "TraditionalPlan": 
-      for (let i = 0; i < this.TraditionalPlanList.length; i++) {
-          this.TraditionalPlanList[i][0].show(true);
+    case "MechatronicsPlan": 
+      for (let i = 0; i < this.MechatronicsPlanList.length; i++) {
+          this.MechatronicsPlanList[i][0].show(true);
       }
-      width = this.TraditionalPlanTerms*220 + 20;
+      width = this.MechatronicsPlanTerms*220 + 20;
       widthstr = width.toString() + "px";
       document.getElementById("main").style.width = widthstr;
-      height = this.TraditionalPlanMaxCourses*100 + 440;
+      height = this.MechatronicsPlanMaxCourses*100 + 690;
       heightstr = height.toString() + "px";
       document.getElementById("main").style.height = heightstr;
-      for (let i = 0; i < this.TraditionalPlanClicked.length; i++) {
-          var element = document.getElementById(this.TraditionalPlanClicked[i][0]);
-          element.classList.remove(this.TraditionalPlanClicked[i][1]);
-          element.classList.add(this.TraditionalPlanClicked[i][1]+"-highlighted");
+      for (let i = 0; i < this.MechatronicsPlanClicked.length; i++) {
+          var element = document.getElementById(this.MechatronicsPlanClicked[i][0]);
+          element.classList.remove(this.MechatronicsPlanClicked[i][1]);
+          element.classList.add(this.MechatronicsPlanClicked[i][1]+"-highlighted");
       }
-      for (let i = 0; i < this.TraditionalPlanLegendBtns.length; i++) {
+      for (let i = 0; i < this.MechatronicsPlanLegendBtns.length; i++) {
           var found = false;
-          for (let j = 0; j < this.TraditionalPlanLegendBtnsClicked.length; j++) {
-              if (this.TraditionalPlanLegendBtnsClicked[j] == this.TraditionalPlanLegendBtns[i]) {
+          for (let j = 0; j < this.MechatronicsPlanLegendBtnsClicked.length; j++) {
+              if (this.MechatronicsPlanLegendBtnsClicked[j] == this.MechatronicsPlanLegendBtns[i]) {
                   found = true;
               }
           }
           if (found == false) {
-              this.TraditionalPlanLegendBtns[i].classList.remove("legendbutton-pressed");
-              this.TraditionalPlanLegendBtns[i].classList.add("legendbutton");
+              this.MechatronicsPlanLegendBtns[i].classList.remove("legendbutton-pressed");
+              this.MechatronicsPlanLegendBtns[i].classList.add("legendbutton");
           }
           if (found == true) {
-              this.TraditionalPlanLegendBtns[i].classList.remove("legendbutton");
-              this.TraditionalPlanLegendBtns[i].classList.add("legendbutton-pressed");
+              this.MechatronicsPlanLegendBtns[i].classList.remove("legendbutton");
+              this.MechatronicsPlanLegendBtns[i].classList.add("legendbutton-pressed");
           }
       }
       break; 
@@ -104,14 +104,14 @@ this.enable = function(plan) {
 };
 this.addLine = function(line) {
 switch($scope.selectedPlan) { 
- case "TraditionalPlan":
-    var index = this.TraditionalPlanList.findIndex((element) => element[0] == line);
+ case "MechatronicsPlan":
+    var index = this.MechatronicsPlanList.findIndex((element) => element[0] == line);
     if (index == -1) {
         line.show(false);
-        this.TraditionalPlanList.push([line, 1])
+        this.MechatronicsPlanList.push([line, 1])
     }
     else {
-        this.TraditionalPlanList[index][1]++;
+        this.MechatronicsPlanList[index][1]++;
     }
     break;
     default:
@@ -120,13 +120,13 @@ switch($scope.selectedPlan) {
 };
 this.removeLine = function(line) {
 switch($scope.selectedPlan) { 
- case "TraditionalPlan":
-    var index = this.TraditionalPlanList.findIndex((element) => element[0] == line);
+ case "MechatronicsPlan":
+    var index = this.MechatronicsPlanList.findIndex((element) => element[0] == line);
     if (index != -1) {
-        this.TraditionalPlanList[index][1]--
-        if (this.TraditionalPlanList[index][1] <= 0) {
+        this.MechatronicsPlanList[index][1]--
+        if (this.MechatronicsPlanList[index][1] <= 0) {
             line.hide(false);
-            this.TraditionalPlanList.splice(index, 1);
+            this.MechatronicsPlanList.splice(index, 1);
         }
     }
     break;    default:
@@ -135,10 +135,10 @@ switch($scope.selectedPlan) {
 };
 this.addToClicked = function(element) {
 switch($scope.selectedPlan) { 
- case "TraditionalPlan":
-    var index = this.TraditionalPlanClicked.findIndex((item) => item[0] == element[0]);
+ case "MechatronicsPlan":
+    var index = this.MechatronicsPlanClicked.findIndex((item) => item[0] == element[0]);
     if (index == -1) {
-        this.TraditionalPlanClicked.push(element);
+        this.MechatronicsPlanClicked.push(element);
     }
     break;    default:
     console.log("shouldn't be here");
@@ -146,25 +146,25 @@ switch($scope.selectedPlan) {
 };
 this.removeFromClicked = function(element) {
 switch($scope.selectedPlan) { 
- case "TraditionalPlan":
-    var index = this.TraditionalPlanClicked.findIndex((item) => item[0] == element);
+ case "MechatronicsPlan":
+    var index = this.MechatronicsPlanClicked.findIndex((item) => item[0] == element);
     if (index != -1) {
-        this.TraditionalPlanClicked.splice(index, 1);
+        this.MechatronicsPlanClicked.splice(index, 1);
     }
     break;    default:
     console.log("shouldn't be here");
     }
 };
-var NaturalSciencesTraditionalPlanflag = false;
-var EngineeringProfessionTraditionalPlanflag = false;
-var OtherTraditionalPlanflag = false;
-var MathTraditionalPlanflag = false;
-var EngineeringDesignTraditionalPlanflag = false;
-var EngineeringSciencesTraditionalPlanflag = false;
-var MechatronicsTraditionalPlanflag = false;
-var COMPTraditionalPlanflag = false;
-var ITSTraditionalPlanflag = false;
-var PROGTraditionalPlanflag = false;
+var NaturalSciencesMechatronicsPlanflag = false;
+var EngineeringProfessionMechatronicsPlanflag = false;
+var OtherMechatronicsPlanflag = false;
+var MathMechatronicsPlanflag = false;
+var EngineeringDesignMechatronicsPlanflag = false;
+var EngineeringSciencesMechatronicsPlanflag = false;
+var MechatronicsMechatronicsPlanflag = false;
+var COMPMechatronicsPlanflag = false;
+var ITSMechatronicsPlanflag = false;
+var PROGMechatronicsPlanflag = false;
 $scope.NaturalSciencesclickListener = function() {
     var planName = $scope.selectedPlan;
     var pressedbtn = document.getElementById("NaturalSciences");
@@ -429,245 +429,245 @@ this.highlightCategory = function(categoryName, planName) {
 switch(categoryName) { 
   case "NaturalSciences":
     switch(planName) {
-      case "TraditionalPlan":
-       var CHEM103TraditionalPlanelement = document.getElementById("CHEM103TraditionalPlan");
-       CHEM103TraditionalPlanelement.classList.remove("NaturalSciences");
-       CHEM103TraditionalPlanelement.classList.add("NaturalSciences-highlighted");
-       that.addToClicked(["CHEM103TraditionalPlan","NaturalSciences"]);
-       var ENGG130TraditionalPlanelement = document.getElementById("ENGG130TraditionalPlan");
-       ENGG130TraditionalPlanelement.classList.remove("NaturalSciences");
-       ENGG130TraditionalPlanelement.classList.add("NaturalSciences-highlighted");
-       that.addToClicked(["ENGG130TraditionalPlan","NaturalSciences"]);
-       var PHYS130TraditionalPlanelement = document.getElementById("PHYS130TraditionalPlan");
-       PHYS130TraditionalPlanelement.classList.remove("NaturalSciences");
-       PHYS130TraditionalPlanelement.classList.add("NaturalSciences-highlighted");
-       that.addToClicked(["PHYS130TraditionalPlan","NaturalSciences"]);
-       var CHEM105TraditionalPlanelement = document.getElementById("CHEM105TraditionalPlan");
-       CHEM105TraditionalPlanelement.classList.remove("NaturalSciences");
-       CHEM105TraditionalPlanelement.classList.add("NaturalSciences-highlighted");
-       that.addToClicked(["CHEM105TraditionalPlan","NaturalSciences"]);
-       var ENCMP100TraditionalPlanelement = document.getElementById("ENCMP100TraditionalPlan");
-       ENCMP100TraditionalPlanelement.classList.remove("NaturalSciences");
-       ENCMP100TraditionalPlanelement.classList.add("NaturalSciences-highlighted");
-       that.addToClicked(["ENCMP100TraditionalPlan","NaturalSciences"]);
-       var ENPH131TraditionalPlanelement = document.getElementById("ENPH131TraditionalPlan");
-       ENPH131TraditionalPlanelement.classList.remove("NaturalSciences");
-       ENPH131TraditionalPlanelement.classList.add("NaturalSciences-highlighted");
-       that.addToClicked(["ENPH131TraditionalPlan","NaturalSciences"]);
-       var MECE230TraditionalPlanelement = document.getElementById("MECE230TraditionalPlan");
-       MECE230TraditionalPlanelement.classList.remove("NaturalSciences");
-       MECE230TraditionalPlanelement.classList.add("NaturalSciences-highlighted");
-       that.addToClicked(["MECE230TraditionalPlan","NaturalSciences"]);
-       var MATE201TraditionalPlanelement = document.getElementById("MATE201TraditionalPlan");
-       MATE201TraditionalPlanelement.classList.remove("NaturalSciences");
-       MATE201TraditionalPlanelement.classList.add("NaturalSciences-highlighted");
-       that.addToClicked(["MATE201TraditionalPlan","NaturalSciences"]);
+      case "MechatronicsPlan":
+       var CHEM103MechatronicsPlanelement = document.getElementById("CHEM103MechatronicsPlan");
+       CHEM103MechatronicsPlanelement.classList.remove("NaturalSciences");
+       CHEM103MechatronicsPlanelement.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["CHEM103MechatronicsPlan","NaturalSciences"]);
+       var ENGG130MechatronicsPlanelement = document.getElementById("ENGG130MechatronicsPlan");
+       ENGG130MechatronicsPlanelement.classList.remove("NaturalSciences");
+       ENGG130MechatronicsPlanelement.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["ENGG130MechatronicsPlan","NaturalSciences"]);
+       var PHYS130MechatronicsPlanelement = document.getElementById("PHYS130MechatronicsPlan");
+       PHYS130MechatronicsPlanelement.classList.remove("NaturalSciences");
+       PHYS130MechatronicsPlanelement.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["PHYS130MechatronicsPlan","NaturalSciences"]);
+       var CHEM105MechatronicsPlanelement = document.getElementById("CHEM105MechatronicsPlan");
+       CHEM105MechatronicsPlanelement.classList.remove("NaturalSciences");
+       CHEM105MechatronicsPlanelement.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["CHEM105MechatronicsPlan","NaturalSciences"]);
+       var ENCMP100MechatronicsPlanelement = document.getElementById("ENCMP100MechatronicsPlan");
+       ENCMP100MechatronicsPlanelement.classList.remove("NaturalSciences");
+       ENCMP100MechatronicsPlanelement.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["ENCMP100MechatronicsPlan","NaturalSciences"]);
+       var ENPH131MechatronicsPlanelement = document.getElementById("ENPH131MechatronicsPlan");
+       ENPH131MechatronicsPlanelement.classList.remove("NaturalSciences");
+       ENPH131MechatronicsPlanelement.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["ENPH131MechatronicsPlan","NaturalSciences"]);
+       var MECE230MechatronicsPlanelement = document.getElementById("MECE230MechatronicsPlan");
+       MECE230MechatronicsPlanelement.classList.remove("NaturalSciences");
+       MECE230MechatronicsPlanelement.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["MECE230MechatronicsPlan","NaturalSciences"]);
+       var MATE201MechatronicsPlanelement = document.getElementById("MATE201MechatronicsPlan");
+       MATE201MechatronicsPlanelement.classList.remove("NaturalSciences");
+       MATE201MechatronicsPlanelement.classList.add("NaturalSciences-highlighted");
+       that.addToClicked(["MATE201MechatronicsPlan","NaturalSciences"]);
        break;
        }
       break;
   case "EngineeringProfession":
     switch(planName) {
-      case "TraditionalPlan":
-       var ENGG100TraditionalPlanelement = document.getElementById("ENGG100TraditionalPlan");
-       ENGG100TraditionalPlanelement.classList.remove("EngineeringProfession");
-       ENGG100TraditionalPlanelement.classList.add("EngineeringProfession-highlighted");
-       that.addToClicked(["ENGG100TraditionalPlan","EngineeringProfession"]);
-       var ENGG299TraditionalPlanelement = document.getElementById("ENGG299TraditionalPlan");
-       ENGG299TraditionalPlanelement.classList.remove("EngineeringProfession");
-       ENGG299TraditionalPlanelement.classList.add("EngineeringProfession-highlighted");
-       that.addToClicked(["ENGG299TraditionalPlan","EngineeringProfession"]);
-       var ENGG404TraditionalPlanelement = document.getElementById("ENGG404TraditionalPlan");
-       ENGG404TraditionalPlanelement.classList.remove("EngineeringProfession");
-       ENGG404TraditionalPlanelement.classList.add("EngineeringProfession-highlighted");
-       that.addToClicked(["ENGG404TraditionalPlan","EngineeringProfession"]);
-       var ENGG400TraditionalPlanelement = document.getElementById("ENGG400TraditionalPlan");
-       ENGG400TraditionalPlanelement.classList.remove("EngineeringProfession");
-       ENGG400TraditionalPlanelement.classList.add("EngineeringProfession-highlighted");
-       that.addToClicked(["ENGG400TraditionalPlan","EngineeringProfession"]);
+      case "MechatronicsPlan":
+       var ENGG100MechatronicsPlanelement = document.getElementById("ENGG100MechatronicsPlan");
+       ENGG100MechatronicsPlanelement.classList.remove("EngineeringProfession");
+       ENGG100MechatronicsPlanelement.classList.add("EngineeringProfession-highlighted");
+       that.addToClicked(["ENGG100MechatronicsPlan","EngineeringProfession"]);
+       var ENGG299MechatronicsPlanelement = document.getElementById("ENGG299MechatronicsPlan");
+       ENGG299MechatronicsPlanelement.classList.remove("EngineeringProfession");
+       ENGG299MechatronicsPlanelement.classList.add("EngineeringProfession-highlighted");
+       that.addToClicked(["ENGG299MechatronicsPlan","EngineeringProfession"]);
+       var ENGG404MechatronicsPlanelement = document.getElementById("ENGG404MechatronicsPlan");
+       ENGG404MechatronicsPlanelement.classList.remove("EngineeringProfession");
+       ENGG404MechatronicsPlanelement.classList.add("EngineeringProfession-highlighted");
+       that.addToClicked(["ENGG404MechatronicsPlan","EngineeringProfession"]);
+       var ENGG400MechatronicsPlanelement = document.getElementById("ENGG400MechatronicsPlan");
+       ENGG400MechatronicsPlanelement.classList.remove("EngineeringProfession");
+       ENGG400MechatronicsPlanelement.classList.add("EngineeringProfession-highlighted");
+       that.addToClicked(["ENGG400MechatronicsPlan","EngineeringProfession"]);
        break;
        }
       break;
   case "Other":
     switch(planName) {
-      case "TraditionalPlan":
-       var ENGL199TraditionalPlanelement = document.getElementById("ENGL199TraditionalPlan");
-       ENGL199TraditionalPlanelement.classList.remove("Other");
-       ENGL199TraditionalPlanelement.classList.add("Other-highlighted");
-       that.addToClicked(["ENGL199TraditionalPlan","Other"]);
-       var ENGM401TraditionalPlanelement = document.getElementById("ENGM401TraditionalPlan");
-       ENGM401TraditionalPlanelement.classList.remove("Other");
-       ENGM401TraditionalPlanelement.classList.add("Other-highlighted");
-       that.addToClicked(["ENGM401TraditionalPlan","Other"]);
+      case "MechatronicsPlan":
+       var ENGL199MechatronicsPlanelement = document.getElementById("ENGL199MechatronicsPlan");
+       ENGL199MechatronicsPlanelement.classList.remove("Other");
+       ENGL199MechatronicsPlanelement.classList.add("Other-highlighted");
+       that.addToClicked(["ENGL199MechatronicsPlan","Other"]);
+       var ENGM401MechatronicsPlanelement = document.getElementById("ENGM401MechatronicsPlan");
+       ENGM401MechatronicsPlanelement.classList.remove("Other");
+       ENGM401MechatronicsPlanelement.classList.add("Other-highlighted");
+       that.addToClicked(["ENGM401MechatronicsPlan","Other"]);
        break;
        }
       break;
   case "Math":
     switch(planName) {
-      case "TraditionalPlan":
-       var MATH100TraditionalPlanelement = document.getElementById("MATH100TraditionalPlan");
-       MATH100TraditionalPlanelement.classList.remove("Math");
-       MATH100TraditionalPlanelement.classList.add("Math-highlighted");
-       that.addToClicked(["MATH100TraditionalPlan","Math"]);
-       var MATH101TraditionalPlanelement = document.getElementById("MATH101TraditionalPlan");
-       MATH101TraditionalPlanelement.classList.remove("Math");
-       MATH101TraditionalPlanelement.classList.add("Math-highlighted");
-       that.addToClicked(["MATH101TraditionalPlan","Math"]);
-       var MATH102TraditionalPlanelement = document.getElementById("MATH102TraditionalPlan");
-       MATH102TraditionalPlanelement.classList.remove("Math");
-       MATH102TraditionalPlanelement.classList.add("Math-highlighted");
-       that.addToClicked(["MATH102TraditionalPlan","Math"]);
-       var MATH201TraditionalPlanelement = document.getElementById("MATH201TraditionalPlan");
-       MATH201TraditionalPlanelement.classList.remove("Math");
-       MATH201TraditionalPlanelement.classList.add("Math-highlighted");
-       that.addToClicked(["MATH201TraditionalPlan","Math"]);
-       var MATH209TraditionalPlanelement = document.getElementById("MATH209TraditionalPlan");
-       MATH209TraditionalPlanelement.classList.remove("Math");
-       MATH209TraditionalPlanelement.classList.add("Math-highlighted");
-       that.addToClicked(["MATH209TraditionalPlan","Math"]);
-       var ECE342TraditionalPlanelement = document.getElementById("ECE342TraditionalPlan");
-       ECE342TraditionalPlanelement.classList.remove("Math");
-       ECE342TraditionalPlanelement.classList.add("Math-highlighted");
-       that.addToClicked(["ECE342TraditionalPlan","Math"]);
-       var MECE390TraditionalPlanelement = document.getElementById("MECE390TraditionalPlan");
-       MECE390TraditionalPlanelement.classList.remove("Math");
-       MECE390TraditionalPlanelement.classList.add("Math-highlighted");
-       that.addToClicked(["MECE390TraditionalPlan","Math"]);
+      case "MechatronicsPlan":
+       var MATH100MechatronicsPlanelement = document.getElementById("MATH100MechatronicsPlan");
+       MATH100MechatronicsPlanelement.classList.remove("Math");
+       MATH100MechatronicsPlanelement.classList.add("Math-highlighted");
+       that.addToClicked(["MATH100MechatronicsPlan","Math"]);
+       var MATH101MechatronicsPlanelement = document.getElementById("MATH101MechatronicsPlan");
+       MATH101MechatronicsPlanelement.classList.remove("Math");
+       MATH101MechatronicsPlanelement.classList.add("Math-highlighted");
+       that.addToClicked(["MATH101MechatronicsPlan","Math"]);
+       var MATH102MechatronicsPlanelement = document.getElementById("MATH102MechatronicsPlan");
+       MATH102MechatronicsPlanelement.classList.remove("Math");
+       MATH102MechatronicsPlanelement.classList.add("Math-highlighted");
+       that.addToClicked(["MATH102MechatronicsPlan","Math"]);
+       var MATH201MechatronicsPlanelement = document.getElementById("MATH201MechatronicsPlan");
+       MATH201MechatronicsPlanelement.classList.remove("Math");
+       MATH201MechatronicsPlanelement.classList.add("Math-highlighted");
+       that.addToClicked(["MATH201MechatronicsPlan","Math"]);
+       var MATH209MechatronicsPlanelement = document.getElementById("MATH209MechatronicsPlan");
+       MATH209MechatronicsPlanelement.classList.remove("Math");
+       MATH209MechatronicsPlanelement.classList.add("Math-highlighted");
+       that.addToClicked(["MATH209MechatronicsPlan","Math"]);
+       var ECE342MechatronicsPlanelement = document.getElementById("ECE342MechatronicsPlan");
+       ECE342MechatronicsPlanelement.classList.remove("Math");
+       ECE342MechatronicsPlanelement.classList.add("Math-highlighted");
+       that.addToClicked(["ECE342MechatronicsPlan","Math"]);
+       var MECE390MechatronicsPlanelement = document.getElementById("MECE390MechatronicsPlan");
+       MECE390MechatronicsPlanelement.classList.remove("Math");
+       MECE390MechatronicsPlanelement.classList.add("Math-highlighted");
+       that.addToClicked(["MECE390MechatronicsPlan","Math"]);
        break;
        }
       break;
   case "EngineeringDesign":
     switch(planName) {
-      case "TraditionalPlan":
-       var ENGG160TraditionalPlanelement = document.getElementById("ENGG160TraditionalPlan");
-       ENGG160TraditionalPlanelement.classList.remove("EngineeringDesign");
-       ENGG160TraditionalPlanelement.classList.add("EngineeringDesign-highlighted");
-       that.addToClicked(["ENGG160TraditionalPlan","EngineeringDesign"]);
-       var MECE260TraditionalPlanelement = document.getElementById("MECE260TraditionalPlan");
-       MECE260TraditionalPlanelement.classList.remove("EngineeringDesign");
-       MECE260TraditionalPlanelement.classList.add("EngineeringDesign-highlighted");
-       that.addToClicked(["MECE260TraditionalPlan","EngineeringDesign"]);
-       var MECE265TraditionalPlanelement = document.getElementById("MECE265TraditionalPlan");
-       MECE265TraditionalPlanelement.classList.remove("EngineeringDesign");
-       MECE265TraditionalPlanelement.classList.add("EngineeringDesign-highlighted");
-       that.addToClicked(["MECE265TraditionalPlan","EngineeringDesign"]);
-       var MECE360TraditionalPlanelement = document.getElementById("MECE360TraditionalPlan");
-       MECE360TraditionalPlanelement.classList.remove("EngineeringDesign");
-       MECE360TraditionalPlanelement.classList.add("EngineeringDesign-highlighted");
-       that.addToClicked(["MECE360TraditionalPlan","EngineeringDesign"]);
-       var MECE460TraditionalPlanelement = document.getElementById("MECE460TraditionalPlan");
-       MECE460TraditionalPlanelement.classList.remove("EngineeringDesign");
-       MECE460TraditionalPlanelement.classList.add("EngineeringDesign-highlighted");
-       that.addToClicked(["MECE460TraditionalPlan","EngineeringDesign"]);
-       var MECE461TraditionalPlanelement = document.getElementById("MECE461TraditionalPlan");
-       MECE461TraditionalPlanelement.classList.remove("EngineeringDesign");
-       MECE461TraditionalPlanelement.classList.add("EngineeringDesign-highlighted");
-       that.addToClicked(["MECE461TraditionalPlan","EngineeringDesign"]);
+      case "MechatronicsPlan":
+       var ENGG160MechatronicsPlanelement = document.getElementById("ENGG160MechatronicsPlan");
+       ENGG160MechatronicsPlanelement.classList.remove("EngineeringDesign");
+       ENGG160MechatronicsPlanelement.classList.add("EngineeringDesign-highlighted");
+       that.addToClicked(["ENGG160MechatronicsPlan","EngineeringDesign"]);
+       var MECE260MechatronicsPlanelement = document.getElementById("MECE260MechatronicsPlan");
+       MECE260MechatronicsPlanelement.classList.remove("EngineeringDesign");
+       MECE260MechatronicsPlanelement.classList.add("EngineeringDesign-highlighted");
+       that.addToClicked(["MECE260MechatronicsPlan","EngineeringDesign"]);
+       var MECE265MechatronicsPlanelement = document.getElementById("MECE265MechatronicsPlan");
+       MECE265MechatronicsPlanelement.classList.remove("EngineeringDesign");
+       MECE265MechatronicsPlanelement.classList.add("EngineeringDesign-highlighted");
+       that.addToClicked(["MECE265MechatronicsPlan","EngineeringDesign"]);
+       var MECE360MechatronicsPlanelement = document.getElementById("MECE360MechatronicsPlan");
+       MECE360MechatronicsPlanelement.classList.remove("EngineeringDesign");
+       MECE360MechatronicsPlanelement.classList.add("EngineeringDesign-highlighted");
+       that.addToClicked(["MECE360MechatronicsPlan","EngineeringDesign"]);
+       var MECE460MechatronicsPlanelement = document.getElementById("MECE460MechatronicsPlan");
+       MECE460MechatronicsPlanelement.classList.remove("EngineeringDesign");
+       MECE460MechatronicsPlanelement.classList.add("EngineeringDesign-highlighted");
+       that.addToClicked(["MECE460MechatronicsPlan","EngineeringDesign"]);
+       var MECE461MechatronicsPlanelement = document.getElementById("MECE461MechatronicsPlan");
+       MECE461MechatronicsPlanelement.classList.remove("EngineeringDesign");
+       MECE461MechatronicsPlanelement.classList.add("EngineeringDesign-highlighted");
+       that.addToClicked(["MECE461MechatronicsPlan","EngineeringDesign"]);
        break;
        }
       break;
   case "EngineeringSciences":
     switch(planName) {
-      case "TraditionalPlan":
-       var CIVE270TraditionalPlanelement = document.getElementById("CIVE270TraditionalPlan");
-       CIVE270TraditionalPlanelement.classList.remove("EngineeringSciences");
-       CIVE270TraditionalPlanelement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["CIVE270TraditionalPlan","EngineeringSciences"]);
-       var ECE210TraditionalPlanelement = document.getElementById("ECE210TraditionalPlan");
-       ECE210TraditionalPlanelement.classList.remove("EngineeringSciences");
-       ECE210TraditionalPlanelement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["ECE210TraditionalPlan","EngineeringSciences"]);
-       var ECE240TraditionalPlanelement = document.getElementById("ECE240TraditionalPlan");
-       ECE240TraditionalPlanelement.classList.remove("EngineeringSciences");
-       ECE240TraditionalPlanelement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["ECE240TraditionalPlan","EngineeringSciences"]);
-       var CHE243TraditionalPlanelement = document.getElementById("CHE243TraditionalPlan");
-       CHE243TraditionalPlanelement.classList.remove("EngineeringSciences");
-       CHE243TraditionalPlanelement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["CHE243TraditionalPlan","EngineeringSciences"]);
-       var MECE250TraditionalPlanelement = document.getElementById("MECE250TraditionalPlan");
-       MECE250TraditionalPlanelement.classList.remove("EngineeringSciences");
-       MECE250TraditionalPlanelement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["MECE250TraditionalPlan","EngineeringSciences"]);
-       var ECE315TraditionalPlanelement = document.getElementById("ECE315TraditionalPlan");
-       ECE315TraditionalPlanelement.classList.remove("EngineeringSciences");
-       ECE315TraditionalPlanelement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["ECE315TraditionalPlan","EngineeringSciences"]);
-       var MECE350TraditionalPlanelement = document.getElementById("MECE350TraditionalPlan");
-       MECE350TraditionalPlanelement.classList.remove("EngineeringSciences");
-       MECE350TraditionalPlanelement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["MECE350TraditionalPlan","EngineeringSciences"]);
-       var MECE420TraditionalPlanelement = document.getElementById("MECE420TraditionalPlan");
-       MECE420TraditionalPlanelement.classList.remove("EngineeringSciences");
-       MECE420TraditionalPlanelement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["MECE420TraditionalPlan","EngineeringSciences"]);
-       var MECE465TraditionalPlanelement = document.getElementById("MECE465TraditionalPlan");
-       MECE465TraditionalPlanelement.classList.remove("EngineeringSciences");
-       MECE465TraditionalPlanelement.classList.add("EngineeringSciences-highlighted");
-       that.addToClicked(["MECE465TraditionalPlan","EngineeringSciences"]);
+      case "MechatronicsPlan":
+       var CIVE270MechatronicsPlanelement = document.getElementById("CIVE270MechatronicsPlan");
+       CIVE270MechatronicsPlanelement.classList.remove("EngineeringSciences");
+       CIVE270MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
+       that.addToClicked(["CIVE270MechatronicsPlan","EngineeringSciences"]);
+       var ECE210MechatronicsPlanelement = document.getElementById("ECE210MechatronicsPlan");
+       ECE210MechatronicsPlanelement.classList.remove("EngineeringSciences");
+       ECE210MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
+       that.addToClicked(["ECE210MechatronicsPlan","EngineeringSciences"]);
+       var ECE240MechatronicsPlanelement = document.getElementById("ECE240MechatronicsPlan");
+       ECE240MechatronicsPlanelement.classList.remove("EngineeringSciences");
+       ECE240MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
+       that.addToClicked(["ECE240MechatronicsPlan","EngineeringSciences"]);
+       var CHE243MechatronicsPlanelement = document.getElementById("CHE243MechatronicsPlan");
+       CHE243MechatronicsPlanelement.classList.remove("EngineeringSciences");
+       CHE243MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
+       that.addToClicked(["CHE243MechatronicsPlan","EngineeringSciences"]);
+       var MECE250MechatronicsPlanelement = document.getElementById("MECE250MechatronicsPlan");
+       MECE250MechatronicsPlanelement.classList.remove("EngineeringSciences");
+       MECE250MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
+       that.addToClicked(["MECE250MechatronicsPlan","EngineeringSciences"]);
+       var ECE315MechatronicsPlanelement = document.getElementById("ECE315MechatronicsPlan");
+       ECE315MechatronicsPlanelement.classList.remove("EngineeringSciences");
+       ECE315MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
+       that.addToClicked(["ECE315MechatronicsPlan","EngineeringSciences"]);
+       var MECE350MechatronicsPlanelement = document.getElementById("MECE350MechatronicsPlan");
+       MECE350MechatronicsPlanelement.classList.remove("EngineeringSciences");
+       MECE350MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
+       that.addToClicked(["MECE350MechatronicsPlan","EngineeringSciences"]);
+       var MECE420MechatronicsPlanelement = document.getElementById("MECE420MechatronicsPlan");
+       MECE420MechatronicsPlanelement.classList.remove("EngineeringSciences");
+       MECE420MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
+       that.addToClicked(["MECE420MechatronicsPlan","EngineeringSciences"]);
+       var MECE465MechatronicsPlanelement = document.getElementById("MECE465MechatronicsPlan");
+       MECE465MechatronicsPlanelement.classList.remove("EngineeringSciences");
+       MECE465MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
+       that.addToClicked(["MECE465MechatronicsPlan","EngineeringSciences"]);
        break;
        }
       break;
   case "Mechatronics":
     switch(planName) {
-      case "TraditionalPlan":
-       var MCTR202TraditionalPlanelement = document.getElementById("MCTR202TraditionalPlan");
-       MCTR202TraditionalPlanelement.classList.remove("Mechatronics");
-       MCTR202TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-       that.addToClicked(["MCTR202TraditionalPlan","Mechatronics"]);
-       var MCTR200TraditionalPlanelement = document.getElementById("MCTR200TraditionalPlan");
-       MCTR200TraditionalPlanelement.classList.remove("Mechatronics");
-       MCTR200TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-       that.addToClicked(["MCTR200TraditionalPlan","Mechatronics"]);
-       var MCTR274TraditionalPlanelement = document.getElementById("MCTR274TraditionalPlan");
-       MCTR274TraditionalPlanelement.classList.remove("Mechatronics");
-       MCTR274TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-       that.addToClicked(["MCTR274TraditionalPlan","Mechatronics"]);
-       var MCTR374TraditionalPlanelement = document.getElementById("MCTR374TraditionalPlan");
-       MCTR374TraditionalPlanelement.classList.remove("Mechatronics");
-       MCTR374TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-       that.addToClicked(["MCTR374TraditionalPlan","Mechatronics"]);
-       var MCTR300TraditionalPlanelement = document.getElementById("MCTR300TraditionalPlan");
-       MCTR300TraditionalPlanelement.classList.remove("Mechatronics");
-       MCTR300TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-       that.addToClicked(["MCTR300TraditionalPlan","Mechatronics"]);
-       var MCTR332TraditionalPlanelement = document.getElementById("MCTR332TraditionalPlan");
-       MCTR332TraditionalPlanelement.classList.remove("Mechatronics");
-       MCTR332TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-       that.addToClicked(["MCTR332TraditionalPlan","Mechatronics"]);
-       var MCTR365TraditionalPlanelement = document.getElementById("MCTR365TraditionalPlan");
-       MCTR365TraditionalPlanelement.classList.remove("Mechatronics");
-       MCTR365TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-       that.addToClicked(["MCTR365TraditionalPlan","Mechatronics"]);
-       var MCTR370TraditionalPlanelement = document.getElementById("MCTR370TraditionalPlan");
-       MCTR370TraditionalPlanelement.classList.remove("Mechatronics");
-       MCTR370TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-       that.addToClicked(["MCTR370TraditionalPlan","Mechatronics"]);
-       var MCTR460TraditionalPlanelement = document.getElementById("MCTR460TraditionalPlan");
-       MCTR460TraditionalPlanelement.classList.remove("Mechatronics");
-       MCTR460TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-       that.addToClicked(["MCTR460TraditionalPlan","Mechatronics"]);
-       var MCTR461TraditionalPlanelement = document.getElementById("MCTR461TraditionalPlan");
-       MCTR461TraditionalPlanelement.classList.remove("Mechatronics");
-       MCTR461TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-       that.addToClicked(["MCTR461TraditionalPlan","Mechatronics"]);
-       var MCTR465TraditionalPlanelement = document.getElementById("MCTR465TraditionalPlan");
-       MCTR465TraditionalPlanelement.classList.remove("Mechatronics");
-       MCTR465TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-       that.addToClicked(["MCTR465TraditionalPlan","Mechatronics"]);
+      case "MechatronicsPlan":
+       var MCTR202MechatronicsPlanelement = document.getElementById("MCTR202MechatronicsPlan");
+       MCTR202MechatronicsPlanelement.classList.remove("Mechatronics");
+       MCTR202MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+       that.addToClicked(["MCTR202MechatronicsPlan","Mechatronics"]);
+       var MCTR200MechatronicsPlanelement = document.getElementById("MCTR200MechatronicsPlan");
+       MCTR200MechatronicsPlanelement.classList.remove("Mechatronics");
+       MCTR200MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+       that.addToClicked(["MCTR200MechatronicsPlan","Mechatronics"]);
+       var MCTR274MechatronicsPlanelement = document.getElementById("MCTR274MechatronicsPlan");
+       MCTR274MechatronicsPlanelement.classList.remove("Mechatronics");
+       MCTR274MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+       that.addToClicked(["MCTR274MechatronicsPlan","Mechatronics"]);
+       var MCTR374MechatronicsPlanelement = document.getElementById("MCTR374MechatronicsPlan");
+       MCTR374MechatronicsPlanelement.classList.remove("Mechatronics");
+       MCTR374MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+       that.addToClicked(["MCTR374MechatronicsPlan","Mechatronics"]);
+       var MCTR300MechatronicsPlanelement = document.getElementById("MCTR300MechatronicsPlan");
+       MCTR300MechatronicsPlanelement.classList.remove("Mechatronics");
+       MCTR300MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+       that.addToClicked(["MCTR300MechatronicsPlan","Mechatronics"]);
+       var MCTR332MechatronicsPlanelement = document.getElementById("MCTR332MechatronicsPlan");
+       MCTR332MechatronicsPlanelement.classList.remove("Mechatronics");
+       MCTR332MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+       that.addToClicked(["MCTR332MechatronicsPlan","Mechatronics"]);
+       var MCTR365MechatronicsPlanelement = document.getElementById("MCTR365MechatronicsPlan");
+       MCTR365MechatronicsPlanelement.classList.remove("Mechatronics");
+       MCTR365MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+       that.addToClicked(["MCTR365MechatronicsPlan","Mechatronics"]);
+       var MCTR370MechatronicsPlanelement = document.getElementById("MCTR370MechatronicsPlan");
+       MCTR370MechatronicsPlanelement.classList.remove("Mechatronics");
+       MCTR370MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+       that.addToClicked(["MCTR370MechatronicsPlan","Mechatronics"]);
+       var MCTR460MechatronicsPlanelement = document.getElementById("MCTR460MechatronicsPlan");
+       MCTR460MechatronicsPlanelement.classList.remove("Mechatronics");
+       MCTR460MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+       that.addToClicked(["MCTR460MechatronicsPlan","Mechatronics"]);
+       var MCTR461MechatronicsPlanelement = document.getElementById("MCTR461MechatronicsPlan");
+       MCTR461MechatronicsPlanelement.classList.remove("Mechatronics");
+       MCTR461MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+       that.addToClicked(["MCTR461MechatronicsPlan","Mechatronics"]);
+       var MCTR465MechatronicsPlanelement = document.getElementById("MCTR465MechatronicsPlan");
+       MCTR465MechatronicsPlanelement.classList.remove("Mechatronics");
+       MCTR465MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+       that.addToClicked(["MCTR465MechatronicsPlan","Mechatronics"]);
        break;
        }
       break;
   case "COMP":
   case "ComplementaryElective":
     switch(planName) {
-      case "TraditionalPlan":
+      case "MechatronicsPlan":
         var COMPelements = document.getElementsByClassName("COMP");
         var i = 0;
         while (COMPelements.length > 0) {
           var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP");
           currelement.classList.add("COMP-highlighted");
-          that.addToClicked(["ComplementaryElectiveTraditionalPlan" + i,"COMP"]);
+          that.addToClicked(["ComplementaryElectiveMechatronicsPlan" + i,"COMP"]);
           i = i + 1;
         }
        break;
@@ -675,14 +675,14 @@ switch(categoryName) {
       break;
   case "ITS":
     switch(planName) {
-      case "TraditionalPlan":
+      case "MechatronicsPlan":
         var ITSelements = document.getElementsByClassName("ITS");
         var i = 0;
         while (ITSelements.length > 0) {
           var currelement = document.getElementById(ITSelements.item(0).id);
           currelement.classList.remove("ITS");
           currelement.classList.add("ITS-highlighted");
-          that.addToClicked(["ITSElectiveTraditionalPlan" + i,"ITS"]);
+          that.addToClicked(["ITSElectiveMechatronicsPlan" + i,"ITS"]);
           i = i + 1;
         }
        break;
@@ -691,14 +691,14 @@ switch(categoryName) {
   case "PROG":
   case "ProgramTechnicalElective":
     switch(planName) {
-      case "TraditionalPlan":
+      case "MechatronicsPlan":
         var PROGelements = document.getElementsByClassName("PROG");
         var i = 0;
         while (PROGelements.length > 0) {
           var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG");
           currelement.classList.add("PROG-highlighted");
-          that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan" + i,"PROG"]);
+          that.addToClicked(["ProgramTechnicalElectiveMechatronicsPlan" + i,"PROG"]);
           i = i + 1;
         }
        break;
@@ -712,371 +712,371 @@ this.unhighlightCategory = function(categoryName, planName) {
 switch(categoryName) { 
   case "NaturalSciences":
     switch(planName) {
-      case "TraditionalPlan":
-if (!CHEM103TraditionalPlanflag) { 
-       var CHEM103TraditionalPlanelement = document.getElementById("CHEM103TraditionalPlan");
-       CHEM103TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-       CHEM103TraditionalPlanelement.classList.add("NaturalSciences");
+      case "MechatronicsPlan":
+if (!CHEM103MechatronicsPlanflag) { 
+       var CHEM103MechatronicsPlanelement = document.getElementById("CHEM103MechatronicsPlan");
+       CHEM103MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+       CHEM103MechatronicsPlanelement.classList.add("NaturalSciences");
        
-       that.removeFromClicked("CHEM103TraditionalPlan");
+       that.removeFromClicked("CHEM103MechatronicsPlan");
  } 
-if (!ENGG130TraditionalPlanflag) { 
-       var ENGG130TraditionalPlanelement = document.getElementById("ENGG130TraditionalPlan");
-       ENGG130TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-       ENGG130TraditionalPlanelement.classList.add("NaturalSciences");
+if (!ENGG130MechatronicsPlanflag) { 
+       var ENGG130MechatronicsPlanelement = document.getElementById("ENGG130MechatronicsPlan");
+       ENGG130MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+       ENGG130MechatronicsPlanelement.classList.add("NaturalSciences");
        
-       that.removeFromClicked("ENGG130TraditionalPlan");
+       that.removeFromClicked("ENGG130MechatronicsPlan");
  } 
-if (!PHYS130TraditionalPlanflag) { 
-       var PHYS130TraditionalPlanelement = document.getElementById("PHYS130TraditionalPlan");
-       PHYS130TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-       PHYS130TraditionalPlanelement.classList.add("NaturalSciences");
+if (!PHYS130MechatronicsPlanflag) { 
+       var PHYS130MechatronicsPlanelement = document.getElementById("PHYS130MechatronicsPlan");
+       PHYS130MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+       PHYS130MechatronicsPlanelement.classList.add("NaturalSciences");
        
-       that.removeFromClicked("PHYS130TraditionalPlan");
+       that.removeFromClicked("PHYS130MechatronicsPlan");
  } 
-if (!CHEM105TraditionalPlanflag) { 
-       var CHEM105TraditionalPlanelement = document.getElementById("CHEM105TraditionalPlan");
-       CHEM105TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-       CHEM105TraditionalPlanelement.classList.add("NaturalSciences");
+if (!CHEM105MechatronicsPlanflag) { 
+       var CHEM105MechatronicsPlanelement = document.getElementById("CHEM105MechatronicsPlan");
+       CHEM105MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+       CHEM105MechatronicsPlanelement.classList.add("NaturalSciences");
        
-       that.removeFromClicked("CHEM105TraditionalPlan");
+       that.removeFromClicked("CHEM105MechatronicsPlan");
  } 
-if (!ENCMP100TraditionalPlanflag) { 
-       var ENCMP100TraditionalPlanelement = document.getElementById("ENCMP100TraditionalPlan");
-       ENCMP100TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-       ENCMP100TraditionalPlanelement.classList.add("NaturalSciences");
+if (!ENCMP100MechatronicsPlanflag) { 
+       var ENCMP100MechatronicsPlanelement = document.getElementById("ENCMP100MechatronicsPlan");
+       ENCMP100MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+       ENCMP100MechatronicsPlanelement.classList.add("NaturalSciences");
        
-       that.removeFromClicked("ENCMP100TraditionalPlan");
+       that.removeFromClicked("ENCMP100MechatronicsPlan");
  } 
-if (!ENPH131TraditionalPlanflag) { 
-       var ENPH131TraditionalPlanelement = document.getElementById("ENPH131TraditionalPlan");
-       ENPH131TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-       ENPH131TraditionalPlanelement.classList.add("NaturalSciences");
+if (!ENPH131MechatronicsPlanflag) { 
+       var ENPH131MechatronicsPlanelement = document.getElementById("ENPH131MechatronicsPlan");
+       ENPH131MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+       ENPH131MechatronicsPlanelement.classList.add("NaturalSciences");
        
-       that.removeFromClicked("ENPH131TraditionalPlan");
+       that.removeFromClicked("ENPH131MechatronicsPlan");
  } 
-if (!MECE230TraditionalPlanflag) { 
-       var MECE230TraditionalPlanelement = document.getElementById("MECE230TraditionalPlan");
-       MECE230TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-       MECE230TraditionalPlanelement.classList.add("NaturalSciences");
+if (!MECE230MechatronicsPlanflag) { 
+       var MECE230MechatronicsPlanelement = document.getElementById("MECE230MechatronicsPlan");
+       MECE230MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+       MECE230MechatronicsPlanelement.classList.add("NaturalSciences");
        
-       that.removeFromClicked("MECE230TraditionalPlan");
+       that.removeFromClicked("MECE230MechatronicsPlan");
  } 
-if (!MATE201TraditionalPlanflag) { 
-       var MATE201TraditionalPlanelement = document.getElementById("MATE201TraditionalPlan");
-       MATE201TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-       MATE201TraditionalPlanelement.classList.add("NaturalSciences");
+if (!MATE201MechatronicsPlanflag) { 
+       var MATE201MechatronicsPlanelement = document.getElementById("MATE201MechatronicsPlan");
+       MATE201MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+       MATE201MechatronicsPlanelement.classList.add("NaturalSciences");
        
-       that.removeFromClicked("MATE201TraditionalPlan");
+       that.removeFromClicked("MATE201MechatronicsPlan");
  } 
        break;
        }
       break;
   case "EngineeringProfession":
     switch(planName) {
-      case "TraditionalPlan":
-if (!ENGG100TraditionalPlanflag) { 
-       var ENGG100TraditionalPlanelement = document.getElementById("ENGG100TraditionalPlan");
-       ENGG100TraditionalPlanelement.classList.remove("EngineeringProfession-highlighted");
-       ENGG100TraditionalPlanelement.classList.add("EngineeringProfession");
+      case "MechatronicsPlan":
+if (!ENGG100MechatronicsPlanflag) { 
+       var ENGG100MechatronicsPlanelement = document.getElementById("ENGG100MechatronicsPlan");
+       ENGG100MechatronicsPlanelement.classList.remove("EngineeringProfession-highlighted");
+       ENGG100MechatronicsPlanelement.classList.add("EngineeringProfession");
        
-       that.removeFromClicked("ENGG100TraditionalPlan");
+       that.removeFromClicked("ENGG100MechatronicsPlan");
  } 
-if (!ENGG299TraditionalPlanflag) { 
-       var ENGG299TraditionalPlanelement = document.getElementById("ENGG299TraditionalPlan");
-       ENGG299TraditionalPlanelement.classList.remove("EngineeringProfession-highlighted");
-       ENGG299TraditionalPlanelement.classList.add("EngineeringProfession");
+if (!ENGG299MechatronicsPlanflag) { 
+       var ENGG299MechatronicsPlanelement = document.getElementById("ENGG299MechatronicsPlan");
+       ENGG299MechatronicsPlanelement.classList.remove("EngineeringProfession-highlighted");
+       ENGG299MechatronicsPlanelement.classList.add("EngineeringProfession");
        
-       that.removeFromClicked("ENGG299TraditionalPlan");
+       that.removeFromClicked("ENGG299MechatronicsPlan");
  } 
-if (!ENGG404TraditionalPlanflag) { 
-       var ENGG404TraditionalPlanelement = document.getElementById("ENGG404TraditionalPlan");
-       ENGG404TraditionalPlanelement.classList.remove("EngineeringProfession-highlighted");
-       ENGG404TraditionalPlanelement.classList.add("EngineeringProfession");
+if (!ENGG404MechatronicsPlanflag) { 
+       var ENGG404MechatronicsPlanelement = document.getElementById("ENGG404MechatronicsPlan");
+       ENGG404MechatronicsPlanelement.classList.remove("EngineeringProfession-highlighted");
+       ENGG404MechatronicsPlanelement.classList.add("EngineeringProfession");
        
-       that.removeFromClicked("ENGG404TraditionalPlan");
+       that.removeFromClicked("ENGG404MechatronicsPlan");
  } 
-if (!ENGG400TraditionalPlanflag) { 
-       var ENGG400TraditionalPlanelement = document.getElementById("ENGG400TraditionalPlan");
-       ENGG400TraditionalPlanelement.classList.remove("EngineeringProfession-highlighted");
-       ENGG400TraditionalPlanelement.classList.add("EngineeringProfession");
+if (!ENGG400MechatronicsPlanflag) { 
+       var ENGG400MechatronicsPlanelement = document.getElementById("ENGG400MechatronicsPlan");
+       ENGG400MechatronicsPlanelement.classList.remove("EngineeringProfession-highlighted");
+       ENGG400MechatronicsPlanelement.classList.add("EngineeringProfession");
        
-       that.removeFromClicked("ENGG400TraditionalPlan");
+       that.removeFromClicked("ENGG400MechatronicsPlan");
  } 
        break;
        }
       break;
   case "Other":
     switch(planName) {
-      case "TraditionalPlan":
-if (!ENGL199TraditionalPlanflag) { 
-       var ENGL199TraditionalPlanelement = document.getElementById("ENGL199TraditionalPlan");
-       ENGL199TraditionalPlanelement.classList.remove("Other-highlighted");
-       ENGL199TraditionalPlanelement.classList.add("Other");
+      case "MechatronicsPlan":
+if (!ENGL199MechatronicsPlanflag) { 
+       var ENGL199MechatronicsPlanelement = document.getElementById("ENGL199MechatronicsPlan");
+       ENGL199MechatronicsPlanelement.classList.remove("Other-highlighted");
+       ENGL199MechatronicsPlanelement.classList.add("Other");
        
-       that.removeFromClicked("ENGL199TraditionalPlan");
+       that.removeFromClicked("ENGL199MechatronicsPlan");
  } 
-if (!ENGM401TraditionalPlanflag) { 
-       var ENGM401TraditionalPlanelement = document.getElementById("ENGM401TraditionalPlan");
-       ENGM401TraditionalPlanelement.classList.remove("Other-highlighted");
-       ENGM401TraditionalPlanelement.classList.add("Other");
+if (!ENGM401MechatronicsPlanflag) { 
+       var ENGM401MechatronicsPlanelement = document.getElementById("ENGM401MechatronicsPlan");
+       ENGM401MechatronicsPlanelement.classList.remove("Other-highlighted");
+       ENGM401MechatronicsPlanelement.classList.add("Other");
        
-       that.removeFromClicked("ENGM401TraditionalPlan");
+       that.removeFromClicked("ENGM401MechatronicsPlan");
  } 
        break;
        }
       break;
   case "Math":
     switch(planName) {
-      case "TraditionalPlan":
-if (!MATH100TraditionalPlanflag) { 
-       var MATH100TraditionalPlanelement = document.getElementById("MATH100TraditionalPlan");
-       MATH100TraditionalPlanelement.classList.remove("Math-highlighted");
-       MATH100TraditionalPlanelement.classList.add("Math");
+      case "MechatronicsPlan":
+if (!MATH100MechatronicsPlanflag) { 
+       var MATH100MechatronicsPlanelement = document.getElementById("MATH100MechatronicsPlan");
+       MATH100MechatronicsPlanelement.classList.remove("Math-highlighted");
+       MATH100MechatronicsPlanelement.classList.add("Math");
        
-       that.removeFromClicked("MATH100TraditionalPlan");
+       that.removeFromClicked("MATH100MechatronicsPlan");
  } 
-if (!MATH101TraditionalPlanflag) { 
-       var MATH101TraditionalPlanelement = document.getElementById("MATH101TraditionalPlan");
-       MATH101TraditionalPlanelement.classList.remove("Math-highlighted");
-       MATH101TraditionalPlanelement.classList.add("Math");
+if (!MATH101MechatronicsPlanflag) { 
+       var MATH101MechatronicsPlanelement = document.getElementById("MATH101MechatronicsPlan");
+       MATH101MechatronicsPlanelement.classList.remove("Math-highlighted");
+       MATH101MechatronicsPlanelement.classList.add("Math");
        
-       that.removeFromClicked("MATH101TraditionalPlan");
+       that.removeFromClicked("MATH101MechatronicsPlan");
  } 
-if (!MATH102TraditionalPlanflag) { 
-       var MATH102TraditionalPlanelement = document.getElementById("MATH102TraditionalPlan");
-       MATH102TraditionalPlanelement.classList.remove("Math-highlighted");
-       MATH102TraditionalPlanelement.classList.add("Math");
+if (!MATH102MechatronicsPlanflag) { 
+       var MATH102MechatronicsPlanelement = document.getElementById("MATH102MechatronicsPlan");
+       MATH102MechatronicsPlanelement.classList.remove("Math-highlighted");
+       MATH102MechatronicsPlanelement.classList.add("Math");
        
-       that.removeFromClicked("MATH102TraditionalPlan");
+       that.removeFromClicked("MATH102MechatronicsPlan");
  } 
-if (!MATH201TraditionalPlanflag) { 
-       var MATH201TraditionalPlanelement = document.getElementById("MATH201TraditionalPlan");
-       MATH201TraditionalPlanelement.classList.remove("Math-highlighted");
-       MATH201TraditionalPlanelement.classList.add("Math");
+if (!MATH201MechatronicsPlanflag) { 
+       var MATH201MechatronicsPlanelement = document.getElementById("MATH201MechatronicsPlan");
+       MATH201MechatronicsPlanelement.classList.remove("Math-highlighted");
+       MATH201MechatronicsPlanelement.classList.add("Math");
        
-       that.removeFromClicked("MATH201TraditionalPlan");
+       that.removeFromClicked("MATH201MechatronicsPlan");
  } 
-if (!MATH209TraditionalPlanflag) { 
-       var MATH209TraditionalPlanelement = document.getElementById("MATH209TraditionalPlan");
-       MATH209TraditionalPlanelement.classList.remove("Math-highlighted");
-       MATH209TraditionalPlanelement.classList.add("Math");
+if (!MATH209MechatronicsPlanflag) { 
+       var MATH209MechatronicsPlanelement = document.getElementById("MATH209MechatronicsPlan");
+       MATH209MechatronicsPlanelement.classList.remove("Math-highlighted");
+       MATH209MechatronicsPlanelement.classList.add("Math");
        
-       that.removeFromClicked("MATH209TraditionalPlan");
+       that.removeFromClicked("MATH209MechatronicsPlan");
  } 
-if (!ECE342TraditionalPlanflag) { 
-       var ECE342TraditionalPlanelement = document.getElementById("ECE342TraditionalPlan");
-       ECE342TraditionalPlanelement.classList.remove("Math-highlighted");
-       ECE342TraditionalPlanelement.classList.add("Math");
+if (!ECE342MechatronicsPlanflag) { 
+       var ECE342MechatronicsPlanelement = document.getElementById("ECE342MechatronicsPlan");
+       ECE342MechatronicsPlanelement.classList.remove("Math-highlighted");
+       ECE342MechatronicsPlanelement.classList.add("Math");
        
-       that.removeFromClicked("ECE342TraditionalPlan");
+       that.removeFromClicked("ECE342MechatronicsPlan");
  } 
-if (!MECE390TraditionalPlanflag) { 
-       var MECE390TraditionalPlanelement = document.getElementById("MECE390TraditionalPlan");
-       MECE390TraditionalPlanelement.classList.remove("Math-highlighted");
-       MECE390TraditionalPlanelement.classList.add("Math");
+if (!MECE390MechatronicsPlanflag) { 
+       var MECE390MechatronicsPlanelement = document.getElementById("MECE390MechatronicsPlan");
+       MECE390MechatronicsPlanelement.classList.remove("Math-highlighted");
+       MECE390MechatronicsPlanelement.classList.add("Math");
        
-       that.removeFromClicked("MECE390TraditionalPlan");
+       that.removeFromClicked("MECE390MechatronicsPlan");
  } 
        break;
        }
       break;
   case "EngineeringDesign":
     switch(planName) {
-      case "TraditionalPlan":
-if (!ENGG160TraditionalPlanflag) { 
-       var ENGG160TraditionalPlanelement = document.getElementById("ENGG160TraditionalPlan");
-       ENGG160TraditionalPlanelement.classList.remove("EngineeringDesign-highlighted");
-       ENGG160TraditionalPlanelement.classList.add("EngineeringDesign");
+      case "MechatronicsPlan":
+if (!ENGG160MechatronicsPlanflag) { 
+       var ENGG160MechatronicsPlanelement = document.getElementById("ENGG160MechatronicsPlan");
+       ENGG160MechatronicsPlanelement.classList.remove("EngineeringDesign-highlighted");
+       ENGG160MechatronicsPlanelement.classList.add("EngineeringDesign");
        
-       that.removeFromClicked("ENGG160TraditionalPlan");
+       that.removeFromClicked("ENGG160MechatronicsPlan");
  } 
-if (!MECE260TraditionalPlanflag) { 
-       var MECE260TraditionalPlanelement = document.getElementById("MECE260TraditionalPlan");
-       MECE260TraditionalPlanelement.classList.remove("EngineeringDesign-highlighted");
-       MECE260TraditionalPlanelement.classList.add("EngineeringDesign");
+if (!MECE260MechatronicsPlanflag) { 
+       var MECE260MechatronicsPlanelement = document.getElementById("MECE260MechatronicsPlan");
+       MECE260MechatronicsPlanelement.classList.remove("EngineeringDesign-highlighted");
+       MECE260MechatronicsPlanelement.classList.add("EngineeringDesign");
        
-       that.removeFromClicked("MECE260TraditionalPlan");
+       that.removeFromClicked("MECE260MechatronicsPlan");
  } 
-if (!MECE265TraditionalPlanflag) { 
-       var MECE265TraditionalPlanelement = document.getElementById("MECE265TraditionalPlan");
-       MECE265TraditionalPlanelement.classList.remove("EngineeringDesign-highlighted");
-       MECE265TraditionalPlanelement.classList.add("EngineeringDesign");
+if (!MECE265MechatronicsPlanflag) { 
+       var MECE265MechatronicsPlanelement = document.getElementById("MECE265MechatronicsPlan");
+       MECE265MechatronicsPlanelement.classList.remove("EngineeringDesign-highlighted");
+       MECE265MechatronicsPlanelement.classList.add("EngineeringDesign");
        
-       that.removeFromClicked("MECE265TraditionalPlan");
+       that.removeFromClicked("MECE265MechatronicsPlan");
  } 
-if (!MECE360TraditionalPlanflag) { 
-       var MECE360TraditionalPlanelement = document.getElementById("MECE360TraditionalPlan");
-       MECE360TraditionalPlanelement.classList.remove("EngineeringDesign-highlighted");
-       MECE360TraditionalPlanelement.classList.add("EngineeringDesign");
+if (!MECE360MechatronicsPlanflag) { 
+       var MECE360MechatronicsPlanelement = document.getElementById("MECE360MechatronicsPlan");
+       MECE360MechatronicsPlanelement.classList.remove("EngineeringDesign-highlighted");
+       MECE360MechatronicsPlanelement.classList.add("EngineeringDesign");
        
-       that.removeFromClicked("MECE360TraditionalPlan");
+       that.removeFromClicked("MECE360MechatronicsPlan");
  } 
-if (!MECE460TraditionalPlanflag) { 
-       var MECE460TraditionalPlanelement = document.getElementById("MECE460TraditionalPlan");
-       MECE460TraditionalPlanelement.classList.remove("EngineeringDesign-highlighted");
-       MECE460TraditionalPlanelement.classList.add("EngineeringDesign");
+if (!MECE460MechatronicsPlanflag) { 
+       var MECE460MechatronicsPlanelement = document.getElementById("MECE460MechatronicsPlan");
+       MECE460MechatronicsPlanelement.classList.remove("EngineeringDesign-highlighted");
+       MECE460MechatronicsPlanelement.classList.add("EngineeringDesign");
        
-       that.removeFromClicked("MECE460TraditionalPlan");
+       that.removeFromClicked("MECE460MechatronicsPlan");
  } 
-if (!MECE461TraditionalPlanflag) { 
-       var MECE461TraditionalPlanelement = document.getElementById("MECE461TraditionalPlan");
-       MECE461TraditionalPlanelement.classList.remove("EngineeringDesign-highlighted");
-       MECE461TraditionalPlanelement.classList.add("EngineeringDesign");
+if (!MECE461MechatronicsPlanflag) { 
+       var MECE461MechatronicsPlanelement = document.getElementById("MECE461MechatronicsPlan");
+       MECE461MechatronicsPlanelement.classList.remove("EngineeringDesign-highlighted");
+       MECE461MechatronicsPlanelement.classList.add("EngineeringDesign");
        
-       that.removeFromClicked("MECE461TraditionalPlan");
+       that.removeFromClicked("MECE461MechatronicsPlan");
  } 
        break;
        }
       break;
   case "EngineeringSciences":
     switch(planName) {
-      case "TraditionalPlan":
-if (!CIVE270TraditionalPlanflag) { 
-       var CIVE270TraditionalPlanelement = document.getElementById("CIVE270TraditionalPlan");
-       CIVE270TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-       CIVE270TraditionalPlanelement.classList.add("EngineeringSciences");
+      case "MechatronicsPlan":
+if (!CIVE270MechatronicsPlanflag) { 
+       var CIVE270MechatronicsPlanelement = document.getElementById("CIVE270MechatronicsPlan");
+       CIVE270MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+       CIVE270MechatronicsPlanelement.classList.add("EngineeringSciences");
        
-       that.removeFromClicked("CIVE270TraditionalPlan");
+       that.removeFromClicked("CIVE270MechatronicsPlan");
  } 
-if (!ECE210TraditionalPlanflag) { 
-       var ECE210TraditionalPlanelement = document.getElementById("ECE210TraditionalPlan");
-       ECE210TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-       ECE210TraditionalPlanelement.classList.add("EngineeringSciences");
+if (!ECE210MechatronicsPlanflag) { 
+       var ECE210MechatronicsPlanelement = document.getElementById("ECE210MechatronicsPlan");
+       ECE210MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+       ECE210MechatronicsPlanelement.classList.add("EngineeringSciences");
        
-       that.removeFromClicked("ECE210TraditionalPlan");
+       that.removeFromClicked("ECE210MechatronicsPlan");
  } 
-if (!ECE240TraditionalPlanflag) { 
-       var ECE240TraditionalPlanelement = document.getElementById("ECE240TraditionalPlan");
-       ECE240TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-       ECE240TraditionalPlanelement.classList.add("EngineeringSciences");
+if (!ECE240MechatronicsPlanflag) { 
+       var ECE240MechatronicsPlanelement = document.getElementById("ECE240MechatronicsPlan");
+       ECE240MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+       ECE240MechatronicsPlanelement.classList.add("EngineeringSciences");
        
-       that.removeFromClicked("ECE240TraditionalPlan");
+       that.removeFromClicked("ECE240MechatronicsPlan");
  } 
-if (!CHE243TraditionalPlanflag) { 
-       var CHE243TraditionalPlanelement = document.getElementById("CHE243TraditionalPlan");
-       CHE243TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-       CHE243TraditionalPlanelement.classList.add("EngineeringSciences");
+if (!CHE243MechatronicsPlanflag) { 
+       var CHE243MechatronicsPlanelement = document.getElementById("CHE243MechatronicsPlan");
+       CHE243MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+       CHE243MechatronicsPlanelement.classList.add("EngineeringSciences");
        
-       that.removeFromClicked("CHE243TraditionalPlan");
+       that.removeFromClicked("CHE243MechatronicsPlan");
  } 
-if (!MECE250TraditionalPlanflag) { 
-       var MECE250TraditionalPlanelement = document.getElementById("MECE250TraditionalPlan");
-       MECE250TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-       MECE250TraditionalPlanelement.classList.add("EngineeringSciences");
+if (!MECE250MechatronicsPlanflag) { 
+       var MECE250MechatronicsPlanelement = document.getElementById("MECE250MechatronicsPlan");
+       MECE250MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+       MECE250MechatronicsPlanelement.classList.add("EngineeringSciences");
        
-       that.removeFromClicked("MECE250TraditionalPlan");
+       that.removeFromClicked("MECE250MechatronicsPlan");
  } 
-if (!ECE315TraditionalPlanflag) { 
-       var ECE315TraditionalPlanelement = document.getElementById("ECE315TraditionalPlan");
-       ECE315TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-       ECE315TraditionalPlanelement.classList.add("EngineeringSciences");
+if (!ECE315MechatronicsPlanflag) { 
+       var ECE315MechatronicsPlanelement = document.getElementById("ECE315MechatronicsPlan");
+       ECE315MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+       ECE315MechatronicsPlanelement.classList.add("EngineeringSciences");
        
-       that.removeFromClicked("ECE315TraditionalPlan");
+       that.removeFromClicked("ECE315MechatronicsPlan");
  } 
-if (!MECE350TraditionalPlanflag) { 
-       var MECE350TraditionalPlanelement = document.getElementById("MECE350TraditionalPlan");
-       MECE350TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-       MECE350TraditionalPlanelement.classList.add("EngineeringSciences");
+if (!MECE350MechatronicsPlanflag) { 
+       var MECE350MechatronicsPlanelement = document.getElementById("MECE350MechatronicsPlan");
+       MECE350MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+       MECE350MechatronicsPlanelement.classList.add("EngineeringSciences");
        
-       that.removeFromClicked("MECE350TraditionalPlan");
+       that.removeFromClicked("MECE350MechatronicsPlan");
  } 
-if (!MECE420TraditionalPlanflag) { 
-       var MECE420TraditionalPlanelement = document.getElementById("MECE420TraditionalPlan");
-       MECE420TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-       MECE420TraditionalPlanelement.classList.add("EngineeringSciences");
+if (!MECE420MechatronicsPlanflag) { 
+       var MECE420MechatronicsPlanelement = document.getElementById("MECE420MechatronicsPlan");
+       MECE420MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+       MECE420MechatronicsPlanelement.classList.add("EngineeringSciences");
        
-       that.removeFromClicked("MECE420TraditionalPlan");
+       that.removeFromClicked("MECE420MechatronicsPlan");
  } 
-if (!MECE465TraditionalPlanflag) { 
-       var MECE465TraditionalPlanelement = document.getElementById("MECE465TraditionalPlan");
-       MECE465TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-       MECE465TraditionalPlanelement.classList.add("EngineeringSciences");
+if (!MECE465MechatronicsPlanflag) { 
+       var MECE465MechatronicsPlanelement = document.getElementById("MECE465MechatronicsPlan");
+       MECE465MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+       MECE465MechatronicsPlanelement.classList.add("EngineeringSciences");
        
-       that.removeFromClicked("MECE465TraditionalPlan");
+       that.removeFromClicked("MECE465MechatronicsPlan");
  } 
        break;
        }
       break;
   case "Mechatronics":
     switch(planName) {
-      case "TraditionalPlan":
-if (!MCTR202TraditionalPlanflag) { 
-       var MCTR202TraditionalPlanelement = document.getElementById("MCTR202TraditionalPlan");
-       MCTR202TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-       MCTR202TraditionalPlanelement.classList.add("Mechatronics");
+      case "MechatronicsPlan":
+if (!MCTR202MechatronicsPlanflag) { 
+       var MCTR202MechatronicsPlanelement = document.getElementById("MCTR202MechatronicsPlan");
+       MCTR202MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+       MCTR202MechatronicsPlanelement.classList.add("Mechatronics");
        
-       that.removeFromClicked("MCTR202TraditionalPlan");
+       that.removeFromClicked("MCTR202MechatronicsPlan");
  } 
-if (!MCTR200TraditionalPlanflag) { 
-       var MCTR200TraditionalPlanelement = document.getElementById("MCTR200TraditionalPlan");
-       MCTR200TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-       MCTR200TraditionalPlanelement.classList.add("Mechatronics");
+if (!MCTR200MechatronicsPlanflag) { 
+       var MCTR200MechatronicsPlanelement = document.getElementById("MCTR200MechatronicsPlan");
+       MCTR200MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+       MCTR200MechatronicsPlanelement.classList.add("Mechatronics");
        
-       that.removeFromClicked("MCTR200TraditionalPlan");
+       that.removeFromClicked("MCTR200MechatronicsPlan");
  } 
-if (!MCTR274TraditionalPlanflag) { 
-       var MCTR274TraditionalPlanelement = document.getElementById("MCTR274TraditionalPlan");
-       MCTR274TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-       MCTR274TraditionalPlanelement.classList.add("Mechatronics");
+if (!MCTR274MechatronicsPlanflag) { 
+       var MCTR274MechatronicsPlanelement = document.getElementById("MCTR274MechatronicsPlan");
+       MCTR274MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+       MCTR274MechatronicsPlanelement.classList.add("Mechatronics");
        
-       that.removeFromClicked("MCTR274TraditionalPlan");
+       that.removeFromClicked("MCTR274MechatronicsPlan");
  } 
-if (!MCTR374TraditionalPlanflag) { 
-       var MCTR374TraditionalPlanelement = document.getElementById("MCTR374TraditionalPlan");
-       MCTR374TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-       MCTR374TraditionalPlanelement.classList.add("Mechatronics");
+if (!MCTR374MechatronicsPlanflag) { 
+       var MCTR374MechatronicsPlanelement = document.getElementById("MCTR374MechatronicsPlan");
+       MCTR374MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+       MCTR374MechatronicsPlanelement.classList.add("Mechatronics");
        
-       that.removeFromClicked("MCTR374TraditionalPlan");
+       that.removeFromClicked("MCTR374MechatronicsPlan");
  } 
-if (!MCTR300TraditionalPlanflag) { 
-       var MCTR300TraditionalPlanelement = document.getElementById("MCTR300TraditionalPlan");
-       MCTR300TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-       MCTR300TraditionalPlanelement.classList.add("Mechatronics");
+if (!MCTR300MechatronicsPlanflag) { 
+       var MCTR300MechatronicsPlanelement = document.getElementById("MCTR300MechatronicsPlan");
+       MCTR300MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+       MCTR300MechatronicsPlanelement.classList.add("Mechatronics");
        
-       that.removeFromClicked("MCTR300TraditionalPlan");
+       that.removeFromClicked("MCTR300MechatronicsPlan");
  } 
-if (!MCTR332TraditionalPlanflag) { 
-       var MCTR332TraditionalPlanelement = document.getElementById("MCTR332TraditionalPlan");
-       MCTR332TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-       MCTR332TraditionalPlanelement.classList.add("Mechatronics");
+if (!MCTR332MechatronicsPlanflag) { 
+       var MCTR332MechatronicsPlanelement = document.getElementById("MCTR332MechatronicsPlan");
+       MCTR332MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+       MCTR332MechatronicsPlanelement.classList.add("Mechatronics");
        
-       that.removeFromClicked("MCTR332TraditionalPlan");
+       that.removeFromClicked("MCTR332MechatronicsPlan");
  } 
-if (!MCTR365TraditionalPlanflag) { 
-       var MCTR365TraditionalPlanelement = document.getElementById("MCTR365TraditionalPlan");
-       MCTR365TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-       MCTR365TraditionalPlanelement.classList.add("Mechatronics");
+if (!MCTR365MechatronicsPlanflag) { 
+       var MCTR365MechatronicsPlanelement = document.getElementById("MCTR365MechatronicsPlan");
+       MCTR365MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+       MCTR365MechatronicsPlanelement.classList.add("Mechatronics");
        
-       that.removeFromClicked("MCTR365TraditionalPlan");
+       that.removeFromClicked("MCTR365MechatronicsPlan");
  } 
-if (!MCTR370TraditionalPlanflag) { 
-       var MCTR370TraditionalPlanelement = document.getElementById("MCTR370TraditionalPlan");
-       MCTR370TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-       MCTR370TraditionalPlanelement.classList.add("Mechatronics");
+if (!MCTR370MechatronicsPlanflag) { 
+       var MCTR370MechatronicsPlanelement = document.getElementById("MCTR370MechatronicsPlan");
+       MCTR370MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+       MCTR370MechatronicsPlanelement.classList.add("Mechatronics");
        
-       that.removeFromClicked("MCTR370TraditionalPlan");
+       that.removeFromClicked("MCTR370MechatronicsPlan");
  } 
-if (!MCTR460TraditionalPlanflag) { 
-       var MCTR460TraditionalPlanelement = document.getElementById("MCTR460TraditionalPlan");
-       MCTR460TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-       MCTR460TraditionalPlanelement.classList.add("Mechatronics");
+if (!MCTR460MechatronicsPlanflag) { 
+       var MCTR460MechatronicsPlanelement = document.getElementById("MCTR460MechatronicsPlan");
+       MCTR460MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+       MCTR460MechatronicsPlanelement.classList.add("Mechatronics");
        
-       that.removeFromClicked("MCTR460TraditionalPlan");
+       that.removeFromClicked("MCTR460MechatronicsPlan");
  } 
-if (!MCTR461TraditionalPlanflag) { 
-       var MCTR461TraditionalPlanelement = document.getElementById("MCTR461TraditionalPlan");
-       MCTR461TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-       MCTR461TraditionalPlanelement.classList.add("Mechatronics");
+if (!MCTR461MechatronicsPlanflag) { 
+       var MCTR461MechatronicsPlanelement = document.getElementById("MCTR461MechatronicsPlan");
+       MCTR461MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+       MCTR461MechatronicsPlanelement.classList.add("Mechatronics");
        
-       that.removeFromClicked("MCTR461TraditionalPlan");
+       that.removeFromClicked("MCTR461MechatronicsPlan");
  } 
-if (!MCTR465TraditionalPlanflag) { 
-       var MCTR465TraditionalPlanelement = document.getElementById("MCTR465TraditionalPlan");
-       MCTR465TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-       MCTR465TraditionalPlanelement.classList.add("Mechatronics");
+if (!MCTR465MechatronicsPlanflag) { 
+       var MCTR465MechatronicsPlanelement = document.getElementById("MCTR465MechatronicsPlan");
+       MCTR465MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+       MCTR465MechatronicsPlanelement.classList.add("Mechatronics");
        
-       that.removeFromClicked("MCTR465TraditionalPlan");
+       that.removeFromClicked("MCTR465MechatronicsPlan");
  } 
        break;
        }
@@ -1084,14 +1084,14 @@ if (!MCTR465TraditionalPlanflag) {
   case "COMP":
   case "ComplementaryElective":
     switch(planName) {
-      case "TraditionalPlan":
+      case "MechatronicsPlan":
         var COMPelements = document.getElementsByClassName("COMP-highlighted");
         var i = 0;        
         while (COMPelements.length > 0) {
           var currelement = document.getElementById(COMPelements.item(0).id);
           currelement.classList.remove("COMP-highlighted");
           currelement.classList.add("COMP");
-          that.removeFromClicked("ComplementaryElectiveTraditionalPlan" + i);
+          that.removeFromClicked("ComplementaryElectiveMechatronicsPlan" + i);
           i = i + 1;
         }
        break;
@@ -1099,14 +1099,14 @@ if (!MCTR465TraditionalPlanflag) {
       break;
   case "ITS":
     switch(planName) {
-      case "TraditionalPlan":
+      case "MechatronicsPlan":
         var ITSelements = document.getElementsByClassName("ITS-highlighted");
         var i = 0;        
         while (ITSelements.length > 0) {
           var currelement = document.getElementById(ITSelements.item(0).id);
           currelement.classList.remove("ITS-highlighted");
           currelement.classList.add("ITS");
-          that.removeFromClicked("ITSElectiveTraditionalPlan" + i);
+          that.removeFromClicked("ITSElectiveMechatronicsPlan" + i);
           i = i + 1;
         }
        break;
@@ -1115,14 +1115,14 @@ if (!MCTR465TraditionalPlanflag) {
   case "PROG":
   case "ProgramTechnicalElective":
     switch(planName) {
-      case "TraditionalPlan":
+      case "MechatronicsPlan":
         var PROGelements = document.getElementsByClassName("PROG-highlighted");
         var i = 0;        
         while (PROGelements.length > 0) {
           var currelement = document.getElementById(PROGelements.item(0).id);
           currelement.classList.remove("PROG-highlighted");
           currelement.classList.add("PROG");
-          that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan" + i);
+          that.removeFromClicked("ProgramTechnicalElectiveMechatronicsPlan" + i);
           i = i + 1;
         }
        break;
@@ -1132,293 +1132,293 @@ break;   default:
     console.log("shouldn't be here");
     }
 };
-  var CHEM103TraditionalPlanflag = false;
-  var CHEM103TraditionalPlanrflag = false;
- var CHEM103TraditionalPlanTime = new Date().getTime();
-  var ENGG100TraditionalPlanflag = false;
-  var ENGG100TraditionalPlanrflag = false;
- var ENGG100TraditionalPlanTime = new Date().getTime();
-  var ENGG130TraditionalPlanflag = false;
-  var ENGG130TraditionalPlanrflag = false;
- var ENGG130TraditionalPlanTime = new Date().getTime();
-  var ENGL199TraditionalPlanflag = false;
-  var ENGL199TraditionalPlanrflag = false;
- var ENGL199TraditionalPlanTime = new Date().getTime();
-  var MATH100TraditionalPlanflag = false;
-  var MATH100TraditionalPlanrflag = false;
- var MATH100TraditionalPlanTime = new Date().getTime();
-  var PHYS130TraditionalPlanflag = false;
-  var PHYS130TraditionalPlanrflag = false;
- var PHYS130TraditionalPlanTime = new Date().getTime();
-  var CHEM105TraditionalPlanflag = false;
-  var CHEM105TraditionalPlanrflag = false;
- var CHEM105TraditionalPlanTime = new Date().getTime();
-  var ENCMP100TraditionalPlanflag = false;
-  var ENCMP100TraditionalPlanrflag = false;
- var ENCMP100TraditionalPlanTime = new Date().getTime();
-  var ENGG160TraditionalPlanflag = false;
-  var ENGG160TraditionalPlanrflag = false;
- var ENGG160TraditionalPlanTime = new Date().getTime();
-  var ENPH131TraditionalPlanflag = false;
-  var ENPH131TraditionalPlanrflag = false;
- var ENPH131TraditionalPlanTime = new Date().getTime();
-  var MATH101TraditionalPlanflag = false;
-  var MATH101TraditionalPlanrflag = false;
- var MATH101TraditionalPlanTime = new Date().getTime();
-  var MATH102TraditionalPlanflag = false;
-  var MATH102TraditionalPlanrflag = false;
- var MATH102TraditionalPlanTime = new Date().getTime();
-  var CIVE270TraditionalPlanflag = false;
-  var CIVE270TraditionalPlanrflag = false;
- var CIVE270TraditionalPlanTime = new Date().getTime();
-  var ECE210TraditionalPlanflag = false;
-  var ECE210TraditionalPlanrflag = false;
- var ECE210TraditionalPlanTime = new Date().getTime();
-  var ECE240TraditionalPlanflag = false;
-  var ECE240TraditionalPlanrflag = false;
- var ECE240TraditionalPlanTime = new Date().getTime();
-  var MATH201TraditionalPlanflag = false;
-  var MATH201TraditionalPlanrflag = false;
- var MATH201TraditionalPlanTime = new Date().getTime();
-  var MATH209TraditionalPlanflag = false;
-  var MATH209TraditionalPlanrflag = false;
- var MATH209TraditionalPlanTime = new Date().getTime();
-  var MCTR202TraditionalPlanflag = false;
-  var MCTR202TraditionalPlanrflag = false;
- var MCTR202TraditionalPlanTime = new Date().getTime();
-  var ENGG299TraditionalPlanflag = false;
-  var ENGG299TraditionalPlanrflag = false;
- var ENGG299TraditionalPlanTime = new Date().getTime();
-  var CHE243TraditionalPlanflag = false;
-  var CHE243TraditionalPlanrflag = false;
- var CHE243TraditionalPlanTime = new Date().getTime();
-  var MCTR200TraditionalPlanflag = false;
-  var MCTR200TraditionalPlanrflag = false;
- var MCTR200TraditionalPlanTime = new Date().getTime();
-  var MCTR274TraditionalPlanflag = false;
-  var MCTR274TraditionalPlanrflag = false;
- var MCTR274TraditionalPlanTime = new Date().getTime();
-  var MECE230TraditionalPlanflag = false;
-  var MECE230TraditionalPlanrflag = false;
- var MECE230TraditionalPlanTime = new Date().getTime();
-  var MECE250TraditionalPlanflag = false;
-  var MECE250TraditionalPlanrflag = false;
- var MECE250TraditionalPlanTime = new Date().getTime();
-  var MECE260TraditionalPlanflag = false;
-  var MECE260TraditionalPlanrflag = false;
- var MECE260TraditionalPlanTime = new Date().getTime();
-  var MECE265TraditionalPlanflag = false;
-  var MECE265TraditionalPlanrflag = false;
- var MECE265TraditionalPlanTime = new Date().getTime();
-  var ECE315TraditionalPlanflag = false;
-  var ECE315TraditionalPlanrflag = false;
- var ECE315TraditionalPlanTime = new Date().getTime();
-  var ECE342TraditionalPlanflag = false;
-  var ECE342TraditionalPlanrflag = false;
- var ECE342TraditionalPlanTime = new Date().getTime();
-  var MCTR374TraditionalPlanflag = false;
-  var MCTR374TraditionalPlanrflag = false;
- var MCTR374TraditionalPlanTime = new Date().getTime();
-  var MECE350TraditionalPlanflag = false;
-  var MECE350TraditionalPlanrflag = false;
- var MECE350TraditionalPlanTime = new Date().getTime();
-  var MECE360TraditionalPlanflag = false;
-  var MECE360TraditionalPlanrflag = false;
- var MECE360TraditionalPlanTime = new Date().getTime();
-  var MECE390TraditionalPlanflag = false;
-  var MECE390TraditionalPlanrflag = false;
- var MECE390TraditionalPlanTime = new Date().getTime();
-  var ENGM401TraditionalPlanflag = false;
-  var ENGM401TraditionalPlanrflag = false;
- var ENGM401TraditionalPlanTime = new Date().getTime();
-  var MCTR300TraditionalPlanflag = false;
-  var MCTR300TraditionalPlanrflag = false;
- var MCTR300TraditionalPlanTime = new Date().getTime();
-  var MCTR332TraditionalPlanflag = false;
-  var MCTR332TraditionalPlanrflag = false;
- var MCTR332TraditionalPlanTime = new Date().getTime();
-  var MCTR365TraditionalPlanflag = false;
-  var MCTR365TraditionalPlanrflag = false;
- var MCTR365TraditionalPlanTime = new Date().getTime();
-  var MCTR370TraditionalPlanflag = false;
-  var MCTR370TraditionalPlanrflag = false;
- var MCTR370TraditionalPlanTime = new Date().getTime();
-  var MECE420TraditionalPlanflag = false;
-  var MECE420TraditionalPlanrflag = false;
- var MECE420TraditionalPlanTime = new Date().getTime();
-  var ComplementaryElectiveTraditionalPlan0flag = false;
-  var ComplementaryElectiveTraditionalPlan0rflag = false;
- var ComplementaryElectiveTraditionalPlan0Time = new Date().getTime();
-  var ENGG404TraditionalPlanflag = false;
-  var ENGG404TraditionalPlanrflag = false;
- var ENGG404TraditionalPlanTime = new Date().getTime();
-  var ITSElectiveTraditionalPlan0flag = false;
-  var ITSElectiveTraditionalPlan0rflag = false;
- var ITSElectiveTraditionalPlan0Time = new Date().getTime();
-  var MATE201TraditionalPlanflag = false;
-  var MATE201TraditionalPlanrflag = false;
- var MATE201TraditionalPlanTime = new Date().getTime();
-  var MCTR460TraditionalPlanflag = false;
-  var MCTR460TraditionalPlanrflag = false;
- var MCTR460TraditionalPlanTime = new Date().getTime();
-  var MECE460TraditionalPlanflag = false;
-  var MECE460TraditionalPlanrflag = false;
- var MECE460TraditionalPlanTime = new Date().getTime();
-  var ENGG400TraditionalPlanflag = false;
-  var ENGG400TraditionalPlanrflag = false;
- var ENGG400TraditionalPlanTime = new Date().getTime();
-  var MCTR461TraditionalPlanflag = false;
-  var MCTR461TraditionalPlanrflag = false;
- var MCTR461TraditionalPlanTime = new Date().getTime();
-  var MCTR465TraditionalPlanflag = false;
-  var MCTR465TraditionalPlanrflag = false;
- var MCTR465TraditionalPlanTime = new Date().getTime();
-  var MECE461TraditionalPlanflag = false;
-  var MECE461TraditionalPlanrflag = false;
- var MECE461TraditionalPlanTime = new Date().getTime();
-  var MECE465TraditionalPlanflag = false;
-  var MECE465TraditionalPlanrflag = false;
- var MECE465TraditionalPlanTime = new Date().getTime();
-  var ProgramTechnicalElectiveTraditionalPlan0flag = false;
-  var ProgramTechnicalElectiveTraditionalPlan0rflag = false;
- var ProgramTechnicalElectiveTraditionalPlan0Time = new Date().getTime();
-  var ProgramTechnicalElectiveTraditionalPlan1flag = false;
-  var ProgramTechnicalElectiveTraditionalPlan1rflag = false;
- var ProgramTechnicalElectiveTraditionalPlan1Time = new Date().getTime();
-$scope.CHEM103TraditionalPlanListener = function () {
+  var CHEM103MechatronicsPlanflag = false;
+  var CHEM103MechatronicsPlanrflag = false;
+ var CHEM103MechatronicsPlanTime = new Date().getTime();
+  var ENGG100MechatronicsPlanflag = false;
+  var ENGG100MechatronicsPlanrflag = false;
+ var ENGG100MechatronicsPlanTime = new Date().getTime();
+  var ENGG130MechatronicsPlanflag = false;
+  var ENGG130MechatronicsPlanrflag = false;
+ var ENGG130MechatronicsPlanTime = new Date().getTime();
+  var ENGL199MechatronicsPlanflag = false;
+  var ENGL199MechatronicsPlanrflag = false;
+ var ENGL199MechatronicsPlanTime = new Date().getTime();
+  var MATH100MechatronicsPlanflag = false;
+  var MATH100MechatronicsPlanrflag = false;
+ var MATH100MechatronicsPlanTime = new Date().getTime();
+  var PHYS130MechatronicsPlanflag = false;
+  var PHYS130MechatronicsPlanrflag = false;
+ var PHYS130MechatronicsPlanTime = new Date().getTime();
+  var CHEM105MechatronicsPlanflag = false;
+  var CHEM105MechatronicsPlanrflag = false;
+ var CHEM105MechatronicsPlanTime = new Date().getTime();
+  var ENCMP100MechatronicsPlanflag = false;
+  var ENCMP100MechatronicsPlanrflag = false;
+ var ENCMP100MechatronicsPlanTime = new Date().getTime();
+  var ENGG160MechatronicsPlanflag = false;
+  var ENGG160MechatronicsPlanrflag = false;
+ var ENGG160MechatronicsPlanTime = new Date().getTime();
+  var ENPH131MechatronicsPlanflag = false;
+  var ENPH131MechatronicsPlanrflag = false;
+ var ENPH131MechatronicsPlanTime = new Date().getTime();
+  var MATH101MechatronicsPlanflag = false;
+  var MATH101MechatronicsPlanrflag = false;
+ var MATH101MechatronicsPlanTime = new Date().getTime();
+  var MATH102MechatronicsPlanflag = false;
+  var MATH102MechatronicsPlanrflag = false;
+ var MATH102MechatronicsPlanTime = new Date().getTime();
+  var CIVE270MechatronicsPlanflag = false;
+  var CIVE270MechatronicsPlanrflag = false;
+ var CIVE270MechatronicsPlanTime = new Date().getTime();
+  var ECE210MechatronicsPlanflag = false;
+  var ECE210MechatronicsPlanrflag = false;
+ var ECE210MechatronicsPlanTime = new Date().getTime();
+  var ECE240MechatronicsPlanflag = false;
+  var ECE240MechatronicsPlanrflag = false;
+ var ECE240MechatronicsPlanTime = new Date().getTime();
+  var MATH201MechatronicsPlanflag = false;
+  var MATH201MechatronicsPlanrflag = false;
+ var MATH201MechatronicsPlanTime = new Date().getTime();
+  var MATH209MechatronicsPlanflag = false;
+  var MATH209MechatronicsPlanrflag = false;
+ var MATH209MechatronicsPlanTime = new Date().getTime();
+  var MCTR202MechatronicsPlanflag = false;
+  var MCTR202MechatronicsPlanrflag = false;
+ var MCTR202MechatronicsPlanTime = new Date().getTime();
+  var ENGG299MechatronicsPlanflag = false;
+  var ENGG299MechatronicsPlanrflag = false;
+ var ENGG299MechatronicsPlanTime = new Date().getTime();
+  var CHE243MechatronicsPlanflag = false;
+  var CHE243MechatronicsPlanrflag = false;
+ var CHE243MechatronicsPlanTime = new Date().getTime();
+  var MCTR200MechatronicsPlanflag = false;
+  var MCTR200MechatronicsPlanrflag = false;
+ var MCTR200MechatronicsPlanTime = new Date().getTime();
+  var MCTR274MechatronicsPlanflag = false;
+  var MCTR274MechatronicsPlanrflag = false;
+ var MCTR274MechatronicsPlanTime = new Date().getTime();
+  var MECE230MechatronicsPlanflag = false;
+  var MECE230MechatronicsPlanrflag = false;
+ var MECE230MechatronicsPlanTime = new Date().getTime();
+  var MECE250MechatronicsPlanflag = false;
+  var MECE250MechatronicsPlanrflag = false;
+ var MECE250MechatronicsPlanTime = new Date().getTime();
+  var MECE260MechatronicsPlanflag = false;
+  var MECE260MechatronicsPlanrflag = false;
+ var MECE260MechatronicsPlanTime = new Date().getTime();
+  var MECE265MechatronicsPlanflag = false;
+  var MECE265MechatronicsPlanrflag = false;
+ var MECE265MechatronicsPlanTime = new Date().getTime();
+  var ECE315MechatronicsPlanflag = false;
+  var ECE315MechatronicsPlanrflag = false;
+ var ECE315MechatronicsPlanTime = new Date().getTime();
+  var ECE342MechatronicsPlanflag = false;
+  var ECE342MechatronicsPlanrflag = false;
+ var ECE342MechatronicsPlanTime = new Date().getTime();
+  var MCTR374MechatronicsPlanflag = false;
+  var MCTR374MechatronicsPlanrflag = false;
+ var MCTR374MechatronicsPlanTime = new Date().getTime();
+  var MECE350MechatronicsPlanflag = false;
+  var MECE350MechatronicsPlanrflag = false;
+ var MECE350MechatronicsPlanTime = new Date().getTime();
+  var MECE360MechatronicsPlanflag = false;
+  var MECE360MechatronicsPlanrflag = false;
+ var MECE360MechatronicsPlanTime = new Date().getTime();
+  var MECE390MechatronicsPlanflag = false;
+  var MECE390MechatronicsPlanrflag = false;
+ var MECE390MechatronicsPlanTime = new Date().getTime();
+  var ENGM401MechatronicsPlanflag = false;
+  var ENGM401MechatronicsPlanrflag = false;
+ var ENGM401MechatronicsPlanTime = new Date().getTime();
+  var MCTR300MechatronicsPlanflag = false;
+  var MCTR300MechatronicsPlanrflag = false;
+ var MCTR300MechatronicsPlanTime = new Date().getTime();
+  var MCTR332MechatronicsPlanflag = false;
+  var MCTR332MechatronicsPlanrflag = false;
+ var MCTR332MechatronicsPlanTime = new Date().getTime();
+  var MCTR365MechatronicsPlanflag = false;
+  var MCTR365MechatronicsPlanrflag = false;
+ var MCTR365MechatronicsPlanTime = new Date().getTime();
+  var MCTR370MechatronicsPlanflag = false;
+  var MCTR370MechatronicsPlanrflag = false;
+ var MCTR370MechatronicsPlanTime = new Date().getTime();
+  var MECE420MechatronicsPlanflag = false;
+  var MECE420MechatronicsPlanrflag = false;
+ var MECE420MechatronicsPlanTime = new Date().getTime();
+  var ComplementaryElectiveMechatronicsPlan0flag = false;
+  var ComplementaryElectiveMechatronicsPlan0rflag = false;
+ var ComplementaryElectiveMechatronicsPlan0Time = new Date().getTime();
+  var ENGG404MechatronicsPlanflag = false;
+  var ENGG404MechatronicsPlanrflag = false;
+ var ENGG404MechatronicsPlanTime = new Date().getTime();
+  var ITSElectiveMechatronicsPlan0flag = false;
+  var ITSElectiveMechatronicsPlan0rflag = false;
+ var ITSElectiveMechatronicsPlan0Time = new Date().getTime();
+  var MATE201MechatronicsPlanflag = false;
+  var MATE201MechatronicsPlanrflag = false;
+ var MATE201MechatronicsPlanTime = new Date().getTime();
+  var MCTR460MechatronicsPlanflag = false;
+  var MCTR460MechatronicsPlanrflag = false;
+ var MCTR460MechatronicsPlanTime = new Date().getTime();
+  var MECE460MechatronicsPlanflag = false;
+  var MECE460MechatronicsPlanrflag = false;
+ var MECE460MechatronicsPlanTime = new Date().getTime();
+  var ENGG400MechatronicsPlanflag = false;
+  var ENGG400MechatronicsPlanrflag = false;
+ var ENGG400MechatronicsPlanTime = new Date().getTime();
+  var MCTR461MechatronicsPlanflag = false;
+  var MCTR461MechatronicsPlanrflag = false;
+ var MCTR461MechatronicsPlanTime = new Date().getTime();
+  var MCTR465MechatronicsPlanflag = false;
+  var MCTR465MechatronicsPlanrflag = false;
+ var MCTR465MechatronicsPlanTime = new Date().getTime();
+  var MECE461MechatronicsPlanflag = false;
+  var MECE461MechatronicsPlanrflag = false;
+ var MECE461MechatronicsPlanTime = new Date().getTime();
+  var MECE465MechatronicsPlanflag = false;
+  var MECE465MechatronicsPlanrflag = false;
+ var MECE465MechatronicsPlanTime = new Date().getTime();
+  var ProgramTechnicalElectiveMechatronicsPlan0flag = false;
+  var ProgramTechnicalElectiveMechatronicsPlan0rflag = false;
+ var ProgramTechnicalElectiveMechatronicsPlan0Time = new Date().getTime();
+  var ProgramTechnicalElectiveMechatronicsPlan1flag = false;
+  var ProgramTechnicalElectiveMechatronicsPlan1rflag = false;
+ var ProgramTechnicalElectiveMechatronicsPlan1Time = new Date().getTime();
+$scope.CHEM103MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - CHEM103TraditionalPlanTime <= 200) { 
-        CHEM103TraditionalPlanTime = currentTime;
+if (currentTime - CHEM103MechatronicsPlanTime <= 200) { 
+        CHEM103MechatronicsPlanTime = currentTime;
         return;
     }
-CHEM103TraditionalPlanTime = currentTime;
-  var CHEM103TraditionalPlanelement = document.getElementById("CHEM103TraditionalPlan");
- if (!CHEM103TraditionalPlanflag) {
-     if (CHEM103TraditionalPlanelement.classList.contains("NaturalSciences-highlighted")) { 
-     CHEM103TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-     CHEM103TraditionalPlanelement.classList.add("NaturalSciences");
+CHEM103MechatronicsPlanTime = currentTime;
+  var CHEM103MechatronicsPlanelement = document.getElementById("CHEM103MechatronicsPlan");
+ if (!CHEM103MechatronicsPlanflag) {
+     if (CHEM103MechatronicsPlanelement.classList.contains("NaturalSciences-highlighted")) { 
+     CHEM103MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+     CHEM103MechatronicsPlanelement.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine2());
-     CHEM103TraditionalPlanelement.classList.remove("NaturalSciences");
-     CHEM103TraditionalPlanelement.classList.add("NaturalSciences-highlighted");
-     that.addToClicked(["CHEM103TraditionalPlan", "NaturalSciences"]);
-      CHEM103TraditionalPlanflag=true
+     CHEM103MechatronicsPlanelement.classList.remove("NaturalSciences");
+     CHEM103MechatronicsPlanelement.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["CHEM103MechatronicsPlan", "NaturalSciences"]);
+      CHEM103MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine2());
-     CHEM103TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-     CHEM103TraditionalPlanelement.classList.add("NaturalSciences");
-     that.removeFromClicked("CHEM103TraditionalPlan");
-      CHEM103TraditionalPlanflag=false
+     CHEM103MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+     CHEM103MechatronicsPlanelement.classList.add("NaturalSciences");
+     that.removeFromClicked("CHEM103MechatronicsPlan");
+      CHEM103MechatronicsPlanflag=false
   }
 };
-$scope.ENGG100TraditionalPlanListener = function () {
+$scope.ENGG100MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - ENGG100TraditionalPlanTime <= 200) { 
-        ENGG100TraditionalPlanTime = currentTime;
+if (currentTime - ENGG100MechatronicsPlanTime <= 200) { 
+        ENGG100MechatronicsPlanTime = currentTime;
         return;
     }
-ENGG100TraditionalPlanTime = currentTime;
-  var ENGG100TraditionalPlanelement = document.getElementById("ENGG100TraditionalPlan");
- if (!ENGG100TraditionalPlanflag) {
-     if (ENGG100TraditionalPlanelement.classList.contains("EngineeringProfession-highlighted")) { 
-     ENGG100TraditionalPlanelement.classList.remove("EngineeringProfession-highlighted");
-     ENGG100TraditionalPlanelement.classList.add("EngineeringProfession");
+ENGG100MechatronicsPlanTime = currentTime;
+  var ENGG100MechatronicsPlanelement = document.getElementById("ENGG100MechatronicsPlan");
+ if (!ENGG100MechatronicsPlanflag) {
+     if (ENGG100MechatronicsPlanelement.classList.contains("EngineeringProfession-highlighted")) { 
+     ENGG100MechatronicsPlanelement.classList.remove("EngineeringProfession-highlighted");
+     ENGG100MechatronicsPlanelement.classList.add("EngineeringProfession");
       return;
-}     ENGG100TraditionalPlanelement.classList.remove("EngineeringProfession");
-     ENGG100TraditionalPlanelement.classList.add("EngineeringProfession-highlighted");
-     that.addToClicked(["ENGG100TraditionalPlan", "EngineeringProfession"]);
-      ENGG100TraditionalPlanflag=true
+}     ENGG100MechatronicsPlanelement.classList.remove("EngineeringProfession");
+     ENGG100MechatronicsPlanelement.classList.add("EngineeringProfession-highlighted");
+     that.addToClicked(["ENGG100MechatronicsPlan", "EngineeringProfession"]);
+      ENGG100MechatronicsPlanflag=true
   }
  else {
-     ENGG100TraditionalPlanelement.classList.remove("EngineeringProfession-highlighted");
-     ENGG100TraditionalPlanelement.classList.add("EngineeringProfession");
-     that.removeFromClicked("ENGG100TraditionalPlan");
-      ENGG100TraditionalPlanflag=false
+     ENGG100MechatronicsPlanelement.classList.remove("EngineeringProfession-highlighted");
+     ENGG100MechatronicsPlanelement.classList.add("EngineeringProfession");
+     that.removeFromClicked("ENGG100MechatronicsPlan");
+      ENGG100MechatronicsPlanflag=false
   }
 };
-$scope.ENGG130TraditionalPlanListener = function () {
+$scope.ENGG130MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - ENGG130TraditionalPlanTime <= 200) { 
-        ENGG130TraditionalPlanTime = currentTime;
+if (currentTime - ENGG130MechatronicsPlanTime <= 200) { 
+        ENGG130MechatronicsPlanTime = currentTime;
         return;
     }
-ENGG130TraditionalPlanTime = currentTime;
-  var ENGG130TraditionalPlanelement = document.getElementById("ENGG130TraditionalPlan");
- if (!ENGG130TraditionalPlanflag) {
-     if (ENGG130TraditionalPlanelement.classList.contains("NaturalSciences-highlighted")) { 
-     ENGG130TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-     ENGG130TraditionalPlanelement.classList.add("NaturalSciences");
+ENGG130MechatronicsPlanTime = currentTime;
+  var ENGG130MechatronicsPlanelement = document.getElementById("ENGG130MechatronicsPlan");
+ if (!ENGG130MechatronicsPlanflag) {
+     if (ENGG130MechatronicsPlanelement.classList.contains("NaturalSciences-highlighted")) { 
+     ENGG130MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+     ENGG130MechatronicsPlanelement.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine0());
       that.addLine(getLine5());
       that.addLine(getLine9());
       that.addLine(getLine22());
-     ENGG130TraditionalPlanelement.classList.remove("NaturalSciences");
-     ENGG130TraditionalPlanelement.classList.add("NaturalSciences-highlighted");
-     that.addToClicked(["ENGG130TraditionalPlan", "NaturalSciences"]);
-      ENGG130TraditionalPlanflag=true
+     ENGG130MechatronicsPlanelement.classList.remove("NaturalSciences");
+     ENGG130MechatronicsPlanelement.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["ENGG130MechatronicsPlan", "NaturalSciences"]);
+      ENGG130MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine0());
       that.removeLine(getLine5());
       that.removeLine(getLine9());
       that.removeLine(getLine22());
-     ENGG130TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-     ENGG130TraditionalPlanelement.classList.add("NaturalSciences");
-     that.removeFromClicked("ENGG130TraditionalPlan");
-      ENGG130TraditionalPlanflag=false
+     ENGG130MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+     ENGG130MechatronicsPlanelement.classList.add("NaturalSciences");
+     that.removeFromClicked("ENGG130MechatronicsPlan");
+      ENGG130MechatronicsPlanflag=false
   }
 };
-$scope.ENGL199TraditionalPlanListener = function () {
+$scope.ENGL199MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - ENGL199TraditionalPlanTime <= 200) { 
-        ENGL199TraditionalPlanTime = currentTime;
+if (currentTime - ENGL199MechatronicsPlanTime <= 200) { 
+        ENGL199MechatronicsPlanTime = currentTime;
         return;
     }
-ENGL199TraditionalPlanTime = currentTime;
-  var ENGL199TraditionalPlanelement = document.getElementById("ENGL199TraditionalPlan");
- if (!ENGL199TraditionalPlanflag) {
-     if (ENGL199TraditionalPlanelement.classList.contains("Other-highlighted")) { 
-     ENGL199TraditionalPlanelement.classList.remove("Other-highlighted");
-     ENGL199TraditionalPlanelement.classList.add("Other");
+ENGL199MechatronicsPlanTime = currentTime;
+  var ENGL199MechatronicsPlanelement = document.getElementById("ENGL199MechatronicsPlan");
+ if (!ENGL199MechatronicsPlanflag) {
+     if (ENGL199MechatronicsPlanelement.classList.contains("Other-highlighted")) { 
+     ENGL199MechatronicsPlanelement.classList.remove("Other-highlighted");
+     ENGL199MechatronicsPlanelement.classList.add("Other");
       return;
 }      that.addLine(getLine3());
-     ENGL199TraditionalPlanelement.classList.remove("Other");
-     ENGL199TraditionalPlanelement.classList.add("Other-highlighted");
-     that.addToClicked(["ENGL199TraditionalPlan", "Other"]);
-      ENGL199TraditionalPlanflag=true
+     ENGL199MechatronicsPlanelement.classList.remove("Other");
+     ENGL199MechatronicsPlanelement.classList.add("Other-highlighted");
+     that.addToClicked(["ENGL199MechatronicsPlan", "Other"]);
+      ENGL199MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine3());
-     ENGL199TraditionalPlanelement.classList.remove("Other-highlighted");
-     ENGL199TraditionalPlanelement.classList.add("Other");
-     that.removeFromClicked("ENGL199TraditionalPlan");
-      ENGL199TraditionalPlanflag=false
+     ENGL199MechatronicsPlanelement.classList.remove("Other-highlighted");
+     ENGL199MechatronicsPlanelement.classList.add("Other");
+     that.removeFromClicked("ENGL199MechatronicsPlan");
+      ENGL199MechatronicsPlanflag=false
   }
 };
-$scope.MATH100TraditionalPlanListener = function () {
+$scope.MATH100MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MATH100TraditionalPlanTime <= 200) { 
-        MATH100TraditionalPlanTime = currentTime;
+if (currentTime - MATH100MechatronicsPlanTime <= 200) { 
+        MATH100MechatronicsPlanTime = currentTime;
         return;
     }
-MATH100TraditionalPlanTime = currentTime;
-  var MATH100TraditionalPlanelement = document.getElementById("MATH100TraditionalPlan");
- if (!MATH100TraditionalPlanflag) {
-     if (MATH100TraditionalPlanelement.classList.contains("Math-highlighted")) { 
-     MATH100TraditionalPlanelement.classList.remove("Math-highlighted");
-     MATH100TraditionalPlanelement.classList.add("Math");
+MATH100MechatronicsPlanTime = currentTime;
+  var MATH100MechatronicsPlanelement = document.getElementById("MATH100MechatronicsPlan");
+ if (!MATH100MechatronicsPlanflag) {
+     if (MATH100MechatronicsPlanelement.classList.contains("Math-highlighted")) { 
+     MATH100MechatronicsPlanelement.classList.remove("Math-highlighted");
+     MATH100MechatronicsPlanelement.classList.add("Math");
       return;
 }      that.addLine(getLine0());
       that.addLine(getLine1());
       that.addLine(getLine4());
       that.addLine(getLine7());
       that.addLine(getLine8());
-     MATH100TraditionalPlanelement.classList.remove("Math");
-     MATH100TraditionalPlanelement.classList.add("Math-highlighted");
-     that.addToClicked(["MATH100TraditionalPlan", "Math"]);
-      MATH100TraditionalPlanflag=true
+     MATH100MechatronicsPlanelement.classList.remove("Math");
+     MATH100MechatronicsPlanelement.classList.add("Math-highlighted");
+     that.addToClicked(["MATH100MechatronicsPlan", "Math"]);
+      MATH100MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine0());
@@ -1426,146 +1426,146 @@ MATH100TraditionalPlanTime = currentTime;
       that.removeLine(getLine4());
       that.removeLine(getLine7());
       that.removeLine(getLine8());
-     MATH100TraditionalPlanelement.classList.remove("Math-highlighted");
-     MATH100TraditionalPlanelement.classList.add("Math");
-     that.removeFromClicked("MATH100TraditionalPlan");
-      MATH100TraditionalPlanflag=false
+     MATH100MechatronicsPlanelement.classList.remove("Math-highlighted");
+     MATH100MechatronicsPlanelement.classList.add("Math");
+     that.removeFromClicked("MATH100MechatronicsPlan");
+      MATH100MechatronicsPlanflag=false
   }
 };
-$scope.PHYS130TraditionalPlanListener = function () {
+$scope.PHYS130MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - PHYS130TraditionalPlanTime <= 200) { 
-        PHYS130TraditionalPlanTime = currentTime;
+if (currentTime - PHYS130MechatronicsPlanTime <= 200) { 
+        PHYS130MechatronicsPlanTime = currentTime;
         return;
     }
-PHYS130TraditionalPlanTime = currentTime;
-  var PHYS130TraditionalPlanelement = document.getElementById("PHYS130TraditionalPlan");
- if (!PHYS130TraditionalPlanflag) {
-     if (PHYS130TraditionalPlanelement.classList.contains("NaturalSciences-highlighted")) { 
-     PHYS130TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-     PHYS130TraditionalPlanelement.classList.add("NaturalSciences");
+PHYS130MechatronicsPlanTime = currentTime;
+  var PHYS130MechatronicsPlanelement = document.getElementById("PHYS130MechatronicsPlan");
+ if (!PHYS130MechatronicsPlanflag) {
+     if (PHYS130MechatronicsPlanelement.classList.contains("NaturalSciences-highlighted")) { 
+     PHYS130MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+     PHYS130MechatronicsPlanelement.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine1());
-     PHYS130TraditionalPlanelement.classList.remove("NaturalSciences");
-     PHYS130TraditionalPlanelement.classList.add("NaturalSciences-highlighted");
-     that.addToClicked(["PHYS130TraditionalPlan", "NaturalSciences"]);
-      PHYS130TraditionalPlanflag=true
+     PHYS130MechatronicsPlanelement.classList.remove("NaturalSciences");
+     PHYS130MechatronicsPlanelement.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["PHYS130MechatronicsPlan", "NaturalSciences"]);
+      PHYS130MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine1());
-     PHYS130TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-     PHYS130TraditionalPlanelement.classList.add("NaturalSciences");
-     that.removeFromClicked("PHYS130TraditionalPlan");
-      PHYS130TraditionalPlanflag=false
+     PHYS130MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+     PHYS130MechatronicsPlanelement.classList.add("NaturalSciences");
+     that.removeFromClicked("PHYS130MechatronicsPlan");
+      PHYS130MechatronicsPlanflag=false
   }
 };
-$scope.CHEM105TraditionalPlanListener = function () {
+$scope.CHEM105MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - CHEM105TraditionalPlanTime <= 200) { 
-        CHEM105TraditionalPlanTime = currentTime;
+if (currentTime - CHEM105MechatronicsPlanTime <= 200) { 
+        CHEM105MechatronicsPlanTime = currentTime;
         return;
     }
-CHEM105TraditionalPlanTime = currentTime;
-  var CHEM105TraditionalPlanelement = document.getElementById("CHEM105TraditionalPlan");
- if (!CHEM105TraditionalPlanflag) {
-     if (CHEM105TraditionalPlanelement.classList.contains("NaturalSciences-highlighted")) { 
-     CHEM105TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-     CHEM105TraditionalPlanelement.classList.add("NaturalSciences");
+CHEM105MechatronicsPlanTime = currentTime;
+  var CHEM105MechatronicsPlanelement = document.getElementById("CHEM105MechatronicsPlan");
+ if (!CHEM105MechatronicsPlanflag) {
+     if (CHEM105MechatronicsPlanelement.classList.contains("NaturalSciences-highlighted")) { 
+     CHEM105MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+     CHEM105MechatronicsPlanelement.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine2());
       that.addLine(getLine41());
-     CHEM105TraditionalPlanelement.classList.remove("NaturalSciences");
-     CHEM105TraditionalPlanelement.classList.add("NaturalSciences-highlighted");
-     that.addToClicked(["CHEM105TraditionalPlan", "NaturalSciences"]);
-      CHEM105TraditionalPlanflag=true
+     CHEM105MechatronicsPlanelement.classList.remove("NaturalSciences");
+     CHEM105MechatronicsPlanelement.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["CHEM105MechatronicsPlan", "NaturalSciences"]);
+      CHEM105MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine2());
       that.removeLine(getLine41());
-     CHEM105TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-     CHEM105TraditionalPlanelement.classList.add("NaturalSciences");
-     that.removeFromClicked("CHEM105TraditionalPlan");
-      CHEM105TraditionalPlanflag=false
+     CHEM105MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+     CHEM105MechatronicsPlanelement.classList.add("NaturalSciences");
+     that.removeFromClicked("CHEM105MechatronicsPlan");
+      CHEM105MechatronicsPlanflag=false
   }
 };
-$scope.ENCMP100TraditionalPlanListener = function () {
+$scope.ENCMP100MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - ENCMP100TraditionalPlanTime <= 200) { 
-        ENCMP100TraditionalPlanTime = currentTime;
+if (currentTime - ENCMP100MechatronicsPlanTime <= 200) { 
+        ENCMP100MechatronicsPlanTime = currentTime;
         return;
     }
-ENCMP100TraditionalPlanTime = currentTime;
-  var ENCMP100TraditionalPlanelement = document.getElementById("ENCMP100TraditionalPlan");
- if (!ENCMP100TraditionalPlanflag) {
-     if (ENCMP100TraditionalPlanelement.classList.contains("NaturalSciences-highlighted")) { 
-     ENCMP100TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-     ENCMP100TraditionalPlanelement.classList.add("NaturalSciences");
+ENCMP100MechatronicsPlanTime = currentTime;
+  var ENCMP100MechatronicsPlanelement = document.getElementById("ENCMP100MechatronicsPlan");
+ if (!ENCMP100MechatronicsPlanflag) {
+     if (ENCMP100MechatronicsPlanelement.classList.contains("NaturalSciences-highlighted")) { 
+     ENCMP100MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+     ENCMP100MechatronicsPlanelement.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine19());
-     ENCMP100TraditionalPlanelement.classList.remove("NaturalSciences");
-     ENCMP100TraditionalPlanelement.classList.add("NaturalSciences-highlighted");
-     that.addToClicked(["ENCMP100TraditionalPlan", "NaturalSciences"]);
-      ENCMP100TraditionalPlanflag=true
+     ENCMP100MechatronicsPlanelement.classList.remove("NaturalSciences");
+     ENCMP100MechatronicsPlanelement.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["ENCMP100MechatronicsPlan", "NaturalSciences"]);
+      ENCMP100MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine19());
-     ENCMP100TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-     ENCMP100TraditionalPlanelement.classList.add("NaturalSciences");
-     that.removeFromClicked("ENCMP100TraditionalPlan");
-      ENCMP100TraditionalPlanflag=false
+     ENCMP100MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+     ENCMP100MechatronicsPlanelement.classList.add("NaturalSciences");
+     that.removeFromClicked("ENCMP100MechatronicsPlan");
+      ENCMP100MechatronicsPlanflag=false
   }
 };
-$scope.ENGG160TraditionalPlanListener = function () {
+$scope.ENGG160MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - ENGG160TraditionalPlanTime <= 200) { 
-        ENGG160TraditionalPlanTime = currentTime;
+if (currentTime - ENGG160MechatronicsPlanTime <= 200) { 
+        ENGG160MechatronicsPlanTime = currentTime;
         return;
     }
-ENGG160TraditionalPlanTime = currentTime;
-  var ENGG160TraditionalPlanelement = document.getElementById("ENGG160TraditionalPlan");
- if (!ENGG160TraditionalPlanflag) {
-     if (ENGG160TraditionalPlanelement.classList.contains("EngineeringDesign-highlighted")) { 
-     ENGG160TraditionalPlanelement.classList.remove("EngineeringDesign-highlighted");
-     ENGG160TraditionalPlanelement.classList.add("EngineeringDesign");
+ENGG160MechatronicsPlanTime = currentTime;
+  var ENGG160MechatronicsPlanelement = document.getElementById("ENGG160MechatronicsPlan");
+ if (!ENGG160MechatronicsPlanflag) {
+     if (ENGG160MechatronicsPlanelement.classList.contains("EngineeringDesign-highlighted")) { 
+     ENGG160MechatronicsPlanelement.classList.remove("EngineeringDesign-highlighted");
+     ENGG160MechatronicsPlanelement.classList.add("EngineeringDesign");
       return;
 }      that.addLine(getLine3());
       that.addLine(getLine25());
-     ENGG160TraditionalPlanelement.classList.remove("EngineeringDesign");
-     ENGG160TraditionalPlanelement.classList.add("EngineeringDesign-highlighted");
-     that.addToClicked(["ENGG160TraditionalPlan", "EngineeringDesign"]);
-      ENGG160TraditionalPlanflag=true
+     ENGG160MechatronicsPlanelement.classList.remove("EngineeringDesign");
+     ENGG160MechatronicsPlanelement.classList.add("EngineeringDesign-highlighted");
+     that.addToClicked(["ENGG160MechatronicsPlan", "EngineeringDesign"]);
+      ENGG160MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine3());
       that.removeLine(getLine25());
-     ENGG160TraditionalPlanelement.classList.remove("EngineeringDesign-highlighted");
-     ENGG160TraditionalPlanelement.classList.add("EngineeringDesign");
-     that.removeFromClicked("ENGG160TraditionalPlan");
-      ENGG160TraditionalPlanflag=false
+     ENGG160MechatronicsPlanelement.classList.remove("EngineeringDesign-highlighted");
+     ENGG160MechatronicsPlanelement.classList.add("EngineeringDesign");
+     that.removeFromClicked("ENGG160MechatronicsPlan");
+      ENGG160MechatronicsPlanflag=false
   }
 };
-$scope.ENPH131TraditionalPlanListener = function () {
+$scope.ENPH131MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - ENPH131TraditionalPlanTime <= 200) { 
-        ENPH131TraditionalPlanTime = currentTime;
+if (currentTime - ENPH131MechatronicsPlanTime <= 200) { 
+        ENPH131MechatronicsPlanTime = currentTime;
         return;
     }
-ENPH131TraditionalPlanTime = currentTime;
-  var ENPH131TraditionalPlanelement = document.getElementById("ENPH131TraditionalPlan");
- if (!ENPH131TraditionalPlanflag) {
-     if (ENPH131TraditionalPlanelement.classList.contains("NaturalSciences-highlighted")) { 
-     ENPH131TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-     ENPH131TraditionalPlanelement.classList.add("NaturalSciences");
+ENPH131MechatronicsPlanTime = currentTime;
+  var ENPH131MechatronicsPlanelement = document.getElementById("ENPH131MechatronicsPlan");
+ if (!ENPH131MechatronicsPlanflag) {
+     if (ENPH131MechatronicsPlanelement.classList.contains("NaturalSciences-highlighted")) { 
+     ENPH131MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+     ENPH131MechatronicsPlanelement.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine4());
       that.addLine(getLine5());
       that.addLine(getLine6());
       that.addLine(getLine21());
       that.addLine(getLine23());
-     ENPH131TraditionalPlanelement.classList.remove("NaturalSciences");
-     ENPH131TraditionalPlanelement.classList.add("NaturalSciences-highlighted");
-     that.addToClicked(["ENPH131TraditionalPlan", "NaturalSciences"]);
-      ENPH131TraditionalPlanflag=true
+     ENPH131MechatronicsPlanelement.classList.remove("NaturalSciences");
+     ENPH131MechatronicsPlanelement.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["ENPH131MechatronicsPlan", "NaturalSciences"]);
+      ENPH131MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine4());
@@ -1573,24 +1573,24 @@ ENPH131TraditionalPlanTime = currentTime;
       that.removeLine(getLine6());
       that.removeLine(getLine21());
       that.removeLine(getLine23());
-     ENPH131TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-     ENPH131TraditionalPlanelement.classList.add("NaturalSciences");
-     that.removeFromClicked("ENPH131TraditionalPlan");
-      ENPH131TraditionalPlanflag=false
+     ENPH131MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+     ENPH131MechatronicsPlanelement.classList.add("NaturalSciences");
+     that.removeFromClicked("ENPH131MechatronicsPlan");
+      ENPH131MechatronicsPlanflag=false
   }
 };
-$scope.MATH101TraditionalPlanListener = function () {
+$scope.MATH101MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MATH101TraditionalPlanTime <= 200) { 
-        MATH101TraditionalPlanTime = currentTime;
+if (currentTime - MATH101MechatronicsPlanTime <= 200) { 
+        MATH101MechatronicsPlanTime = currentTime;
         return;
     }
-MATH101TraditionalPlanTime = currentTime;
-  var MATH101TraditionalPlanelement = document.getElementById("MATH101TraditionalPlan");
- if (!MATH101TraditionalPlanflag) {
-     if (MATH101TraditionalPlanelement.classList.contains("Math-highlighted")) { 
-     MATH101TraditionalPlanelement.classList.remove("Math-highlighted");
-     MATH101TraditionalPlanelement.classList.add("Math");
+MATH101MechatronicsPlanTime = currentTime;
+  var MATH101MechatronicsPlanelement = document.getElementById("MATH101MechatronicsPlan");
+ if (!MATH101MechatronicsPlanflag) {
+     if (MATH101MechatronicsPlanelement.classList.contains("Math-highlighted")) { 
+     MATH101MechatronicsPlanelement.classList.remove("Math-highlighted");
+     MATH101MechatronicsPlanelement.classList.add("Math");
       return;
 }      that.addLine(getLine6());
       that.addLine(getLine7());
@@ -1600,10 +1600,10 @@ MATH101TraditionalPlanTime = currentTime;
       that.addLine(getLine18());
       that.addLine(getLine20());
       that.addLine(getLine24());
-     MATH101TraditionalPlanelement.classList.remove("Math");
-     MATH101TraditionalPlanelement.classList.add("Math-highlighted");
-     that.addToClicked(["MATH101TraditionalPlan", "Math"]);
-      MATH101TraditionalPlanflag=true
+     MATH101MechatronicsPlanelement.classList.remove("Math");
+     MATH101MechatronicsPlanelement.classList.add("Math-highlighted");
+     that.addToClicked(["MATH101MechatronicsPlan", "Math"]);
+      MATH101MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine6());
@@ -1614,67 +1614,67 @@ MATH101TraditionalPlanTime = currentTime;
       that.removeLine(getLine18());
       that.removeLine(getLine20());
       that.removeLine(getLine24());
-     MATH101TraditionalPlanelement.classList.remove("Math-highlighted");
-     MATH101TraditionalPlanelement.classList.add("Math");
-     that.removeFromClicked("MATH101TraditionalPlan");
-      MATH101TraditionalPlanflag=false
+     MATH101MechatronicsPlanelement.classList.remove("Math-highlighted");
+     MATH101MechatronicsPlanelement.classList.add("Math");
+     that.removeFromClicked("MATH101MechatronicsPlan");
+      MATH101MechatronicsPlanflag=false
   }
 };
-$scope.MATH102TraditionalPlanListener = function () {
+$scope.MATH102MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MATH102TraditionalPlanTime <= 200) { 
-        MATH102TraditionalPlanTime = currentTime;
+if (currentTime - MATH102MechatronicsPlanTime <= 200) { 
+        MATH102MechatronicsPlanTime = currentTime;
         return;
     }
-MATH102TraditionalPlanTime = currentTime;
-  var MATH102TraditionalPlanelement = document.getElementById("MATH102TraditionalPlan");
- if (!MATH102TraditionalPlanflag) {
-     if (MATH102TraditionalPlanelement.classList.contains("Math-highlighted")) { 
-     MATH102TraditionalPlanelement.classList.remove("Math-highlighted");
-     MATH102TraditionalPlanelement.classList.add("Math");
+MATH102MechatronicsPlanTime = currentTime;
+  var MATH102MechatronicsPlanelement = document.getElementById("MATH102MechatronicsPlan");
+ if (!MATH102MechatronicsPlanflag) {
+     if (MATH102MechatronicsPlanelement.classList.contains("Math-highlighted")) { 
+     MATH102MechatronicsPlanelement.classList.remove("Math-highlighted");
+     MATH102MechatronicsPlanelement.classList.add("Math");
       return;
 }      that.addLine(getLine8());
       that.addLine(getLine15());
       that.addLine(getLine17());
       that.addLine(getLine35());
-     MATH102TraditionalPlanelement.classList.remove("Math");
-     MATH102TraditionalPlanelement.classList.add("Math-highlighted");
-     that.addToClicked(["MATH102TraditionalPlan", "Math"]);
-      MATH102TraditionalPlanflag=true
+     MATH102MechatronicsPlanelement.classList.remove("Math");
+     MATH102MechatronicsPlanelement.classList.add("Math-highlighted");
+     that.addToClicked(["MATH102MechatronicsPlan", "Math"]);
+      MATH102MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine8());
       that.removeLine(getLine15());
       that.removeLine(getLine17());
       that.removeLine(getLine35());
-     MATH102TraditionalPlanelement.classList.remove("Math-highlighted");
-     MATH102TraditionalPlanelement.classList.add("Math");
-     that.removeFromClicked("MATH102TraditionalPlan");
-      MATH102TraditionalPlanflag=false
+     MATH102MechatronicsPlanelement.classList.remove("Math-highlighted");
+     MATH102MechatronicsPlanelement.classList.add("Math");
+     that.removeFromClicked("MATH102MechatronicsPlan");
+      MATH102MechatronicsPlanflag=false
   }
 };
-$scope.CIVE270TraditionalPlanListener = function () {
+$scope.CIVE270MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - CIVE270TraditionalPlanTime <= 200) { 
-        CIVE270TraditionalPlanTime = currentTime;
+if (currentTime - CIVE270MechatronicsPlanTime <= 200) { 
+        CIVE270MechatronicsPlanTime = currentTime;
         return;
     }
-CIVE270TraditionalPlanTime = currentTime;
-  var CIVE270TraditionalPlanelement = document.getElementById("CIVE270TraditionalPlan");
- if (!CIVE270TraditionalPlanflag) {
-     if (CIVE270TraditionalPlanelement.classList.contains("EngineeringSciences-highlighted")) { 
-     CIVE270TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-     CIVE270TraditionalPlanelement.classList.add("EngineeringSciences");
+CIVE270MechatronicsPlanTime = currentTime;
+  var CIVE270MechatronicsPlanelement = document.getElementById("CIVE270MechatronicsPlan");
+ if (!CIVE270MechatronicsPlanflag) {
+     if (CIVE270MechatronicsPlanelement.classList.contains("EngineeringSciences-highlighted")) { 
+     CIVE270MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+     CIVE270MechatronicsPlanelement.classList.add("EngineeringSciences");
       return;
 }      that.addLine(getLine9());
       that.addLine(getLine10());
       that.addLine(getLine27());
       that.addLine(getLine33());
       that.addLine(getLine37());
-     CIVE270TraditionalPlanelement.classList.remove("EngineeringSciences");
-     CIVE270TraditionalPlanelement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["CIVE270TraditionalPlan", "EngineeringSciences"]);
-      CIVE270TraditionalPlanflag=true
+     CIVE270MechatronicsPlanelement.classList.remove("EngineeringSciences");
+     CIVE270MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
+     that.addToClicked(["CIVE270MechatronicsPlan", "EngineeringSciences"]);
+      CIVE270MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine9());
@@ -1682,527 +1682,527 @@ CIVE270TraditionalPlanTime = currentTime;
       that.removeLine(getLine27());
       that.removeLine(getLine33());
       that.removeLine(getLine37());
-     CIVE270TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-     CIVE270TraditionalPlanelement.classList.add("EngineeringSciences");
-     that.removeFromClicked("CIVE270TraditionalPlan");
-      CIVE270TraditionalPlanflag=false
+     CIVE270MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+     CIVE270MechatronicsPlanelement.classList.add("EngineeringSciences");
+     that.removeFromClicked("CIVE270MechatronicsPlan");
+      CIVE270MechatronicsPlanflag=false
   }
 };
-$scope.ECE210TraditionalPlanListener = function () {
+$scope.ECE210MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - ECE210TraditionalPlanTime <= 200) { 
-        ECE210TraditionalPlanTime = currentTime;
+if (currentTime - ECE210MechatronicsPlanTime <= 200) { 
+        ECE210MechatronicsPlanTime = currentTime;
         return;
     }
-ECE210TraditionalPlanTime = currentTime;
-  var ECE210TraditionalPlanelement = document.getElementById("ECE210TraditionalPlan");
- if (!ECE210TraditionalPlanflag) {
-     if (ECE210TraditionalPlanelement.classList.contains("EngineeringSciences-highlighted")) { 
-     ECE210TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-     ECE210TraditionalPlanelement.classList.add("EngineeringSciences");
+ECE210MechatronicsPlanTime = currentTime;
+  var ECE210MechatronicsPlanelement = document.getElementById("ECE210MechatronicsPlan");
+ if (!ECE210MechatronicsPlanflag) {
+     if (ECE210MechatronicsPlanelement.classList.contains("EngineeringSciences-highlighted")) { 
+     ECE210MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+     ECE210MechatronicsPlanelement.classList.add("EngineeringSciences");
       return;
-}     ECE210TraditionalPlanelement.classList.remove("EngineeringSciences");
-     ECE210TraditionalPlanelement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["ECE210TraditionalPlan", "EngineeringSciences"]);
-      ECE210TraditionalPlanflag=true
+}     ECE210MechatronicsPlanelement.classList.remove("EngineeringSciences");
+     ECE210MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
+     that.addToClicked(["ECE210MechatronicsPlan", "EngineeringSciences"]);
+      ECE210MechatronicsPlanflag=true
   }
  else {
-     ECE210TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-     ECE210TraditionalPlanelement.classList.add("EngineeringSciences");
-     that.removeFromClicked("ECE210TraditionalPlan");
-      ECE210TraditionalPlanflag=false
+     ECE210MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+     ECE210MechatronicsPlanelement.classList.add("EngineeringSciences");
+     that.removeFromClicked("ECE210MechatronicsPlan");
+      ECE210MechatronicsPlanflag=false
   }
 };
-$scope.ECE240TraditionalPlanListener = function () {
+$scope.ECE240MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - ECE240TraditionalPlanTime <= 200) { 
-        ECE240TraditionalPlanTime = currentTime;
+if (currentTime - ECE240MechatronicsPlanTime <= 200) { 
+        ECE240MechatronicsPlanTime = currentTime;
         return;
     }
-ECE240TraditionalPlanTime = currentTime;
-  var ECE240TraditionalPlanelement = document.getElementById("ECE240TraditionalPlan");
- if (!ECE240TraditionalPlanflag) {
-     if (ECE240TraditionalPlanelement.classList.contains("EngineeringSciences-highlighted")) { 
-     ECE240TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-     ECE240TraditionalPlanelement.classList.add("EngineeringSciences");
+ECE240MechatronicsPlanTime = currentTime;
+  var ECE240MechatronicsPlanelement = document.getElementById("ECE240MechatronicsPlan");
+ if (!ECE240MechatronicsPlanflag) {
+     if (ECE240MechatronicsPlanelement.classList.contains("EngineeringSciences-highlighted")) { 
+     ECE240MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+     ECE240MechatronicsPlanelement.classList.add("EngineeringSciences");
       return;
 }      that.addLine(getLine11());
       that.addLine(getLine12());
-     ECE240TraditionalPlanelement.classList.remove("EngineeringSciences");
-     ECE240TraditionalPlanelement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["ECE240TraditionalPlan", "EngineeringSciences"]);
-      ECE240TraditionalPlanflag=true
+     ECE240MechatronicsPlanelement.classList.remove("EngineeringSciences");
+     ECE240MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
+     that.addToClicked(["ECE240MechatronicsPlan", "EngineeringSciences"]);
+      ECE240MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine11());
       that.removeLine(getLine12());
-     ECE240TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-     ECE240TraditionalPlanelement.classList.add("EngineeringSciences");
-     that.removeFromClicked("ECE240TraditionalPlan");
-      ECE240TraditionalPlanflag=false
+     ECE240MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+     ECE240MechatronicsPlanelement.classList.add("EngineeringSciences");
+     that.removeFromClicked("ECE240MechatronicsPlan");
+      ECE240MechatronicsPlanflag=false
   }
 };
-$scope.MATH201TraditionalPlanListener = function () {
+$scope.MATH201MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MATH201TraditionalPlanTime <= 200) { 
-        MATH201TraditionalPlanTime = currentTime;
+if (currentTime - MATH201MechatronicsPlanTime <= 200) { 
+        MATH201MechatronicsPlanTime = currentTime;
         return;
     }
-MATH201TraditionalPlanTime = currentTime;
-  var MATH201TraditionalPlanelement = document.getElementById("MATH201TraditionalPlan");
- if (!MATH201TraditionalPlanflag) {
-     if (MATH201TraditionalPlanelement.classList.contains("Math-highlighted")) { 
-     MATH201TraditionalPlanelement.classList.remove("Math-highlighted");
-     MATH201TraditionalPlanelement.classList.add("Math");
+MATH201MechatronicsPlanTime = currentTime;
+  var MATH201MechatronicsPlanelement = document.getElementById("MATH201MechatronicsPlan");
+ if (!MATH201MechatronicsPlanflag) {
+     if (MATH201MechatronicsPlanelement.classList.contains("Math-highlighted")) { 
+     MATH201MechatronicsPlanelement.classList.remove("Math-highlighted");
+     MATH201MechatronicsPlanelement.classList.add("Math");
       return;
 }      that.addLine(getLine12());
       that.addLine(getLine13());
       that.addLine(getLine36());
-     MATH201TraditionalPlanelement.classList.remove("Math");
-     MATH201TraditionalPlanelement.classList.add("Math-highlighted");
-     that.addToClicked(["MATH201TraditionalPlan", "Math"]);
-      MATH201TraditionalPlanflag=true
+     MATH201MechatronicsPlanelement.classList.remove("Math");
+     MATH201MechatronicsPlanelement.classList.add("Math-highlighted");
+     that.addToClicked(["MATH201MechatronicsPlan", "Math"]);
+      MATH201MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine12());
       that.removeLine(getLine13());
       that.removeLine(getLine36());
-     MATH201TraditionalPlanelement.classList.remove("Math-highlighted");
-     MATH201TraditionalPlanelement.classList.add("Math");
-     that.removeFromClicked("MATH201TraditionalPlan");
-      MATH201TraditionalPlanflag=false
+     MATH201MechatronicsPlanelement.classList.remove("Math-highlighted");
+     MATH201MechatronicsPlanelement.classList.add("Math");
+     that.removeFromClicked("MATH201MechatronicsPlan");
+      MATH201MechatronicsPlanflag=false
   }
 };
-$scope.MATH209TraditionalPlanListener = function () {
+$scope.MATH209MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MATH209TraditionalPlanTime <= 200) { 
-        MATH209TraditionalPlanTime = currentTime;
+if (currentTime - MATH209MechatronicsPlanTime <= 200) { 
+        MATH209MechatronicsPlanTime = currentTime;
         return;
     }
-MATH209TraditionalPlanTime = currentTime;
-  var MATH209TraditionalPlanelement = document.getElementById("MATH209TraditionalPlan");
- if (!MATH209TraditionalPlanflag) {
-     if (MATH209TraditionalPlanelement.classList.contains("Math-highlighted")) { 
-     MATH209TraditionalPlanelement.classList.remove("Math-highlighted");
-     MATH209TraditionalPlanelement.classList.add("Math");
+MATH209MechatronicsPlanTime = currentTime;
+  var MATH209MechatronicsPlanelement = document.getElementById("MATH209MechatronicsPlan");
+ if (!MATH209MechatronicsPlanflag) {
+     if (MATH209MechatronicsPlanelement.classList.contains("Math-highlighted")) { 
+     MATH209MechatronicsPlanelement.classList.remove("Math-highlighted");
+     MATH209MechatronicsPlanelement.classList.add("Math");
       return;
 }      that.addLine(getLine13());
       that.addLine(getLine14());
       that.addLine(getLine15());
       that.addLine(getLine30());
-     MATH209TraditionalPlanelement.classList.remove("Math");
-     MATH209TraditionalPlanelement.classList.add("Math-highlighted");
-     that.addToClicked(["MATH209TraditionalPlan", "Math"]);
-      MATH209TraditionalPlanflag=true
+     MATH209MechatronicsPlanelement.classList.remove("Math");
+     MATH209MechatronicsPlanelement.classList.add("Math-highlighted");
+     that.addToClicked(["MATH209MechatronicsPlan", "Math"]);
+      MATH209MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine13());
       that.removeLine(getLine14());
       that.removeLine(getLine15());
       that.removeLine(getLine30());
-     MATH209TraditionalPlanelement.classList.remove("Math-highlighted");
-     MATH209TraditionalPlanelement.classList.add("Math");
-     that.removeFromClicked("MATH209TraditionalPlan");
-      MATH209TraditionalPlanflag=false
+     MATH209MechatronicsPlanelement.classList.remove("Math-highlighted");
+     MATH209MechatronicsPlanelement.classList.add("Math");
+     that.removeFromClicked("MATH209MechatronicsPlan");
+      MATH209MechatronicsPlanflag=false
   }
 };
-$scope.MCTR202TraditionalPlanListener = function () {
+$scope.MCTR202MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MCTR202TraditionalPlanTime <= 200) { 
-        MCTR202TraditionalPlanTime = currentTime;
+if (currentTime - MCTR202MechatronicsPlanTime <= 200) { 
+        MCTR202MechatronicsPlanTime = currentTime;
         return;
     }
-MCTR202TraditionalPlanTime = currentTime;
-  var MCTR202TraditionalPlanelement = document.getElementById("MCTR202TraditionalPlan");
- if (!MCTR202TraditionalPlanflag) {
-     if (MCTR202TraditionalPlanelement.classList.contains("Mechatronics-highlighted")) { 
-     MCTR202TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR202TraditionalPlanelement.classList.add("Mechatronics");
+MCTR202MechatronicsPlanTime = currentTime;
+  var MCTR202MechatronicsPlanelement = document.getElementById("MCTR202MechatronicsPlan");
+ if (!MCTR202MechatronicsPlanflag) {
+     if (MCTR202MechatronicsPlanelement.classList.contains("Mechatronics-highlighted")) { 
+     MCTR202MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR202MechatronicsPlanelement.classList.add("Mechatronics");
       return;
 }      that.addLine(getLine11());
       that.addLine(getLine16());
       that.addLine(getLine17());
       that.addLine(getLine28());
-     MCTR202TraditionalPlanelement.classList.remove("Mechatronics");
-     MCTR202TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-     that.addToClicked(["MCTR202TraditionalPlan", "Mechatronics"]);
-      MCTR202TraditionalPlanflag=true
+     MCTR202MechatronicsPlanelement.classList.remove("Mechatronics");
+     MCTR202MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+     that.addToClicked(["MCTR202MechatronicsPlan", "Mechatronics"]);
+      MCTR202MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine11());
       that.removeLine(getLine16());
       that.removeLine(getLine17());
       that.removeLine(getLine28());
-     MCTR202TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR202TraditionalPlanelement.classList.add("Mechatronics");
-     that.removeFromClicked("MCTR202TraditionalPlan");
-      MCTR202TraditionalPlanflag=false
+     MCTR202MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR202MechatronicsPlanelement.classList.add("Mechatronics");
+     that.removeFromClicked("MCTR202MechatronicsPlan");
+      MCTR202MechatronicsPlanflag=false
   }
 };
-$scope.ENGG299TraditionalPlanListener = function () {
+$scope.ENGG299MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - ENGG299TraditionalPlanTime <= 200) { 
-        ENGG299TraditionalPlanTime = currentTime;
+if (currentTime - ENGG299MechatronicsPlanTime <= 200) { 
+        ENGG299MechatronicsPlanTime = currentTime;
         return;
     }
-ENGG299TraditionalPlanTime = currentTime;
-  var ENGG299TraditionalPlanelement = document.getElementById("ENGG299TraditionalPlan");
- if (!ENGG299TraditionalPlanflag) {
-     if (ENGG299TraditionalPlanelement.classList.contains("EngineeringProfession-highlighted")) { 
-     ENGG299TraditionalPlanelement.classList.remove("EngineeringProfession-highlighted");
-     ENGG299TraditionalPlanelement.classList.add("EngineeringProfession");
+ENGG299MechatronicsPlanTime = currentTime;
+  var ENGG299MechatronicsPlanelement = document.getElementById("ENGG299MechatronicsPlan");
+ if (!ENGG299MechatronicsPlanflag) {
+     if (ENGG299MechatronicsPlanelement.classList.contains("EngineeringProfession-highlighted")) { 
+     ENGG299MechatronicsPlanelement.classList.remove("EngineeringProfession-highlighted");
+     ENGG299MechatronicsPlanelement.classList.add("EngineeringProfession");
       return;
-}     ENGG299TraditionalPlanelement.classList.remove("EngineeringProfession");
-     ENGG299TraditionalPlanelement.classList.add("EngineeringProfession-highlighted");
-     that.addToClicked(["ENGG299TraditionalPlan", "EngineeringProfession"]);
-      ENGG299TraditionalPlanflag=true
+}     ENGG299MechatronicsPlanelement.classList.remove("EngineeringProfession");
+     ENGG299MechatronicsPlanelement.classList.add("EngineeringProfession-highlighted");
+     that.addToClicked(["ENGG299MechatronicsPlan", "EngineeringProfession"]);
+      ENGG299MechatronicsPlanflag=true
   }
  else {
-     ENGG299TraditionalPlanelement.classList.remove("EngineeringProfession-highlighted");
-     ENGG299TraditionalPlanelement.classList.add("EngineeringProfession");
-     that.removeFromClicked("ENGG299TraditionalPlan");
-      ENGG299TraditionalPlanflag=false
+     ENGG299MechatronicsPlanelement.classList.remove("EngineeringProfession-highlighted");
+     ENGG299MechatronicsPlanelement.classList.add("EngineeringProfession");
+     that.removeFromClicked("ENGG299MechatronicsPlan");
+      ENGG299MechatronicsPlanflag=false
   }
 };
-$scope.CHE243TraditionalPlanListener = function () {
+$scope.CHE243MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - CHE243TraditionalPlanTime <= 200) { 
-        CHE243TraditionalPlanTime = currentTime;
+if (currentTime - CHE243MechatronicsPlanTime <= 200) { 
+        CHE243MechatronicsPlanTime = currentTime;
         return;
     }
-CHE243TraditionalPlanTime = currentTime;
-  var CHE243TraditionalPlanelement = document.getElementById("CHE243TraditionalPlan");
- if (!CHE243TraditionalPlanflag) {
-     if (CHE243TraditionalPlanelement.classList.contains("EngineeringSciences-highlighted")) { 
-     CHE243TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-     CHE243TraditionalPlanelement.classList.add("EngineeringSciences");
+CHE243MechatronicsPlanTime = currentTime;
+  var CHE243MechatronicsPlanelement = document.getElementById("CHE243MechatronicsPlan");
+ if (!CHE243MechatronicsPlanflag) {
+     if (CHE243MechatronicsPlanelement.classList.contains("EngineeringSciences-highlighted")) { 
+     CHE243MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+     CHE243MechatronicsPlanelement.classList.add("EngineeringSciences");
       return;
 }      that.addLine(getLine18());
-     CHE243TraditionalPlanelement.classList.remove("EngineeringSciences");
-     CHE243TraditionalPlanelement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["CHE243TraditionalPlan", "EngineeringSciences"]);
-      CHE243TraditionalPlanflag=true
+     CHE243MechatronicsPlanelement.classList.remove("EngineeringSciences");
+     CHE243MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
+     that.addToClicked(["CHE243MechatronicsPlan", "EngineeringSciences"]);
+      CHE243MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine18());
-     CHE243TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-     CHE243TraditionalPlanelement.classList.add("EngineeringSciences");
-     that.removeFromClicked("CHE243TraditionalPlan");
-      CHE243TraditionalPlanflag=false
+     CHE243MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+     CHE243MechatronicsPlanelement.classList.add("EngineeringSciences");
+     that.removeFromClicked("CHE243MechatronicsPlan");
+      CHE243MechatronicsPlanflag=false
   }
 };
-$scope.MCTR200TraditionalPlanListener = function () {
+$scope.MCTR200MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MCTR200TraditionalPlanTime <= 200) { 
-        MCTR200TraditionalPlanTime = currentTime;
+if (currentTime - MCTR200MechatronicsPlanTime <= 200) { 
+        MCTR200MechatronicsPlanTime = currentTime;
         return;
     }
-MCTR200TraditionalPlanTime = currentTime;
-  var MCTR200TraditionalPlanelement = document.getElementById("MCTR200TraditionalPlan");
- if (!MCTR200TraditionalPlanflag) {
-     if (MCTR200TraditionalPlanelement.classList.contains("Mechatronics-highlighted")) { 
-     MCTR200TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR200TraditionalPlanelement.classList.add("Mechatronics");
+MCTR200MechatronicsPlanTime = currentTime;
+  var MCTR200MechatronicsPlanelement = document.getElementById("MCTR200MechatronicsPlan");
+ if (!MCTR200MechatronicsPlanflag) {
+     if (MCTR200MechatronicsPlanelement.classList.contains("Mechatronics-highlighted")) { 
+     MCTR200MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR200MechatronicsPlanelement.classList.add("Mechatronics");
       return;
-}     MCTR200TraditionalPlanelement.classList.remove("Mechatronics");
-     MCTR200TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-     that.addToClicked(["MCTR200TraditionalPlan", "Mechatronics"]);
-      MCTR200TraditionalPlanflag=true
+}     MCTR200MechatronicsPlanelement.classList.remove("Mechatronics");
+     MCTR200MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+     that.addToClicked(["MCTR200MechatronicsPlan", "Mechatronics"]);
+      MCTR200MechatronicsPlanflag=true
   }
  else {
-     MCTR200TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR200TraditionalPlanelement.classList.add("Mechatronics");
-     that.removeFromClicked("MCTR200TraditionalPlan");
-      MCTR200TraditionalPlanflag=false
+     MCTR200MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR200MechatronicsPlanelement.classList.add("Mechatronics");
+     that.removeFromClicked("MCTR200MechatronicsPlan");
+      MCTR200MechatronicsPlanflag=false
   }
 };
-$scope.MCTR274TraditionalPlanListener = function () {
+$scope.MCTR274MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MCTR274TraditionalPlanTime <= 200) { 
-        MCTR274TraditionalPlanTime = currentTime;
+if (currentTime - MCTR274MechatronicsPlanTime <= 200) { 
+        MCTR274MechatronicsPlanTime = currentTime;
         return;
     }
-MCTR274TraditionalPlanTime = currentTime;
-  var MCTR274TraditionalPlanelement = document.getElementById("MCTR274TraditionalPlan");
- if (!MCTR274TraditionalPlanflag) {
-     if (MCTR274TraditionalPlanelement.classList.contains("Mechatronics-highlighted")) { 
-     MCTR274TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR274TraditionalPlanelement.classList.add("Mechatronics");
+MCTR274MechatronicsPlanTime = currentTime;
+  var MCTR274MechatronicsPlanelement = document.getElementById("MCTR274MechatronicsPlan");
+ if (!MCTR274MechatronicsPlanflag) {
+     if (MCTR274MechatronicsPlanelement.classList.contains("Mechatronics-highlighted")) { 
+     MCTR274MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR274MechatronicsPlanelement.classList.add("Mechatronics");
       return;
 }      that.addLine(getLine19());
-     MCTR274TraditionalPlanelement.classList.remove("Mechatronics");
-     MCTR274TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-     that.addToClicked(["MCTR274TraditionalPlan", "Mechatronics"]);
-      MCTR274TraditionalPlanflag=true
+     MCTR274MechatronicsPlanelement.classList.remove("Mechatronics");
+     MCTR274MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+     that.addToClicked(["MCTR274MechatronicsPlan", "Mechatronics"]);
+      MCTR274MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine19());
-     MCTR274TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR274TraditionalPlanelement.classList.add("Mechatronics");
-     that.removeFromClicked("MCTR274TraditionalPlan");
-      MCTR274TraditionalPlanflag=false
+     MCTR274MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR274MechatronicsPlanelement.classList.add("Mechatronics");
+     that.removeFromClicked("MCTR274MechatronicsPlan");
+      MCTR274MechatronicsPlanflag=false
   }
 };
-$scope.MECE230TraditionalPlanListener = function () {
+$scope.MECE230MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MECE230TraditionalPlanTime <= 200) { 
-        MECE230TraditionalPlanTime = currentTime;
+if (currentTime - MECE230MechatronicsPlanTime <= 200) { 
+        MECE230MechatronicsPlanTime = currentTime;
         return;
     }
-MECE230TraditionalPlanTime = currentTime;
-  var MECE230TraditionalPlanelement = document.getElementById("MECE230TraditionalPlan");
- if (!MECE230TraditionalPlanflag) {
-     if (MECE230TraditionalPlanelement.classList.contains("NaturalSciences-highlighted")) { 
-     MECE230TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-     MECE230TraditionalPlanelement.classList.add("NaturalSciences");
+MECE230MechatronicsPlanTime = currentTime;
+  var MECE230MechatronicsPlanelement = document.getElementById("MECE230MechatronicsPlan");
+ if (!MECE230MechatronicsPlanflag) {
+     if (MECE230MechatronicsPlanelement.classList.contains("NaturalSciences-highlighted")) { 
+     MECE230MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+     MECE230MechatronicsPlanelement.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine20());
       that.addLine(getLine21());
-     MECE230TraditionalPlanelement.classList.remove("NaturalSciences");
-     MECE230TraditionalPlanelement.classList.add("NaturalSciences-highlighted");
-     that.addToClicked(["MECE230TraditionalPlan", "NaturalSciences"]);
-      MECE230TraditionalPlanflag=true
+     MECE230MechatronicsPlanelement.classList.remove("NaturalSciences");
+     MECE230MechatronicsPlanelement.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["MECE230MechatronicsPlan", "NaturalSciences"]);
+      MECE230MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine20());
       that.removeLine(getLine21());
-     MECE230TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-     MECE230TraditionalPlanelement.classList.add("NaturalSciences");
-     that.removeFromClicked("MECE230TraditionalPlan");
-      MECE230TraditionalPlanflag=false
+     MECE230MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+     MECE230MechatronicsPlanelement.classList.add("NaturalSciences");
+     that.removeFromClicked("MECE230MechatronicsPlan");
+      MECE230MechatronicsPlanflag=false
   }
 };
-$scope.MECE250TraditionalPlanListener = function () {
+$scope.MECE250MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MECE250TraditionalPlanTime <= 200) { 
-        MECE250TraditionalPlanTime = currentTime;
+if (currentTime - MECE250MechatronicsPlanTime <= 200) { 
+        MECE250MechatronicsPlanTime = currentTime;
         return;
     }
-MECE250TraditionalPlanTime = currentTime;
-  var MECE250TraditionalPlanelement = document.getElementById("MECE250TraditionalPlan");
- if (!MECE250TraditionalPlanflag) {
-     if (MECE250TraditionalPlanelement.classList.contains("EngineeringSciences-highlighted")) { 
-     MECE250TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-     MECE250TraditionalPlanelement.classList.add("EngineeringSciences");
+MECE250MechatronicsPlanTime = currentTime;
+  var MECE250MechatronicsPlanelement = document.getElementById("MECE250MechatronicsPlan");
+ if (!MECE250MechatronicsPlanflag) {
+     if (MECE250MechatronicsPlanelement.classList.contains("EngineeringSciences-highlighted")) { 
+     MECE250MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+     MECE250MechatronicsPlanelement.classList.add("EngineeringSciences");
       return;
 }      that.addLine(getLine22());
       that.addLine(getLine23());
       that.addLine(getLine24());
-     MECE250TraditionalPlanelement.classList.remove("EngineeringSciences");
-     MECE250TraditionalPlanelement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["MECE250TraditionalPlan", "EngineeringSciences"]);
-      MECE250TraditionalPlanflag=true
+     MECE250MechatronicsPlanelement.classList.remove("EngineeringSciences");
+     MECE250MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
+     that.addToClicked(["MECE250MechatronicsPlan", "EngineeringSciences"]);
+      MECE250MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine22());
       that.removeLine(getLine23());
       that.removeLine(getLine24());
-     MECE250TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-     MECE250TraditionalPlanelement.classList.add("EngineeringSciences");
-     that.removeFromClicked("MECE250TraditionalPlan");
-      MECE250TraditionalPlanflag=false
+     MECE250MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+     MECE250MechatronicsPlanelement.classList.add("EngineeringSciences");
+     that.removeFromClicked("MECE250MechatronicsPlan");
+      MECE250MechatronicsPlanflag=false
   }
 };
-$scope.MECE260TraditionalPlanListener = function () {
+$scope.MECE260MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MECE260TraditionalPlanTime <= 200) { 
-        MECE260TraditionalPlanTime = currentTime;
+if (currentTime - MECE260MechatronicsPlanTime <= 200) { 
+        MECE260MechatronicsPlanTime = currentTime;
         return;
     }
-MECE260TraditionalPlanTime = currentTime;
-  var MECE260TraditionalPlanelement = document.getElementById("MECE260TraditionalPlan");
- if (!MECE260TraditionalPlanflag) {
-     if (MECE260TraditionalPlanelement.classList.contains("EngineeringDesign-highlighted")) { 
-     MECE260TraditionalPlanelement.classList.remove("EngineeringDesign-highlighted");
-     MECE260TraditionalPlanelement.classList.add("EngineeringDesign");
+MECE260MechatronicsPlanTime = currentTime;
+  var MECE260MechatronicsPlanelement = document.getElementById("MECE260MechatronicsPlan");
+ if (!MECE260MechatronicsPlanflag) {
+     if (MECE260MechatronicsPlanelement.classList.contains("EngineeringDesign-highlighted")) { 
+     MECE260MechatronicsPlanelement.classList.remove("EngineeringDesign-highlighted");
+     MECE260MechatronicsPlanelement.classList.add("EngineeringDesign");
       return;
 }      that.addLine(getLine25());
       that.addLine(getLine26());
       that.addLine(getLine27());
       that.addLine(getLine31());
-     MECE260TraditionalPlanelement.classList.remove("EngineeringDesign");
-     MECE260TraditionalPlanelement.classList.add("EngineeringDesign-highlighted");
-     that.addToClicked(["MECE260TraditionalPlan", "EngineeringDesign"]);
-      MECE260TraditionalPlanflag=true
+     MECE260MechatronicsPlanelement.classList.remove("EngineeringDesign");
+     MECE260MechatronicsPlanelement.classList.add("EngineeringDesign-highlighted");
+     that.addToClicked(["MECE260MechatronicsPlan", "EngineeringDesign"]);
+      MECE260MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine25());
       that.removeLine(getLine26());
       that.removeLine(getLine27());
       that.removeLine(getLine31());
-     MECE260TraditionalPlanelement.classList.remove("EngineeringDesign-highlighted");
-     MECE260TraditionalPlanelement.classList.add("EngineeringDesign");
-     that.removeFromClicked("MECE260TraditionalPlan");
-      MECE260TraditionalPlanflag=false
+     MECE260MechatronicsPlanelement.classList.remove("EngineeringDesign-highlighted");
+     MECE260MechatronicsPlanelement.classList.add("EngineeringDesign");
+     that.removeFromClicked("MECE260MechatronicsPlan");
+      MECE260MechatronicsPlanflag=false
   }
 };
-$scope.MECE265TraditionalPlanListener = function () {
+$scope.MECE265MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MECE265TraditionalPlanTime <= 200) { 
-        MECE265TraditionalPlanTime = currentTime;
+if (currentTime - MECE265MechatronicsPlanTime <= 200) { 
+        MECE265MechatronicsPlanTime = currentTime;
         return;
     }
-MECE265TraditionalPlanTime = currentTime;
-  var MECE265TraditionalPlanelement = document.getElementById("MECE265TraditionalPlan");
- if (!MECE265TraditionalPlanflag) {
-     if (MECE265TraditionalPlanelement.classList.contains("EngineeringDesign-highlighted")) { 
-     MECE265TraditionalPlanelement.classList.remove("EngineeringDesign-highlighted");
-     MECE265TraditionalPlanelement.classList.add("EngineeringDesign");
+MECE265MechatronicsPlanTime = currentTime;
+  var MECE265MechatronicsPlanelement = document.getElementById("MECE265MechatronicsPlan");
+ if (!MECE265MechatronicsPlanflag) {
+     if (MECE265MechatronicsPlanelement.classList.contains("EngineeringDesign-highlighted")) { 
+     MECE265MechatronicsPlanelement.classList.remove("EngineeringDesign-highlighted");
+     MECE265MechatronicsPlanelement.classList.add("EngineeringDesign");
       return;
 }      that.addLine(getLine26());
       that.addLine(getLine32());
-     MECE265TraditionalPlanelement.classList.remove("EngineeringDesign");
-     MECE265TraditionalPlanelement.classList.add("EngineeringDesign-highlighted");
-     that.addToClicked(["MECE265TraditionalPlan", "EngineeringDesign"]);
-      MECE265TraditionalPlanflag=true
+     MECE265MechatronicsPlanelement.classList.remove("EngineeringDesign");
+     MECE265MechatronicsPlanelement.classList.add("EngineeringDesign-highlighted");
+     that.addToClicked(["MECE265MechatronicsPlan", "EngineeringDesign"]);
+      MECE265MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine26());
       that.removeLine(getLine32());
-     MECE265TraditionalPlanelement.classList.remove("EngineeringDesign-highlighted");
-     MECE265TraditionalPlanelement.classList.add("EngineeringDesign");
-     that.removeFromClicked("MECE265TraditionalPlan");
-      MECE265TraditionalPlanflag=false
+     MECE265MechatronicsPlanelement.classList.remove("EngineeringDesign-highlighted");
+     MECE265MechatronicsPlanelement.classList.add("EngineeringDesign");
+     that.removeFromClicked("MECE265MechatronicsPlan");
+      MECE265MechatronicsPlanflag=false
   }
 };
-$scope.ECE315TraditionalPlanListener = function () {
+$scope.ECE315MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - ECE315TraditionalPlanTime <= 200) { 
-        ECE315TraditionalPlanTime = currentTime;
+if (currentTime - ECE315MechatronicsPlanTime <= 200) { 
+        ECE315MechatronicsPlanTime = currentTime;
         return;
     }
-ECE315TraditionalPlanTime = currentTime;
-  var ECE315TraditionalPlanelement = document.getElementById("ECE315TraditionalPlan");
- if (!ECE315TraditionalPlanflag) {
-     if (ECE315TraditionalPlanelement.classList.contains("EngineeringSciences-highlighted")) { 
-     ECE315TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-     ECE315TraditionalPlanelement.classList.add("EngineeringSciences");
+ECE315MechatronicsPlanTime = currentTime;
+  var ECE315MechatronicsPlanelement = document.getElementById("ECE315MechatronicsPlan");
+ if (!ECE315MechatronicsPlanflag) {
+     if (ECE315MechatronicsPlanelement.classList.contains("EngineeringSciences-highlighted")) { 
+     ECE315MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+     ECE315MechatronicsPlanelement.classList.add("EngineeringSciences");
       return;
 }      that.addLine(getLine28());
       that.addLine(getLine29());
-     ECE315TraditionalPlanelement.classList.remove("EngineeringSciences");
-     ECE315TraditionalPlanelement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["ECE315TraditionalPlan", "EngineeringSciences"]);
-      ECE315TraditionalPlanflag=true
+     ECE315MechatronicsPlanelement.classList.remove("EngineeringSciences");
+     ECE315MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
+     that.addToClicked(["ECE315MechatronicsPlan", "EngineeringSciences"]);
+      ECE315MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine28());
       that.removeLine(getLine29());
-     ECE315TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-     ECE315TraditionalPlanelement.classList.add("EngineeringSciences");
-     that.removeFromClicked("ECE315TraditionalPlan");
-      ECE315TraditionalPlanflag=false
+     ECE315MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+     ECE315MechatronicsPlanelement.classList.add("EngineeringSciences");
+     that.removeFromClicked("ECE315MechatronicsPlan");
+      ECE315MechatronicsPlanflag=false
   }
 };
-$scope.ECE342TraditionalPlanListener = function () {
+$scope.ECE342MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - ECE342TraditionalPlanTime <= 200) { 
-        ECE342TraditionalPlanTime = currentTime;
+if (currentTime - ECE342MechatronicsPlanTime <= 200) { 
+        ECE342MechatronicsPlanTime = currentTime;
         return;
     }
-ECE342TraditionalPlanTime = currentTime;
-  var ECE342TraditionalPlanelement = document.getElementById("ECE342TraditionalPlan");
- if (!ECE342TraditionalPlanflag) {
-     if (ECE342TraditionalPlanelement.classList.contains("Math-highlighted")) { 
-     ECE342TraditionalPlanelement.classList.remove("Math-highlighted");
-     ECE342TraditionalPlanelement.classList.add("Math");
+ECE342MechatronicsPlanTime = currentTime;
+  var ECE342MechatronicsPlanelement = document.getElementById("ECE342MechatronicsPlan");
+ if (!ECE342MechatronicsPlanflag) {
+     if (ECE342MechatronicsPlanelement.classList.contains("Math-highlighted")) { 
+     ECE342MechatronicsPlanelement.classList.remove("Math-highlighted");
+     ECE342MechatronicsPlanelement.classList.add("Math");
       return;
 }      that.addLine(getLine30());
       that.addLine(getLine38());
       that.addLine(getLine39());
-     ECE342TraditionalPlanelement.classList.remove("Math");
-     ECE342TraditionalPlanelement.classList.add("Math-highlighted");
-     that.addToClicked(["ECE342TraditionalPlan", "Math"]);
-      ECE342TraditionalPlanflag=true
+     ECE342MechatronicsPlanelement.classList.remove("Math");
+     ECE342MechatronicsPlanelement.classList.add("Math-highlighted");
+     that.addToClicked(["ECE342MechatronicsPlan", "Math"]);
+      ECE342MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine30());
       that.removeLine(getLine38());
       that.removeLine(getLine39());
-     ECE342TraditionalPlanelement.classList.remove("Math-highlighted");
-     ECE342TraditionalPlanelement.classList.add("Math");
-     that.removeFromClicked("ECE342TraditionalPlan");
-      ECE342TraditionalPlanflag=false
+     ECE342MechatronicsPlanelement.classList.remove("Math-highlighted");
+     ECE342MechatronicsPlanelement.classList.add("Math");
+     that.removeFromClicked("ECE342MechatronicsPlan");
+      ECE342MechatronicsPlanflag=false
   }
 };
-$scope.MCTR374TraditionalPlanListener = function () {
+$scope.MCTR374MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MCTR374TraditionalPlanTime <= 200) { 
-        MCTR374TraditionalPlanTime = currentTime;
+if (currentTime - MCTR374MechatronicsPlanTime <= 200) { 
+        MCTR374MechatronicsPlanTime = currentTime;
         return;
     }
-MCTR374TraditionalPlanTime = currentTime;
-  var MCTR374TraditionalPlanelement = document.getElementById("MCTR374TraditionalPlan");
- if (!MCTR374TraditionalPlanflag) {
-     if (MCTR374TraditionalPlanelement.classList.contains("Mechatronics-highlighted")) { 
-     MCTR374TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR374TraditionalPlanelement.classList.add("Mechatronics");
+MCTR374MechatronicsPlanTime = currentTime;
+  var MCTR374MechatronicsPlanelement = document.getElementById("MCTR374MechatronicsPlan");
+ if (!MCTR374MechatronicsPlanflag) {
+     if (MCTR374MechatronicsPlanelement.classList.contains("Mechatronics-highlighted")) { 
+     MCTR374MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR374MechatronicsPlanelement.classList.add("Mechatronics");
       return;
 }      that.addLine(getLine29());
       that.addLine(getLine46());
-     MCTR374TraditionalPlanelement.classList.remove("Mechatronics");
-     MCTR374TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-     that.addToClicked(["MCTR374TraditionalPlan", "Mechatronics"]);
-      MCTR374TraditionalPlanflag=true
+     MCTR374MechatronicsPlanelement.classList.remove("Mechatronics");
+     MCTR374MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+     that.addToClicked(["MCTR374MechatronicsPlan", "Mechatronics"]);
+      MCTR374MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine29());
       that.removeLine(getLine46());
-     MCTR374TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR374TraditionalPlanelement.classList.add("Mechatronics");
-     that.removeFromClicked("MCTR374TraditionalPlan");
-      MCTR374TraditionalPlanflag=false
+     MCTR374MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR374MechatronicsPlanelement.classList.add("Mechatronics");
+     that.removeFromClicked("MCTR374MechatronicsPlan");
+      MCTR374MechatronicsPlanflag=false
   }
 };
-$scope.MECE350TraditionalPlanListener = function () {
+$scope.MECE350MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MECE350TraditionalPlanTime <= 200) { 
-        MECE350TraditionalPlanTime = currentTime;
+if (currentTime - MECE350MechatronicsPlanTime <= 200) { 
+        MECE350MechatronicsPlanTime = currentTime;
         return;
     }
-MECE350TraditionalPlanTime = currentTime;
-  var MECE350TraditionalPlanelement = document.getElementById("MECE350TraditionalPlan");
- if (!MECE350TraditionalPlanflag) {
-     if (MECE350TraditionalPlanelement.classList.contains("EngineeringSciences-highlighted")) { 
-     MECE350TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-     MECE350TraditionalPlanelement.classList.add("EngineeringSciences");
+MECE350MechatronicsPlanTime = currentTime;
+  var MECE350MechatronicsPlanelement = document.getElementById("MECE350MechatronicsPlan");
+ if (!MECE350MechatronicsPlanflag) {
+     if (MECE350MechatronicsPlanelement.classList.contains("EngineeringSciences-highlighted")) { 
+     MECE350MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+     MECE350MechatronicsPlanelement.classList.add("EngineeringSciences");
       return;
 }      that.addLine(getLine34());
-     MECE350TraditionalPlanelement.classList.remove("EngineeringSciences");
-     MECE350TraditionalPlanelement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["MECE350TraditionalPlan", "EngineeringSciences"]);
-      MECE350TraditionalPlanflag=true
+     MECE350MechatronicsPlanelement.classList.remove("EngineeringSciences");
+     MECE350MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
+     that.addToClicked(["MECE350MechatronicsPlan", "EngineeringSciences"]);
+      MECE350MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine34());
-     MECE350TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-     MECE350TraditionalPlanelement.classList.add("EngineeringSciences");
-     that.removeFromClicked("MECE350TraditionalPlan");
-      MECE350TraditionalPlanflag=false
+     MECE350MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+     MECE350MechatronicsPlanelement.classList.add("EngineeringSciences");
+     that.removeFromClicked("MECE350MechatronicsPlan");
+      MECE350MechatronicsPlanflag=false
   }
 };
-$scope.MECE360TraditionalPlanListener = function () {
+$scope.MECE360MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MECE360TraditionalPlanTime <= 200) { 
-        MECE360TraditionalPlanTime = currentTime;
+if (currentTime - MECE360MechatronicsPlanTime <= 200) { 
+        MECE360MechatronicsPlanTime = currentTime;
         return;
     }
-MECE360TraditionalPlanTime = currentTime;
-  var MECE360TraditionalPlanelement = document.getElementById("MECE360TraditionalPlan");
- if (!MECE360TraditionalPlanflag) {
-     if (MECE360TraditionalPlanelement.classList.contains("EngineeringDesign-highlighted")) { 
-     MECE360TraditionalPlanelement.classList.remove("EngineeringDesign-highlighted");
-     MECE360TraditionalPlanelement.classList.add("EngineeringDesign");
+MECE360MechatronicsPlanTime = currentTime;
+  var MECE360MechatronicsPlanelement = document.getElementById("MECE360MechatronicsPlan");
+ if (!MECE360MechatronicsPlanflag) {
+     if (MECE360MechatronicsPlanelement.classList.contains("EngineeringDesign-highlighted")) { 
+     MECE360MechatronicsPlanelement.classList.remove("EngineeringDesign-highlighted");
+     MECE360MechatronicsPlanelement.classList.add("EngineeringDesign");
       return;
 }      that.addLine(getLine31());
       that.addLine(getLine32());
       that.addLine(getLine33());
       that.addLine(getLine34());
       that.addLine(getLine42());
-     MECE360TraditionalPlanelement.classList.remove("EngineeringDesign");
-     MECE360TraditionalPlanelement.classList.add("EngineeringDesign-highlighted");
-     that.addToClicked(["MECE360TraditionalPlan", "EngineeringDesign"]);
-      MECE360TraditionalPlanflag=true
+     MECE360MechatronicsPlanelement.classList.remove("EngineeringDesign");
+     MECE360MechatronicsPlanelement.classList.add("EngineeringDesign-highlighted");
+     that.addToClicked(["MECE360MechatronicsPlan", "EngineeringDesign"]);
+      MECE360MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine31());
@@ -2210,559 +2210,559 @@ MECE360TraditionalPlanTime = currentTime;
       that.removeLine(getLine33());
       that.removeLine(getLine34());
       that.removeLine(getLine42());
-     MECE360TraditionalPlanelement.classList.remove("EngineeringDesign-highlighted");
-     MECE360TraditionalPlanelement.classList.add("EngineeringDesign");
-     that.removeFromClicked("MECE360TraditionalPlan");
-      MECE360TraditionalPlanflag=false
+     MECE360MechatronicsPlanelement.classList.remove("EngineeringDesign-highlighted");
+     MECE360MechatronicsPlanelement.classList.add("EngineeringDesign");
+     that.removeFromClicked("MECE360MechatronicsPlan");
+      MECE360MechatronicsPlanflag=false
   }
 };
-$scope.MECE390TraditionalPlanListener = function () {
+$scope.MECE390MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MECE390TraditionalPlanTime <= 200) { 
-        MECE390TraditionalPlanTime = currentTime;
+if (currentTime - MECE390MechatronicsPlanTime <= 200) { 
+        MECE390MechatronicsPlanTime = currentTime;
         return;
     }
-MECE390TraditionalPlanTime = currentTime;
-  var MECE390TraditionalPlanelement = document.getElementById("MECE390TraditionalPlan");
- if (!MECE390TraditionalPlanflag) {
-     if (MECE390TraditionalPlanelement.classList.contains("Math-highlighted")) { 
-     MECE390TraditionalPlanelement.classList.remove("Math-highlighted");
-     MECE390TraditionalPlanelement.classList.add("Math");
+MECE390MechatronicsPlanTime = currentTime;
+  var MECE390MechatronicsPlanelement = document.getElementById("MECE390MechatronicsPlan");
+ if (!MECE390MechatronicsPlanflag) {
+     if (MECE390MechatronicsPlanelement.classList.contains("Math-highlighted")) { 
+     MECE390MechatronicsPlanelement.classList.remove("Math-highlighted");
+     MECE390MechatronicsPlanelement.classList.add("Math");
       return;
 }      that.addLine(getLine35());
       that.addLine(getLine36());
       that.addLine(getLine40());
-     MECE390TraditionalPlanelement.classList.remove("Math");
-     MECE390TraditionalPlanelement.classList.add("Math-highlighted");
-     that.addToClicked(["MECE390TraditionalPlan", "Math"]);
-      MECE390TraditionalPlanflag=true
+     MECE390MechatronicsPlanelement.classList.remove("Math");
+     MECE390MechatronicsPlanelement.classList.add("Math-highlighted");
+     that.addToClicked(["MECE390MechatronicsPlan", "Math"]);
+      MECE390MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine35());
       that.removeLine(getLine36());
       that.removeLine(getLine40());
-     MECE390TraditionalPlanelement.classList.remove("Math-highlighted");
-     MECE390TraditionalPlanelement.classList.add("Math");
-     that.removeFromClicked("MECE390TraditionalPlan");
-      MECE390TraditionalPlanflag=false
+     MECE390MechatronicsPlanelement.classList.remove("Math-highlighted");
+     MECE390MechatronicsPlanelement.classList.add("Math");
+     that.removeFromClicked("MECE390MechatronicsPlan");
+      MECE390MechatronicsPlanflag=false
   }
 };
-$scope.ENGM401TraditionalPlanListener = function () {
+$scope.ENGM401MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - ENGM401TraditionalPlanTime <= 200) { 
-        ENGM401TraditionalPlanTime = currentTime;
+if (currentTime - ENGM401MechatronicsPlanTime <= 200) { 
+        ENGM401MechatronicsPlanTime = currentTime;
         return;
     }
-ENGM401TraditionalPlanTime = currentTime;
-  var ENGM401TraditionalPlanelement = document.getElementById("ENGM401TraditionalPlan");
- if (!ENGM401TraditionalPlanflag) {
-     if (ENGM401TraditionalPlanelement.classList.contains("Other-highlighted")) { 
-     ENGM401TraditionalPlanelement.classList.remove("Other-highlighted");
-     ENGM401TraditionalPlanelement.classList.add("Other");
+ENGM401MechatronicsPlanTime = currentTime;
+  var ENGM401MechatronicsPlanelement = document.getElementById("ENGM401MechatronicsPlan");
+ if (!ENGM401MechatronicsPlanflag) {
+     if (ENGM401MechatronicsPlanelement.classList.contains("Other-highlighted")) { 
+     ENGM401MechatronicsPlanelement.classList.remove("Other-highlighted");
+     ENGM401MechatronicsPlanelement.classList.add("Other");
       return;
 }      that.addLine(getLine44());
-     ENGM401TraditionalPlanelement.classList.remove("Other");
-     ENGM401TraditionalPlanelement.classList.add("Other-highlighted");
-     that.addToClicked(["ENGM401TraditionalPlan", "Other"]);
-      ENGM401TraditionalPlanflag=true
+     ENGM401MechatronicsPlanelement.classList.remove("Other");
+     ENGM401MechatronicsPlanelement.classList.add("Other-highlighted");
+     that.addToClicked(["ENGM401MechatronicsPlan", "Other"]);
+      ENGM401MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine44());
-     ENGM401TraditionalPlanelement.classList.remove("Other-highlighted");
-     ENGM401TraditionalPlanelement.classList.add("Other");
-     that.removeFromClicked("ENGM401TraditionalPlan");
-      ENGM401TraditionalPlanflag=false
+     ENGM401MechatronicsPlanelement.classList.remove("Other-highlighted");
+     ENGM401MechatronicsPlanelement.classList.add("Other");
+     that.removeFromClicked("ENGM401MechatronicsPlan");
+      ENGM401MechatronicsPlanflag=false
   }
 };
-$scope.MCTR300TraditionalPlanListener = function () {
+$scope.MCTR300MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MCTR300TraditionalPlanTime <= 200) { 
-        MCTR300TraditionalPlanTime = currentTime;
+if (currentTime - MCTR300MechatronicsPlanTime <= 200) { 
+        MCTR300MechatronicsPlanTime = currentTime;
         return;
     }
-MCTR300TraditionalPlanTime = currentTime;
-  var MCTR300TraditionalPlanelement = document.getElementById("MCTR300TraditionalPlan");
- if (!MCTR300TraditionalPlanflag) {
-     if (MCTR300TraditionalPlanelement.classList.contains("Mechatronics-highlighted")) { 
-     MCTR300TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR300TraditionalPlanelement.classList.add("Mechatronics");
+MCTR300MechatronicsPlanTime = currentTime;
+  var MCTR300MechatronicsPlanelement = document.getElementById("MCTR300MechatronicsPlan");
+ if (!MCTR300MechatronicsPlanflag) {
+     if (MCTR300MechatronicsPlanelement.classList.contains("Mechatronics-highlighted")) { 
+     MCTR300MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR300MechatronicsPlanelement.classList.add("Mechatronics");
       return;
 }      that.addLine(getLine37());
       that.addLine(getLine38());
       that.addLine(getLine49());
-     MCTR300TraditionalPlanelement.classList.remove("Mechatronics");
-     MCTR300TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-     that.addToClicked(["MCTR300TraditionalPlan", "Mechatronics"]);
-      MCTR300TraditionalPlanflag=true
+     MCTR300MechatronicsPlanelement.classList.remove("Mechatronics");
+     MCTR300MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+     that.addToClicked(["MCTR300MechatronicsPlan", "Mechatronics"]);
+      MCTR300MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine37());
       that.removeLine(getLine38());
       that.removeLine(getLine49());
-     MCTR300TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR300TraditionalPlanelement.classList.add("Mechatronics");
-     that.removeFromClicked("MCTR300TraditionalPlan");
-      MCTR300TraditionalPlanflag=false
+     MCTR300MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR300MechatronicsPlanelement.classList.add("Mechatronics");
+     that.removeFromClicked("MCTR300MechatronicsPlan");
+      MCTR300MechatronicsPlanflag=false
   }
 };
-$scope.MCTR332TraditionalPlanListener = function () {
+$scope.MCTR332MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MCTR332TraditionalPlanTime <= 200) { 
-        MCTR332TraditionalPlanTime = currentTime;
+if (currentTime - MCTR332MechatronicsPlanTime <= 200) { 
+        MCTR332MechatronicsPlanTime = currentTime;
         return;
     }
-MCTR332TraditionalPlanTime = currentTime;
-  var MCTR332TraditionalPlanelement = document.getElementById("MCTR332TraditionalPlan");
- if (!MCTR332TraditionalPlanflag) {
-     if (MCTR332TraditionalPlanelement.classList.contains("Mechatronics-highlighted")) { 
-     MCTR332TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR332TraditionalPlanelement.classList.add("Mechatronics");
+MCTR332MechatronicsPlanTime = currentTime;
+  var MCTR332MechatronicsPlanelement = document.getElementById("MCTR332MechatronicsPlan");
+ if (!MCTR332MechatronicsPlanflag) {
+     if (MCTR332MechatronicsPlanelement.classList.contains("Mechatronics-highlighted")) { 
+     MCTR332MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR332MechatronicsPlanelement.classList.add("Mechatronics");
       return;
-}     MCTR332TraditionalPlanelement.classList.remove("Mechatronics");
-     MCTR332TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-     that.addToClicked(["MCTR332TraditionalPlan", "Mechatronics"]);
-      MCTR332TraditionalPlanflag=true
+}     MCTR332MechatronicsPlanelement.classList.remove("Mechatronics");
+     MCTR332MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+     that.addToClicked(["MCTR332MechatronicsPlan", "Mechatronics"]);
+      MCTR332MechatronicsPlanflag=true
   }
  else {
-     MCTR332TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR332TraditionalPlanelement.classList.add("Mechatronics");
-     that.removeFromClicked("MCTR332TraditionalPlan");
-      MCTR332TraditionalPlanflag=false
+     MCTR332MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR332MechatronicsPlanelement.classList.add("Mechatronics");
+     that.removeFromClicked("MCTR332MechatronicsPlan");
+      MCTR332MechatronicsPlanflag=false
   }
 };
-$scope.MCTR365TraditionalPlanListener = function () {
+$scope.MCTR365MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MCTR365TraditionalPlanTime <= 200) { 
-        MCTR365TraditionalPlanTime = currentTime;
+if (currentTime - MCTR365MechatronicsPlanTime <= 200) { 
+        MCTR365MechatronicsPlanTime = currentTime;
         return;
     }
-MCTR365TraditionalPlanTime = currentTime;
-  var MCTR365TraditionalPlanelement = document.getElementById("MCTR365TraditionalPlan");
- if (!MCTR365TraditionalPlanflag) {
-     if (MCTR365TraditionalPlanelement.classList.contains("Mechatronics-highlighted")) { 
-     MCTR365TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR365TraditionalPlanelement.classList.add("Mechatronics");
+MCTR365MechatronicsPlanTime = currentTime;
+  var MCTR365MechatronicsPlanelement = document.getElementById("MCTR365MechatronicsPlan");
+ if (!MCTR365MechatronicsPlanflag) {
+     if (MCTR365MechatronicsPlanelement.classList.contains("Mechatronics-highlighted")) { 
+     MCTR365MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR365MechatronicsPlanelement.classList.add("Mechatronics");
       return;
 }      that.addLine(getLine43());
-     MCTR365TraditionalPlanelement.classList.remove("Mechatronics");
-     MCTR365TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-     that.addToClicked(["MCTR365TraditionalPlan", "Mechatronics"]);
-      MCTR365TraditionalPlanflag=true
+     MCTR365MechatronicsPlanelement.classList.remove("Mechatronics");
+     MCTR365MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+     that.addToClicked(["MCTR365MechatronicsPlan", "Mechatronics"]);
+      MCTR365MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine43());
-     MCTR365TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR365TraditionalPlanelement.classList.add("Mechatronics");
-     that.removeFromClicked("MCTR365TraditionalPlan");
-      MCTR365TraditionalPlanflag=false
+     MCTR365MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR365MechatronicsPlanelement.classList.add("Mechatronics");
+     that.removeFromClicked("MCTR365MechatronicsPlan");
+      MCTR365MechatronicsPlanflag=false
   }
 };
-$scope.MCTR370TraditionalPlanListener = function () {
+$scope.MCTR370MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MCTR370TraditionalPlanTime <= 200) { 
-        MCTR370TraditionalPlanTime = currentTime;
+if (currentTime - MCTR370MechatronicsPlanTime <= 200) { 
+        MCTR370MechatronicsPlanTime = currentTime;
         return;
     }
-MCTR370TraditionalPlanTime = currentTime;
-  var MCTR370TraditionalPlanelement = document.getElementById("MCTR370TraditionalPlan");
- if (!MCTR370TraditionalPlanflag) {
-     if (MCTR370TraditionalPlanelement.classList.contains("Mechatronics-highlighted")) { 
-     MCTR370TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR370TraditionalPlanelement.classList.add("Mechatronics");
+MCTR370MechatronicsPlanTime = currentTime;
+  var MCTR370MechatronicsPlanelement = document.getElementById("MCTR370MechatronicsPlan");
+ if (!MCTR370MechatronicsPlanflag) {
+     if (MCTR370MechatronicsPlanelement.classList.contains("Mechatronics-highlighted")) { 
+     MCTR370MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR370MechatronicsPlanelement.classList.add("Mechatronics");
       return;
 }      that.addLine(getLine39());
-     MCTR370TraditionalPlanelement.classList.remove("Mechatronics");
-     MCTR370TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-     that.addToClicked(["MCTR370TraditionalPlan", "Mechatronics"]);
-      MCTR370TraditionalPlanflag=true
+     MCTR370MechatronicsPlanelement.classList.remove("Mechatronics");
+     MCTR370MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+     that.addToClicked(["MCTR370MechatronicsPlan", "Mechatronics"]);
+      MCTR370MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine39());
-     MCTR370TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR370TraditionalPlanelement.classList.add("Mechatronics");
-     that.removeFromClicked("MCTR370TraditionalPlan");
-      MCTR370TraditionalPlanflag=false
+     MCTR370MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR370MechatronicsPlanelement.classList.add("Mechatronics");
+     that.removeFromClicked("MCTR370MechatronicsPlan");
+      MCTR370MechatronicsPlanflag=false
   }
 };
-$scope.MECE420TraditionalPlanListener = function () {
+$scope.MECE420MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MECE420TraditionalPlanTime <= 200) { 
-        MECE420TraditionalPlanTime = currentTime;
+if (currentTime - MECE420MechatronicsPlanTime <= 200) { 
+        MECE420MechatronicsPlanTime = currentTime;
         return;
     }
-MECE420TraditionalPlanTime = currentTime;
-  var MECE420TraditionalPlanelement = document.getElementById("MECE420TraditionalPlan");
- if (!MECE420TraditionalPlanflag) {
-     if (MECE420TraditionalPlanelement.classList.contains("EngineeringSciences-highlighted")) { 
-     MECE420TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-     MECE420TraditionalPlanelement.classList.add("EngineeringSciences");
+MECE420MechatronicsPlanTime = currentTime;
+  var MECE420MechatronicsPlanelement = document.getElementById("MECE420MechatronicsPlan");
+ if (!MECE420MechatronicsPlanflag) {
+     if (MECE420MechatronicsPlanelement.classList.contains("EngineeringSciences-highlighted")) { 
+     MECE420MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+     MECE420MechatronicsPlanelement.classList.add("EngineeringSciences");
       return;
 }      that.addLine(getLine40());
       that.addLine(getLine45());
       that.addLine(getLine47());
-     MECE420TraditionalPlanelement.classList.remove("EngineeringSciences");
-     MECE420TraditionalPlanelement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["MECE420TraditionalPlan", "EngineeringSciences"]);
-      MECE420TraditionalPlanflag=true
+     MECE420MechatronicsPlanelement.classList.remove("EngineeringSciences");
+     MECE420MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
+     that.addToClicked(["MECE420MechatronicsPlan", "EngineeringSciences"]);
+      MECE420MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine40());
       that.removeLine(getLine45());
       that.removeLine(getLine47());
-     MECE420TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-     MECE420TraditionalPlanelement.classList.add("EngineeringSciences");
-     that.removeFromClicked("MECE420TraditionalPlan");
-      MECE420TraditionalPlanflag=false
+     MECE420MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+     MECE420MechatronicsPlanelement.classList.add("EngineeringSciences");
+     that.removeFromClicked("MECE420MechatronicsPlan");
+      MECE420MechatronicsPlanflag=false
   }
 };
-$scope.ComplementaryElectiveTraditionalPlan0Listener = function () {
+$scope.ComplementaryElectiveMechatronicsPlan0Listener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - ComplementaryElectiveTraditionalPlan0Time <= 200) { 
-        ComplementaryElectiveTraditionalPlan0Time = currentTime;
+if (currentTime - ComplementaryElectiveMechatronicsPlan0Time <= 200) { 
+        ComplementaryElectiveMechatronicsPlan0Time = currentTime;
         return;
     }
-ComplementaryElectiveTraditionalPlan0Time = currentTime;
-  var ComplementaryElectiveTraditionalPlan0element = document.getElementById("ComplementaryElectiveTraditionalPlan0");
- if (!ComplementaryElectiveTraditionalPlan0flag) {
-     if (ComplementaryElectiveTraditionalPlan0element.classList.contains("COMP-highlighted")) { 
-     ComplementaryElectiveTraditionalPlan0element.classList.remove("COMP-highlighted");
-     ComplementaryElectiveTraditionalPlan0element.classList.add("COMP");
+ComplementaryElectiveMechatronicsPlan0Time = currentTime;
+  var ComplementaryElectiveMechatronicsPlan0element = document.getElementById("ComplementaryElectiveMechatronicsPlan0");
+ if (!ComplementaryElectiveMechatronicsPlan0flag) {
+     if (ComplementaryElectiveMechatronicsPlan0element.classList.contains("COMP-highlighted")) { 
+     ComplementaryElectiveMechatronicsPlan0element.classList.remove("COMP-highlighted");
+     ComplementaryElectiveMechatronicsPlan0element.classList.add("COMP");
       return;
-}     ComplementaryElectiveTraditionalPlan0element.classList.remove("COMP");
-     ComplementaryElectiveTraditionalPlan0element.classList.add("COMP-highlighted");
-     that.addToClicked(["ComplementaryElectiveTraditionalPlan0", "COMP"]);
-      ComplementaryElectiveTraditionalPlan0flag=true
+}     ComplementaryElectiveMechatronicsPlan0element.classList.remove("COMP");
+     ComplementaryElectiveMechatronicsPlan0element.classList.add("COMP-highlighted");
+     that.addToClicked(["ComplementaryElectiveMechatronicsPlan0", "COMP"]);
+      ComplementaryElectiveMechatronicsPlan0flag=true
   }
  else {
-     ComplementaryElectiveTraditionalPlan0element.classList.remove("COMP-highlighted");
-     ComplementaryElectiveTraditionalPlan0element.classList.add("COMP");
-     that.removeFromClicked("ComplementaryElectiveTraditionalPlan0");
-      ComplementaryElectiveTraditionalPlan0flag=false
+     ComplementaryElectiveMechatronicsPlan0element.classList.remove("COMP-highlighted");
+     ComplementaryElectiveMechatronicsPlan0element.classList.add("COMP");
+     that.removeFromClicked("ComplementaryElectiveMechatronicsPlan0");
+      ComplementaryElectiveMechatronicsPlan0flag=false
   }
 };
-$scope.ENGG404TraditionalPlanListener = function () {
+$scope.ENGG404MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - ENGG404TraditionalPlanTime <= 200) { 
-        ENGG404TraditionalPlanTime = currentTime;
+if (currentTime - ENGG404MechatronicsPlanTime <= 200) { 
+        ENGG404MechatronicsPlanTime = currentTime;
         return;
     }
-ENGG404TraditionalPlanTime = currentTime;
-  var ENGG404TraditionalPlanelement = document.getElementById("ENGG404TraditionalPlan");
- if (!ENGG404TraditionalPlanflag) {
-     if (ENGG404TraditionalPlanelement.classList.contains("EngineeringProfession-highlighted")) { 
-     ENGG404TraditionalPlanelement.classList.remove("EngineeringProfession-highlighted");
-     ENGG404TraditionalPlanelement.classList.add("EngineeringProfession");
+ENGG404MechatronicsPlanTime = currentTime;
+  var ENGG404MechatronicsPlanelement = document.getElementById("ENGG404MechatronicsPlan");
+ if (!ENGG404MechatronicsPlanflag) {
+     if (ENGG404MechatronicsPlanelement.classList.contains("EngineeringProfession-highlighted")) { 
+     ENGG404MechatronicsPlanelement.classList.remove("EngineeringProfession-highlighted");
+     ENGG404MechatronicsPlanelement.classList.add("EngineeringProfession");
       return;
-}     ENGG404TraditionalPlanelement.classList.remove("EngineeringProfession");
-     ENGG404TraditionalPlanelement.classList.add("EngineeringProfession-highlighted");
-     that.addToClicked(["ENGG404TraditionalPlan", "EngineeringProfession"]);
-      ENGG404TraditionalPlanflag=true
+}     ENGG404MechatronicsPlanelement.classList.remove("EngineeringProfession");
+     ENGG404MechatronicsPlanelement.classList.add("EngineeringProfession-highlighted");
+     that.addToClicked(["ENGG404MechatronicsPlan", "EngineeringProfession"]);
+      ENGG404MechatronicsPlanflag=true
   }
  else {
-     ENGG404TraditionalPlanelement.classList.remove("EngineeringProfession-highlighted");
-     ENGG404TraditionalPlanelement.classList.add("EngineeringProfession");
-     that.removeFromClicked("ENGG404TraditionalPlan");
-      ENGG404TraditionalPlanflag=false
+     ENGG404MechatronicsPlanelement.classList.remove("EngineeringProfession-highlighted");
+     ENGG404MechatronicsPlanelement.classList.add("EngineeringProfession");
+     that.removeFromClicked("ENGG404MechatronicsPlan");
+      ENGG404MechatronicsPlanflag=false
   }
 };
-$scope.ITSElectiveTraditionalPlan0Listener = function () {
+$scope.ITSElectiveMechatronicsPlan0Listener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - ITSElectiveTraditionalPlan0Time <= 200) { 
-        ITSElectiveTraditionalPlan0Time = currentTime;
+if (currentTime - ITSElectiveMechatronicsPlan0Time <= 200) { 
+        ITSElectiveMechatronicsPlan0Time = currentTime;
         return;
     }
-ITSElectiveTraditionalPlan0Time = currentTime;
-  var ITSElectiveTraditionalPlan0element = document.getElementById("ITSElectiveTraditionalPlan0");
- if (!ITSElectiveTraditionalPlan0flag) {
-     if (ITSElectiveTraditionalPlan0element.classList.contains("ITS-highlighted")) { 
-     ITSElectiveTraditionalPlan0element.classList.remove("ITS-highlighted");
-     ITSElectiveTraditionalPlan0element.classList.add("ITS");
+ITSElectiveMechatronicsPlan0Time = currentTime;
+  var ITSElectiveMechatronicsPlan0element = document.getElementById("ITSElectiveMechatronicsPlan0");
+ if (!ITSElectiveMechatronicsPlan0flag) {
+     if (ITSElectiveMechatronicsPlan0element.classList.contains("ITS-highlighted")) { 
+     ITSElectiveMechatronicsPlan0element.classList.remove("ITS-highlighted");
+     ITSElectiveMechatronicsPlan0element.classList.add("ITS");
       return;
-}     ITSElectiveTraditionalPlan0element.classList.remove("ITS");
-     ITSElectiveTraditionalPlan0element.classList.add("ITS-highlighted");
-     that.addToClicked(["ITSElectiveTraditionalPlan0", "ITS"]);
-      ITSElectiveTraditionalPlan0flag=true
+}     ITSElectiveMechatronicsPlan0element.classList.remove("ITS");
+     ITSElectiveMechatronicsPlan0element.classList.add("ITS-highlighted");
+     that.addToClicked(["ITSElectiveMechatronicsPlan0", "ITS"]);
+      ITSElectiveMechatronicsPlan0flag=true
   }
  else {
-     ITSElectiveTraditionalPlan0element.classList.remove("ITS-highlighted");
-     ITSElectiveTraditionalPlan0element.classList.add("ITS");
-     that.removeFromClicked("ITSElectiveTraditionalPlan0");
-      ITSElectiveTraditionalPlan0flag=false
+     ITSElectiveMechatronicsPlan0element.classList.remove("ITS-highlighted");
+     ITSElectiveMechatronicsPlan0element.classList.add("ITS");
+     that.removeFromClicked("ITSElectiveMechatronicsPlan0");
+      ITSElectiveMechatronicsPlan0flag=false
   }
 };
-$scope.MATE201TraditionalPlanListener = function () {
+$scope.MATE201MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MATE201TraditionalPlanTime <= 200) { 
-        MATE201TraditionalPlanTime = currentTime;
+if (currentTime - MATE201MechatronicsPlanTime <= 200) { 
+        MATE201MechatronicsPlanTime = currentTime;
         return;
     }
-MATE201TraditionalPlanTime = currentTime;
-  var MATE201TraditionalPlanelement = document.getElementById("MATE201TraditionalPlan");
- if (!MATE201TraditionalPlanflag) {
-     if (MATE201TraditionalPlanelement.classList.contains("NaturalSciences-highlighted")) { 
-     MATE201TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-     MATE201TraditionalPlanelement.classList.add("NaturalSciences");
+MATE201MechatronicsPlanTime = currentTime;
+  var MATE201MechatronicsPlanelement = document.getElementById("MATE201MechatronicsPlan");
+ if (!MATE201MechatronicsPlanflag) {
+     if (MATE201MechatronicsPlanelement.classList.contains("NaturalSciences-highlighted")) { 
+     MATE201MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+     MATE201MechatronicsPlanelement.classList.add("NaturalSciences");
       return;
 }      that.addLine(getLine41());
-     MATE201TraditionalPlanelement.classList.remove("NaturalSciences");
-     MATE201TraditionalPlanelement.classList.add("NaturalSciences-highlighted");
-     that.addToClicked(["MATE201TraditionalPlan", "NaturalSciences"]);
-      MATE201TraditionalPlanflag=true
+     MATE201MechatronicsPlanelement.classList.remove("NaturalSciences");
+     MATE201MechatronicsPlanelement.classList.add("NaturalSciences-highlighted");
+     that.addToClicked(["MATE201MechatronicsPlan", "NaturalSciences"]);
+      MATE201MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine41());
-     MATE201TraditionalPlanelement.classList.remove("NaturalSciences-highlighted");
-     MATE201TraditionalPlanelement.classList.add("NaturalSciences");
-     that.removeFromClicked("MATE201TraditionalPlan");
-      MATE201TraditionalPlanflag=false
+     MATE201MechatronicsPlanelement.classList.remove("NaturalSciences-highlighted");
+     MATE201MechatronicsPlanelement.classList.add("NaturalSciences");
+     that.removeFromClicked("MATE201MechatronicsPlan");
+      MATE201MechatronicsPlanflag=false
   }
 };
-$scope.MCTR460TraditionalPlanListener = function () {
+$scope.MCTR460MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MCTR460TraditionalPlanTime <= 200) { 
-        MCTR460TraditionalPlanTime = currentTime;
+if (currentTime - MCTR460MechatronicsPlanTime <= 200) { 
+        MCTR460MechatronicsPlanTime = currentTime;
         return;
     }
-MCTR460TraditionalPlanTime = currentTime;
-  var MCTR460TraditionalPlanelement = document.getElementById("MCTR460TraditionalPlan");
- if (!MCTR460TraditionalPlanflag) {
-     if (MCTR460TraditionalPlanelement.classList.contains("Mechatronics-highlighted")) { 
-     MCTR460TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR460TraditionalPlanelement.classList.add("Mechatronics");
+MCTR460MechatronicsPlanTime = currentTime;
+  var MCTR460MechatronicsPlanelement = document.getElementById("MCTR460MechatronicsPlan");
+ if (!MCTR460MechatronicsPlanflag) {
+     if (MCTR460MechatronicsPlanelement.classList.contains("Mechatronics-highlighted")) { 
+     MCTR460MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR460MechatronicsPlanelement.classList.add("Mechatronics");
       return;
-}     MCTR460TraditionalPlanelement.classList.remove("Mechatronics");
-     MCTR460TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-     that.addToClicked(["MCTR460TraditionalPlan", "Mechatronics"]);
-      MCTR460TraditionalPlanflag=true
+}     MCTR460MechatronicsPlanelement.classList.remove("Mechatronics");
+     MCTR460MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+     that.addToClicked(["MCTR460MechatronicsPlan", "Mechatronics"]);
+      MCTR460MechatronicsPlanflag=true
   }
  else {
-     MCTR460TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR460TraditionalPlanelement.classList.add("Mechatronics");
-     that.removeFromClicked("MCTR460TraditionalPlan");
-      MCTR460TraditionalPlanflag=false
+     MCTR460MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR460MechatronicsPlanelement.classList.add("Mechatronics");
+     that.removeFromClicked("MCTR460MechatronicsPlan");
+      MCTR460MechatronicsPlanflag=false
   }
 };
-$scope.MECE460TraditionalPlanListener = function () {
+$scope.MECE460MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MECE460TraditionalPlanTime <= 200) { 
-        MECE460TraditionalPlanTime = currentTime;
+if (currentTime - MECE460MechatronicsPlanTime <= 200) { 
+        MECE460MechatronicsPlanTime = currentTime;
         return;
     }
-MECE460TraditionalPlanTime = currentTime;
-  var MECE460TraditionalPlanelement = document.getElementById("MECE460TraditionalPlan");
- if (!MECE460TraditionalPlanflag) {
-     if (MECE460TraditionalPlanelement.classList.contains("EngineeringDesign-highlighted")) { 
-     MECE460TraditionalPlanelement.classList.remove("EngineeringDesign-highlighted");
-     MECE460TraditionalPlanelement.classList.add("EngineeringDesign");
+MECE460MechatronicsPlanTime = currentTime;
+  var MECE460MechatronicsPlanelement = document.getElementById("MECE460MechatronicsPlan");
+ if (!MECE460MechatronicsPlanflag) {
+     if (MECE460MechatronicsPlanelement.classList.contains("EngineeringDesign-highlighted")) { 
+     MECE460MechatronicsPlanelement.classList.remove("EngineeringDesign-highlighted");
+     MECE460MechatronicsPlanelement.classList.add("EngineeringDesign");
       return;
 }      that.addLine(getLine42());
       that.addLine(getLine43());
       that.addLine(getLine44());
       that.addLine(getLine48());
-     MECE460TraditionalPlanelement.classList.remove("EngineeringDesign");
-     MECE460TraditionalPlanelement.classList.add("EngineeringDesign-highlighted");
-     that.addToClicked(["MECE460TraditionalPlan", "EngineeringDesign"]);
-      MECE460TraditionalPlanflag=true
+     MECE460MechatronicsPlanelement.classList.remove("EngineeringDesign");
+     MECE460MechatronicsPlanelement.classList.add("EngineeringDesign-highlighted");
+     that.addToClicked(["MECE460MechatronicsPlan", "EngineeringDesign"]);
+      MECE460MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine42());
       that.removeLine(getLine43());
       that.removeLine(getLine44());
       that.removeLine(getLine48());
-     MECE460TraditionalPlanelement.classList.remove("EngineeringDesign-highlighted");
-     MECE460TraditionalPlanelement.classList.add("EngineeringDesign");
-     that.removeFromClicked("MECE460TraditionalPlan");
-      MECE460TraditionalPlanflag=false
+     MECE460MechatronicsPlanelement.classList.remove("EngineeringDesign-highlighted");
+     MECE460MechatronicsPlanelement.classList.add("EngineeringDesign");
+     that.removeFromClicked("MECE460MechatronicsPlan");
+      MECE460MechatronicsPlanflag=false
   }
 };
-$scope.ENGG400TraditionalPlanListener = function () {
+$scope.ENGG400MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - ENGG400TraditionalPlanTime <= 200) { 
-        ENGG400TraditionalPlanTime = currentTime;
+if (currentTime - ENGG400MechatronicsPlanTime <= 200) { 
+        ENGG400MechatronicsPlanTime = currentTime;
         return;
     }
-ENGG400TraditionalPlanTime = currentTime;
-  var ENGG400TraditionalPlanelement = document.getElementById("ENGG400TraditionalPlan");
- if (!ENGG400TraditionalPlanflag) {
-     if (ENGG400TraditionalPlanelement.classList.contains("EngineeringProfession-highlighted")) { 
-     ENGG400TraditionalPlanelement.classList.remove("EngineeringProfession-highlighted");
-     ENGG400TraditionalPlanelement.classList.add("EngineeringProfession");
+ENGG400MechatronicsPlanTime = currentTime;
+  var ENGG400MechatronicsPlanelement = document.getElementById("ENGG400MechatronicsPlan");
+ if (!ENGG400MechatronicsPlanflag) {
+     if (ENGG400MechatronicsPlanelement.classList.contains("EngineeringProfession-highlighted")) { 
+     ENGG400MechatronicsPlanelement.classList.remove("EngineeringProfession-highlighted");
+     ENGG400MechatronicsPlanelement.classList.add("EngineeringProfession");
       return;
-}     ENGG400TraditionalPlanelement.classList.remove("EngineeringProfession");
-     ENGG400TraditionalPlanelement.classList.add("EngineeringProfession-highlighted");
-     that.addToClicked(["ENGG400TraditionalPlan", "EngineeringProfession"]);
-      ENGG400TraditionalPlanflag=true
+}     ENGG400MechatronicsPlanelement.classList.remove("EngineeringProfession");
+     ENGG400MechatronicsPlanelement.classList.add("EngineeringProfession-highlighted");
+     that.addToClicked(["ENGG400MechatronicsPlan", "EngineeringProfession"]);
+      ENGG400MechatronicsPlanflag=true
   }
  else {
-     ENGG400TraditionalPlanelement.classList.remove("EngineeringProfession-highlighted");
-     ENGG400TraditionalPlanelement.classList.add("EngineeringProfession");
-     that.removeFromClicked("ENGG400TraditionalPlan");
-      ENGG400TraditionalPlanflag=false
+     ENGG400MechatronicsPlanelement.classList.remove("EngineeringProfession-highlighted");
+     ENGG400MechatronicsPlanelement.classList.add("EngineeringProfession");
+     that.removeFromClicked("ENGG400MechatronicsPlan");
+      ENGG400MechatronicsPlanflag=false
   }
 };
-$scope.MCTR461TraditionalPlanListener = function () {
+$scope.MCTR461MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MCTR461TraditionalPlanTime <= 200) { 
-        MCTR461TraditionalPlanTime = currentTime;
+if (currentTime - MCTR461MechatronicsPlanTime <= 200) { 
+        MCTR461MechatronicsPlanTime = currentTime;
         return;
     }
-MCTR461TraditionalPlanTime = currentTime;
-  var MCTR461TraditionalPlanelement = document.getElementById("MCTR461TraditionalPlan");
- if (!MCTR461TraditionalPlanflag) {
-     if (MCTR461TraditionalPlanelement.classList.contains("Mechatronics-highlighted")) { 
-     MCTR461TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR461TraditionalPlanelement.classList.add("Mechatronics");
+MCTR461MechatronicsPlanTime = currentTime;
+  var MCTR461MechatronicsPlanelement = document.getElementById("MCTR461MechatronicsPlan");
+ if (!MCTR461MechatronicsPlanflag) {
+     if (MCTR461MechatronicsPlanelement.classList.contains("Mechatronics-highlighted")) { 
+     MCTR461MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR461MechatronicsPlanelement.classList.add("Mechatronics");
       return;
 }      that.addLine(getLine45());
-     MCTR461TraditionalPlanelement.classList.remove("Mechatronics");
-     MCTR461TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-     that.addToClicked(["MCTR461TraditionalPlan", "Mechatronics"]);
-      MCTR461TraditionalPlanflag=true
+     MCTR461MechatronicsPlanelement.classList.remove("Mechatronics");
+     MCTR461MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+     that.addToClicked(["MCTR461MechatronicsPlan", "Mechatronics"]);
+      MCTR461MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine45());
-     MCTR461TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR461TraditionalPlanelement.classList.add("Mechatronics");
-     that.removeFromClicked("MCTR461TraditionalPlan");
-      MCTR461TraditionalPlanflag=false
+     MCTR461MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR461MechatronicsPlanelement.classList.add("Mechatronics");
+     that.removeFromClicked("MCTR461MechatronicsPlan");
+      MCTR461MechatronicsPlanflag=false
   }
 };
-$scope.MCTR465TraditionalPlanListener = function () {
+$scope.MCTR465MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MCTR465TraditionalPlanTime <= 200) { 
-        MCTR465TraditionalPlanTime = currentTime;
+if (currentTime - MCTR465MechatronicsPlanTime <= 200) { 
+        MCTR465MechatronicsPlanTime = currentTime;
         return;
     }
-MCTR465TraditionalPlanTime = currentTime;
-  var MCTR465TraditionalPlanelement = document.getElementById("MCTR465TraditionalPlan");
- if (!MCTR465TraditionalPlanflag) {
-     if (MCTR465TraditionalPlanelement.classList.contains("Mechatronics-highlighted")) { 
-     MCTR465TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR465TraditionalPlanelement.classList.add("Mechatronics");
+MCTR465MechatronicsPlanTime = currentTime;
+  var MCTR465MechatronicsPlanelement = document.getElementById("MCTR465MechatronicsPlan");
+ if (!MCTR465MechatronicsPlanflag) {
+     if (MCTR465MechatronicsPlanelement.classList.contains("Mechatronics-highlighted")) { 
+     MCTR465MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR465MechatronicsPlanelement.classList.add("Mechatronics");
       return;
 }      that.addLine(getLine46());
       that.addLine(getLine47());
-     MCTR465TraditionalPlanelement.classList.remove("Mechatronics");
-     MCTR465TraditionalPlanelement.classList.add("Mechatronics-highlighted");
-     that.addToClicked(["MCTR465TraditionalPlan", "Mechatronics"]);
-      MCTR465TraditionalPlanflag=true
+     MCTR465MechatronicsPlanelement.classList.remove("Mechatronics");
+     MCTR465MechatronicsPlanelement.classList.add("Mechatronics-highlighted");
+     that.addToClicked(["MCTR465MechatronicsPlan", "Mechatronics"]);
+      MCTR465MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine46());
       that.removeLine(getLine47());
-     MCTR465TraditionalPlanelement.classList.remove("Mechatronics-highlighted");
-     MCTR465TraditionalPlanelement.classList.add("Mechatronics");
-     that.removeFromClicked("MCTR465TraditionalPlan");
-      MCTR465TraditionalPlanflag=false
+     MCTR465MechatronicsPlanelement.classList.remove("Mechatronics-highlighted");
+     MCTR465MechatronicsPlanelement.classList.add("Mechatronics");
+     that.removeFromClicked("MCTR465MechatronicsPlan");
+      MCTR465MechatronicsPlanflag=false
   }
 };
-$scope.MECE461TraditionalPlanListener = function () {
+$scope.MECE461MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MECE461TraditionalPlanTime <= 200) { 
-        MECE461TraditionalPlanTime = currentTime;
+if (currentTime - MECE461MechatronicsPlanTime <= 200) { 
+        MECE461MechatronicsPlanTime = currentTime;
         return;
     }
-MECE461TraditionalPlanTime = currentTime;
-  var MECE461TraditionalPlanelement = document.getElementById("MECE461TraditionalPlan");
- if (!MECE461TraditionalPlanflag) {
-     if (MECE461TraditionalPlanelement.classList.contains("EngineeringDesign-highlighted")) { 
-     MECE461TraditionalPlanelement.classList.remove("EngineeringDesign-highlighted");
-     MECE461TraditionalPlanelement.classList.add("EngineeringDesign");
+MECE461MechatronicsPlanTime = currentTime;
+  var MECE461MechatronicsPlanelement = document.getElementById("MECE461MechatronicsPlan");
+ if (!MECE461MechatronicsPlanflag) {
+     if (MECE461MechatronicsPlanelement.classList.contains("EngineeringDesign-highlighted")) { 
+     MECE461MechatronicsPlanelement.classList.remove("EngineeringDesign-highlighted");
+     MECE461MechatronicsPlanelement.classList.add("EngineeringDesign");
       return;
 }      that.addLine(getLine48());
-     MECE461TraditionalPlanelement.classList.remove("EngineeringDesign");
-     MECE461TraditionalPlanelement.classList.add("EngineeringDesign-highlighted");
-     that.addToClicked(["MECE461TraditionalPlan", "EngineeringDesign"]);
-      MECE461TraditionalPlanflag=true
+     MECE461MechatronicsPlanelement.classList.remove("EngineeringDesign");
+     MECE461MechatronicsPlanelement.classList.add("EngineeringDesign-highlighted");
+     that.addToClicked(["MECE461MechatronicsPlan", "EngineeringDesign"]);
+      MECE461MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine48());
-     MECE461TraditionalPlanelement.classList.remove("EngineeringDesign-highlighted");
-     MECE461TraditionalPlanelement.classList.add("EngineeringDesign");
-     that.removeFromClicked("MECE461TraditionalPlan");
-      MECE461TraditionalPlanflag=false
+     MECE461MechatronicsPlanelement.classList.remove("EngineeringDesign-highlighted");
+     MECE461MechatronicsPlanelement.classList.add("EngineeringDesign");
+     that.removeFromClicked("MECE461MechatronicsPlan");
+      MECE461MechatronicsPlanflag=false
   }
 };
-$scope.MECE465TraditionalPlanListener = function () {
+$scope.MECE465MechatronicsPlanListener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - MECE465TraditionalPlanTime <= 200) { 
-        MECE465TraditionalPlanTime = currentTime;
+if (currentTime - MECE465MechatronicsPlanTime <= 200) { 
+        MECE465MechatronicsPlanTime = currentTime;
         return;
     }
-MECE465TraditionalPlanTime = currentTime;
-  var MECE465TraditionalPlanelement = document.getElementById("MECE465TraditionalPlan");
- if (!MECE465TraditionalPlanflag) {
-     if (MECE465TraditionalPlanelement.classList.contains("EngineeringSciences-highlighted")) { 
-     MECE465TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-     MECE465TraditionalPlanelement.classList.add("EngineeringSciences");
+MECE465MechatronicsPlanTime = currentTime;
+  var MECE465MechatronicsPlanelement = document.getElementById("MECE465MechatronicsPlan");
+ if (!MECE465MechatronicsPlanflag) {
+     if (MECE465MechatronicsPlanelement.classList.contains("EngineeringSciences-highlighted")) { 
+     MECE465MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+     MECE465MechatronicsPlanelement.classList.add("EngineeringSciences");
       return;
 }      that.addLine(getLine49());
-     MECE465TraditionalPlanelement.classList.remove("EngineeringSciences");
-     MECE465TraditionalPlanelement.classList.add("EngineeringSciences-highlighted");
-     that.addToClicked(["MECE465TraditionalPlan", "EngineeringSciences"]);
-      MECE465TraditionalPlanflag=true
+     MECE465MechatronicsPlanelement.classList.remove("EngineeringSciences");
+     MECE465MechatronicsPlanelement.classList.add("EngineeringSciences-highlighted");
+     that.addToClicked(["MECE465MechatronicsPlan", "EngineeringSciences"]);
+      MECE465MechatronicsPlanflag=true
   }
  else {
       that.removeLine(getLine49());
-     MECE465TraditionalPlanelement.classList.remove("EngineeringSciences-highlighted");
-     MECE465TraditionalPlanelement.classList.add("EngineeringSciences");
-     that.removeFromClicked("MECE465TraditionalPlan");
-      MECE465TraditionalPlanflag=false
+     MECE465MechatronicsPlanelement.classList.remove("EngineeringSciences-highlighted");
+     MECE465MechatronicsPlanelement.classList.add("EngineeringSciences");
+     that.removeFromClicked("MECE465MechatronicsPlan");
+      MECE465MechatronicsPlanflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan0Listener = function () {
+$scope.ProgramTechnicalElectiveMechatronicsPlan0Listener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - ProgramTechnicalElectiveTraditionalPlan0Time <= 200) { 
-        ProgramTechnicalElectiveTraditionalPlan0Time = currentTime;
+if (currentTime - ProgramTechnicalElectiveMechatronicsPlan0Time <= 200) { 
+        ProgramTechnicalElectiveMechatronicsPlan0Time = currentTime;
         return;
     }
-ProgramTechnicalElectiveTraditionalPlan0Time = currentTime;
-  var ProgramTechnicalElectiveTraditionalPlan0element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan0");
- if (!ProgramTechnicalElectiveTraditionalPlan0flag) {
-     if (ProgramTechnicalElectiveTraditionalPlan0element.classList.contains("PROG-highlighted")) { 
-     ProgramTechnicalElectiveTraditionalPlan0element.classList.remove("PROG-highlighted");
-     ProgramTechnicalElectiveTraditionalPlan0element.classList.add("PROG");
+ProgramTechnicalElectiveMechatronicsPlan0Time = currentTime;
+  var ProgramTechnicalElectiveMechatronicsPlan0element = document.getElementById("ProgramTechnicalElectiveMechatronicsPlan0");
+ if (!ProgramTechnicalElectiveMechatronicsPlan0flag) {
+     if (ProgramTechnicalElectiveMechatronicsPlan0element.classList.contains("PROG-highlighted")) { 
+     ProgramTechnicalElectiveMechatronicsPlan0element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveMechatronicsPlan0element.classList.add("PROG");
       return;
-}     ProgramTechnicalElectiveTraditionalPlan0element.classList.remove("PROG");
-     ProgramTechnicalElectiveTraditionalPlan0element.classList.add("PROG-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan0", "PROG"]);
-      ProgramTechnicalElectiveTraditionalPlan0flag=true
+}     ProgramTechnicalElectiveMechatronicsPlan0element.classList.remove("PROG");
+     ProgramTechnicalElectiveMechatronicsPlan0element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveMechatronicsPlan0", "PROG"]);
+      ProgramTechnicalElectiveMechatronicsPlan0flag=true
   }
  else {
-     ProgramTechnicalElectiveTraditionalPlan0element.classList.remove("PROG-highlighted");
-     ProgramTechnicalElectiveTraditionalPlan0element.classList.add("PROG");
-     that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan0");
-      ProgramTechnicalElectiveTraditionalPlan0flag=false
+     ProgramTechnicalElectiveMechatronicsPlan0element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveMechatronicsPlan0element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveMechatronicsPlan0");
+      ProgramTechnicalElectiveMechatronicsPlan0flag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan1Listener = function () {
+$scope.ProgramTechnicalElectiveMechatronicsPlan1Listener = function () {
 var currentTime = new Date().getTime();
-if (currentTime - ProgramTechnicalElectiveTraditionalPlan1Time <= 200) { 
-        ProgramTechnicalElectiveTraditionalPlan1Time = currentTime;
+if (currentTime - ProgramTechnicalElectiveMechatronicsPlan1Time <= 200) { 
+        ProgramTechnicalElectiveMechatronicsPlan1Time = currentTime;
         return;
     }
-ProgramTechnicalElectiveTraditionalPlan1Time = currentTime;
-  var ProgramTechnicalElectiveTraditionalPlan1element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan1");
- if (!ProgramTechnicalElectiveTraditionalPlan1flag) {
-     if (ProgramTechnicalElectiveTraditionalPlan1element.classList.contains("PROG-highlighted")) { 
-     ProgramTechnicalElectiveTraditionalPlan1element.classList.remove("PROG-highlighted");
-     ProgramTechnicalElectiveTraditionalPlan1element.classList.add("PROG");
+ProgramTechnicalElectiveMechatronicsPlan1Time = currentTime;
+  var ProgramTechnicalElectiveMechatronicsPlan1element = document.getElementById("ProgramTechnicalElectiveMechatronicsPlan1");
+ if (!ProgramTechnicalElectiveMechatronicsPlan1flag) {
+     if (ProgramTechnicalElectiveMechatronicsPlan1element.classList.contains("PROG-highlighted")) { 
+     ProgramTechnicalElectiveMechatronicsPlan1element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveMechatronicsPlan1element.classList.add("PROG");
       return;
-}     ProgramTechnicalElectiveTraditionalPlan1element.classList.remove("PROG");
-     ProgramTechnicalElectiveTraditionalPlan1element.classList.add("PROG-highlighted");
-     that.addToClicked(["ProgramTechnicalElectiveTraditionalPlan1", "PROG"]);
-      ProgramTechnicalElectiveTraditionalPlan1flag=true
+}     ProgramTechnicalElectiveMechatronicsPlan1element.classList.remove("PROG");
+     ProgramTechnicalElectiveMechatronicsPlan1element.classList.add("PROG-highlighted");
+     that.addToClicked(["ProgramTechnicalElectiveMechatronicsPlan1", "PROG"]);
+      ProgramTechnicalElectiveMechatronicsPlan1flag=true
   }
  else {
-     ProgramTechnicalElectiveTraditionalPlan1element.classList.remove("PROG-highlighted");
-     ProgramTechnicalElectiveTraditionalPlan1element.classList.add("PROG");
-     that.removeFromClicked("ProgramTechnicalElectiveTraditionalPlan1");
-      ProgramTechnicalElectiveTraditionalPlan1flag=false
+     ProgramTechnicalElectiveMechatronicsPlan1element.classList.remove("PROG-highlighted");
+     ProgramTechnicalElectiveMechatronicsPlan1element.classList.add("PROG");
+     that.removeFromClicked("ProgramTechnicalElectiveMechatronicsPlan1");
+      ProgramTechnicalElectiveMechatronicsPlan1flag=false
   }
 };
-$scope.CHEM103TraditionalPlanRCListener = function () {
-  var element = document.getElementById("CHEM103TraditionalPlandesc");
- if (!CHEM103TraditionalPlanrflag) {
+$scope.CHEM103MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("CHEM103MechatronicsPlandesc");
+ if (!CHEM103MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -2770,7 +2770,7 @@ $scope.CHEM103TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      CHEM103TraditionalPlanrflag=true
+      CHEM103MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -2780,12 +2780,12 @@ $scope.CHEM103TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      CHEM103TraditionalPlanrflag=false
+      CHEM103MechatronicsPlanrflag=false
   }
 };
-$scope.ENGG100TraditionalPlanRCListener = function () {
-  var element = document.getElementById("ENGG100TraditionalPlandesc");
- if (!ENGG100TraditionalPlanrflag) {
+$scope.ENGG100MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("ENGG100MechatronicsPlandesc");
+ if (!ENGG100MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -2793,7 +2793,7 @@ $scope.ENGG100TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ENGG100TraditionalPlanrflag=true
+      ENGG100MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -2803,12 +2803,12 @@ $scope.ENGG100TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ENGG100TraditionalPlanrflag=false
+      ENGG100MechatronicsPlanrflag=false
   }
 };
-$scope.ENGG130TraditionalPlanRCListener = function () {
-  var element = document.getElementById("ENGG130TraditionalPlandesc");
- if (!ENGG130TraditionalPlanrflag) {
+$scope.ENGG130MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("ENGG130MechatronicsPlandesc");
+ if (!ENGG130MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -2816,7 +2816,7 @@ $scope.ENGG130TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ENGG130TraditionalPlanrflag=true
+      ENGG130MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -2826,12 +2826,12 @@ $scope.ENGG130TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ENGG130TraditionalPlanrflag=false
+      ENGG130MechatronicsPlanrflag=false
   }
 };
-$scope.ENGL199TraditionalPlanRCListener = function () {
-  var element = document.getElementById("ENGL199TraditionalPlandesc");
- if (!ENGL199TraditionalPlanrflag) {
+$scope.ENGL199MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("ENGL199MechatronicsPlandesc");
+ if (!ENGL199MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -2839,7 +2839,7 @@ $scope.ENGL199TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ENGL199TraditionalPlanrflag=true
+      ENGL199MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -2849,12 +2849,12 @@ $scope.ENGL199TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ENGL199TraditionalPlanrflag=false
+      ENGL199MechatronicsPlanrflag=false
   }
 };
-$scope.MATH100TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MATH100TraditionalPlandesc");
- if (!MATH100TraditionalPlanrflag) {
+$scope.MATH100MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MATH100MechatronicsPlandesc");
+ if (!MATH100MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -2862,7 +2862,7 @@ $scope.MATH100TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MATH100TraditionalPlanrflag=true
+      MATH100MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -2872,12 +2872,12 @@ $scope.MATH100TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MATH100TraditionalPlanrflag=false
+      MATH100MechatronicsPlanrflag=false
   }
 };
-$scope.PHYS130TraditionalPlanRCListener = function () {
-  var element = document.getElementById("PHYS130TraditionalPlandesc");
- if (!PHYS130TraditionalPlanrflag) {
+$scope.PHYS130MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("PHYS130MechatronicsPlandesc");
+ if (!PHYS130MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -2885,7 +2885,7 @@ $scope.PHYS130TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      PHYS130TraditionalPlanrflag=true
+      PHYS130MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -2895,12 +2895,12 @@ $scope.PHYS130TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      PHYS130TraditionalPlanrflag=false
+      PHYS130MechatronicsPlanrflag=false
   }
 };
-$scope.CHEM105TraditionalPlanRCListener = function () {
-  var element = document.getElementById("CHEM105TraditionalPlandesc");
- if (!CHEM105TraditionalPlanrflag) {
+$scope.CHEM105MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("CHEM105MechatronicsPlandesc");
+ if (!CHEM105MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -2908,7 +2908,7 @@ $scope.CHEM105TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      CHEM105TraditionalPlanrflag=true
+      CHEM105MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -2918,12 +2918,12 @@ $scope.CHEM105TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      CHEM105TraditionalPlanrflag=false
+      CHEM105MechatronicsPlanrflag=false
   }
 };
-$scope.ENCMP100TraditionalPlanRCListener = function () {
-  var element = document.getElementById("ENCMP100TraditionalPlandesc");
- if (!ENCMP100TraditionalPlanrflag) {
+$scope.ENCMP100MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("ENCMP100MechatronicsPlandesc");
+ if (!ENCMP100MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -2931,7 +2931,7 @@ $scope.ENCMP100TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ENCMP100TraditionalPlanrflag=true
+      ENCMP100MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -2941,12 +2941,12 @@ $scope.ENCMP100TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ENCMP100TraditionalPlanrflag=false
+      ENCMP100MechatronicsPlanrflag=false
   }
 };
-$scope.ENGG160TraditionalPlanRCListener = function () {
-  var element = document.getElementById("ENGG160TraditionalPlandesc");
- if (!ENGG160TraditionalPlanrflag) {
+$scope.ENGG160MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("ENGG160MechatronicsPlandesc");
+ if (!ENGG160MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -2954,7 +2954,7 @@ $scope.ENGG160TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ENGG160TraditionalPlanrflag=true
+      ENGG160MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -2964,12 +2964,12 @@ $scope.ENGG160TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ENGG160TraditionalPlanrflag=false
+      ENGG160MechatronicsPlanrflag=false
   }
 };
-$scope.ENPH131TraditionalPlanRCListener = function () {
-  var element = document.getElementById("ENPH131TraditionalPlandesc");
- if (!ENPH131TraditionalPlanrflag) {
+$scope.ENPH131MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("ENPH131MechatronicsPlandesc");
+ if (!ENPH131MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -2977,7 +2977,7 @@ $scope.ENPH131TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ENPH131TraditionalPlanrflag=true
+      ENPH131MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -2987,12 +2987,12 @@ $scope.ENPH131TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ENPH131TraditionalPlanrflag=false
+      ENPH131MechatronicsPlanrflag=false
   }
 };
-$scope.MATH101TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MATH101TraditionalPlandesc");
- if (!MATH101TraditionalPlanrflag) {
+$scope.MATH101MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MATH101MechatronicsPlandesc");
+ if (!MATH101MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3000,7 +3000,7 @@ $scope.MATH101TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MATH101TraditionalPlanrflag=true
+      MATH101MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3010,12 +3010,12 @@ $scope.MATH101TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MATH101TraditionalPlanrflag=false
+      MATH101MechatronicsPlanrflag=false
   }
 };
-$scope.MATH102TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MATH102TraditionalPlandesc");
- if (!MATH102TraditionalPlanrflag) {
+$scope.MATH102MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MATH102MechatronicsPlandesc");
+ if (!MATH102MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3023,7 +3023,7 @@ $scope.MATH102TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MATH102TraditionalPlanrflag=true
+      MATH102MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3033,12 +3033,12 @@ $scope.MATH102TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MATH102TraditionalPlanrflag=false
+      MATH102MechatronicsPlanrflag=false
   }
 };
-$scope.CIVE270TraditionalPlanRCListener = function () {
-  var element = document.getElementById("CIVE270TraditionalPlandesc");
- if (!CIVE270TraditionalPlanrflag) {
+$scope.CIVE270MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("CIVE270MechatronicsPlandesc");
+ if (!CIVE270MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3046,7 +3046,7 @@ $scope.CIVE270TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      CIVE270TraditionalPlanrflag=true
+      CIVE270MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3056,12 +3056,12 @@ $scope.CIVE270TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      CIVE270TraditionalPlanrflag=false
+      CIVE270MechatronicsPlanrflag=false
   }
 };
-$scope.ECE210TraditionalPlanRCListener = function () {
-  var element = document.getElementById("ECE210TraditionalPlandesc");
- if (!ECE210TraditionalPlanrflag) {
+$scope.ECE210MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("ECE210MechatronicsPlandesc");
+ if (!ECE210MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3069,7 +3069,7 @@ $scope.ECE210TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ECE210TraditionalPlanrflag=true
+      ECE210MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3079,12 +3079,12 @@ $scope.ECE210TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ECE210TraditionalPlanrflag=false
+      ECE210MechatronicsPlanrflag=false
   }
 };
-$scope.ECE240TraditionalPlanRCListener = function () {
-  var element = document.getElementById("ECE240TraditionalPlandesc");
- if (!ECE240TraditionalPlanrflag) {
+$scope.ECE240MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("ECE240MechatronicsPlandesc");
+ if (!ECE240MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3092,7 +3092,7 @@ $scope.ECE240TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ECE240TraditionalPlanrflag=true
+      ECE240MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3102,12 +3102,12 @@ $scope.ECE240TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ECE240TraditionalPlanrflag=false
+      ECE240MechatronicsPlanrflag=false
   }
 };
-$scope.MATH201TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MATH201TraditionalPlandesc");
- if (!MATH201TraditionalPlanrflag) {
+$scope.MATH201MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MATH201MechatronicsPlandesc");
+ if (!MATH201MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3115,7 +3115,7 @@ $scope.MATH201TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MATH201TraditionalPlanrflag=true
+      MATH201MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3125,12 +3125,12 @@ $scope.MATH201TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MATH201TraditionalPlanrflag=false
+      MATH201MechatronicsPlanrflag=false
   }
 };
-$scope.MATH209TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MATH209TraditionalPlandesc");
- if (!MATH209TraditionalPlanrflag) {
+$scope.MATH209MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MATH209MechatronicsPlandesc");
+ if (!MATH209MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3138,7 +3138,7 @@ $scope.MATH209TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MATH209TraditionalPlanrflag=true
+      MATH209MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3148,12 +3148,12 @@ $scope.MATH209TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MATH209TraditionalPlanrflag=false
+      MATH209MechatronicsPlanrflag=false
   }
 };
-$scope.MCTR202TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MCTR202TraditionalPlandesc");
- if (!MCTR202TraditionalPlanrflag) {
+$scope.MCTR202MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MCTR202MechatronicsPlandesc");
+ if (!MCTR202MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3161,7 +3161,7 @@ $scope.MCTR202TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MCTR202TraditionalPlanrflag=true
+      MCTR202MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3171,12 +3171,12 @@ $scope.MCTR202TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MCTR202TraditionalPlanrflag=false
+      MCTR202MechatronicsPlanrflag=false
   }
 };
-$scope.ENGG299TraditionalPlanRCListener = function () {
-  var element = document.getElementById("ENGG299TraditionalPlandesc");
- if (!ENGG299TraditionalPlanrflag) {
+$scope.ENGG299MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("ENGG299MechatronicsPlandesc");
+ if (!ENGG299MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3184,7 +3184,7 @@ $scope.ENGG299TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ENGG299TraditionalPlanrflag=true
+      ENGG299MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3194,12 +3194,12 @@ $scope.ENGG299TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ENGG299TraditionalPlanrflag=false
+      ENGG299MechatronicsPlanrflag=false
   }
 };
-$scope.CHE243TraditionalPlanRCListener = function () {
-  var element = document.getElementById("CHE243TraditionalPlandesc");
- if (!CHE243TraditionalPlanrflag) {
+$scope.CHE243MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("CHE243MechatronicsPlandesc");
+ if (!CHE243MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3207,7 +3207,7 @@ $scope.CHE243TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      CHE243TraditionalPlanrflag=true
+      CHE243MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3217,12 +3217,12 @@ $scope.CHE243TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      CHE243TraditionalPlanrflag=false
+      CHE243MechatronicsPlanrflag=false
   }
 };
-$scope.MCTR200TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MCTR200TraditionalPlandesc");
- if (!MCTR200TraditionalPlanrflag) {
+$scope.MCTR200MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MCTR200MechatronicsPlandesc");
+ if (!MCTR200MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3230,7 +3230,7 @@ $scope.MCTR200TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MCTR200TraditionalPlanrflag=true
+      MCTR200MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3240,12 +3240,12 @@ $scope.MCTR200TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MCTR200TraditionalPlanrflag=false
+      MCTR200MechatronicsPlanrflag=false
   }
 };
-$scope.MCTR274TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MCTR274TraditionalPlandesc");
- if (!MCTR274TraditionalPlanrflag) {
+$scope.MCTR274MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MCTR274MechatronicsPlandesc");
+ if (!MCTR274MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3253,7 +3253,7 @@ $scope.MCTR274TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MCTR274TraditionalPlanrflag=true
+      MCTR274MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3263,12 +3263,12 @@ $scope.MCTR274TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MCTR274TraditionalPlanrflag=false
+      MCTR274MechatronicsPlanrflag=false
   }
 };
-$scope.MECE230TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MECE230TraditionalPlandesc");
- if (!MECE230TraditionalPlanrflag) {
+$scope.MECE230MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MECE230MechatronicsPlandesc");
+ if (!MECE230MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3276,7 +3276,7 @@ $scope.MECE230TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MECE230TraditionalPlanrflag=true
+      MECE230MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3286,12 +3286,12 @@ $scope.MECE230TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MECE230TraditionalPlanrflag=false
+      MECE230MechatronicsPlanrflag=false
   }
 };
-$scope.MECE250TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MECE250TraditionalPlandesc");
- if (!MECE250TraditionalPlanrflag) {
+$scope.MECE250MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MECE250MechatronicsPlandesc");
+ if (!MECE250MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3299,7 +3299,7 @@ $scope.MECE250TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MECE250TraditionalPlanrflag=true
+      MECE250MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3309,12 +3309,12 @@ $scope.MECE250TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MECE250TraditionalPlanrflag=false
+      MECE250MechatronicsPlanrflag=false
   }
 };
-$scope.MECE260TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MECE260TraditionalPlandesc");
- if (!MECE260TraditionalPlanrflag) {
+$scope.MECE260MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MECE260MechatronicsPlandesc");
+ if (!MECE260MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3322,7 +3322,7 @@ $scope.MECE260TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MECE260TraditionalPlanrflag=true
+      MECE260MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3332,12 +3332,12 @@ $scope.MECE260TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MECE260TraditionalPlanrflag=false
+      MECE260MechatronicsPlanrflag=false
   }
 };
-$scope.MECE265TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MECE265TraditionalPlandesc");
- if (!MECE265TraditionalPlanrflag) {
+$scope.MECE265MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MECE265MechatronicsPlandesc");
+ if (!MECE265MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3345,7 +3345,7 @@ $scope.MECE265TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MECE265TraditionalPlanrflag=true
+      MECE265MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3355,12 +3355,12 @@ $scope.MECE265TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MECE265TraditionalPlanrflag=false
+      MECE265MechatronicsPlanrflag=false
   }
 };
-$scope.ECE315TraditionalPlanRCListener = function () {
-  var element = document.getElementById("ECE315TraditionalPlandesc");
- if (!ECE315TraditionalPlanrflag) {
+$scope.ECE315MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("ECE315MechatronicsPlandesc");
+ if (!ECE315MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3368,7 +3368,7 @@ $scope.ECE315TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ECE315TraditionalPlanrflag=true
+      ECE315MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3378,12 +3378,12 @@ $scope.ECE315TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ECE315TraditionalPlanrflag=false
+      ECE315MechatronicsPlanrflag=false
   }
 };
-$scope.ECE342TraditionalPlanRCListener = function () {
-  var element = document.getElementById("ECE342TraditionalPlandesc");
- if (!ECE342TraditionalPlanrflag) {
+$scope.ECE342MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("ECE342MechatronicsPlandesc");
+ if (!ECE342MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3391,7 +3391,7 @@ $scope.ECE342TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ECE342TraditionalPlanrflag=true
+      ECE342MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3401,12 +3401,12 @@ $scope.ECE342TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ECE342TraditionalPlanrflag=false
+      ECE342MechatronicsPlanrflag=false
   }
 };
-$scope.MCTR374TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MCTR374TraditionalPlandesc");
- if (!MCTR374TraditionalPlanrflag) {
+$scope.MCTR374MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MCTR374MechatronicsPlandesc");
+ if (!MCTR374MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3414,7 +3414,7 @@ $scope.MCTR374TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MCTR374TraditionalPlanrflag=true
+      MCTR374MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3424,12 +3424,12 @@ $scope.MCTR374TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MCTR374TraditionalPlanrflag=false
+      MCTR374MechatronicsPlanrflag=false
   }
 };
-$scope.MECE350TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MECE350TraditionalPlandesc");
- if (!MECE350TraditionalPlanrflag) {
+$scope.MECE350MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MECE350MechatronicsPlandesc");
+ if (!MECE350MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3437,7 +3437,7 @@ $scope.MECE350TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MECE350TraditionalPlanrflag=true
+      MECE350MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3447,12 +3447,12 @@ $scope.MECE350TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MECE350TraditionalPlanrflag=false
+      MECE350MechatronicsPlanrflag=false
   }
 };
-$scope.MECE360TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MECE360TraditionalPlandesc");
- if (!MECE360TraditionalPlanrflag) {
+$scope.MECE360MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MECE360MechatronicsPlandesc");
+ if (!MECE360MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3460,7 +3460,7 @@ $scope.MECE360TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MECE360TraditionalPlanrflag=true
+      MECE360MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3470,12 +3470,12 @@ $scope.MECE360TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MECE360TraditionalPlanrflag=false
+      MECE360MechatronicsPlanrflag=false
   }
 };
-$scope.MECE390TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MECE390TraditionalPlandesc");
- if (!MECE390TraditionalPlanrflag) {
+$scope.MECE390MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MECE390MechatronicsPlandesc");
+ if (!MECE390MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3483,7 +3483,7 @@ $scope.MECE390TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MECE390TraditionalPlanrflag=true
+      MECE390MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3493,12 +3493,12 @@ $scope.MECE390TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MECE390TraditionalPlanrflag=false
+      MECE390MechatronicsPlanrflag=false
   }
 };
-$scope.ENGM401TraditionalPlanRCListener = function () {
-  var element = document.getElementById("ENGM401TraditionalPlandesc");
- if (!ENGM401TraditionalPlanrflag) {
+$scope.ENGM401MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("ENGM401MechatronicsPlandesc");
+ if (!ENGM401MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3506,7 +3506,7 @@ $scope.ENGM401TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ENGM401TraditionalPlanrflag=true
+      ENGM401MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3516,12 +3516,12 @@ $scope.ENGM401TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ENGM401TraditionalPlanrflag=false
+      ENGM401MechatronicsPlanrflag=false
   }
 };
-$scope.MCTR300TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MCTR300TraditionalPlandesc");
- if (!MCTR300TraditionalPlanrflag) {
+$scope.MCTR300MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MCTR300MechatronicsPlandesc");
+ if (!MCTR300MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3529,7 +3529,7 @@ $scope.MCTR300TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MCTR300TraditionalPlanrflag=true
+      MCTR300MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3539,12 +3539,12 @@ $scope.MCTR300TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MCTR300TraditionalPlanrflag=false
+      MCTR300MechatronicsPlanrflag=false
   }
 };
-$scope.MCTR332TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MCTR332TraditionalPlandesc");
- if (!MCTR332TraditionalPlanrflag) {
+$scope.MCTR332MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MCTR332MechatronicsPlandesc");
+ if (!MCTR332MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3552,7 +3552,7 @@ $scope.MCTR332TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MCTR332TraditionalPlanrflag=true
+      MCTR332MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3562,12 +3562,12 @@ $scope.MCTR332TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MCTR332TraditionalPlanrflag=false
+      MCTR332MechatronicsPlanrflag=false
   }
 };
-$scope.MCTR365TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MCTR365TraditionalPlandesc");
- if (!MCTR365TraditionalPlanrflag) {
+$scope.MCTR365MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MCTR365MechatronicsPlandesc");
+ if (!MCTR365MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3575,7 +3575,7 @@ $scope.MCTR365TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MCTR365TraditionalPlanrflag=true
+      MCTR365MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3585,12 +3585,12 @@ $scope.MCTR365TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MCTR365TraditionalPlanrflag=false
+      MCTR365MechatronicsPlanrflag=false
   }
 };
-$scope.MCTR370TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MCTR370TraditionalPlandesc");
- if (!MCTR370TraditionalPlanrflag) {
+$scope.MCTR370MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MCTR370MechatronicsPlandesc");
+ if (!MCTR370MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3598,7 +3598,7 @@ $scope.MCTR370TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MCTR370TraditionalPlanrflag=true
+      MCTR370MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3608,12 +3608,12 @@ $scope.MCTR370TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MCTR370TraditionalPlanrflag=false
+      MCTR370MechatronicsPlanrflag=false
   }
 };
-$scope.MECE420TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MECE420TraditionalPlandesc");
- if (!MECE420TraditionalPlanrflag) {
+$scope.MECE420MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MECE420MechatronicsPlandesc");
+ if (!MECE420MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3621,7 +3621,7 @@ $scope.MECE420TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MECE420TraditionalPlanrflag=true
+      MECE420MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3631,12 +3631,12 @@ $scope.MECE420TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MECE420TraditionalPlanrflag=false
+      MECE420MechatronicsPlanrflag=false
   }
 };
-$scope.ComplementaryElectiveTraditionalPlan0RCListener = function () {
-  var element = document.getElementById("ComplementaryElectiveTraditionalPlan0desc");
- if (!ComplementaryElectiveTraditionalPlan0rflag) {
+$scope.ComplementaryElectiveMechatronicsPlan0RCListener = function () {
+  var element = document.getElementById("ComplementaryElectiveMechatronicsPlan0desc");
+ if (!ComplementaryElectiveMechatronicsPlan0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3644,7 +3644,7 @@ $scope.ComplementaryElectiveTraditionalPlan0RCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ComplementaryElectiveTraditionalPlan0rflag=true
+      ComplementaryElectiveMechatronicsPlan0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3654,12 +3654,12 @@ $scope.ComplementaryElectiveTraditionalPlan0RCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ComplementaryElectiveTraditionalPlan0rflag=false
+      ComplementaryElectiveMechatronicsPlan0rflag=false
   }
 };
-$scope.ENGG404TraditionalPlanRCListener = function () {
-  var element = document.getElementById("ENGG404TraditionalPlandesc");
- if (!ENGG404TraditionalPlanrflag) {
+$scope.ENGG404MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("ENGG404MechatronicsPlandesc");
+ if (!ENGG404MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3667,7 +3667,7 @@ $scope.ENGG404TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ENGG404TraditionalPlanrflag=true
+      ENGG404MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3677,12 +3677,12 @@ $scope.ENGG404TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ENGG404TraditionalPlanrflag=false
+      ENGG404MechatronicsPlanrflag=false
   }
 };
-$scope.ITSElectiveTraditionalPlan0RCListener = function () {
-  var element = document.getElementById("ITSElectiveTraditionalPlan0desc");
- if (!ITSElectiveTraditionalPlan0rflag) {
+$scope.ITSElectiveMechatronicsPlan0RCListener = function () {
+  var element = document.getElementById("ITSElectiveMechatronicsPlan0desc");
+ if (!ITSElectiveMechatronicsPlan0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3690,7 +3690,7 @@ $scope.ITSElectiveTraditionalPlan0RCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ITSElectiveTraditionalPlan0rflag=true
+      ITSElectiveMechatronicsPlan0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3700,12 +3700,12 @@ $scope.ITSElectiveTraditionalPlan0RCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ITSElectiveTraditionalPlan0rflag=false
+      ITSElectiveMechatronicsPlan0rflag=false
   }
 };
-$scope.MATE201TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MATE201TraditionalPlandesc");
- if (!MATE201TraditionalPlanrflag) {
+$scope.MATE201MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MATE201MechatronicsPlandesc");
+ if (!MATE201MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3713,7 +3713,7 @@ $scope.MATE201TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MATE201TraditionalPlanrflag=true
+      MATE201MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3723,12 +3723,12 @@ $scope.MATE201TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MATE201TraditionalPlanrflag=false
+      MATE201MechatronicsPlanrflag=false
   }
 };
-$scope.MCTR460TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MCTR460TraditionalPlandesc");
- if (!MCTR460TraditionalPlanrflag) {
+$scope.MCTR460MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MCTR460MechatronicsPlandesc");
+ if (!MCTR460MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3736,7 +3736,7 @@ $scope.MCTR460TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MCTR460TraditionalPlanrflag=true
+      MCTR460MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3746,12 +3746,12 @@ $scope.MCTR460TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MCTR460TraditionalPlanrflag=false
+      MCTR460MechatronicsPlanrflag=false
   }
 };
-$scope.MECE460TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MECE460TraditionalPlandesc");
- if (!MECE460TraditionalPlanrflag) {
+$scope.MECE460MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MECE460MechatronicsPlandesc");
+ if (!MECE460MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3759,7 +3759,7 @@ $scope.MECE460TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MECE460TraditionalPlanrflag=true
+      MECE460MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3769,12 +3769,12 @@ $scope.MECE460TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MECE460TraditionalPlanrflag=false
+      MECE460MechatronicsPlanrflag=false
   }
 };
-$scope.ENGG400TraditionalPlanRCListener = function () {
-  var element = document.getElementById("ENGG400TraditionalPlandesc");
- if (!ENGG400TraditionalPlanrflag) {
+$scope.ENGG400MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("ENGG400MechatronicsPlandesc");
+ if (!ENGG400MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3782,7 +3782,7 @@ $scope.ENGG400TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ENGG400TraditionalPlanrflag=true
+      ENGG400MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3792,12 +3792,12 @@ $scope.ENGG400TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ENGG400TraditionalPlanrflag=false
+      ENGG400MechatronicsPlanrflag=false
   }
 };
-$scope.MCTR461TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MCTR461TraditionalPlandesc");
- if (!MCTR461TraditionalPlanrflag) {
+$scope.MCTR461MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MCTR461MechatronicsPlandesc");
+ if (!MCTR461MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3805,7 +3805,7 @@ $scope.MCTR461TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MCTR461TraditionalPlanrflag=true
+      MCTR461MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3815,12 +3815,12 @@ $scope.MCTR461TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MCTR461TraditionalPlanrflag=false
+      MCTR461MechatronicsPlanrflag=false
   }
 };
-$scope.MCTR465TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MCTR465TraditionalPlandesc");
- if (!MCTR465TraditionalPlanrflag) {
+$scope.MCTR465MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MCTR465MechatronicsPlandesc");
+ if (!MCTR465MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3828,7 +3828,7 @@ $scope.MCTR465TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MCTR465TraditionalPlanrflag=true
+      MCTR465MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3838,12 +3838,12 @@ $scope.MCTR465TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MCTR465TraditionalPlanrflag=false
+      MCTR465MechatronicsPlanrflag=false
   }
 };
-$scope.MECE461TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MECE461TraditionalPlandesc");
- if (!MECE461TraditionalPlanrflag) {
+$scope.MECE461MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MECE461MechatronicsPlandesc");
+ if (!MECE461MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3851,7 +3851,7 @@ $scope.MECE461TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MECE461TraditionalPlanrflag=true
+      MECE461MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3861,12 +3861,12 @@ $scope.MECE461TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MECE461TraditionalPlanrflag=false
+      MECE461MechatronicsPlanrflag=false
   }
 };
-$scope.MECE465TraditionalPlanRCListener = function () {
-  var element = document.getElementById("MECE465TraditionalPlandesc");
- if (!MECE465TraditionalPlanrflag) {
+$scope.MECE465MechatronicsPlanRCListener = function () {
+  var element = document.getElementById("MECE465MechatronicsPlandesc");
+ if (!MECE465MechatronicsPlanrflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3874,7 +3874,7 @@ $scope.MECE465TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      MECE465TraditionalPlanrflag=true
+      MECE465MechatronicsPlanrflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3884,12 +3884,12 @@ $scope.MECE465TraditionalPlanRCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      MECE465TraditionalPlanrflag=false
+      MECE465MechatronicsPlanrflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan0RCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan0desc");
- if (!ProgramTechnicalElectiveTraditionalPlan0rflag) {
+$scope.ProgramTechnicalElectiveMechatronicsPlan0RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveMechatronicsPlan0desc");
+ if (!ProgramTechnicalElectiveMechatronicsPlan0rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3897,7 +3897,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan0RCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan0rflag=true
+      ProgramTechnicalElectiveMechatronicsPlan0rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3907,12 +3907,12 @@ $scope.ProgramTechnicalElectiveTraditionalPlan0RCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan0rflag=false
+      ProgramTechnicalElectiveMechatronicsPlan0rflag=false
   }
 };
-$scope.ProgramTechnicalElectiveTraditionalPlan1RCListener = function () {
-  var element = document.getElementById("ProgramTechnicalElectiveTraditionalPlan1desc");
- if (!ProgramTechnicalElectiveTraditionalPlan1rflag) {
+$scope.ProgramTechnicalElectiveMechatronicsPlan1RCListener = function () {
+  var element = document.getElementById("ProgramTechnicalElectiveMechatronicsPlan1desc");
+ if (!ProgramTechnicalElectiveMechatronicsPlan1rflag) {
        if (element.classList.contains("tooltiptextleft")) {
         element.classList.remove("tooltiptextleft");
         element.classList.add("tooltiptextleft-locked");
@@ -3920,7 +3920,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan1RCListener = function () {
         element.classList.remove("tooltiptextright");
         element.classList.add("tooltiptextright-locked");
     }
-      ProgramTechnicalElectiveTraditionalPlan1rflag=true
+      ProgramTechnicalElectiveMechatronicsPlan1rflag=true
   }
  else {
        if (element.classList.contains("tooltiptextleft-locked")) {
@@ -3930,7 +3930,7 @@ $scope.ProgramTechnicalElectiveTraditionalPlan1RCListener = function () {
         element.classList.remove("tooltiptextright-locked");
         element.classList.add("tooltiptextright");
     }
-      ProgramTechnicalElectiveTraditionalPlan1rflag=false
+      ProgramTechnicalElectiveMechatronicsPlan1rflag=false
   }
 };
 });

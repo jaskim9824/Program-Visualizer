@@ -66,7 +66,7 @@ header {
     margin: 0;
     position: relative;
     left: 75rem;
-    bottom: 4rem;
+    bottom: 5rem;
     text-align: center;
 }
 
@@ -160,7 +160,7 @@ header {
     width: 25rem;
     position: relative;
     left: 12rem;
-    bottom: 24rem;
+    bottom: 23rem;
 }
 
 /* line legend image */
@@ -169,7 +169,7 @@ header {
     height: 150px;
     position: relative;
     left: 12rem;
-    bottom: 23rem;
+    bottom: 22rem;
     margin: 0;
 }
 
@@ -197,7 +197,7 @@ h3.planhead {
     width: fit-content;
     position: absolute;
     left: 65rem;
-    top: 7rem;
+    top: 22rem;
     margin-top: 15px;
     margin-right: 0;
 }
@@ -219,7 +219,7 @@ label {
     width:fit-content;
     height: fit-content;
     position: relative;
-    bottom: 18rem;
+    bottom: 20rem;
     right: 15px;
 }
 
