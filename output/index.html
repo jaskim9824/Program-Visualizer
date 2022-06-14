@@ -1,0 +1,55 @@
+<!--This is the template HTML which is the input for the generation script-->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<!-- This makes website responsive on different devices-->
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MEC E Plan</title>
+<!--Styles sheets & web icon-->
+<link href="./styles/styles.css" rel="stylesheet"/>
+<link href="./styles/category.css" rel="stylesheet"/>
+<link href="./images/favicon.ico" rel="icon" type="image/x-icon"/>
+<!--Angular import-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<!--Leader Line import-->
+<script src="https://cdn.jsdelivr.net/npm/leader-line@1.0.7/leader-line.min.js"></script>
+</head>
+<body>
+<!--header-->
+<header>
+<div class="header" id="header" style="width:1730px;">
+<table>
+<tr>
+<td style="width: 65%;"><a href="#"> <img alt="UofA logo" src="./images/uofalogo.png"/></a></td>
+<td><a class="site-title" href="#default"></a> </td>
+</tr>
+</table>
+</div>
+</header>
+<div id="main" ng-app="main" ng-controller="main" style="height:1220px;">
+<h3 class="planhead">Plan</h3>
+<form class="select"></form>
+<div class="coursegroupselector" ng-switch="selectedPlan"></div>
+<div class="legend"></div>
+<div class="linelegenddescription"><b> Prerequisites are shown in a solid orange line. Corequisites are shown in a dashed blue line</b></div>
+<img alt="Pre/Corequisite Line Legend" class="linelegend" src="./images/requisite_legend.png"/>
+</div>
+<footer>
+<div class="footer" id="footer" style="width:1730px;">
+<table>
+<tr>
+<td style="width: 65%;"><a href="#"> <img alt="UofA logo" src="./images/uofalogo.png"/></a></td>
+<td><p id="copyright">© 2022 University of Alberta</p></td>
+</tr>
+</table>
+</div>
+</footer>
+<!--Line control Javascript-->
+<script src="./js/line.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/controller.js"></script>
+</body>
+</html>
