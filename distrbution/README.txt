@@ -1,1 +1,0 @@
-This directory represents the files that will be devilered to any user that wishes to use the program visualizer
