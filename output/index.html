@@ -29,11 +29,15 @@
         </div>
     </header>
     <div id="main" ng-app="main" ng-controller="main" style="height:100vh;">
-        <p>Welcome to the University of Alberta Engineering Progam Plan Visualizer.</p>
-        <p>This website is intended to help students and administration understand and visualize what courses they will take as part of their degree at the U of A.</p>
-        <p>To view a particular discipline, click on one of the boxes below and you will be directed to the program plan for that discipline.</p>
-        <button onclick="location.href='MecE_Program/index.html'">Mechanical Engineering</button>
-        <button onclick="location.href='Mechatronics_Program/index.html'">Mechatronics Engineering</button>
+        <div id="introtext">
+            <p>Welcome to the University of Alberta Engineering Progam Plan Visualizer.</p>
+            <p>This website is intended to help students and administration understand and visualize what courses they will take as part of their degree at the U of A.</p>
+            <p>To view a particular discipline, click on one of the boxes below and you will be directed to the program plan for that discipline.</p>
+        </div>
+        <div id="programbuttons">
+            <button class="probtn" onclick="location.href='MecE_Program/index.html'">Mechanical Engineering</button>
+            <button class="progbtn" onclick="location.href='Mechatronics_Program/index.html'">Mechatronics Engineering</button>
+        </div>
     </div>
     <footer>
         <div class="footer" id="footer" style="width:100vw;">
