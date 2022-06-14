@@ -382,6 +382,8 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
         # Need to add course group title, outside of course group box so
         # append directly to termTag
         termTag.append(courseGroupTitle)
+    # TO DO: this code is not very future proof or flexible, we should generalize this
+    # Might need to reformat Excel spreadsheets
     if courseGroupList != []:
         # A course group is involved. Append each course to the coursegroupcontainer,
         # then append this container to the termTag
