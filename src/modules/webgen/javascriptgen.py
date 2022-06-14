@@ -23,6 +23,7 @@ def intializeControllerJavaScript(sequenceDict, intitalCourseGroupVals, courseGr
                                       controller)
 
 # Function that properly concludes and closes the controller JS
+# Parameters:
 #   controller - file handle for controller JS
 def closeControllerJavaScript(controller):
     controller.write("});\n")
@@ -30,35 +31,7 @@ def closeControllerJavaScript(controller):
     writeRadioChangeDirective(controller)
     controller.close()
 
-def writeRightClickDirective(controller):
-    rightClickDirective = """app.directive('ngRightClick', function($parse) {
-    return function(scope, element, attrs) {
-        var fn = $parse(attrs.ngRightClick);
-        element.bind('contextmenu', function(event) {
-            scope.$apply(function() {
-                event.preventDefault();
-                fn(scope, {$event:event});
-            });
-        });
-    };
-    });"""
-    controller.write(rightClickDirective)
-
-def writeRadioChangeDirective(controller):
-    radioChangeDirective = """app.directive('ngChangeRadio', function($parse) {
-    return function(scope, element, attrs) {
-        var fn = $parse(attrs.ngChangeRadio);
-        element.bind('change', function(event) {
-            scope.$apply(function() {
-                event.preventDefault();
-                fn(scope, {$event:event});
-            });
-        });
-    };
-    });"""
-    controller.write(radioChangeDirective)
-
-# Function that generates the intital block of Javascript
+# Function that generates the intital block of Javascript in controller.js
 # Parameters:
 #   controller - file handle for controller JS file
 def generateIntitalBlockController(courseGroupDict, courseGroupList, controller):
@@ -83,8 +56,7 @@ Array.prototype.forEach.call(radios, function (radio) {
 });\n""")
 
 
-
-# Function that generates the blocks of the controller JS that is dependent
+# Function that generates the blocks of the controller JS file that is dependent
 # on the number and names of plans provided
 # Parameters:
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
@@ -101,42 +73,42 @@ def generatePlanBasedBlocksController(sequenceDict, intitalCourseGroupVals, cour
     generateDeleteFromClickSwitch(sequenceDict, courseGroupList, controller)
     generateCategoryLegendJS(sequenceDict, courseGroupList, controller)
 
-def generatePlanString(courseGroupList):
-    planString = "$scope.selectedPlan"
-    formattedCourseGroup = "$scope.field{number}.group{number}"
-    for courseGroup in courseGroupList:
-        planString += "+"+formattedCourseGroup.format(number=courseGroup)
-    return planString
-        
-def generateSubRadioListener(courseGroupList, controller):
-    planString = generatePlanString(courseGroupList)
-    controller.write("$scope.globalSubGroupChange = function () { \n")
-    controller.write("that.render(" + planString + ");\n")
-    controller.write("};\n")
 
+# Function that appends the custom Angular directive used to handle right click
+# events to the end of the controller JS file
+# Parameters:
+#   controller - file handle for controller JS
+def writeRightClickDirective(controller):
+    rightClickDirective = """app.directive('ngRightClick', function($parse) {
+    return function(scope, element, attrs) {
+        var fn = $parse(attrs.ngRightClick);
+        element.bind('contextmenu', function(event) {
+            scope.$apply(function() {
+                event.preventDefault();
+                fn(scope, {$event:event});
+            });
+        });
+    };
+    });"""
+    controller.write(rightClickDirective)
 
-
-def generateSetDefaults(courseGroupDict, courseGroupList, controller):
-    controller.write("this.setDefaults = function(plan) { \n")
-    controller.write("  switch(plan) { \n")
-    formattedCaseStatement = "      case \"{case}\": \n"
-    formattedCourseGroup = "            $scope.field{number}.group{number} ="
-    switchEndString = """    default:
-    console.log("shouldn't be here");
-    }
-};\n"""
-    for mainPlan in courseGroupDict:
-        controller.write(formattedCaseStatement.format(case=cleaner.cleanString(mainPlan)))
-        for element in courseGroupList:
-            controller.write(formattedCourseGroup.format(number=element))
-            if element not in courseGroupDict[mainPlan]:
-                controller.write("\"\";\n")
-            else:
-                controller.write("\""+str(element)+"A\";\n")
-        controller.write("          $scope.$apply();\n")
-        controller.write("          break;\n")
-    controller.write(switchEndString)
-                
+# Function that appends the custom Angular directive used to handle radio input changing
+# to the end of the controller JS file
+# Parameters:
+#   controller - file handle for controller JS
+def writeRadioChangeDirective(controller):
+    radioChangeDirective = """app.directive('ngChangeRadio', function($parse) {
+    return function(scope, element, attrs) {
+        var fn = $parse(attrs.ngChangeRadio);
+        element.bind('change', function(event) {
+            scope.$apply(function() {
+                event.preventDefault();
+                fn(scope, {$event:event});
+            });
+        });
+    };
+    });"""
+    controller.write(radioChangeDirective)
 
 # Function that generates the intial variables for the controller
 # based on the plans
@@ -164,6 +136,44 @@ def generatePlanBasedInitalVariables(sequenceDict, intitalCourseGroupVals, cours
     planString = generatePlanString(courseGroupList)
     controller.write("this.previousPlan = " +planString + "\n")
 
+# Function that writes the setDefaults function based on the plans and course groups
+# Parameters:
+#   courseGroupDict - dict that maps plans to a dict that maps course groups to the 
+#   options avaiable in that course group
+#   courseGroupList - list of course groups taken overall in the program
+#   controller - file handle to controller.js
+def generateSetDefaults(courseGroupDict, courseGroupList, controller):
+    controller.write("this.setDefaults = function(plan) { \n")
+    controller.write("  switch(plan) { \n")
+    formattedCaseStatement = "      case \"{case}\": \n"
+    formattedCourseGroup = "            $scope.field{number}.group{number} ="
+    switchEndString = """    default:
+    console.log("shouldn't be here");
+    }
+};\n"""
+    for mainPlan in courseGroupDict:
+        controller.write(formattedCaseStatement.format(case=cleaner.cleanString(mainPlan)))
+        for element in courseGroupList:
+            controller.write(formattedCourseGroup.format(number=element))
+            if element not in courseGroupDict[mainPlan]:
+                controller.write("\"\";\n")
+            else:
+                controller.write("\""+str(element)+"A\";\n")
+        controller.write("          $scope.$apply();\n")
+        controller.write("          break;\n")
+    controller.write(switchEndString)
+
+# Function that generates the listener that listens to course group selection
+# radio inputs
+# Parameters:
+#   courseGroupList - list of course groups taken in this program
+#   controller - file handle to controller.js          
+def generateSubRadioListener(courseGroupList, controller):
+    planString = generatePlanString(courseGroupList)
+    controller.write("$scope.globalSubGroupChange = function () { \n")
+    controller.write("that.render(" + planString + ");\n")
+    controller.write("};\n")
+
 # Function that generates the switch statements and functions which handle
 # disabling the lines of a plan when switched off.
 # Parameters:
@@ -186,7 +196,6 @@ def generateDisableSwitchStatement(sequenceDict, controller):
         controller.write(formattedSwitchStatement.format(planName=cleaner.cleanString(plan), 
                                                          actionName="hide"))
     controller.write(switchEndString)
-
 
 # Function that generates the switch statements and functions which handle
 # enabling of course boxes, lines between plans, and boxes that were highlighted
@@ -250,38 +259,6 @@ def generateEnableSwitchStatement(sequenceDict, controller):
         controller.write(formattedSwitchStatement.format(planName=cleaner.cleanString(plan), 
                                                          actionName="show"))
     controller.write(switchEndString)
-
-# Finds all of the legend buttons in all categories & plans. Writes the js that
-# pushes these button elements to a list storing all buttons in that plan.
-# eg: TraditionalPlanLegendBtns is a list that holds all legend button elements in
-# the Traditional Plan
-# Parameters:
-#   categoriesDict - dict storing course objects
-#       key - category name (eg: MATH)
-#       value - dict with key as plan name, value as course object
-#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
-#   controller - file handle for controller.js file
-def findLegendButtons(categoriesDict, sequenceDict, controller):
-    # find the button in the doc
-    formattedbtnStatement = """  var currbtn = document.getElementById("{categoryName}");\n"""
-    # push the button element to a list
-    formattedpushbtnStatement = """  that.{planName}LegendBtns.push(currbtn);\n"""
-
-    for category in categoriesDict:
-        # Only necessary to find button for each category (not each plan)
-        # Special cases to handle electives
-        if category == "ComplementaryElective":
-            controller.write(formattedbtnStatement.format(categoryName="COMP"))
-        elif category == "ProgramTechnicalElective":
-            controller.write(formattedbtnStatement.format(categoryName="PROG"))
-        elif category == "ITSElective":
-            controller.write(formattedbtnStatement.format(categoryName="ITS"))
-        else:
-            # not an elective
-            controller.write(formattedbtnStatement.format(categoryName=category))
-
-        for plan in sequenceDict:
-            controller.write(formattedpushbtnStatement.format(planName=cleaner.cleanString(plan)))
 
 # Function that generates the switch statement and function addLine
 # Parameters:
@@ -387,6 +364,104 @@ switch({planString}) {{ \n"""
         controller.write(formattedAddToClickStatement.format(planName=cleaner.cleanString(plan)))
     
     controller.write(switchEndString)
+
+
+# Generates the clickable category legend. Allows a click to highlight all
+# courses in that category.
+# Parameters:
+#   sequenceDict - dict that stores course objects
+#       key - plan name
+#       value - dict with term name as key and list of course objs in that plan & term
+#   controller - file handle for controller.js file
+# Returns:
+#   None
+def generateCategoryLegendJS(sequenceDict, courseGroupList, controller):
+    # sort courses into categories and plans
+    categoriesDict = sortIntoCategories(sequenceDict)
+
+    # flags for click on legend
+    generateHighlightCategoryFlags(categoriesDict, controller)
+
+    #listeners for categories
+    generateCategoryListeners(categoriesDict, courseGroupList, controller)
+       
+    formattedFunctionStatement = """this.{functionName} = function(categoryName, planName) {{
+switch(categoryName) {{ \n"""
+
+    controller.write(formattedFunctionStatement.format(functionName="highlightCategory"))
+
+    # switch statement between categories for highlight category
+    generateCategorySwitch(categoriesDict, controller, True)
+
+    controller.write(formattedFunctionStatement.format(functionName="unhighlightCategory"))
+
+     # switch statement between categories for unhighlight category
+    generateCategorySwitch(categoriesDict, controller, False)
+
+# Finds all of the legend buttons in all categories & plans. Writes the js that
+# pushes these button elements to a list storing all buttons in that plan.
+# eg: TraditionalPlanLegendBtns is a list that holds all legend button elements in
+# the Traditional Plan
+# Parameters:
+#   categoriesDict - dict storing course objects
+#       key - category name (eg: MATH)
+#       value - dict with key as plan name, value as course object
+#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
+#   controller - file handle for controller.js file
+def findLegendButtons(categoriesDict, sequenceDict, controller):
+    # find the button in the doc
+    formattedbtnStatement = """  var currbtn = document.getElementById("{categoryName}");\n"""
+    # push the button element to a list
+    formattedpushbtnStatement = """  that.{planName}LegendBtns.push(currbtn);\n"""
+
+    for category in categoriesDict:
+        # Only necessary to find button for each category (not each plan)
+        # Special cases to handle electives
+        if category == "ComplementaryElective":
+            controller.write(formattedbtnStatement.format(categoryName="COMP"))
+        elif category == "ProgramTechnicalElective":
+            controller.write(formattedbtnStatement.format(categoryName="PROG"))
+        elif category == "ITSElective":
+            controller.write(formattedbtnStatement.format(categoryName="ITS"))
+        else:
+            # not an elective
+            controller.write(formattedbtnStatement.format(categoryName=category))
+
+        for plan in sequenceDict:
+            controller.write(formattedpushbtnStatement.format(planName=cleaner.cleanString(plan)))
+    
+# Sorts courses in sequnceDict into their categories.
+# Parameters:
+#   sequenceDict - dict that stores course objects
+#       key - plan name
+#       value - dict with term name as key and list of course objs in that plan & term
+# Returns:
+#   categoriesDict - dict storing course objects
+#       key - category name (eg: MATH)
+#       value - dict with key as plan name, value as course object
+def sortIntoCategories(sequenceDict):
+    categoriesDict = {}  # outer dict
+    for plan in sequenceDict:
+        for term in sequenceDict[plan]:
+            for course in sequenceDict[plan][term]:
+                cat = cleaner.cleanString(course.category)
+                cleanplan = cleaner.cleanString(plan)
+                interdict = {}  # inner dict
+                interdict[cleanplan] = [course]
+                if cat not in categoriesDict.keys():
+                    # category not taken yet, add new category and new course list
+                    categoriesDict[cat] = interdict
+                else:
+                    # category is present in dict
+                    if cleanplan not in categoriesDict[cat].keys():
+                        # category taken but not plan
+                        # keep existing categories but add a new plan
+                        categoriesDict[cat].update(interdict)
+                    else:
+                        # add to the existing list of courses in that plan in that category
+                        categoriesDict[cat][cleanplan].append(course)
+    
+    return categoriesDict
 
 def generateHighlightCategoryFlags(categoriesDict, controller):
     formattedCategoriesFlagStatement = """var {categoryName}{planName}flag = false;\n"""
@@ -616,68 +691,9 @@ def generateNormalCourseUnhighlightStatement(course, plan, category, controller)
                                                     categoryName=cleaner.cleanString(category)))
     controller.write(" } \n")
           
-
-# Generates the clickable category legend. Allows a click to highlight all
-# courses in that category.
-# Parameters:
-#   sequenceDict - dict that stores course objects
-#       key - plan name
-#       value - dict with term name as key and list of course objs in that plan & term
-#   controller - file handle for controller.js file
-# Returns:
-#   None
-def generateCategoryLegendJS(sequenceDict, courseGroupList, controller):
-    # sort courses into categories and plans
-    categoriesDict = sortIntoCategories(sequenceDict)
-
-    # flags for click on legend
-    generateHighlightCategoryFlags(categoriesDict, controller)
-
-    #listeners for categories
-    generateCategoryListeners(categoriesDict, courseGroupList, controller)
-       
-    formattedFunctionStatement = """this.{functionName} = function(categoryName, planName) {{
-switch(categoryName) {{ \n"""
-
-    controller.write(formattedFunctionStatement.format(functionName="highlightCategory"))
-
-    # switch statement between categories for highlight category
-    generateCategorySwitch(categoriesDict, controller, True)
-
-    controller.write(formattedFunctionStatement.format(functionName="unhighlightCategory"))
-
-     # switch statement between categories for unhighlight category
-    generateCategorySwitch(categoriesDict, controller, False)
-    
-# Sorts courses in sequnceDict into their categories.
-# Parameters:
-#   sequenceDict - dict that stores course objects
-#       key - plan name
-#       value - dict with term name as key and list of course objs in that plan & term
-# Returns:
-#   categoriesDict - dict storing course objects
-#       key - category name (eg: MATH)
-#       value - dict with key as plan name, value as course object
-def sortIntoCategories(sequenceDict):
-    categoriesDict = {}  # outer dict
-    for plan in sequenceDict:
-        for term in sequenceDict[plan]:
-            for course in sequenceDict[plan][term]:
-                cat = cleaner.cleanString(course.category)
-                cleanplan = cleaner.cleanString(plan)
-                interdict = {}  # inner dict
-                interdict[cleanplan] = [course]
-                if cat not in categoriesDict.keys():
-                    # category not taken yet, add new category and new course list
-                    categoriesDict[cat] = interdict
-                else:
-                    # category is present in dict
-                    if cleanplan not in categoriesDict[cat].keys():
-                        # category taken but not plan
-                        # keep existing categories but add a new plan
-                        categoriesDict[cat].update(interdict)
-                    else:
-                        # add to the existing list of courses in that plan in that category
-                        categoriesDict[cat][cleanplan].append(course)
-    
-    return categoriesDict
+def generatePlanString(courseGroupList):
+    planString = "$scope.selectedPlan"
+    formattedCourseGroup = "$scope.field{number}.group{number}"
+    for courseGroup in courseGroupList:
+        planString += "+"+formattedCourseGroup.format(number=courseGroup)
+    return planString
