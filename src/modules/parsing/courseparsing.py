@@ -31,7 +31,6 @@ def parseCourses(filename):
         course_obj_dict = {}
         for row in range(1, sheet.nrows):
             # Each row stores info about one course, first row is headers
-            # FIXME: Formatting is very strict
             faculty = sheet.cell_value(row, 0)
             department = sheet.cell_value(row, 1)
             course_id = sheet.cell_value(row, 2)
@@ -411,6 +410,8 @@ def preprocess(reqlist):
         reqlist[i] = reqlist[i].replace("(", "").replace(")", "").replace(",", "")
 
         if ";" in reqlist[i]:
+            # Treat a semicolon similar to a comma, split at the semicolon
+            # and append to reqlist
             semicolsplit = reqlist[i].split(";")
             del reqlist[i]
             k = i
