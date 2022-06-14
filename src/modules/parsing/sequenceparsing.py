@@ -37,11 +37,7 @@ def parseSeq(filename, course_obj_dict):
             # Each sheet stores a plan (traditional, co-op plan 1, etc.)
             plan_dict = {}
             sheet = book.sheet_by_index(i)
-            if i == 0:
-                dept_name = sheet.cell_value(0, 0)
-                col = 1
-            else:
-                col = 0
+            col =0
             while col < sheet.ncols:
                 # Each column represents a term
                 term_name = sheet.cell_value(0, col)  # first entry in col must be the term name
@@ -137,7 +133,8 @@ def parseSeq(filename, course_obj_dict):
         messagebox.showerror('python Error', "Error reading data from sequencing Excel sheet. Ensure it is \
             formatted exactly as specified")
 
-    return course_seq, dept_name
+    # return course_seq, dept_name
+    return course_seq
 
 # Checks that all coreqs for a course are taken in the same term,
 # if not, the coreq is changed to become a prereq. Similarly,

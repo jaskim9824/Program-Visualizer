@@ -210,6 +210,10 @@ seq_excel.insert(tkinter.END, "")
 seq_excel.grid(row=2, column=2, **paddings)
 seqLabel = Label(root, text="Enter course sequencing file (filename.xls):").grid(row=2, column=1, **paddings)
 
+department = ttk.Entry(root, width=30, **entry_font)
+department.grid(row=3, column=2)
+departmentLabel = Label(root, text="Enter department name:").grid(row=3, column=1, **paddings)
+
 #browse functions
 def courseBrowse():
     filename =filedialog.askopenfilename()
@@ -260,7 +264,10 @@ def main():
             
             # sequencing courses
             print("Parsing sequences....")
-            sequenceDict, deptName = sequenceparsing.parseSeq(seq_excel.get(), courseDict)
+            # sequenceDict, deptName = sequenceparsing.parseSeq(seq_excel.get(), courseDict)
+            sequenceDict = sequenceparsing.parseSeq(seq_excel.get(), courseDict)
+            deptName = department.get()
+
 
             courseGroupDict = htmlgen.extractPlanCourseGroupDict(sequenceDict)
             courseGroupList = htmlgen.findListofAllCourseGroups(courseGroupDict)
@@ -360,7 +367,7 @@ button_excel = ttk.Button(root, text="Browse", command=seqBrowse)
 button_excel.grid(row=2, column=3, **paddings)
 
 button_main = ttk.Button(root, text="Generate website", command=main)
-button_main.grid(row=3, column=2, **paddings)
+button_main.grid(row=4, column=2, **paddings)
 
 
 
