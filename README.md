@@ -1,5 +1,8 @@
 # MEC-E-Program-Visualizer
 
+Developed by: Jason Kim, Moaz Abdelmonem, and Zachary Schmidt under the supervision of Dr. David Nobes (University of Alberta)
+in the Summer of 2022
+
 Project aimed to generate a web based diagram that visualizes the different program sequences available in the MEC E program
 at the University of Alberta. Courses are displayed in boxes, with the calendar description of that course being displayed when
 the corresponding box of the course is hovered over as shown below. The course will be coloured according to its "category", which
@@ -44,4 +47,3 @@ This project has the following dependencies:
   - pyinstaller to convert the Python script into a portable executable
   - html for writing escape characters without BeautifulSoup auto-formatting
   - tkinter for generating the GUI
-
