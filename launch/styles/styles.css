@@ -124,11 +124,12 @@ footer {
     display: flex;
     flex-direction: column;
     position: relative;
-    left: 45vw;
+    left: 42vw;
     width: fit-content;
     align-items: center;
 }
 
 .progbtn {
     margin: 10px;
+    font-size: 150%;
 }
