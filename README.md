@@ -30,8 +30,10 @@ This project is initially designed for only MEC E programs at the University of 
 but can be expanded and generalized for any program sequence.
 
 To produce a portable executable from the script: 
-  - Run `pyinstaller main.py -F --onefile`
-  - This will produce an executable called `main.exe` in the `dist` directory produced, as well as other files and directories. Remove the other files and directories as they are not needed
+  - Run `pyinstaller main.py -F --onefile -n programVisualizer`
+  - This will produce an executable called `programVisualizer.exe` in the `dist` directory produced, as well as other files and directories. Remove the other files and directories as they are not needed
+ 
+This project requires Python 3.6 or higher.
 
 This project has the following dependencies:
   - LeaderLine for drawing lines between courses with a prerequisite or corequisite relation.
@@ -41,4 +43,5 @@ This project has the following dependencies:
   - copy (deepcopy function) in parsing.py to make a deepcopy of course objects for each plan
   - pyinstaller to convert the Python script into a portable executable
   - html for writing escape characters without BeautifulSoup auto-formatting
+  - tkinter for generating the GUI
 
