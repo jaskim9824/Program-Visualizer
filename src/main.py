@@ -11,12 +11,13 @@
 # and plan information to generate progamatically an interactive program
 # diagram in the output directory.
 
-# Dependencies: bs4, parsing, javascriptgen, htmlgen, linegen, tkinter
+# Dependencies: bs4, parsing, webgen, tkinter
 
 from statistics import mode
 import tkinter
 from bs4 import BeautifulSoup
 import modules.parsing.categoriesparsing as categoriesparsing
+import modules.parsing.coursegroupparsing as coursegroupparsing
 import modules.parsing.courseparsing as courseparsing
 import modules.parsing.sequenceparsing as sequenceparsing
 import modules.webgen.javascriptgen as javascriptgen
@@ -264,18 +265,16 @@ def main():
             
             # sequencing courses
             print("Parsing sequences....")
-            # sequenceDict, deptName = sequenceparsing.parseSeq(seq_excel.get(), courseDict)
             sequenceDict = sequenceparsing.parseSeq(seq_excel.get(), courseDict)
+
+            # extracting dept name for program sequence
             deptName = department.get()
 
+            # extracting course group information
+            courseGroupDict = coursegroupparsing.extractPlanCourseGroupDict(sequenceDict)
+            courseGroupList = coursegroupparsing.findListofAllCourseGroups(courseGroupDict)
+            intitalCourseGroupVals = coursegroupparsing.findIntitalValuesofCourseGroups(courseGroupDict, courseGroupList)
 
-            courseGroupDict = htmlgen.extractPlanCourseGroupDict(sequenceDict)
-            courseGroupList = htmlgen.findListofAllCourseGroups(courseGroupDict)
-            # print(courseGroupDict)
-            # print(courseGroupList)
-            intitalCourseGroupVals = htmlgen.findIntitalValuesofCourseGroups(courseGroupDict, courseGroupList)
-
-            # print(intitalCourseGroupVals)
 
             # generating intital JS based on the number and names of plans
             print("Intialzing JS files....")
