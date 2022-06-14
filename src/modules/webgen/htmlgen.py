@@ -13,7 +13,6 @@ import html
 
 def findIntitalValuesofCourseGroups(courseGroupDict, courseGroupList):
     intitalSelectionGroups = list(courseGroupDict.values())[0]
-    # print(intitalSelectionGroups)
     intitalCourseGroupVals = {}
     for element in courseGroupList:
         if element not in intitalSelectionGroups:
@@ -145,6 +144,22 @@ def placeCourseGroupRadioInputsForSubPlan(subPlanTag, soup, subPlanOptionList, s
 def placeLegend(legendTag, categoryDict, soup):
     placeLegendDescription(soup, legendTag)
     placeLegendButtons(soup, legendTag, categoryDict)
+
+# Function that places the outer divs representing each plan
+# Parameters:
+#   displayTag - HTML tag representing outer display div where the different plan sequences are placed
+#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
+#   soup - soup object, used to create HTML tags
+#   indexJS - file handle for index.js, used to write to index.js
+#   controller - file handle for controller.js, used to write to controller.js
+#   lineManager - line manager object, used to handle line placement and generation
+def placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager):
+    for plan in sequenceDict:
+        switchInput = soup.new_tag("div", attrs={"id":cleaner.cleanString(plan),
+                                                 "ng-switch-when":cleaner.cleanString(plan),
+                                                 "style":"height:fit-content; display:flex; flex-direction:row; flex-wrap:column;"})
+        placeTermsDivs(switchInput, sequenceDict[plan], soup, indexJS, controller, plan, lineManager)
+        displayTag.append(switchInput)
  
 
 def placeLegendDescription(soup, legendTag):
@@ -166,23 +181,6 @@ def placeLegendButton(soup, category, colour):
                                         "class":"legendbutton",
                                         "id": cleaner.cleanString(category),
                                         "style":"background-color:#" + colour})
-
-
-# Function that places the outer divs representing each plan
-# Parameters:
-#   displayTag - HTML tag representing outer display div where the different plan sequences are placed
-#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
-#   soup - soup object, used to create HTML tags
-#   indexJS - file handle for index.js, used to write to index.js
-#   controller - file handle for controller.js, used to write to controller.js
-#   lineManager - line manager object, used to handle line placement and generation
-def placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager):
-    for plan in sequenceDict:
-        switchInput = soup.new_tag("div", attrs={"id":cleaner.cleanString(plan),
-                                                 "ng-switch-when":cleaner.cleanString(plan),
-                                                 "style":"height:fit-content; display:flex; flex-direction:row; flex-wrap:column;"})
-        placeTermsDivs(switchInput, sequenceDict[plan], soup, indexJS, controller, plan, lineManager)
-        displayTag.append(switchInput)
 
 # Function that places the column divs which represent the terms within a certain plan
 # Parameters:
@@ -422,24 +420,41 @@ def pickTooltipSide(termcounter, courseID, soup):
 
     return courseDisc
 
+# Function that constructs a course div
+# Parameters:
+#   soup - soup object, used to create HTML tags 
+#   courseID - ID of the course being placed (str)
+#   category - category of course in question
+#   orCounter - counter for OR cases
+#   orBool - boolean flag for OR cases, true if course is an OR case
 def createCourseDiv(soup, courseID, category, orCounter, orBool):
+    # course is an OR case
     if orBool:
+        # course is a top OR case
         if orCounter == 0:
             return soup.new_tag("div", attrs={"class":"orcoursetop tooltip " + category,
                                                 "id": courseID,
                                                 "ng-click":courseID+"Listener()",
                                                 "ng-right-click":courseID+"RCListener()"})
+        # course is a bottom OR case
         else: 
             return soup.new_tag("div", attrs={"class":"orcoursebottom tooltip " + category,
                                                 "id": courseID,
                                                 "ng-click":courseID+"Listener()",
                                                 "ng-right-click":courseID+"RCListener()"})
+    # course is a regular OR case
     else:
         return soup.new_tag("div",attrs= {"class":"course tooltip " + category, 
                                                 "id": courseID, 
                                                 "ng-click":courseID+"Listener()",
                                                 "ng-right-click":courseID+"RCListener()"})
 
+
+# Function that writes the flags and variables associated with specific
+# course in the JS
+# Parameters:
+#   controller - file handle to controller.js
+#   courseID - ID for course
 def writeFlagsAndVariables(controller, courseID):
     controller.write("  var " + 
                          courseID +
@@ -451,9 +466,9 @@ def writeFlagsAndVariables(controller, courseID):
 
 # Function that consturcts the course description tooltip for an elective
 # Parameters:
-#   - soup: soup object used to create HTML tags
-#   - course: course object 
-#   - courseDisc: course disc HTML tag
+#   soup - soup object used to create HTML tags
+#   course- course object 
+#   courseDisc - course disc HTML tag
 def formatCourseDescriptionForElective(soup, course, courseDisc):
     # formatting title in course description
     courseTitle = soup.new_tag("b", attrs={"class":"descriptiontitle"})
@@ -470,9 +485,9 @@ def formatCourseDescriptionForElective(soup, course, courseDisc):
 
 # Function that consturcts the course description tooltip for a regular course
 # Parameters:
-#   - soup: soup object used to create HTML tags
-#   - course: course object 
-#   - courseDisc: course disc HTML tag
+#   soup - soup object used to create HTML tags
+#   course - course object 
+#   courseDisc - course disc HTML tag
 def formatCourseDescriptionForRegular(soup, course, courseDisc):
     # formatting title in course description
     courseTitle = soup.new_tag("b", attrs={"class":"descriptiontitle"})
@@ -501,6 +516,7 @@ def formatCourseDescriptionForRegular(soup, course, courseDisc):
     courseDescription = soup.new_tag("p", attrs={"class":"fulldescription"})
     courseDescription.append(course.course_description)
 
+    # appending info to disc tag
     courseDisc.append(courseTitle)
     courseDisc.append(courseLine)
     courseDisc.append(courseCredits)
