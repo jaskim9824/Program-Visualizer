@@ -227,6 +227,7 @@ def process(prestr):
     
 
     prestr = prestr.strip()
+    prestr = prestr.replace("\n", " ")
     # Add a comma after the end of each course name
     prestr = prestr.replace("0 ", "0, ")
     prestr = prestr.replace("1 ", "1, ")
