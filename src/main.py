@@ -145,7 +145,7 @@ def main():
             javascriptgen.closeControllerJavaScript(controller)
             indexJS.close()
             categoryCSS.close()
-           
+
     except FileNotFoundError as err:
        print("Exception raised: " + 
        err.strerror + 
@@ -168,6 +168,7 @@ def main():
              err.strerror + 
              ". The directory you are in does not have a directory named output.")
     print("Generation Completed!")
+    messagebox.showinfo('Status',message="Webpage successfully generated!")
 
 
 def btn_clicked():
@@ -304,6 +305,8 @@ def new_window():
 
 #Main Window
 window = Tk()
+window.title('plan visualizer WebGen')
+window.iconbitmap('C:output/images/favicon.ico')
 window.geometry("1092x517")
 window.configure(bg = "#ffffff")
 canvas = Canvas(
