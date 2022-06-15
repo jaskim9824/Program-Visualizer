@@ -1,1 +1,6 @@
 __pycache__/
+src/output/index.html
+src/output/js/index.js
+src/output/js/controller.js
+src/output/styles/category.css
+src/programVisualizer.exe
