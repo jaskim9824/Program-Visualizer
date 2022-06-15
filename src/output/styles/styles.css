@@ -60,54 +60,6 @@ header {
     float: left;
 }
 
-.legend {
-    width: 25rem;
-    height: 20rem;
-    margin: 0;
-    position: relative;
-    left: 75rem;
-    bottom: 15rem;
-    text-align: center;
-}
-
-/* Form styling, radio buttons to switch plan */
-.legenddescription {
-    text-align: left;
-}
-
-/* legend for categories wrapper */
-.legendboxes {
-    width: 20rem;
-    height: 15rem;
-    margin: 0;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    text-align: center;
-}
-
-/* Individual legend button, unpressed */
-.legendbutton {
-    text-align: center;
-    padding: 8px;
-    box-shadow: 0px 5px 2px #757575, inset 0px 2px 0px rgba(255, 255, 255, 0.5);
-    border-radius: 2px;
-    margin: 5px;
-    width: 50%;
-}
-
-/* Individual legend button, pressed */
-.legendbutton-pressed {
-    text-align: center;
-    padding: 6px;
-    border: 2px solid white;
-    border-radius: 2px;
-    position: relative;
-    top: 5px;
-    margin: 5px;
-}
-
 /* at 500px align header left when the screen is 500px wide or less*/
 @media screen and (max-width: 840px) {
     .header a {
@@ -155,31 +107,41 @@ header {
     }
 }
 
+.topstuff {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.linelegendcontainer {
+    width: 33vw;
+    min-width: 30rem;
+}
+
 /* description over line legend (prereq/coreq lines) */
 .linelegenddescription {
     width: 25rem;
-    position: relative;
-    left: 12rem;
-    bottom: 33rem;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 /* line legend image */
 .linelegend {
     width: 275px;
     height: 150px;
-    position: relative;
-    left: 12rem;
-    bottom: 32rem;
-    margin: 0;
+    margin-left: 20px;
+}
+
+.selectors {
+    width: 33vw;
+    min-width: 30rem;
 }
 
 /* Plan header styling*/
 h3.planhead {
+    width: 33vw;
+    min-width: 30rem;
     margin: 0;
-    width: 5rem;
-    position: relative;
-    left: 50rem;
-    top: 20px;
     font-size: 175%;
     text-align: center;
 }
@@ -187,17 +149,16 @@ h3.planhead {
 /* Form styling */
 .select {
     width: 20rem;
-    position: relative;
-    left: 49rem;
     margin-top: 15px;
     margin-right: 0;
+    position: relative;
+    left: 35%;
 }
 
 .coursegroupselector {
     width: fit-content;
-    position: absolute;
-    left: 65rem;
-    top: 22rem;
+    position: relative;
+    left: 75%;
     margin-top: 15px;
     margin-right: 0;
 }
@@ -207,6 +168,47 @@ label {
     display: inline-block;
     font-size: 115%;
     padding-top: 10px;
+}
+
+.legend {
+    margin: 0;
+}
+
+/* Form styling, radio buttons to switch plan */
+.legenddescription {
+    text-align: left;
+}
+
+/* legend for categories wrapper */
+.legendboxes {
+    width: 20rem;
+    height: 15rem;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Individual legend button, unpressed */
+.legendbutton {
+    text-align: center;
+    padding: 8px;
+    box-shadow: 0px 5px 2px #757575, inset 0px 2px 0px rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+    margin: 5px;
+    width: 50%;
+}
+
+/* Individual legend button, pressed */
+.legendbutton-pressed {
+    text-align: center;
+    padding: 6px;
+    border: 2px solid white;
+    border-radius: 2px;
+    position: relative;
+    top: 5px;
+    margin: 5px;
 }
 
 /* Wrapper div for the term names and course boxes, the main content */
@@ -219,14 +221,12 @@ label {
     width:fit-content;
     height: fit-content;
     position: relative;
-    bottom: 28rem;
     right: 15px;
 }
 
 /* Term column styling */
 .term {
     margin-left: 4rem;
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
