@@ -13,7 +13,6 @@
 
 # Dependencies: bs4, parsing, webgen, tkinter
 
-from statistics import mode
 import tkinter
 from bs4 import BeautifulSoup
 import modules.parsing.categoriesparsing as categoriesparsing
@@ -43,13 +42,152 @@ def debug(sequenceDict):
                 print(course.name)
             print("\n")
         print("\n")
-        
-#window
-root = Tk()
-root.title('plan visualizer WebGen')
-root.iconbitmap('C:output/images/favicon.ico')
-root.geometry('700x200')
-root.resizable(0,0)
+ 
+
+
+def main():
+    print("Beginning generation...")
+    # opening the template html file and constructing html
+    # note: here we calling parsing to extract the course data!
+    try:  
+        with open("template.html") as input:
+            # deriving parsed html and creating soup object
+            soup = BeautifulSoup(input, 'html.parser')
+            
+            # opening the JS files
+            print("Opening files...")
+            controller = open("./output/js/controller.js", "w")
+            indexJS = open("./output/js/index.js", "w")
+
+            #opening the CSS file
+            categoryCSS = open("./output/styles/category.css", "w")
+
+            # creating line manager
+            lineManager = linegen.LineManager()
+
+            # parsing the excel files with course info, pulls dependencies (prereqs, coreqs, reqs) too
+            print("Parsing courses...")
+            courseDict = courseparsing.parseCourses(courses_excel.get())
+            
+            # pulling the category and color info from excel
+            print("Parsing categories...")
+            courseDict, categoryDict = categoriesparsing.parseCategories(courseCat_excel.get(), courseDict)
+
+            # writing colour highlighting CSS
+            print("Writing category CSS...")
+            cssgen.writeCategoryCSS(categoryDict, categoryCSS)
+            
+            # sequencing courses
+            print("Parsing sequences....")
+            sequenceDict = sequenceparsing.parseSeq(seq_excel.get(), courseDict)
+
+            # extracting dept name for program sequence
+            deptName = department.get()
+
+            # extracting course group information
+            courseGroupDict = coursegroupparsing.extractPlanCourseGroupDict(sequenceDict)
+            courseGroupList = coursegroupparsing.findListofAllCourseGroups(courseGroupDict)
+            intitalCourseGroupVals = coursegroupparsing.findIntitalValuesofCourseGroups(courseGroupDict, courseGroupList)
+
+
+            # generating intital JS based on the number and names of plans
+            print("Intialzing JS files....")
+            javascriptgen.intializeControllerJavaScript(sequenceDict, 
+                                                        intitalCourseGroupVals,
+                                                        courseGroupDict,
+                                                        courseGroupList, 
+                                                        controller)
+
+            #locating title tag
+            titleTag = soup.body.find("a", class_="site-title")
+
+            #locating main div, this is where all the html will be written
+            mainTag = soup.body.find("div", id="main")
+
+    
+
+            # customizing webpage title
+            print("Writing title....")
+            htmlgen.switchTitle(titleTag, deptName)
+
+            # locating form tag
+            formTag = mainTag.find("form")
+
+            # placing main radio inputs
+            print("Placing radio inputs....")
+            htmlgen.placeRadioInputs(formTag, courseGroupDict, soup)
+
+            # locating course group selector
+            courseGroupSelectTag = soup.body.find("div", class_="coursegroupselector")
+
+            # placing submenu radio inputs
+            htmlgen.placeCourseGroupRadioInputs(courseGroupSelectTag, soup, courseGroupDict)
+
+            # locating legend tag
+            legendTag = mainTag.find("div", class_="legend")
+
+            # places legend for color-coding
+            print("Placing legend....")
+            htmlgen.placeLegend(legendTag, categoryDict, soup)
+
+            # Generating display tag, this is where the course divs will be written
+            print("Generating display tag...")
+            displayTag = htmlgen.generateDisplayDiv(soup, courseGroupList)
+
+            mainTag.append(displayTag)
+
+            #placing the HTML and generating JS based on the courses (drawing lines)
+            print("Placing course diagram....")
+            htmlgen.placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager)
+
+            # closing JS and CSS files
+            print("Closing files...")
+            javascriptgen.closeControllerJavaScript(controller)
+            indexJS.close()
+            categoryCSS.close()
+           
+    except FileNotFoundError as err:
+       print("Exception raised: " + 
+       err.strerror + 
+       ". Either the template HTML file is not in the same directory as the script or" +
+       " the output directory is not organized correctly or does not exist")
+
+       #gui error box
+       messagebox.showerror('Python Error', "Exception raised: " + 
+       err.strerror + 
+       ". Either the template HTML file is not in the same directory as the script or" +
+       " the output directory is not organized correctly or does not exist")
+
+    # writing output to an output html
+    try:
+        print("Writing final HTML.....")
+        with open("./output/index.html", "w", encoding="utf-8") as output:
+            output.write(str(soup))
+    except FileNotFoundError as err:
+       print("Exception raised: " + 
+             err.strerror + 
+             ". The directory you are in does not have a directory named output.")
+    print("Generation Completed!")
+
+
+def btn_clicked():
+    print("Button Clicked")
+
+#browse functions
+def courseBrowse():
+    filename =filedialog.askopenfilename()
+    courses_excel.delete(0, END)
+    courses_excel.insert(tkinter.END, filename) 
+
+def catBrowse():
+    filename =filedialog.askopenfilename()
+    courseCat_excel.delete(0, END)
+    courseCat_excel.insert(tkinter.END, filename)
+
+def seqBrowse():
+    filename =filedialog.askopenfilename()
+    seq_excel.delete(0, END)
+    seq_excel.insert(tkinter.END, filename)  
 
 #new window
 def new_window():
@@ -164,9 +302,23 @@ def new_window():
     web_label = Label(second_frame, image=new_web_img)
     web_label.grid(row=8, column=1)
 
-menubar = Menu(root)
-root.config(menu=menubar)
+#Main Window
+window = Tk()
+window.geometry("1092x517")
+window.configure(bg = "#ffffff")
+canvas = Canvas(
+    window,
+    bg = "#ffffff",
+    height = 517,
+    width = 1092,
+    bd = 0,
+    highlightthickness = 0,
+    relief = "ridge")
+canvas.place(x = 0, y = 0)
+window.resizable(False, False)
 
+menubar = Menu(window)
+window.config(menu=menubar)
 # create the Help menu
 help_menu = Menu(
     menubar,
@@ -186,189 +338,132 @@ menubar.add_cascade(
     menu=help_menu
 )
 
+##Course Excel file UI##
+courseEntry_img = PhotoImage(file = f"GUI_images/img_textBox0.png")
+courseEntry_bg = canvas.create_image(
+    774.5, 152.5,
+    image = courseEntry_img)
 
-paddings = {'padx': 20, 'pady': 5}
-entry_font = {'font': ('Helvetica', 11)}
-
-root.columnconfigure(0, weight=1)
-root.columnconfigure(1, weight=3)
-
-#course excel UI
-courses_excel = ttk.Entry(root, width=30, **entry_font)
+courses_excel = Entry(
+    bd = 0,
+    bg = "#d9d9d9",
+    highlightthickness = 0)
 courses_excel.insert(tkinter.END, "")
-courses_excel.grid(row=0, column=2, **paddings)
-excelLabel = Label(root,text="Enter the Courses excel file (filename.xls):").grid(row=0, column=1, **paddings)
+courses_excel.place(
+    x = 635, y = 135,
+    width = 279,
+    height = 33)
 
-#course category excel UI
-course_cat_excel = ttk.Entry(root, width=30, **entry_font)
-course_cat_excel.insert(tkinter.END, "")
-course_cat_excel.grid(row=1, column=2, **paddings)
-courseCat = Label(root, text="Enter Course Categories excel file (filename.xls):").grid(row=1, column=1,**paddings )
+##Categories excel file UI##
+catEntry_img = PhotoImage(file = f"GUI_images/img_textBox1.png")
+catEntry_bg = canvas.create_image(
+    774.5, 229.5,
+    image = catEntry_img)
 
-#sequence excel UI
-seq_excel = ttk.Entry(root, width=30, **entry_font)
+courseCat_excel = Entry(
+    bd = 0,
+    bg = "#d9d9d9",
+    highlightthickness = 0)
+courseCat_excel.insert(tkinter.END, "")
+courseCat_excel.place(
+    x = 635, y = 212,
+    width = 279,
+    height = 33)
+
+##Sequencing excel file UI##
+seqEntry_img = PhotoImage(file = f"GUI_images/img_textBox2.png")
+seqEntry_bg = canvas.create_image(
+    774.5, 306.5,
+    image = seqEntry_img)
+
+seq_excel = Entry(
+    bd = 0,
+    bg = "#d9d9d9",
+    highlightthickness = 0)
 seq_excel.insert(tkinter.END, "")
-seq_excel.grid(row=2, column=2, **paddings)
-seqLabel = Label(root, text="Enter course sequencing file (filename.xls):").grid(row=2, column=1, **paddings)
+seq_excel.place(
+    x = 635, y = 289,
+    width = 279,
+    height = 33)
 
-department = ttk.Entry(root, width=30, **entry_font)
-department.grid(row=3, column=2)
-departmentLabel = Label(root, text="Enter department name:").grid(row=3, column=1, **paddings)
+deptEntry_img = PhotoImage(file = f"GUI_images/img_textBox3.png")
+deptEntry_bg = canvas.create_image(
+    774.5, 383.5,
+    image = deptEntry_img)
 
-#browse functions
-def courseBrowse():
-    filename =filedialog.askopenfilename()
-    courses_excel.delete(0, END)
-    courses_excel.insert(tkinter.END, filename) 
+department = Entry(
+    bd = 0,
+    bg = "#d9d9d9",
+    highlightthickness = 0)
 
-def catBrowse():
-    filename =filedialog.askopenfilename()
-    course_cat_excel.delete(0, END)
-    course_cat_excel.insert(tkinter.END, filename) 
+department.place(
+    x = 635, y = 366,
+    width = 279,
+    height = 33)
 
-def seqBrowse():
-    filename =filedialog.askopenfilename()
-    seq_excel.delete(0, END)
-    seq_excel.insert(tkinter.END, filename) 
-
-def main():
-    print("Beginning generation...")
-    # opening the template html file and constructing html
-    # note: here we calling parsing to extract the course data!
-    try:  
-        with open("template.html") as input:
-            # deriving parsed html and creating soup object
-            soup = BeautifulSoup(input, 'html.parser')
-            
-            # opening the JS files
-            print("Opening files...")
-            controller = open("./output/js/controller.js", "w")
-            indexJS = open("./output/js/index.js", "w")
-
-            #opening the CSS file
-            categoryCSS = open("./output/styles/category.css", "w")
-
-            # creating line manager
-            lineManager = linegen.LineManager()
-
-            # parsing the excel files with course info, pulls dependencies (prereqs, coreqs, reqs) too
-            print("Parsing courses...")
-            courseDict = courseparsing.parseCourses(courses_excel.get())
-            
-            # pulling the category and color info from excel
-            print("Parsing categories...")
-            courseDict, categoryDict = categoriesparsing.parseCategories(course_cat_excel.get(), courseDict)
-
-            # writing colour highlighting CSS
-            print("Writing category CSS...")
-            cssgen.writeCategoryCSS(categoryDict, categoryCSS)
-            
-            # sequencing courses
-            print("Parsing sequences....")
-            sequenceDict = sequenceparsing.parseSeq(seq_excel.get(), courseDict)
-
-            # extracting dept name for program sequence
-            deptName = department.get()
-
-            # extracting course group information
-            courseGroupDict = coursegroupparsing.extractPlanCourseGroupDict(sequenceDict)
-            courseGroupList = coursegroupparsing.findListofAllCourseGroups(courseGroupDict)
-            intitalCourseGroupVals = coursegroupparsing.findIntitalValuesofCourseGroups(courseGroupDict, courseGroupList)
+background_img = PhotoImage(file = f"GUI_images/background.png")
+background = canvas.create_image(
+    467.5, 258.5,
+    image=background_img)
 
 
-            # generating intital JS based on the number and names of plans
-            print("Intialzing JS files....")
-            javascriptgen.intializeControllerJavaScript(sequenceDict, 
-                                                        intitalCourseGroupVals,
-                                                        courseGroupDict,
-                                                        courseGroupList, 
-                                                        controller)
+browseImg1 = PhotoImage(file = f"GUI_images/img1.png")
+button1_excel = Button(
+    image = browseImg1,
+    borderwidth = 0,
+    highlightthickness = 0,
+    command = courseBrowse,
+    relief = "flat")
 
-            #locating title tag
-            titleTag = soup.body.find("a", class_="site-title")
+button1_excel.place(
+    x = 950, y = 135,
+    width = 95,
+    height = 37)
 
-            #locating main div, this is where all the html will be written
-            mainTag = soup.body.find("div", id="main")
+browseImg2 = PhotoImage(file = f"GUI_images/img2.png")
+button2_excel = Button(
+    image = browseImg2,
+    borderwidth = 0,
+    highlightthickness = 0,
+    command = catBrowse,
+    relief = "flat")
 
-    
+button2_excel.place(
+    x = 950, y = 214,
+    width = 95,
+    height = 38)
 
-            # customizing webpage title
-            print("Writing title....")
-            htmlgen.switchTitle(titleTag, deptName)
+browseImg3 = PhotoImage(file = f"GUI_images/img3.png")
+button3_excel = Button(
+    image = browseImg3,
+    borderwidth = 0,
+    highlightthickness = 0,
+    command = seqBrowse,
+    relief = "flat")
 
-            # locating form tag
-            formTag = mainTag.find("form")
+button3_excel.place(
+    x = 950, y = 289,
+    width = 95,
+    height = 37)
 
-            # placing main radio inputs
-            print("Placing radio inputs....")
-            htmlgen.placeRadioInputs(formTag, courseGroupDict, soup)
+genImg = PhotoImage(file = f"GUI_images/img0.png")
+generate_button = Button(
+    image = genImg,
+    borderwidth = 0,
+    highlightthickness = 0,
+    command = main,
+    relief = "flat")
 
-            # locating course group selector
-            courseGroupSelectTag = soup.body.find("div", class_="coursegroupselector")
+generate_button.place(
+    x = 710, y = 432,
+    width = 126,
+    height = 43)
 
-            # placing submenu radio inputs
-            htmlgen.placeCourseGroupRadioInputs(courseGroupSelectTag, soup, courseGroupDict)
 
-            # locating legend tag
-            legendTag = mainTag.find("div", class_="legend")
 
-            # places legend for color-coding
-            print("Placing legend....")
-            htmlgen.placeLegend(legendTag, categoryDict, soup)
 
-            # Generating display tag, this is where the course divs will be written
-            print("Generating display tag...")
-            displayTag = htmlgen.generateDisplayDiv(soup, courseGroupList)
-
-            mainTag.append(displayTag)
-
-            #placing the HTML and generating JS based on the courses (drawing lines)
-            print("Placing course diagram....")
-            htmlgen.placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager)
-
-            # closing JS and CSS files
-            print("Closing files...")
-            javascriptgen.closeControllerJavaScript(controller)
-            indexJS.close()
-            categoryCSS.close()
-           
-    except FileNotFoundError as err:
-       print("Exception raised: " + 
-       err.strerror + 
-       ". Either the template HTML file is not in the same directory as the script or" +
-       " the output directory is not organized correctly or does not exist")
-
-       #gui error box
-       messagebox.showerror('Python Error', "Exception raised: " + 
-       err.strerror + 
-       ". Either the template HTML file is not in the same directory as the script or" +
-       " the output directory is not organized correctly or does not exist")
-
-    # writing output to an output html
-    try:
-        print("Writing final HTML.....")
-        with open("./output/index.html", "w", encoding="utf-8") as output:
-            output.write(str(soup))
-    except FileNotFoundError as err:
-       print("Exception raised: " + 
-             err.strerror + 
-             ". The directory you are in does not have a directory named output.")
-    print("Generation Completed!")
-
-#browse buttons
-button_excel = ttk.Button(root, text="Browse", command=courseBrowse)
-button_excel.grid(row=0, column=3, **paddings)
-
-button_excel = ttk.Button(root, text="Browse", command=catBrowse)
-button_excel.grid(row=1, column=3, **paddings)
-
-button_excel = ttk.Button(root, text="Browse", command=seqBrowse)
-button_excel.grid(row=2, column=3, **paddings)
-
-button_main = ttk.Button(root, text="Generate website", command=main)
-button_main.grid(row=4, column=2, **paddings)
 
 
 
 if __name__ == "__main__":
-    root.mainloop()
+    window.mainloop()
