@@ -1,36 +1,36 @@
-# MEC-E-Program-Visualizer
+# Program-Visualizer
 
 Developed by: Jason Kim, Moaz Abdelmonem, and Zachary Schmidt under the supervision of Dr. David Nobes (University of Alberta)
 in the Summer of 2022
 
-Project aimed to generate a web based diagram that visualizes the different program sequences available in the MEC E program
-at the University of Alberta. Courses are displayed in boxes, with the calendar description of that course being displayed when
+Program written in Python to generate an interactive web based diagram that visualizes the different program sequences available in engineering programs
+at the University of Alberta.
+
+Courses are displayed in boxes, with the calendar description of that course being displayed when
 the corresponding box of the course is hovered over as shown below. The course will be coloured according to its "category", which
 is configured and detrimined by the website creator.
-![highlightinghover2](https://user-images.githubusercontent.com/60327441/172486420-1a7d6610-f8a5-42eb-9803-fcba4096e2a3.gif)
+![hovercoursesREPO1](https://user-images.githubusercontent.com/60327441/173874470-39ed97e7-4ff8-452e-8304-39bb2b48c2c5.gif)
 
 The webpage also allows a user to display the prerequisites and corequisites of a course, as well as the courses that
 the course is a prerequisite or corequisite of, allowing them to interactively view the dependencies between different courses.
-![clickingspawn2](https://user-images.githubusercontent.com/60327441/172486672-ff2927a1-66f4-4aad-886b-1db2f25764ff.gif)
+![clickspawnREPO1](https://user-images.githubusercontent.com/60327441/173874907-61b7dfe5-df1a-4748-80c5-ae9ada3aab0d.gif)
 
 The webpage allows users to switch between the different program sequences as displayed below. 
-![planswitching2](https://user-images.githubusercontent.com/60327441/172487202-897612e5-f413-4b1f-81dc-4e96a60252c8.gif)
+![planswitchingREPO1](https://user-images.githubusercontent.com/60327441/173875138-fa3b8ba0-f19f-4582-9b25-e703e4f1e692.gif)
 
-Note that certain plans have different "course groups", so in order to switch between the options (each option is treated as its own "plan"), 
-hover over the plan in question and select the set of options as shown below.
-![coursegroupswitching](https://user-images.githubusercontent.com/60327441/172487413-dddbae14-3305-43f2-b649-5f4cce13e3b1.gif)
+Note that certain plans have different "course groups", so in order to switch between the options (each option is treated as its own "plan"),
+select the options on the right on the plan selection menu.
+![subplanswitchingREPO1](https://user-images.githubusercontent.com/60327441/173875409-3e3f3485-223d-4a51-864c-437124775ab0.gif)
 
 The webpage also allows users to highlight/unhighlight courses of a specific category using the buttons shown below.
-![coursehighlightbutton](https://user-images.githubusercontent.com/60327441/172487655-b2a1217b-fa5a-42ce-ab30-51cf82ac79a1.gif)
+![coursehighlightREPO1](https://user-images.githubusercontent.com/60327441/173875712-23d82a8c-84cf-4b71-9c4e-94148e8a89d7.gif)
 
-The project, in its current state, consists of a Python script `main.py`, which depend on the modules located in the `modules` directory. The Python script reads
-Excel files located in the same directory as the script (.xls files, note that .xlsx files will not work) containing course and program information along with a template HTML file (`template.html`) 
-and produces an resultant HTML (`index.html`) in the `output` directory alongside the needed
-Javascript files (`index.js` and `controller.js`) in `output/js`, and the needed CSS files (`category.css`) in `output/styles`. The output directory contains the
-files needed to be uploaded to the web server alongside with the webpage.
+The program can be run as a Python script using `/src/main.py` and the Python modules located in `/src/modules/`. In order to properly run the script,
+the template HTML file '/src/template.html` and the directories `/src/output/` and `/src/GUI-images` must be located in the same directory as the script. You must also
+prepare three Excel files (`.xls` files, note that `.xlsx` files will NOT work) which specify course, sequencing and course category information. Details on how to format these Excel files can be found in the user manual.
 
-This project is initially designed for only MEC E programs at the University of Alberta, 
-but can be expanded and generalized for any program sequence.
+The program can also be run as a portable executable located in the `.zip` files in `/releases/`. These `.zip` files package the executable and neccesary files needed
+for the execution of the program. To use, simply download the `.zip` and extract the files, and run the executable. Note that you should NOT modify any of the files provided in the `.zip` and that the executable, currently, only works for 64-bit Windows machines.
 
 To produce a portable executable from the script: 
   - Run `pyinstaller main.py -F --onefile -n programVisualizer`
@@ -43,7 +43,4 @@ This project has the following dependencies:
   - AngularJS for the front end logic
   - BeautifulSoup for generation of the final HTML
   - xlrd for parsing Excel files
-  - copy (deepcopy function) in parsing.py to make a deepcopy of course objects for each plan
   - pyinstaller to convert the Python script into a portable executable
-  - html for writing escape characters without BeautifulSoup auto-formatting
-  - tkinter for generating the GUI
