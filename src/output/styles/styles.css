@@ -107,14 +107,13 @@ header {
     }
 }
 
-.topstuff {
+.toprowcontainer {
     display: flex;
     flex-direction: row;
-    
 }
 
 .linelegendcontainer {
-    width: 33vw;
+    width: 33rem;
     min-width: 30rem;
 }
 
@@ -133,34 +132,34 @@ header {
 }
 
 .selectors {
-    width: 33vw;
+    width: 33rem;
     min-width: 30rem;
 }
 
 /* Plan header styling*/
 h3.planhead {
-    width: 33vw;
-    min-width: 30rem;
+    width: 30rem;
     margin: 0;
     font-size: 175%;
     text-align: center;
 }
 
+.plangroupselectors {
+    display: flex;
+    flex-direction: row;
+}
+
 /* Form styling */
 .select {
-    width: 20rem;
+    width: fit-content;
     margin-top: 15px;
-    margin-right: 0;
-    position: relative;
-    left: 35%;
+    margin-left: 15%;
+    margin-right: 35px;
 }
 
 .coursegroupselector {
     width: fit-content;
-    position: relative;
-    left: 75%;
     margin-top: 15px;
-    margin-right: 0;
 }
 
 /* Form text styling */
@@ -176,14 +175,17 @@ label {
 
 /* Form styling, radio buttons to switch plan */
 .legenddescription {
-    text-align: left;
+    margin-left: 22%;
+    width: fit-content;
+    display: inline-block;
+    text-align: center;
 }
 
 /* legend for categories wrapper */
 .legendboxes {
     width: 20rem;
     height: 15rem;
-    margin: 0;
+    margin-left: 25%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -209,6 +211,7 @@ label {
     position: relative;
     top: 5px;
     margin: 5px;
+    width: 50%;
 }
 
 /* Wrapper div for the term names and course boxes, the main content */
