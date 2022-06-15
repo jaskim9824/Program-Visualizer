@@ -26,7 +26,7 @@ The webpage also allows users to highlight/unhighlight courses of a specific cat
 ![coursehighlightREPO1](https://user-images.githubusercontent.com/60327441/173875712-23d82a8c-84cf-4b71-9c4e-94148e8a89d7.gif)
 
 The program can be run as a Python script using `/src/main.py` and the Python modules located in `/src/modules/`. In order to properly run the script,
-the template HTML file '/src/template.html` and the directories `/src/output/` and `/src/GUI-images` must be located in the same directory as the script. You must also
+the template HTML file `/src/template.html` and the directories `/src/output/` and `/src/GUI-images` must be located in the same directory as the script. You must also
 prepare three Excel files (`.xls` files, note that `.xlsx` files will NOT work) which specify course, sequencing and course category information. Details on how to format these Excel files can be found in the user manual.
 
 The program can also be run as a portable executable located in the `.zip` files in `/releases/`. These `.zip` files package the executable and neccesary files needed
@@ -35,6 +35,9 @@ for the execution of the program. To use, simply download the `.zip` and extract
 To produce a portable executable from the script: 
   - Run `pyinstaller main.py -F --onefile -n programVisualizer`
   - This will produce an executable called `programVisualizer.exe` in the `dist` directory produced, as well as other files and directories. Remove the other files and directories as they are not needed
+  
+Upon running, the program will launch a GUI that will prompt you to locate the aforementoined Excel files and input the name of the departement which you are generating the program sequences for. The products of the program will be found in the `output` directory, which you should upload the contents of to the 
+web server hosting the diagram.
  
 This project requires Python 3.6 or higher.
 
