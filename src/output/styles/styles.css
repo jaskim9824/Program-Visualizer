@@ -113,7 +113,7 @@ header {
 }
 
 .linelegendcontainer {
-    width: 33vw;
+    width: 33rem;
     min-width: 30rem;
 }
 
@@ -132,14 +132,13 @@ header {
 }
 
 .selectors {
-    width: 33vw;
+    width: 33rem;
     min-width: 30rem;
 }
 
 /* Plan header styling*/
 h3.planhead {
-    width: 33vw;
-    min-width: 30rem;
+    width: 30rem;
     margin: 0;
     font-size: 175%;
     text-align: center;
@@ -148,7 +147,6 @@ h3.planhead {
 .plangroupselectors {
     display: flex;
     flex-direction: row;
-
 }
 
 /* Form styling */
@@ -213,6 +211,7 @@ label {
     position: relative;
     top: 5px;
     margin: 5px;
+    width: 50%;
 }
 
 /* Wrapper div for the term names and course boxes, the main content */
