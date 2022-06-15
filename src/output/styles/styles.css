@@ -107,7 +107,7 @@ header {
     }
 }
 
-.topstuff {
+.toprowcontainer {
     display: flex;
     flex-direction: row;
 }
