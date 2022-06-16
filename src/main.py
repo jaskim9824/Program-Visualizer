@@ -30,6 +30,7 @@ from tkinter import filedialog
 from PIL import ImageTk, Image
 
 
+
 # Debug function for cleanly printing contents of plan sequences
 # Parameters:
 #   sequenceDict - dict mapping plan names to a dict containing plan seqeunce
@@ -43,9 +44,42 @@ def debug(sequenceDict):
             print("\n")
         print("\n")
  
+window = Tk()
+window.title('plan visualizer WebGen')
+window.iconbitmap('C:output/images/favicon.ico')
+window.geometry("1092x544")
+window.configure(bg = "#ffffff")
+canvas = Canvas(
+    window,
+    bg = "#ffffff",
+    height = 544,
+    width = 1092,
+    bd = 0,
+    highlightthickness = 0,
+    relief = "ridge")
+canvas.place(x = 0, y = 0)
+window.resizable(False, False)
+
+def add_progbar():
+    global progbar
+    progbar = ttk.Progressbar(
+    window,
+    orient='horizontal',
+    mode='determinate',
+    length=280
+    )
+    progbar.place(
+    x=635, y=480
+    )
 
 
+def progress():
+    progbar['value']+= 8.5
+    window.update_idletasks()
+    return progbar['value']
+    
 def main():
+    add_progbar()
     print("Beginning generation...")
     # opening the template html file and constructing html
     # note: here we calling parsing to extract the course data!
@@ -58,6 +92,7 @@ def main():
             print("Opening files...")
             controller = open("./output/js/controller.js", "w")
             indexJS = open("./output/js/index.js", "w")
+            progress()
 
             #opening the CSS file
             categoryCSS = open("./output/styles/category.css", "w")
@@ -68,18 +103,22 @@ def main():
             # parsing the excel files with course info, pulls dependencies (prereqs, coreqs, reqs) too
             print("Parsing courses...")
             courseDict = courseparsing.parseCourses(courses_excel.get())
+            progress()
             
             # pulling the category and color info from excel
             print("Parsing categories...")
             courseDict, categoryDict = categoriesparsing.parseCategories(courseCat_excel.get(), courseDict)
+            progress()
 
             # writing colour highlighting CSS
             print("Writing category CSS...")
             cssgen.writeCategoryCSS(categoryDict, categoryCSS)
-            
+            progress()
+
             # sequencing courses
             print("Parsing sequences....")
             sequenceDict = sequenceparsing.parseSeq(seq_excel.get(), courseDict)
+            progress()
 
             # extracting dept name for program sequence
             deptName = department.get()
@@ -98,6 +137,7 @@ def main():
                                                         courseGroupList, 
                                                         controller)
 
+            progress()
             #locating title tag
             titleTag = soup.body.find("a", class_="site-title")
 
@@ -109,6 +149,7 @@ def main():
             # customizing webpage title
             print("Writing title....")
             htmlgen.switchTitle(titleTag, deptName)
+            progress()
 
             # locating form tag
             formTag = mainTag.find("form")
@@ -116,6 +157,7 @@ def main():
             # placing main radio inputs
             print("Placing radio inputs....")
             htmlgen.placeRadioInputs(formTag, courseGroupDict, soup)
+            progress()
 
             # locating course group selector
             courseGroupSelectTag = soup.body.find("div", class_="coursegroupselector")
@@ -129,22 +171,26 @@ def main():
             # places legend for color-coding
             print("Placing legend....")
             htmlgen.placeLegend(legendTag, categoryDict, soup)
+            progress()
 
             # Generating display tag, this is where the course divs will be written
             print("Generating display tag...")
             displayTag = htmlgen.generateDisplayDiv(soup, courseGroupList)
+            progress()
 
             mainTag.append(displayTag)
 
             #placing the HTML and generating JS based on the courses (drawing lines)
             print("Placing course diagram....")
             htmlgen.placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager)
+            progress()
 
             # closing JS and CSS files
             print("Closing files...")
             javascriptgen.closeControllerJavaScript(controller)
             indexJS.close()
             categoryCSS.close()
+            progress()
 
     except FileNotFoundError as err:
        print("Exception raised: " + 
@@ -169,6 +215,8 @@ def main():
              ". The directory you are in does not have a directory named output.")
     print("Generation Completed!")
     messagebox.showinfo('Status',message="Webpage successfully generated!")
+    progress()
+    progbar.destroy()
 
 
 def btn_clicked():
@@ -223,7 +271,7 @@ def new_window():
     my_canvas.create_window((0,0), window=second_frame, anchor="nw")
 
     header = Message(second_frame, 
-    text="plan visualizer WebGen\nuser manual",
+    text="Plan Visualizer WebGen\nUser Manual",
     aspect=800,
     justify=CENTER,
     font= ('Helvetica 15 underline')
@@ -246,7 +294,7 @@ def new_window():
     message1.grid(row=1, column=0,padx=20, pady=20)
 
     message2 = Label(second_frame, 
-    text="2- Make sure you have the following excel files (All Excel files must be in the .xls format): "
+    text="2- Make sure you have the following Excel files (All Excel files must be in the .xls format): "
     )
     message2.grid(row=2, column=0,padx=20, pady=20)
     #courses.xls image
@@ -271,21 +319,21 @@ def new_window():
     img_label3.grid(row=3, column=2, padx=150)
 
     #excel file description
-    pic1_description = Label(second_frame, text="This excel file must contain\nall individual course information")
+    pic1_description = Label(second_frame, text="This Excel file must contain\nall individual course information.")
     pic1_description.grid(row=4, column=0)
 
-    pic2_description = Label(second_frame, text="This excel file must contain course categories\nand all courses that fall under each category")
+    pic2_description = Label(second_frame, text="This Excel file must contain course categories\nand all courses that fall under each category.")
     pic2_description.grid(row=4, column=1)
 
-    pic3_description = Label(second_frame, text="This excel file must contain\nall possible plan sequences")
+    pic3_description = Label(second_frame, text="This Excel file must contain\nall possible plan sequences.")
     pic3_description.grid(row=4, column=2)
 
     message3 = Label(second_frame, 
-    text="3- Type in the excel file name (if it's present in the same directory as the program files) or\n provide it's path:"
+    text="3- Type in the Excel file name (if it's present in the same directory as the program files) or\n provide it's path:"
     )
     message3.grid(row=5, column=0,padx=20, pady=25)
 
-    #Sequencing.xls image
+    #GUI image 
     tutorial_img = Image.open("C:GUI_images/tutorial.png")
     resized_img = tutorial_img.resize((500,300))
     new_tutorial = ImageTk.PhotoImage(resized_img)
@@ -303,22 +351,6 @@ def new_window():
     web_label = Label(second_frame, image=new_web_img)
     web_label.grid(row=8, column=1)
 
-#Main Window
-window = Tk()
-window.title('plan visualizer WebGen')
-window.iconbitmap('C:output/images/favicon.ico')
-window.geometry("1092x517")
-window.configure(bg = "#ffffff")
-canvas = Canvas(
-    window,
-    bg = "#ffffff",
-    height = 517,
-    width = 1092,
-    bd = 0,
-    highlightthickness = 0,
-    relief = "ridge")
-canvas.place(x = 0, y = 0)
-window.resizable(False, False)
 
 menubar = Menu(window)
 window.config(menu=menubar)
@@ -350,7 +382,8 @@ courseEntry_bg = canvas.create_image(
 courses_excel = Entry(
     bd = 0,
     bg = "#d9d9d9",
-    highlightthickness = 0)
+    highlightthickness = 0,
+    font='halvetica 12')
 courses_excel.insert(tkinter.END, "")
 courses_excel.place(
     x = 635, y = 135,
@@ -366,7 +399,8 @@ catEntry_bg = canvas.create_image(
 courseCat_excel = Entry(
     bd = 0,
     bg = "#d9d9d9",
-    highlightthickness = 0)
+    highlightthickness = 0,
+    font='halvetica 12')
 courseCat_excel.insert(tkinter.END, "")
 courseCat_excel.place(
     x = 635, y = 212,
@@ -382,7 +416,8 @@ seqEntry_bg = canvas.create_image(
 seq_excel = Entry(
     bd = 0,
     bg = "#d9d9d9",
-    highlightthickness = 0)
+    highlightthickness = 0,
+    font='halvetica 12')
 seq_excel.insert(tkinter.END, "")
 seq_excel.place(
     x = 635, y = 289,
@@ -397,7 +432,8 @@ deptEntry_bg = canvas.create_image(
 department = Entry(
     bd = 0,
     bg = "#d9d9d9",
-    highlightthickness = 0)
+    highlightthickness = 0,
+    font='halvetica 12')
 
 department.place(
     x = 635, y = 366,
@@ -406,7 +442,7 @@ department.place(
 
 background_img = PhotoImage(file = f"GUI_images/background.png")
 background = canvas.create_image(
-    467.5, 258.5,
+    467.5, 272.0,
     image=background_img)
 
 
