@@ -226,11 +226,10 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
         orCase = course.calendar_print.lower().strip() == "or"  # handles improper formatting pulled from Excel
 
         if course.course_group != "":
-            if (course.course_group[-1] == "A") or (course.course_group[-1] == "B"):
-                # add a wrapper container around course group
-                courseContDiv = soup.new_tag("div", attrs={"class":"coursegroupcontainer", "style":"outline-color:#" + hexcolorlist[int(course.course_group[0])]})
-                courseGroupTitle = soup.new_tag("p", attrs={"class":"coursegrouptitle"})
-                courseGroupTitle.append("Course Group " + course.course_group)
+            # add a wrapper container around course group
+            courseContDiv = soup.new_tag("div", attrs={"class":"coursegroupcontainer", "style":"outline-color:#" + hexcolorlist[int(course.course_group[0])]})
+            courseGroupTitle = soup.new_tag("p", attrs={"class":"coursegrouptitle"})
+            courseGroupTitle.append("Course Group " + course.course_group)
         else:
             # not in a course group
             courseContDiv = soup.new_tag("div", attrs={"class":"coursecontainer"})
@@ -309,12 +308,11 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
             termTag, courseOrList, courseGroupList = addOrCourses(courseOrList, prevOrCourse, courseGroupList, termTag, soup)
 
         if course.course_group != "":
-            if (course.course_group[-1] == "A") or (course.course_group[-1] == "B"):
-                # need to append to courseGroupList, different than check in orCase because
-                # this doesn't involve OR
-                courseGroupList.append(courseDiv)
-                writeFlagsAndVariables(controller, courseID)
-                continue
+            # need to append to courseGroupList, different than check in orCase because
+            # this doesn't involve OR
+            courseGroupList.append(courseDiv)
+            writeFlagsAndVariables(controller, courseID)
+            continue
 
         courseContDiv.append(courseDiv) 
         termTag.append(courseContDiv)
@@ -352,10 +350,9 @@ def addOrCourses(courseOrList, prevOrCourse, courseGroupList, termTag, soup):
             courseOr.append("OR")  # add the word or between course boxes
             courseOrContDiv.append(courseOr)
     if prevOrCourse.course_group != "":
-        if (prevOrCourse.course_group[-1] == "A") or (prevOrCourse.course_group[-1] == "B"):
-            # if the OR courses were in a course group, append them to courseGroupList
-            # which will in turn be appended to termTag later
-            courseGroupList.append(courseOrContDiv)
+        # if the OR courses were in a course group, append them to courseGroupList
+        # which will in turn be appended to termTag later
+        courseGroupList.append(courseOrContDiv)
     else:
         # not in a course group, append directly to termTag
         termTag.append(courseOrContDiv)

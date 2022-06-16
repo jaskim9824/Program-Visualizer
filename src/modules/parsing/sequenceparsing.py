@@ -52,12 +52,12 @@ def parseSeq(filename, course_obj_dict):
                         # Cell in Excel is empty, skip over this cell
                         continue
                     course_group = ""
-                    if name[-2] == "A":
-                        course_group = name[-3:-1]
-                        name = name[:-4]
-                    if name[-2] == "B":
-                        course_group = name[-3:-1]
-                        name = name[:-4]
+                    if ("(" in name) and (")" in name):
+                        # course group is between open and close bracket
+                        open_bracket = name.find("(")
+                        close_bracket = name.find(")")
+                        course_group = name[open_bracket + 1:close_bracket]
+                        course_group.strip().replace(" ", "")
 
                     if name == "PROG":
                         # Create Course obj with only name and course_description attribute
@@ -157,9 +157,6 @@ def checkReqs(course_seq):
             term_course_names = extractCourseFromTerm(planDict, term)
        
             for course in planDict[term]:
-                # FIXME: fix for ENGG 160 coreq calendar description
-                if course.name == "ENGG 160":
-                    continue
                 # Checking coreqs
                 for coreq in course.coreqs:
                     # For each coreq for a certain course, if there are multiple options
