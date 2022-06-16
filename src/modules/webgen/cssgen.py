@@ -39,18 +39,7 @@ def writeCategoryCSS(categoryDict, categoryCSS):
             background-color: #{backColour};
             border-color: #{backColour};
         }}
-.coursegroupacontainer .{categoryName}:hover {{
-            background-color: #{backColour};
-            border-color: #{backColour};
-        }}
-        .{categoryName}-highlighted {{
-            background-color: #{backColour};
-        }}
-        .{categoryName}-highlighted:hover {{
-            background-color: #{backColour};
-            border-color: #{backColour};
-        }}
-.coursegroupbcontainer .{categoryName}:hover {{
+.coursegroupcontainer .{categoryName}:hover {{
             background-color: #{backColour};
             border-color: #{backColour};
         }}

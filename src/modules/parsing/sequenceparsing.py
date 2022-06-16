@@ -52,36 +52,36 @@ def parseSeq(filename, course_obj_dict):
                         # Cell in Excel is empty, skip over this cell
                         continue
                     course_group = ""
-                    if name[-1] == "A":
-                        course_group = "A"
-                        name = name[:-1]
-                    if name[-1] == "B":
-                        course_group = "B"
-                        name = name[:-1]
+                    if ("(" in name) and (")" in name):
+                        # course group is between open and close bracket
+                        open_bracket = name.find("(")
+                        close_bracket = name.find(")")
+                        course_group = name[open_bracket + 1:close_bracket]
+                        course_group.strip().replace(" ", "")
+                        if close_bracket == (len(name) - 1):
+                            # Case: course group is last thing in cell
+                            name = name[:open_bracket]
+                        else:
+                            # Case: some text after course group that is part of course name
+                            name = name[:open_bracket] + name[close_bracket + 1:]
 
                     if name == "PROG":
                         # Create Course obj with only name and course_description attribute
                         curr_course = deepcopy(course_obj_dict["Program/Technical Elective"])
-                        if course_group == "A":
-                            curr_course.course_group = "A"
-                        elif course_group == "B":
-                            curr_course.course_group = "B"
+                        if course_group != "":
+                            curr_course.course_group = course_group
                         term_list.append(curr_course)
                         continue
                     if name == "COMP":
                         curr_course = deepcopy(course_obj_dict["Complementary Elective"])
-                        if course_group == "A":
-                            curr_course.course_group = "A"
-                        elif course_group == "B":
-                            curr_course.course_group = "B"
+                        if course_group != "":
+                            curr_course.course_group = course_group
                         term_list.append(curr_course)
                         continue
                     if name == "ITS":
                         curr_course = deepcopy(course_obj_dict["ITS Elective"])
-                        if course_group == "A":
-                            curr_course.course_group = "A"
-                        elif course_group == "B":
-                            curr_course.course_group = "B"
+                        if course_group != "":
+                            curr_course.course_group = course_group
                         term_list.append(curr_course)
                         continue
 
@@ -94,10 +94,8 @@ def parseSeq(filename, course_obj_dict):
                                 " is not present in the Excel file with the course information.")
                             orcourse = deepcopy(course_obj_dict[orname])
                             orcourse.calendar_print = "or"
-                            if course_group == "A":
-                                orcourse.course_group = "A"
-                            elif course_group == "B":
-                                orcourse.course_group = "B"
+                            if course_group != "":
+                                orcourse.course_group = course_group
                             term_list.append(orcourse)
                         plan_dict[term_name] = term_list
                         row += 1
@@ -109,10 +107,8 @@ def parseSeq(filename, course_obj_dict):
 
                     # deepcopy since sequencing leads to prereqs and coreqs not being the same between different plans
                     curr_course = deepcopy(course_obj_dict[name])
-                    if course_group == "A":
-                        curr_course.course_group = "A"
-                    elif course_group == "B":
-                        curr_course.course_group = "B"
+                    if course_group != "":
+                        curr_course.course_group = course_group
                     term_list.append(curr_course)  # store each course in a list
                 plan_dict[term_name] = term_list  # store each list in a dict (key is term name)
                 col += 1
@@ -167,9 +163,6 @@ def checkReqs(course_seq):
             term_course_names = extractCourseFromTerm(planDict, term)
        
             for course in planDict[term]:
-                # FIXME: fix for ENGG 160 coreq calendar description
-                if course.name == "ENGG 160":
-                    continue
                 # Checking coreqs
                 for coreq in course.coreqs:
                     # For each coreq for a certain course, if there are multiple options
