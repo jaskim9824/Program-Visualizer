@@ -284,6 +284,10 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
             courseDisc["id"] = courseDisc["id"][:-4] + str(compcounter) + "desc"
             compcounter += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
+            # Adding link to list of electives DUMMY LINK FOR NOW
+            linkTag = soup.new_tag("a", href="https://www.google.com/")
+            linkTag.append("List of electives")
+            courseDisc.append(linkTag)
 
         elif course.name == "Program/Technical Elective":
             # Class allows formatting so words fit in course box
@@ -293,6 +297,10 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
             courseDisc["id"] = courseDisc["id"][:-4] + str(progcounter) + "desc"
             progcounter += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
+            # Adding link to list of electives DUMMY LINK FOR NOW
+            linkTag = soup.new_tag("a", href="https://www.google.com/")
+            linkTag.append("List of electives")
+            courseDisc.append(linkTag)
 
         elif course.name == "ITS Elective":
             courseID = courseID+str(itscounter)
@@ -302,6 +310,10 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
             courseDisc["id"] = courseDisc["id"][:-4] + str(itscounter) + "desc"
             itscounter += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
+            # Adding link to list of electives DUMMY LINK FOR NOW
+            linkTag = soup.new_tag("a", href="https://www.google.com/")
+            linkTag.append("List of electives")
+            courseDisc.append(linkTag)
 
         else:
             # This is a regular course. All information should be available
