@@ -175,14 +175,10 @@ def placeCourseGroupRadioInputsForSubPlan(subPlanTag, soup, subPlanOptionList, s
 #   plan - name of plan whose terms are being placed
 #   lineManager - line manager object, used to handle line placement and generation
 def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManager):
+    # wrapper that holds the number of each type of elective taken this plan
+    electiveCounterWrapper = {"ITS": 0, "PROG": 0, "COMP": 0}
     # count of amount of term columns placed in the plan
     termcounter = 0
-    # count of amount of ITS electives placed in the plan
-    itscounter = 0
-    # count of amount of program electives placed in the plan
-    progcounter = 0
-    # count of amount of comp electives placed in the plan
-    compcounter = 0
     # number that goes into course group (eg: group 2A, 4B -> #A or #B)
     groupcounter = 0
     groupcountsetflag = False  # flag to tell if the initial value of groupcounter is set
@@ -193,15 +189,13 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
         termHeader = soup.new_tag("h3", attrs={"class":"termheader"})
         termHeader.append(term)
         termDiv.append(termHeader)
-        compcounter, progcounter, itscounter, groupcounter, totalgroupscount, groupcountsetflag = placeCourses(termDiv, 
+        groupcounter, totalgroupscount, groupcountsetflag = placeCourses(termDiv, 
                                                             planDict[term], 
                                                             soup, 
                                                             controller, 
                                                             plan, 
                                                             termcounter,
-                                                            compcounter,
-                                                            progcounter,
-                                                            itscounter,
+                                                            electiveCounterWrapper,
                                                             groupcounter,
                                                             totalgroupscount,
                                                             groupcountsetflag,
@@ -234,7 +228,7 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
 #   term - name of the current term, used to set initial value of groupcounter
 # Returns:
 #   compcounter, progcounter, itscounter, groupcounter, totalgroupscount groupcountsetflag
-def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcounter, progcounter, itscounter, groupcounter, totalgroupscount, groupcountsetflag, term):
+def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiveCountWrapper, groupcounter, totalgroupscount, groupcountsetflag, term):
     courseGroupList = []  # list of courses (course objects) in a course group
     courseGroupTitle = ""  # name of the course group (eg: "Course group 2A")
     courseOrList = []
@@ -278,40 +272,40 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
         # Constructing course div, check for special cases
         if course.name == "Complementary Elective":
             # Class allows formatting so words fit in course box
-            courseID = courseID+str(compcounter)
+            courseID = courseID+str(electiveCountWrapper["COMP"])
             courseDiv = createCourseDiv(soup, courseID, "COMP", orCase)
             # id must include which number elective it is (electiveName0, electiveName1, electiveName2, ...)
-            courseDisc["id"] = courseDisc["id"][:-4] + str(compcounter) + "desc"
-            compcounter += 1
+            courseDisc["id"] = courseDisc["id"][:-4] + str(electiveCountWrapper["COMP"]) + "desc"
+            electiveCountWrapper["COMP"] += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
             # Adding link to list of electives DUMMY LINK FOR NOW
-            linkTag = soup.new_tag("a", href="https://www.google.com/")
+            linkTag = soup.new_tag("a", href="https://www.google.com/", target="_blank")
             linkTag.append("List of electives")
             courseDisc.append(linkTag)
 
         elif course.name == "Program/Technical Elective":
             # Class allows formatting so words fit in course box
-            courseID = courseID+str(progcounter)
+            courseID = courseID+str(electiveCountWrapper["PROG"])
             courseDiv = createCourseDiv(soup, courseID, "PROG", orCase)
             # id must include which number elective it is (electiveName0, electiveName1, electiveName2, ...)
-            courseDisc["id"] = courseDisc["id"][:-4] + str(progcounter) + "desc"
-            progcounter += 1
+            courseDisc["id"] = courseDisc["id"][:-4] + str(electiveCountWrapper["PROG"]) + "desc"
+            electiveCountWrapper["PROG"] += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
             # Adding link to list of electives DUMMY LINK FOR NOW
-            linkTag = soup.new_tag("a", href="https://www.google.com/")
+            linkTag = soup.new_tag("a", href="https://www.google.com/", target="_blank")
             linkTag.append("List of electives")
             courseDisc.append(linkTag)
 
         elif course.name == "ITS Elective":
-            courseID = courseID+str(itscounter)
+            courseID = courseID+str(electiveCountWrapper["ITS"])
             # Class allows formatting so words fit in course box
             courseDiv = createCourseDiv(soup, courseID, "ITS", orCase)
             # id must include which number elective it is (electiveName0, electiveName1, electiveName2, ...)
-            courseDisc["id"] = courseDisc["id"][:-4] + str(itscounter) + "desc"
-            itscounter += 1
+            courseDisc["id"] = courseDisc["id"][:-4] + str(electiveCountWrapper["ITS"]) + "desc"
+            electiveCountWrapper["ITS"] += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
             # Adding link to list of electives DUMMY LINK FOR NOW
-            linkTag = soup.new_tag("a", href="https://www.google.com/")
+            linkTag = soup.new_tag("a", href="https://www.google.com/", target="_blank")
             linkTag.append("List of electives")
             courseDisc.append(linkTag)
 
@@ -387,7 +381,7 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, compcou
             # A and B groups are done, next course group will be one number higher
             groupcounter += 1
     
-    return compcounter, progcounter, itscounter, groupcounter, totalgroupscount, groupcountsetflag
+    return groupcounter, totalgroupscount, groupcountsetflag
 
 # Determines which side a tooltip should appear on based on the term position on the page.
 # If the term is near the left side, the tooltip appears on the right and vice versa.
