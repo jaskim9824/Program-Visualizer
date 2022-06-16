@@ -84,12 +84,20 @@ def placeCourseGroupRadioInputs(courseGroupSelectTag, soup, courseGroupDict):
 #   indexJS - file handle for index.js, used to write to index.js
 #   controller - file handle for controller.js, used to write to controller.js
 #   lineManager - line manager object, used to handle line placement and generation
-def placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager):
+#   electiveLinkDict - dict that maps elective type to the link of the list of the links
+def placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager, electiveLinkDict):
     for plan in sequenceDict:
         switchInput = soup.new_tag("div", attrs={"id":cleaner.cleanString(plan),
                                                  "ng-switch-when":cleaner.cleanString(plan),
                                                  "style":"height:fit-content; display:flex; flex-direction:row; flex-wrap:column;"})
-        placeTermsDivs(switchInput, sequenceDict[plan], soup, indexJS, controller, plan, lineManager)
+        placeTermsDivs(switchInput, 
+                       sequenceDict[plan], 
+                       soup, 
+                       indexJS, 
+                       controller, 
+                       plan, 
+                       lineManager,
+                       electiveLinkDict)
         displayTag.append(switchInput)
 
 # Function that places the legend description tag
@@ -174,7 +182,7 @@ def placeCourseGroupRadioInputsForSubPlan(subPlanTag, soup, subPlanOptionList, s
 #   controller - file handle for controller.js, used to write to controller.js
 #   plan - name of plan whose terms are being placed
 #   lineManager - line manager object, used to handle line placement and generation
-def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManager):
+def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManager, electiveLinkDict):
     # wrapper that holds the number of each type of elective taken this plan
     electiveCounterWrapper = {"ITS": 0, "PROG": 0, "COMP": 0}
     # count of amount of term columns placed in the plan
@@ -199,7 +207,8 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
                                                             groupcounter,
                                                             totalgroupscount,
                                                             groupcountsetflag,
-                                                            term)
+                                                            term,
+                                                            electiveLinkDict)
         planTag.append(termDiv)
         termcounter += 1
     # generating a list of all courses taken in this plan
@@ -219,16 +228,13 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
 #   controller - file handle for controller.js, used to write to controller.js
 #   plan - name of plan whose terms are being placed
 #   termcounter - which term is currently being placed (int)
-#   compcounter - number of comp electives that have been placed for this plan
-#   progcounter - number of program electives that have been placed for this plan
-#   itscoutner - number of its electives that have been placed for this plan
 #   groupcounter - number that goes into course group name (#A or #B eg: 2A, 4B)
 #   totalgroupscount - total number of course groups (A and B) that have been cycled through
 #   groupcountsetflag - flag set when initial value is set
 #   term - name of the current term, used to set initial value of groupcounter
 # Returns:
 #   compcounter, progcounter, itscounter, groupcounter, totalgroupscount groupcountsetflag
-def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiveCountWrapper, groupcounter, totalgroupscount, groupcountsetflag, term):
+def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiveCountWrapper, groupcounter, totalgroupscount, groupcountsetflag, term, electiveLinkDict):
     courseGroupList = []  # list of courses (course objects) in a course group
     courseGroupTitle = ""  # name of the course group (eg: "Course group 2A")
     courseOrList = []
@@ -279,7 +285,7 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
             electiveCountWrapper["COMP"] += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
             # Adding link to list of electives DUMMY LINK FOR NOW
-            linkTag = soup.new_tag("a", href="https://www.google.com/", target="_blank")
+            linkTag = soup.new_tag("a", href=electiveLinkDict["COMP"], target="_blank")
             linkTag.append("List of electives")
             courseDisc.append(linkTag)
 
@@ -292,7 +298,7 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
             electiveCountWrapper["PROG"] += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
             # Adding link to list of electives DUMMY LINK FOR NOW
-            linkTag = soup.new_tag("a", href="https://www.google.com/", target="_blank")
+            linkTag = soup.new_tag("a", href=electiveLinkDict["PROG"], target="_blank")
             linkTag.append("List of electives")
             courseDisc.append(linkTag)
 
@@ -305,7 +311,7 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
             electiveCountWrapper["ITS"] += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
             # Adding link to list of electives DUMMY LINK FOR NOW
-            linkTag = soup.new_tag("a", href="https://www.google.com/", target="_blank")
+            linkTag = soup.new_tag("a", href=electiveLinkDict["ITS"], target="_blank")
             linkTag.append("List of electives")
             courseDisc.append(linkTag)
 

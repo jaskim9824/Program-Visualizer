@@ -137,8 +137,18 @@ def main():
             mainTag.append(displayTag)
 
             #placing the HTML and generating JS based on the courses (drawing lines)
-            print("Placing course diagram....")
-            htmlgen.placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager)
+            print("Placing course diagram....")\
+            # dummy input data
+            electiveLinkDict = {"ITS": "https://www.google.com/", 
+                                "PROG": "https://www.google.com/", 
+                                "COMP": "https://www.google.com/"}
+            htmlgen.placePlanDivs(displayTag, 
+                                  sequenceDict, 
+                                  soup, 
+                                  indexJS, 
+                                  controller, 
+                                  lineManager,
+                                  electiveLinkDict)
 
             # closing JS and CSS files
             print("Closing files...")
