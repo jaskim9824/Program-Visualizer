@@ -58,6 +58,12 @@ def parseSeq(filename, course_obj_dict):
                         close_bracket = name.find(")")
                         course_group = name[open_bracket + 1:close_bracket]
                         course_group.strip().replace(" ", "")
+                        if close_bracket == (len(name) - 1):
+                            # Case: course group is last thing in cell
+                            name = name[:open_bracket]
+                        else:
+                            # Case: some text after course group that is part of course name
+                            name = name[:open_bracket] + name[close_bracket + 1:]
 
                     if name == "PROG":
                         # Create Course obj with only name and course_description attribute
