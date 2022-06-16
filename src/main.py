@@ -14,6 +14,7 @@
 # Dependencies: bs4, parsing, webgen, tkinter
 
 import tkinter
+from turtle import bgcolor
 from bs4 import BeautifulSoup
 import modules.parsing.categoriesparsing as categoriesparsing
 import modules.parsing.coursegroupparsing as coursegroupparsing
@@ -69,7 +70,7 @@ def add_progbar():
     length=280
     )
     progbar.place(
-    x=635, y=480
+    x=635, y=470
     )
 
 
@@ -77,9 +78,13 @@ def progress():
     progbar['value']+= 8.5
     window.update_idletasks()
     return progbar['value']
-    
+
+
 def main():
     add_progbar()
+    
+    value_label = Label(window, bg="white")
+    value_label.place(x=720, y= 495)
     print("Beginning generation...")
     # opening the template html file and constructing html
     # note: here we calling parsing to extract the course data!
@@ -90,6 +95,7 @@ def main():
             
             # opening the JS files
             print("Opening files...")
+            value_label['text'] = 'opening files'
             controller = open("./output/js/controller.js", "w")
             indexJS = open("./output/js/index.js", "w")
             progress()
@@ -102,21 +108,25 @@ def main():
 
             # parsing the excel files with course info, pulls dependencies (prereqs, coreqs, reqs) too
             print("Parsing courses...")
+            value_label['text'] = 'parsing courses..'
             courseDict = courseparsing.parseCourses(courses_excel.get())
             progress()
             
             # pulling the category and color info from excel
             print("Parsing categories...")
+            value_label['text'] = 'Parsing categories...'
             courseDict, categoryDict = categoriesparsing.parseCategories(courseCat_excel.get(), courseDict)
             progress()
 
             # writing colour highlighting CSS
             print("Writing category CSS...")
+            value_label['text'] = 'Writing category CSS...'
             cssgen.writeCategoryCSS(categoryDict, categoryCSS)
             progress()
 
             # sequencing courses
             print("Parsing sequences....")
+            value_label['text'] = 'Parsing sequences....'
             sequenceDict = sequenceparsing.parseSeq(seq_excel.get(), courseDict)
             progress()
 
@@ -131,12 +141,12 @@ def main():
 
             # generating intital JS based on the number and names of plans
             print("Intialzing JS files....")
+            value_label['text'] = 'Intialzing JS files....'
             javascriptgen.intializeControllerJavaScript(sequenceDict, 
                                                         intitalCourseGroupVals,
                                                         courseGroupDict,
                                                         courseGroupList, 
                                                         controller)
-
             progress()
             #locating title tag
             titleTag = soup.body.find("a", class_="site-title")
@@ -148,6 +158,7 @@ def main():
 
             # customizing webpage title
             print("Writing title....")
+            value_label['text'] = 'Writing title....'
             htmlgen.switchTitle(titleTag, deptName)
             progress()
 
@@ -156,6 +167,7 @@ def main():
 
             # placing main radio inputs
             print("Placing radio inputs....")
+            value_label['text'] = 'Placing radio inputs....'
             htmlgen.placeRadioInputs(formTag, courseGroupDict, soup)
             progress()
 
@@ -170,17 +182,20 @@ def main():
 
             # places legend for color-coding
             print("Placing legend....")
+            value_label['text'] = 'Placing legend....'
             htmlgen.placeLegend(legendTag, categoryDict, soup)
             progress()
 
             # Generating display tag, this is where the course divs will be written
             print("Generating display tag...")
+            value_label['text'] = 'Generating display tag...'
             displayTag = htmlgen.generateDisplayDiv(soup, courseGroupList)
             progress()
 
             mainTag.append(displayTag)
 
             #placing the HTML and generating JS based on the courses (drawing lines)
+            value_label['text'] = 'Placing course diagram....'
             print("Placing course diagram....")\
             # dummy input data
             electiveLinkDict = {"ITS": "https://www.google.com/", 
@@ -196,6 +211,7 @@ def main():
             progress()
             # closing JS and CSS files
             print("Closing files...")
+            value_label['text'] = 'Closing files...'
             javascriptgen.closeControllerJavaScript(controller)
             indexJS.close()
             categoryCSS.close()
@@ -223,9 +239,11 @@ def main():
              err.strerror + 
              ". The directory you are in does not have a directory named output.")
     print("Generation Completed!")
+    value_label['text'] = 'Generation Completed!'
     messagebox.showinfo('Status',message="Webpage successfully generated!")
     progress()
     progbar.destroy()
+    value_label.destroy()
 
 
 def btn_clicked():
@@ -503,7 +521,7 @@ generate_button = Button(
     relief = "flat")
 
 generate_button.place(
-    x = 710, y = 432,
+    x = 710, y = 415,
     width = 126,
     height = 43)
 
