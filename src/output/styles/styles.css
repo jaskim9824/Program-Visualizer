@@ -83,14 +83,13 @@ header {
     /* Changing width of tooltip on narrow screens */
     .coursecontainer .tooltip .tooltiptextleft, .coursecontainer .tooltip .tooltiptextright, 
     .orcoursecontainer .tooltip .tooltiptextleft, .orcoursecontainer .tooltip .tooltiptextright,
-    .coursegroupacontainer .tooltip .tooltiptextleft, .coursegroupacontainer .tooltip .tooltiptextright
-    .coursegroupbcontainer .tooltip .tooltiptextleft, .coursegroupbcontainer .tooltip .tooltiptextright {
+    .coursegroupcontainer .tooltip .tooltiptextleft, .coursegroupcontainer .tooltip .tooltiptextright {
         width: 400px;
     }
 
     /* Smaller font on narrow screens */
     .coursecontainer .tooltip .descriptiontitle, .orcoursecontainer .tooltip .descriptiontitle,
-    .coursegroupacontainer .tooltip .descriptiontitle, .coursegorupbcontainer .tooltip .description {
+    .coursegroupcontainer .tooltip .descriptiontitle {
         font-size: 15px;
     }
 
@@ -99,10 +98,8 @@ header {
     .coursecontainer .descriptioncredits, .coursecontainer .descriptionfeeindex, .coursecontainer .fulldescription,
     .orcoursecontainer .descriptionalphahours, .orcoursecontainer .descriptionavailability, 
     .orcoursecontainer .descriptioncredits, .orcoursecontainer .descriptionfeeindex, .orcoursecontainer .fulldescription,
-    .coursegroupacontainer .descriptionalphahours, .coursegroupacontainer .descriptionavailability, 
-    .coursegroupacontainer .descriptioncredits, .coursegroupacontainer .descriptionfeeindex, .coursegroupacontainer .fulldescription,
-    .coursegroupbcontainer .descriptionalphahours, .coursegroupbcontainer .descriptionavailability, 
-    .coursegroupbcontainer .descriptioncredits, .coursegroupbcontainer .descriptionfeeindex, .coursegroupbcontainer .fulldescription {
+    .coursegroupcontainer .descriptionalphahours, .coursegroupcontainer .descriptionavailability, 
+    .coursegroupcontainer .descriptioncredits, .coursegroupcontainer .descriptionfeeindex, .coursegroupcontainer .fulldescription {
         font-size: 12px;
     }
 }
@@ -244,22 +241,24 @@ label {
 }
 
 /* Contains one (or two if an "or" option) course */
-.coursecontainer, .orcoursecontainer, .coursegroupacontainer, .coursegroupbcontainer {
+.coursecontainer, .coursegroupcontainer {
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
 }
 
 .orcoursecontainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
     outline-color: #542a7e;
     outline-width: 3px;
     outline-style: dashed;
     outline-offset: 3px;
 }
 
-.coursegroupacontainer {
-    outline-color: red;
-    outline-width: 3px;
+.coursegroupcontainer {
+    outline-width: 3.5px;
     outline-style: ridge;
     outline-offset: 5px;
     position: relative;
@@ -267,18 +266,8 @@ label {
     padding: 1px;
 }
 
-.coursegroupacontainer .course, .coursegroupbcontainer .course {
+.coursegroupcontainer .course {
     margin-bottom: 49px;
-}
-
-.coursegroupbcontainer {
-    outline-color: blue;
-    outline-width: 3px;
-    outline-style: ridge;
-    outline-offset: 5px;
-    position: relative;
-    bottom: 16px;
-    padding: 1px;
 }
 
 .coursegrouptitle {
@@ -297,7 +286,7 @@ label {
 }
       
 /* Course box styling */
-.course, .orcoursetop, .orcoursebottom {
+.course, .orcourse {
     border-style: solid;
     border-color: black;
     border-width: 2px;
@@ -305,19 +294,14 @@ label {
     width: 150px;
 }
 
-.coursegroupacontainer .lastcourseingroup, .coursegroupbcontainer .lastcourseingroup {
+.coursegroupcontainer .lastcourseingroup {
     margin-bottom: 0;
 }
 
 /* two option with "or" between them, smaller margin */
-.orcoursetop {
-    margin-top: 0;
-    margin-bottom: 14px;
-}
-
-.orcoursebottom {
-    margin-top: 14px;
-    margin-bottom: 0;
+.orcourse {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* format of the word "OR" container */
@@ -354,7 +338,7 @@ p.ortext {
 }
 
 /* Default course hover */
-.course:hover, .orcoursetop:hover, .orcoursebottom:hover {
+.course:hover, .orcourse:hover {
     background-color: #f2cd00;
     border-color:#f2cd00;
 }
@@ -370,7 +354,7 @@ p.ortext {
 }
 
 /* Makes sure margin of orcourse is unchanged */
-.orcoursetop-highlighted, .orcourse-bottom-highlighted {
+.orcourse-highlighted {
     border-style: solid;
     border-color: black;
     border-width: 2px;
@@ -381,7 +365,7 @@ p.ortext {
 }
 
 /* Default highlighted hover */
-.course-highlighted:hover, .orcoursetop-highlighted:hover, .orcourse-bottom-highlighted:hover {
+.course-highlighted:hover, .orcourse-highlighted:hover {
     background-color: #f2cd00;
     border-color:#f2cd00;
 }
