@@ -193,7 +193,7 @@ def main():
                                   controller, 
                                   lineManager,
                                   electiveLinkDict)
-
+            progress()
             # closing JS and CSS files
             print("Closing files...")
             javascriptgen.closeControllerJavaScript(controller)
