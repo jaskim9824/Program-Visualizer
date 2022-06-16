@@ -52,36 +52,30 @@ def parseSeq(filename, course_obj_dict):
                         # Cell in Excel is empty, skip over this cell
                         continue
                     course_group = ""
-                    if name[-1] == "A":
-                        course_group = "A"
-                        name = name[:-1]
-                    if name[-1] == "B":
-                        course_group = "B"
-                        name = name[:-1]
+                    if name[-2] == "A":
+                        course_group = name[-3:-1]
+                        name = name[:-4]
+                    if name[-2] == "B":
+                        course_group = name[-3:-1]
+                        name = name[:-4]
 
                     if name == "PROG":
                         # Create Course obj with only name and course_description attribute
                         curr_course = deepcopy(course_obj_dict["Program/Technical Elective"])
-                        if course_group == "A":
-                            curr_course.course_group = "A"
-                        elif course_group == "B":
-                            curr_course.course_group = "B"
+                        if course_group != "":
+                            curr_course.course_group = course_group
                         term_list.append(curr_course)
                         continue
                     if name == "COMP":
                         curr_course = deepcopy(course_obj_dict["Complementary Elective"])
-                        if course_group == "A":
-                            curr_course.course_group = "A"
-                        elif course_group == "B":
-                            curr_course.course_group = "B"
+                        if course_group != "":
+                            curr_course.course_group = course_group
                         term_list.append(curr_course)
                         continue
                     if name == "ITS":
                         curr_course = deepcopy(course_obj_dict["ITS Elective"])
-                        if course_group == "A":
-                            curr_course.course_group = "A"
-                        elif course_group == "B":
-                            curr_course.course_group = "B"
+                        if course_group != "":
+                            curr_course.course_group = course_group
                         term_list.append(curr_course)
                         continue
 
@@ -94,10 +88,8 @@ def parseSeq(filename, course_obj_dict):
                                 " is not present in the Excel file with the course information.")
                             orcourse = deepcopy(course_obj_dict[orname])
                             orcourse.calendar_print = "or"
-                            if course_group == "A":
-                                orcourse.course_group = "A"
-                            elif course_group == "B":
-                                orcourse.course_group = "B"
+                            if course_group != "":
+                                orcourse.course_group = course_group
                             term_list.append(orcourse)
                         plan_dict[term_name] = term_list
                         row += 1
@@ -109,10 +101,8 @@ def parseSeq(filename, course_obj_dict):
 
                     # deepcopy since sequencing leads to prereqs and coreqs not being the same between different plans
                     curr_course = deepcopy(course_obj_dict[name])
-                    if course_group == "A":
-                        curr_course.course_group = "A"
-                    elif course_group == "B":
-                        curr_course.course_group = "B"
+                    if course_group != "":
+                        curr_course.course_group = course_group
                     term_list.append(curr_course)  # store each course in a list
                 plan_dict[term_name] = term_list  # store each list in a dict (key is term name)
                 col += 1
