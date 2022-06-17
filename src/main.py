@@ -393,7 +393,7 @@ help_menu = Menu(
     tearoff=0
 )
 
-# add the Help menu to the menubar
+# adding the Help menu to the menubar
 menubar.add_cascade(
     label="Help",
     menu=help_menu
@@ -462,6 +462,7 @@ seq_excel.place(
     width = 279,
     height = 33)
 
+##department name UI##
 deptEntry_img = PhotoImage(file = f"GUI_images/img_textBox3.png")
 deptEntry_bg = canvas.create_image(
     774.5, 383.5,
@@ -479,6 +480,7 @@ department.place(
     width = 279,
     height = 33)
 
+##deptNames menu##
 menubutton = tkinter.Menubutton(window, text="Select", font='Helvatica 13',
                            borderwidth=0, relief="raised",
                            indicatoron=True, bg='#27715B',fg='White', border=3)
@@ -496,12 +498,13 @@ deptMenu.add_radiobutton(label="Petroleum Engineering", font='halvetica 12',comm
 
 menubutton.place(x=954, y=366)
 
+##Background image##
 background_img = PhotoImage(file = f"GUI_images/background.png")
 background = canvas.create_image(
     457.0, 272.0,
     image=background_img)
 
-
+##Browse buttons##
 browseImg1 = PhotoImage(file = f"GUI_images/img1.png")
 button1_excel = Button(
     image = browseImg1,
@@ -541,6 +544,7 @@ button3_excel.place(
     width = 95,
     height = 37)
 
+##Generation button##
 genImg = PhotoImage(file = f"GUI_images/img0.png")
 generate_button = Button(
     image = genImg,
