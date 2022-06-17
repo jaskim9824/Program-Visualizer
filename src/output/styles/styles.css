@@ -216,8 +216,8 @@ label {
     height: fit-content;
 }
 
-.explainertext {
-    margin-left: 5px;
+#explainertext {
+    margin-left: 10px;
 }
 
 /* Plan diagram styling */
