@@ -47,7 +47,8 @@ def debug(sequenceDict):
                 print(course.name)
             print("\n")
         print("\n")
- 
+
+###Main GUI Window ###
 window = Tk()
 window.title('plan visualizer WebGen')
 window.iconbitmap('C:output/images/favicon.ico')
@@ -64,6 +65,7 @@ canvas = Canvas(
 canvas.place(x = 0, y = 0)
 window.resizable(False, False)
 
+###progress Bar##
 def add_progbar():
     global progbar
     progbar = ttk.Progressbar(
@@ -251,7 +253,7 @@ def main():
 
 
 
-#browse functions
+###browse functions###
 def courseBrowse():
     filename =filedialog.askopenfilename()
     courses_excel.delete(0, END)
@@ -317,9 +319,6 @@ def new_window():
     desc_label = Label(second_frame,image=new_desc, anchor=W)
     desc_label.place(x=900, y= 10)
 
-
-    # description = Label(second_frame, text="")
-    # description.grid
 
     message1 = Label(second_frame, 
     text="1- Make sure the directory you are in has a directory named output and a template.html file."
