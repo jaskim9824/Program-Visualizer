@@ -9,6 +9,7 @@
 # Dependencies: copy, tkinter, xlrd, parsinghelp
 
 
+from msilib.schema import File
 import xlrd
 from copy import deepcopy
 from tkinter import messagebox
@@ -67,15 +68,9 @@ def parseCourses(filename):
         return course_obj_dict
 
     except FileNotFoundError:
-        print("Excel course information file not found, ensure it is present and the name is correct.")
-        #GUI Error mssg
-        messagebox.showerror('python Error', "Excel course information file not found, ensure it is present and the name is correct.")
+        raise FileNotFoundError("Excel course information file not found, ensure it is present and the name is correct.")
     except xlrd.biffh.XLRDError:
-        print("Error reading data from Course information Excel sheet. Ensure it is \
-            formatted exactly as specified")
-        #GUI Error mssg
-        messagebox.showerror('python Error', "Error reading data from Course information Excel sheet. Ensure it is \
-            formatted exactly as specified")
+        raise ValueError("Error reading data from Course information Excel sheet. Ensure it is formatted exactly as specified")
 
 # Pulls all course dependencies (prerequisites, corequisites, and
 # requisites) for each course in course_obj_dict and stores these

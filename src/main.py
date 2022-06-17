@@ -13,6 +13,8 @@
 
 # Dependencies: bs4, parsing, webgen, tkinter
 
+from csv import excel_tab
+from msilib.schema import File
 import tkinter
 from turtle import bgcolor
 from bs4 import BeautifulSoup
@@ -79,12 +81,7 @@ def progress():
     window.update_idletasks()
     return progbar['value']
 
-
-def main():
-    add_progbar()
-    
-    value_label = Label(window, bg="white")
-    value_label.place(x=720, y= 495)
+def websiteGeneration(value_label):
     print("Beginning generation...")
     # opening the template html file and constructing html
     # note: here we calling parsing to extract the course data!
@@ -216,34 +213,41 @@ def main():
             indexJS.close()
             categoryCSS.close()
             progress()
-
     except FileNotFoundError as err:
-       print("Exception raised: " + 
-       err.strerror + 
-       ". Either the template HTML file is not in the same directory as the script or" +
+       if (err.strerror == "No such file or directory"):
+        raise FileNotFoundError("Either the template HTML file is not in the same directory as the script or" +
        " the output directory is not organized correctly or does not exist")
+       else:
+        print(err.args)
+        raise FileNotFoundError(err.args[0])
+    return soup
 
-       #gui error box
-       messagebox.showerror('Python Error', "Exception raised: " + 
-       err.strerror + 
-       ". Either the template HTML file is not in the same directory as the script or" +
-       " the output directory is not organized correctly or does not exist")
-
+def writingHTML(soup):
     # writing output to an output html
     try:
         print("Writing final HTML.....")
         with open("./output/index.html", "w", encoding="utf-8") as output:
             output.write(str(soup))
-    except FileNotFoundError as err:
-       print("Exception raised: " + 
-             err.strerror + 
-             ". The directory you are in does not have a directory named output.")
-    print("Generation Completed!")
-    value_label['text'] = 'Generation Completed!'
-    messagebox.showinfo('Status',message="Webpage successfully generated!")
-    progress()
-    progbar.destroy()
-    value_label.destroy()
+    except FileNotFoundError:
+        raise FileNotFoundError("The directory you are in does not have a directory named output.")
+
+def main():
+    add_progbar()
+    value_label = Label(window, bg="white")
+    value_label.place(x=720, y= 495)
+    try:
+        soup = websiteGeneration(value_label)
+        writingHTML(soup)
+        print("Generation Completed!")
+        value_label['text'] = 'Generation Completed!'
+        messagebox.showinfo('Status',message="Webpage successfully generated!")
+    except Exception as e:
+        print("Error occured! Handling exception")
+        messagebox.showerror("Error", str(e))
+    finally:
+        progress()
+        progbar.destroy()
+        value_label.destroy()
 
 
 def btn_clicked():

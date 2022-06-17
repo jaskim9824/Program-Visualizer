@@ -9,6 +9,7 @@
 # Dependencies: copy, tkinter, xlrd
 
 from copy import deepcopy
+from multiprocessing.sharedctypes import Value
 from tkinter import messagebox
 import xlrd
 
@@ -119,15 +120,9 @@ def parseSeq(filename, course_obj_dict):
         # course_seq = checkReqs(course_seq)  Not used, keep everything exactly like Calendar
 
     except FileNotFoundError:
-        print("Excel sequencing file not found, ensure it is present and the name is correct.")
-        #GUI Error mssg
-        messagebox.showerror('Python Error', "Excel sequencing file not found, ensure it is present and the name is correct.")
+        raise FileNotFoundError("Excel sequencing file not found, ensure it is present and the name is correct.")
     except xlrd.biffh.XLRDError:
-        print("Error reading data from sequencing Excel sheet. Ensure it is \
-            formatted exactly as specified")
-        #GUI Error mssg
-        messagebox.showerror('python Error', "Error reading data from sequencing Excel sheet. Ensure it is \
-            formatted exactly as specified")
+        raise ValueError("Error reading data from sequencing Excel sheet. Ensure it is formatted exactly as specified")
 
     # return course_seq, dept_name
     return course_seq

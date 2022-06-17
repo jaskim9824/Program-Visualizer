@@ -68,15 +68,9 @@ def parseCategories(filename, course_obj_dict):
 
        
     except FileNotFoundError:
-        print("Excel course categories file not found, ensure it is present and the name is correct.")
-        #GUI Error mssg
-        messagebox.showerror('Python Error', "Excel course categories file not found, ensure it is present and the name is correct.")
+        raise FileNotFoundError("Excel course categories file not found, ensure it is present and the name is correct.")
     except xlrd.biffh.XLRDError:
-        print("Error reading data from course categories Excel sheet. Ensure it is \
-            formatted exactly as specified")
-        #GUI Error mssg
-        messagebox.showerror('python Error', "Error reading data from course categories Excel sheet. Ensure it is \
-            formatted exactly as specified")
+        raise ValueError("Error reading data from course categories Excel sheet. Ensure it is formatted exactly as specified")
 
     return course_obj_dict, category_dict
 
