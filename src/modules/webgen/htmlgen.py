@@ -247,9 +247,9 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
             electiveCountWrapper["COMP"] += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
             # Adding link to list of electives DUMMY LINK FOR NOW
-            linkTag = soup.new_tag("a", href=electiveLinkDict["COMP"], target="_blank")
-            linkTag.append("List of electives")
-            courseDisc.append(linkTag)
+            # linkTag = soup.new_tag("a", href=electiveLinkDict["COMP"], target="_blank")
+            # linkTag.append("List of electives")
+            # courseDisc.append(linkTag)
 
         elif course.name == "Program/Technical Elective":
             # Class allows formatting so words fit in course box
@@ -260,9 +260,9 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
             electiveCountWrapper["PROG"] += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
             # Adding link to list of electives DUMMY LINK FOR NOW
-            linkTag = soup.new_tag("a", href=electiveLinkDict["PROG"], target="_blank")
-            linkTag.append("List of electives")
-            courseDisc.append(linkTag)
+            # linkTag = soup.new_tag("a", href=electiveLinkDict["PROG"], target="_blank")
+            # linkTag.append("List of electives")
+            # courseDisc.append(linkTag)
 
         elif course.name == "ITS Elective":
             courseID = courseID+str(electiveCountWrapper["ITS"])
@@ -273,9 +273,9 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
             electiveCountWrapper["ITS"] += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
             # Adding link to list of electives DUMMY LINK FOR NOW
-            linkTag = soup.new_tag("a", href=electiveLinkDict["ITS"], target="_blank")
-            linkTag.append("List of electives")
-            courseDisc.append(linkTag)
+            # linkTag = soup.new_tag("a", href=electiveLinkDict["ITS"], target="_blank")
+            # linkTag.append("List of electives")
+            # courseDisc.append(linkTag)
 
         else:
             # This is a regular course. All information should be available
