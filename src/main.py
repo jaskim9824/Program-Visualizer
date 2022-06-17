@@ -14,6 +14,7 @@
 # Dependencies: bs4, parsing, webgen, tkinter
 
 from csv import excel_tab
+from email.policy import default
 from msilib.schema import File
 import tkinter
 from turtle import bgcolor
@@ -249,8 +250,6 @@ def main():
         value_label.destroy()
 
 
-def btn_clicked():
-    print("Button Clicked")
 
 #browse functions
 def courseBrowse():
@@ -266,7 +265,11 @@ def catBrowse():
 def seqBrowse():
     filename =filedialog.askopenfilename()
     seq_excel.delete(0, END)
-    seq_excel.insert(tkinter.END, filename)  
+    seq_excel.insert(tkinter.END, filename) 
+
+def show(selection):
+    department.delete(0, END)
+    department.insert(tkinter.END, selection) 
 
 #new window
 def new_window():
@@ -464,16 +467,26 @@ deptEntry_bg = canvas.create_image(
     774.5, 383.5,
     image = deptEntry_img)
 
+
 department = Entry(
     bd = 0,
     bg = "#d9d9d9",
     highlightthickness = 0,
     font='halvetica 12')
-
+department.insert(tkinter.END, "")
 department.place(
     x = 635, y = 366,
     width = 279,
     height = 33)
+
+clicked = StringVar()
+clicked.set('Select')
+deptNames = ['Chemical Engineering', 'Civil Engineering', 'Computer Engineering',
+        'Electrical Engineering', 'Engineering Physics', 'Materials Engineering',
+		'Mechanical Engineering', 'Mining Engineering', 'Petroleum Engineering']
+dropDown = OptionMenu(window, clicked,*deptNames, command=show)
+dropDown.config(bg='#27715B', fg='White')
+dropDown.place(x=960, y=366)
 
 background_img = PhotoImage(file = f"GUI_images/background.png")
 background = canvas.create_image(
