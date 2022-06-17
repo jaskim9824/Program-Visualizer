@@ -6,11 +6,10 @@
 # This files contains all the functions need to parse the Excel file
 # containing the course category information
 
-# Dependencies: copy, tkinter, xlrd, p
+# Dependencies: copy, xlrd, parsinghelp
 
 import xlrd
 from copy import deepcopy
-from tkinter import messagebox
 from . import parsinghelp
 
 # Parses an Excel file for categorical info about each course (is it 

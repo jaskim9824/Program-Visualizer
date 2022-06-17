@@ -6,13 +6,10 @@
 # This files contains all the functions need to parse the Excel file
 # containing the course information 
 
-# Dependencies: copy, tkinter, xlrd, parsinghelp
+# Dependencies: copy, xlrd, parsinghelp
 
-
-from msilib.schema import File
 import xlrd
 from copy import deepcopy
-from tkinter import messagebox
 from . import parsinghelp
 
 # Parses a .xls (NOT .xlsx) file located at the

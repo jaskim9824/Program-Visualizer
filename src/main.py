@@ -218,8 +218,7 @@ def websiteGeneration(value_label):
         raise FileNotFoundError("Either the template HTML file is not in the same directory as the script or" +
        " the output directory is not organized correctly or does not exist")
        else:
-        print(err.args)
-        raise FileNotFoundError(err.args[0])
+        raise FileNotFoundError(str(err))
     return soup
 
 def writingHTML(soup):

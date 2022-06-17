@@ -6,11 +6,9 @@
 # This file contains the functions neccesary to parse the Excel file
 # containing the sequncing information
 
-# Dependencies: copy, tkinter, xlrd
+# Dependencies: copy, xlrd
 
 from copy import deepcopy
-from multiprocessing.sharedctypes import Value
-from tkinter import messagebox
 import xlrd
 
 
