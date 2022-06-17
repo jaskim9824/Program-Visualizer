@@ -47,7 +47,8 @@ def debug(sequenceDict):
                 print(course.name)
             print("\n")
         print("\n")
- 
+
+###Main GUI Window ###
 window = Tk()
 window.title('plan visualizer WebGen')
 window.iconbitmap('C:output/images/favicon.ico')
@@ -64,6 +65,7 @@ canvas = Canvas(
 canvas.place(x = 0, y = 0)
 window.resizable(False, False)
 
+###progress Bar##
 def add_progbar():
     global progbar
     progbar = ttk.Progressbar(
@@ -251,7 +253,7 @@ def main():
 
 
 
-#browse functions
+###browse functions###
 def courseBrowse():
     filename =filedialog.askopenfilename()
     courses_excel.delete(0, END)
@@ -317,9 +319,6 @@ def new_window():
     desc_label = Label(second_frame,image=new_desc, anchor=W)
     desc_label.place(x=900, y= 10)
 
-
-    # description = Label(second_frame, text="")
-    # description.grid
 
     message1 = Label(second_frame, 
     text="1- Make sure the directory you are in has a directory named output and a template.html file."
@@ -393,7 +392,7 @@ help_menu = Menu(
     tearoff=0
 )
 
-# add the Help menu to the menubar
+# adding the Help menu to the menubar
 menubar.add_cascade(
     label="Help",
     menu=help_menu
@@ -462,6 +461,7 @@ seq_excel.place(
     width = 279,
     height = 33)
 
+##department name UI##
 deptEntry_img = PhotoImage(file = f"GUI_images/img_textBox3.png")
 deptEntry_bg = canvas.create_image(
     774.5, 383.5,
@@ -479,6 +479,7 @@ department.place(
     width = 279,
     height = 33)
 
+##deptNames menu##
 menubutton = tkinter.Menubutton(window, text="Select", font='Helvatica 13',
                            borderwidth=0, relief="raised",
                            indicatoron=True, bg='#27715B',fg='White', border=3)
@@ -496,12 +497,13 @@ deptMenu.add_radiobutton(label="Petroleum Engineering", font='halvetica 12',comm
 
 menubutton.place(x=954, y=366)
 
+##Background image##
 background_img = PhotoImage(file = f"GUI_images/background.png")
 background = canvas.create_image(
     457.0, 272.0,
     image=background_img)
 
-
+##Browse buttons##
 browseImg1 = PhotoImage(file = f"GUI_images/img1.png")
 button1_excel = Button(
     image = browseImg1,
@@ -541,6 +543,7 @@ button3_excel.place(
     width = 95,
     height = 37)
 
+##Generation button##
 genImg = PhotoImage(file = f"GUI_images/img0.png")
 generate_button = Button(
     image = genImg,
