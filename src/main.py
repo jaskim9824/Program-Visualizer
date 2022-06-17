@@ -479,14 +479,22 @@ department.place(
     width = 279,
     height = 33)
 
-clicked = StringVar()
-clicked.set('Select')
-deptNames = ['Chemical Engineering', 'Civil Engineering', 'Computer Engineering',
-        'Electrical Engineering', 'Engineering Physics', 'Materials Engineering',
-		'Mechanical Engineering', 'Mining Engineering', 'Petroleum Engineering']
-dropDown = OptionMenu(window, clicked,*deptNames, command=show)
-dropDown.config(bg='#27715B', fg='White')
-dropDown.place(x=960, y=366)
+menubutton = tkinter.Menubutton(window, text="Select", font='Helvatica 13',
+                           borderwidth=0, relief="raised",
+                           indicatoron=True, bg='#27715B',fg='White', border=5)
+deptMenu = tkinter.Menu(menubutton, tearoff=False)
+menubutton.configure(menu=deptMenu)
+deptMenu.add_radiobutton(label="Chemical Engineering", command=lambda: show('Chemical Engineering'))
+deptMenu.add_radiobutton(label="Civil Engineering", command= lambda:show('Civil Engineering'))
+deptMenu.add_radiobutton(label="Computer Engineering", command= lambda:show('Computer Engineering'))
+deptMenu.add_radiobutton(label="Electrical Engineering", command= lambda:show('Electrical Engineering'))
+deptMenu.add_radiobutton(label="Engineering Physics", command= lambda:show('Engineering Physics'))
+deptMenu.add_radiobutton(label="Materials Engineering", command= lambda:show('Materials Engineering'))
+deptMenu.add_radiobutton(label="Mechanical Engineering", command= lambda:show('Mechanical Engineering'))
+deptMenu.add_radiobutton(label="Mining Engineering", command= lambda:show('Mining Engineering'))
+deptMenu.add_radiobutton(label="Petroleum Engineering", command= lambda:show('Petroleum Engineering'))
+
+menubutton.place(x=952, y=366)
 
 background_img = PhotoImage(file = f"GUI_images/background.png")
 background = canvas.create_image(
