@@ -481,7 +481,7 @@ department.place(
 
 menubutton = tkinter.Menubutton(window, text="Select", font='Helvatica 13',
                            borderwidth=0, relief="raised",
-                           indicatoron=True, bg='#27715B',fg='White', border=5)
+                           indicatoron=True, bg='#27715B',fg='White', border=3)
 deptMenu = tkinter.Menu(menubutton, tearoff=False)
 menubutton.configure(menu=deptMenu)
 deptMenu.add_radiobutton(label="Chemical Engineering", command=lambda: show('Chemical Engineering'))
@@ -494,7 +494,7 @@ deptMenu.add_radiobutton(label="Mechanical Engineering", command= lambda:show('M
 deptMenu.add_radiobutton(label="Mining Engineering", command= lambda:show('Mining Engineering'))
 deptMenu.add_radiobutton(label="Petroleum Engineering", command= lambda:show('Petroleum Engineering'))
 
-menubutton.place(x=952, y=366)
+menubutton.place(x=954, y=366)
 
 background_img = PhotoImage(file = f"GUI_images/background.png")
 background = canvas.create_image(
