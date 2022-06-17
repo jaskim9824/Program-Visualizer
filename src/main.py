@@ -387,17 +387,22 @@ help_menu = Menu(
     tearoff=0
 )
 
+# add the Help menu to the menubar
+menubar.add_cascade(
+    label="Help",
+    menu=help_menu
+)
 
 help_menu.add_command(
     label='About...',
     command=new_window
 
 )
-
-# add the Help menu to the menubar
-menubar.add_cascade(
-    label="Help",
-    menu=help_menu
+help_menu.add_separator()
+help_menu.add_command(
+    label='Version1-2022',
+    font='Times 10'
+    
 )
 
 ##Course Excel file UI##
