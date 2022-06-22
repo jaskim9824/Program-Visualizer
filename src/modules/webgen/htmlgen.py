@@ -222,7 +222,7 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
     hexcolorlist= ["033dfc", "fc0303", "ef8c2b", "0ccb01", "bd43fa", "e8e123"]
     for course in termList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan)
-        courseContClass = course.category.replace(" ", "")
+        courseContClass = course.main_category.replace(" ", "")
         orCase = course.calendar_print.lower().strip() == "or"  # handles improper formatting pulled from Excel
 
         if course.course_group != "":
