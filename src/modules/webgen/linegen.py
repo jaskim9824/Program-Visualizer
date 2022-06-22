@@ -107,8 +107,9 @@ def placeClickListeners(courseList, controller, lineManager, plan):
     formattedContains = "     if ({courseName}element.classList.contains(\"{category}-highlighted\")) {{ \n"
     formattedClickIf = " if (!{courseName}flag) {{\n"
     formattedStatement = "      that.{action}Line(getLine{num}());\n"
-    formattedHighlightStatement = "     {courseName}element.classList.{action}(\"{className}\");\n"
-    formattedRemoveClickedStatement = "     that.removeFromClicked(\"{courseName}\", \"{category}\");\n"
+    # formattedHighlightStatement = "       {courseName}element.classList.{action}(\"{className}\");\n"
+    formattedHighlightStatement = "     that.{action}Element(\"{courseName}\");\n"
+    formattedRemoveClickedStatement = "     var category = that.removeFromClicked(\"{courseName}\", \"{category}\");\n"
     formattedAddClickedStatement = "     that.addToClicked(\"{courseName}\", \"{category}\");\n"
 
     compcounter = 0
@@ -143,13 +144,12 @@ def placeClickListeners(courseList, controller, lineManager, plan):
         controller.write(formattedTimeIf.format(courseName=courseID))
         controller.write(courseID +"Time = currentTime;\n")
         controller.write(formattedElementGetter.format(courseName=courseID))
+
+        # TO DO: re do this section
         controller.write(formattedClickIf.format(courseName=courseID))
         controller.write(formattedContains.format(courseName=courseID, category=courseContClass))
         controller.write(formattedHighlightStatement.format(courseName=courseID, 
-                                                            action="remove",
-                                                            className=courseContClass+"-highlighted"))
-        controller.write(formattedHighlightStatement.format(courseName=courseID, 
-                                                            action="add",
+                                                            action="unHighlight",
                                                             className=courseContClass))
         controller.write("      return;\n")
         controller.write("}")
@@ -163,11 +163,8 @@ def placeClickListeners(courseList, controller, lineManager, plan):
 
             
         controller.write(formattedHighlightStatement.format(courseName=courseID,
-                                                                    action="remove",
+                                                                    action="highlight",
                                                                     className=courseContClass))
-        controller.write(formattedHighlightStatement.format(courseName=courseID,
-                                                                    action="add",
-                                                                   className=courseContClass+"-highlighted"))
         controller.write(formattedAddClickedStatement.format(courseName=courseID, 
                                                                     category=courseContClass))
             
@@ -185,13 +182,16 @@ def placeClickListeners(courseList, controller, lineManager, plan):
             courseContClass = "course"
 
         controller.write(formattedHighlightStatement.format(courseName=courseID,
-                                                                action="remove",
-                                                                className=courseContClass+"-highlighted"))
-        controller.write(formattedHighlightStatement.format(courseName=courseID,
-                                                                action="add",
+                                                                action="unHighlight",
                                                                 className=courseContClass))
     
+    
         controller.write(formattedRemoveClickedStatement.format(courseName=courseID))
+        controller.write("  if (category != \"\") { \n")
+        controller.write(formattedHighlightStatement.format(courseName=courseID,
+                                                                    action="highlight",
+                                                                    className=courseContClass))
+        controller.write("}\n")
         controller.write("      " +courseID+"flag=false\n")
         controller.write("  }\n};\n")
 
