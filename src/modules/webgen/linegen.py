@@ -108,8 +108,8 @@ def placeClickListeners(courseList, controller, lineManager, plan):
     formattedClickIf = " if (!{courseName}flag) {{\n"
     formattedStatement = "      that.{action}Line(getLine{num}());\n"
     formattedHighlightStatement = "     {courseName}element.classList.{action}(\"{className}\");\n"
-    formattedRemoveClickedStatement = "     that.removeFromClicked(\"{courseName}\");\n"
-    formattedAddClickedStatement = "     that.addToClicked([\"{courseName}\", \"{category}\"]);\n"
+    formattedRemoveClickedStatement = "     that.removeFromClicked(\"{courseName}\", \"{category}\");\n"
+    formattedAddClickedStatement = "     that.addToClicked(\"{courseName}\", \"{category}\");\n"
 
     compcounter = 0
     progcounter = 0

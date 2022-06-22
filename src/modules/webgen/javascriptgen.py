@@ -8,6 +8,7 @@
 
 # Dependencies: cleaner
 
+from distutils.command.clean import clean
 from .. import cleaner
 
 # Function that generates the JS before the generation of the course diagram
@@ -54,6 +55,8 @@ Array.prototype.forEach.call(radios, function (radio) {
     controller.write("that.render("+planString+");\n")
     controller.write("""   });
 });\n""")
+    generateHighlightElement(controller)
+    generateUnHighlightElement(controller)
 
 
 # Function that generates the blocks of the controller JS file that is dependent
@@ -121,6 +124,7 @@ def generatePlanBasedInitalVariables(sequenceDict, intitalCourseGroupVals, cours
         controller.write("this." + cleaner.cleanString(plan) + "Clicked = [];\n")
         controller.write("this." + cleaner.cleanString(plan) + "LegendBtns = [];\n")
         controller.write("this." + cleaner.cleanString(plan) + "LegendBtnsClicked = [];\n")
+        controller.write("this." + cleaner.cleanString(plan) + "ClickedMap = new Map();\n")
         numterms = len(sequenceDict[plan].keys())
         controller.write("this." + cleaner.cleanString(plan) + "Terms = " + str(numterms) + ";\n")
         maxcourses = 0
@@ -162,6 +166,25 @@ def generateSetDefaults(courseGroupDict, courseGroupList, controller):
         controller.write("          $scope.$apply();\n")
         controller.write("          break;\n")
     controller.write(switchEndString)
+
+def generateHighlightElement(controller):
+    controller.write("""this.highlightElement = function(element, category) {
+        if (element.classList.contains(category + "-highlighted")) {
+            return;
+        }
+        element.classList.remove(category);
+        element.classList.add(category + "-highlighted");
+    };\n""")
+
+def generateUnHighlightElement(controller):
+    controller.write("""this.unHighlightElement = function(element, category) {
+        if (!element.classList.contains(category + "-highlighted")) {
+            return;
+        }
+        element.classList.remove(category + "-highlighted");
+        element.classList.add(category);
+    };\n""")
+
 
 # Function that generates the listener that listens to course group selection
 # radio inputs
@@ -228,8 +251,7 @@ def generateEnableSwitchStatement(sequenceDict, controller):
       document.getElementById("main").style.height = heightstr;
       for (let i = 0; i < this.{planName}Clicked.length; i++) {{
           var element = document.getElementById(this.{planName}Clicked[i][0]);
-          element.classList.remove(this.{planName}Clicked[i][1]);
-          element.classList.add(this.{planName}Clicked[i][1]+"-highlighted");
+          this.addHighlight(element, this.{planName}Clicked[i][1]);
       }}
       for (let i = 0; i < this.{planName}LegendBtns.length; i++) {{
           var found = false;
@@ -326,13 +348,18 @@ def generateAddToClickSwitch(sequenceDict, courseGroupList, controller):
     console.log("shouldn't be here");
     }
 };\n"""
-    formattedFunctionStatement = """this.{functionName} = function(element) {{
+    formattedFunctionStatement = """this.{functionName} = function(element, category) {{
 switch({planString}) {{ \n"""
     formattedAddToClickStatement = """ case "{planName}":
-    var index = this.{planName}Clicked.findIndex((item) => item[0] == element[0]);
+    var index = this.{planName}Clicked.findIndex((item) => item[0] == element);
     if (index == -1) {{
-        this.{planName}Clicked.push(element);
+        this.{planName}Clicked.push([element, category, 1]);
     }}
+    else {{
+        this.{planName}Clicked[index][1] = category;
+        this.{planName}Clicked[index][2]++;
+    }}
+    this.{planName}ClickedMap.get(element).push(category);
     break;"""
     controller.write(formattedFunctionStatement.format(functionName="addToClicked",
                                                        planString=generatePlanString(courseGroupList)))
@@ -350,13 +377,24 @@ def generateDeleteFromClickSwitch(sequenceDict, courseGroupList, controller):
     console.log("shouldn't be here");
     }
 };\n"""
-    formattedFunctionStatement = """this.{functionName} = function(element) {{
+    formattedFunctionStatement = """this.{functionName} = function(element, category) {{
 switch({planString}) {{ \n"""
     formattedAddToClickStatement = """ case "{planName}":
     var index = this.{planName}Clicked.findIndex((item) => item[0] == element);
     if (index != -1) {{
-        this.{planName}Clicked.splice(index, 1);
+        var indexMap = this.{planName}ClickedMap.get(element).lastIndexOf(category);
+        if (indexMap != -1) {{
+            this.{planNameCclickedMap.get(element).splice(indexMap, 1);
+        }}
+        this.{planName}Clicked[index][2]--;
+        if (this.{planName}Clicked[index][2] <= 0) {{
+            this.{planName}Clicked.splice(index, 1);
+            return "";
+        }}
+        var maxIndex = this.{planName}ClickedMap.get(element).length - 1
+        return this.{planName}ClickedMap[maxIndex];
     }}
+    return "";
     break;"""
     controller.write(formattedFunctionStatement.format(functionName="removeFromClicked",
                                                        planString=generatePlanString(courseGroupList)))
@@ -667,8 +705,7 @@ def generateElectiveHighlightStatement(elective, longelective, plan, counter, co
     formattedElectivesHighlight = """        var i = 0;
         while ({electiveName}elements.length > 0) {{
           var currelement = document.getElementById({electiveName}elements.item(0).id);
-          currelement.classList.remove("{electiveName}");
-          currelement.classList.add("{electiveName}-highlighted");
+          that.addHighlight(currelement, {electiveName});
           that.addToClicked(["{longElectiveName}{planName}" + i,"{categoryName}"]);
           i = i + 1;
         }}\n"""
@@ -693,8 +730,7 @@ def generateElectiveUnhighlightStatement(elective, longelective, plan, counter, 
     formattedElectivesUnhighlight = """        var i = 0;        
         while ({electiveName}elements.length > 0) {{
           var currelement = document.getElementById({electiveName}elements.item(0).id);
-          currelement.classList.remove("{electiveName}-highlighted");
-          currelement.classList.add("{electiveName}");
+          that.unHighlightElement(currelement, {electiveName});
           that.removeFromClicked("{longElectiveName}{planName}" + i);
           i = i + 1;
         }}\n"""
