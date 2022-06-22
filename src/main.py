@@ -45,7 +45,8 @@ def debug(sequenceDict):
                 print(course.name)
             print("\n")
         print("\n")
- 
+
+###Main GUI Window ###
 window = Tk()
 window.title('plan visualizer WebGen')
 window.iconbitmap('C:output/images/favicon.ico')
@@ -62,6 +63,7 @@ canvas = Canvas(
 canvas.place(x = 0, y = 0)
 window.resizable(False, False)
 
+###progress Bar##
 def add_progbar():
     global progbar
     progbar = ttk.Progressbar(
@@ -194,9 +196,9 @@ def websiteGeneration(value_label):
             value_label['text'] = 'Placing course diagram....'
             print("Placing course diagram....")\
             # dummy input data
-            electiveLinkDict = {"ITS": "https://www.google.com/", 
-                                "PROG": "https://www.google.com/", 
-                                "COMP": "https://www.google.com/"}
+            electiveLinkDict = {"ITS": "https://calendar.ualberta.ca/preview_program.php?catoid=34&poid=38076#core_314374", 
+                                "PROG": "https://calendar.ualberta.ca/preview_program.php?catoid=34&poid=38706&hl#core_331107", 
+                                "COMP": "https://calendar.ualberta.ca/preview_program.php?catoid=34&poid=38076"}
             htmlgen.placePlanDivs(displayTag, 
                                   sequenceDict, 
                                   soup, 
@@ -217,8 +219,7 @@ def websiteGeneration(value_label):
         raise FileNotFoundError("Either the template HTML file is not in the same directory as the script or" +
        " the output directory is not organized correctly or does not exist")
        else:
-        print(err.args)
-        raise FileNotFoundError(err.args[0])
+        raise FileNotFoundError(str(err))
     return soup
 
 def writingHTML(soup):
@@ -250,10 +251,8 @@ def main():
         value_label.destroy()
 
 
-def btn_clicked():
-    print("Button Clicked")
 
-#browse functions
+###browse functions###
 def courseBrowse():
     filename =filedialog.askopenfilename()
     courses_excel.delete(0, END)
@@ -267,7 +266,11 @@ def catBrowse():
 def seqBrowse():
     filename =filedialog.askopenfilename()
     seq_excel.delete(0, END)
-    seq_excel.insert(tkinter.END, filename)  
+    seq_excel.insert(tkinter.END, filename) 
+
+def show(selection):
+    department.delete(0, END)
+    department.insert(tkinter.END, selection) 
 
 #new window
 def new_window():
@@ -315,9 +318,6 @@ def new_window():
     desc_label = Label(second_frame,image=new_desc, anchor=W)
     desc_label.place(x=900, y= 10)
 
-
-    # description = Label(second_frame, text="")
-    # description.grid
 
     message1 = Label(second_frame, 
     text="1- Make sure the directory you are in has a directory named output and a template.html file."
@@ -391,7 +391,7 @@ help_menu = Menu(
     tearoff=0
 )
 
-# add the Help menu to the menubar
+# adding the Help menu to the menubar
 menubar.add_cascade(
     label="Help",
     menu=help_menu
@@ -460,28 +460,49 @@ seq_excel.place(
     width = 279,
     height = 33)
 
+##department name UI##
 deptEntry_img = PhotoImage(file = f"GUI_images/img_textBox3.png")
 deptEntry_bg = canvas.create_image(
     774.5, 383.5,
     image = deptEntry_img)
+
 
 department = Entry(
     bd = 0,
     bg = "#d9d9d9",
     highlightthickness = 0,
     font='halvetica 12')
-
+department.insert(tkinter.END, "")
 department.place(
     x = 635, y = 366,
     width = 279,
     height = 33)
 
+##deptNames menu##
+menubutton = tkinter.Menubutton(window, text="Select", font='Helvatica 13',
+                           borderwidth=0, relief="raised",
+                           indicatoron=True, bg='#27715B',fg='White', border=3)
+deptMenu = tkinter.Menu(menubutton, tearoff=False)
+menubutton.configure(menu=deptMenu)
+deptMenu.add_radiobutton(label="Chemical Engineering", font='halvetica 12', command=lambda: show('Chemical Engineering'))
+deptMenu.add_radiobutton(label="Civil Engineering", font='halvetica 12', command= lambda:show('Civil Engineering'))
+deptMenu.add_radiobutton(label="Computer Engineering", font='halvetica 12', command= lambda:show('Computer Engineering'))
+deptMenu.add_radiobutton(label="Electrical Engineering", font='halvetica 12', command= lambda:show('Electrical Engineering'))
+deptMenu.add_radiobutton(label="Engineering Physics", font='halvetica 12',command= lambda:show('Engineering Physics'))
+deptMenu.add_radiobutton(label="Materials Engineering", font='halvetica 12',command= lambda:show('Materials Engineering'))
+deptMenu.add_radiobutton(label="Mechanical Engineering", font='halvetica 12',command= lambda:show('Mechanical Engineering'))
+deptMenu.add_radiobutton(label="Mining Engineering", font='halvetica 12',command= lambda:show('Mining Engineering'))
+deptMenu.add_radiobutton(label="Petroleum Engineering", font='halvetica 12',command= lambda:show('Petroleum Engineering'))
+
+menubutton.place(x=954, y=366)
+
+##Background image##
 background_img = PhotoImage(file = f"GUI_images/background.png")
 background = canvas.create_image(
-    467.5, 272.0,
+    457.0, 272.0,
     image=background_img)
 
-
+##Browse buttons##
 browseImg1 = PhotoImage(file = f"GUI_images/img1.png")
 button1_excel = Button(
     image = browseImg1,
@@ -521,6 +542,7 @@ button3_excel.place(
     width = 95,
     height = 37)
 
+##Generation button##
 genImg = PhotoImage(file = f"GUI_images/img0.png")
 generate_button = Button(
     image = genImg,

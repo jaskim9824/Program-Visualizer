@@ -216,6 +216,10 @@ label {
     height: fit-content;
 }
 
+#explainertext {
+    margin-left: 10px;
+}
+
 /* Plan diagram styling */
 .display {
     width:fit-content;
