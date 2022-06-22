@@ -104,10 +104,19 @@ def placeClickListeners(courseList, controller, lineManager, plan):
         return;
     }}\n"""
     formattedElementGetter = "  var {courseName}element = document.getElementById(\"{courseName}\");\n"
-    formattedContains = "     if ({courseName}element.classList.contains(\"{category}-highlighted\")) {{ \n"
+    formattedContains = "     if (that.{planName}ClickedMap.get(\"{courseName}\").length > 0) {{ \n"
+    formatttedWithinContains= """          for (let i = 0; i < that.{planName}ClickedMap.get("{courseName}").length; i++) {{ 
+        var cate = that.{planName}ClickedMap.get("{courseName}")[i];
+        if (element.classList.contains(cate + "-highlighted")) {{
+            trueCounter++;
+            that.unHighlightElement(element, cate);
+        }}
+    }}
+    if (trueCounter > 0) {{
+        return;
+    }}"""
     formattedClickIf = " if (!{courseName}flag) {{\n"
     formattedStatement = "      that.{action}Line(getLine{num}());\n"
-    # formattedHighlightStatement = "       {courseName}element.classList.{action}(\"{className}\");\n"
     formattedHighlightStatement = "     that.{action}Element(\"{courseName}\");\n"
     formattedRemoveClickedStatement = "     var category = that.removeFromClicked(\"{courseName}\", \"{category}\");\n"
     formattedAddClickedStatement = "     that.addToClicked(\"{courseName}\", \"{category}\");\n"
@@ -145,14 +154,14 @@ def placeClickListeners(courseList, controller, lineManager, plan):
         controller.write(courseID +"Time = currentTime;\n")
         controller.write(formattedElementGetter.format(courseName=courseID))
 
+        controller.write(formattedClickIf.format(courseName=courseID,
+                                                planName=plan))
+        
         # TO DO: re do this section
-        controller.write(formattedClickIf.format(courseName=courseID))
         controller.write(formattedContains.format(courseName=courseID, category=courseContClass))
-        controller.write(formattedHighlightStatement.format(courseName=courseID, 
-                                                            action="unHighlight",
-                                                            className=courseContClass))
-        controller.write("      return;\n")
-        controller.write("}")
+        controller.write(" var trueCounter = 0;\n")
+        controller.write(formatttedWithinContains.format(courseName=courseID, category=courseContClass))
+        controller.write("}\n")
 
         # if course owns lines, add addLine statements
         if courseID in lineManager.getCourseLineDict():

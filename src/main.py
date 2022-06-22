@@ -13,9 +13,8 @@
 
 # Dependencies: bs4, parsing, webgen, tkinter
 
-from csv import excel_tab
-from msilib.schema import File
 import tkinter
+import traceback
 from turtle import bgcolor
 from bs4 import BeautifulSoup
 import modules.parsing.categoriesparsing as categoriesparsing
@@ -244,6 +243,7 @@ def main():
     except Exception as e:
         print("Error occured! Handling exception")
         messagebox.showerror("Error", str(e))
+        traceback.print_exc()
     finally:
         progress()
         progbar.destroy()
