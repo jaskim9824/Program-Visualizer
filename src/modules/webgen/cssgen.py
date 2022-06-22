@@ -16,7 +16,7 @@ from .. import cleaner
 #   categoryCSS - file handle to CSS file
 def writeCategoryCSS(categoryDict, categoryCSS):
     for category in categoryDict:
-        backgroundColour = categoryDict[category]
+        backgroundColour = categoryDict[category][1]
         categoryFormattedString = """.coursecontainer .{categoryName}:hover {{
             background-color: #{backColour};
             border-color: #{backColour};

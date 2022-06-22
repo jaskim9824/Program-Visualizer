@@ -118,7 +118,7 @@ def placeLegendDescription(soup, legendTag):
 def placeLegendButtons(soup, legendTag, categoryDict):
     legendBoxes = soup.new_tag("div", attrs={"class":"legendboxes"})
     for category in categoryDict:
-        coursecat = placeLegendButton(soup, cleaner.cleanString(category), categoryDict[category])
+        coursecat = placeLegendButton(soup, cleaner.cleanString(category), categoryDict[category][1])
         coursecat.append(category)
         legendBoxes.append(coursecat)
     legendTag.append(legendBoxes)

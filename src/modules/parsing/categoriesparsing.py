@@ -27,7 +27,7 @@ from . import parsinghelp
 #       filled in
 #   category_dict (dict):
 #       Key: category (string): A category ("Basic Science", "Math", etc.)
-#       Value: color (string): six char hex rrggbb color code for that category
+#       Value: a list with item at index 0 as category level ("main" or "sub") and color as the item at index 1
 def parseCategories(filename, course_obj_dict):
     try:
         category_dict = {}
@@ -36,7 +36,19 @@ def parseCategories(filename, course_obj_dict):
 
         for col in range(0, sheet.ncols):
             # Each column is one category
-            cat_name = str(sheet.cell_value(0, col))  # first cell is category name
+            cell_entry = str(sheet.cell_value(0, col))
+            # finding the appropriate category level
+            open_bracket_indx = cell_entry.find("(")
+            closed_bracket_indx = cell_entry.find(")")
+            if ((open_bracket_indx != -1) and (closed_bracket_indx != -1)):
+                # if brackets present
+                cat_name = cell_entry[:open_bracket_indx]
+                cat_level = cell_entry[open_bracket_indx + 1:closed_bracket_indx]
+            else:
+                # otherwise just use cell as category name and level default as main
+                cat_name = cell_entry
+                cat_level = "main"
+                
             if "." in str(sheet.cell_value(1, col)):
                 # If rrggbb is all numbers, Excel likes to add a decimal point. Remove this
                 dotindex = str(sheet.cell_value(1, col)).find(".")
@@ -46,7 +58,7 @@ def parseCategories(filename, course_obj_dict):
                 color = str(sheet.cell_value(1, col))
 
             # store the category and color in a dict
-            category_dict[cat_name] = color 
+            category_dict[cat_name] = [cat_level, color] 
 
             # Create a new course object if an elective because elective info is not in course_obj_dict
             if cat_name.upper().strip() == "COMP" and "Complementary Elective" not in course_obj_dict:
