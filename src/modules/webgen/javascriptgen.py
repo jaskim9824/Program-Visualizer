@@ -251,7 +251,7 @@ def generateEnableSwitchStatement(sequenceDict, controller):
       document.getElementById("main").style.height = heightstr;
       for (let i = 0; i < this.{planName}Clicked.length; i++) {{
           var element = document.getElementById(this.{planName}Clicked[i][0]);
-          this.addHighlight(element, this.{planName}Clicked[i][1]);
+          this.highlightElement(element, this.{planName}Clicked[i][1]);
       }}
       for (let i = 0; i < this.{planName}LegendBtns.length; i++) {{
           var found = false;
@@ -706,7 +706,7 @@ def generateElectiveHighlightStatement(elective, longelective, plan, counter, co
         while ({electiveName}elements.length > 0) {{
           var currelement = document.getElementById({electiveName}elements.item(0).id);
           that.addHighlight(currelement, {electiveName});
-          that.addToClicked(["{longElectiveName}{planName}" + i,"{categoryName}"]);
+          that.addToClicked("{longElectiveName}{planName}" + i,"{categoryName}");
           i = i + 1;
         }}\n"""
     if counter == 0:
@@ -731,7 +731,7 @@ def generateElectiveUnhighlightStatement(elective, longelective, plan, counter, 
         while ({electiveName}elements.length > 0) {{
           var currelement = document.getElementById({electiveName}elements.item(0).id);
           that.unHighlightElement(currelement, {electiveName});
-          that.removeFromClicked("{longElectiveName}{planName}" + i);
+          that.removeFromClicked("{longElectiveName}{planName}" + i, "{categoryName}");
           i = i + 1;
         }}\n"""
     if counter == 0:
@@ -756,7 +756,7 @@ def generateNormalCourseHighlightStatement(course, plan, category, controller):
     formattedRemoveUnclicked = """       {courseName}{planName}element.classList.remove("{categoryName}");\n"""
     # add to list of clicked
     formattedAddToClicked = """       {courseName}{planName}element.classList.add("{categoryName}-highlighted");
-       that.addToClicked(["{courseName}{planName}","{categoryName}"]);\n"""
+       that.addToClicked("{courseName}{planName}","{categoryName}");\n"""
     controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name)))
     controller.write(formattedRemoveUnclicked.format(planName=cleaner.cleanString(plan), 
                                                      courseName=cleaner.cleanString(course.name), 
@@ -780,7 +780,7 @@ def generateNormalCourseUnhighlightStatement(course, plan, category, controller)
     formattedRemoveClicked = """       {courseName}{planName}element.classList.remove("{categoryName}-highlighted");\n"""
     # add to list of unclicked
     formattedAddToUnclicked = """       {courseName}{planName}element.classList.add("{categoryName}");\n       
-       that.removeFromClicked("{courseName}{planName}");\n"""
+       that.removeFromClicked("{courseName}{planName}", "{categoryName}");\n"""
     controller.write(formattedIfStatement.format(planName=cleaner.cleanString(plan), 
                                                              courseName=cleaner.cleanString(course.name)))
     controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), 

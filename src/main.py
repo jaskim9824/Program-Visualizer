@@ -15,7 +15,6 @@
 
 import tkinter
 import traceback
-from turtle import bgcolor
 from bs4 import BeautifulSoup
 import modules.parsing.categoriesparsing as categoriesparsing
 import modules.parsing.coursegroupparsing as coursegroupparsing

@@ -107,9 +107,9 @@ def placeClickListeners(courseList, controller, lineManager, plan):
     formattedContains = "     if (that.{planName}ClickedMap.get(\"{courseName}\").length > 0) {{ \n"
     formatttedWithinContains= """          for (let i = 0; i < that.{planName}ClickedMap.get("{courseName}").length; i++) {{ 
         var cate = that.{planName}ClickedMap.get("{courseName}")[i];
-        if (element.classList.contains(cate + "-highlighted")) {{
+        if ({courseName}element.classList.contains(cate + "-highlighted")) {{
             trueCounter++;
-            that.unHighlightElement(element, cate);
+            that.unHighlightElement({courseName}element, cate);
         }}
     }}
     if (trueCounter > 0) {{
@@ -117,7 +117,7 @@ def placeClickListeners(courseList, controller, lineManager, plan):
     }}"""
     formattedClickIf = " if (!{courseName}flag) {{\n"
     formattedStatement = "      that.{action}Line(getLine{num}());\n"
-    formattedHighlightStatement = "     that.{action}Element(\"{courseName}\");\n"
+    formattedHighlightStatement = "     that.{action}Element({courseName}element, \"{category}\");\n"
     formattedRemoveClickedStatement = "     var category = that.removeFromClicked(\"{courseName}\", \"{category}\");\n"
     formattedAddClickedStatement = "     that.addToClicked(\"{courseName}\", \"{category}\");\n"
 
@@ -172,9 +172,9 @@ def placeClickListeners(courseList, controller, lineManager, plan):
   
 
             
-        controller.write(formattedHighlightStatement.format(courseName=courseID,
-                                                                    action="highlight",
-                                                                    className=courseContClass))
+        controller.write(formattedHighlightStatement.format(action="highlight",
+                                                            category=courseContClass,
+                                                            courseName=courseID))
         controller.write(formattedAddClickedStatement.format(courseName=courseID, 
                                                                     category=courseContClass))
             
@@ -191,17 +191,17 @@ def placeClickListeners(courseList, controller, lineManager, plan):
         if (courseContClass == ""):
             courseContClass = "course"
 
-        controller.write(formattedHighlightStatement.format(courseName=courseID,
-                                                                action="unHighlight",
-                                                                className=courseContClass))
+        controller.write(formattedHighlightStatement.format(action="unHighlight",
+                                                            category=courseContClass,
+                                                            courseName=courseID))
     
     
         controller.write(formattedRemoveClickedStatement.format(courseName=courseID,
                                                                 category=courseContClass))
         controller.write("  if (category != \"\") { \n")
-        controller.write(formattedHighlightStatement.format(courseName=courseID,
-                                                                    action="highlight",
-                                                                    className=courseContClass))
+        controller.write(formattedHighlightStatement.format(action="highlight",
+                                                            category=courseContClass,
+                                                            courseName=courseID))
         controller.write("}\n")
         controller.write("      " +courseID+"flag=false\n")
         controller.write("  }\n};\n")

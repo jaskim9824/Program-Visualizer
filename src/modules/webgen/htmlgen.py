@@ -296,7 +296,7 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
             # If multiple course options, append the courseDiv to a list which we will append
             # to the termTag after all options have been collected
             courseOrList.append(courseDiv)
-            writeFlagsAndVariables(controller, courseID)
+            writeFlagsAndVariables(controller, courseID, cleaner.cleanString(plan))
             prevOrCourse = course  # need to access the last course option to check for course group
             if termList.index(course) == (len(termList) - 1):
                 # last course in term is an OR course, need to append to termTag immediately
@@ -311,12 +311,12 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
             # need to append to courseGroupList, different than check in orCase because
             # this doesn't involve OR
             courseGroupList.append(courseDiv)
-            writeFlagsAndVariables(controller, courseID)
+            writeFlagsAndVariables(controller, courseID, cleaner.cleanString(plan))
             continue
 
         courseContDiv.append(courseDiv) 
         termTag.append(courseContDiv)
-        writeFlagsAndVariables(controller, courseID)
+        writeFlagsAndVariables(controller, courseID, cleaner.cleanString(plan)) 
 
     if courseGroupTitle != "":
         # Need to add course group title, outside of course group box so
@@ -408,7 +408,7 @@ def createCourseDiv(soup, courseID, category, orBool):
 # Parameters:
 #   controller - file handle to controller.js
 #   courseID - ID for course
-def writeFlagsAndVariables(controller, courseID):
+def writeFlagsAndVariables(controller, courseID, plan):
     controller.write("  var " + 
                          courseID +
                          "flag = false;\n")
@@ -416,6 +416,7 @@ def writeFlagsAndVariables(controller, courseID):
                          courseID +
                          "rflag = false;\n")
     controller.write(" var " + courseID + "Time = new Date().getTime();\n")
+    controller.write("this."+plan+"ClickedMap.set(\""+courseID+"\", []);\n")
 
 # Function that consturcts the course description tooltip for an elective
 # Parameters:
