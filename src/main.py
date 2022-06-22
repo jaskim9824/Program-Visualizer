@@ -241,10 +241,14 @@ def main():
         print("Generation Completed!")
         value_label['text'] = 'Generation Completed!'
         messagebox.showinfo('Status',message="Webpage successfully generated!")
-    except Exception as e:
+    except (FileNotFoundError, ValueError) as e:
         print("Error occured! Handling exception")
         messagebox.showerror("Error", str(e))
-        traceback.print_exc()
+    except Exception as e:
+        print("Error occured! Handling exception")
+        messagebox.showerror("Error", "An unhandled error has occured, please contact the developers" + 
+        " and include the following stack trace:\n" +
+        traceback.format_exc())
     finally:
         progress()
         progbar.destroy()

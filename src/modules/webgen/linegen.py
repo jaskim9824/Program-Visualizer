@@ -127,6 +127,7 @@ def placeClickListeners(courseList, controller, lineManager, plan):
 
     for course in courseList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan) 
+        cleanedPlan = cleaner.cleanString(plan)
         courseContClass = course.category.replace(" ", "")
 
         # program and tech elective
@@ -155,12 +156,12 @@ def placeClickListeners(courseList, controller, lineManager, plan):
         controller.write(formattedElementGetter.format(courseName=courseID))
 
         controller.write(formattedClickIf.format(courseName=courseID,
-                                                planName=plan))
+                                                planName=cleanedPlan))
         
         # TO DO: re do this section
-        controller.write(formattedContains.format(courseName=courseID, category=courseContClass))
+        controller.write(formattedContains.format(courseName=courseID, planName=cleanedPlan))
         controller.write(" var trueCounter = 0;\n")
-        controller.write(formatttedWithinContains.format(courseName=courseID, category=courseContClass))
+        controller.write(formatttedWithinContains.format(courseName=courseID, planName=cleanedPlan))
         controller.write("}\n")
 
         # if course owns lines, add addLine statements
@@ -195,7 +196,8 @@ def placeClickListeners(courseList, controller, lineManager, plan):
                                                                 className=courseContClass))
     
     
-        controller.write(formattedRemoveClickedStatement.format(courseName=courseID))
+        controller.write(formattedRemoveClickedStatement.format(courseName=courseID,
+                                                                category=courseContClass))
         controller.write("  if (category != \"\") { \n")
         controller.write(formattedHighlightStatement.format(courseName=courseID,
                                                                     action="highlight",

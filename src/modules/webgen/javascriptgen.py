@@ -384,7 +384,7 @@ switch({planString}) {{ \n"""
     if (index != -1) {{
         var indexMap = this.{planName}ClickedMap.get(element).lastIndexOf(category);
         if (indexMap != -1) {{
-            this.{planNameCclickedMap.get(element).splice(indexMap, 1);
+            this.{planName}ClickedMap.get(element).splice(indexMap, 1);
         }}
         this.{planName}Clicked[index][2]--;
         if (this.{planName}Clicked[index][2] <= 0) {{
