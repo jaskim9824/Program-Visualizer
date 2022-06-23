@@ -482,7 +482,7 @@ def sortIntoCategories(sequenceDict):
     for plan in sequenceDict:
         for term in sequenceDict[plan]:
             for course in sequenceDict[plan][term]:
-                cat = cleaner.cleanString(course.category)
+                cat = cleaner.cleanString(course.main_category)
                 cleanplan = cleaner.cleanString(plan)
                 interdict = {}  # inner dict
                 interdict[cleanplan] = [course]

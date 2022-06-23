@@ -11,7 +11,8 @@ class Course:
     def __init__(self, name = "", faculty = "", department = "", course_id = "", subject = "", catalog = "",
         long_title = "", eff_date = "", status = "", calendar_print = "", prog_units = "",
         engineering_units = "", calc_fee_index = "", actual_fee_index = "", duration = "",
-        alpha_hours = "", course_description = "", category = "", color = "", course_group = "", prereqs = [], coreqs = []):
+        alpha_hours = "", course_description = "", main_category = "", sub_category = "", 
+        color = "", course_group = "", prereqs = [], coreqs = []):
 
         self.name = str(name)
         self.faculty = str(faculty)
@@ -30,7 +31,8 @@ class Course:
         self.duration = str(duration)
         self.alpha_hours = str(alpha_hours).lower()
         self.course_description = str(course_description)
-        self.category = str(category)
+        self.main_category = str(main_category)
+        self.sub_category = str(sub_category)
         self.color = str(color)
         self.course_group = str(course_group)
         self.prereqs = prereqs

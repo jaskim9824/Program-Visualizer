@@ -128,7 +128,7 @@ def placeClickListeners(courseList, controller, lineManager, plan):
     for course in courseList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan) 
         cleanedPlan = cleaner.cleanString(plan)
-        courseContClass = course.category.replace(" ", "")
+        courseContClass = course.main_category.replace(" ", "")
 
         # program and tech elective
         if (courseContClass == "Program/TechnicalElective"):
@@ -231,7 +231,7 @@ def placeRightClickListeners(courseList, controller, plan):
 
     for course in courseList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan) 
-        courseContClass = course.category.replace(" ", "")
+        courseContClass = course.main_category.replace(" ", "")
 
         # program and tech elective
         if (courseContClass == "Program/TechnicalElective"):

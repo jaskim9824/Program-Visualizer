@@ -27,7 +27,7 @@ from . import parsinghelp
 #       filled in
 #   category_dict (dict):
 #       Key: category (string): A category ("Basic Science", "Math", etc.)
-#       Value: color (string): six char hex rrggbb color code for that category
+#       Value: a list with item at index 0 as category level ("main" or "sub") and color as the item at index 1
 def parseCategories(filename, course_obj_dict):
     try:
         category_dict = {}
@@ -36,7 +36,19 @@ def parseCategories(filename, course_obj_dict):
 
         for col in range(0, sheet.ncols):
             # Each column is one category
-            cat_name = str(sheet.cell_value(0, col))  # first cell is category name
+            cell_entry = str(sheet.cell_value(0, col))
+            # finding the appropriate category level
+            open_bracket_indx = cell_entry.find("(")
+            closed_bracket_indx = cell_entry.find(")")
+            if ((open_bracket_indx != -1) and (closed_bracket_indx != -1)):
+                # if brackets present
+                cat_name = cell_entry[:open_bracket_indx]
+                cat_level = cell_entry[open_bracket_indx + 1:closed_bracket_indx]
+            else:
+                # otherwise just use cell as category name and level default as main
+                cat_name = cell_entry
+                cat_level = "main"
+                
             if "." in str(sheet.cell_value(1, col)):
                 # If rrggbb is all numbers, Excel likes to add a decimal point. Remove this
                 dotindex = str(sheet.cell_value(1, col)).find(".")
@@ -46,24 +58,24 @@ def parseCategories(filename, course_obj_dict):
                 color = str(sheet.cell_value(1, col))
 
             # store the category and color in a dict
-            category_dict[cat_name] = color 
+            category_dict[cat_name] = [cat_level, color] 
 
             # Create a new course object if an elective because elective info is not in course_obj_dict
             if cat_name.upper().strip() == "COMP" and "Complementary Elective" not in course_obj_dict:
                 course_obj_dict["Complementary Elective"] = parsinghelp.Course(name = "Complementary Elective", 
                     course_description="A complementary elective of the student's choice. Please consult the calendar for more information.",
-                    category = "Complementary Elective", color = color)
+                    main_category = "Complementary Elective", color = color)
             if cat_name.upper().strip() == "PROG" and "Program/Technical Elective" not in course_obj_dict:
                 course_obj_dict["Program/Technical Elective"] = parsinghelp.Course(name = "Program/Technical Elective", 
                     course_description="A program/technical elective of the student's choice. Please consult the calendar for more information.",
-                    category = "Program/Technical Elective", color = color)
+                    main_category = "Program/Technical Elective", color = color)
             if cat_name.upper().strip() == "ITS" and "ITS Elective" not in course_obj_dict:
                 course_obj_dict["ITS Elective"] = parsinghelp.Course(name = "ITS Elective", 
                     course_description="An ITS elective of the student's choice. Please consult the calendar for more information.",
-                    category = "ITS Elective", color = color)
+                    main_category = "ITS Elective", color = color)
 
             # Add category information to courses in that category
-            course_obj_dict = addCategorytoCourses(course_obj_dict, sheet, col, cat_name, color)
+            course_obj_dict = addCategorytoCourses(course_obj_dict, sheet, col, cat_name, cat_level, color)
 
        
     except FileNotFoundError:
@@ -80,7 +92,7 @@ def parseCategories(filename, course_obj_dict):
 #   - col: column number for respective category
 #   - cat_name: name of respective category
 #   - color: colour of respective category
-def addCategorytoCourses(course_obj_dict, sheet, col, cat_name, color):
+def addCategorytoCourses(course_obj_dict, sheet, col, cat_name, cat_level, color):
         for row in range(2, sheet.nrows):
                 # Course names start at third row
                 name = sheet.cell_value(row, col)
@@ -88,7 +100,11 @@ def addCategorytoCourses(course_obj_dict, sheet, col, cat_name, color):
                     continue
                 name = name.upper().strip().replace("  ", " ")
                 # guard to prevent key not found error
-                if name in course_obj_dict: 
-                    course_obj_dict[name].category = cat_name
+                if name in course_obj_dict:
+                    if cat_level == "main":
+                        # determine if this is a main or sub category
+                        course_obj_dict[name].main_category = cat_name
+                    elif cat_level == "sub":
+                        course_obj_dict[name].sub_category = cat_name
                     course_obj_dict[name].color = color
         return course_obj_dict
