@@ -118,7 +118,10 @@ def websiteGeneration(value_label):
             # writing colour highlighting CSS
             print("Writing category CSS...")
             value_label['text'] = 'Writing category CSS...'
-            cssgen.writeCategoryCSS(categoryDict, categoryCSS)
+            mainCategoryDict, subCategoryDict = categoriesparsing.splitCategoryDict(categoryDict)
+            print(mainCategoryDict)
+            print(subCategoryDict)
+            cssgen.writeCategoryCSS(mainCategoryDict, subCategoryDict, categoryCSS)
             progress()
 
             # sequencing courses
@@ -150,8 +153,6 @@ def websiteGeneration(value_label):
 
             #locating main div, this is where all the html will be written
             mainTag = soup.body.find("div", id="main")
-
-    
 
             # customizing webpage title
             print("Writing title....")
