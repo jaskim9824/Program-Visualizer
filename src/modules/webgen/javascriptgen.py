@@ -829,13 +829,10 @@ def generateNormalCourseUnhighlightStatement(course, plan, category, controller)
     #                                                 categoryName=cleaner.cleanString(category)))
     formattedUnhighlightStatement = """     var element = document.getElementById("{courseName}{planName}");
                             var prevCate = this.removeFromClicked("{courseName}{planName}", categoryName);
-                                if (!element.classList.contains(categoryName+"-highlighted")) {{
-                                    return;
-                                }}
-                                else {{
-                                    that.unHighlightElement(element, categoryName);
+                                if (element.classList.contains(categoryName+"-highlighted")) {{
+                                    this.unHighlightElement(element, categoryName);
                                     if (prevCate != "") {{
-                                        that.highlightElement(element, prevCate);
+                                        this.highlightElement(element, prevCate);
                                     }}
                                 }}\n"""
     controller.write(formattedUnhighlightStatement.format(courseName=cleaner.cleanString(course.name),
