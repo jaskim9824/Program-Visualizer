@@ -705,8 +705,13 @@ def generateElectiveHighlightStatement(elective, longelective, plan, counter, co
     formattedElectivesHighlight = """        var i = 0;
         while ({electiveName}elements.length > 0) {{
           var currelement = document.getElementById({electiveName}elements.item(0).id);
-          that.addHighlight(currelement, {electiveName});
-          that.addToClicked("{longElectiveName}{planName}" + i,"{categoryName}");
+          if (this.{planName}ClickedMap.get("{longElectiveName}{planName}" + i).length > 0) {{
+                var mapLen = this.{planName}ClickedMap.get("{longElectiveName}{planName}" + i).length - 1
+                var prevCate = this.{planName}ClickedMap.get("{longElectiveName}{planName}" + i)[mapLen];
+                this.unHighlightElement(currelement, prevCate);
+          }}
+          this.highlightElement(element, categoryName);
+          this.addToClicked("{longElectiveName}{planName}" + i, categoryName);
           i = i + 1;
         }}\n"""
     if counter == 0:
@@ -730,8 +735,16 @@ def generateElectiveUnhighlightStatement(elective, longelective, plan, counter, 
     formattedElectivesUnhighlight = """        var i = 0;        
         while ({electiveName}elements.length > 0) {{
           var currelement = document.getElementById({electiveName}elements.item(0).id);
-          that.unHighlightElement(currelement, {electiveName});
-          that.removeFromClicked("{longElectiveName}{planName}" + i, "{categoryName}");
+          var prevCate = this.removeFromClicked("{longElectiveName}{planName}" + i, "{categoryName}");
+                if (!currelement.classList.contains(categoryName+"-highlighted")) {{
+                    return;
+                }}
+                else {{
+                    this.unHighlightElement(currelement, categoryName);
+                    if (prevCate != "") {{
+                        this.highlightElement(currelement, prevCate);
+                    }}
+                }}      
           i = i + 1;
         }}\n"""
     if counter == 0:
@@ -750,20 +763,30 @@ def generateElectiveUnhighlightStatement(elective, longelective, plan, counter, 
 #   - category: category of course
 #   - controller: file handle to controller.js
 def generateNormalCourseHighlightStatement(course, plan, category, controller):
-    # finding the element with the appropriate id
-    formattedGetElement = """       var {courseName}{planName}element = document.getElementById("{courseName}{planName}");\n"""
-    # remove from list of unclicked
-    formattedRemoveUnclicked = """       {courseName}{planName}element.classList.remove("{categoryName}");\n"""
-    # add to list of clicked
-    formattedAddToClicked = """       {courseName}{planName}element.classList.add("{categoryName}-highlighted");
-       that.addToClicked("{courseName}{planName}","{categoryName}");\n"""
-    controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name)))
-    controller.write(formattedRemoveUnclicked.format(planName=cleaner.cleanString(plan), 
-                                                     courseName=cleaner.cleanString(course.name), 
-                                                     categoryName=cleaner.cleanString(category)))
-    controller.write(formattedAddToClicked.format(planName=cleaner.cleanString(plan), 
-                                                  courseName=cleaner.cleanString(course.name), 
-                                                  categoryName=cleaner.cleanString(category)))
+    # # finding the element with the appropriate id
+    # formattedGetElement = """       var {courseName}{planName}element = document.getElementById("{courseName}{planName}");\n"""
+    # # remove from list of unclicked
+    # formattedRemoveUnclicked = """       {courseName}{planName}element.classList.remove("{categoryName}");\n"""
+    # # add to list of clicked
+    # formattedAddToClicked = """       {courseName}{planName}element.classList.add("{categoryName}-highlighted");
+    #    that.addToClicked("{courseName}{planName}","{categoryName}");\n"""
+    # controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name)))
+    # controller.write(formattedRemoveUnclicked.format(planName=cleaner.cleanString(plan), 
+    #                                                  courseName=cleaner.cleanString(course.name), 
+    #                                                  categoryName=cleaner.cleanString(category)))
+    # controller.write(formattedAddToClicked.format(planName=cleaner.cleanString(plan), 
+    #                                               courseName=cleaner.cleanString(course.name), 
+    #                                               categoryName=cleaner.cleanString(category)))
+    formattedHighlightStatement = """ var element = document.getElementById("{courseName}{planName}");
+                            if (this.{planName}ClickedMap.get("{courseName}{planName}").length > 0) {{
+                                var mapLen = this.{planName}ClickedMap.get("{courseName}{planName}").length - 1
+                                var prevCate = this.{planName}ClickedMap.get("{courseName}{planName}")[mapLen];
+                                this.removeHighlight(element, prevCate);
+                            }}
+                            this.highlightElement(element, categoryName);
+                            this.addToClicked("{courseName}{planName}", categoryName);\n"""
+    controller.write(formattedHighlightStatement.format(planName=cleaner.cleanString(plan),
+                                                        courseName=cleaner.cleanString(course.name)))
 
 # Generates the statements needed to unhighlight a single normal course when pressing
 # the legend buttons
@@ -773,25 +796,37 @@ def generateNormalCourseHighlightStatement(course, plan, category, controller):
 #   - category: category of course
 #   - controller: file handle to controller.js
 def generateNormalCourseUnhighlightStatement(course, plan, category, controller):
-    formattedIfStatement = "if (!{courseName}{planName}flag) {{ \n"
-    # finding the element with the appropriate id
-    formattedGetElement = """       var {courseName}{planName}element = document.getElementById("{courseName}{planName}");\n"""
-    # remove from list of clicked
-    formattedRemoveClicked = """       {courseName}{planName}element.classList.remove("{categoryName}-highlighted");\n"""
-    # add to list of unclicked
-    formattedAddToUnclicked = """       {courseName}{planName}element.classList.add("{categoryName}");\n       
-       that.removeFromClicked("{courseName}{planName}", "{categoryName}");\n"""
-    controller.write(formattedIfStatement.format(planName=cleaner.cleanString(plan), 
-                                                             courseName=cleaner.cleanString(course.name)))
-    controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), 
-                                                courseName=cleaner.cleanString(course.name)))
-    controller.write(formattedRemoveClicked.format(planName=cleaner.cleanString(plan), 
-                                                   courseName=cleaner.cleanString(course.name), 
-                                                   categoryName=cleaner.cleanString(category)))
-    controller.write(formattedAddToUnclicked.format(planName=cleaner.cleanString(plan), 
-                                                    courseName=cleaner.cleanString(course.name), 
-                                                    categoryName=cleaner.cleanString(category)))
-    controller.write(" } \n")
+    # formattedIfStatement = "if (!{courseName}{planName}flag) {{ \n"
+    # # finding the element with the appropriate id
+    # formattedGetElement = """       var {courseName}{planName}element = document.getElementById("{courseName}{planName}");\n"""
+    # # remove from list of clicked
+    # formattedRemoveClicked = """       {courseName}{planName}element.classList.remove("{categoryName}-highlighted");\n"""
+    # # add to list of unclicked
+    # formattedAddToUnclicked = """       {courseName}{planName}element.classList.add("{categoryName}");\n       
+    #    that.removeFromClicked("{courseName}{planName}", "{categoryName}");\n"""
+    # controller.write(formattedIfStatement.format(planName=cleaner.cleanString(plan), 
+    #                                                          courseName=cleaner.cleanString(course.name)))
+    # controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), 
+    #                                             courseName=cleaner.cleanString(course.name)))
+    # controller.write(formattedRemoveClicked.format(planName=cleaner.cleanString(plan), 
+    #                                                courseName=cleaner.cleanString(course.name), 
+    #                                                categoryName=cleaner.cleanString(category)))
+    # controller.write(formattedAddToUnclicked.format(planName=cleaner.cleanString(plan), 
+    #                                                 courseName=cleaner.cleanString(course.name), 
+    #                                                 categoryName=cleaner.cleanString(category)))
+    formattedUnhighlightStatement = """     var element = document.getElementById("{courseName}{planName}");
+                            var prevCate = this.removeFromClicked("{courseName}{planName}", categoryName);
+                                if (!element.classList.contains(categoryName+"-highlighted")) {{
+                                    return;
+                                }}
+                                else {{
+                                    that.unHighlightElement(element, categoryName);
+                                    if (prevCate != "") {{
+                                        that.highlightElement(element, prevCate);
+                                    }}
+                                }}\n"""
+    controller.write(formattedUnhighlightStatement.format(courseName=cleaner.cleanString(course.name),
+                                                          planName=cleaner.cleanString(plan)))
 
 # Function that generates the statementd representing which plan is currently selected
 # Parameters:
