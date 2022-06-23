@@ -115,6 +115,7 @@ def pullDependencies(course_obj_dict):
 #   2) Several courses, each separated by the word " or ". This denotes that only one of
 #   these courses is required as a prerequisite. eg: "MEC E 250 or MATH 102 or CH E 441"
 def pullPreReqs(description):
+    description.replace("-requisite", "requisite")
     # Split into cases, plural and not plural. Just adjusts the substring value (14 or 15)
     singlestart = description.find("Prerequisite: ")
     if singlestart == -1:
@@ -163,6 +164,7 @@ def pullPreReqs(description):
 #   2) Several courses, each separated by the word "or". This denotes that only one of
 #   these courses is required as a corequisite. eg: "MEC E 250 or MATH 102 or CH E 441"
 def pullCoReqs(description):
+    description.replace("-requisite", "requisite")
     # Split into cases, plural and not plural. Just adjusts the substring value (14 or 15)
     singlestart = description.find("Corequisite: ")
     if singlestart == -1:
