@@ -85,6 +85,7 @@ def parseSeq(filename, course_obj_dict):
                         continue
 
                     if "OR" in name:
+                        # If OR case, follow the same procedure but set calendar_print as "or"
                         namelist = name.split("OR")
                         for orname in namelist:
                             orname = orname.strip()
@@ -211,6 +212,18 @@ def checkReqs(course_seq):
  
     return course_seq
 
+# Extracts the courses from course_seq in a given plan.
+#
+# Parameters:
+#   course_seq (dict): Stores course data in proper sequence:
+#       key: Plan Name (string): name of the sheet from "Sequencing.xls"
+#       ("Traditional", "Co-op Plan 1", etc.)
+#       value: dict with key as term name ("Term 1", "Term 2", etc.)
+#   plan (string): name of the plan from which courses are extracted
+#
+# Returns:
+#   all_names (list of strings): list of the course names that are taken
+#   in that plan
 def extractCoursesFromPlan(course_seq, plan):
     all_names = []
     for term in course_seq[plan]:
@@ -219,6 +232,15 @@ def extractCoursesFromPlan(course_seq, plan):
             all_names.append(course_name)
     return all_names
 
+# Extracts the courses from planDict in a given term.
+#
+# Parameters:
+#   planDict (dict): dict stored in course_seq[plan]
+#   term (string): name of the term from which courses are extarcted
+#
+# Returns:
+#   term_course_names (list of strings): list of the course names that are taken
+#   in that term
 def extractCourseFromTerm(planDict, term):
     term_course_names = []
     for course in planDict[term]:
