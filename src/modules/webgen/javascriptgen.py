@@ -498,6 +498,8 @@ def sortIntoCategories(sequenceDict):
                         # add to the existing list of courses in that plan in that category
                         categoriesDict[mainCat][cleanplan].append(course)
                 for uncleanSubCat in subCatList:
+                    interdict = {}  # inner dict
+                    interdict[cleanplan] = [course]
                     subCat = cleaner.cleanString(uncleanSubCat)
                     if subCat not in categoriesDict.keys():
                         # category not taken yet, add new category and new course list
