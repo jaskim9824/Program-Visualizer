@@ -70,7 +70,7 @@ def writeSubCategoryCSS(subCategoryDict, categoryCSS):
             background-color: #{backColour};
         }}
         .{categoryName}-highlighted:hover {{
-            background-color: #{backColour};
+            background-color: #{backColour}!important;
             border-color: #{backColour}!important;
         }}\n
 .orcoursecontainer .{categoryName}:hover {{
@@ -81,7 +81,7 @@ def writeSubCategoryCSS(subCategoryDict, categoryCSS):
             background-color: #{backColour};
         }}
         .{categoryName}-highlighted:hover {{
-            background-color: #{backColour};
+            background-color: #{backColour}!important;
             border-color: #{backColour}!important;
         }}
 .coursegroupcontainer .{categoryName}:hover {{
@@ -92,7 +92,7 @@ def writeSubCategoryCSS(subCategoryDict, categoryCSS):
             background-color: #{backColour};
         }}
         .{categoryName}-highlighted:hover {{
-            background-color: #{backColour};
+            background-color: #{backColour}!important;;
             border-color: #{backColour}!important;
         }}\n"""
         categoryCSS.write(categoryFormattedString.format(categoryName=cleaner.cleanString(category),
