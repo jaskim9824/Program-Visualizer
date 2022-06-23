@@ -84,6 +84,16 @@ def parseCategories(filename, course_obj_dict):
 
     return course_obj_dict, category_dict
 
+def splitCategoryDict(categoryDict):
+    mainCategoryDict = {}
+    subCategoryDict = {}
+    for category in categoryDict:
+        if categoryDict[category][0] == "main":
+            mainCategoryDict[category] = categoryDict[category][1]
+        elif categoryDict[category][0] == "sub": 
+            subCategoryDict[category] = categoryDict[category][1]
+    return mainCategoryDict, subCategoryDict
+
 # Function that adds the category information to courses of a specfic category
 # Parameters:
 #   - course_obj_dict: dict that maps the course name to a course object
@@ -107,3 +117,4 @@ def addCategorytoCourses(course_obj_dict, sheet, col, cat_name, cat_level, color
                         course_obj_dict[name].sub_categories.append(cat_name)
                     course_obj_dict[name].color = color
         return course_obj_dict
+    

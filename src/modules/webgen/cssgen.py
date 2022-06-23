@@ -14,9 +14,15 @@ from .. import cleaner
 # of courses based on category
 #   categoryDict - a dict that maps categories to colours
 #   categoryCSS - file handle to CSS file
-def writeCategoryCSS(categoryDict, categoryCSS):
-    for category in categoryDict:
-        backgroundColour = categoryDict[category][1]
+def writeCategoryCSS(mainCategoryDict, subCategoryDict, categoryCSS):
+    writeSubCategoryCSS(subCategoryDict, categoryCSS)
+    writeMainCategoryCSS(mainCategoryDict, categoryCSS)
+
+
+
+def writeMainCategoryCSS(mainCategoryDict, categoryCSS):
+    for category in mainCategoryDict:
+        backgroundColour = mainCategoryDict[category]
         categoryFormattedString = """.coursecontainer .{categoryName}:hover {{
             background-color: #{backColour};
             border-color: #{backColour};
@@ -49,6 +55,45 @@ def writeCategoryCSS(categoryDict, categoryCSS):
         .{categoryName}-highlighted:hover {{
             background-color: #{backColour};
             border-color: #{backColour};
+        }}\n"""
+        categoryCSS.write(categoryFormattedString.format(categoryName=cleaner.cleanString(category),
+                                                         backColour=backgroundColour))
+
+def writeSubCategoryCSS(subCategoryDict, categoryCSS):
+  for category in subCategoryDict:
+        backgroundColour = subCategoryDict[category]
+        categoryFormattedString = """.coursecontainer .{categoryName}:hover {{
+            background-color: #{backColour};
+            border-color: #{backColour};
+        }}
+        .{categoryName}-highlighted {{
+            background-color: #{backColour};
+        }}
+        .{categoryName}-highlighted:hover {{
+            background-color: #{backColour};
+            border-color: #{backColour}!important;
+        }}\n
+.orcoursecontainer .{categoryName}:hover {{
+            background-color: #{backColour};
+            border-color: #{backColour};
+        }}
+        .{categoryName}-highlighted {{
+            background-color: #{backColour};
+        }}
+        .{categoryName}-highlighted:hover {{
+            background-color: #{backColour};
+            border-color: #{backColour}!important;
+        }}
+.coursegroupcontainer .{categoryName}:hover {{
+            background-color: #{backColour};
+            border-color: #{backColour};
+        }}
+        .{categoryName}-highlighted {{
+            background-color: #{backColour};
+        }}
+        .{categoryName}-highlighted:hover {{
+            background-color: #{backColour};
+            border-color: #{backColour}!important;
         }}\n"""
         categoryCSS.write(categoryFormattedString.format(categoryName=cleaner.cleanString(category),
                                                          backColour=backgroundColour))

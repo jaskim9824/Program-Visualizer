@@ -222,7 +222,7 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
     hexcolorlist= ["033dfc", "fc0303", "ef8c2b", "0ccb01", "bd43fa", "e8e123"]
     for course in termList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan)
-        courseContClass = course.main_category.replace(" ", "")
+        courseContClass = extractCourseCategories(course)
         orCase = course.calendar_print.lower().strip() == "or"  # handles improper formatting pulled from Excel
 
         if course.course_group != "":
@@ -330,6 +330,12 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
                 courseGroupList[i]["class"].append("lastcourseingroup")  # last course has no bottom margin
             courseContDiv.append(courseGroupList[i])
         termTag.append(courseContDiv)
+
+def extractCourseCategories(course):
+    catListString = cleaner.cleanString(course.main_category)
+    for subcat in course.sub_categories:
+        catListString += " " + cleaner.cleanString(subcat)
+    return catListString
 
 # Appends all courses in courseOrList to either termTag (if not in a course group) or to 
 # courseGroupList (if in a course group)
