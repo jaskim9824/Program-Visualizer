@@ -480,22 +480,37 @@ def sortIntoCategories(sequenceDict):
     for plan in sequenceDict:
         for term in sequenceDict[plan]:
             for course in sequenceDict[plan][term]:
-                cat = cleaner.cleanString(course.main_category)
+                mainCat = cleaner.cleanString(course.main_category)
+                subCatList = course.sub_categories
                 cleanplan = cleaner.cleanString(plan)
                 interdict = {}  # inner dict
                 interdict[cleanplan] = [course]
-                if cat not in categoriesDict.keys():
+                if mainCat not in categoriesDict.keys():
                     # category not taken yet, add new category and new course list
-                    categoriesDict[cat] = interdict
+                    categoriesDict[mainCat] = interdict
                 else:
                     # category is present in dict
-                    if cleanplan not in categoriesDict[cat].keys():
+                    if cleanplan not in categoriesDict[mainCat].keys():
                         # category taken but not plan
                         # keep existing categories but add a new plan
-                        categoriesDict[cat].update(interdict)
+                        categoriesDict[mainCat].update(interdict)
                     else:
                         # add to the existing list of courses in that plan in that category
-                        categoriesDict[cat][cleanplan].append(course)
+                        categoriesDict[mainCat][cleanplan].append(course)
+                for uncleanSubCat in subCatList:
+                    subCat = cleaner.cleanString(uncleanSubCat)
+                    if subCat not in categoriesDict.keys():
+                        # category not taken yet, add new category and new course list
+                        categoriesDict[subCat] = interdict
+                    else:
+                        # category is present in dict
+                        if cleanplan not in categoriesDict[subCat].keys():
+                            # category taken but not plan
+                            # keep existing categories but add a new plan
+                            categoriesDict[subCat].update(interdict)
+                        else:
+                            # add to the existing list of courses in that plan in that category
+                            categoriesDict[subCat][cleanplan].append(course)
     
     return categoriesDict
 
