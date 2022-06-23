@@ -15,8 +15,9 @@ from .. import cleaner
 #   categoryDict - a dict that maps categories to colours
 #   categoryCSS - file handle to CSS file
 def writeCategoryCSS(mainCategoryDict, subCategoryDict, categoryCSS):
-    writeMainCategoryCSS(mainCategoryDict, categoryCSS)
     writeSubCategoryCSS(subCategoryDict, categoryCSS)
+    writeMainCategoryCSS(mainCategoryDict, categoryCSS)
+
 
 
 def writeMainCategoryCSS(mainCategoryDict, categoryCSS):
@@ -92,7 +93,7 @@ def writeSubCategoryCSS(subCategoryDict, categoryCSS):
         }}
         .{categoryName}-highlighted:hover {{
             background-color: #{backColour};
-            border-color: #{backColour}!importWant;
+            border-color: #{backColour}!important;
         }}\n"""
         categoryCSS.write(categoryFormattedString.format(categoryName=cleaner.cleanString(category),
                                                          backColour=backgroundColour))

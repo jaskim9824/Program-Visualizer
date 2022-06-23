@@ -7,8 +7,6 @@
 # webpage which is not releated to the generation of the lines
 
 # Dependencies: cleaner
-
-from distutils.command.clean import clean
 from .. import cleaner
 
 # Function that generates the JS before the generation of the course diagram
