@@ -392,7 +392,7 @@ switch({planString}) {{ \n"""
             return "";
         }}
         var maxIndex = this.{planName}ClickedMap.get(element).length - 1
-        return this.{planName}ClickedMap[maxIndex];
+        return this.{planName}ClickedMap.get(element)[maxIndex];
     }}
     return "";
     break;"""
@@ -710,7 +710,7 @@ def generateElectiveHighlightStatement(elective, longelective, plan, counter, co
                 var prevCate = this.{planName}ClickedMap.get("{longElectiveName}{planName}" + i)[mapLen];
                 this.unHighlightElement(currelement, prevCate);
           }}
-          this.highlightElement(element, categoryName);
+          this.highlightElement(currelement, categoryName);
           this.addToClicked("{longElectiveName}{planName}" + i, categoryName);
           i = i + 1;
         }}\n"""
@@ -781,7 +781,7 @@ def generateNormalCourseHighlightStatement(course, plan, category, controller):
                             if (this.{planName}ClickedMap.get("{courseName}{planName}").length > 0) {{
                                 var mapLen = this.{planName}ClickedMap.get("{courseName}{planName}").length - 1
                                 var prevCate = this.{planName}ClickedMap.get("{courseName}{planName}")[mapLen];
-                                this.removeHighlight(element, prevCate);
+                                this.unHighlightElement(element, prevCate);
                             }}
                             this.highlightElement(element, categoryName);
                             this.addToClicked("{courseName}{planName}", categoryName);\n"""
