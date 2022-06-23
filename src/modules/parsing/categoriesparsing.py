@@ -6,10 +6,9 @@
 # This files contains all the functions need to parse the Excel file
 # containing the course category information
 
-# Dependencies: copy, xlrd, parsinghelp
+# Dependencies: xlrd, parsinghelp
 
 import xlrd
-from copy import deepcopy
 from . import parsinghelp
 
 # Parses an Excel file for categorical info about each course (is it 
@@ -115,7 +114,7 @@ def addCategorytoCourses(course_obj_dict, sheet, col, cat_name, cat_level, color
                         # determine if this is a main or sub category
                         course_obj_dict[name].main_category = cat_name
                     elif cat_level == "sub":
-                        course_obj_dict[name].sub_category = cat_name
+                        course_obj_dict[name].sub_categories.append(cat_name)
                     course_obj_dict[name].color = color
         return course_obj_dict
     
