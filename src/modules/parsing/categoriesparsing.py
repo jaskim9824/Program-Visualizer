@@ -6,10 +6,9 @@
 # This files contains all the functions need to parse the Excel file
 # containing the course category information
 
-# Dependencies: copy, xlrd, parsinghelp
+# Dependencies: xlrd, parsinghelp
 
 import xlrd
-from copy import deepcopy
 from . import parsinghelp
 
 # Parses an Excel file for categorical info about each course (is it 
