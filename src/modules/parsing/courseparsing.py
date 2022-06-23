@@ -53,7 +53,7 @@ def parseCourses(filename):
             course_name = course_name.strip().replace("  ", " ")
 
             # Adding course to dict
-            course_obj_dict[course_name] = (parsinghelp.Course(course_name, faculty,
+            course_obj_dict[course_name] = deepcopy(parsinghelp.Course(course_name, faculty,
             department, course_id, subject, catalog, long_title,
             eff_date, status, calendar_print, prog_units, engg_units,
             calc_fee_index, actual_fee_index, duration, alpha_hours,
