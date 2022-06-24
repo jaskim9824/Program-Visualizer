@@ -7,6 +7,7 @@
 
 # Dependencies: cleaner, linegen, html
 
+from operator import truediv
 from .. import cleaner
 from . import linegen
 import html
@@ -28,8 +29,9 @@ def generateDisplayDiv(soup, courseGroupList):
 # Parameters:
 #   titleTag - "site-title" HTML tag at the top of the page
 #   deptName - department name pulled from Sequencing Excel file
-def switchTitle(titleTag, deptName):
+def switchTitle(titleTag, topTitleTag, deptName):
     titleTag.append(deptName + " Program Plan Visualizer")
+    topTitleTag.append(deptName + " Visualizer")
 
 # Places the legend for the categories of courses (math, basic sciences, design, etc.)
 # Pulls the categories and colors from sequenceDict, which has these values as two of
@@ -223,8 +225,13 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
     for course in termList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan)
         courseContClass = extractCourseCategories(course)
-        orCase = course.calendar_print.lower().strip() == "or"  # handles improper formatting pulled from Excel
-
+        orCase = False
+        lastOrCase = False
+        if (course.calendar_print == "or") or (course.calendar_print == "lastor"):
+            orCase = True
+        if (course.calendar_print == "lastor"):
+            lastOrCase = True
+        
         if course.course_group != "":
             # add a wrapper container around course group
             courseContDiv = soup.new_tag("div", attrs={"class":"coursegroupcontainer", "style":"outline-color:#" + hexcolorlist[int(course.course_group[0])]})
@@ -286,26 +293,32 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
             formatCourseDescriptionForRegular(soup, course, courseDisc)
 
         # text appearing in course box (eg: CHEM 103)
-        courseHeader = soup.new_tag("h3", attrs={"class":"embed"})  
-        courseHeader.append(course.name)
+        courseHeader = soup.new_tag("h3", attrs={"class":"embed"})
+        if course.elective_group != "":
+              courseHeader.append("Group " + course.elective_group + " " + course.name)
+        else:
+            courseHeader.append(course.name)
 
         courseDiv.append(courseHeader)
         courseDiv.append(courseDisc)
+
+        skipAddCourseFlag = False
 
         if orCase:
             # If multiple course options, append the courseDiv to a list which we will append
             # to the termTag after all options have been collected
             courseOrList.append(courseDiv)
             writeFlagsAndVariables(controller, courseID, cleaner.cleanString(plan))
-            prevOrCourse = course  # need to access the last course option to check for course group
             if termList.index(course) == (len(termList) - 1):
                 # last course in term is an OR course, need to append to termTag immediately
-                termTag, courseOrList, courseGroupList = addOrCourses(courseOrList, prevOrCourse, courseGroupList, termTag, soup)
-            continue
-        if (courseOrList != []) and (not orCase):
-            # courseOrList has courseDivs in it and
-            # we moved on to the course right after the last OR option
-            termTag, courseOrList, courseGroupList = addOrCourses(courseOrList, prevOrCourse, courseGroupList, termTag, soup)
+                termTag, courseOrList, courseGroupList = addOrCourses(courseOrList, course.course_group, courseGroupList, termTag, soup)
+                skipAddCourseFlag = True
+            if not lastOrCase:
+                continue
+            if lastOrCase and (courseOrList != []):
+                # last option out of OR courses
+                termTag, courseOrList, courseGroupList = addOrCourses(courseOrList, course.course_group, courseGroupList, termTag, soup)
+                continue
 
         if course.course_group != "":
             # need to append to courseGroupList, different than check in orCase because
@@ -314,9 +327,10 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
             writeFlagsAndVariables(controller, courseID, cleaner.cleanString(plan))
             continue
 
-        courseContDiv.append(courseDiv) 
-        termTag.append(courseContDiv)
-        writeFlagsAndVariables(controller, courseID, cleaner.cleanString(plan)) 
+        if not skipAddCourseFlag:
+            courseContDiv.append(courseDiv) 
+            termTag.append(courseContDiv)
+            writeFlagsAndVariables(controller, courseID, cleaner.cleanString(plan)) 
 
     if courseGroupTitle != "":
         # Need to add course group title, outside of course group box so
@@ -341,12 +355,12 @@ def extractCourseCategories(course):
 # courseGroupList (if in a course group)
 # Parameters:
 #   courseOrList - list of courseDivs of all courses to go into orcoursecontainer
-#   prevOrCourse - previous OR course object, used to determine if in a course group
+#   courseGroup - course group of the current (last in OR case) course
 #   courseGroupList - list of courseDivs to go into coursegroupcontainer
 #   termTag - HTML tag representing the specfic term column in question
 #   soup - soup object, used to create HTML tags
 # Returns: termTag, courseOrList (cleared to be empty), courseGroupList
-def addOrCourses(courseOrList, prevOrCourse, courseGroupList, termTag, soup):
+def addOrCourses(courseOrList, courseGroup, courseGroupList, termTag, soup):
     courseOrContDiv = soup.new_tag("div", attrs={"class":"orcoursecontainer"})  # container for all OR courses
     for i in range(0, len(courseOrList)):
         courseOrContDiv.append(courseOrList[i])  # append each OR course
@@ -355,7 +369,7 @@ def addOrCourses(courseOrList, prevOrCourse, courseGroupList, termTag, soup):
             courseOr = soup.new_tag("p", attrs={"class":"ortext"})
             courseOr.append("OR")  # add the word or between course boxes
             courseOrContDiv.append(courseOr)
-    if prevOrCourse.course_group != "":
+    if courseGroup:
         # if the OR courses were in a course group, append them to courseGroupList
         # which will in turn be appended to termTag later
         courseGroupList.append(courseOrContDiv)
