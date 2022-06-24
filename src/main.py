@@ -150,6 +150,7 @@ def websiteGeneration(value_label):
                                                         controller)
             progress()
             #locating title tag
+            topTitleTag = soup.head.find("title")
             titleTag = soup.body.find("a", class_="site-title")
 
             #locating main div, this is where all the html will be written
@@ -158,7 +159,7 @@ def websiteGeneration(value_label):
             # customizing webpage title
             print("Writing title....")
             value_label['text'] = 'Writing title....'
-            htmlgen.switchTitle(titleTag, deptName)
+            htmlgen.switchTitle(titleTag, topTitleTag, deptName)
             progress()
 
             # locating form tag
