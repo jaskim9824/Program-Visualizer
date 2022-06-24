@@ -120,8 +120,6 @@ def websiteGeneration(value_label):
             print("Writing category CSS...")
             value_label['text'] = 'Writing category CSS...'
             mainCategoryDict, subCategoryDict = categoriesparsing.splitCategoryDict(categoryDict)
-            print(mainCategoryDict)
-            print(subCategoryDict)
             cssgen.writeCategoryCSS(mainCategoryDict, subCategoryDict, categoryCSS)
             progress()
 
