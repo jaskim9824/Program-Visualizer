@@ -281,11 +281,12 @@ def show(selection):
 #new window
 def new_window():
 
-    global new_img1, new_img2, new_img3, new_tutorial, new_web_img, new_desc
+    global new_img1, new_img2, new_img3, new_tutorial, new_web_img, new_header, new_footer
     helpWin = Toplevel()
-    helpWin.geometry('1500x700')
+    helpWin.geometry('1400x700')
     helpWin.title("Manual")
-    helpWin.iconbitmap('C:output/images/favicon.ico')
+    helpWin.iconbitmap('output/images/favicon.ico')
+    helpWin.resizable(0,0)
 
     #### Scroll bar ####
     # Create A Main Frame
@@ -310,19 +311,21 @@ def new_window():
     # Add that New frame To a Window In The Canvas
     my_canvas.create_window((0,0), window=second_frame, anchor="nw")
 
+    header_img = Image.open("GUI_images/helpbg.png")
+    header_resize = header_img.resize((1600,100))
+    new_header = ImageTk.PhotoImage(header_resize)
+    header_label = Label(second_frame,image=new_header, anchor=W)
+    header_label.place(x=0, y=0)
+
     header = Message(second_frame, 
     text="Plan Visualizer WebGen\nUser Manual",
     aspect=800,
     justify=CENTER,
-    font= ('Helvetica 15 underline')
+    font= ('Helvetica 15 underline'),
+    bg='#275D38',
+    fg='white'
     )
     header.grid(row=0, column=1, pady=25)
-
-    description_img = Image.open("C:GUI_images/description.jpg")
-    desc_resize = description_img.resize((100,100))
-    new_desc = ImageTk.PhotoImage(desc_resize)
-    desc_label = Label(second_frame,image=new_desc, anchor=W)
-    desc_label.place(x=900, y= 10)
 
 
     message1 = Label(second_frame, 
@@ -335,21 +338,21 @@ def new_window():
     )
     message2.grid(row=2, column=0,padx=20, pady=20)
     #courses.xls image
-    excel_pic1 = Image.open("C:GUI_images/courseexcel.png")
+    excel_pic1 = Image.open("GUI_images/courseexcel.png")
     resized1 = excel_pic1.resize((100,100))
     new_img1 = ImageTk.PhotoImage(resized1)
     img_label = Label(second_frame,image=new_img1)
     img_label.grid(row=3, column=0)
 
     #categories.xls image
-    excel_pic2 = Image.open("C:GUI_images/catexcel.png")
+    excel_pic2 = Image.open("GUI_images/catexcel.png")
     resized2 = excel_pic2.resize((100,100))
     new_img2 = ImageTk.PhotoImage(resized2)
     img_label2 = Label(second_frame,image=new_img2)
     img_label2.grid(row=3, column=1)
 
     #Sequencing.xls image
-    tutorial_img = Image.open("C:GUI_images/seqexcel.png")
+    tutorial_img = Image.open("GUI_images/seqexcel.png")
     resized_img = tutorial_img.resize((100,100))
     new_img3 = ImageTk.PhotoImage(resized_img)
     img_label3 = Label(second_frame,image=new_img3)
@@ -382,12 +385,26 @@ def new_window():
     )
     message4.grid(row=7, column=0,padx=20, pady=25)
 
-    web_img = Image.open("C:GUI_images/website.png")
+    web_img = Image.open("GUI_images/website.png")
     resized_webImg = web_img.resize((500, 300))
     new_web_img = ImageTk.PhotoImage(resized_webImg)
     web_label = Label(second_frame, image=new_web_img)
     web_label.grid(row=8, column=1)
 
+    footer_img = Image.open("GUI_images/helpbg.png")
+    footer_resize = footer_img.resize((1630,200))
+    new_footer = ImageTk.PhotoImage(footer_resize)
+    footer_label = Label(second_frame,image=new_footer, anchor=W)
+    footer_label.place(x = 0, y=1180)
+    footer = Message(second_frame, 
+    text="Developers:\nJason Kim, Summer 2022\n Moaz Abdelmonem, Summer 2022\n Zachary Schmidt, Summer 2022\n\n Supervised by: Dr. David Nobes ",
+    aspect=800,
+    justify=CENTER,
+    font= ('Helvetica 12'),
+    bg='#275D38',
+    fg='white'
+    )
+    footer.grid(row=9, column=1, pady=25)
 
 menubar = Menu(window)
 window.config(menu=menubar)
