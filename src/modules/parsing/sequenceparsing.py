@@ -64,12 +64,15 @@ def parseSeq(filename, course_obj_dict):
                             # Case: some text after course group that is part of course name
                             name = name[:open_bracket] + name[close_bracket + 1:]
 
-                    if name == "PROG":
+                    if "PROG" in name:
                         # Create Course obj with only name and course_description attribute
                         curr_course = deepcopy(course_obj_dict["Program/Technical Elective"])
                         if course_group != "":
                             curr_course.course_group = course_group
                         term_list.append(curr_course)
+                        for char in name:
+                            if char in ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]:
+                                curr_course.elective_group = char
                         continue
                     if name == "COMP":
                         curr_course = deepcopy(course_obj_dict["Complementary Elective"])
@@ -88,12 +91,16 @@ def parseSeq(filename, course_obj_dict):
                         # If OR case, follow the same procedure but set calendar_print as "or"
                         namelist = name.split("OR")
                         for orname in namelist:
+                            pureName = orname
                             orname = orname.strip()
                             assert orname in course_obj_dict, ("The course in the Sequencing.xls file called " + 
                                 name + " on sheet " + sheet.name + " on row " + str(row) + " and column " + str(col) +
                                 " is not present in the Excel file with the course information.")
                             orcourse = deepcopy(course_obj_dict[orname])
-                            orcourse.calendar_print = "or"
+                            if namelist[-1] == pureName:
+                                orcourse.calendar_print = "lastor"
+                            else:
+                                orcourse.calendar_print = "or"
                             if course_group != "":
                                 orcourse.course_group = course_group
                             term_list.append(orcourse)

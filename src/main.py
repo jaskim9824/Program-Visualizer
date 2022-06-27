@@ -11,10 +11,11 @@
 # and plan information to generate progamatically an interactive program
 # diagram in the output directory.
 
-# Dependencies: bs4, parsing, webgen, tkinter
+# Dependencies: bs4, parsing, webgen, tkinter, xlrd
 
 import tkinter
 import traceback
+import xlrd
 from bs4 import BeautifulSoup
 import modules.parsing.categoriesparsing as categoriesparsing
 import modules.parsing.coursegroupparsing as coursegroupparsing
@@ -119,8 +120,6 @@ def websiteGeneration(value_label):
             print("Writing category CSS...")
             value_label['text'] = 'Writing category CSS...'
             mainCategoryDict, subCategoryDict = categoriesparsing.splitCategoryDict(categoryDict)
-            print(mainCategoryDict)
-            print(subCategoryDict)
             cssgen.writeCategoryCSS(mainCategoryDict, subCategoryDict, categoryCSS)
             progress()
 
@@ -149,6 +148,7 @@ def websiteGeneration(value_label):
                                                         controller)
             progress()
             #locating title tag
+            topTitleTag = soup.head.find("title")
             titleTag = soup.body.find("a", class_="site-title")
 
             #locating main div, this is where all the html will be written
@@ -157,7 +157,7 @@ def websiteGeneration(value_label):
             # customizing webpage title
             print("Writing title....")
             value_label['text'] = 'Writing title....'
-            htmlgen.switchTitle(titleTag, deptName)
+            htmlgen.switchTitle(titleTag, topTitleTag, deptName)
             progress()
 
             # locating form tag
@@ -241,7 +241,7 @@ def main():
         print("Generation Completed!")
         value_label['text'] = 'Generation Completed!'
         messagebox.showinfo('Status',message="Webpage successfully generated!")
-    except (FileNotFoundError, ValueError) as e:
+    except (FileNotFoundError, xlrd.biffh.XLRDError, AssertionError) as e:
         print("Error occured! Handling exception")
         messagebox.showerror("Error", str(e))
         traceback.print_exc()
