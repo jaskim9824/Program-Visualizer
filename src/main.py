@@ -49,7 +49,7 @@ def debug(sequenceDict):
 ###Main GUI Window ###
 window = Tk()
 window.title('plan visualizer WebGen')
-window.iconbitmap('C:output/images/favicon.ico')
+window.iconbitmap('output/images/favicon.ico')
 window.geometry("1092x544")
 window.configure(bg = "#ffffff")
 canvas = Canvas(
@@ -374,7 +374,7 @@ def new_window():
     message3.grid(row=5, column=0,padx=20, pady=25)
 
     #GUI image 
-    tutorial_img = Image.open("C:GUI_images/tutorial.png")
+    tutorial_img = Image.open("GUI_images/tutorial.png")
     resized_img = tutorial_img.resize((500,300))
     new_tutorial = ImageTk.PhotoImage(resized_img)
     tut_label = Label(second_frame,image=new_tutorial)
