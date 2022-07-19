@@ -135,7 +135,7 @@ header {
 
 /* Plan header styling*/
 h3.planhead {
-    width: 30rem;
+    width: 25rem;
     margin: 0;
     font-size: 175%;
     text-align: center;
@@ -150,8 +150,8 @@ h3.planhead {
 .select {
     width: fit-content;
     margin-top: 15px;
-    margin-left: 15%;
-    margin-right: 35px;
+    margin-left: 25%;
+    margin-right: 50px;
 }
 
 .coursegroupselector {
