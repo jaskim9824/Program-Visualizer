@@ -3,7 +3,7 @@
 # Oversight: Dr. David Nobes
 # University of Alberta, Summer 2022, Curriculum Development Co-op Term
 
-# This files contains all the functions need to parse the Excel file
+# This file contains all the functions needed to parse the Excel file
 # containing the course category information
 
 # Dependencies: xlrd, parsinghelp
@@ -75,7 +75,6 @@ def parseCategories(filename, course_obj_dict):
 
             # Add category information to courses in that category
             course_obj_dict = addCategorytoCourses(course_obj_dict, sheet, col, cat_name, cat_level, color)
-
        
     except FileNotFoundError:
         raise FileNotFoundError("Excel course categories file not found, ensure it is present and the name is correct.")
@@ -84,37 +83,53 @@ def parseCategories(filename, course_obj_dict):
 
     return course_obj_dict, category_dict
 
+# Creates two new dicts. One dict stores only main categories & colors,
+# the other stores only sub categories and colors. Format of return dicts
+# is identical to categoryDict.
+#
+# Parameters:
+#   category_dict (dict):
+#       Key: category (string): A category ("Basic Science", "Math", etc.)
+#       Value: a list with item at index 0 as category level ("main" or "sub") and color as the item at index 1
+#
+# Returns:
+#   mainCategoryDict (dict): same as categoryDict except contains only main categories
+#   subCategoryDict (dict): same as categoryDict except contains only sub categories
 def splitCategoryDict(categoryDict):
     mainCategoryDict = {}
     subCategoryDict = {}
     for category in categoryDict:
+        # Add each category to main or sub dict
         if categoryDict[category][0] == "main":
             mainCategoryDict[category] = categoryDict[category][1]
         elif categoryDict[category][0] == "sub": 
             subCategoryDict[category] = categoryDict[category][1]
     return mainCategoryDict, subCategoryDict
 
-# Function that adds the category information to courses of a specfic category
+# Function that adds the category information to courses of a specfic category.
+# Modifies the contents of course_obj_dict.
+#
 # Parameters:
-#   - course_obj_dict: dict that maps the course name to a course object
-#   - sheet: sheet handle to Excel sheet
-#   - col: column number for respective category
-#   - cat_name: name of respective category
-#   - color: colour of respective category
+#   course_obj_dict (dict): dict that maps the course name to a course object
+#   sheet (xlrd sheet object): sheet handle to Excel sheet
+#   col (int): column number for respective category
+#   cat_name (string): name of respective category
+#   color (string): colour of respective category
+#
+# Returns:
+#   course_obj_dict (dict): main_category, sub_categories, and color fields are modified
 def addCategorytoCourses(course_obj_dict, sheet, col, cat_name, cat_level, color):
-        for row in range(2, sheet.nrows):
-                # Course names start at third row
-                name = sheet.cell_value(row, col)
-                if name == "":
-                    continue
-                name = name.upper().strip().replace("  ", " ")
-                # guard to prevent key not found error
-                if name in course_obj_dict:
-                    if cat_level == "main":
-                        # determine if this is a main or sub category
-                        course_obj_dict[name].main_category = cat_name
-                    elif cat_level == "sub":
-                        course_obj_dict[name].sub_categories.append(cat_name)
-                    course_obj_dict[name].color = color
-        return course_obj_dict
-    
+    for row in range(2, sheet.nrows):
+        # Course names start at third row
+        name = sheet.cell_value(row, col)
+        if name == "":
+            continue
+        name = name.upper().strip().replace("  ", " ")
+        if name in course_obj_dict:  # guard to prevent key not found error
+            if cat_level == "main":
+                # determine if this is a main or sub category
+                course_obj_dict[name].main_category = cat_name
+            elif cat_level == "sub":
+                course_obj_dict[name].sub_categories.append(cat_name)
+            course_obj_dict[name].color = color
+    return course_obj_dict
