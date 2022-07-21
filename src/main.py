@@ -194,18 +194,13 @@ def websiteGeneration(value_label):
 
             #placing the HTML and generating JS based on the courses (drawing lines)
             value_label['text'] = 'Placing course diagram....'
-            print("Placing course diagram....")\
-            # dummy input data
-            electiveLinkDict = {"ITS": "https://calendar.ualberta.ca/preview_program.php?catoid=34&poid=38076#core_314374", 
-                                "PROG": "https://calendar.ualberta.ca/preview_program.php?catoid=34&poid=38706&hl#core_331107", 
-                                "COMP": "https://calendar.ualberta.ca/preview_program.php?catoid=34&poid=38076"}
+            print("Placing course diagram....")
             htmlgen.placePlanDivs(displayTag, 
                                   sequenceDict, 
                                   soup, 
                                   indexJS, 
                                   controller, 
-                                  lineManager,
-                                  electiveLinkDict)
+                                  lineManager)
             progress()
             # closing JS and CSS files
             print("Closing files...")

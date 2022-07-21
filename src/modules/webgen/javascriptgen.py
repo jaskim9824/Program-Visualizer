@@ -3,13 +3,15 @@
 # Oversight: Dr. David Nobes
 # University of Alberta, Summer 2022, Curriculum Development Co-op Term
 
-# This file contains all the functions neccessary to generate the JS of the 
+# This file contains all the functions needed to generate the JS of the 
 # webpage which is not releated to the generation of the lines
 
 # Dependencies: cleaner
+
 from .. import cleaner
 
-# Function that generates the JS before the generation of the course diagram
+# Function that generates the JS before the generation of the course diagram.
+# Mostly global variables and rendering functions
 # Parameters:
 #   controller - file handle for controller JS file
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
@@ -37,8 +39,10 @@ def generateIntitalBlockController(courseGroupDict, courseGroupList, controller)
     planList = list(courseGroupDict.keys())
     controller.write("var app = angular.module(\"main\", []);\n")
     controller.write("app.controller(\"main\", function($scope) { \n")
-    controller.write("$scope.selectedPlan = \"" + cleaner.cleanString(planList[0])+ "\";\n")
+    controller.write("$scope.selectedPlan = \"" + cleaner.cleanString(planList[0])+ "\";\n")  # var storing current plan name
     controller.write("var that = this;\n")
+
+    # Render function, called when switching b/w plans
     controller.write("""this.render = function(plan) {
             this.disable(this.previousPlan);
             this.enable(plan);
@@ -48,7 +52,7 @@ def generateIntitalBlockController(courseGroupDict, courseGroupList, controller)
     controller.write("""var radios = document.querySelectorAll("input[type=radio][name=planselector]");
 Array.prototype.forEach.call(radios, function (radio) {
     radio.addEventListener("change", function () { \n""")
-    controller.write("that.setDefaults($scope.selectedPlan);\n")
+    controller.write("that.setDefaults($scope.selectedPlan);\n")  # sets default plan, term, course group selections
     planString = generatePlanString(courseGroupList)
     controller.write("that.render("+planString+");\n")
     controller.write("""   });
@@ -56,8 +60,7 @@ Array.prototype.forEach.call(radios, function (radio) {
     generateHighlightElement(controller)
     generateUnHighlightElement(controller)
 
-
-# Function that generates the blocks of the controller JS file that is dependent
+# Function that generates the blocks of the controller JS file that are dependent
 # on the number and names of plans provided
 # Parameters:
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
@@ -73,7 +76,6 @@ def generatePlanBasedBlocksController(sequenceDict, intitalCourseGroupVals, cour
     generateAddToClickSwitch(sequenceDict, courseGroupList, controller)
     generateDeleteFromClickSwitch(sequenceDict, courseGroupList, controller)
     generateCategoryLegendJS(sequenceDict, courseGroupList, controller)
-
 
 # Function that appends the custom Angular directive used to handle right click
 # events to the end of the controller JS file
@@ -118,7 +120,7 @@ def writeRadioChangeDirective(controller):
 #   controller - file handle for controller.js file
 def generatePlanBasedInitalVariables(sequenceDict, intitalCourseGroupVals, courseGroupList, controller):
     for plan in sequenceDict:
-        controller.write("this." + cleaner.cleanString(plan) + "List = [];\n")
+        controller.write("this." + cleaner.cleanString(plan) + "List = [];\n")  # list of lines displaying on plan
         controller.write("this." + cleaner.cleanString(plan) + "Clicked = [];\n")
         controller.write("this." + cleaner.cleanString(plan) + "LegendBtns = [];\n")
         controller.write("this." + cleaner.cleanString(plan) + "LegendBtnsClicked = [];\n")
@@ -130,7 +132,7 @@ def generatePlanBasedInitalVariables(sequenceDict, intitalCourseGroupVals, cours
             termcourses = len(sequenceDict[plan][term])
             if termcourses > maxcourses:
                 maxcourses = termcourses
-        controller.write("this." + cleaner.cleanString(plan) + "MaxCourses = " + str(maxcourses) + ";\n")
+        controller.write("this." + cleaner.cleanString(plan) + "MaxCourses = " + str(maxcourses) + ";\n")  # allows variable page height depending on number of courses
     for courseGroup in intitalCourseGroupVals:
         formattedCourseGroupVar = "$scope.field{number} = {{ group{number}: \"{val}\" }};\n"
         controller.write(formattedCourseGroupVar.format(number=courseGroup, 
@@ -165,7 +167,13 @@ def generateSetDefaults(courseGroupDict, courseGroupList, controller):
         controller.write("          break;\n")
     controller.write(switchEndString)
 
+# Function that writes the highlightElement function which highlights
+# an individual course when a category button is pressed.
+# Parameters:
+#   controller - file handle to controller.js
 def generateHighlightElement(controller):
+    # check if element is highlighted already, if it isn't, add
+    # "-highlighetd" to the end of the class name
     controller.write("""this.highlightElement = function(element, category) {
         if (element.classList.contains(category + "-highlighted")) {
             return;
@@ -174,7 +182,13 @@ def generateHighlightElement(controller):
         element.classList.add(category + "-highlighted");
     };\n""")
 
+# Function that writes the unhighlightElement function which unhighlights
+# an individual course when a category button is pressed.
+# Parameters:
+#   controller - file handle to controller.js
 def generateUnHighlightElement(controller):
+    # if an element is in the highlighted state, removed "-highlighted"
+    # from the class name
     controller.write("""this.unHighlightElement = function(element, category) {
         if (!element.classList.contains(category + "-highlighted")) {
             return;
@@ -183,20 +197,18 @@ def generateUnHighlightElement(controller):
         element.classList.add(category);
     };\n""")
 
-
-# Function that generates the listener that listens to course group selection
-# radio inputs
+# Function that generates the listener that listens to course group radio inputs
 # Parameters:
 #   courseGroupList - list of course groups taken in this program
 #   controller - file handle to controller.js          
 def generateSubRadioListener(courseGroupList, controller):
-    planString = generatePlanString(courseGroupList)
+    planString = generatePlanString(courseGroupList)  # name of plan with course group on end (eg: "TraditionalPlan2A3A4B")
     controller.write("$scope.globalSubGroupChange = function () { \n")
-    controller.write("that.render(" + planString + ");\n")
+    controller.write("that.render(" + planString + ");\n")  # update the page
     controller.write("};\n")
 
 # Function that generates the switch statements and functions which handle
-# disabling the lines of a plan when switched off.
+# disabling the lines of a plan when switched off
 # Parameters:
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   controller - file handle for controller.js file
@@ -307,7 +319,6 @@ switch({planString}) {{ \n"""
         controller.write(formattedAddLineSwitchStatement.format(planName=cleaner.cleanString(plan)))
     controller.write(switchEndString)
 
-
 # Function that generates the switch statement and function removeLine
 # Parameters:
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
@@ -401,7 +412,6 @@ switch({planString}) {{ \n"""
     
     controller.write(switchEndString)
 
-
 # Generates the clickable category legend. Allows a click to highlight all
 # courses in that category.
 # Parameters:
@@ -409,16 +419,12 @@ switch({planString}) {{ \n"""
 #       key - plan name
 #       value - dict with term name as key and list of course objs in that plan & term
 #   controller - file handle for controller.js file
-# Returns:
-#   None
 def generateCategoryLegendJS(sequenceDict, courseGroupList, controller):
     # sort courses into categories and plans
     categoriesDict = sortIntoCategories(sequenceDict)
 
-    # flags for click on legend
+    # generate flags & listeners
     generateHighlightCategoryFlags(categoriesDict, controller)
-
-    #listeners for categories
     generateCategoryListeners(categoriesDict, courseGroupList, controller)
        
     formattedFunctionStatement = """this.{functionName} = function(categoryName, planName) {{
@@ -451,7 +457,7 @@ def findLegendButtons(categoriesDict, sequenceDict, controller):
     formattedpushbtnStatement = """  that.{planName}LegendBtns.push(currbtn);\n"""
 
     for category in categoriesDict:
-        # Only necessary to find button for each category (not each plan)
+        # Note: categories are the same between all plans
         # Special cases to handle electives
         if category == "ComplementaryElective":
             controller.write(formattedbtnStatement.format(categoryName="COMP"))
@@ -466,7 +472,7 @@ def findLegendButtons(categoriesDict, sequenceDict, controller):
         for plan in sequenceDict:
             controller.write(formattedpushbtnStatement.format(planName=cleaner.cleanString(plan)))
     
-# Sorts courses in sequnceDict into their categories.
+# Sorts courses in sequenceDict into their categories.
 # Parameters:
 #   sequenceDict - dict that stores course objects
 #       key - plan name
@@ -481,37 +487,43 @@ def sortIntoCategories(sequenceDict):
         for term in sequenceDict[plan]:
             for course in sequenceDict[plan][term]:
                 mainCat = cleaner.cleanString(course.main_category)
+                if mainCat == "":
+                    # course does not have a category, not useful to include
+                    continue
                 subCatList = course.sub_categories
                 cleanplan = cleaner.cleanString(plan)
                 interdict = {}  # inner dict
                 interdict[cleanplan] = [course]
                 if mainCat not in categoriesDict.keys():
-                    # category not taken yet, add new category and new course list
+                    # category not seen yet, add new category
                     categoriesDict[mainCat] = interdict
                 else:
                     # category is present in dict
                     if cleanplan not in categoriesDict[mainCat].keys():
-                        # category taken but not plan
-                        # keep existing categories but add a new plan
+                        # category taken but plan not seen yet
+                        # keep existing categories but add a new plan (add new key to inner dict)
                         categoriesDict[mainCat].update(interdict)
                     else:
-                        # add to the existing list of courses in that plan in that category
+                        # category and plan both seen, can just append to corresponding list
                         categoriesDict[mainCat][cleanplan].append(course)
                 for uncleanSubCat in subCatList:
                     interdict = {}  # inner dict
                     interdict[cleanplan] = [course]
                     subCat = cleaner.cleanString(uncleanSubCat)
+                    if subCat == "":
+                        # course does not have a category, not useful to include
+                        continue
                     if subCat not in categoriesDict.keys():
-                        # category not taken yet, add new category and new course list
+                        # category not seen yet, add new category
                         categoriesDict[subCat] = interdict
                     else:
                         # category is present in dict
                         if cleanplan not in categoriesDict[subCat].keys():
-                            # category taken but not plan
-                            # keep existing categories but add a new plan
+                            # category taken but plan not seen yet
+                            # keep existing categories but add a new plan (add new key to inner dict)
                             categoriesDict[subCat].update(interdict)
                         else:
-                            # add to the existing list of courses in that plan in that category
+                            # category and plan both seen, can just append to corresponding list
                             categoriesDict[subCat][cleanplan].append(course)
     
     return categoriesDict
@@ -541,14 +553,19 @@ def generateHighlightCategoryFlags(categoriesDict, controller):
                 controller.write(formattedCategoriesFlagStatement.format(categoryName = cleaner.cleanString(category), 
                                                                      planName = cleaner.cleanString(plan)))
 
-# Function that generates the click listeners for the category click buttons
+# Function that generates the click listeners for the category legend buttons
 #   categoriesDict - dict storing course objects
 #       key - category name (eg: MATH)
 #       value - dict with key as plan name, value as course object
 #   courseGroupList - list of course groups taken in this program
 #   controller - file handle to controller.js
 def generateCategoryListeners(categoriesDict, courseGroupList, controller):
-    # listener for each category
+    # Get the element for the clicked legend button, check if the button is in the
+    # pressed or unpressed state.
+    # If in the unpressed state: highlight courses in that category, set the
+    # class of the button to "-pressed", & update flags
+    # If in the pressed state: unhighlight courses in that category, remove
+    # "-pressed" from the button class, & update flags
     formattedCategoriesListener = """$scope.{categoryName}clickListener = function() {{
     var planName = {planString};
     var pressedbtn = document.getElementById("{categoryNameId}");
@@ -595,14 +612,14 @@ def generateCategoryListeners(categoriesDict, courseGroupList, controller):
                                                                 planString=generatePlanString(courseGroupList)))
         controller.write("}\n")
 
-# Function that generates the switch statement to switch between catergoies within highlight
+# Function that generates the switch statement to switch between categories within highlight
 # or unhighlight function
 # Parameters:
 #   - categoriesDict: dict that maps categories to a dict of plans which contain courses within
 #   that category
 #   - controller: file handle to controller.js
 #   - highlight: flag indicating if it is highlighting or unhighlighting 
-#   (T for highlighting)  
+#   (True for highlighting)  
 def generateCategorySwitch(categoriesDict, controller, highlight):
     # outer switch between categories
     switchEndString = """break;   default:
@@ -619,7 +636,7 @@ def generateCategorySwitch(categoriesDict, controller, highlight):
             controller.write(formattedCaseCat.format(categoryName="ITS"))
         else:
             controller.write(formattedCaseCat.format(categoryName=cleaner.cleanString(category)))
-        generatePlanSwitch(categoriesDict[category], controller, category, highlight)
+        generatePlanSwitch(categoriesDict[category], controller, highlight)
         controller.write("""       }\n""")
         controller.write("""      break;\n""")
     controller.write(switchEndString)
@@ -629,16 +646,15 @@ def generateCategorySwitch(categoriesDict, controller, highlight):
 # Parameters:
 #   - planDict: dict that maps plans to courses in that category
 #   - controller: file handle to controller.js
-#   - category: name of the category
 #   - highlight: flag indicating if it is highlighting or unhighlighting 
-#   (T for highlighting)  
-def generatePlanSwitch(planDict, controller, category, highlight):
+#   (True for highlighting)  
+def generatePlanSwitch(planDict, controller, highlight):
     # inner switch between plans
     formattedCasePlan  = """      case "{planName}":\n"""
     controller.write("    switch(planName) {\n")
     for plan in planDict:
         controller.write(formattedCasePlan.format(planName=cleaner.cleanString(plan)))
-        generateCourseStatements(planDict[plan], controller, plan, category, highlight)
+        generateCourseStatements(planDict[plan], controller, plan, highlight)
         controller.write("""       break;\n""")
 
 # Function that generates the highlight or unhighlight statements for a specfic categtory
@@ -647,65 +663,52 @@ def generatePlanSwitch(planDict, controller, category, highlight):
 #   - courseList: list of course objects in that category for that plan
 #   - controller: file handle to controller.js
 #   - plan: name of current plan
-#   - category: name of the category
 #   - highlight: flag indicating if it is highlighting or unhighlighting 
-#   (T for highlighting)      
-def generateCourseStatements(courseList, controller, plan, category, highlight):
-    compcounter = 0
-    progcounter = 0
-    itscounter = 0
+#   (True for highlighting)      
+def generateCourseStatements(courseList, controller, plan, highlight):
     for course in courseList:
         # special cases to handle electives
         if course.name == "Complementary Elective":
             if highlight:
                 generateElectiveHighlightStatement("COMP", 
                                                    "ComplementaryElective", 
-                                                    plan, 
-                                                    progcounter, 
+                                                    plan,  
                                                     controller)
             else:
                 generateElectiveUnhighlightStatement("COMP", 
                                                    "ComplementaryElective", 
-                                                    plan, 
-                                                    progcounter, 
+                                                    plan,  
                                                     controller)
-            compcounter += 1
             continue
         if course.name == "Program/Technical Elective":
             if highlight:
                 generateElectiveHighlightStatement("PROG", 
                                                    "ProgramTechnicalElective", 
-                                                    plan, 
-                                                    progcounter, 
+                                                    plan,  
                                                     controller)
             else:
                 generateElectiveUnhighlightStatement("PROG", 
                                                    "ProgramTechnicalElective", 
                                                     plan, 
-                                                    progcounter, 
                                                     controller)
-            progcounter += 1
             continue
         if course.name == "ITS Elective":
             if highlight:
                 generateElectiveHighlightStatement("ITS", 
                                                    "ITSElective", 
-                                                   plan, 
-                                                   itscounter, 
+                                                   plan,  
                                                    controller)
             else:
                 generateElectiveUnhighlightStatement("ITS", 
                                                    "ITSElective", 
-                                                   plan, 
-                                                   itscounter, 
+                                                   plan,  
                                                    controller)
-            itscounter += 1
             continue
-        # not an elective, fill formatted statement in with course attributes
+        # not an elective, fill in formatted statement with course attributes
         if highlight:
-            generateNormalCourseHighlightStatement(course, plan, category, controller)
+            generateNormalCourseHighlightStatement(course, plan, controller)
         else:
-            generateNormalCourseUnhighlightStatement(course, plan, category, controller)
+            generateNormalCourseUnhighlightStatement(course, plan, controller)
 
 # Generates the statements needed to unhighlight a single elective when pressing
 # the legend buttons
@@ -713,9 +716,9 @@ def generateCourseStatements(courseList, controller, plan, category, highlight):
 #   - elective: shortend elective type
 #   - longelective: long elective type
 #   - plan: current plan
-#   - category: category of course
+#   - counter: which number the current elective is
 #   - controller: file handle to controller.js
-def generateElectiveHighlightStatement(elective, longelective, plan, counter, controller):
+def generateElectiveHighlightStatement(elective, longelective, plan, controller):
     formattedElectiveGetUnhighlightedElement = """        var {electiveName}elements = document.getElementsByClassName("{electiveName}");\n"""
     formattedElectivesHighlight = """        var i = 0;
         while ({electiveName}elements.length > 0) {{
@@ -729,13 +732,11 @@ def generateElectiveHighlightStatement(elective, longelective, plan, counter, co
           this.addToClicked("{longElectiveName}{planName}" + i, categoryName);
           i = i + 1;
         }}\n"""
-    if counter == 0:
-        controller.write(formattedElectiveGetUnhighlightedElement.format(electiveName=elective))
-        controller.write(formattedElectivesHighlight.format(electiveName=elective, 
-                                                        count=counter, 
-                                                        longElectiveName=longelective, 
-                                                        planName=plan, 
-                                                        categoryName=elective))
+    controller.write(formattedElectiveGetUnhighlightedElement.format(electiveName=elective))
+    controller.write(formattedElectivesHighlight.format(electiveName=elective, 
+                                                    longElectiveName=longelective, 
+                                                    planName=plan, 
+                                                    categoryName=elective))
 
 # Generates the statements needed to unhighlight a single elective when pressing
 # the legend buttons
@@ -743,9 +744,9 @@ def generateElectiveHighlightStatement(elective, longelective, plan, counter, co
 #   - elective: shortend elective type
 #   - longelective: long elective type
 #   - plan: current plan
-#   - category: category of course
+#   - counter: which number the current elective is
 #   - controller: file handle to controller.js
-def generateElectiveUnhighlightStatement(elective, longelective, plan, counter, controller):
+def generateElectiveUnhighlightStatement(elective, longelective, plan, controller):
     formattedElectiveGetHighlightedElement = """        var {electiveName}elements = document.getElementsByClassName("{electiveName}-highlighted");\n"""
     formattedElectivesUnhighlight = """        var i = 0;        
         while ({electiveName}elements.length > 0) {{
@@ -762,13 +763,11 @@ def generateElectiveUnhighlightStatement(elective, longelective, plan, counter, 
                 }}      
           i = i + 1;
         }}\n"""
-    if counter == 0:
-        controller.write(formattedElectiveGetHighlightedElement.format(electiveName=elective))
-        controller.write(formattedElectivesUnhighlight.format(electiveName=elective, 
-                                                          longElectiveName=longelective, 
-                                                          count=counter, 
-                                                          planName=plan, 
-                                                          categoryName=elective))
+    controller.write(formattedElectiveGetHighlightedElement.format(electiveName=elective))
+    controller.write(formattedElectivesUnhighlight.format(electiveName=elective, 
+                                                        longElectiveName=longelective, 
+                                                        planName=plan, 
+                                                        categoryName=elective))
 
 # Generates the statements needed to highlight a single normal course when pressing
 # the legend buttons
@@ -777,21 +776,7 @@ def generateElectiveUnhighlightStatement(elective, longelective, plan, counter, 
 #   - plan: current plan
 #   - category: category of course
 #   - controller: file handle to controller.js
-def generateNormalCourseHighlightStatement(course, plan, category, controller):
-    # # finding the element with the appropriate id
-    # formattedGetElement = """       var {courseName}{planName}element = document.getElementById("{courseName}{planName}");\n"""
-    # # remove from list of unclicked
-    # formattedRemoveUnclicked = """       {courseName}{planName}element.classList.remove("{categoryName}");\n"""
-    # # add to list of clicked
-    # formattedAddToClicked = """       {courseName}{planName}element.classList.add("{categoryName}-highlighted");
-    #    that.addToClicked("{courseName}{planName}","{categoryName}");\n"""
-    # controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), courseName=cleaner.cleanString(course.name)))
-    # controller.write(formattedRemoveUnclicked.format(planName=cleaner.cleanString(plan), 
-    #                                                  courseName=cleaner.cleanString(course.name), 
-    #                                                  categoryName=cleaner.cleanString(category)))
-    # controller.write(formattedAddToClicked.format(planName=cleaner.cleanString(plan), 
-    #                                               courseName=cleaner.cleanString(course.name), 
-    #                                               categoryName=cleaner.cleanString(category)))
+def generateNormalCourseHighlightStatement(course, plan, controller):
     formattedHighlightStatement = """ var element = document.getElementById("{courseName}{planName}");
                             if (this.{planName}ClickedMap.get("{courseName}{planName}").length > 0) {{
                                 var mapLen = this.{planName}ClickedMap.get("{courseName}{planName}").length - 1
@@ -808,27 +793,8 @@ def generateNormalCourseHighlightStatement(course, plan, category, controller):
 # Parameters:
 #   - course: course object
 #   - plan: current plan
-#   - category: category of course
 #   - controller: file handle to controller.js
-def generateNormalCourseUnhighlightStatement(course, plan, category, controller):
-    # formattedIfStatement = "if (!{courseName}{planName}flag) {{ \n"
-    # # finding the element with the appropriate id
-    # formattedGetElement = """       var {courseName}{planName}element = document.getElementById("{courseName}{planName}");\n"""
-    # # remove from list of clicked
-    # formattedRemoveClicked = """       {courseName}{planName}element.classList.remove("{categoryName}-highlighted");\n"""
-    # # add to list of unclicked
-    # formattedAddToUnclicked = """       {courseName}{planName}element.classList.add("{categoryName}");\n       
-    #    that.removeFromClicked("{courseName}{planName}", "{categoryName}");\n"""
-    # controller.write(formattedIfStatement.format(planName=cleaner.cleanString(plan), 
-    #                                                          courseName=cleaner.cleanString(course.name)))
-    # controller.write(formattedGetElement.format(planName=cleaner.cleanString(plan), 
-    #                                             courseName=cleaner.cleanString(course.name)))
-    # controller.write(formattedRemoveClicked.format(planName=cleaner.cleanString(plan), 
-    #                                                courseName=cleaner.cleanString(course.name), 
-    #                                                categoryName=cleaner.cleanString(category)))
-    # controller.write(formattedAddToUnclicked.format(planName=cleaner.cleanString(plan), 
-    #                                                 courseName=cleaner.cleanString(course.name), 
-    #                                                 categoryName=cleaner.cleanString(category)))
+def generateNormalCourseUnhighlightStatement(course, plan, controller):
     formattedUnhighlightStatement = """     var element = document.getElementById("{courseName}{planName}");
                             var prevCate = this.removeFromClicked("{courseName}{planName}", categoryName);
                                 if (element.classList.contains(categoryName+"-highlighted")) {{
@@ -840,7 +806,7 @@ def generateNormalCourseUnhighlightStatement(course, plan, category, controller)
     controller.write(formattedUnhighlightStatement.format(courseName=cleaner.cleanString(course.name),
                                                           planName=cleaner.cleanString(plan)))
 
-# Function that generates the statementd representing which plan is currently selected
+# Function that generates the statement representing which plan is currently selected
 # Parameters:
 #   courseGroupList - list of all course groups taken that term
 def generatePlanString(courseGroupList):

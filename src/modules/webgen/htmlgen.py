@@ -3,7 +3,7 @@
 # University of Alberta, Summer 2022, Curriculum Development Co-op Term
 
 # This file contains all the functions needed to generate the required
-# HTML elements to produce the MEC E Program Visualizer webpage
+# HTML elements to produce the Program Visualizer webpage
 
 # Dependencies: cleaner, linegen, html
 
@@ -18,32 +18,30 @@ import html
 #   courseGroupList - list of all possible course groups taken in this program
 def generateDisplayDiv(soup, courseGroupList):
     switchVariable = "selectedPlan"
-    formattedCourseGroupVar="field{number}.group{number}"
+    formattedCourseGroupVar="field{number}.group{number}"  # for switching between course groups
     for element in courseGroupList:
         switchVariable += "+" + formattedCourseGroupVar.format(number=element)
     return soup.new_tag("div", attrs={"class":"display",
                                       "ng-switch":switchVariable})
 
-# Changes the header title to include deptName, which is pulled
-# from Sequncing Excel file
+# Changes the header title to include deptName, which is input by
+# the user in the GUI
 # Parameters:
 #   titleTag - "site-title" HTML tag at the top of the page
-#   deptName - department name pulled from Sequencing Excel file
+#   deptName - department name input in the GUI by the user
 def switchTitle(titleTag, topTitleTag, deptName):
     titleTag.append(deptName + " Program Plan Visualizer")
     topTitleTag.append(deptName + " Visualizer")
 
 # Places the legend for the categories of courses (math, basic sciences, design, etc.)
-# Pulls the categories and colors from sequenceDict, which has these values as two of
-# its attributes
+# Pulls the categories and colors from sequenceDict, which has these values as attributes
 # Parameters:
-#   legendTag - HTML tag representing div which holds the category color legend
+#   legendTag - HTML tag for div which holds the category colour legend
 #   categoryDict - dict mapping category to colour
 #   soup - soup object, used to create HTML tags
 def placeLegend(legendTag, categoryDict, soup):
     placeLegendDescription(soup, legendTag)
     placeLegendButtons(soup, legendTag, categoryDict)
-
 
 # Function that places the radio inputs into the form which controls
 # which plan is currently selected on the webpage
@@ -65,10 +63,9 @@ def placeRadioInputs(formTag, courseGroupDict, soup):
         breakTag = soup.new_tag("br")
         formTag.append(breakTag)
 
-# Function that places the outer divs for the course group selection 
-# radio inputs for each plan
+# Function that places the outer divs for the course group menu
 # Parameters:
-#   courseGroupSelectTag - HTML tag representing outer div used to hold the course group selection menu
+#   courseGroupSelectTag - HTML tag for outer div used to hold the course group selection menu
 #   soup - soup object, used to create HTML tags
 #   courseGroupDict - dict that maps plans to a dict which maps course groups to their options
 def placeCourseGroupRadioInputs(courseGroupSelectTag, soup, courseGroupDict):
@@ -78,16 +75,15 @@ def placeCourseGroupRadioInputs(courseGroupSelectTag, soup, courseGroupDict):
         placeCourseGroupRadioInputsForPlan(planCourseGroupsTag, soup, courseGroupDict[plan])
         courseGroupSelectTag.append(planCourseGroupsTag)
 
-# Function that places the outer divs representing each plan
+# Function that places the divs for each plan
 # Parameters:
-#   displayTag - HTML tag representing outer display div where the different plan sequences are placed
+#   displayTag - HTML tag for outer display div where the different plan sequences are placed
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   soup - soup object, used to create HTML tags
 #   indexJS - file handle for index.js, used to write to index.js
 #   controller - file handle for controller.js, used to write to controller.js
 #   lineManager - line manager object, used to handle line placement and generation
-#   electiveLinkDict - dict that maps elective type to the link of the list of the links
-def placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager, electiveLinkDict):
+def placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManager):
     for plan in sequenceDict:
         switchInput = soup.new_tag("div", attrs={"id":cleaner.cleanString(plan),
                                                  "ng-switch-when":cleaner.cleanString(plan),
@@ -98,11 +94,10 @@ def placePlanDivs(displayTag, sequenceDict, soup, indexJS, controller, lineManag
                        indexJS, 
                        controller, 
                        plan, 
-                       lineManager,
-                       electiveLinkDict)
+                       lineManager)
         displayTag.append(switchInput)
 
-# Function that places the legend description tag
+# Function that places the description text above the category button menu
 # Parameters:
 #   soup - soup object, used to create HTML tags
 #   legendTag - HTML tag used to hold legend
@@ -130,17 +125,16 @@ def placeLegendButtons(soup, legendTag, categoryDict):
 #   soup - soup object, used to create HTML tags
 #   category - category for button
 #   colour - colour of button
-# Returns: HTML tag representing button
+# Returns: HTML tag for category button
 def placeLegendButton(soup, category, colour):
     return soup.new_tag("div", attrs={"ng-click":category+ "clickListener()", 
                                         "class":"legendbutton",
                                         "id": cleaner.cleanString(category),
                                         "style":"background-color:#" + colour})
 
-# Function that places the course group froms for the course group selection 
-# radio inputs for a specific plan
+# Function that places the course group forms for the course group selection menu
 # Parameters:
-#   planCourseGroupsTag - HTML tag representing div that holds the group selection menu for that plan
+#   planCourseGroupsTag - HTML tag for div that holds the group selection menu for that plan
 #   soup - soup object, used to create HTML tags
 #   planCourseGroupDict - dict that maps course groups of that plans to the different options for 
 #   each course group
@@ -155,7 +149,7 @@ def placeCourseGroupRadioInputsForPlan(planCourseGroupsTag, soup, planCourseGrou
 
 # Function that places the option radio inputs for a specfic course group for a specific plan
 # Parameters:
-#   subPlanTag - HTML tag representing div that holds the radio inputs for that course group for
+#   subPlanTag - HTML tag for div that holds the radio inputs for that course group for
 #   that specifc plan
 #   soup - soup object, used to create HTML tags
 #   subPlanOptionList - list of options for that course group
@@ -175,29 +169,28 @@ def placeCourseGroupRadioInputsForSubPlan(subPlanTag, soup, subPlanOptionList, s
         breakTag = soup.new_tag("br")
         subPlanTag.append(breakTag)
 
-# Function that places the column divs which represent the terms within a certain plan
+# Function that places the column flexboxes which represent the terms within a certain plan
 # Parameters:
-#   planTag - HTML tag representing the plan sequence in question
+#   planTag - HTML tag for a given plan
 #   planDict - dict that maps a course list to each term in the plan
 #   soup - soup object, used to create HTML tags
 #   indexJS - file handle for index.js, used to write to index.js
 #   controller - file handle for controller.js, used to write to controller.js
 #   plan - name of plan whose terms are being placed
 #   lineManager - line manager object, used to handle line placement and generation
-def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManager, electiveLinkDict):
-    # wrapper that holds the number of each type of elective taken this plan
-    electiveCounterWrapper = {"ITS": 0, "PROG": 0, "COMP": 0}
-    # count of amount of term columns placed in the plan
-    termcounter = 0
+def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManager):
+    electiveCounterWrapper = {"ITS": 0, "PROG": 0, "COMP": 0}  # keeps track of number of electives taken in plan
+    termcounter = 0  # count of amount of term columns placed in the plan
 
     for term in planDict:
-        termDiv = soup.new_tag("div", attrs={"class":"term"})
-        termHeader = soup.new_tag("h3", attrs={"class":"termheader"})
+        termDiv = soup.new_tag("div", attrs={"class":"term"})  # flexbox for term
+        termHeader = soup.new_tag("h3", attrs={"class":"termheader"})  # title at top of term
         termHeader.append(term)
         termDiv.append(termHeader)
-        placeCourses(termDiv, planDict[term], soup, controller, plan, termcounter, electiveCounterWrapper, electiveLinkDict)
+        placeCourses(termDiv, planDict[term], soup, controller, plan, termcounter, electiveCounterWrapper)
         planTag.append(termDiv)
         termcounter += 1
+    
     # generating a list of all courses taken in this plan
     courseList = []
     for courses in planDict.values():
@@ -209,19 +202,17 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
 
 # Function that places the course divs within a certain term column of a certain plan
 # Parameters:
-#   termTag - HTML tag representing the specfic term column in question
+#   termTag - HTML tag for a given term
 #   termList - list of courses being taken that term
 #   soup - soup object, used to create HTML tags
 #   controller - file handle for controller.js, used to write to controller.js
 #   plan - name of plan whose terms are being placed
 #   termcounter - which term is currently being placed (int)
-# Returns:
-#   compcounter, progcounter, itscounter
-def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiveCountWrapper, electiveLinkDict):
+def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiveCountWrapper):
     courseGroupList = []  # list of courses (course objects) in a course group
     courseGroupTitle = ""  # name of the course group (eg: "Course group 2A")
-    courseOrList = []
-    hexcolorlist= ["033dfc", "fc0303", "ef8c2b", "0ccb01", "bd43fa", "e8e123"]
+    courseOrList = []  # used as temp storage for OR courses
+    hexcolorlist= ["033dfc", "fc0303", "ef8c2b", "0ccb01", "bd43fa", "e8e123"]  # used to colour course group boxes
     for course in termList:
         courseID = cleaner.cleanString(course.name)+cleaner.cleanString(plan)
         courseContClass = extractCourseCategories(course)
@@ -244,7 +235,7 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
         # Prevent tooltip from being off screen
         courseDisc = pickTooltipSide(termcounter, courseID, soup)
 
-        # Constructing course div, check for special cases
+        # Constructing course div, check for special cases (electives)
         if course.name == "Complementary Elective":
             # Class allows formatting so words fit in course box
             courseID = courseID+str(electiveCountWrapper["COMP"])
@@ -253,10 +244,6 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
             courseDisc["id"] = courseDisc["id"][:-4] + str(electiveCountWrapper["COMP"]) + "desc"
             electiveCountWrapper["COMP"] += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
-            # Adding link to list of electives DUMMY LINK FOR NOW
-            # linkTag = soup.new_tag("a", href=electiveLinkDict["COMP"], target="_blank")
-            # linkTag.append("List of electives")
-            # courseDisc.append(linkTag)
 
         elif course.name == "Program/Technical Elective":
             # Class allows formatting so words fit in course box
@@ -266,10 +253,6 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
             courseDisc["id"] = courseDisc["id"][:-4] + str(electiveCountWrapper["PROG"]) + "desc"
             electiveCountWrapper["PROG"] += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
-            # Adding link to list of electives DUMMY LINK FOR NOW
-            # linkTag = soup.new_tag("a", href=electiveLinkDict["PROG"], target="_blank")
-            # linkTag.append("List of electives")
-            # courseDisc.append(linkTag)
 
         elif course.name == "ITS Elective":
             courseID = courseID+str(electiveCountWrapper["ITS"])
@@ -279,10 +262,6 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
             courseDisc["id"] = courseDisc["id"][:-4] + str(electiveCountWrapper["ITS"]) + "desc"
             electiveCountWrapper["ITS"] += 1
             formatCourseDescriptionForElective(soup, course, courseDisc)
-            # Adding link to list of electives DUMMY LINK FOR NOW
-            # linkTag = soup.new_tag("a", href=electiveLinkDict["ITS"], target="_blank")
-            # linkTag.append("List of electives")
-            # courseDisc.append(linkTag)
 
         else:
             # This is a regular course. All information should be available
@@ -302,6 +281,7 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
         courseDiv.append(courseHeader)
         courseDiv.append(courseDisc)
 
+        # flag that tells us if we should skip adding the course since it has already been added
         skipAddCourseFlag = False
 
         if orCase:
@@ -312,7 +292,7 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
             if termList.index(course) == (len(termList) - 1):
                 # last course in term is an OR course, need to append to termTag immediately
                 termTag, courseOrList, courseGroupList = addOrCourses(courseOrList, course.course_group, courseGroupList, termTag, soup)
-                skipAddCourseFlag = True
+                skipAddCourseFlag = True  # course has been added, don't want to add it twice
             if not lastOrCase:
                 continue
             if lastOrCase and (courseOrList != []):
@@ -345,6 +325,11 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
             courseContDiv.append(courseGroupList[i])
         termTag.append(courseContDiv)
 
+# Extracts the categories (main & sub) a course belongs to as a string
+# Parameters:
+#   course - Course object for an individual course
+# Returns:
+#   cateListString - string of all categories concatenated together (space-separated)
 def extractCourseCategories(course):
     catListString = cleaner.cleanString(course.main_category)
     for subcat in course.sub_categories:
@@ -357,7 +342,7 @@ def extractCourseCategories(course):
 #   courseOrList - list of courseDivs of all courses to go into orcoursecontainer
 #   courseGroup - course group of the current (last in OR case) course
 #   courseGroupList - list of courseDivs to go into coursegroupcontainer
-#   termTag - HTML tag representing the specfic term column in question
+#   termTag - HTML tag for a given term
 #   soup - soup object, used to create HTML tags
 # Returns: termTag, courseOrList (cleared to be empty), courseGroupList
 def addOrCourses(courseOrList, courseGroup, courseGroupList, termTag, soup):
@@ -423,11 +408,11 @@ def createCourseDiv(soup, courseID, category, orBool):
                                                 "ng-click":courseID+"Listener()",
                                                 "ng-right-click":courseID+"RCListener()"})
 
-# Function that writes the flags and variables associated with specific
+# Function that writes the flags and variables associated with a specific
 # course in the JS
 # Parameters:
 #   controller - file handle to controller.js
-#   courseID - ID for course
+#   courseID - unique ID for course
 def writeFlagsAndVariables(controller, courseID, plan):
     controller.write("  var " + 
                          courseID +
@@ -438,10 +423,10 @@ def writeFlagsAndVariables(controller, courseID, plan):
     controller.write(" var " + courseID + "Time = new Date().getTime();\n")
     controller.write("this."+plan+"ClickedMap.set(\""+courseID+"\", []);\n")
 
-# Function that consturcts the course description tooltip for an elective
+# Function that constructs the course description tooltip for an elective
 # Parameters:
 #   soup - soup object used to create HTML tags
-#   course- course object 
+#   course - Course object 
 #   courseDisc - course disc HTML tag
 def formatCourseDescriptionForElective(soup, course, courseDisc):
     # formatting title in course description
@@ -457,7 +442,7 @@ def formatCourseDescriptionForElective(soup, course, courseDisc):
     courseDisc.append(courseLine)
     courseDisc.append(courseDescription)
 
-# Function that consturcts the course description tooltip for a regular course
+# Function that constructs the course description tooltip for a regular course
 # Parameters:
 #   soup - soup object used to create HTML tags
 #   course - course object 
@@ -498,5 +483,3 @@ def formatCourseDescriptionForRegular(soup, course, courseDisc):
     courseDisc.append(courseTermAvail)
     courseDisc.append(courseAlphaHours)
     courseDisc.append(courseDescription)
-
-
