@@ -44,7 +44,6 @@ class Course:
 #
 # Parameters:
 #   str (string): the string to be analyzed
-#
 # Returns: 
 #   numcounter (int): how many numbers are in the string
 def countNums(str):
@@ -54,12 +53,11 @@ def countNums(str):
 # is an uppercase string, eg: MATH, PHYS, ENGL, etc.
 #
 # Parameters:
-#   reqlist (list of strings): list of the prerequisites for a course
-#   indx (int): index of the current item in reqlist from which the department name is pulled
-#
+#   reqlist (list of strings): list of the pre/co-requisites for a course
+#   indx (int): index from which the department name is pulled
 # Returns: 
 #   dept (string): The department name required for the current course.
-#   Returns -1 on error.
+#   Returns -1 if department name could not be found
 def pullDept(reqlist, indx):
     for n in range(0, len(reqlist[indx])):
     # MATH 100 -> Move from left to right until you hit the

@@ -3,14 +3,13 @@
 # Oversight: Dr. David Nobes
 # University of Alberta, Summer 2022, Curriculum Development Co-op Term
 
-# This file contains the functions neccesary to parse the Excel file
+# This file contains the functions needed to parse the Excel file
 # containing the sequncing information
 
 # Dependencies: copy, xlrd
 
 from copy import deepcopy
 import xlrd
-
 
 # Parses an Excel file with program sequencing information (when courses are taken)
 # and returns a dictionary storing the program plan name as key (Traditional, Co-op plan 1, etc.)
@@ -19,10 +18,9 @@ import xlrd
 #
 # Parameters:
 #   course_obj_dict (dictionary): dict with course name for key and 
-#   Course class as value. Course class described in parsing.py
+#   Course class as value. Course class described in parsinghelp.py
 #   filename (string): Name of the Excel file to be parsed for sequencing
 #   info. Format described in README. Can only be a .xls file (NOT .xlsx)
-#
 # Returns:
 #   course_seq (dictionary): Key is plan name, value is another dict with 
 #   term name as the key and a list of the Course objects taken in that term as value.
@@ -65,7 +63,7 @@ def parseSeq(filename, course_obj_dict):
                             name = name[:open_bracket] + name[close_bracket + 1:]
 
                     if "PROG" in name:
-                        # Create Course obj with only name and course_description attribute
+                        # Create Course obj with only name and course_description attributes
                         curr_course = deepcopy(course_obj_dict["Program/Technical Elective"])
                         if course_group != "":
                             curr_course.course_group = course_group
@@ -130,23 +128,21 @@ def parseSeq(filename, course_obj_dict):
     except xlrd.biffh.XLRDError:
         raise ValueError("Error reading data from sequencing Excel sheet. Ensure it is formatted exactly as specified")
 
-    # return course_seq, dept_name
     return course_seq
 
 # Checks that all coreqs for a course are taken in the same term,
 # if not, the coreq is changed to become a prereq. Similarly,
 # if a coreq is actually taken before a course in a certain plan,
-# that coreq is changed to a prereq for that course.
+# that coreq is changed to a prereq for that course. Overrides Calendar description.
 #
 # Parameters:
 #   course_seq (dict): Stores course data in proper sequence:
-#       key: Plan Name (string): name of the sheet from "Sequencing.xls"
+#       key: Plan Name (string): name of the sheet in "Sequencing.xls" without course group tags
 #       ("Traditional", "Co-op Plan 1", etc.)
 #       value: dict with key as term name ("Term 1", "Term 2", etc.)
-#
 # Returns:
 #   course_seq (dict): Stores course data in proper sequence:
-#       key: Plan Name (string): name of the sheet from "Sequencing.xls"
+#       key: Plan Name (string): name of the sheet in "Sequencing.xls" without course group tags 
 #       ("Traditional", "Co-op Plan 1", etc.)
 #       value: dict with key as term name ("Term 1", "Term 2", etc.)
 #       and value as a list of Course objects to be taken in that term.
@@ -191,7 +187,7 @@ def checkReqs(course_seq):
                                     del course.coreqs[course.coreqs.index(coreq)]
                             coreq_count += 1
 
-                # Analagous situation but for prereqs (not coreqs)
+                # Analagous situation but for prereqs (instead of coreqs)
                 for prereq in course.prereqs:
                     # For each prereq for a certain course, if there are multiple options
                     # (MATH 100 or MATH 114 or...) then only keep those that are displayed
@@ -219,7 +215,7 @@ def checkReqs(course_seq):
  
     return course_seq
 
-# Extracts the courses from course_seq in a given plan.
+# Extracts the courses from course_seq that are taken in a given plan.
 #
 # Parameters:
 #   course_seq (dict): Stores course data in proper sequence:
@@ -227,7 +223,6 @@ def checkReqs(course_seq):
 #       ("Traditional", "Co-op Plan 1", etc.)
 #       value: dict with key as term name ("Term 1", "Term 2", etc.)
 #   plan (string): name of the plan from which courses are extracted
-#
 # Returns:
 #   all_names (list of strings): list of the course names that are taken
 #   in that plan
@@ -239,12 +234,11 @@ def extractCoursesFromPlan(course_seq, plan):
             all_names.append(course_name)
     return all_names
 
-# Extracts the courses from planDict in a given term.
+# Extracts the courses from planDict that are taken in a given term.
 #
 # Parameters:
 #   planDict (dict): dict stored in course_seq[plan]
 #   term (string): name of the term from which courses are extarcted
-#
 # Returns:
 #   term_course_names (list of strings): list of the course names that are taken
 #   in that term
@@ -254,6 +248,3 @@ def extractCourseFromTerm(planDict, term):
         course_name = course.name.replace(" ", "").replace("or", " or ")
         term_course_names.append(course_name)
     return term_course_names
-
-
-
