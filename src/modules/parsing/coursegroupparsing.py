@@ -6,21 +6,21 @@
 # The file contains the functions needed to extract the course group 
 # information needed to generate the web page
 
-# Function that finds the intital values to set each course group variable to
+# Function that finds the initial values to set each course group variable to
 # in the JS
 # Parameters:
 #   courseGroupDict - dict that maps plans to the course groups that exist in them
 #   courseGroupList - list of course groups taken in that program
 # Returns a dict that maps the course group with the initial value it should take
-def findIntitalValuesofCourseGroups(courseGroupDict, courseGroupList):
-    intitalSelectionGroups = list(courseGroupDict.values())[0]
-    intitalCourseGroupVals = {}
+def findInitialValuesofCourseGroups(courseGroupDict, courseGroupList):
+    initialSelectionGroups = list(courseGroupDict.values())[0]
+    initialCourseGroupVals = {}
     for element in courseGroupList:
-        if element not in intitalSelectionGroups:
-            intitalCourseGroupVals[element] = ""
+        if element not in initialSelectionGroups:
+            initialCourseGroupVals[element] = ""
         else:
-            intitalCourseGroupVals[element] = intitalSelectionGroups[element][0]
-    return intitalCourseGroupVals
+            initialCourseGroupVals[element] = initialSelectionGroups[element][0]
+    return initialCourseGroupVals
 
 # Function that finds the list of all course groups taken that term
 # Parameters:

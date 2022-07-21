@@ -135,14 +135,14 @@ def websiteGeneration(value_label):
             # extracting course group information
             courseGroupDict = coursegroupparsing.extractPlanCourseGroupDict(sequenceDict)
             courseGroupList = coursegroupparsing.findListofAllCourseGroups(courseGroupDict)
-            intitalCourseGroupVals = coursegroupparsing.findIntitalValuesofCourseGroups(courseGroupDict, courseGroupList)
+            initialCourseGroupVals = coursegroupparsing.findInitialValuesofCourseGroups(courseGroupDict, courseGroupList)
 
 
-            # generating intital JS based on the number and names of plans
+            # generating initial JS based on the number and names of plans
             print("Intialzing JS files....")
             value_label['text'] = 'Intialzing JS files....'
-            javascriptgen.intializeControllerJavaScript(sequenceDict, 
-                                                        intitalCourseGroupVals,
+            javascriptgen.initializeControllerJavaScript(sequenceDict, 
+                                                        initialCourseGroupVals,
                                                         courseGroupDict,
                                                         courseGroupList, 
                                                         controller)

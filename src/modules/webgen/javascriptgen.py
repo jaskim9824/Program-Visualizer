@@ -15,27 +15,18 @@ from .. import cleaner
 # Parameters:
 #   controller - file handle for controller JS file
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
-def intializeControllerJavaScript(sequenceDict, intitalCourseGroupVals, courseGroupDict, courseGroupList, controller):
-    generateIntitalBlockController(courseGroupDict, courseGroupList, controller)
+def initializeControllerJavaScript(sequenceDict, initialCourseGroupVals, courseGroupDict, courseGroupList, controller):
+    generateInitialBlockController(courseGroupDict, courseGroupList, controller)
     generatePlanBasedBlocksController(sequenceDict, 
-                                      intitalCourseGroupVals,
+                                      initialCourseGroupVals,
                                       courseGroupDict, 
                                       courseGroupList,
                                       controller)
 
-# Function that properly concludes and closes the controller JS
-# Parameters:
-#   controller - file handle for controller JS
-def closeControllerJavaScript(controller):
-    controller.write("});\n")
-    writeRightClickDirective(controller)
-    writeRadioChangeDirective(controller)
-    controller.close()
-
-# Function that generates the intital block of Javascript in controller.js
+# Function that generates the initial block of Javascript in controller.js
 # Parameters:
 #   controller - file handle for controller JS file
-def generateIntitalBlockController(courseGroupDict, courseGroupList, controller):
+def generateInitialBlockController(courseGroupDict, courseGroupList, controller):
     planList = list(courseGroupDict.keys())
     controller.write("var app = angular.module(\"main\", []);\n")
     controller.write("app.controller(\"main\", function($scope) { \n")
@@ -59,113 +50,6 @@ Array.prototype.forEach.call(radios, function (radio) {
 });\n""")
     generateHighlightElement(controller)
     generateUnHighlightElement(controller)
-
-# Function that generates the blocks of the controller JS file that are dependent
-# on the number and names of plans provided
-# Parameters:
-#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
-#   controller - file handle for controller.js file
-def generatePlanBasedBlocksController(sequenceDict, intitalCourseGroupVals, courseGroupDict, courseGroupList, controller):
-    generatePlanBasedInitalVariables(sequenceDict, intitalCourseGroupVals, courseGroupList, controller)
-    generateSetDefaults(courseGroupDict, courseGroupList, controller)
-    generateSubRadioListener(courseGroupList, controller)
-    generateDisableSwitchStatement(sequenceDict, controller)
-    generateEnableSwitchStatement(sequenceDict, controller)
-    generateAddLineSwitch(sequenceDict, courseGroupList, controller)
-    generateDeleteLineSwitch(sequenceDict, courseGroupList, controller)
-    generateAddToClickSwitch(sequenceDict, courseGroupList, controller)
-    generateDeleteFromClickSwitch(sequenceDict, courseGroupList, controller)
-    generateCategoryLegendJS(sequenceDict, courseGroupList, controller)
-
-# Function that appends the custom Angular directive used to handle right click
-# events to the end of the controller JS file
-# Parameters:
-#   controller - file handle for controller JS
-def writeRightClickDirective(controller):
-    rightClickDirective = """app.directive('ngRightClick', function($parse) {
-    return function(scope, element, attrs) {
-        var fn = $parse(attrs.ngRightClick);
-        element.bind('contextmenu', function(event) {
-            scope.$apply(function() {
-                event.preventDefault();
-                fn(scope, {$event:event});
-            });
-        });
-    };
-    });"""
-    controller.write(rightClickDirective)
-
-# Function that appends the custom Angular directive used to handle radio input changing
-# to the end of the controller JS file
-# Parameters:
-#   controller - file handle for controller JS
-def writeRadioChangeDirective(controller):
-    radioChangeDirective = """app.directive('ngChangeRadio', function($parse) {
-    return function(scope, element, attrs) {
-        var fn = $parse(attrs.ngChangeRadio);
-        element.bind('change', function(event) {
-            scope.$apply(function() {
-                event.preventDefault();
-                fn(scope, {$event:event});
-            });
-        });
-    };
-    });"""
-    controller.write(radioChangeDirective)
-
-# Function that generates the intial variables for the controller
-# based on the plans
-# Parameters: 
-#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
-#   controller - file handle for controller.js file
-def generatePlanBasedInitalVariables(sequenceDict, intitalCourseGroupVals, courseGroupList, controller):
-    for plan in sequenceDict:
-        controller.write("this." + cleaner.cleanString(plan) + "List = [];\n")  # list of lines displaying on plan
-        controller.write("this." + cleaner.cleanString(plan) + "Clicked = [];\n")
-        controller.write("this." + cleaner.cleanString(plan) + "LegendBtns = [];\n")
-        controller.write("this." + cleaner.cleanString(plan) + "LegendBtnsClicked = [];\n")
-        controller.write("this." + cleaner.cleanString(plan) + "ClickedMap = new Map();\n")
-        numterms = len(sequenceDict[plan].keys())
-        controller.write("this." + cleaner.cleanString(plan) + "Terms = " + str(numterms) + ";\n")
-        maxcourses = 0
-        for term in sequenceDict[plan]:
-            termcourses = len(sequenceDict[plan][term])
-            if termcourses > maxcourses:
-                maxcourses = termcourses
-        controller.write("this." + cleaner.cleanString(plan) + "MaxCourses = " + str(maxcourses) + ";\n")  # allows variable page height depending on number of courses
-    for courseGroup in intitalCourseGroupVals:
-        formattedCourseGroupVar = "$scope.field{number} = {{ group{number}: \"{val}\" }};\n"
-        controller.write(formattedCourseGroupVar.format(number=courseGroup, 
-                                                        val=intitalCourseGroupVals[courseGroup]))
-    planString = generatePlanString(courseGroupList)
-    controller.write("this.previousPlan = " +planString + "\n")
-
-# Function that writes the setDefaults function based on the plans and course groups
-# Parameters:
-#   courseGroupDict - dict that maps plans to a dict that maps course groups to the 
-#   options avaiable in that course group
-#   courseGroupList - list of course groups taken overall in the program
-#   controller - file handle to controller.js
-def generateSetDefaults(courseGroupDict, courseGroupList, controller):
-    controller.write("this.setDefaults = function(plan) { \n")
-    controller.write("  switch(plan) { \n")
-    formattedCaseStatement = "      case \"{case}\": \n"
-    formattedCourseGroup = "            $scope.field{number}.group{number} ="
-    switchEndString = """    default:
-    console.log("shouldn't be here");
-    }
-};\n"""
-    for mainPlan in courseGroupDict:
-        controller.write(formattedCaseStatement.format(case=cleaner.cleanString(mainPlan)))
-        for element in courseGroupList:
-            controller.write(formattedCourseGroup.format(number=element))
-            if element not in courseGroupDict[mainPlan]:
-                controller.write("\"\";\n")
-            else:
-                controller.write("\""+str(element)+"A\";\n")
-        controller.write("          $scope.$apply();\n")
-        controller.write("          break;\n")
-    controller.write(switchEndString)
 
 # Function that writes the highlightElement function which highlights
 # an individual course when a category button is pressed.
@@ -196,6 +80,77 @@ def generateUnHighlightElement(controller):
         element.classList.remove(category + "-highlighted");
         element.classList.add(category);
     };\n""")
+
+# Function that generates the blocks of the controller JS file that are dependent
+# on the number and names of plans provided
+# Parameters:
+#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
+#   controller - file handle for controller.js file
+def generatePlanBasedBlocksController(sequenceDict, initialCourseGroupVals, courseGroupDict, courseGroupList, controller):
+    generatePlanBasedInitalVariables(sequenceDict, initialCourseGroupVals, courseGroupList, controller)
+    generateSetDefaults(courseGroupDict, courseGroupList, controller)
+    generateSubRadioListener(courseGroupList, controller)
+    generateDisableSwitchStatement(sequenceDict, controller)
+    generateEnableSwitchStatement(sequenceDict, controller)
+    generateAddLineSwitch(sequenceDict, courseGroupList, controller)
+    generateDeleteLineSwitch(sequenceDict, courseGroupList, controller)
+    generateAddToClickSwitch(sequenceDict, courseGroupList, controller)
+    generateDeleteFromClickSwitch(sequenceDict, courseGroupList, controller)
+    generateCategoryLegendJS(sequenceDict, courseGroupList, controller)
+
+# Function that generates the intial variables for the controller
+# based on the plans
+# Parameters: 
+#   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
+#   controller - file handle for controller.js file
+def generatePlanBasedInitalVariables(sequenceDict, initialCourseGroupVals, courseGroupList, controller):
+    for plan in sequenceDict:
+        controller.write("this." + cleaner.cleanString(plan) + "List = [];\n")  # list of lines displaying on plan
+        controller.write("this." + cleaner.cleanString(plan) + "Clicked = [];\n")
+        controller.write("this." + cleaner.cleanString(plan) + "LegendBtns = [];\n")
+        controller.write("this." + cleaner.cleanString(plan) + "LegendBtnsClicked = [];\n")
+        controller.write("this." + cleaner.cleanString(plan) + "ClickedMap = new Map();\n")
+        numterms = len(sequenceDict[plan].keys())
+        controller.write("this." + cleaner.cleanString(plan) + "Terms = " + str(numterms) + ";\n")
+        maxcourses = 0
+        for term in sequenceDict[plan]:
+            termcourses = len(sequenceDict[plan][term])
+            if termcourses > maxcourses:
+                maxcourses = termcourses
+        controller.write("this." + cleaner.cleanString(plan) + "MaxCourses = " + str(maxcourses) + ";\n")  # allows variable page height depending on number of courses
+    for courseGroup in initialCourseGroupVals:
+        formattedCourseGroupVar = "$scope.field{number} = {{ group{number}: \"{val}\" }};\n"
+        controller.write(formattedCourseGroupVar.format(number=courseGroup, 
+                                                        val=initialCourseGroupVals[courseGroup]))
+    planString = generatePlanString(courseGroupList)
+    controller.write("this.previousPlan = " +planString + "\n")
+
+# Function that writes the setDefaults function based on the plans and course groups
+# Parameters:
+#   courseGroupDict - dict that maps plans to a dict that maps course groups to the 
+#   options avaiable in that course group
+#   courseGroupList - list of course groups taken overall in the program
+#   controller - file handle to controller.js
+def generateSetDefaults(courseGroupDict, courseGroupList, controller):
+    controller.write("this.setDefaults = function(plan) { \n")
+    controller.write("  switch(plan) { \n")
+    formattedCaseStatement = "      case \"{case}\": \n"
+    formattedCourseGroup = "            $scope.field{number}.group{number} ="
+    switchEndString = """    default:
+    console.log("shouldn't be here");
+    }
+};\n"""
+    for mainPlan in courseGroupDict:
+        controller.write(formattedCaseStatement.format(case=cleaner.cleanString(mainPlan)))
+        for element in courseGroupList:
+            controller.write(formattedCourseGroup.format(number=element))
+            if element not in courseGroupDict[mainPlan]:
+                controller.write("\"\";\n")
+            else:
+                controller.write("\""+str(element)+"A\";\n")
+        controller.write("          $scope.$apply();\n")
+        controller.write("          break;\n")
+    controller.write(switchEndString)
 
 # Function that generates the listener that listens to course group radio inputs
 # Parameters:
@@ -237,7 +192,6 @@ def generateDisableSwitchStatement(sequenceDict, controller):
 #   sequenceDict - dict that maps plan name to a dict that represents the plan sequence
 #   controller - file handle for controller.js file
 def generateEnableSwitchStatement(sequenceDict, controller):
-
     categoriesDict = sortIntoCategories(sequenceDict)  # sort courses into categories
     findLegendButtons(categoriesDict, sequenceDict, controller)  # find legend buttons in the document, store them in a list
 
@@ -815,3 +769,48 @@ def generatePlanString(courseGroupList):
     for courseGroup in courseGroupList:
         planString += "+"+formattedCourseGroup.format(number=courseGroup)
     return planString
+
+# Function that properly concludes and closes the controller JS
+# Parameters:
+#   controller - file handle for controller JS
+def closeControllerJavaScript(controller):
+    controller.write("});\n")
+    writeRightClickDirective(controller)
+    writeRadioChangeDirective(controller)
+    controller.close()
+
+# Function that appends the custom Angular directive used to handle right click
+# events to the end of the controller JS file
+# Parameters:
+#   controller - file handle for controller JS
+def writeRightClickDirective(controller):
+    rightClickDirective = """app.directive('ngRightClick', function($parse) {
+    return function(scope, element, attrs) {
+        var fn = $parse(attrs.ngRightClick);
+        element.bind('contextmenu', function(event) {
+            scope.$apply(function() {
+                event.preventDefault();
+                fn(scope, {$event:event});
+            });
+        });
+    };
+    });"""
+    controller.write(rightClickDirective)
+
+# Function that appends the custom Angular directive used to handle radio input changing
+# to the end of the controller JS file
+# Parameters:
+#   controller - file handle for controller JS
+def writeRadioChangeDirective(controller):
+    radioChangeDirective = """app.directive('ngChangeRadio', function($parse) {
+    return function(scope, element, attrs) {
+        var fn = $parse(attrs.ngChangeRadio);
+        element.bind('change', function(event) {
+            scope.$apply(function() {
+                event.preventDefault();
+                fn(scope, {$event:event});
+            });
+        });
+    };
+    });"""
+    controller.write(radioChangeDirective)
