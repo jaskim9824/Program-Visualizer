@@ -3,7 +3,7 @@
 # Oversight: Dr. David Nobes
 # University of Alberta, Summer 2022, Curriculum Development Co-op Term
 
-# This files contains all the functions need to parse the Excel file
+# This files contains all the functions needed to parse the Excel file
 # containing the course information 
 
 # Dependencies: copy, xlrd, parsinghelp
@@ -52,14 +52,14 @@ def parseCourses(filename):
             # Remove unnecessary whitespace
             course_name = course_name.strip().replace("  ", " ")
 
-            # Adding course to dict
+            # Adding deepcopy of course to dict
             course_obj_dict[course_name] = deepcopy(parsinghelp.Course(course_name, faculty,
             department, course_id, subject, catalog, long_title,
             eff_date, status, calendar_print, prog_units, engg_units,
             calc_fee_index, actual_fee_index, duration, alpha_hours,
             course_description))
 
-        # Retriving dependencies for courses
+        # Retriving dependencies (pre/coreqs) for courses
         course_obj_dict = pullDependencies(course_obj_dict)
 
         return course_obj_dict
@@ -70,8 +70,8 @@ def parseCourses(filename):
         raise ValueError("Error reading data from Course information Excel sheet. Ensure it is formatted exactly as specified")
 
 # Pulls all course dependencies (prerequisites, corequisites, and
-# requisites) for each course in course_obj_dict and stores these
-# dependencies as attributes in course_obj_dict. Sequencing information
+# requisites) for each course in course_obj_dict. Dependencies stored
+# in lists as attributes of the Course object. Sequencing information
 # is also pulled (which courses are taken in which term).
 #
 # Parameters:
@@ -80,7 +80,7 @@ def parseCourses(filename):
 #       value: Course object. Stores all data about a course
 # Returns:
 #   course_seq (dict): Stores course data in proper sequence:
-#       key: Plan Name (string): name of the sheet from "Sequencing.xls"
+#       key: Plan Name (string): derived from sheet name in "Sequencing.xls"
 #       ("Traditional", "Co-op Plan 1", etc.)
 #       value: dict with key as term name ("Term 1", "Term 2", etc.)
 #       and value as a list of Course objects to be taken in that term
@@ -88,7 +88,6 @@ def parseCourses(filename):
 #       be filled in
 def pullDependencies(course_obj_dict):
     for course in course_obj_dict:
-        # Pulling pre-reqs, co-reqs, and requisites for each course
         prereqslist = pullPreReqs(course_obj_dict[course].course_description)
         for i in range(0, len(prereqslist)):
             # Stripping whitespace
@@ -103,16 +102,14 @@ def pullDependencies(course_obj_dict):
 
     return course_obj_dict
 
-
 # Pulls the prerequisites from the course description.
 #
 # Parameters:
-#   description (string): The complete course description taken from Beartracks/Excel
-#
+#   description (string): The complete course description taken from the Calendar
 # Returns:
 #   prereqs (list of strings): A list of the prerequisites. Elements
-#   can be in two forms. 1) The name of a single course. eg: "MATH 100"
-#   2) Several courses, each separated by the word " or ". This denotes that only one of
+#   can be in two forms: 1) The name of a single course. eg: "MATH 100"
+#   2) Several courses, each separated by the word " or ". This indicates that only one of
 #   these courses is required as a prerequisite. eg: "MEC E 250 or MATH 102 or CH E 441"
 def pullPreReqs(description):
     description.replace("-requisite", "requisite")
@@ -155,9 +152,8 @@ def pullPreReqs(description):
 
 # Pulls the corequisites from the course description.
 #
-# Arguments:
-#   description (string): The complete course description taken from Beartracks/Excel
-#
+# Parameters:
+#   description (string): The complete course description taken from the Calendar
 # Returns:
 #   coreqs (list of strings): A list of the corequisites. Elements
 #   can be in two forms. 1) The name of a single course. eg: "MATH 100"
@@ -211,15 +207,12 @@ def pullCoReqs(description):
 #   either "Prerequisites: " or "Prerequisite: " until the first period following.
 #   eg: Prerequisites: [One of CH E 441, MEC E 250, or MATH 100.] Everything between
 #   the square brackets should be passed.
-#
 # Returns: 
-#   reqlist (list of strings): A list of the prerequisites of a course. Elements
-#   can be in two forms. 1) The name of a single course. eg: "MATH 100"
+#   reqlist (list of strings): A list of the pre-requisites of a course. Elements
+#   can be in two forms: 1) The name of a single course. eg: "MATH 100"
 #   2) Several courses, each separated by the word "or". This denotes that only one of
 #   these courses is required as a prerequisite. eg: "MEC E 250 or MATH 102 or CH E 441"
 def process(prestr):
-    
-
     prestr = prestr.strip()
     prestr = prestr.replace("\n", " ")
     # Add a comma after the end of each course name
@@ -250,7 +243,6 @@ def process(prestr):
     while i < len(reqlist):
         # Iterate through every element in reqlist. Changes are made
         # directly on reqlist
-
         reqlist[i] = reqlist[i].strip()
 
         if "-" in reqlist[i]:
@@ -275,7 +267,7 @@ def process(prestr):
                 reqlist[i + 1] = dept + " " + reqlist[i + 1]
 
         if (reqlist[i][0:7] == "One of ") or (reqlist[i][0:7] == "one of ") or (reqlist[i][0:7] == "Either ") or (reqlist[i][0:7] == "either "):
-            # Same logic for "one of" as well as "either"
+            # Same logic for "one of" and "either"
             if ((reqlist[i][0:6] == "Either") or (reqlist[i][0:6] == "either")) and (reqlist[i + 1][0:11] == "or one of "):
                 # "or one of " is redundant
                 # Remove the "or one of " and we can apply the same steps
@@ -284,14 +276,13 @@ def process(prestr):
             # Only one of the upcoming courses is required
             reqlist[i] = reqlist[i].replace("One of ", "").replace("one of ", "").replace("Either ", "").replace("either ", "")
 
-
-            j = i + 1
+            j = i + 1  # i is where clause starts, j will increment until the clause is finished
 
             if j < len(reqlist):
                 while ("or" not in reqlist[j]) and ("Or" not in reqlist[j]):
-                    # There are still more courses that could be chosen, combine the
-                    # previous and current elements, continue until we see the word "or"
-                    # or we reach the end of the reqlist
+                    # There are still more courses that could be chosen (clause not done), 
+                    # combine the previous and current elements, continue until we see the 
+                    # word "or" or we reach the end of the reqlist
 
                     # Count the number of numbers in the next element
                     numcounter = parsinghelp.countNums(reqlist[j])
