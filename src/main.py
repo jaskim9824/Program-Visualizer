@@ -48,7 +48,7 @@ def debug(sequenceDict):
 
 ###Main GUI Window ###
 window = Tk()
-window.title('plan visualizer WebGen')
+window.title('Program Visualizer Generator')
 window.iconbitmap('output/images/favicon.ico')
 window.geometry("1092x544")
 window.configure(bg = "#ffffff")
