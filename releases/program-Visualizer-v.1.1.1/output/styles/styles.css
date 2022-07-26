@@ -30,6 +30,22 @@ header {
     min-width: 100vw;
 }
 
+.backbutton {
+    background-color: white;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.header .backbutton a {
+    color: black;
+    font-size: 110%;
+    padding: 15px 27px 15px 27px;
+}
+
+.header .backbutton:hover a {
+    color: blue;
+}
+
 /*Header link style */
 .header a {
     padding: 15px;
@@ -135,7 +151,7 @@ header {
 
 /* Plan header styling*/
 h3.planhead {
-    width: 30rem;
+    width: 25rem;
     margin: 0;
     font-size: 175%;
     text-align: center;
@@ -150,8 +166,8 @@ h3.planhead {
 .select {
     width: fit-content;
     margin-top: 15px;
-    margin-left: 15%;
-    margin-right: 35px;
+    margin-left: 25%;
+    margin-right: 50px;
 }
 
 .coursegroupselector {
