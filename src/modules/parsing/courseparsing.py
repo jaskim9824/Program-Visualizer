@@ -47,7 +47,7 @@ def parseCourses(filename):
             course_description = sheet.cell_value(row, 15)
 
             # Formatting course name
-            course_name = subject + " " + catalog
+            course_name = str(subject) + " " + str(catalog)
 
             # Remove unnecessary whitespace
             course_name = course_name.strip().replace("  ", " ")
