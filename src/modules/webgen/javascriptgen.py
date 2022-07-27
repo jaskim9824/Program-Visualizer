@@ -225,11 +225,15 @@ def generateEnableSwitchStatement(sequenceDict, controller):
               }}
           }}
           if (found == false) {{
+            if this.{planName}.LegendBtns[i].classList.contains("legendbutton-pressed") {{
               this.{planName}LegendBtns[i].classList.remove("legendbutton-pressed");
+            }}
               this.{planName}LegendBtns[i].classList.add("legendbutton");
           }}
           if (found == true) {{
+            if this.{planName}LegendBtns[i].classList.contains("legendbutton") {{
               this.{planName}LegendBtns[i].classList.remove("legendbutton");
+            }}
               this.{planName}LegendBtns[i].classList.add("legendbutton-pressed");
           }}
       }}
@@ -527,7 +531,9 @@ def generateCategoryListeners(categoriesDict, courseGroupList, controller):
     var flagBool = eval(checkFlag);
     if (flagBool) {{
         that.highlightCategory("{categoryName}", planName);
-        pressedbtn.classList.remove("legendbutton");
+        if pressedbtn.classList.contains("legendbutton") {{
+            pressedbtn.classList.remove("legendbutton");
+        }}
         pressedbtn.classList.add("legendbutton-pressed");
         var addClick = "that." + planName + "LegendBtnsClicked.push(pressedbtn)";
         eval(addClick);
@@ -536,7 +542,9 @@ def generateCategoryListeners(categoriesDict, courseGroupList, controller):
     }}
     else {{
         that.unhighlightCategory("{categoryName}", planName);
-        pressedbtn.classList.remove("legendbutton-pressed");
+        if pressedbtn.classList.contains("legendbutton-pressed") {{
+            pressedbtn.classList.remove("legendbutton-pressed");
+        }}
         pressedbtn.classList.add("legendbutton");
         var findIndex = "var index = that." + planName + "LegendBtnsClicked.findIndex((element) => element[0] == pressedbtn)";
         eval(findIndex);
