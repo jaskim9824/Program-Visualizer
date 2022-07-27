@@ -225,7 +225,7 @@ def generateEnableSwitchStatement(sequenceDict, controller):
               }}
           }}
           if (found == false) {{
-            if (this.{planName}.LegendBtns[i].classList.contains("legendbutton-pressed")) {{
+            if (this.{planName}LegendBtns[i].classList.contains("legendbutton-pressed")) {{
               this.{planName}LegendBtns[i].classList.remove("legendbutton-pressed");
             }}
               this.{planName}LegendBtns[i].classList.add("legendbutton");
