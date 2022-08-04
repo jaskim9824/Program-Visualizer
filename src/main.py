@@ -109,6 +109,12 @@ def websiteGeneration(value_label):
             value_label['text'] = 'parsing courses..'
             courseDict = courseparsing.parseCourses(courses_excel.get())
             progress()
+
+            # extracting dept name for program sequence
+            deptName = department.get()
+
+            # parsing the excel file with accreditation unit info, file name hardcoded for now
+            courseparsing.parseAccred(courseDict, "./Input/AU_Count.xls", deptName)
             
             # pulling the category and color info from excel
             print("Parsing categories...")
@@ -128,9 +134,6 @@ def websiteGeneration(value_label):
             value_label['text'] = 'Parsing sequences....'
             sequenceDict = sequenceparsing.parseSeq(seq_excel.get(), courseDict)
             progress()
-
-            # extracting dept name for program sequence
-            deptName = department.get()
 
             # extracting course group information
             courseGroupDict = coursegroupparsing.extractPlanCourseGroupDict(sequenceDict)

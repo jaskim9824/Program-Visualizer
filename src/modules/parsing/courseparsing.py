@@ -52,12 +52,24 @@ def parseCourses(filename):
             # Remove unnecessary whitespace
             course_name = course_name.strip().replace("  ", " ")
 
+            main_category = ""
+            sub_categories = []
+            color = ""
+            course_group = ""
+            prereqs = []
+            coreqs = []
+            elective_group = ""
+            accredUnits = {"Math":0, "Natural Sciences":0, "Math and Natural Sciences":0,
+            "Complimentary Studies":0, "Engineering Science":0, "Engineering Design":0, 
+            "Engineering Science and Engineering Design":0, "Other":0}
+
             # Adding deepcopy of course to dict
             course_obj_dict[course_name] = deepcopy(parsinghelp.Course(course_name, faculty,
             department, course_id, subject, catalog, long_title,
             eff_date, status, calendar_print, prog_units, engg_units,
             calc_fee_index, actual_fee_index, duration, alpha_hours,
-            course_description))
+            course_description, main_category, sub_categories, color,
+            course_group, prereqs, coreqs, elective_group, accredUnits))
 
         # Retriving dependencies (pre/coreqs) for courses
         course_obj_dict = pullDependencies(course_obj_dict)
@@ -68,6 +80,49 @@ def parseCourses(filename):
         raise FileNotFoundError("Excel course information file not found, ensure it is present and the name is correct.")
     except xlrd.biffh.XLRDError:
         raise ValueError("Error reading data from Course information Excel sheet. Ensure it is formatted exactly as specified")
+
+# Parses the accredFileName file for information on accreditation
+# units satisfied by the courses in courseObjDict.
+# Parameters:
+#   courseObjDict (dict): dict with course name for key and 
+#   Course object as value
+#   accredFileName (string): name of the .xls file containing 
+#   accreditation info
+#   deptName (string): name of the department, should match the header
+#   on one of the sheets in the accreditation info Excel file
+def parseAccred(courseObjDict, accredFileName, deptName):
+    try:
+        book = xlrd.open_workbook(accredFileName)
+
+        # open each sheet and check if header matches deptName
+        sheet = None
+        for i in range(0, book.nsheets):
+            if book.sheet_by_index(i).cell_value(0, 1) == deptName:
+                sheet = book.sheet_by_index(i)
+        
+        # if no matching department name found, display error message and continue execution
+        if sheet is None:
+            print("Department name: " + deptName + " does not match any sheet in the accreditation file")
+            print("No accreditation unit information will be available on the generated webpage")
+            return
+
+        for row in range(4, sheet.nrows):
+            if sheet.cell_value(row, 1) in courseObjDict:  # see if the Excel entry matches a course name
+                # if there is a match, update the accredUnits field with corresponding values
+                courseName = sheet.cell_value(row, 1)
+                courseObjDict[courseName].accredUnits["Math"] = round(sheet.cell_value(row, 8), 1)
+                courseObjDict[courseName].accredUnits["Natural Sciences"] = round(sheet.cell_value(row, 9), 1)
+                courseObjDict[courseName].accredUnits["Math and Natural Sciences"] = round(sheet.cell_value(row, 10), 1)
+                courseObjDict[courseName].accredUnits["Complimentary Studies"] = round(sheet.cell_value(row, 11), 1)
+                courseObjDict[courseName].accredUnits["Engineering Science"] = round(sheet.cell_value(row, 12), 1)
+                courseObjDict[courseName].accredUnits["Engineering Design"] = round(sheet.cell_value(row, 13), 1)
+                courseObjDict[courseName].accredUnits["Engineering Science and Engineering Design"] = round(sheet.cell_value(row, 14), 1)
+                courseObjDict[courseName].accredUnits["Other"] = round(sheet.cell_value(row, 15), 1)
+
+    except FileNotFoundError:
+        raise FileNotFoundError("Excel accreditation information file not found, ensure it is present and the name is correct")
+    except xlrd.biffh.XLRDError:
+        raise ValueError("Error reading data from accreditation information Excel sheet. Ensure it is formatted exactly as specified")
 
 # Pulls all course dependencies (prerequisites, corequisites, and
 # requisites) for each course in course_obj_dict. Dependencies stored

@@ -475,6 +475,15 @@ def formatCourseDescriptionForRegular(soup, course, courseDisc):
     courseDescription = soup.new_tag("p", attrs={"class":"fulldescription"})
     courseDescription.append(course.course_description)
 
+    # adding accreditation info
+    courseAccreditationHeader = soup.new_tag("b", attrs={"class":"accreditationheader"})
+    courseAccreditationHeader.append("Accreditation Units")
+    courseAccreditationUnits = soup.new_tag("div", attrs={"class":"accreditationunits"})
+    for accredCat in course.accredUnits:
+        if course.accredUnits[accredCat] != 0:  # only display if units are not zero
+            courseAccreditationUnits.append(accredCat + ": " + str(course.accredUnits[accredCat]) + " Units\n")
+            courseAccreditationUnits.append(soup.new_tag("br"))
+
     # appending info to disc tag
     courseDisc.append(courseTitle)
     courseDisc.append(courseLine)
@@ -483,3 +492,6 @@ def formatCourseDescriptionForRegular(soup, course, courseDisc):
     courseDisc.append(courseTermAvail)
     courseDisc.append(courseAlphaHours)
     courseDisc.append(courseDescription)
+    courseDisc.append(soup.new_tag("br"))
+    courseDisc.append(courseAccreditationHeader)
+    courseDisc.append(courseAccreditationUnits)

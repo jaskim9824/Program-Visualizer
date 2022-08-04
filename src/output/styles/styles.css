@@ -112,10 +112,13 @@ header {
     /* Smaller font on narrow screens */
     .coursecontainer .descriptionalphahours, .coursecontainer .descriptionavailability, 
     .coursecontainer .descriptioncredits, .coursecontainer .descriptionfeeindex, .coursecontainer .fulldescription,
+    .coursecontainer .accreditationheader, .coursecontainer .accreditationunits,
     .orcoursecontainer .descriptionalphahours, .orcoursecontainer .descriptionavailability, 
     .orcoursecontainer .descriptioncredits, .orcoursecontainer .descriptionfeeindex, .orcoursecontainer .fulldescription,
+    .orcoursecontainer .accreditationheader, .orcoursecontainer .accreditationunits
     .coursegroupcontainer .descriptionalphahours, .coursegroupcontainer .descriptionavailability, 
-    .coursegroupcontainer .descriptioncredits, .coursegroupcontainer .descriptionfeeindex, .coursegroupcontainer .fulldescription {
+    .coursegroupcontainer .descriptioncredits, .coursegroupcontainer .descriptionfeeindex, .coursegroupcontainer .fulldescription,
+    .coursegroupcontainer .accreditationheader, .coursegroupcontainer .accreditationunits {
         font-size: 12px;
     }
 }
@@ -497,6 +500,15 @@ p.ortext {
 /* Various components of description body */
 .descriptioncredits, .descriptionfeeindex, .descriptionavailability, .descriptionalphahours, .fulldescription {
     display: inline;
+}
+
+/* Separation between description and accreditation info */
+.fulldescription {
+    margin: 0px 0px 10px 0px;
+}
+
+.accreditationheader {
+    font-size: 105%;
 }
 
 /* footer formatting */

@@ -12,7 +12,8 @@ class Course:
         long_title = "", eff_date = "", status = "", calendar_print = "", prog_units = "",
         engineering_units = "", calc_fee_index = "", actual_fee_index = "", duration = "",
         alpha_hours = "", course_description = "", main_category = "", sub_categories = [], 
-        color = "", course_group = "", prereqs = [], coreqs = [], elective_group = ""):
+        color = "", course_group = "", prereqs = [], coreqs = [], elective_group = "",
+        accredUnits = {}):
 
         self.name = str(name)
         self.faculty = str(faculty)
@@ -38,6 +39,7 @@ class Course:
         self.prereqs = prereqs
         self.coreqs = coreqs
         self.elective_group = str(elective_group)
+        self.accredUnits = accredUnits
 
 # Counts the total number of number (0-9) chars in a string.
 # eg: "mlat9kg45" has 3 numbers.
