@@ -79,7 +79,7 @@ def parseCourses(filename):
     except FileNotFoundError:
         raise FileNotFoundError("Excel course information file not found, ensure it is present and the name is correct.")
     except xlrd.biffh.XLRDError:
-        raise ValueError("Error reading data from Course information Excel sheet. Ensure it is formatted exactly as specified")
+        raise xlrd.biffh.XLRDError("Error reading data from Course information Excel sheet. Ensure it is formatted exactly as specified")
 
 # Parses the accredFileName file for information on accreditation
 # units satisfied by the courses in courseObjDict.
@@ -122,7 +122,7 @@ def parseAccred(courseObjDict, accredFileName, deptName):
     except FileNotFoundError:
         raise FileNotFoundError("Excel accreditation information file not found, ensure it is present and the name is correct")
     except xlrd.biffh.XLRDError:
-        raise ValueError("Error reading data from accreditation information Excel sheet. Ensure it is formatted exactly as specified")
+        raise xlrd.biffh.XLRDError("Error reading data from accreditation information Excel sheet. Ensure it is formatted exactly as specified")
 
 # Pulls all course dependencies (prerequisites, corequisites, and
 # requisites) for each course in course_obj_dict. Dependencies stored
