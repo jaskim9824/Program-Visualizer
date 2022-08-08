@@ -50,13 +50,13 @@ def debug(sequenceDict):
 window = Tk()
 window.title('Program Visualizer Generator')
 window.iconbitmap('output/images/favicon.ico')
-window.geometry("1092x544")
+window.geometry("1110x655")
 window.configure(bg = "#ffffff")
 canvas = Canvas(
     window,
     bg = "#ffffff",
-    height = 544,
-    width = 1092,
+    height = 665,
+    width = 1110,
     bd = 0,
     highlightthickness = 0,
     relief = "ridge")
@@ -73,12 +73,12 @@ def add_progbar():
     length=280
     )
     progbar.place(
-    x=635, y=470
+    x=661, y=560
     )
 
 
 def progress():
-    progbar['value']+= 8.5
+    progbar['value']+= 7.7
     window.update_idletasks()
     return progbar['value']
 
@@ -113,8 +113,11 @@ def websiteGeneration(value_label):
             # extracting dept name for program sequence
             deptName = department.get()
 
-            # parsing the excel file with accreditation unit info, file name hardcoded for now
-            courseparsing.parseAccred(courseDict, "./Input/AU_Count.xls", deptName)
+            # parsing the excel file with accreditation unit info
+            print("Parsing accreditation...")
+            value_label['text'] = 'parsing accreditation..'
+            courseparsing.parseAccred(courseDict, acc_excel.get(), deptName)
+            progress()
             
             # pulling the category and color info from excel
             print("Parsing categories...")
@@ -232,7 +235,7 @@ def writingHTML(soup):
 def main():
     add_progbar()
     value_label = Label(window, bg="white")
-    value_label.place(x=720, y= 495)
+    value_label.place(x=748, y= 585)
     try:
         soup = websiteGeneration(value_label)
         writingHTML(soup)
@@ -272,6 +275,11 @@ def seqBrowse():
     seq_excel.delete(0, END)
     seq_excel.insert(tkinter.END, filename) 
 
+def accBrowse():
+    filename =filedialog.askopenfilename()
+    acc_excel.delete(0, END)
+    acc_excel.insert(tkinter.END, filename) 
+
 def show(selection):
     department.delete(0, END)
     department.insert(tkinter.END, selection) 
@@ -279,7 +287,7 @@ def show(selection):
 #new window
 def new_window():
 
-    global new_img1, new_img2, new_img3, new_tutorial, new_web_img, new_header, new_footer
+    global new_img1, new_img2, new_img3,new_img4, new_tutorial, new_web_img, new_header, new_footer
     helpWin = Toplevel()
     helpWin.geometry('1400x700')
     helpWin.title("Manual")
@@ -340,31 +348,40 @@ def new_window():
     resized1 = excel_pic1.resize((100,100))
     new_img1 = ImageTk.PhotoImage(resized1)
     img_label = Label(second_frame,image=new_img1)
-    img_label.grid(row=3, column=0)
+    img_label.place(x=100, y=228)
 
     #categories.xls image
     excel_pic2 = Image.open("GUI_images/catexcel.png")
     resized2 = excel_pic2.resize((100,100))
     new_img2 = ImageTk.PhotoImage(resized2)
     img_label2 = Label(second_frame,image=new_img2)
-    img_label2.grid(row=3, column=1)
+    img_label2.place(x=500, y=228)
 
     #Sequencing.xls image
+    accreditation_img = Image.open("GUI_images/seqexcel.png")
+    resized_img = accreditation_img.resize((100,100))
+    new_img3 = ImageTk.PhotoImage(resized_img)
+    img_label4 = Label(second_frame,image=new_img3)
+    img_label4.grid(row=3, column=2, padx=150)
+
     tutorial_img = Image.open("GUI_images/seqexcel.png")
     resized_img = tutorial_img.resize((100,100))
-    new_img3 = ImageTk.PhotoImage(resized_img)
-    img_label3 = Label(second_frame,image=new_img3)
-    img_label3.grid(row=3, column=2, padx=150)
+    new_img4 = ImageTk.PhotoImage(resized_img)
+    img_label3 = Label(second_frame,image=new_img4)
+    img_label3.place(x=900, y= 228)
 
     #excel file description
     pic1_description = Label(second_frame, text="This Excel file must contain\nall individual course information.")
-    pic1_description.grid(row=4, column=0)
+    pic1_description.place(x=65, y=330)
 
     pic2_description = Label(second_frame, text="This Excel file must contain course categories\nand all courses that fall under each category.")
-    pic2_description.grid(row=4, column=1)
+    pic2_description.place(x=430, y=330)
 
     pic3_description = Label(second_frame, text="This Excel file must contain\nall possible plan sequences.")
-    pic3_description.grid(row=4, column=2)
+    pic3_description.place(x=880, y=330)
+
+    pic4_description = Label(second_frame, text="This Excel file must contain\nall accreditation unit info.")
+    pic4_description.grid(row=4, column=2)
 
     message3 = Label(second_frame, 
     text="3- Type in the Excel file name (if it's present in the same directory as the program files) or\n provide it's path:"
@@ -433,7 +450,7 @@ help_menu.add_command(
 ##Course Excel file UI##
 courseEntry_img = PhotoImage(file = f"GUI_images/img_textBox0.png")
 courseEntry_bg = canvas.create_image(
-    774.5, 152.5,
+    800.5, 151.5,
     image = courseEntry_img)
 
 courses_excel = Entry(
@@ -443,14 +460,14 @@ courses_excel = Entry(
     font='halvetica 12')
 courses_excel.insert(tkinter.END, "")
 courses_excel.place(
-    x = 635, y = 135,
+    x = 661, y = 134,
     width = 279,
     height = 33)
 
 ##Categories excel file UI##
 catEntry_img = PhotoImage(file = f"GUI_images/img_textBox1.png")
 catEntry_bg = canvas.create_image(
-    774.5, 229.5,
+    800.5, 226.5,
     image = catEntry_img)
 
 courseCat_excel = Entry(
@@ -460,14 +477,14 @@ courseCat_excel = Entry(
     font='halvetica 12')
 courseCat_excel.insert(tkinter.END, "")
 courseCat_excel.place(
-    x = 635, y = 212,
+    x = 661, y = 209,
     width = 279,
     height = 33)
 
 ##Sequencing excel file UI##
 seqEntry_img = PhotoImage(file = f"GUI_images/img_textBox2.png")
 seqEntry_bg = canvas.create_image(
-    774.5, 306.5,
+    800.5, 304.5,
     image = seqEntry_img)
 
 seq_excel = Entry(
@@ -477,14 +494,32 @@ seq_excel = Entry(
     font='halvetica 12')
 seq_excel.insert(tkinter.END, "")
 seq_excel.place(
-    x = 635, y = 289,
+    x = 661, y = 287,
     width = 279,
     height = 33)
 
+##Accreditation Excel file UI##
+accEntry_img = PhotoImage(file = f"GUI_images/img_textBox3.png")
+accEntry_bg = canvas.create_image(
+    800.5, 382.5,
+    image = accEntry_img)
+
+acc_excel = Entry(
+    bd = 0,
+    bg = "#d9d9d9",
+    highlightthickness = 0,
+    font='halvetica 12')
+acc_excel.insert(tkinter.END, "")
+acc_excel.place(
+    x = 661, y = 365,
+    width = 279,
+    height = 33)
+
+
 ##department name UI##
-deptEntry_img = PhotoImage(file = f"GUI_images/img_textBox3.png")
+deptEntry_img = PhotoImage(file = f"GUI_images/img_textBox4.png")
 deptEntry_bg = canvas.create_image(
-    774.5, 383.5,
+    800.5, 459.5,
     image = deptEntry_img)
 
 
@@ -495,7 +530,7 @@ department = Entry(
     font='halvetica 12')
 department.insert(tkinter.END, "")
 department.place(
-    x = 635, y = 366,
+    x = 661, y = 442,
     width = 279,
     height = 33)
 
@@ -516,12 +551,12 @@ deptMenu.add_radiobutton(label="Mechatronics Engineering", font='halvetica 12',c
 deptMenu.add_radiobutton(label="Mining Engineering", font='halvetica 12',command= lambda:show('Mining Engineering'))
 deptMenu.add_radiobutton(label="Petroleum Engineering", font='halvetica 12',command= lambda:show('Petroleum Engineering'))
 
-menubutton.place(x=954, y=366)
+menubutton.place(x=985, y=442)
 
 ##Background image##
 background_img = PhotoImage(file = f"GUI_images/background.png")
 background = canvas.create_image(
-    457.0, 272.0,
+    470.0, 332.5,
     image=background_img)
 
 ##Browse buttons##
@@ -534,7 +569,7 @@ button1_excel = Button(
     relief = "flat")
 
 button1_excel.place(
-    x = 950, y = 135,
+    x = 982, y = 134,
     width = 95,
     height = 37)
 
@@ -547,7 +582,7 @@ button2_excel = Button(
     relief = "flat")
 
 button2_excel.place(
-    x = 950, y = 214,
+    x = 982, y = 213,
     width = 95,
     height = 38)
 
@@ -560,7 +595,21 @@ button3_excel = Button(
     relief = "flat")
 
 button3_excel.place(
-    x = 950, y = 289,
+    x = 982, y = 288,
+    width = 95,
+    height = 37)
+
+
+browseImg4 = PhotoImage(file = f"GUI_images/img4.png")
+button4_excel = Button(
+    image = browseImg4,
+    borderwidth = 0,
+    highlightthickness = 0,
+    command = accBrowse,
+    relief = "flat")
+
+button4_excel.place(
+    x = 982, y = 365,
     width = 95,
     height = 37)
 
@@ -574,7 +623,7 @@ generate_button = Button(
     relief = "flat")
 
 generate_button.place(
-    x = 710, y = 415,
+    x = 738, y = 501,
     width = 126,
     height = 43)
 
