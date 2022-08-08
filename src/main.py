@@ -358,17 +358,19 @@ def new_window():
     img_label2.place(x=500, y=228)
 
     #Sequencing.xls image
-    accreditation_img = Image.open("GUI_images/seqexcel.png")
-    resized_img = accreditation_img.resize((100,100))
-    new_img3 = ImageTk.PhotoImage(resized_img)
-    img_label4 = Label(second_frame,image=new_img3)
-    img_label4.grid(row=3, column=2, padx=150)
-
     tutorial_img = Image.open("GUI_images/seqexcel.png")
     resized_img = tutorial_img.resize((100,100))
     new_img4 = ImageTk.PhotoImage(resized_img)
     img_label3 = Label(second_frame,image=new_img4)
     img_label3.place(x=900, y= 228)
+
+    #AU_Count.xls image
+    accreditation_img = Image.open("GUI_images/AU_count.png")
+    resized_img = accreditation_img.resize((100,100))
+    new_img3 = ImageTk.PhotoImage(resized_img)
+    img_label4 = Label(second_frame,image=new_img3)
+    img_label4.grid(row=3, column=2, padx=150)
+
 
     #excel file description
     pic1_description = Label(second_frame, text="This Excel file must contain\nall individual course information.")
