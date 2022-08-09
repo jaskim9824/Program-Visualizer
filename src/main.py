@@ -93,7 +93,7 @@ def websiteGeneration(value_label):
             
             # opening the JS files
             print("Opening files...")
-            value_label['text'] = 'opening files'
+            value_label['text'] = 'Opening files...'
             controller = open("./output/js/controller.js", "w")
             indexJS = open("./output/js/index.js", "w")
             progress()
@@ -106,7 +106,7 @@ def websiteGeneration(value_label):
 
             # parsing the excel files with course info, pulls dependencies (prereqs, coreqs, reqs) too
             print("Parsing courses...")
-            value_label['text'] = 'parsing courses..'
+            value_label['text'] = 'Parsing courses...'
             courseDict = courseparsing.parseCourses(courses_excel.get())
             progress()
 
@@ -115,7 +115,7 @@ def websiteGeneration(value_label):
 
             # parsing the excel file with accreditation unit info
             print("Parsing accreditation...")
-            value_label['text'] = 'parsing accreditation..'
+            value_label['text'] = 'Parsing accreditation...'
             courseparsing.parseAccred(courseDict, acc_excel.get(), deptName)
             progress()
             
@@ -133,8 +133,8 @@ def websiteGeneration(value_label):
             progress()
 
             # sequencing courses
-            print("Parsing sequences....")
-            value_label['text'] = 'Parsing sequences....'
+            print("Parsing sequences...")
+            value_label['text'] = 'Parsing sequences...'
             sequenceDict = sequenceparsing.parseSeq(seq_excel.get(), courseDict)
             progress()
 
@@ -145,8 +145,8 @@ def websiteGeneration(value_label):
 
 
             # generating initial JS based on the number and names of plans
-            print("Intialzing JS files....")
-            value_label['text'] = 'Intialzing JS files....'
+            print("Intialzing JS files...")
+            value_label['text'] = 'Intialzing JS files...'
             javascriptgen.initializeControllerJavaScript(sequenceDict, 
                                                         initialCourseGroupVals,
                                                         courseGroupDict,
@@ -161,8 +161,8 @@ def websiteGeneration(value_label):
             mainTag = soup.body.find("div", id="main")
 
             # customizing webpage title
-            print("Writing title....")
-            value_label['text'] = 'Writing title....'
+            print("Writing title...")
+            value_label['text'] = 'Writing title...'
             htmlgen.switchTitle(titleTag, topTitleTag, deptName)
             progress()
 
@@ -170,8 +170,8 @@ def websiteGeneration(value_label):
             formTag = mainTag.find("form")
 
             # placing main radio inputs
-            print("Placing radio inputs....")
-            value_label['text'] = 'Placing radio inputs....'
+            print("Placing radio inputs...")
+            value_label['text'] = 'Placing radio inputs...'
             htmlgen.placeRadioInputs(formTag, courseGroupDict, soup)
             progress()
 
@@ -185,8 +185,8 @@ def websiteGeneration(value_label):
             legendTag = mainTag.find("div", class_="legend")
 
             # places legend for color-coding
-            print("Placing legend....")
-            value_label['text'] = 'Placing legend....'
+            print("Placing legend...")
+            value_label['text'] = 'Placing legend...'
             htmlgen.placeLegend(legendTag, categoryDict, soup)
             progress()
 
@@ -199,8 +199,8 @@ def websiteGeneration(value_label):
             mainTag.append(displayTag)
 
             #placing the HTML and generating JS based on the courses (drawing lines)
-            value_label['text'] = 'Placing course diagram....'
-            print("Placing course diagram....")
+            value_label['text'] = 'Placing course diagram...'
+            print("Placing course diagram...")
             htmlgen.placePlanDivs(displayTag, 
                                   sequenceDict, 
                                   soup, 
@@ -226,7 +226,7 @@ def websiteGeneration(value_label):
 def writingHTML(soup):
     # writing output to an output html
     try:
-        print("Writing final HTML.....")
+        print("Writing final HTML...")
         with open("./output/index.html", "w", encoding="utf-8") as output:
             output.write(str(soup))
     except FileNotFoundError:
