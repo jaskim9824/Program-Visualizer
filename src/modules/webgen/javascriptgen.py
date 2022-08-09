@@ -71,7 +71,7 @@ def generateHighlightElement(controller):
 # Parameters:
 #   controller - file handle to controller.js
 def generateUnHighlightElement(controller):
-    # if an element is in the highlighted state, removed "-highlighted"
+    # if an element is in the highlighted state, remove "-highlighted"
     # from the class name
     controller.write("""this.unHighlightElement = function(element, category) {
         if (!element.classList.contains(category + "-highlighted")) {
@@ -123,7 +123,7 @@ def generatePlanBasedInitalVariables(sequenceDict, initialCourseGroupVals, cours
         controller.write(formattedCourseGroupVar.format(number=courseGroup, 
                                                         val=initialCourseGroupVals[courseGroup]))
     planString = generatePlanString(courseGroupList)
-    controller.write("this.previousPlan = " +planString + "\n")
+    controller.write("this.previousPlan = " + planString + "\n")
 
 # Function that writes the setDefaults function based on the plans and course groups
 # Parameters:
@@ -512,6 +512,7 @@ def generateHighlightCategoryFlags(categoriesDict, controller):
                                                                      planName = cleaner.cleanString(plan)))
 
 # Function that generates the click listeners for the category legend buttons
+# Parameters:
 #   categoriesDict - dict storing course objects
 #       key - category name (eg: MATH)
 #       value - dict with key as plan name, value as course object
@@ -822,3 +823,4 @@ def writeRadioChangeDirective(controller):
     };
     });"""
     controller.write(radioChangeDirective)
+    

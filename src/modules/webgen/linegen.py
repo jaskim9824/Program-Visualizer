@@ -8,9 +8,7 @@
 
 # Dependencies: cleaner
 
-from unicodedata import category
 from .. import cleaner
-
 
 # Class that defines an object used to manage line generation in the project
 class LineManager:
@@ -206,6 +204,11 @@ def placeClickListeners(courseList, controller, lineManager, plan):
         controller.write("      " +courseID+"flag=false\n")
         controller.write("  }\n};\n")
 
+# Function that places right click listeners for each course in the specified plan
+# Parameters:
+#   courseList - list of course objects of course taken in that plan
+#   controller - file handle for controller.js
+#   plan - name of plan 
 def placeRightClickListeners(courseList, controller, plan):
     formattedListener = "$scope.{courseName}RCListener = function () {{\n"
     formattedElementGetter = "  var element = document.getElementById(\"{courseName}desc\");\n"
@@ -340,5 +343,3 @@ def addGetter(num, indexJS):
         return line{number}
     }};\n"""
     indexJS.write(formattedFunction.format(number=num))
-
-

@@ -4,7 +4,7 @@
 # University of Alberta, Summer 2022, Curriculum Development Co-op Term
 
 # This file contains the functions needed to parse the Excel file
-# containing the sequncing information
+# containing the sequencing information
 
 # Dependencies: copy, xlrd
 
@@ -17,12 +17,12 @@ import xlrd
 # and a list of Course objects as value.
 #
 # Parameters:
-#   course_obj_dict (dictionary): dict with course name for key and 
-#   Course class as value. Course class described in parsinghelp.py
+#   course_obj_dict (dict): dict with course name for key and 
+#   Course object as value. The Course class described in parsinghelp.py
 #   filename (string): Name of the Excel file to be parsed for sequencing
-#   info. Format described in README. Can only be a .xls file (NOT .xlsx)
+#   info. Can only be a .xls file (NOT .xlsx)
 # Returns:
-#   course_seq (dictionary): Key is plan name, value is another dict with 
+#   course_seq (dict): Key is plan name, value is another dict with 
 #   term name as the key and a list of the Course objects taken in that term as value.
 def parseSeq(filename, course_obj_dict):
     try:
@@ -96,6 +96,7 @@ def parseSeq(filename, course_obj_dict):
                                 " is not present in the Excel file with the course information.")
                             orcourse = deepcopy(course_obj_dict[orname])
                             if namelist[-1] == pureName:
+                                # this is last out of OR courses, will have a different CSS class
                                 orcourse.calendar_print = "lastor"
                             else:
                                 orcourse.calendar_print = "or"
@@ -119,8 +120,6 @@ def parseSeq(filename, course_obj_dict):
                 col += 1
             course_seq[sheet.name] = plan_dict  # store each term dict in a plan dict (key is plan name (traditional, etc.))
 
-        # Make sure that co-reqs are only for courses in the same term
-        # Had to do this after pulling from Sequencing.xls
         # course_seq = checkReqs(course_seq)  Not used, keep everything exactly like Calendar
 
     except FileNotFoundError:
@@ -133,7 +132,8 @@ def parseSeq(filename, course_obj_dict):
 # Checks that all coreqs for a course are taken in the same term,
 # if not, the coreq is changed to become a prereq. Similarly,
 # if a coreq is actually taken before a course in a certain plan,
-# that coreq is changed to a prereq for that course. Overrides Calendar description.
+# that coreq is changed to a prereq for that course. 
+# ***Overrides Calendar description***
 #
 # Parameters:
 #   course_seq (dict): Stores course data in proper sequence:

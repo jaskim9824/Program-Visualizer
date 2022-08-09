@@ -7,7 +7,6 @@
 
 # Dependencies: cleaner, linegen, html
 
-from operator import truediv
 from .. import cleaner
 from . import linegen
 import html
@@ -33,7 +32,7 @@ def switchTitle(titleTag, topTitleTag, deptName):
     titleTag.append(deptName + " Program Plan Visualizer")
     topTitleTag.append(deptName + " Visualizer")
 
-# Places the legend for the categories of courses (math, basic sciences, design, etc.)
+# Places the legend for the categories of courses (math, natural sciences, design, etc.)
 # Pulls the categories and colors from sequenceDict, which has these values as attributes
 # Parameters:
 #   legendTag - HTML tag for div which holds the category colour legend
@@ -110,7 +109,7 @@ def placeLegendDescription(soup, legendTag):
 # Parameters:
 #   soup - soup object, used to create HTML tags
 #   legendTag - HTML tag used to hold legend
-#   categoryDict - dict that maps categories to plan dicts containing courses
+#   categoryDict - dict mapping category to colour
 #   with that category
 def placeLegendButtons(soup, legendTag, categoryDict):
     legendBoxes = soup.new_tag("div", attrs={"class":"legendboxes"})
@@ -134,9 +133,9 @@ def placeLegendButton(soup, category, colour):
 
 # Function that places the course group forms for the course group selection menu
 # Parameters:
-#   planCourseGroupsTag - HTML tag for div that holds the group selection menu for that plan
+#   planCourseGroupsTag - HTML tag for div that holds the group selection menu for a given plan
 #   soup - soup object, used to create HTML tags
-#   planCourseGroupDict - dict that maps course groups of that plans to the different options for 
+#   planCourseGroupDict - dict that maps course groups within a plan to the different options for 
 #   each course group
 def placeCourseGroupRadioInputsForPlan(planCourseGroupsTag, soup, planCourseGroupDict):
     for subplan in planCourseGroupDict:
@@ -147,7 +146,7 @@ def placeCourseGroupRadioInputsForPlan(planCourseGroupsTag, soup, planCourseGrou
         placeCourseGroupRadioInputsForSubPlan(formTag, soup, planCourseGroupDict[subplan], subplan)
         planCourseGroupsTag.append(formTag)
 
-# Function that places the option radio inputs for a specfic course group for a specific plan
+# Function that places the radio inputs for switching between course group options (subplans)
 # Parameters:
 #   subPlanTag - HTML tag for div that holds the radio inputs for that course group for
 #   that specifc plan
@@ -172,7 +171,7 @@ def placeCourseGroupRadioInputsForSubPlan(subPlanTag, soup, subPlanOptionList, s
 # Function that places the column flexboxes which represent the terms within a certain plan
 # Parameters:
 #   planTag - HTML tag for a given plan
-#   planDict - dict that maps a course list to each term in the plan
+#   planDict - dict that maps a term to a list of courses taken in that term
 #   soup - soup object, used to create HTML tags
 #   indexJS - file handle for index.js, used to write to index.js
 #   controller - file handle for controller.js, used to write to controller.js
@@ -180,7 +179,7 @@ def placeCourseGroupRadioInputsForSubPlan(subPlanTag, soup, subPlanOptionList, s
 #   lineManager - line manager object, used to handle line placement and generation
 def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManager):
     electiveCounterWrapper = {"ITS": 0, "PROG": 0, "COMP": 0}  # keeps track of number of electives taken in plan
-    termcounter = 0  # count of amount of term columns placed in the plan
+    termcounter = 0  # count of number of terms placed in the plan
 
     for term in planDict:
         termDiv = soup.new_tag("div", attrs={"class":"term"})  # flexbox for term
@@ -200,7 +199,8 @@ def placeTermsDivs(planTag, planDict, soup, indexJS, controller, plan, lineManag
     linegen.placeClickListeners(courseList, controller, lineManager, plan)
     linegen.placeRightClickListeners(courseList, controller, plan)
 
-# Function that places the course divs within a certain term column of a certain plan
+# Function that places the course div for each individual course taken in
+# one term of a given plan
 # Parameters:
 #   termTag - HTML tag for a given term
 #   termList - list of courses being taken that term
@@ -329,7 +329,7 @@ def placeCourses(termTag, termList, soup, controller, plan, termcounter, electiv
 # Parameters:
 #   course - Course object for an individual course
 # Returns:
-#   cateListString - string of all categories concatenated together (space-separated)
+#   catListString - string of all categories concatenated together (space-separated)
 def extractCourseCategories(course):
     catListString = cleaner.cleanString(course.main_category)
     for subcat in course.sub_categories:

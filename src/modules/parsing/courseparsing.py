@@ -3,7 +3,7 @@
 # Oversight: Dr. David Nobes
 # University of Alberta, Summer 2022, Curriculum Development Co-op Term
 
-# This files contains all the functions needed to parse the Excel file
+# This file contains all the functions needed to parse the Excel file
 # containing the course information 
 
 # Dependencies: copy, xlrd, parsinghelp
@@ -71,7 +71,7 @@ def parseCourses(filename):
             course_description, main_category, sub_categories, color,
             course_group, prereqs, coreqs, elective_group, accredUnits))
 
-        # Retriving dependencies (pre/coreqs) for courses
+        # Retrieving dependencies (pre/coreqs) for courses
         course_obj_dict = pullDependencies(course_obj_dict)
 
         return course_obj_dict
@@ -126,32 +126,26 @@ def parseAccred(courseObjDict, accredFileName, deptName):
 
 # Pulls all course dependencies (prerequisites, corequisites, and
 # requisites) for each course in course_obj_dict. Dependencies stored
-# in lists as attributes of the Course object. Sequencing information
-# is also pulled (which courses are taken in which term).
+# in lists as attributes of the Course object.
 #
 # Parameters:
 #   course_obj_dict (dict): Stores all course data:
 #       key: Course Name (string): the Subject + " " + Catalog of a course
 #       value: Course object. Stores all data about a course
 # Returns:
-#   course_seq (dict): Stores course data in proper sequence:
-#       key: Plan Name (string): derived from sheet name in "Sequencing.xls"
-#       ("Traditional", "Co-op Plan 1", etc.)
-#       value: dict with key as term name ("Term 1", "Term 2", etc.)
-#       and value as a list of Course objects to be taken in that term
 #   course_obj_dict (dict): the prereqs, coreqs, and reqs attributes should
 #       be filled in
 def pullDependencies(course_obj_dict):
     for course in course_obj_dict:
         prereqslist = pullPreReqs(course_obj_dict[course].course_description)
         for i in range(0, len(prereqslist)):
-            # Stripping whitespace
+            # stripping whitespace
             prereqslist[i] = prereqslist[i].replace(" ", "").replace("or", " or ")
         course_obj_dict[course].prereqs = prereqslist
 
         coreqslist = pullCoReqs(course_obj_dict[course].course_description)
         for i in range(0, len(coreqslist)):
-            #Stripping whitespace
+            # stripping whitespace
             coreqslist[i] = coreqslist[i].replace(" ", "").replace("or", " or ")
         course_obj_dict[course].coreqs = coreqslist
 
@@ -177,9 +171,9 @@ def pullPreReqs(description):
     if multstart == -1:
         multstart = description.find("prerequisites: ")
 
-    missingcolstart = description.find("Prequisite ")
+    missingcolstart = description.find("Prerequisite ")
     if missingcolstart == -1:
-        missingcolstart = description.find("prequisite ")
+        missingcolstart = description.find("prerequisite ")
 
     if singlestart != -1:
         # Prerequisite(s) given from after the colon up to the very next period
@@ -192,7 +186,7 @@ def pullPreReqs(description):
         multend = description.find(".", multstart)
         prestr = description[multstart:multend]
     elif missingcolstart != -1:
-        # Prequisite(s) given from after space up to the very next period
+        # Prerequisite(s) given from after space up to the very next period
         missingcolstart += 13
         missingcolend = description.find(".", missingcolstart)
         prestr = description[missingcolstart:missingcolend]
@@ -258,10 +252,9 @@ def pullCoReqs(description):
 # a pre-requisite course.
 #
 # Parameters:
-#   prestr (string): The part of a course description from the first character after
-#   either "Prerequisites: " or "Prerequisite: " until the first period following.
-#   eg: Prerequisites: [One of CH E 441, MEC E 250, or MATH 100.] Everything between
-#   the square brackets should be passed.
+#   prestr (string): The part of a course description from "Prerequisites: " (or variant)
+#   until the next period. eg: "Prerequisites: **One of CH E 441, MEC E 250, or MATH 100.**" 
+#   Everything between the ** should be passed.
 # Returns: 
 #   reqlist (list of strings): A list of the pre-requisites of a course. Elements
 #   can be in two forms: 1) The name of a single course. eg: "MATH 100"
@@ -291,7 +284,7 @@ def process(prestr):
         # If no prerequisites, return empty list
         return []
 
-    reqlist = preprocess(reqlist)  # Preprocess/format the text
+    reqlist = preprocess(reqlist)  # Helps format text by handling cases
 
     i = 0
 
@@ -311,8 +304,6 @@ def process(prestr):
             # Two courses are required, remove both and pull the department name if required
             reqlist[i] = reqlist[i].replace("both ","")
             reqlist[i] = reqlist[i].replace("Both ","")
-
-            # Pull department name from previous course if required (if no department name is present)
             numcounter = parsinghelp.countNums(reqlist[i + 1])
             if numcounter == 3 and len(reqlist[i + 1]) == 3:
                 # Only a course number is present, must pull the department name
@@ -372,7 +363,8 @@ def process(prestr):
                             reqlist[j] = "or " + dept + reqlist[j][2:]  # move the position of "or"
 
                         if reqlist[j][0:8] == "or both ":
-                            # FIXME: this is tough to deal with, either these courses or both of these courses
+                            # FIXME: this is tough to deal with, either one set of courses can be chosen
+                            # or both of these next courses can be chosen
                             # Right now, just combining everything into one list entry
                             if len(reqlist[j]) == 11:
                                 # Only course number is present in current entry, need to pull department name from previous
@@ -424,6 +416,7 @@ def process(prestr):
 
             reqlist[i] = dept + " " + reqlist[i]  # just add the department name to current item
             i += 1
+            
         else:
             # No processing is required. Usually, this means reqlist[i] is a pre/co-req
             # with the department name present and is not one option among other courses.

@@ -34,10 +34,10 @@ def findListofAllCourseGroups(courseGroupDict):
                 currentList.append(element)
     return currentList
 
-# Function that consturcts a dict that maps plans to the course groups existing in that plan
+# Function that constructs a dict that maps plans to the course groups existing in that plan
 # and their options
 # Parameters:
-#   sequenceDict - dict that maps plan names to the plan dict containing sequncing info about that plan
+#   sequenceDict - dict that maps plan names to the plan dict which contains sequencing info about that plan
 # Returns a dict that maps plans to the course groups that exist in them
 def extractPlanCourseGroupDict(sequnceDict):
     courseGroupDict = {}
@@ -62,7 +62,7 @@ def extractPlanCourseGroupDict(sequnceDict):
 # Returns a new course group dict for that specifc plan
 def appendCourseGroups(planCourseGroupsDict, courseGroupList):
     for group in courseGroupList:
-        numOfGroup = int(''.join(filter(lambda s: (s.isdigit()), group)))
+        numOfGroup = int(''.join(filter(lambda s: (s.isdigit()), group)))  # if group is '3A' then numOfGroup is 3
         if numOfGroup not in planCourseGroupsDict:
             planCourseGroupsDict[numOfGroup] = []
         if group not in planCourseGroupsDict[numOfGroup]:
