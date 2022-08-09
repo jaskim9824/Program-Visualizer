@@ -4,7 +4,7 @@
 # University of Alberta, Summer 2022, Curriculum Development Co-op Term
 
 # This file contains all the functions needed to parse the Excel file
-# containing the course category information
+# containing the course categories
 
 # Dependencies: xlrd, parsinghelp
 
@@ -12,7 +12,7 @@ import xlrd
 from . import parsinghelp
 
 # Parses an Excel file for categorical info about each course (is it 
-# a math course, design, basic science, etc.) Also stores the color code
+# a math course, design, natural science, etc.) Also stores the color code
 # provided in the Excel file for each course.
 #
 # Parameters:
@@ -25,7 +25,7 @@ from . import parsinghelp
 #   course_obj_dict (dict): the category and color attributes should be
 #       filled in
 #   category_dict (dict):
-#       Key: category (string): A category ("Basic Science", "Math", etc.)
+#       Key: category (string): A category ("Natural Science", "Math", etc.)
 #       Value: a list with item at index 0 as category level ("main" or "sub") and color as the item at index 1
 def parseCategories(filename, course_obj_dict):
     try:
@@ -36,6 +36,7 @@ def parseCategories(filename, course_obj_dict):
         for col in range(0, sheet.ncols):
             # Each column is one category
             cell_entry = str(sheet.cell_value(0, col))
+
             # finding the appropriate category level
             open_bracket_indx = cell_entry.find("(")
             closed_bracket_indx = cell_entry.find(")")
@@ -74,7 +75,7 @@ def parseCategories(filename, course_obj_dict):
                     main_category = "ITS Elective", color = color)
 
             # Add category information to courses in that category
-            course_obj_dict = addCategorytoCourses(course_obj_dict, sheet, col, cat_name, cat_level, color)
+            addCategorytoCourses(course_obj_dict, sheet, col, cat_name, cat_level, color)
        
     except FileNotFoundError:
         raise FileNotFoundError("Excel course categories file not found, ensure it is present and the name is correct.")
@@ -89,7 +90,7 @@ def parseCategories(filename, course_obj_dict):
 #
 # Parameters:
 #   category_dict (dict):
-#       Key: category (string): A category ("Basic Science", "Math", etc.)
+#       Key: category (string): A category ("Natural Science", "Math", etc.)
 #       Value: a list with item at index 0 as category level ("main" or "sub") and color as the item at index 1
 #
 # Returns:
@@ -132,4 +133,3 @@ def addCategorytoCourses(course_obj_dict, sheet, col, cat_name, cat_level, color
             elif cat_level == "sub":
                 course_obj_dict[name].sub_categories.append(cat_name)
             course_obj_dict[name].color = color
-    return course_obj_dict
