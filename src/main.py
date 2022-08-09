@@ -382,7 +382,7 @@ def new_window():
     pic3_description = Label(second_frame, text="This Excel file must contain\nall possible plan sequences.")
     pic3_description.place(x=880, y=330)
 
-    pic4_description = Label(second_frame, text="This Excel file must contain\nall accreditation unit info.")
+    pic4_description = Label(second_frame, text="This Excel file must contain\nall accreditation unit information.")
     pic4_description.grid(row=4, column=2)
 
     message3 = Label(second_frame, 
