@@ -1,0 +1,29 @@
+* {
+    background-color: #EEEEEE;
+}
+.wrapper {
+    left: 100%;
+    top: 100%;
+}
+
+.btn-1 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    display: inline-block;
+}
+
+.btn-1 .popupclass {
+    visibility: hidden;
+    background-color: black;
+    color: pink;
+    position: relative;
+    z-index: 1;
+    left: 120%;
+}
+
+/*hide and show the popup */
+
+.btn-1 .display {
+    visibility: visible;
+}

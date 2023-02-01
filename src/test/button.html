@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A button</title>
+    <link rel="icon" href="./images/FCB.ico">
+    <link rel="stylesheet" href="buttonStyle.css">
+</head>
+
+<body>
+
+<h2>this is the sample button</h2>
+
+<button id="button" class="btn-1" draggable="true" onmousedown="mousedown(event)" style="border:3px solid black;padding:8px">
+left or right click me
+<div id="popup" class="popupclass">
+    <form>
+        <label for="purple"></label>
+        <input type="radio" id="purple" name="color_button" onclick="changec()">purple<br><br>
+        <label for="pink"></label>
+        <input type="radio" id="pink" name="color_button" onclick="changec()">pink<br><br>
+        <label for="blue"></label>
+        <input type="radio" id="blue" name="color_button" onclick="changec()">blue<br><br>
+        <label for="green"></label>
+        <input type="radio" id="green" name="color_button" onclick="changec()">green<br><br>
+    </form>
+</div>
+</button><br><br>
+
+<div id="wrapper" style="border: 2px solid#000; width: 200px; height: 200px; left: 500px; top: 50px; position: absolute"></div>
+
+<script src="button.js"></script>
+
+</body>
+</html>
